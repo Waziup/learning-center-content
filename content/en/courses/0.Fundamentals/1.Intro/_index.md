@@ -3,7 +3,7 @@ Lecture: 1
 title: Introduction to IoT
 ----
 
-[! test](https://drive.google.com/file/d/1CqTnLfiC4t9jj7or6Kp3Z0zaXemS5PIp/view)
+[Video](https://drive.google.com/file/d/1CqTnLfiC4t9jj7or6Kp3Z0zaXemS5PIp/view)
 
 Why IoT?
 ========
