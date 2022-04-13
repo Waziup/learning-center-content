@@ -1,7 +1,8 @@
-Module: 1
-Lecture: 1
+---
+module: 1
+lecture: 1
 title: Introduction to IoT
-----
+---
 
 [Video](https://drive.google.com/file/d/1CqTnLfiC4t9jj7or6Kp3Z0zaXemS5PIp/view)
 

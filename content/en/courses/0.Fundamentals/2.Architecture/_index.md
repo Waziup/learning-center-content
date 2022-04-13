@@ -1,7 +1,8 @@
+---
 module: 1
 lecture: 2
 title: Architecture and communication protocols
-----
+---
 
 IoT Architecture
 ================
