@@ -10,6 +10,8 @@ Current, voltage, wires… IoT is, at its base, just electronics. In this course
 Electric signals
 ================
 
+![signals](img/signals.png)
+
 Basic laws
 ==========
 
