@@ -1,6 +1,9 @@
-title: Long range radio communications
-description: This course will present long range wireless technologies. Cellular technologies such as 3G/4G will be presented and compared against more adapted wireless technologies for IoT such as LoRa and NB-IoT. These 2 latter technologies will be explained in detail as they represent the best energy vs range tradeoff. A focus will be made on LoRa wireless communication technologies to present the LoRa & LoRaWAN ecosystem.
 ---
+title: Long range radio communications
+description: This course will present long range wireless technologies. 
+---
+
+Cellular technologies such as 3G/4G will be presented and compared against more adapted wireless technologies for IoT such as LoRa and NB-IoT. These 2 latter technologies will be explained in detail as they represent the best energy vs range tradeoff. A focus will be made on LoRa wireless communication technologies to present the LoRa & LoRaWAN ecosystem.
 
 LoRa
 ====
