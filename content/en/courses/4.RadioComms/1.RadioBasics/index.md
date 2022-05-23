@@ -1,3 +1,4 @@
+---
 title: Wireless communication essentials
 description: This course will introduce the basics of wireless communications.
 ---
