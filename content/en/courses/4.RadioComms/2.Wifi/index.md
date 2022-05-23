@@ -1,5 +1,5 @@
 ---
-title: Wifi & Bluetooth on IoT devices
+title: Wifi IoT devices
 description: This course will present the WiFi technology usage in IoT.
 ---
 
@@ -10,11 +10,11 @@ We will use the popular chips ESP8266 or ESP32 as an example, as this chip as Wi
 
 The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability produced by Shanghai-based Chinese manufacturer Espressif Systems [source: https://en.wikipedia.org/wiki/ESP8266]. The chip is usually embedded on a board such as the NodeMCU (see picture below) to make it easier to use. Most of ESP8266-based boards are compatible with Arduino IDE provided that you install the required addons. 
 
-![ESP8286](/advanced_boards/board_with_wifi/img/ESP8286.png)
+![ESP8286](img/ESP8286.png)
 
 The successor to these microcontroller chips is the ESP32. Again, many boards based on the ESP32 are available. Below are the Heltec WiFi LoRa 32 with a small embedded OLED screen and the more common ESP32-WROOM.
 
-![SHT_etanche](/advanced_boards/board_with_wifi/img/heltec_wroom.jpg)
+![SHT_etanche](img/heltec_wroom.jpg)
 
 ## Installation instructions using Arduino IDE Boards Manager
 

@@ -21,16 +21,16 @@ Fresnel zone
 The Fresnel zone is an elliptical shaped body around the direct line of sight path between the end node and the gateway.
 Any obstacle within this volume, for example buildings, trees, hilltops or ground can weaken the transmitted signal even if there is a direct line of sight between the end node and the gateway.
 
-![Fresnel zone](./media/fresnel.png)
+![Fresnel zone](img/fresnel.png)
 
 For long distance transmissions, the earth curvature has an influence.
 The following table shows the recommended height for deployement of the devices/gateways.
 
-![Deployement height](./media/fresnel2.png)
+![Deployement height](img/fresnel2.png)
 
 As a rule of thumb Fresnel zone should always be clear of obstruction but this can be impractical so it is said that beyond 40% blockage, signal loss will become significant.
 
-![Fresnel zone blockage](./media/fresnel3.png)
+![Fresnel zone blockage](img/fresnel3.png)
 
 Example :
 
@@ -38,13 +38,13 @@ Example :
 - H : earth curvature allowance
 - r+H : minimum end node and gateway height above ground
 
-![Fresnel example calculation](./media/fresnel4.png)
+![Fresnel example calculation](img/fresnel4.png)
 
 - For the best radio signal performance: The gateway antenna must be placed outdoors at a high location (avoiding obstacles in the Fresnel zone)
 - The antenna design for both gateway and end nodes must be optimised for its regional frequency.
 - Keep the antenna polarisation vertical for both gateway and end nodes and use omnidirectional antenna to cover a large area.
 
-![Antenna deployement](./media/fresnel5.png)
+![Antenna deployement](img/fresnel5.png)
 
 Link Budget
 ===========
@@ -53,7 +53,7 @@ A link budget is the sum of all of the gains and losses from the transmitter, th
 
 The receiver sensitivity is the lowest power level at which receiver can receive or demodulate the signal.
 
-![Link budget](./media/link_budget.png)
+![Link budget](img/link_budget.png)
 
 EIRP and ERP
 ============
@@ -62,11 +62,11 @@ RF transmitting systems must adhere to certain rules set by the regulatory bodie
 One of these rules: radio devices must not exceed certain ERP or EIRP values set by these regulatory bodies.
 The Effective Isotropic Radiated Power (EIRP) is the total power radiated by a hypothetical isotropic antenna in a single direction.
 
-![EIRP](./media/eirp.png)
+![EIRP](img/eirp.png)
 
 The Effective Radiated Power (ERP) is the total power radiated by an actual antenna relative to a half-wave dipole rather than a theoretical isotropic antenna.
 
-![ERP](./media/erp.png)
+![ERP](img/erp.png)
 
 The definition of EIRP is:
 ```
@@ -89,7 +89,7 @@ RSSI and SNR
 The Received Signal Strength Indication (RSSI) is the received signal power in milliwatts and is measured in dBm.
 This value can be used as a measurement of how well a receiver can “hear” a signal from a sender.
 
-![RSSI](./media/rssi.png)
+![RSSI](img/rssi.png)
 
 The RSSI is measured in dBm and is a negative value.
 The closer to 0 the better the signal is.
