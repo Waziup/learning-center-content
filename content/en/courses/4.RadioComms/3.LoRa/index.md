@@ -49,6 +49,27 @@ ISM band disadvantages:
 - Low data rate.
 - Lots of interference because anyone can use these frequencies.
 
+Modulation Types and Chirp Spread Spectrum
+------------------------------------------
+
+LoRa is based on Chirp Spread Spectrum modulation (CSS).
+**Chirp** Spread Spectrum is a spread spectrum technique that uses wideband linear frequency modulated chirp pulses to encode information.
+A chirp pulse is a sweep in frequency on the corresponding bandwidth (125kHz, 250kHz…) defined earlier. 
+
+![chirp-sf](./media/chirp-sf.png)
+
+- **Spread spectrum** techniques are methods by which a signal is deliberately spread in the frequency domain. For example a signal is transmitted in short bursts, “hopping” between frequencies in a pseudo random sequence.
+
+Symbol, Spreading Factor and Chirp
+---------------------------------
+
+To generate symbols/chirps, the modem modulates the phase of an oscillator.
+The number of times per second that the modem adjusts the phase is called the chirp rate and defines the modulation bandwidth.
+Chirp rate is a direct subdivision of the quartz frequency (32 MHz).
+Basic chirps are simply a ramp from fmin to fmax (up-chirp) or fmax to fmin (down-chirp). Data-carrying chirps are chirps that are cyclically-shifted, and this cyclical shift carries the information.
+
+![lora mod](./media/lora-mod.png)
+
 
 
 
@@ -166,27 +187,6 @@ For example in Europe for uplink transmissions 8 different frequencies are used.
 
 - **Dwell time** (or transmit time) is the amount of time needed to transmit on a frequency.
 - **Hop time** is the amount of time needed to change from one frequency to another in which the radio is not transmitting
-
-Modulation Types and Chirp Spread Spectrum
-------------------------------------------
-
-LoRa is based on Chirp Spread Spectrum modulation (CSS).
-**Chirp** Spread Spectrum is a spread spectrum technique that uses wideband linear frequency modulated chirp pulses to encode information.
-A chirp pulse is a sweep in frequency on the corresponding bandwidth (125kHz, 250kHz…) defined earlier. 
-
-![chirp-sf](./media/chirp-sf.png)
-
-- **Spread spectrum** techniques are methods by which a signal is deliberately spread in the frequency domain. For example a signal is transmitted in short bursts, “hopping” between frequencies in a pseudo random sequence.
-
-Symbol, Spreading Factor and Chirp
----------------------------------
-
-To generate symbols/chirps, the modem modulates the phase of an oscillator.
-The number of times per second that the modem adjusts the phase is called the chirp rate and defines the modulation bandwidth.
-Chirp rate is a direct subdivision of the quartz frequency (32 MHz).
-Basic chirps are simply a ramp from fmin to fmax (up-chirp) or fmax to fmin (down-chirp). Data-carrying chirps are chirps that are cyclically-shifted, and this cyclical shift carries the information.
-
-![lora mod](./media/lora-mod.png)
 
 
 Annexes
