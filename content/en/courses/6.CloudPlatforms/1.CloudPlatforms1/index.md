@@ -1,4 +1,3 @@
----
 title: Introduction to Cloud Platforms
 description:
 ---
@@ -57,6 +56,7 @@ curl -X POST "https://api.thingspeak.com/update?api_key=B5BM1GNV8BXLMQWB" -d "fi
 Boom! You have a graphic curve with your datapoint:
 
 ![curve](img/curve.png)
+
 
 Blynk
 =====
