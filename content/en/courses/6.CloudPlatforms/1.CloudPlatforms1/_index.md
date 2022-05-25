@@ -3,7 +3,7 @@ title: Introduction to Cloud Platforms
 description:
 ---
 
-In this course, we will explain first what is an IoT Cloud platform. We will then survey various existing platforms: ThingSpeak, Ubidots, Arest and Blynk. We will upload our own IoT data to these platforms using a Wifi capable IoT board.
+In this course, we will explain first what is an IoT Cloud platform. We will then survey various existing platforms: ThingSpeak, Ubidots and Blynk. We will upload our own IoT data to these platforms using a Wifi capable IoT board.
 
 Introduction
 ============
@@ -70,4 +70,19 @@ After you created an account (www.blynk.com), you can start the Wizard:
 It is quite straightforward. They will propose a code template preconfigured with your credentials:
 
 ![blinkcode](img/blinkcode.png)
+
+Ubidots
+======
+
+Similarly, Ubidots allows you to create a [quick dashboard](https://help.ubidots.com/en/articles/2400308-create-dashboards-and-widgets) for your devices.
+![ubidots](img/ubidots.png)
+
+![ubidots2](img/ubidots2.png)
+
+One interesting feature of Ubidots is [UbiFunctions](https://help.ubidots.com/en/articles/2132086-analytics-ubifunctions-user-guide).
+
+![UbiFunction](img/UbiFunction.png)
+
+This allows you to upload some code to perform some preprocessing on the data.
+It can be used as an "adapter" between two different platforms, for instance to [get data from The Things Network](https://help.ubidots.com/en/articles/1866089-integrate-your-ttn-data-with-ubidots-manual-ubifunction-setup).
 
