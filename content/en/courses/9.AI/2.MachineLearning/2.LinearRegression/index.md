@@ -1,5 +1,5 @@
 ---
-title: Regression Analysis: Linear Regression
+title: "Regression Analysis: Linear Regression"
 ---
 
 In this lesson, we'll learn the basics about linear regression analysis.

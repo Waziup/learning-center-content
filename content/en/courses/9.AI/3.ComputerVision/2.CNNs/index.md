@@ -1,5 +1,5 @@
 ---
-title: Computer Vision: Convolutional Neural Networks
+title: Convolutional Neural Networks
 ---
 
 In this lesson, we'll learn the basics about Convolutional Neural Networks (CNN).

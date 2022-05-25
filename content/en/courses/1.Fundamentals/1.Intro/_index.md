@@ -5,6 +5,10 @@ title: Introduction to IoT
 description: The first course will touch on the fundamentals of IoT.
 ---
 
+The first course will touch on the fundamentals of IoT.
+
+# Introduction
+
 The first course will touch on the fundamentals of IoT. After a short history of the creation of IoT, the course will explain briefly what IoT is and why it is important.
 It will also show some of its application use cases and domains.
 
