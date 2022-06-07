@@ -174,3 +174,135 @@ You can find yet another example, creating a map of IoT devices [here](https://g
 In that example, we are creating a map, that setting markers on it, corresponding to the location of the Waziup devices.
 
 All the examples are rendered [at this link]().
+
+Bootstrap
+---------
+
+Another Web technology you might have heard of is [Bootstrap](https://getbootstrap.com/).
+Bootstrap is a framework built on the top of HTML and CSS3, with some optional Javascript.
+It contains design templates for forms, buttons, tables, navigation, modals, image carousels...
+Here is a basic example for a [three collumns design](https://getbootstrap.com/docs/5.2/layout/grid/):
+
+```
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+</div>
+```
+
+In this example, Bootstrap provides the definitions of CSS classes "row" and "col-sm-4".
+Bootstrap is reactive by default, so your web page will look good on any screen size.
+
+Web development frameworks
+==========================
+
+In this section, we'll overview some Web development frameworks useful for developping IoT applications.
+
+ReactJS
+-------
+
+ReactJS is a Javascript library for writing UIs. 
+The basic example looks like that:
+Javascript:
+```
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+```
+HTML:
+```
+<div id="root">
+    <!-- This element's contents will be replaced with your component. -->
+</div>
+```
+
+The example works exactly the same than before: first we call a function `ReactDOM.render` from the ReactJS library.
+This function will proceed to replace the content of the HTML `div` with the ID "root".
+
+
+ReactJS uses [JSX](https://fr.reactjs.org/docs/introducing-jsx.html), a syntax extension for JavaScript that mimics HTML.
+In fact, `<h1>Hello, world!</h1>` in the script above is *not* HTML!
+It is Javascript. JSX is syntactix sugar that looks like HTML, but the compiler will transform it to javascript.
+
+ReactJS is also based on [Components](https://reactjs.org/docs/components-and-props.html). 
+Components are renderable parts of a web page. 
+They are very usefull for splitting the UI into independent, reusable pieces.
+
+Angular
+=======
+
+
+[Angular](https://getbootstrap.com/) is built on `Typescript`.
+TypeScript is a strongly typed programming language that builds on JavaScript.
+That means that Typescript is safer than Javascript, and result in better programs.
+
+Angular uses a templating system directly in the HTML (while ReactJS uses JSX).
+Here is an example:
+
+Typescript:
+```
+import { Component } from '@angular/core';
+
+@Component ({
+  selector: 'hello-world-interpolation',
+  templateUrl: './template.html'
+})
+export class HelloWorldInterpolationComponent {
+    message = 'Hello, World!';
+}
+```
+HTML:
+```
+<p>{{ message }}</p>
+```
+
+In the HTML above, you can see some templating marks "{{message}}".
+The Angular program will read the template and replace the template marker by its value: 'Hello, World!'.
+Angular is also has a system of Modules, Components, and Services.
+
+
+Vue
+===
+
+The third and final Web framework that we'll overview is [Vue](https://vuejs.org/guide/introduction.html).
+The Vue.js core library focuses on the ViewModel layer only from the [MVVM pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel).
+That means that it focuses on the rendering of information, leaving the business logic ot other components.
+It is a "progressive" framework because you can extend its functionality with official and third-party packages, such as Vue Router or Vuex, to turn it into an actual framework.
+Here is an example.
+Javascript:
+```
+import { createApp } from 'vue'
+
+createApp({
+  data() {
+    return {
+      count: 0
+    }
+  }
+}).mount('#app')
+```
+HTML:
+```
+<div id="app">
+  <button @click="count++">
+    Count is: {{ count }}
+  </button>
+</div>
+```
+
+You can note that the templating system is similar with Angular with the `{{ count }}`.
+
+This concludes our trip through web development. Good programming!
