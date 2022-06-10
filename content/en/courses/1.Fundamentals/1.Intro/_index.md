@@ -5,14 +5,14 @@ title: Introduction to IoT
 description: The first course will touch on the fundamentals of IoT.
 ---
 
-The first course will touch on the fundamentals of IoT.
-
-# Introduction
+Introduction to IoT
+===================
 
 The first course will touch on the fundamentals of IoT. After a short history of the creation of IoT, the course will explain briefly what IoT is and why it is important.
 It will also show some of its application use cases and domains.
 
-[Video](https://drive.google.com/file/d/1CqTnLfiC4t9jj7or6Kp3Z0zaXemS5PIp/view)
+<youtube>IIgDQbp2-dY</youtube>
+
 
 The term “Internet of Things” was coined by Kevin Ashton in 1999. 
 Ashton, who was working in supply chain optimization, wanted to attract senior management’s attention to a new exciting technology called RFID. 
