@@ -5,8 +5,6 @@ desc: General introduction to Artificial Intelligence
 
 In this lesson, we'll learn the basics about Artificial Intelligence (AI).
 
-{{< table-of-contents >}}
-
 # General Introduction
 
 When people think of AI, most of them think of **Artificial General Intelligence** (AGI). An AGI can do everything what humans do (and even better). But the sad truth is, that mankind is not even close to develop a "real AGI".

@@ -4,8 +4,6 @@ title: Microcontrollers
 
 In this lesson, we'll learn what is a microcontroller.
 
-{{< table-of-contents >}}
-
 ## Microcontroller vs Microprocessor
 
 A microprocessor unit (MPU) is a processor on one silicon chip. A microcontroller unit (MCU) is a microprocessor with some added circuitry on one silicon chip. A microcontroller can therefore be used standalone, without the need of any additional component to be able to function. Microcontrollers are used in embedded computing and most IoT devices are based on microcontrollers.
