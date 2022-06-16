@@ -4,7 +4,6 @@ title: General introduction to Regression Analysis
 
 In this lesson, we'll learn the basics about regression analysis.
 
-{{< table-of-contents >}}
 
 # Regression Analysis
 

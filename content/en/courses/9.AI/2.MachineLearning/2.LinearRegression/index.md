@@ -4,7 +4,6 @@ title: "Regression Analysis: Linear Regression"
 
 In this lesson, we'll learn the basics about linear regression analysis.
 
-{{< table-of-contents >}}
 
 # Linear Regression
 

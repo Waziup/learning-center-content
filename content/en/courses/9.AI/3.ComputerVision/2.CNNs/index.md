@@ -4,7 +4,6 @@ title: Convolutional Neural Networks
 
 In this lesson, we'll learn the basics about Convolutional Neural Networks (CNN).
 
-{{< table-of-contents >}}
 
 # Convolutional Neural Networks
 

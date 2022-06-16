@@ -4,7 +4,6 @@ title: General Introduction Computer Vision
 
 In this lesson, we'll learn the basics about Computer Vision (CV).
 
-{{< table-of-contents >}}
 
 # Computer Vision
 
