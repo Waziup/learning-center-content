@@ -32,7 +32,7 @@ In this case, we use a method to simulate the analog output called PWM (Pulse Wi
 
 
 PWM
-===
+---
 
 Pulse with modulation is generating signals like this:
 
@@ -60,7 +60,6 @@ There are many chips that can be connected to the processor with this interface 
 - Real-time clocks 
 - Sensors
 - OLED screens
-- ...
 
 In an I2C bus, each device (slave) has an assigned address to allow the master (microcontroller) to indicate which I2C slave it is communicating with.
 
@@ -76,7 +75,8 @@ Being a low-speed bus technology, it is possible to use other pins for SDA and S
 See the [OLED](/sensors/oled) example for connecting a small I2C OLED screen.
 {{%/warning%}}
 
-## SPI bus
+SPI bus
+=======
 
 SPI (Serial Peripheral Interface) is a synchronous serial interface and protocol that can transmit data with speed up to 20Mbps.
 To communicate SPI uses three lines common to all of the connected devices, and one enabling line for every slave element.
@@ -94,9 +94,5 @@ Note that on many microcontrollers, MISO, MOSI and SCK lines are mapped to pre-d
 
 1-Wire is a device communications bus system designed by Dallas Semiconductor Corp. that provides low-speed (16.3 kbit/s) data, signaling, and power over a single conductor.
 It is typically used to communicate with very simple and low-speed devices such as simple digital sensors.
-
-{{% warning %}}
-See the [DS18B20](/sensors/temperature/ds18b20/) example for connecting a temperature sensor with 1-wire bus protocol.
-{{% /warning %}}
 
 
