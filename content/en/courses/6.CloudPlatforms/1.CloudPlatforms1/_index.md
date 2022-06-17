@@ -34,8 +34,8 @@ Security and privacy are the main concerns delaying the adoption of IoT Cloud Pl
 Existing IoT cloud platforms may not always conform to standards, thereby causing interoperability issues. They may also not support heterogeneous modules or communication technologies. When there's too much data, context awareness can help, including decisions of what needs to be done at the edge. Vertical silos continue to exist and this prevents horizontal flow of information. Middleware can solve this problem. Many system continue to use IPv4 and this could be a problem as devices run out of unique IP addresses.
 
 
-Example: Thingspeak
-===================
+Thingspeak
+==========
 
 Thingspeak is easy to use and can display quickly the data from your sensors.
 

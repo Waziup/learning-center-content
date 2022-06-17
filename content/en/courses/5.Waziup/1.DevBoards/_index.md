@@ -1,5 +1,5 @@
 ---
-title: Development boards
+title: WaziDev board series 
 description: Waziup compatible development boards
 ---
 
