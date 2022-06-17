@@ -29,7 +29,12 @@ IoT system architecture, in its simplistic view, consists of three parts:
 
 Devices include networked things, such as the sensors and actuators found in IIoT equipment,The Edge Gateway consists of sensor data aggregation systems that provide functionality, such as pre-processing of the data, securing connectivity to cloud, using systems such as WebSockets, the event hub, and, even in some cases, edge analytics or fog computing.The final part includes the cloud application built for IIoT using the microservices architecture it also includes various database systems that store sensor data, such as time series databases or asset stores using backend data storage systems.
 
-{{< youtube id="LlhmzVL5bm8">}}
+
+<youtube>LlhmzVL5bm8</youtube>
+
+
+
+<!-- {{< youtube id="LlhmzVL5bm8">}} -->
 
 ______
 
