@@ -41,13 +41,13 @@ Pins can be either `INPUT`, when you want to take information into the MCU, or `
 
 Some pins are called analog pins because they have an embedded analog-to-digital converter in which case you will be able to read a digital value from the analog pin to convert that digital value into the original voltage applied to that pin. This is usually how a program can get data from an analog sensor.
 
-{{< alert type="warning" >}}
+<alert type="warning">
 Be careful when applying voltage to a pin. While many microcontroller boards can be tolerant regarding the pin input voltage, i.e. accepting 5V to into a 3.3V pin, you must still pay attention to use the appropriate voltage. Also note that a microcontroller pin can usually deliver a very limited current, usually from 30mA to 50mA in most cases. Pins delivering more than 100mA are usually dedicated pins.
-{{< /alert >}}
+</alert>
 
-{{< alert >}}
+<alert>
 If you need to power control a power-hungry device such as a GPS sensor for instance, it is recommended to use a MOSFET transistor that will be driven by the microcontroller pin. To work with much higher voltage, i.e. 220V, or electrical power, the microcontroller pins will typically be used to control so-called relay modules.
-{{< /alert >}}
+</alert>
 
 Example: the ATmega328p
 ------------------------
@@ -127,6 +127,6 @@ Many ESP8286/ESP32-based boards are available on the market and their embedded W
 
 ![heltec_wroom](img/heltec_wroom.jpg)
 
-{{< alert >}}
+<alert>
 Look at the [`Advanced boards/Boards with WiFi`](advanced_boards/board_with_wifi/board_with_wifi) section for an example on how to use the embedded WiFi features.
-{{< /alert >}}
+</alert>
