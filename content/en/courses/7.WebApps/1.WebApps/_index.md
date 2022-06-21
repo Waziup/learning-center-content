@@ -8,9 +8,6 @@ This course will show you how to develop a Web interface for your IoT applicatio
 Simple Web App
 ==============
 
-HTML + Javascript
------------------
-
 The simplest Web application is composed of just HTML + Javascript.
 Here is an example:
 
@@ -94,7 +91,7 @@ So basically, we are modifying the HTML page live, inserting our sensor value.
 This is, really, the simplest IoT Web app that you could do!
 
 Web Sockets
------------
+===========
 
 Web sockets is like HTTP on steroid. 
 While HTTP is "fire and forget", Web sockets will open a persistent 2-way connection between client and server.
@@ -121,8 +118,8 @@ The channel is open! Client and server are discussing. This is not anymore "fire
 The underlying protocol here is MQTT, but you can use anything else.
 
 
-Create a graph plot and a map
------------------------------
+Create a plot and a map
+=======================
 
 It is very common to display IoT data as a time series graph, or as a map for geographical data.
 Let's look at some examples.
@@ -155,7 +152,7 @@ Please find the [example for a graph](https://github.com/Waziup/WaziApps-example
 ```
 
 We use the same technique as before: We have a HTML tag that will be replace by live content using a script.
-Here, we have a "<canvas>" with ID "myChart":
+Here, we have a `<canvas>` with ID "myChart":
 
 ```
 <canvas id="myChart" width="800" height="600">Loading...</canvas>
@@ -176,7 +173,7 @@ In that example, we are creating a map, that setting markers on it, correspondin
 All the examples are rendered [at this link]().
 
 Bootstrap
----------
+=========
 
 Another Web technology you might have heard of is [Bootstrap](https://getbootstrap.com/).
 Bootstrap is a framework built on the top of HTML and CSS3, with some optional Javascript.
@@ -205,13 +202,10 @@ Here is a basic example for a [three collumns design](https://getbootstrap.com/d
 In this example, Bootstrap provides the definitions of CSS classes "row" and "col-sm-4".
 Bootstrap is reactive by default, so your web page will look good on any screen size.
 
-Web development frameworks
-==========================
+ReactJS
+=======
 
 In this section, we'll overview some Web development frameworks useful for developping IoT applications.
-
-ReactJS
--------
 
 ReactJS is a Javascript library for writing UIs. 
 The basic example looks like that:
