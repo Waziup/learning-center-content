@@ -28,18 +28,14 @@ Registration
 The first thing you need to do is to create a login and a password.
 You should already have a gateway and a sensor node ready and configured.
 
-{{%action%}}
 **Step \#1:** [Open the WaziCloud dashboard](https://dashboard.waziup.io/).
-{{%/action%}}
 
 ![login](img/login.png)
 
 You can create a new account by clicking on “Register” of by using a social network OpenId procedure.
 All communications will be secured by SSL. 
 
-{{%action%}}
 **Step \#2:** fill in the fields. 
-{{%/action%}}
 
 ![register](img/register.png)
 
@@ -71,28 +67,20 @@ Manual creation
 
 If you want to create your devices yourself on the dashboard, follow this procedure:
 
-{{%action%}}
 **Step \#1:** Click on "Settings" menu. 
-{{%/action%}}
 
 You will get this screen:
 ![Settings page](img/Settings_create.png)
 
-{{%action%}}
 **Step \#2:** Activate the "Allow manual creation of gateways and devices" option. 
-{{%/action%}}
 
 This option will allow you to create your own devices.
 
-{{%action%}}
 **Step \#3:** Come back on the devices screen and click on "Add a device" button:
-{{%/action%}}
 
 ![Add a device](img/add_device.png)
 
-{{%action%}}
 **Step \#4:** You can now fill in the details of your device.
-{{%/action%}}
 
 ![Device creation](img/device_add.png)
 

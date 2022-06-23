@@ -8,5 +8,7 @@ In this course we will learn about comprehensive IoT Cloud platforms, such as Mi
 Microsoft Azure IoT
 ===================
 
+Course under construction
+
 Amazon AWS IoT
 ==============

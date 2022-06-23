@@ -8,6 +8,8 @@ This course will show how to analyse IoT data, using Python. The first thing to 
 Data preparation
 ================
 
+Course under construction.
+
 Data analysis
 =============
 

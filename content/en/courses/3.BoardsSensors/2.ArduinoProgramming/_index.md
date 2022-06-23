@@ -164,7 +164,14 @@ There is also the analog versions of the above: `analogRead` and `analogWrite`.
 
 To write to the Serial monitor, you can use `print` and `println`.
 
-`delay` is also very useful.
+```
+Serial.println(string)
+```
 
+
+`delay` is also very useful:
+```
+delay(int)
+```
 
 To study Arduino programming more in depth, you can head to [this course](https://startingelectronics.org/software/arduino/learn-to-program-course/).

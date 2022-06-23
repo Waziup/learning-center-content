@@ -11,7 +11,9 @@ Electric signals
 ================
 
 A signal is a function that conveys information about a phenomena.
-![signals](img/signals.png)
+
+<img src="img/signals.png" width="300" />
+
 
 A signal can be represented in two ways:
 - an *analog* representation would match the original signal, 
