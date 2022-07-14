@@ -5,6 +5,8 @@ description: This course will show you how to use HTTP APIs.
 
 This course will show you how to use HTTP APIs. We will go through the architecture of each protocol, and how to send and retrieve data. Additionally, the course will show you how to design APIs, with all the do’s and don’ts.
 
+<youtube>CHTOr1ZWcog</youtube>
+
 Introduction
 ============
 

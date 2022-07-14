@@ -6,6 +6,8 @@ description: This course will show you how to use MQTT APIs.
 MQTT (Message Queue Telemetry Transport) is a publish-subscribe messaging protocol designed for lightweight M2M communications.
 It is very useful in IoT applications, as we will see.
 
+<youtube>ozqQEhM5IPo</youtube>
+
 HTTP vs MQTT
 ------------
 

@@ -19,6 +19,8 @@ This powerful feature allow you to receive messages on Social Networks if some c
 It also allows us to create an “Actuation loop”: we can trigger an actuator based on some condition.
 Finally, the “projects” feature is demonstrated, allowing the user to conveniently group the various devices and gateways in a single deployment.
 
+<youtube>e3lnWpQQRpc</youtube>
+
 The full WaziCloud documentation is [here](https://www.waziup.io/documentation/wazicloud/dashboard/).
 
 Registration
