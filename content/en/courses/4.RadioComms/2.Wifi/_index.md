@@ -3,11 +3,14 @@ title: Wifi IoT devices
 description: This course will present the WiFi technology usage in IoT.
 ---
 
+Introduction
+============
+
 This course will present general public wireless technologies such as WiFi. These versatile wireless technologies can be used in specific IoT domains when short range or Internet connectivity should be available on the device itself. These technologies can also be used in training sessions to introduce higher level IoT protocol stacks such as MQTT.
 We will use the popular chips ESP8266 or ESP32 as an example, as this chip as Wifi embbeded.
 
-ESP8266/ESP32
-==============
+The ESP8266/ESP32 boards
+========================
 
 The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability produced by Shanghai-based Chinese manufacturer Espressif Systems [source: https://en.wikipedia.org/wiki/ESP8266]. The chip is usually embedded on a board such as the NodeMCU (see picture below) to make it easier to use. Most of ESP8266-based boards are compatible with Arduino IDE provided that you install the required addons. 
 
