@@ -11,3 +11,7 @@ In the following video, we will overview the Waziup development boards, namely W
 
 <youtube>ir_EQOdyZQA</youtube>
 
+References
+==========
+
+You can find the user manual of WaziDev [here](https://www.waziup.io/documentation/wazidev/).
