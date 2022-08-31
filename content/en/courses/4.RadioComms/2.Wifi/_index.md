@@ -3,10 +3,14 @@ title: Wifi IoT devices
 description: This course will present the WiFi technology usage in IoT.
 ---
 
+Introduction
+============
+
 This course will present general public wireless technologies such as WiFi. These versatile wireless technologies can be used in specific IoT domains when short range or Internet connectivity should be available on the device itself. These technologies can also be used in training sessions to introduce higher level IoT protocol stacks such as MQTT.
 We will use the popular chips ESP8266 or ESP32 as an example, as this chip as Wifi embbeded.
 
-## ESP8266/ESP32
+The ESP8266/ESP32 boards
+========================
 
 The ESP8266 is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability produced by Shanghai-based Chinese manufacturer Espressif Systems [source: https://en.wikipedia.org/wiki/ESP8266]. The chip is usually embedded on a board such as the NodeMCU (see picture below) to make it easier to use. Most of ESP8266-based boards are compatible with Arduino IDE provided that you install the required addons. 
 
@@ -16,7 +20,8 @@ The successor to these microcontroller chips is the ESP32. Again, many boards ba
 
 ![SHT_etanche](img/heltec_wroom.jpg)
 
-## Installation instructions using Arduino IDE Boards Manager
+Installation
+============
 
 Starting with 1.6.4, Arduino allows installation of third-party platform packages using Boards Manager. We have packages available for Windows, Mac OS, and Linux (32 and 64 bit).
 
@@ -33,11 +38,10 @@ You can refer to GitHub page for [ESP8266](https://github.com/esp8266/Arduino#in
    
 As there are many boards based on both ESP8266 or ESP32, you can refer to the following [wikipedia page](https://en.wikipedia.org/wiki/ESP8266) to identify your board.
 
-# Connecting a simple analog sensor to the ESP8266/ESP32
+Send sensor data on Wifi
+========================
 
 It is known that both ESP8266 and ESP32 have "bad" analog-to digital converter. So here the analog sensor is just for demonstration purpose. It is better for accuracy to get a digital sensor, such as the DHT22. You can also just assign a value to the temperature in the code without connecting any physical sensor.
-
-## Brief description of the code
 
 In the example below, we briefly explain setting up the wifi and establishing the connection. If the connection is successful, we measure the temperature. The temperature value is then uploaded to a ThingSpeak channel. 
  
@@ -124,7 +128,8 @@ if (WiFi.status() == WL_CONNECTED) {
  } 
 ```
 
-## Complete example
+Complete example
+=================
 
 Here is the complete working and tested example of the an Arduino board with WiFi. Data is uploaded to our LoRa demo ThingSpeak channel 66794: https://thingspeak.com/channels/66794 on field 3. Check on the [channel page](https://thingspeak.com/channels/66794) for the data you are uploading.
 
