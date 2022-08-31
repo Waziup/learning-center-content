@@ -212,18 +212,3 @@ Did you receive anything?
 You should see the number of times this notification was sent, and the time for the last sending in the box "Status".
 
 
-APIs
-====
-
-The WaziCloud has an extensive API. It provides both a HTTP and MQTT interfaces.
-The API allows your application to retrieve the data from your sensors, and to control your actuators.
-It has the following features:
-
-- Device management
-- Sensors and actuators manangement
-- Notification programming
-- Gateways management
-- Access control
-
-The API documentation is available at https://api.waziup.io/docs.
-With this website, you can explore and interact with all the endpoints of the Waziup API.
