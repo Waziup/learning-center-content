@@ -26,8 +26,8 @@ How the AI disciplines are connected and interlinked to each other [Con21].
 
 Artificial Intelligence is the most general scientific field.
 One subfield of Artificial Intelligence is Machine Learning.
-It describes algorithms with a ability to learn a task, without being explicitly programmed to do so.
-A subfield of Machine Learning is Deep Learning. Computer Vision and Natural Language Processing are part of Deep Learning.
+It describes algorithms with an ability to learn a task, without being explicitly programmed to do so.
+A subfield of Machine Learning is Deep Learning. Most areas of Computer Vision and Natural Language Processing nowadays are part of Deep Learning.
 With Deep Learning with help of e.g. convolutional neural networks it is possible to learn and process great amounts of data.
 
 
@@ -48,7 +48,19 @@ Data Scientists wrote classifiers like Edge Detection Filters.
 The program could now figure out where objects began and where they ended, recognize the shape of an object, and recognize the letters STOP.
 From this, an algorithm was developed that recognized images and learned what a stop sign is.
 That's a good idea, but on days when it was very foggy, for example, or trees partially covered the sign, the algorithm was rarely able to identify the sign.
-There are also other important areas where machine leaning is applied.
+
+There are also other important areas where machine leaning is applied. For example, Natural Language Processing where machine learning is being used to recognize spoken words and convert it to text.
+
+Another application of machine learning are product recommendations. Big companies like Google, Amazon or Netflix use it to propose products to users.
+
+Email Spam and Malware Filtering is also utilizing Machine Learning. Gmail is using the following filters: Content Filter, Header filter, General blacklists filter, Rules-based filters and Permission filters. Some machine learning algorithms such as Multi-Layer Perceptron, Decision tree, and Naïve Bayes classifier are used for email spam filtering and malware detection.
+
+Stock market trading is another area where machine learning is used to predict 
+
+These are just some examples of areas where machine learning is being used, there are many other fields where it is utilized, like for example:
+- Virtual Personal Assistant (Google assistant, Alexa, Cortana, Siri)
+- Medical Diagnosis (helps in finding brain tumors and other brain-related diseases easily)
+- Online Fraud Detection (checking whether it is a genuine transaction or a fraud transaction: Feed Forward Neural network are used)
 
 Styles of Machine Learning
 --------------------------
@@ -87,6 +99,13 @@ Semi-Supervised learning is usually used to solve the following problems:
 
 **Reinforced Learning** works with a learning argent that learns from its environment.
 So, it works on interacting with the environment. The type of input data is not predefined. An agent rewards the model for success and does not reward it for a failure.
+There following illustration 
+
+![Diagram showing the components in a typical Reinforcement Learning (RL) system. An agent takes actions in an environment which is interpreted into a reward and a representation of the state which is fed back into the agent.](img/Reinforcement_learning_diagram.svg)
+<p style="text-align: center;">
+Diagram showing the components in a typical Reinforcement Learning (RL) system. An agent takes actions in an environment which is interpreted into a reward and a representation of the state which is fed back into the agent. [Meg17]. 
+</p> 
+
 Algorithms where reinforced learning is applied are Q-Learning and SARSA.
 Reinforced Learning learning is usually used to solve the following problems:
 - Exploitation 
@@ -105,7 +124,7 @@ Each neuron assigns a score to its input, whether this is correct or incorrect d
 
 Neural networks have been known since the early days of AI, the problem was that they were very computationally intensive and therefore practically impossible to implement.  
 
-Nowadays, image recognition by deep learning models is already better than humans in some scenarios. One area of ​​application is the identification of indicators for cancer in the blood or tumors on MRI images. Another, very prominent one, are Teslas self driving cars. Which is at the moment only available in the US as a beta tester, but will be available in the future in more and more countries.
+Nowadays, image recognition by deep learning models is already better than humans in some scenarios. One area of ​​application is the identification of indicators for cancer in the blood or tumors on MRI images. Another, very prominent one, are Tesla's self-driving cars. Which is at the moment only available in the US as a beta tester, but will be available in the future in more and more countries.
 In the following there are some more examples named for applications of Deep Learning:
 - image and speech recognition
 - virtual assistants
@@ -134,14 +153,13 @@ Applications
 
 Here are some examples of the most common applications of CV:
 
-- image labeling
-- face recognition
-- object detection
-- image classification
-- object tracking
-- defect detection
-- movement analysis
-- cell classification
+- face recognition: detect faces in images
+- object detection: detect objects in images
+- image classification: assign class to contents of an image
+- object tracking: track the same object over time
+- defect detection: detect defects in a manufacturing process 
+- movement analysis: measuring technique to detect movements
+- cell classification: use microscopic images of bio-medical content to interpret cellular mechanisms 
 
 
 Different recognition types 
