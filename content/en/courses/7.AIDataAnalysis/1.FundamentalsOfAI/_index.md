@@ -8,7 +8,7 @@ Introduction
 When people think of AI, most of them think of **Artificial General Intelligence** (AGI).
 An AGI can do everything what humans do (and even better).
 But the sad truth is, that mankind is not even close to develop a "real AGI".
-Nowadays AI is very focused on some specific use cases, therefore one can speak of a **Artificial Narrow Intelligence** (ANI).
+Nowadays AI is very focused on some specific use cases, therefore one can speak of an **Artificial Narrow Intelligence** (ANI).
 Because you train it on a specific thing its capabilities are limited. If you try to use it for another task, it will not perform like you would expect it.
 AI is separated in many subfields, in this lesson we will elaborate on some of them:
 
@@ -153,13 +153,13 @@ Applications
 
 Here are some examples of the most common applications of CV:
 
-- face recognition: detect faces in images
-- object detection: detect objects in images
-- image classification: assign class to contents of an image
-- object tracking: track the same object over time
-- defect detection: detect defects in a manufacturing process 
-- movement analysis: measuring technique to detect movements
-- cell classification: use microscopic images of bio-medical content to interpret cellular mechanisms 
+- **face recognition:** detect faces in images
+- **object detection:** detect objects in images
+- **image classification:** assign class to contents of an image
+- **object tracking:** track the same object over time
+- **defect detection:** detect defects in a manufacturing process 
+- **movement analysis:** measuring technique to detect movements
+- **cell classification:** use microscopic images of bio-medical content to interpret cellular mechanisms 
 
 
 Different recognition types 
@@ -215,10 +215,12 @@ Applications
 Sources
 --------
 
+[Con17] Prof. Congduc Pham, WAZIUP Online Course: Fundamentals of Artificial Intelligence, https://cpham.perso.univ-pau.fr/LORA/HUBIQUITOUS/solution-lab/arduino-lora-tutorial/iot-courses/F-AI-1_Introduction.pdf, Version 2017
+
+[Meg17] Megajuice, Reinforcement learning diagram, https://commons.wikimedia.org/wiki/File:Reinforcement_learning_diagram.svg, Version 2017
+
 [Bala21] Ximena Bolaños, Natural Language Processing and Machine Learning, https://www.encora.com/insights/natural-language-processing-and-machine-learning, Version: September 29, 2021
 
 [Rath17] Huang J, Rathod V, Sun C, Zhu M, Korattikara A, Fathi A, Fischer I, Wojna Z, Song Y, Guadarrama S, Murphy K, "Speed/accuracy trade-offs for modern convolutional object detectors." https://github.com/tensorflow/models/tree/master/research/object_detection Version: CVPR 2017
-
-[Con17] Prof. Congduc Pham, WAZIUP Online Course: Fundamentals of Artificial Intelligence, https://cpham.perso.univ-pau.fr/LORA/HUBIQUITOUS/solution-lab/arduino-lora-tutorial/iot-courses/F-AI-1_Introduction.pdf, Version 2017
 
 [Brow14] Jason Brownlee, "Applied Machine Learning Process" https://machinelearningmastery.com/process-for-working-through-machine-learning-problems/ Version 2019
