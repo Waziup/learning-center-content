@@ -16,7 +16,7 @@ the data sheet to know how to calculate the real temperature from the analog val
                     
 # Connecting to Arduino
 
-![LM35DZ](/sensors/temperature/img/lm35-arduino.png)
+![LM35DZ](img/lm35-arduino.png)
 
 
 # Code example
