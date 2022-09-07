@@ -7,13 +7,13 @@ title: OLED screen
 
 Typical OLED screen uses I2C type communication with SCL (clock) and SDA (data). The one presented here is a small 0.96" screen with 128x64 definition. There are other size if you need it for your project.
 
-![OLED_screen](/sensors/oled/img/OLED_screen.png)
+![OLED_screen](img/OLED_screen.png)
 
 # Connecting to Arduino
 
 We will connect as follows, using default I2C pin A5 for SCL (clock) and A4 for SDA (data).
 
-![OLED_screen](/sensors/oled/img/OLED_on_Arduino.png)
+![OLED_screen](img/OLED_on_Arduino.png)
 
 
 # Code example
@@ -274,5 +274,5 @@ void loop() {
 
 We added a char array (`char oled_msg[20]`) as a text buffer where complex output can be converted in characters with the `sprintf()` function. This is convenient because the OLED library can only display simple text buffer, therefore if you need to display complex text with values from variables of your program, use the `sprintf()` as shown at the end of the above example.
 
-![OLED_SHT](/sensors/oled/img/OLED_SHT.jpg)
+![OLED_SHT](img/OLED_SHT.jpg)
 
