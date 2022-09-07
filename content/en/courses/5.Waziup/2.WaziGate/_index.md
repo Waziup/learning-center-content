@@ -37,3 +37,18 @@ Configuring Internet
 Let's now configure the internet on your WaziGate.
 
 <youtube>aucdo0knjh4</youtube>
+
+
+Configuring the gateway
+======================
+
+Let's now configure the rest of your WaziGate.
+
+<youtube>YeDg1wnJhQY</youtube>
+
+LoRaWAN sensing and actuating
+=============================
+
+You've come this far, this is now time for you to get the real deal: LoRaWAN sensing and actuating.
+
+<youtube>G_cQ_UaOvq4</youtube>
