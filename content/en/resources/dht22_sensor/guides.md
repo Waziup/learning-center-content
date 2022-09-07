@@ -3,7 +3,7 @@ date: 2020-07-24T09:00:00+00:00
 title: DHT22
 ---
 
-## Introduction
+# Introduction
 
 The DHT-22 (AM2302) is a low cost device for measuring humidity and temperature. The DHT sensors are made of two 
 parts, a capacitive humidity sensor and a thermistor. The device requires a 3 to 5V power supply. It 
@@ -16,7 +16,7 @@ In the second figure, you can see an AM2305 sensor. These sensors are compatible
 
 ![am2305](img/am2305.jpg)
 
-## Connecting to Arduino
+# Connecting to Arduino
 
 ![dht22-arduino2](img/dht22-arduino2.jpg)
 
@@ -24,7 +24,7 @@ You can find the DHT22 (like the one shown in the figure below) on a small PCB w
 
 ![dht22-res](img/dht22-res.jpg)
 
-## Code example
+# Code example
 
 To use a DHT sensor model, you need to include the [DHT library](https://github.com/adafruit/DHT-sensor-library). If you have the DHT11 sensor instead of the DHT22, comment `DHTTYPE DHT22` and uncomment `DHTTYPE DHT11` lines.
                 
@@ -71,6 +71,6 @@ void loop() {
 
 ```
 
-## Further information
+# Further information
 
 Documentation for DHT22 (or under ref. AM2302 or AM2303) humidity sensor is available [here](http://static.cactus.io/docs/sensors/temp-humidity/dht22/dht22-datasheet.pdf).
