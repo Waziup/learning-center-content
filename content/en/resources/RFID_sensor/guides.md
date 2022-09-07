@@ -28,7 +28,7 @@ We will connect as follows:
 |RST    |9  |
 |3.3V    |3.3V  |
 
-![rfid](/sensors/rfid/img/rfid.png)
+![rfid](img/rfid.png)
 
 For better understanding, more documentation on the MFRC522 module can be found [here](src/sketch/libraries/MFRC522/doc/rfidmifare.pdf).
 
@@ -134,11 +134,11 @@ In the code, you can see the main 4 functions that are used:  `mfrc522.PCD_Init(
 
 After flashing the `Arduino_MFRC522_DumpInfo` sketch, open the serial monitor and you should see something like the image below:
 
-![dumpinfo1](/sensors/rfid/img/dumpinfo1.png)
+![dumpinfo1](img/dumpinfo1.png)
 
 As the whole content of the card is dumped, when bringing the card near the RC522 module, you need to keep the card near the reader until all the information is completely read.
 
-![dumpinfo-highlighted](/sensors/rfid/img/dumpinfo-highlighted.png)
+![dumpinfo-highlighted](img/dumpinfo-highlighted.png)
 
 In the image above, you can see the UID number of the tag and also the 1kB of memory which is divided into 16 sectors (from 0 to 15). 
 Each sector has 4 blocks (blocks are numbered sequenctially from 0 to 63) and each block can store 16 bytes of data (16 sectors x 4 blocks x 16 bytes of data = 1024 bytes = 1K memory). This information is highlighted in the image for sector 10.
@@ -275,7 +275,7 @@ If you run the example, you can see that the processing task is much faster than
 
 Once you run the example and bring the card near the RC522 module, you should see the card UID as shown in the image below.
 
-![read_UID](/sensors/rfid/img/read_UID.png)
+![read_UID](img/read_UID.png)
 
 # Code example 3: Arduino_MFRC522_ReadAndWrite.ino
 
@@ -287,11 +287,11 @@ The complete code for example 3 can be found [here](src/sketch/Arduino_MFRC522_R
 
 The image below shows the screen on opening serial monitor.
 
-![ReadAndWrite1](/sensors/rfid/img/ReadAndWrite1.png)
+![ReadAndWrite1](img/ReadAndWrite1.png)
 
 Once you move the card near the RFID RC522 module, the code in this example rewrites data in sector 1, block 4 as can be seen in the image below.
 
-![ReadAndWrite](/sensors/rfid/img/ReadAndWrite.png)
+![ReadAndWrite](img/ReadAndWrite.png)
 
 {{< alert type="warning" >}}
 Remember that you should never select last block of any sector (here block 7 for sector 1) for write operations.
