@@ -113,7 +113,7 @@ As you can also see in the code above, we power the OLED screen with a digital p
 
 It is possible to use other pins on the Arduino board for the SCL and SDA pins. For instance, as most of the small OLED screen from Chinese manufacturers have GND, VCC, SCL and SDA pins in a row (from left to right) then it is convenient to use on the Arduino board (for instance the Arduino Nano or the Arduino ProMini) 4 consecutive pins such as GND, D2, D3 and D4 as illustrated in the figure below for the Arduino Nano.
 
-![OLED_Nano](/sensors/oled/img/OLED_Nano.png)
+![OLED_Nano](img/OLED_Nano.png)
 
 Here for instance, OLED VCC is connected to digital pin 2 of the Arduino therefore `OLED_PWR_PIN` should be defined as:
 
