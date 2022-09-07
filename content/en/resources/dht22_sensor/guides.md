@@ -16,8 +16,6 @@ In the second figure, you can see an AM2305 sensor. These sensors are compatible
 
 ![am2305](img/am2305.jpg)
 
-Documentation for DHT22 (or under ref. AM2302 or AM2303) humidity sensor is available [here](http://static.cactus.io/docs/sensors/temp-humidity/dht22/dht22-datasheet.pdf).
-                    
 ## Connecting to Arduino
 
 ![dht22-arduino2](img/dht22-arduino2.jpg)
