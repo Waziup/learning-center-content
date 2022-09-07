@@ -3,7 +3,7 @@ date: 2020-07-24T09:00:00+00:00
 title: DHT22
 ---
 
-## DHT22
+## Introduction
 
 The DHT-22 (AM2302) is a low cost device for measuring humidity and temperature. The DHT sensors are made of two 
 parts, a capacitive humidity sensor and a thermistor. The device requires a 3 to 5V power supply. It 
