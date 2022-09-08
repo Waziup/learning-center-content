@@ -7,13 +7,13 @@ title: OLED screen
 
 Typical OLED screen uses I2C type communication with SCL (clock) and SDA (data). The one presented here is a small 0.96" screen with 128x64 definition. There are other size if you need it for your project.
 
-![OLED_screen](/sensors/oled/img/OLED_screen.png)
+![OLED_screen](img/OLED_screen.png)
 
 # Connecting to Arduino
 
 We will connect as follows, using default I2C pin A5 for SCL (clock) and A4 for SDA (data).
 
-![OLED_screen](/sensors/oled/img/OLED_on_Arduino.png)
+![OLED_screen](img/OLED_on_Arduino.png)
 
 
 # Code example
@@ -95,8 +95,8 @@ void loop() {
   u8x8.drawString(0, 7, "////////////////"); 
 #endif     
 
-  delay(1000);    
-}    
+  delay(1000);
+}
 ```
 
 {{< alert >}}
@@ -113,7 +113,7 @@ As you can also see in the code above, we power the OLED screen with a digital p
 
 It is possible to use other pins on the Arduino board for the SCL and SDA pins. For instance, as most of the small OLED screen from Chinese manufacturers have GND, VCC, SCL and SDA pins in a row (from left to right) then it is convenient to use on the Arduino board (for instance the Arduino Nano or the Arduino ProMini) 4 consecutive pins such as GND, D2, D3 and D4 as illustrated in the figure below for the Arduino Nano.
 
-![OLED_Nano](/sensors/oled/img/OLED_Nano.png)
+![OLED_Nano](img/OLED_Nano.png)
 
 Here for instance, OLED VCC is connected to digital pin 2 of the Arduino therefore `OLED_PWR_PIN` should be defined as:
 
@@ -236,7 +236,7 @@ void loop() {
       Serial.print(ret);
       Serial.print(":");
       Serial.print(retry);
-      Serial.print("] ");      
+      Serial.print("] ");
     }
 
     if (ret != S_Meas_Rdy) {
@@ -248,7 +248,7 @@ void loop() {
         u8x8.drawString(0, 4, "error SHT...");  
 #endif 
     }
-    else {         
+    else {
         Serial.print("Temperature: ");
         Serial.print(t);
         Serial.print(" degrees Celcius Humidity: ");
@@ -268,11 +268,11 @@ void loop() {
     ret=0;
     retry=0;
     delay(5000);
-}    
+}
 ```
 
 
 We added a char array (`char oled_msg[20]`) as a text buffer where complex output can be converted in characters with the `sprintf()` function. This is convenient because the OLED library can only display simple text buffer, therefore if you need to display complex text with values from variables of your program, use the `sprintf()` as shown at the end of the above example.
 
-![OLED_SHT](/sensors/oled/img/OLED_SHT.jpg)
+![OLED_SHT](img/OLED_SHT.jpg)
 
