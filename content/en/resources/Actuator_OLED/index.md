@@ -1,5 +1,5 @@
 ---
-title: DHT22 Temperature-Humidity Sensor
+title: OLED display 
 type: hardware
-desc: The DHT22 is a basic, low-cost digital temperature and humidity sensor.
+desc: An OLED small display screen 
 ---

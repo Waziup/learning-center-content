@@ -1,5 +1,5 @@
 ---
-title: RFID Sensor
+title: Sound sensor
 type: hardware
-desc: A passive infrared sensor is an electronic sensor that measures infrared light radiating from objects in its field of view. 
+desc: A microphone based sensor 
 ---
