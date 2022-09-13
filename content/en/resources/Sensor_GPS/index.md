@@ -1,7 +1,7 @@
 ---
-title: DHT22 Temperature-Humidity Sensor
+title: GPS 
 type: hardware
-desc: The DHT22 is a basic, low-cost digital temperature and humidity sensor.
+desc: A Global Positioning System module for getting your position using satellite data.
 tags:
     - Sensor
 ---
