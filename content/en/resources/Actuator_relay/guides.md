@@ -32,7 +32,7 @@ Relay output:
 
 ``` arduino
 /********************
- *  Program:  PIR sensor tester
+ *  Program:  Relay Tester
  ********************/
     
 int RelayPin = 10; Declaring pin 10 as the control pin
