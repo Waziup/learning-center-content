@@ -39,8 +39,8 @@ Relay output:
 int RelayPin = 10;
 
 void setup() {
-	// Set RelayPin as an output pin
-	pinMode(RelayPin, OUTPUT);
+  //Set RelayPin as an output pin
+  pinMode(RelayPin, OUTPUT);
 }
 
 void loop() {
