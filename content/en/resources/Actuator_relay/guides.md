@@ -44,17 +44,17 @@ void setup() {
 }
 
 void loop() {
-// Let's turn on the relay...
-digitalWrite(RelayPin, LOW);
+  // Let's turn on the relay...
+  digitalWrite(RelayPin, LOW);
 
-//Lets wait for 5 seconds
-delay(5000);
+  //Lets wait for 5 seconds
+  delay(5000);
 	
-//Let's turn off the relay...
-digitalWrite(RelayPin, HIGH);
+  //Let's turn off the relay...
+  digitalWrite(RelayPin, HIGH);
 
-//Lets wait for another 5 seconds
-delay(5000);
+  //Lets wait for another 5 seconds
+  delay(5000);
 }
 ```
 
