@@ -19,18 +19,12 @@ Module interface:
 1. VCC(+): Connect to the positive pole of the power supply (voltage is 5V)
 2. GND(-): Connect to the negative pole of the power supply
 3. OUT(A): Connect to any Arduino Analog pin(A1)
-
-# Sensor Calibration
-
-See [here](https://how2electronics.com/dissolved-oxygen-sensor-arduino-interfacing-tutorial) for detailed documentation on calibration
-
-Kindly make sure to update this code with your calibrated parameters.
                     
 # Code example
 
 ``` Arduino
 /********************
- *  Program:  Dissolved Oxygen Sensor
+ *  Program:  Dissolved Oxygen Sensor Sample Code
  ********************/
 #include <Arduino.h>
  
@@ -97,5 +91,4 @@ void loop()
 
 # Further documentation
 
-Documentation for this sensor is available [here](https://www.dfrobot.com/product-1628.html).
-
+See [here](https://wiki.dfrobot.com/Gravity__Analog_Dissolved_Oxygen_Sensor_SKU_SEN0237) Documentation and Calibration of this sensor.
