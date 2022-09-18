@@ -22,7 +22,7 @@ Module interface:
 
 # Sensor Calibration
 
-See [here](https://www.dfrobot.com/product-1628.html) for detailed documentation on calibration  
+See [here](https://how2electronics.com/dissolved-oxygen-sensor-arduino-interfacing-tutorial) for detailed documentation on calibration  
                     
 # Code example
 
