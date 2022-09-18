@@ -22,11 +22,13 @@ Module interface:
 
 # Sensor Calibration
 
-See [here](https://how2electronics.com/dissolved-oxygen-sensor-arduino-interfacing-tutorial) for detailed documentation on calibration  
+See [here](https://how2electronics.com/dissolved-oxygen-sensor-arduino-interfacing-tutorial) for detailed documentation on calibration
+
+Kindly make sure to update this code with your calibrated parameters.
                     
 # Code example
 
-``` arduino
+``` Arduino
 /********************
  *  Program:  Dissolved Oxygen Sensor
  ********************/
