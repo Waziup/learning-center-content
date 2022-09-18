@@ -16,9 +16,9 @@ A dissolved oxygen meter is used to measure the dissolved oxygen in water, to re
 ![SEN0237](img/SEN0237.jpg)
 
 Module interface:
-1. VCC: Connect to the positive pole of the power supply (voltage is 5V)
-2. GND: Connect to the negative pole of the power supply
-3. A: Connect to any Arduino Analog pin(A1)
+1. VCC(+): Connect to the positive pole of the power supply (voltage is 5V)
+2. GND(-): Connect to the negative pole of the power supply
+3. OUT(A): Connect to any Arduino Analog pin(A1)
 
 # Sensor Calibration
 
