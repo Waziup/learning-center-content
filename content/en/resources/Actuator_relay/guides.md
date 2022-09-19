@@ -30,7 +30,7 @@ Relay output:
                     
 # Code example
 
-```arduino
+```c
 /********************
  *  Program:  Relay Tester
  ********************/
