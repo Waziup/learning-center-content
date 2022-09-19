@@ -166,7 +166,7 @@ The OLED screen will we connected using the previous setting: Arduino pins such 
 
 	U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ 3, /* data=*/ 4, /* reset=*/ U8X8_PIN_NONE);
 
-``` arduino
+```c
 #include "Sensirion.h"
 
 #define SHTD_PIN A4
