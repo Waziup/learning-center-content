@@ -8,3 +8,5 @@
 4. Resolution: 128 x 64 pixels
 5. Supply voltage: 3 - 5 V
 6. Module size: 27 x 27 x 3.5 mm
+7. View angle: 160  degrees
+8. Power consumptions: 0.06W

@@ -1,5 +1,5 @@
 ---
-date: 2020-07-24T09:00:00+00:00
+date: 2022-09-19T09:00:00+00:00
 title: OLED screen
 ---
 
@@ -12,10 +12,10 @@ Typical OLED screen uses I2C type communication with SCL (clock) and SDA (data).
 # Connecting to Arduino
 
 Pinouts
-1. VCC/VDD(+): 5V
-2. GND(-): GND
-3. SDA: A4
-4. SCK/SCL: A5
+1. VCC/VDD(+): 5V of Arduino
+2. GND(-): GND of Arduino
+3. SDA: A4 of Arduino
+4. SCK/SCL: A5 of Arduino
 
 ![pinout](img/pinout.jpg)
 
