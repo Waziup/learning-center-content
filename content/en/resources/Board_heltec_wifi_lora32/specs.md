@@ -2,7 +2,7 @@
 ---
 
 # Specs
-Techical specifications
+Technical specifications
 
 ![tech](img/tech.png)
 
