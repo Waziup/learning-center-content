@@ -7,13 +7,17 @@ title: OLED screen
 
 Typical OLED screen uses I2C type communication with SCL (clock) and SDA (data). The one presented here is a small 0.96" screen with 128x64 definition. There are other size if you need it for your project.
 
-![OLED_screen](img/OLED_screen.png)
+![oled](img/oled.jpg)
 
 # Connecting to Arduino
 
-We will connect as follows, using default I2C pin A5 for SCL (clock) and A4 for SDA (data).
+Pinouts
+1. VCC/VDD(+): 5V
+2. GND(-): GND
+3. SDA: A4
+4. SCK/SCL: A5
 
-![OLED_screen](img/OLED_on_Arduino.png)
+![pinout](img/pinout.jpg)
 
 
 # Code example
