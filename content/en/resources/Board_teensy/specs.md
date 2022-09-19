@@ -20,9 +20,3 @@ Technical specifications
 14. Pixel Processing Pipeline
 15. Peripheral cross triggering
 16. Power On/Off management
-
-![tech](img/tech.png)
-
-Electrical Characteristics
-
-![elec](img/elec.png)

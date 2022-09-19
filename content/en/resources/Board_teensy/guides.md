@@ -5,16 +5,18 @@ title: Teensy 4.0
 
 # Introduction
 
-WiFi LoRa 32 is a classic IoT dev-board based on ESP32 + SX127x, it has Wi-Fi, BLE, LoRa functions. It also comes with a Li-Po battery management system and 0.96″ OLED. This makes the heltec WiFi LoRA 32 suitable for smart cities, smart farms, smart home, and IoT applications.
+Teensy 4.0 is a ARM Cortex-M7 development board at 600 MHz for projects that require more processing power. The teensy lineup is great for situations involving complex realtime applications such as flight simulations, input/output etc,..
 
-![heltec](img/heltec.jpg)
+The Teensy 4.0 has a ton of PWM, analog and digital pins with an onboard Real Time clock. This makes it suitable for use with any sensor for countless applications.
+
+![teensy](img/teensy.jpg)
                  
 # Layout
 
-![layout](img/layout.jpg)
+![pinout](img/pinout.png)
 
-![pinout](img/pinout.jpg)
+![pinout2](img/pinout2.png)
 
 # Further documentation
 
-Documentation for this board is available [here](https://heltec.org/project/wifi-lora-32/).
+Documentation for this board is available [here](https://www.pjrc.com/store/teensy40.html).
