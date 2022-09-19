@@ -13,6 +13,7 @@ WiFi LoRa 32 is a classic IoT dev-board based on ESP32 + SX127x, it has Wi-Fi, B
 
 ![layout](img/layout.jpg)
 
+![pinout](img/pinout.jpg)
 
 # Further documentation
 
