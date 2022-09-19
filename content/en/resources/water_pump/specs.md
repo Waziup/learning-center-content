@@ -1,16 +1,10 @@
 ---
 ---
 
-# Specification Page 1
+# Specs
 
-This is the specification page 1.
-
-
-# Specification Page 2
-
-This is the specification page 2.
-
-
-# TODO
-
-TODO
+1. Pump Type: Submersible
+2. Liquid flow:240 L/H
+3. Operating Voltage:12 VDC
+4. Current Consumption:300mA (varies according to the load)
+5. Noise: <35dB
