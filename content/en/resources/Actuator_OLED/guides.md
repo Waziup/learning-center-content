@@ -27,7 +27,7 @@ For connecting a small OLED screen to an Arduino, we will first take a simple "h
 There are many software libraries for those OLED screens. We use here the `U8G2` very generic library that has the main advantage to provide possibility to re-define the SCL and SDA pins as it will be shown later on.
 
 
-``` c
+```c
 #define OLED
 #ifdef OLED
 #include <U8x8lib.h>
