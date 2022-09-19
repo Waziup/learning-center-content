@@ -20,7 +20,7 @@ electrical waves. These electrical signals are then amplified and picked up by y
 
 We will simply use analog pin A0 to get sound level. Calibration is necessary to have adequate value for `SENSITIVITY` depending on your application.
 
-``` arduino
+```c
 /********************
  *  Program:  MIC Sensor tester
  *  Description: print audio volume level to serial. Print "Sound" on loud sound.

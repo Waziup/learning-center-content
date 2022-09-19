@@ -20,7 +20,7 @@ are commonly found in appliances and gadgets used in homes or businesses. They a
                     
 # Code example
 
-``` arduino
+``` c
 /********************
  *  Program:  PIR sensor tester
  ********************/

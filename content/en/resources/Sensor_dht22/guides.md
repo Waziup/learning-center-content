@@ -28,7 +28,7 @@ You can find the DHT22 (like the one shown in the figure below) on a small PCB w
 
 To use a DHT sensor model, you need to include the [DHT library](https://github.com/adafruit/DHT-sensor-library). If you have the DHT11 sensor instead of the DHT22, comment `DHTTYPE DHT22` and uncomment `DHTTYPE DHT11` lines.
                 
-``` arduino
+``` c
 /********************
  * Program:  DHT22 sensor tester
  * Description: print humidity and temperature to serial

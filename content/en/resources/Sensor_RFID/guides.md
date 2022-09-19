@@ -159,7 +159,7 @@ Also remember never select last block of any sector. Writing into ‘Sector Trai
 
 # Code example 2: Arduino_MFRC522_ReadNUID.ino
 
-``` arduino
+``` c
 #include< SPI.h>
 #include "MFRC522.h"
 

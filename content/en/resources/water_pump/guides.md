@@ -24,7 +24,7 @@ Relay interface:
                     
 # Code example
 
-``` Arduino
+```c
 /********************
  *  Program:  Water Pump Sample Code
  ********************/

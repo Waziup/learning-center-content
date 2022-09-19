@@ -24,7 +24,7 @@ There are only three pins that you need to worry about on most of these soil hum
 
 # Code example
 
-``` arduino
+```c
 /********************
  * Soil humidity sensor tester
  * Read soil humidity by measuring its resistance.

@@ -22,7 +22,7 @@ Module interface:
                     
 # Code example
 
-``` Arduino
+``` c
 /********************
  *  Program:  Dissolved Oxygen Sensor Sample Code
  ********************/

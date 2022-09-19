@@ -28,7 +28,7 @@ Otherwise, it is a simple analog example where analog pin A0 is used.
 
 Don't be surprised, depending on your sensor model, the returned value could be reversed, i.e. low value can mean very bright and vice-versa.
 
-``` arduino
+``` c
 /********************
  * Program:  Photocell simple testing sketch.
  * Connect one end of the photocell to 5V, the other end to Analog 0.

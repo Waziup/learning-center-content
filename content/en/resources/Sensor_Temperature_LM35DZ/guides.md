@@ -21,7 +21,7 @@ the data sheet to know how to calculate the real temperature from the analog val
 
 # Code example
 
-```arduino
+```c
 /********************
  *  Program:  LM35 sensor tester
  *  Description: Reads the voltage from a LM35 temperature

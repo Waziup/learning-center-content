@@ -33,7 +33,7 @@ Note how we use pins 3 and 4 for serial TX/RX from the microcontroller board. So
 
 # Code example
 
-``` arduino
+``` c
 //////////////////////////////////////////////////////////////////////
 // Simple GPS Sensor : parsing GGA NMEA sentence (GPGGA or GNGGA) 
 // On the Ublox 8 series GPGGA is replaced by GNGGA by default

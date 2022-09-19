@@ -24,7 +24,7 @@ Module interface:
                     
 # Code example
 
-``` Arduino
+```c
 /********************
  *  Program:  Analog pH Sample Code
  ********************/

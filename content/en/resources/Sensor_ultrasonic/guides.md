@@ -19,7 +19,7 @@ There are only four pins that you need to worry about on the HC-SR04.
 
 # Code example
 
-``` arduino
+```c
 /********************
  *  Program:  HC-SR04 sensor tester
  *  Description: print distance to serial
