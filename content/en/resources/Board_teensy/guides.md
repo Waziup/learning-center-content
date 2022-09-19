@@ -5,7 +5,7 @@ title: Teensy 4.0
 
 # Introduction
 
-Teensy 4.0 is a ARM Cortex-M7 development board at 600 MHz for projects that require more processing power. The teensy lineup is great for situations involving complex realtime applications such as flight simulations, input/output etc,..
+Teensy 4.0 is an ARM Cortex-M7 development board at 600 MHz for projects that require more processing power. The teensy lineup is great for situations involving complex realtime applications such as flight simulations, input/output etc,..
 
 The Teensy 4.0 has a ton of PWM, analog and digital pins with an onboard Real Time clock. This makes it suitable for use with any sensor for countless applications.
 
