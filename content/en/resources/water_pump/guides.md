@@ -5,10 +5,9 @@ title: Dissolved Oxygen Sensor
 
 # Introduction
 
-A dissolved oxygen meter is used to measure the dissolved oxygen in water, to reflect the water quality. It is widely applied in many water quality applications, such as aquaculture, environment monitoring, natural science, etc.
+This is mostly used for pumping water in or out of tanks, acquaponics, irrigation and related systems.
                     
 ![subwater](img/subwater.jpg)
-
 
                  
 # Connecting to Arduino
