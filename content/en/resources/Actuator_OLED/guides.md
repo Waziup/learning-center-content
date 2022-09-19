@@ -23,7 +23,7 @@ For connecting a small OLED screen to an Arduino, we will first take a simple "h
 There are many software libraries for those OLED screens. We use here the `U8G2` very generic library that has the main advantage to provide possibility to re-define the SCL and SDA pins as it will be shown later on.
 
 
-``` arduino
+``` c
 #define OLED
 #ifdef OLED
 #include <U8x8lib.h>
@@ -125,7 +125,7 @@ Then change the definition of the screen object as follows:
 
 If you look at the raw source of the [hello](src/sketch/Arduino_hello_oled/Arduino_hello_oled.ino) example previously presented you will see a list of `#define` statements at the beginning. They are commented as shown below:
 
-``` arduino
+``` c
 // choose Arduino pin for OLED pin GND, VCC, SCL and SDA 
 // suitable for Arduino Nano
 //#define OLED_GND234
@@ -139,7 +139,7 @@ If you look at the raw source of the [hello](src/sketch/Arduino_hello_oled/Ardui
 
 Uncomment the configuration that is suitable for you. For instance, if you want to use the previous configuration described for the Arduino Nano, i.e. 4 consecutive Arduino pins such as GND, D2, D3 and D4 for respectively OLED GND, VCC, SCL and SDA, then uncomment `//#define OLED_GND234`. You can also use an Arduino digital pin as GND pin by setting this pin to LOW level. `#define OLED_9GND876` and `#define OLED_7GND654` use for instance pin 9 or pin 7 for GND. See in the code how we do that:
 
-``` arduino
+``` c
 #ifdef OLED
 #ifdef OLED_PWR_PIN
   pinMode(OLED_PWR_PIN, OUTPUT);
