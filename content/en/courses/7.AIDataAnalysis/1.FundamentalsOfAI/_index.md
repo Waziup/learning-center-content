@@ -175,7 +175,7 @@ Natural Language Processing
 
 Natural Language Processing (NLP) examines how natural language in the form of text or spoken language data can be processed algorithmically with the help of computers. It is a subfield of Artificial Intelligence and shares some techniques with Machine Learning and also the subfield Deep Learning. This relationship is illustrated in the following schematic:
 
-![How is NLP interlinked with AI, ML and DL](img/nlp_machinelearning.webp)
+![How is NLP interlinked with AI, ML and DL](img/nlp_machinelearning.png)
 <p style="text-align: center;">
 How is Natural Language Processing interlinked with Artificial Intelligence, Machine Learning and Deep Learning [Bala21].
 </p>
