@@ -54,8 +54,9 @@ WaziDev is a development platform, capable of sending data through LoRaWAN to th
 The WaziGate processes locally the data and forwards it to the WaziCloud, were the user applications lives.
 More on this in Waziup module!
 
-Protocols
-=========
+
+Networking & protocols
+=======================
 
 Protocols are systems of rules and procedures that allow two or more entities to communicate.
 The TCP/IP protocol stack is at the heart of the Internet, which is the “I” in IoT, or course!
@@ -69,3 +70,32 @@ Here are few protocols used with IoT:
 - *CoAP* is for use with low-power and constrained networks. CoAP is a RESTful protocol.
 - *MQTT* is a publish/subscribe messaging transport that is extremely lightweight and ideal for connecting small devices to constrained networks.
 
+
+Radio communications
+====================
+
+Radio communications are an essential part of IoT.
+
+Our course on radio communications will introduce the basics of wireless communications: wireless transmission fundamentals including radio propagation models, antenna technologies, wireless link budget and the relationship between modulation, throughput, energy and transmission range.
+
+Web & mobile IoT applications
+=============================
+
+A complete IoT application should always include a web or mobile application.
+Our course will show you how to develop a Web interface for your IoT application. At first, we will develop a very simple Web application, based solely on HTML and Javascript. We will build on this knowledge to go to the next step: the Web frameworks. We will show the basics of three of the most popular frameworks: ReactJS, Angular and Vue.
+
+Data analysis and AI
+====================
+
+When people think of AI, most of them think of Artificial General Intelligence (AGI). An AGI can do everything what humans do (and even better). But the sad truth is, that mankind is not even close to develop a "real AGI". Nowadays AI is very focused on some specific use cases, therefore one can speak of a Artificial Narrow Intelligence (ANI). Because you train it on a specific thing its capabilities are limited. If you try to use it for another task, it will not perform like you would expect it. AI is separated in many subfields, in this lesson we will elaborate on some of them:
+
+    Machine Learning (ML)
+    Deep Leaning (DL)
+    Computer Vision (CV)
+    Natural Language Processing (NLP)
+
+
+Business support
+================
+
+We also provide business support for creating your IoT startup. Please checkout our courses on business, for instance how to build a business canvas.

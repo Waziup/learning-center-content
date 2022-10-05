@@ -5,6 +5,9 @@ title: Basics of electronics for IoT
 description: In this course, we will learn the basics of electronic needed to start building IoT prototypes.
 ---
 
+Introduction
+============
+
 Current, voltage, wires… IoT is, at its base, just electronics. In this course, we will learn the basics that you need to know to start building IoT prototypes. First of all, we’ll learn what an electric signal is, analogous or digital. We then learn about the electronics laws: Ohm’s law and Kirchhoff’s law. We’ll introduce basic components such as resistors and capacitors. Finally, two very useful circuits will be introduced: the Voltage Divider and Current limiter. 
 
 Electric signals

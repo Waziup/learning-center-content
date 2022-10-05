@@ -1,6 +1,6 @@
 ---
 title: Dissolved Oxgen Sensor
-type: Hardware
+type: hardware
 desc:  Dissovled oxygen sensors are essentially used to detect water quality by measuring the amount of dissoved oxygen
 tags:
     - Sensor
