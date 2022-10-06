@@ -1,7 +1,7 @@
 Overview
 ========
 
-As you may already know, plants require water, light(usually sunlight), nutrients among others to grow healthy. While these factors can be easily provided, the problem is usually with forgetfulness.
+As you may already know, plants require water, light(usually sunlight), nutrients etc,...to grow healthy. While these factors can be easily provided, the problem is usually with forgetfulness.
 
 Luckily for us we can use smart electronic devices to automate some of the above mentioned entities required for plan growth, specifically watering.
 
