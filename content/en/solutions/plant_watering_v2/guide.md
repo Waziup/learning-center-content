@@ -44,7 +44,7 @@ Schematics
 ----------
 There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A0.
 
-![soil-sensor](img/moisture_wire.png)
+![Sensor Wiring](media/moisture_wire.png)
 
 Code Sample
 -----------
