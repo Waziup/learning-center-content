@@ -28,4 +28,4 @@ To follow this user manual, one will need the following hardware:
 ![5v Single Channel Relay](./media/relay.png)
 ![Submersible Water Pump](./media/pump.png)
 ![Some Jumper Wires](./media/jumper.png)
-![Power Supply](./media/image13.png)
+![Power Supply](./media/power.png)
