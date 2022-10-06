@@ -34,7 +34,7 @@ Hardware
 Software
   - In terms of software, you need to intall the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
 
-**Step \#1:** Setting up the Moisture Sensor
+**Step \#1:** Setting up the Soil Moisture Sensor
 ==============================
 Soil moisture sensors measures the amount of water in the soil to maintain consistent and ideal soil conditions for plants.
 They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
@@ -44,7 +44,12 @@ Schematics
 ----------
 There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A0.
 
-![Sensor Wiring](media/moisture_wire.png)
+![Sensor Wiring](./media/moisture_wire.png)
+
+Module interface:
+1. VCC: Connect to the 5v pole of the Arduino
+2. GND: Connect to the GND pole of the Arduino
+3. IN: Connect to Arduino analog pin A0
 
 Code Sample
 -----------
@@ -66,5 +71,51 @@ void loop() {
   soilHumidity = analogRead(sensorPin);
   Serial.println(soilHumidity);
   delay(100);
+}
+```
+
+**Step \#2:** Setting up the Actuator(Relay)
+============================================
+
+You may occasionally wish your Arduino to manage appliances with AC power, such as lamps, fans, and other home appliances. The Arduino, however, cannot directly control these higher voltage devices because it runs on 5 volts.
+
+This is where the relay comes into play. You can use an Arduino to control the relay and the relay module to control the AC mains. In our case, we are controlling the 12 Volts supply of a water pump.
+                                 
+Schematics
+----------
+![relaywire](./media/relaywire.jpg)
+
+Module interface:
+1. VCC: Connect to the 5v pole of the Arduino
+2. GND: Connect to the GND pole of the Arduino
+3. IN: Connect to Arduino control pin 10
+
+Code Sample
+-----------
+```c
+/********************
+ *  Program:  Relay Tester
+ ********************/
+
+//Declaring pin 10 as the control pin    
+int RelayPin = 10;
+
+void setup() {
+  //Set RelayPin as an output pin
+  pinMode(RelayPin, OUTPUT);
+}
+
+void loop() {
+  // Let's turn on the relay...
+  digitalWrite(RelayPin, LOW);
+
+  //Lets wait for 5 seconds
+  delay(5000);
+	
+  //Let's turn off the relay...
+  digitalWrite(RelayPin, HIGH);
+
+  //Lets wait for another 5 seconds
+  delay(5000);
 }
 ```
