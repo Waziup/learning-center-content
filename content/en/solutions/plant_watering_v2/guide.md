@@ -29,3 +29,14 @@ To follow this user manual, one will need the following hardware:
 ![Submersible Water Pump](./media/pump.png)
 ![Some Jumper Wires](./media/jumper.png)
 ![Power Supply](./media/power.png)
+
+In terms of software, you need to intall the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
+
+**Step \#1:** Setting up the Moisture Sensor
+==============================
+Soil moisture sensors measures the amount of water in the soil to maintain consistent and ideal soil conditions for plants.
+They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
+just insert it into the soil and then read it.
+
+Wiring
+------
