@@ -23,7 +23,7 @@ To follow this user manual, one will need the following hardware:
 - Some Jumper Wires
 - Power Supply
 
-![Arduino Uno](./media/image9.png)
+![Arduino Uno](./media/arduino.png)
 ![Soil Moisture Sensor](./media/image8.png)
 ![5v Single Channel Relay](./media/image13.png)
 ![Submersible Water Pump](./media/image13.png)
