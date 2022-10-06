@@ -16,12 +16,13 @@ What parts do we need?
 
 To follow this user manual, one will need the following hardware:
 
-- an Arduino Uno with USB Cable
-- Soil Moisture Sensor
-- 5v Single Channel Relay
-- Submersible Water Pump
-- Some Jumper Wires
-- Power Supply
+Hardware
+  - an Arduino Uno with USB Cable
+  - Soil Moisture Sensor
+  - 5v Single Channel Relay
+  - Submersible Water Pump
+  - Some Jumper Wires
+  - Power Supply
 
 ![Arduino Uno](./media/arduino.png)
 ![Soil Moisture Sensor](./media/moisture.png)
@@ -30,7 +31,8 @@ To follow this user manual, one will need the following hardware:
 ![Some Jumper Wires](./media/jumper.png)
 ![Power Supply](./media/power.png)
 
-In terms of software, you need to intall the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
+Software
+  - In terms of software, you need to intall the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
 
 **Step \#1:** Setting up the Moisture Sensor
 ==============================
@@ -38,5 +40,31 @@ Soil moisture sensors measures the amount of water in the soil to maintain consi
 They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
 just insert it into the soil and then read it.
 
-Wiring
-------
+Schematics
+----------
+There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A0.
+
+![soil-sensor](img/moisture_wire.png)
+
+Code Sample
+-----------
+```c
+/********************
+ * Soil Moisture Tester
+ * Read soil humidity by measuring its resistance.
+ ********************/
+
+int sensorPin = A0;
+int soilHumidity = -1;
+
+void setup() {
+  Serial.begin(38400);
+
+}
+
+void loop() {
+  soilHumidity = analogRead(sensorPin);
+  Serial.println(soilHumidity);
+  delay(100);
+}
+```
