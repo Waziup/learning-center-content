@@ -119,3 +119,5 @@ void loop() {
   delay(5000);
 }
 ```
+**Step \#3:** Combining Sensing and Actuation for Automation
+============================================================
