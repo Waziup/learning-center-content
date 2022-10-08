@@ -60,7 +60,6 @@ Code Sample
  ********************/
 
 int sensorPin = A0;
-int soilHumidity = -1;
 
 void setup() {
   Serial.begin(38400);
@@ -68,7 +67,7 @@ void setup() {
 }
 
 void loop() {
-  soilHumidity = analogRead(sensorPin);
+  int soilHumidity = analogRead(sensorPin);
   Serial.println(soilHumidity);
   delay(100);
 }
@@ -126,7 +125,7 @@ At this point, we want to trigger the relay to turn ON the water pump, when the 
 
 Extra Hardware Needed
   - 12v Male Barrel Jack
-  
+   
 ![male jack](./media/jack.png)
 
 Schematics
@@ -140,8 +139,13 @@ Code Sample
  *  Program:  Automatic Irrigation
  ********************/
 
-//Declaring pin 10 as the control pin    
+//Declaring pin 10 as the control pin
 int RelayPin = 10;
+
+//Declaring pin A0 moisture sensing pin
+int sensorPin = A0;
+int const dryThreshold = 800;
+int const wetThreshold = 350;
 
 void setup() {
   //Set RelayPin as an output pin
@@ -149,16 +153,18 @@ void setup() {
 }
 
 void loop() {
-  // Let's turn on the relay...
-  digitalWrite(RelayPin, LOW);
 
-  //Lets wait for 5 seconds
-  delay(5000);
-	
-  //Let's turn off the relay...
-  digitalWrite(RelayPin, HIGH);
+  int soilHumidity = analogRead(sensorPin);
 
-  //Lets wait for another 5 seconds
+  if (!(isnan(soilHumidity))) {
+    if (soilHumidity > dryThreshold) {//Turn Pump ON
+      digitalWrite(RelayPin, HIGH);
+    } else if (soilHumidity <= wetThreshold) {//Turn Pump OFF
+      digitalWrite(RelayPin, LOW);
+    }
+  }
+
+  //Wait 5 seconds between reads/executions
   delay(5000);
 }
 ```
