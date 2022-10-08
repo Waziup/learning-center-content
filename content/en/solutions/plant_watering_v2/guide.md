@@ -124,6 +124,40 @@ void loop() {
 
 At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil.
 
+Extra Hardware Needed
+  - 12v Male Barrel Jack
+![male jack](./media/jack.png)
+
 Schematics
 ----------
-![relaymoisurewire](./media/relaymoisture.jpg)
+![relaymoisurewire](./media/sensepump.jpg)
+
+Code Sample
+-----------
+```c
+/********************
+ *  Program:  Automatic Irrigation
+ ********************/
+
+//Declaring pin 10 as the control pin    
+int RelayPin = 10;
+
+void setup() {
+  //Set RelayPin as an output pin
+  pinMode(RelayPin, OUTPUT);
+}
+
+void loop() {
+  // Let's turn on the relay...
+  digitalWrite(RelayPin, LOW);
+
+  //Lets wait for 5 seconds
+  delay(5000);
+	
+  //Let's turn off the relay...
+  digitalWrite(RelayPin, HIGH);
+
+  //Lets wait for another 5 seconds
+  delay(5000);
+}
+```
