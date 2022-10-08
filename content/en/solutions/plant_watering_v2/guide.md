@@ -126,6 +126,7 @@ At this point, we want to trigger the relay to turn ON the water pump, when the 
 
 Extra Hardware Needed
   - 12v Male Barrel Jack
+  
 ![male jack](./media/jack.png)
 
 Schematics
