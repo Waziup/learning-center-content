@@ -144,6 +144,8 @@ int RelayPin = 10;
 
 //Declaring pin A0 moisture sensing pin
 int sensorPin = A0;
+
+//Declaring dry and wet soil threshold values
 int const dryThreshold = 800;
 int const wetThreshold = 350;
 
@@ -153,13 +155,14 @@ void setup() {
 }
 
 void loop() {
-
+  //Read the soil moisture level
   int soilHumidity = analogRead(sensorPin);
 
+  //Check if the soil moisture value is a number
   if (!(isnan(soilHumidity))) {
-    if (soilHumidity > dryThreshold) {//Turn Pump ON
+    if (soilHumidity > dryThreshold) { //Turn Pump ON
       digitalWrite(RelayPin, HIGH);
-    } else if (soilHumidity <= wetThreshold) {//Turn Pump OFF
+    } else if (soilHumidity <= wetThreshold) { //Turn Pump OFF
       digitalWrite(RelayPin, LOW);
     }
   }
