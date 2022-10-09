@@ -121,7 +121,7 @@ void loop() {
 **Step \#3:** Combining Sensing and Actuation for Automation
 ============================================================
 
-At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil.
+At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet.
 
 Extra Hardware Needed
   - 12v Male Barrel Jack
