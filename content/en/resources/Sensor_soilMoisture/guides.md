@@ -31,7 +31,6 @@ There are only three pins that you need to worry about on most of these soil hum
  ********************/
 
 int sensorPin = A0;
-int soilHumidity = -1;
 
 void setup() {
   Serial.begin(38400);
@@ -39,7 +38,7 @@ void setup() {
 }
 
 void loop() {
-  soilHumidity = analogRead(sensorPin);
+  int soilHumidity = analogRead(sensorPin);
   Serial.println(soilHumidity);
   delay(100);
 }
