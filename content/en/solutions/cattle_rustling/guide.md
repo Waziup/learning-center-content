@@ -1,7 +1,9 @@
 ![Cattle with Tag](./media/cattle.jpg)
 
+Cattle Rustling
+===============
 Overview
-========
+--------
 Cattle rustlings is increasingly becoming a major problem in many parts of Africa in recent years. Despite the growing level of cattle theft and its consequences for society, the situation has yet to receive an effective intervention.
 
 In this guided article we will look at how to build a simple tracking solutions for livestock using a method known as **Geofencing**.
@@ -25,6 +27,5 @@ Hardware
   - Some Jumper Wires
   - LiPo/Li-ion Battery with Holder
   
-
 ![Parts One](./media/parts_one.png)
 ![SIM700G](./media/.png)
