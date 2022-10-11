@@ -26,9 +26,5 @@ Hardware
   - LiPo/Li-ion Battery with Holder
   
 
-![Arduino Nano](./media/nano.png)
-![SIM700G](./media/sim7000g.png)
-![4G Antenna](./media/4g.png)
-![Ceramic GPS Antenna](./media/gps.png)
-![Jumper wires](./media/jumper.png)
-![Battery](./media/battery.png)
+![Parts One](./media/parts_one.png)
+![SIM700G](./media/.png)
