@@ -29,7 +29,20 @@ Hardware
 ![Battery](./media/battery.png)
 
 Software
-  - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
+  - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
   - Install TinyGPSplus library by Mikal Hart
-  - d
 
+**Step \#1:** Installing TinyGPS Plus Library
+==============================================
+
+**Step \#2:** Reading and Processing GPS Coordinates
+====================================================
+
+**Step \#3:** Setting up GSM Text Notifications
+===============================================
+
+**Step \#4:** Setting up GeoFencing
+===================================
+
+**Step \#5:** Final Touches
+===================================
