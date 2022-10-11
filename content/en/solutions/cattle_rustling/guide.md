@@ -27,3 +27,9 @@ Hardware
   
 ![Parts One](./media/parts_one.png)
 ![Battery](./media/battery.png)
+
+Software
+  - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
+  - Install TinyGPSplus library by Mikal Hart
+  - d
+

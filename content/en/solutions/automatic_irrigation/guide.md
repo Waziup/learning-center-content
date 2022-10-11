@@ -31,7 +31,7 @@ Hardware
 
 
 Software
-  - In terms of software, you need to intall the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
+  - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
 
 **Step \#1:** Setting up the Soil Moisture Sensor
 ==============================
