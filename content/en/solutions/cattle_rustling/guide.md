@@ -26,4 +26,4 @@ Hardware
   - LiPo/Li-ion Battery with Holder
   
 ![Parts One](./media/parts_one.png)
-![SIM700G](./media/.png)
+![Battery](./media/battery.png)
