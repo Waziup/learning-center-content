@@ -21,13 +21,14 @@ To follow this user manual, one will need the following hardware:
 Hardware
   - an Arduino Nano with USB Cable
   - SIMCOM SIM7000G Breakout Board
-  - 4G LTE and GPS Antennas
+  - Flexible 4G LTE and Active Ceramic GPS Antennas
   - Some Jumper Wires
   - LiPo/Li-ion Battery with Holder
   
 
 ![Arduino Nano](./media/nano.png)
 ![SIM700G](./media/sim7000g.png)
-![4G and GPS Antenna](./media/antenna.png)
+![4G Antenna](./media/4g.png)
+![Ceramic GPS Antenna](./media/gps.png)
 ![Jumper wires](./media/jumper.png)
 ![Battery](./media/battery.png)
