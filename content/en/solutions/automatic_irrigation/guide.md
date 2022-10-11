@@ -1,5 +1,8 @@
+![Auto Irrigation](./media/autoirrigation.png)
+Automatic Irrigation
+====================
 Overview
-========
+--------
 
 As you may already know, plants require water, light(usually sunlight), nutrients etc,...to grow healthy. While these factors can be easily provided, the problem is usually forgetfulness.
 
