@@ -19,7 +19,7 @@ What parts do we need?
 To follow this user manual, one will need the following hardware:
 
 Hardware
-  - an Arduino Nano with USB Cable
+  - an Arduino Nano with USB mini Cable
   - SIMCOM SIM7000G Breakout Board
   - Flexible 4G LTE and Active Ceramic GPS Antennas
   - Some Jumper Wires
