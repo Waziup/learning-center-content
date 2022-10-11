@@ -34,17 +34,19 @@ Software
 
 **Step \#1:** Installing TinyGPS Plus Library
 =============================================
-Under the **Sketch** menu in your Arduino IDE, locate **Include Libraries** and navigate to **Manage Libraries..** and click to open the libraries manager.
+Under the **Sketch** menu in the Arduino IDE, locate **Include Libraries** and navigate to **Manage Libraries..** and click to open the libraries manager.
 
 ![Installing TinyGPSPlus](./media/lib1.png)
 
-Search for **tinygpsplus** in the search box and install the version by **Mikal Hart** as shown below
+Search for **"tinygpsplus"** in the search box and install the version by **Mikal Hart** as shown below
 
 ![Install TinyGPSPlus](./media/lib2.png)
 
 After installing we should see the label <span style="color: #00979C;">INSTALLED</span> **INSTALLED** as shown below.
 
 ![Install TinyGPSPlus](./media/lib3.png)
+
+We can now close the library manager.
 
 **Step \#2:** Reading and Processing GPS Coordinates
 ====================================================
