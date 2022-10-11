@@ -1,4 +1,4 @@
-![Auto Irrigation](./media/autoirrigation.png)
+![Auto Irrigation](./media/autoirrigation.jpg)
 Automatic Irrigation
 ====================
 Overview
