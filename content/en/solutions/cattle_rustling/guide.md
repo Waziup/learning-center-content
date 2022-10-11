@@ -30,7 +30,7 @@ Hardware
 
 Software
   - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
-  - Install TinyGPSplus library by Mikal Hart
+  - Install [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) library by **Mikal Hart**
 
 **Step \#1:** Installing TinyGPS Plus Library
 ==============================================
