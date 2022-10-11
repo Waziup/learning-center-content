@@ -24,12 +24,9 @@ Hardware
   - Some Jumper Wires
   - Power Supply
 
-![Arduino Uno](./media/arduino.png)
-![Soil Moisture Sensor](./media/moisture.png)
-![5v Single Channel Relay](./media/relay.png)
-![Submersible Water Pump](./media/pump.png)
+![Parts One](./media/parts_one.png)
 ![Some Jumper Wires](./media/jumper.png)
-![Power Supply](./media/power.png)
+
 
 Software
   - In terms of software, you need to intall the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
@@ -171,3 +168,5 @@ void loop() {
   delay(5000);
 }
 ```
+
+At this point, all we need to do is add a pipe to 
