@@ -31,7 +31,7 @@ Hardware
 Software
   - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
   - Install [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) library by **Mikal Hart**
-  - Install [The WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication following the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
+  - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
 
 **Step \#1:** Installing TinyGPS Plus Library
 =============================================
@@ -52,10 +52,10 @@ We can now close the library manager.
 **Step \#2:** Reading and Processing GPS Coordinates
 ====================================================
 
-**Step \#3:** Setting up GSM Text Notifications
+**Step \#3:** Tracking Using Geofencing
 ===============================================
 
-**Step \#4:** Setting up GeoFencing
+**Step \#4:** Transmitting Data of LoRa 
 ===================================
 
 **Step \#5:** Final Touches
