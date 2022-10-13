@@ -43,7 +43,7 @@ Search for **"tinygpsplus"** in the search box and install the version by **Mika
 
 ![Install TinyGPSPlus](./media/lib2.png)
 
-After installing we should see the label <span style="color: #00979C;">INSTALLED</span> **INSTALLED** as shown below.
+After installing we should see the label <span style="color: red;">INSTALLED</span> **INSTALLED** as shown below.
 
 ![Install TinyGPSPlus](./media/lib3.png)
 
