@@ -284,6 +284,7 @@ void displayInfo() {
     Serial.println(F(" INVALID DATE"));
   }
 
+  //wait 100 milliseconds between checks
   delay(100);
 }
 
