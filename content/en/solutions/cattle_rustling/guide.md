@@ -51,12 +51,28 @@ We can now close the library manager.
 
 **Step \#2:** Reading and Processing GPS Coordinates
 ====================================================
+In order to be sure our GPS sensor works, we need to atleast see some raw GPS data containing latitute, longitude, altitude etc...
+To do that we need to wire up our GPS breakout board to the Wazidev UART pins and run some basic GPS code.
+
+To keep things simple, we will connect the GPS sensors UART to the Wazidev's hardware UART. Usually we will have to use **Software Serial** to define a diffent set of pins for UART
+  
+Schematics
+----------
+![GPS Wiring](./media/sch1.png)
+
+Module interface:
+1. VCC: Connect to the 5v(VCC) pin of the wazidev
+2. GND: Connect to the GND pin of the wazidev
+3. TX: Connect to RX pin of the wazidev
+4. RX: No need to connect this pin as we wont be sending any commands to the GPS board
+
+NOTE:
 
 **Step \#3:** Tracking Using Geofencing
-===============================================
+=======================================
 
 **Step \#4:** Transmitting Data of LoRa 
-===================================
+=======================================
 
 **Step \#5:** Final Touches
 ===========================
