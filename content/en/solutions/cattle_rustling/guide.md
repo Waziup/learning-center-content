@@ -139,7 +139,7 @@ where:
 =======================================
 
 Now that we are able to see the GPS coordinates, the next thing is to set a fixed coordinate and determine how far new coordinates received are from fixed coordinate.
-We can do this calculation using the Haversine Formular. The haversine formula can be used to determine the great-circle distance between two points on a sphere given their longitudes and latitudes.
+We can do this calculation using the Haversine Formular. The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes.
 
 ![Haversine Formular](./media/haversine.png)
 
