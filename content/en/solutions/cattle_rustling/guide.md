@@ -120,7 +120,7 @@ void displayInfo(){
   }else{
     Serial.print(F("INVALID"));
   }
-  delay(2000);
+
 }
 ````
 
