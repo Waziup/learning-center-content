@@ -107,20 +107,31 @@ void loop() {
 }
 
 void displayInfo(){
-  //When new GPS data is correctly encoded/processed.
   if(gps.satellites.isValid() && gps.location.isValid() && gps.altitude.isValid() ){
      Serial.print(F("Sats: "));
      Serial.print(gps.satellites.value());
+  }else{
+    Serial.println(F("INVALID LOCATION"));
+  }
+
+  if(gps.location.isValid()){
      Serial.print(F(" Location: "));
      Serial.print(gps.location.lat(), 6);
      Serial.print(F(" "));
-     Serial.print(gps.location.lng(), 6);
-     Serial.print(F(" Altitude: ")); 
-     Serial.println(gps.altitude.meters());
+     Serial.print(gps.location.lng(), 6);    
   }else{
-    Serial.print(F("INVALID"));
+    Serial.println(F("INVALID LOCATION"));
   }
 
+  if(gps.altitude.isValid() ){
+     Serial.print(F(" Altitude: ")); 
+     Serial.println(gps.altitude.meters());
+     
+  }else{
+    Serial.println(F("INVALID ALTITUDE"));
+  }
+  
+  delay(100);
 }
 ````
 
