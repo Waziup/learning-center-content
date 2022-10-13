@@ -107,7 +107,7 @@ void loop() {
 }
 
 void displayInfo() {
-  if (gps.satellites.isValid() && gps.location.isValid() && gps.altitude.isValid() ) {
+  if (gps.satellites.isValid()) {
     Serial.print(F("Sats: "));
     Serial.print(gps.satellites.value());
   } else {
@@ -131,6 +131,7 @@ void displayInfo() {
   }
 
   if (gps.time.isValid()) {
+    Serial.print(" ");
     if (gps.time.hour() < 10) Serial.print(F("0"));
     Serial.print(gps.time.hour());
     Serial.print(F(":"));
@@ -141,6 +142,7 @@ void displayInfo() {
   }
 
   if (gps.date.isValid()) {
+    Serial.print(" ");
     Serial.print(gps.date.month());
     Serial.print(F("/"));
     Serial.print(gps.date.day());
