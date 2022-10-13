@@ -180,7 +180,115 @@ Lets take a look at how to implement the Haversine Formular in our previous GPS 
 Code Sample
 -----------
 `````c
+#include <TinyGPS++.h>
+#include <SoftwareSerial.h>
 
+static const int RXPin = 10, TXPin = 11;
+static const uint32_t GPSBaud = 9600;
+
+//This is the fixed location's GPS Coordinates(this can be the cattle owners land)
+const double fixedlat = xxxxx; // insert your latitude
+const double fixedlon = yyyyy; // insert your longitude
+
+TinyGPSPlus gps;
+
+SoftwareSerial ss(RXPin, TXPin);
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  ss.begin(GPSBaud);
+}
+
+void loop() {
+  //new sentence is correctly encoded.
+  while (ss.available() > 0)
+    if (gps.encode(ss.read()))
+      displayInfo();
+
+  if (millis() > 5000 && gps.charsProcessed() < 10)
+  {
+    Serial.println(F("No GPS detected: check wiring."));
+    while (true);
+  }
+}
+
+void displayInfo() {
+  if (gps.satellites.isValid()) {
+    Serial.print(F("Sats: "));
+    Serial.print(gps.satellites.value());
+  } else {
+    Serial.println(F(" INVALID SATELITE"));
+  }
+
+  if (gps.location.isValid()) {
+    Serial.print(F(" Location: "));
+    double newlat = gps.location.lat();
+    double newlon = gps.location.lng();
+    double distance = calcDistance(fixedlat, fixedlon, newlat, newlon);
+    Serial.print(newlat, 6);
+    Serial.print(F(" "));
+    Serial.print(newlon, 6);
+    Serial.print(F(" "));
+    Serial.print(distance);
+    Serial.print(F("m"));
+  } else {
+    Serial.println(F(" INVALID LOCATION"));
+  }
+
+  if (gps.altitude.isValid() ) {
+    Serial.print(F(" Altitude: "));
+    Serial.print(gps.altitude.meters());
+  } else {
+    Serial.println(F(" INVALID ALTITUDE"));
+  }
+
+  if (gps.time.isValid()) {
+    Serial.print(" ");
+    if (gps.time.hour() < 10) Serial.print(F("0"));
+    Serial.print(gps.time.hour());
+    Serial.print(F(":"));
+    if (gps.time.minute() < 10) Serial.print(F("0"));
+    Serial.print(gps.time.minute());
+  } else {
+    Serial.println(F(" INVALID TIME"));
+  }
+
+  if (gps.date.isValid()) {
+    Serial.print(" ");
+    Serial.print(gps.date.month());
+    Serial.print(F("/"));
+    Serial.print(gps.date.day());
+    Serial.print(F("/"));
+    Serial.println(gps.date.year());
+  } else {
+    Serial.println(F(" INVALID DATE"));
+  }
+
+  delay(100);
+}
+
+//Calculating distance between fixed coordinates and new coordinates
+double calcDistance(double lat1, double lon1, double lat2, double lon2) {
+  double dlon, dlat, a, c;
+  double dist = 0.0;
+  dlon = dtor(lon2 - lon1);
+  dlat = dtor(lat2 - lat1);
+  a = pow(sin(dlat / 2), 2) + cos(dtor(lat1)) * cos(dtor(lat2)) * pow(sin(dlon / 2), 2);
+  c = 2 * atan2(sqrt(a), sqrt(1 - a));
+
+  dist = 6378140.0f * c;  //radius of the earth (6378140 meters) in feet 20925656.2
+  return (dist + 0.5);
+}
+
+//Convert degrees to radians
+double dtor(double fdegrees) {
+  return (fdegrees * PI / 180);
+}
+
+//Convert radians to degrees
+double rtod(double fradians) {
+  return (fradians * 180.0 / PI);
+}
 
 `````
 
