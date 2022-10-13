@@ -61,12 +61,69 @@ Schematics
 ![GPS Wiring](./media/sch1.png)
 
 Module interface:
-1. VCC: Connect to the 5v(VCC) pin of the wazidev
+1. VCC: Connect to the 3.3V(VCC) pin of the wazidev
 2. GND: Connect to the GND pin of the wazidev
-3. TX: Connect to RX pin of the wazidev
-4. RX: No need to connect this pin as we wont be sending any commands to the GPS board
+3. TX: Connect to pin 10 of the wazidev
+4. RX: No need to connect to pin 11 as we wont be sending any commands to the GPS board
 
-NOTE:
+Code Sample
+-----------
+
+````c
+#include <TinyGPS++.h>
+#include <SoftwareSerial.h>
+
+//Declaring pin 10 as recieve and 11 as Transmit
+static const int RXPin = 10, TXPin = 11;
+
+//Setting GPS communication Speed to default of NEO-M8 board
+static const uint32_t GPSBaud = 9600;
+
+//Creating GPS Object
+TinyGPSPlus gps;
+
+//Activating serial communication
+SoftwareSerial ss(RXPin, TXPin);
+
+void setup() {
+  Serial.begin(38400);
+
+  //Start listening for GPS Data
+  ss.begin(GPSBaud);
+}
+
+void loop() {
+    //When GPS data is available.
+  while (ss.available() > 0)
+    if (gps.encode(ss.read()))
+      displayInfo();
+
+  //When there's an error
+  if (millis() > 5000 && gps.charsProcessed() < 10)
+  {
+    Serial.println(F("No GPS detected: check wiring."));
+    while(true);
+  }
+}
+
+
+void displayInfo(){
+  //When new GPS data is correctly encoded/processed.
+  if(gps.satellites.isValid() && gps.location.isValid() && gps.altitude.isValid() ){
+     Serial.print(F("Sats: "));
+     Serial.print(gps.satellites.value());
+     Serial.print(F(" Location: "));
+     Serial.print(gps.location.lat(), 6);
+     Serial.print(F(" "));
+     Serial.print(gps.location.lng(), 6);
+     Serial.print(F(" Altitude: ")); 
+     Serial.println(gps.altitude.meters());
+  }else{
+    Serial.print(F("INVALID"));
+  }
+  delay(5000);
+}
+````
 
 **Step \#3:** Tracking Using Geofencing
 =======================================
