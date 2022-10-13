@@ -127,6 +127,7 @@ void displayInfo(){
 **NOTE:** It takes a while to obtain an accurate GPS lock on the location of the board. Could take anywhere from seconds to several minutes for values to begin showing up in the serial monitor in this form
 
 **Sats:** vvvvv **Location:** xxxxx yyyyy **Altitude:** zzzzz
+
 where:
 - vvvvv is the number of satelites the tracker sees
 - xxxxx is the longitude
