@@ -20,7 +20,7 @@ To follow this user manual, one will need the following hardware:
 
 Hardware
   - Wazidev with USB Mirco Cable
-  - Neo 6/7M GPS Breakout Board
+  - Neo M8/7/6 GPS Breakout Board
   - Active Ceramic GPS Antenna
   - LoRa Gateway with Internet
   - Some Jumper Wires
@@ -54,7 +54,7 @@ We can now close the library manager.
 In order to be sure our GPS sensor works, we need to atleast see some raw GPS data containing latitute, longitude, altitude etc...
 To do that we need to wire up our GPS breakout board to the Wazidev UART pins and run some basic GPS code.
 
-To keep things simple, we will connect the GPS sensors UART to the Wazidev's hardware UART. Usually we will have to use **Software Serial** to define a diffent set of pins for UART
+We will have to use **Software Serial** to define a diffent set of pins for UART to interface the GPS with the wazidev
   
 Schematics
 ----------
@@ -106,7 +106,6 @@ void loop() {
   }
 }
 
-
 void displayInfo(){
   //When new GPS data is correctly encoded/processed.
   if(gps.satellites.isValid() && gps.location.isValid() && gps.altitude.isValid() ){
@@ -121,12 +120,31 @@ void displayInfo(){
   }else{
     Serial.print(F("INVALID"));
   }
-  delay(5000);
+  delay(2000);
 }
 ````
 
+**NOTE:** It takes a while to obtain an accurate GPS lock on the location of the board. Could take anywhere from seconds to several minutes for values to begin showing up in the serial monitor in this form
+
+**Sats:** vvvvv **Location:** xxxxx yyyyy **Altitude:** zzzzz
+where:
+- vvvvv is the number of satelites the tracker sees
+- xxxxx is the longitude
+- yyyyy is the latitude
+- zzzzz is the altitude
+
+
 **Step \#3:** Tracking Using Geofencing
 =======================================
+
+Now that we are able to see the GPS coordinates, the next thing is to set a fixed coordinate and determine how far new coordinates received are from fixed coordinate.
+We can do this calculation using the Haversine Formular. The haversine formula can be used to determine the great-circle distance between two points on a sphere given their longitudes and latitudes.
+
+![Haversine Formular](./media/haversine.png)
+
+Lets take a look at how to implement the Haversine Formular in our previous GPS code.
+
+
 
 **Step \#4:** Transmitting Data of LoRa 
 =======================================
