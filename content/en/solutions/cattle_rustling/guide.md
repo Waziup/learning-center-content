@@ -93,12 +93,12 @@ void setup() {
 }
 
 void loop() {
-    //When GPS data is available.
+  //When GPS data is available.
   while (ss.available() > 0)
     if (gps.encode(ss.read()))
       displayInfo();
 
-  //When there's an error
+  //If there's an error
   if (millis() > 5000 && gps.charsProcessed() < 10)
   {
     Serial.println(F("No GPS detected: check wiring."));
@@ -107,6 +107,7 @@ void loop() {
 }
 
 void displayInfo() {
+  //Checking number of satelites in sight
   if (gps.satellites.isValid()) {
     Serial.print(F("Sats: "));
     Serial.print(gps.satellites.value());
@@ -114,6 +115,7 @@ void displayInfo() {
     Serial.println(F(" INVALID SATELITE"));
   }
 
+  //Checking GPS location coordinates
   if (gps.location.isValid()) {
     Serial.print(F(" Location: "));
     Serial.print(gps.location.lat(), 6);
@@ -123,6 +125,7 @@ void displayInfo() {
     Serial.println(F(" INVALID LOCATION"));
   }
 
+  //Checking Altitude/Elivation above sea level
   if (gps.altitude.isValid() ) {
     Serial.print(F(" Altitude: "));
     Serial.print(gps.altitude.meters());
@@ -130,6 +133,7 @@ void displayInfo() {
     Serial.println(F(" INVALID ALTITUDE"));
   }
 
+  //Checking Time
   if (gps.time.isValid()) {
     Serial.print(" ");
     if (gps.time.hour() < 10) Serial.print(F("0"));
@@ -141,6 +145,7 @@ void displayInfo() {
     Serial.println(F(" INVALID TIME"));
   }
 
+  //Checking Date
   if (gps.date.isValid()) {
     Serial.print(" ");
     Serial.print(gps.date.month());
@@ -152,6 +157,7 @@ void displayInfo() {
     Serial.println(F(" INVALID DATE"));
   }
 
+  //wait 100 milliseconds between checks
   delay(100);
 }
 ````
@@ -180,31 +186,40 @@ Lets take a look at how to implement the Haversine Formular in our previous GPS 
 Code Sample
 -----------
 `````c
+//Adding GPS and Software Serial Library
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
+//Declaring pin 10 as recieve and 11 as Transmit
 static const int RXPin = 10, TXPin = 11;
+
+//Setting GPS communication Speed to default of NEO-M8 board
 static const uint32_t GPSBaud = 9600;
 
 //This is the fixed location's GPS Coordinates(this can be the cattle owners land)
 const double fixedlat = xxxxx; // insert your latitude
 const double fixedlon = yyyyy; // insert your longitude
 
+//Creating GPS Object
 TinyGPSPlus gps;
 
+//Activating serial communication
 SoftwareSerial ss(RXPin, TXPin);
+
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(115200);
+
+  //Start listening for GPS Data
   ss.begin(GPSBaud);
 }
 
 void loop() {
-  //new sentence is correctly encoded.
+  //When GPS data is available.
   while (ss.available() > 0)
     if (gps.encode(ss.read()))
       displayInfo();
 
+  //If there's an error
   if (millis() > 5000 && gps.charsProcessed() < 10)
   {
     Serial.println(F("No GPS detected: check wiring."));
@@ -213,6 +228,7 @@ void loop() {
 }
 
 void displayInfo() {
+  //Checking for number of Valid Satelites in sight
   if (gps.satellites.isValid()) {
     Serial.print(F("Sats: "));
     Serial.print(gps.satellites.value());
@@ -220,6 +236,7 @@ void displayInfo() {
     Serial.println(F(" INVALID SATELITE"));
   }
 
+  //Checking GPS location coordinates
   if (gps.location.isValid()) {
     Serial.print(F(" Location: "));
     double newlat = gps.location.lat();
@@ -235,6 +252,7 @@ void displayInfo() {
     Serial.println(F(" INVALID LOCATION"));
   }
 
+  //Checking Altitude/Elivation above sea level
   if (gps.altitude.isValid() ) {
     Serial.print(F(" Altitude: "));
     Serial.print(gps.altitude.meters());
@@ -242,6 +260,7 @@ void displayInfo() {
     Serial.println(F(" INVALID ALTITUDE"));
   }
 
+  //Checking Time
   if (gps.time.isValid()) {
     Serial.print(" ");
     if (gps.time.hour() < 10) Serial.print(F("0"));
@@ -253,6 +272,7 @@ void displayInfo() {
     Serial.println(F(" INVALID TIME"));
   }
 
+  //Checking Date
   if (gps.date.isValid()) {
     Serial.print(" ");
     Serial.print(gps.date.month());
@@ -284,12 +304,6 @@ double calcDistance(double lat1, double lon1, double lat2, double lon2) {
 double dtor(double fdegrees) {
   return (fdegrees * PI / 180);
 }
-
-//Convert radians to degrees
-double rtod(double fradians) {
-  return (fradians * 180.0 / PI);
-}
-
 `````
 
 **Step \#4:** Transmitting Data of LoRa 
