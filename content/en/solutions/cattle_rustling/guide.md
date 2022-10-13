@@ -111,7 +111,7 @@ void displayInfo() {
     Serial.print(F("Sats: "));
     Serial.print(gps.satellites.value());
   } else {
-    Serial.println(F("INVALID LOCATION"));
+    Serial.println(F(" INVALID SATELITE"));
   }
 
   if (gps.location.isValid()) {
@@ -120,34 +120,34 @@ void displayInfo() {
     Serial.print(F(" "));
     Serial.print(gps.location.lng(), 6);
   } else {
-    Serial.println(F("INVALID LOCATION"));
+    Serial.println(F(" INVALID LOCATION"));
   }
 
   if (gps.altitude.isValid() ) {
     Serial.print(F(" Altitude: "));
-    Serial.println(gps.altitude.meters());
+    Serial.print(gps.altitude.meters());
   } else {
-    Serial.println(F("INVALID ALTITUDE"));
+    Serial.println(F(" INVALID ALTITUDE"));
   }
 
-  if (gps.time.isValid()){
+  if (gps.time.isValid()) {
     if (gps.time.hour() < 10) Serial.print(F("0"));
     Serial.print(gps.time.hour());
     Serial.print(F(":"));
     if (gps.time.minute() < 10) Serial.print(F("0"));
     Serial.print(gps.time.minute());
   } else {
-    Serial.println(F("INVALID TIME"));
+    Serial.println(F(" INVALID TIME"));
   }
 
-  if (gps.date.isValid()){
+  if (gps.date.isValid()) {
     Serial.print(gps.date.month());
     Serial.print(F("/"));
     Serial.print(gps.date.day());
     Serial.print(F("/"));
-    Serial.print(gps.date.year());
+    Serial.println(gps.date.year());
   } else {
-    Serial.println(F("INVALID DATE"));
+    Serial.println(F(" INVALID DATE"));
   }
 
   delay(100);
@@ -177,7 +177,10 @@ Lets take a look at how to implement the Haversine Formular in our previous GPS 
 
 Code Sample
 -----------
+`````c
 
+
+`````
 
 **Step \#4:** Transmitting Data of LoRa 
 =======================================
