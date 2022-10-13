@@ -106,31 +106,50 @@ void loop() {
   }
 }
 
-void displayInfo(){
-  if(gps.satellites.isValid() && gps.location.isValid() && gps.altitude.isValid() ){
-     Serial.print(F("Sats: "));
-     Serial.print(gps.satellites.value());
-  }else{
+void displayInfo() {
+  if (gps.satellites.isValid() && gps.location.isValid() && gps.altitude.isValid() ) {
+    Serial.print(F("Sats: "));
+    Serial.print(gps.satellites.value());
+  } else {
     Serial.println(F("INVALID LOCATION"));
   }
 
-  if(gps.location.isValid()){
-     Serial.print(F(" Location: "));
-     Serial.print(gps.location.lat(), 6);
-     Serial.print(F(" "));
-     Serial.print(gps.location.lng(), 6);    
-  }else{
+  if (gps.location.isValid()) {
+    Serial.print(F(" Location: "));
+    Serial.print(gps.location.lat(), 6);
+    Serial.print(F(" "));
+    Serial.print(gps.location.lng(), 6);
+  } else {
     Serial.println(F("INVALID LOCATION"));
   }
 
-  if(gps.altitude.isValid() ){
-     Serial.print(F(" Altitude: ")); 
-     Serial.println(gps.altitude.meters());
-     
-  }else{
+  if (gps.altitude.isValid() ) {
+    Serial.print(F(" Altitude: "));
+    Serial.println(gps.altitude.meters());
+  } else {
     Serial.println(F("INVALID ALTITUDE"));
   }
-  
+
+  if (gps.time.isValid()){
+    if (gps.time.hour() < 10) Serial.print(F("0"));
+    Serial.print(gps.time.hour());
+    Serial.print(F(":"));
+    if (gps.time.minute() < 10) Serial.print(F("0"));
+    Serial.print(gps.time.minute());
+  } else {
+    Serial.println(F("INVALID TIME"));
+  }
+
+  if (gps.date.isValid()){
+    Serial.print(gps.date.month());
+    Serial.print(F("/"));
+    Serial.print(gps.date.day());
+    Serial.print(F("/"));
+    Serial.print(gps.date.year());
+  } else {
+    Serial.println(F("INVALID DATE"));
+  }
+
   delay(100);
 }
 ````
@@ -156,6 +175,8 @@ We can do this calculation using the Haversine Formular. The haversine formula d
 
 Lets take a look at how to implement the Haversine Formular in our previous GPS code.
 
+Code Sample
+-----------
 
 
 **Step \#4:** Transmitting Data of LoRa 
