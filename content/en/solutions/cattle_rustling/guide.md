@@ -63,7 +63,7 @@ Schematics
 Module interface:
 1. VCC: Connect to the 3.3V(VCC) pin of the wazidev
 2. GND: Connect to the GND pin of the wazidev
-3. TX: Connect to pin 10 of the wazidev
+3. TX: Connect to Analog pin AO of the wazidev
 4. RX: No need to connect to pin 11 as we wont be sending any commands to the GPS board
 
 Code Sample
@@ -73,8 +73,8 @@ Code Sample
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
-//Declaring pin 10 as recieve and 11 as Transmit
-static const int RXPin = 10, TXPin = 11;
+//Declaring pin A0 as recieve and A1 as Transmit
+static const int RXPin = A0, TXPin = A1;
 
 //Setting GPS communication Speed to default of NEO-M8 board
 static const uint32_t GPSBaud = 9600;
@@ -101,7 +101,7 @@ void loop() {
   //If there's an error
   if (millis() > 5000 && gps.charsProcessed() < 10)
   {
-    Serial.println(F("No GPS detected: check wiring."));
+    Serial.println("No GPS detected: check wiring.");
     while(true);
   }
 }
@@ -109,52 +109,28 @@ void loop() {
 void displayInfo() {
   //Checking number of satelites in sight
   if (gps.satellites.isValid()) {
-    Serial.print(F("Sats: "));
+    Serial.print("Sats: ");
     Serial.print(gps.satellites.value());
   } else {
-    Serial.println(F(" INVALID SATELITE"));
+    Serial.println(" INVALID SATELITE");
   }
 
   //Checking GPS location coordinates
   if (gps.location.isValid()) {
-    Serial.print(F(" Location: "));
+    Serial.print(" Location: ");
     Serial.print(gps.location.lat(), 6);
-    Serial.print(F(" "));
+    Serial.print(" ");
     Serial.print(gps.location.lng(), 6);
   } else {
-    Serial.println(F(" INVALID LOCATION"));
+    Serial.println(" INVALID LOCATION");
   }
 
   //Checking Altitude/Elivation above sea level
   if (gps.altitude.isValid() ) {
-    Serial.print(F(" Altitude: "));
-    Serial.print(gps.altitude.meters());
+    Serial.print(" Altitude: ");
+    Serial.println(gps.altitude.meters());
   } else {
-    Serial.println(F(" INVALID ALTITUDE"));
-  }
-
-  //Checking Time
-  if (gps.time.isValid()) {
-    Serial.print(" ");
-    if (gps.time.hour() < 10) Serial.print(F("0"));
-    Serial.print(gps.time.hour());
-    Serial.print(F(":"));
-    if (gps.time.minute() < 10) Serial.print(F("0"));
-    Serial.print(gps.time.minute());
-  } else {
-    Serial.println(F(" INVALID TIME"));
-  }
-
-  //Checking Date
-  if (gps.date.isValid()) {
-    Serial.print(" ");
-    Serial.print(gps.date.month());
-    Serial.print(F("/"));
-    Serial.print(gps.date.day());
-    Serial.print(F("/"));
-    Serial.println(gps.date.year());
-  } else {
-    Serial.println(F(" INVALID DATE"));
+    Serial.println(" INVALID ALTITUDE");
   }
 
   //wait 1 second between checks
@@ -162,18 +138,14 @@ void displayInfo() {
 }
 ````
 
-**NOTE:** It takes a while to obtain an accurate GPS lock on the location of the board. Could take anywhere from seconds to several minutes for values to begin showing up in the serial monitor in this form
+**NOTE:** It takes a while to obtain an accurate GPS lock on the location of the board. This Could take anywhere from seconds to several minutes for values to begin showing up in the serial monitor in this form
 
-**Sats:** vvvvv **Location:** xxxxx yyyyy **Altitude:** zzzzz ttttt ddddd
+**Sats:** vvvvv **Location:** xxxxx yyyyy **Altitude:** zzzzz
 
 where:
 - vvvvv is the number of satelites the tracker sees
 - xxxxx is the longitude
 - yyyyy is the latitude
-- zzzzz is the altitude
-- ttttt is time of receiving the coordinates
-- ddddd is date 
-
 
 **Step \#3:** Tracking Using Geofencing
 =======================================
@@ -192,15 +164,15 @@ Code Sample
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
-//Declaring pin 10 as recieve and 11 as Transmit
-static const int RXPin = 10, TXPin = 11;
+//Declaring pin A0 as recieve and A1 as Transmit
+static const int RXPin = A0, TXPin = A1;
 
 //Setting GPS communication Speed to default of NEO-M8 board
 static const uint32_t GPSBaud = 9600;
 
 //This is the fixed location's GPS Coordinates(this can be the cattle owners land)
-const double fixedlat = xxxxx; // insert your latitude
-const double fixedlon = yyyyy; // insert your longitude
+const float fixedlat = xxxxx; // insert your latitude
+const float fixedlon = yyyyy; // insert your longitude
 
 //Creating GPS Object
 TinyGPSPlus gps;
@@ -209,7 +181,7 @@ TinyGPSPlus gps;
 SoftwareSerial ss(RXPin, TXPin);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(38400);
 
   //Start listening for GPS Data
   ss.begin(GPSBaud);
@@ -232,58 +204,34 @@ void loop() {
 void displayInfo() {
   //Checking for number of Valid Satelites in sight
   if (gps.satellites.isValid()) {
-    Serial.print(F("Sats: "));
+    Serial.print("Sats: ");
     Serial.print(gps.satellites.value());
   } else {
-    Serial.println(F(" INVALID SATELITE"));
+    Serial.println(" INVALID SATELITE");
   }
 
   //Checking GPS location coordinates
   if (gps.location.isValid()) {
-    Serial.print(F(" Location: "));
-    double newlat = gps.location.lat();
-    double newlon = gps.location.lng();
-    double distance = calcDistance(fixedlat, fixedlon, newlat, newlon);
+    Serial.print(" Location: ");
+    float newlat = gps.location.lat();
+    float newlon = gps.location.lng();
+    float distance = calcDistance(fixedlat, fixedlon, newlat, newlon);
     Serial.print(newlat, 6);
-    Serial.print(F(" "));
+    Serial.print(" ");
     Serial.print(newlon, 6);
-    Serial.print(F(" "));
+    Serial.print(" ");
     Serial.print(distance);
-    Serial.print(F("m"));
+    Serial.print("m");
   } else {
-    Serial.println(F(" INVALID LOCATION"));
+    Serial.println(" INVALID LOCATION");
   }
 
   //Checking Altitude/Elivation above sea level
   if (gps.altitude.isValid() ) {
-    Serial.print(F(" Altitude: "));
-    Serial.print(gps.altitude.meters());
+    Serial.print(" Altitude: ");
+    Serial.println(gps.altitude.meters());
   } else {
-    Serial.println(F(" INVALID ALTITUDE"));
-  }
-
-  //Checking Time
-  if (gps.time.isValid()) {
-    Serial.print(" ");
-    if (gps.time.hour() < 10) Serial.print(F("0"));
-    Serial.print(gps.time.hour());
-    Serial.print(F(":"));
-    if (gps.time.minute() < 10) Serial.print(F("0"));
-    Serial.print(gps.time.minute());
-  } else {
-    Serial.println(F(" INVALID TIME"));
-  }
-
-  //Checking Date
-  if (gps.date.isValid()) {
-    Serial.print(" ");
-    Serial.print(gps.date.month());
-    Serial.print(F("/"));
-    Serial.print(gps.date.day());
-    Serial.print(F("/"));
-    Serial.println(gps.date.year());
-  } else {
-    Serial.println(F(" INVALID DATE"));
+    Serial.println(" INVALID ALTITUDE");
   }
 
   //wait 1 second between checks
@@ -291,9 +239,9 @@ void displayInfo() {
 }
 
 //Calculating distance between fixed coordinates and new coordinates
-double calcDistance(double lat1, double lon1, double lat2, double lon2) {
-  double dlon, dlat, a, c;
-  double dist = 0.0;
+float calcDistance(float lat1, float lon1, float lat2, float lon2) {
+  float dlon, dlat, a, c;
+  float dist = 0.0;
   dlon = dtor(lon2 - lon1);
   dlat = dtor(lat2 - lat1);
   a = pow(sin(dlat / 2), 2) + cos(dtor(lat1)) * cos(dtor(lat2)) * pow(sin(dlon / 2), 2);
@@ -304,10 +252,19 @@ double calcDistance(double lat1, double lon1, double lat2, double lon2) {
 }
 
 //Convert degrees to radians
-double dtor(double fdegrees) {
+float dtor(float fdegrees) {
   return (fdegrees * PI / 180);
 }
 `````
+The data from the serial monitor this time would look like this.
+**Sats:** vvvvv **Location:** xxxxx yyyyy ddddd **Altitude:** zzzzz
+
+where:
+- vvvvv is the number of satelites the tracker sees
+- xxxxx is the longitude
+- yyyyy is the latitude
+- ddddd is the distance between coordinates in meters
+- zzzzz is the altitude
 
 **Step \#4:** Transmitting Data using LoRa 
 =======================================
@@ -316,7 +273,8 @@ To transmit the data collected over LoRa to the cloud, we need a gateway.
 
 NOTE: the Gateway must already be configured and have internet access. For how to setup the Wazidev to communicate with the gateway, be sure to see Module 5 Lecture 1.
 
-At this point we need to just need to pass on the distance and gps coordinates to the **xlpp.addPresence()** and **xlpp.addGPS()** function for transmission to the gateway.
+At this point we just need to pass on the distance between coordinates to **xlpp.addAnalogInput()** and gps coordinates to **xlpp.addGPS()** functions for transmission to the gateway.
 
 **Step \#5:** Final Touches
 ===========================
+Putting the 
