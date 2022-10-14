@@ -297,8 +297,8 @@ static const int RXPin = A0, TXPin = A1;
 static const uint32_t GPSBaud = 9600;
 
 //This is the fixed location's GPS Coordinates(this can be the cattle owners land)
-const double fixedlat = 6.694939;
-const double fixedlon = -1.549407;
+const double fixedlat = xxxxx;
+const double fixedlon = yyyyy;
 
 //Creating GPS Object
 TinyGPSPlus gps;
