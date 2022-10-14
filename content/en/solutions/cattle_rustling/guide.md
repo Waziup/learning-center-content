@@ -309,14 +309,14 @@ double dtor(double fdegrees) {
 }
 `````
 
-**Step \#4:** Transmitting Data of LoRa 
+**Step \#4:** Transmitting Data using LoRa 
 =======================================
 
 To transmit the data collected over LoRa to the cloud, we need a gateway.
 
 NOTE: the Gateway must already be configured and have internet access. For how to setup the Wazidev to communicate with the gateway, be sure to see Module 5 Lecture 1.
 
-At this point we need to just need to pass on the distance and gps coordinates to the **xlpp.addDistance()** and **xlpp.addGPS()** function for transmission to the gateway.
+At this point we need to just need to pass on the distance and gps coordinates to the **xlpp.addPresence()** and **xlpp.addGPS()** function for transmission to the gateway.
 
 **Step \#5:** Final Touches
 ===========================
