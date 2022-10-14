@@ -483,4 +483,9 @@ The correspongind data on the gateway will be mirrored on the WaziCloud as well.
 
 **Step \#5:** Final Touches
 ===========================
-Putting the 
+
+At this point we need to setup a notification for when the value of **analogInput1** goes above a certain threshold. The threshold in question can be the radius of the farmers land.
+
+Kindly see Module 5 Lecture 3 for how to setup notifications on Wazicloud.
+
+Cheers!!
