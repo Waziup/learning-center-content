@@ -157,20 +157,22 @@ void displayInfo() {
     Serial.println(F(" INVALID DATE"));
   }
 
-  //wait 100 milliseconds between checks
-  delay(100);
+  //wait 1 second between checks
+  delay(1000);
 }
 ````
 
 **NOTE:** It takes a while to obtain an accurate GPS lock on the location of the board. Could take anywhere from seconds to several minutes for values to begin showing up in the serial monitor in this form
 
-**Sats:** vvvvv **Location:** xxxxx yyyyy **Altitude:** zzzzz
+**Sats:** vvvvv **Location:** xxxxx yyyyy **Altitude:** zzzzz ttttt ddddd
 
 where:
 - vvvvv is the number of satelites the tracker sees
 - xxxxx is the longitude
 - yyyyy is the latitude
 - zzzzz is the altitude
+- ttttt is time of receiving the coordinates
+- ddddd is date 
 
 
 **Step \#3:** Tracking Using Geofencing
@@ -284,8 +286,8 @@ void displayInfo() {
     Serial.println(F(" INVALID DATE"));
   }
 
-  //wait 100 milliseconds between checks
-  delay(100);
+  //wait 1 second between checks
+  delay(1000);
 }
 
 //Calculating distance between fixed coordinates and new coordinates
@@ -309,6 +311,12 @@ double dtor(double fdegrees) {
 
 **Step \#4:** Transmitting Data of LoRa 
 =======================================
+
+To transmit the data collected over LoRa to the cloud, we need a gateway.
+
+NOTE: the Gateway must already be configured and have internet access. For how to setup the Wazidev to communicate with the gateway, be sure to see Module 5 Lecture 1.
+
+At this point we need to just need to pass on the distance and gps coordinates to the **xlpp.addDistance()** and **xlpp.addGPS()** function for transmission to the gateway.
 
 **Step \#5:** Final Touches
 ===========================
