@@ -448,7 +448,7 @@ void displayInfo() {
   xlpp.addAnalogInput(1, distance);
 
   //wait 1 second between checks
-  delay(1000);
+  //delay(1000);
 }
 
 //Calculating distance between fixed coordinates and new coordinates
@@ -469,6 +469,17 @@ float dtor(float fdegrees) {
   return (fdegrees * PI / 180);
 }
 ``````
+From the serial monitor we will see the following:
+
+![Serial Output](./media/serial.png)
+
+The gateway will also display our distance under analogInput1 and GPS under gpsLocation1
+
+![Wazigate View](./media/wazigateview.png)
+
+The correspongind data on the gateway will be mirrored on the WaziCloud as well.
+
+![WaziCloud View](./media/wazicloudview.png)
 
 **Step \#5:** Final Touches
 ===========================
