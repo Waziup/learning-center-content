@@ -469,13 +469,13 @@ float dtor(float fdegrees) {
   return (fdegrees * PI / 180);
 }
 ``````
-From the serial monitor we will see the following:
+We will see the following from the serial monitor:
 
 ![Serial Output](./media/serial.png)
 
 The gateway will also display our distance under analogInput1 and GPS under gpsLocation1
 
-![Wazigate View](./media/wazigateview.png)
+![Wazigate View](./media/gatewayview.png)
 
 The correspongind data on the gateway will be mirrored on the WaziCloud as well.
 
