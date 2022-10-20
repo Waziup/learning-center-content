@@ -171,4 +171,4 @@ void loop() {
 }
 ```
 
-At this point, all we need to do is add a pipe to 
+At this point, all we need to do is drop the water pump in a water resevoir and attach a pipe to the outlet of the pump to the plant.
