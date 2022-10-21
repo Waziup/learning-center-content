@@ -1,4 +1,4 @@
-![Weather Station](./media/weather.png)
+![Weather Station](./media/weather.jpg)
 
 Overview
 ========
