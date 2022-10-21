@@ -5,26 +5,26 @@ architecture:
   resources:
     # ids are generated
     - id: 4dd1511f-4189-4253-9222-fcd51bac4d1c 
-      type: soil_moisture_sensor
+      type: Sensor_soilMoisture
       # rotation: 0, 90, 180 or 270
       rot: 0
       x: 0
       y: 0
       params: {}
     - id: 47ab828d-3871-450c-b8a1-3d41c09750de 
-      type: wazidev
+      type: Board_WaziDev
       rot: 0
       x: 100
       y: 0
       params: {}
     - id: 510efa71-66b1-4f5b-b49a-cc66c4048609 
-      type: low_level_relay
+      type: Actuator_relay
       rot: 0
       x: 50
       y: 50
       params: {}
     - id: b464747d-5882-4da3-b581-6a2507a92d63 
-      type: water_pump
+      type: Other_water_pump
       rot: 0
       x: 0
       y: 100
