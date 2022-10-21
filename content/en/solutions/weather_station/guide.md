@@ -1,4 +1,4 @@
-![xxx yyy zzz](./media/cattle.jpg)
+![Weather Station](./media/weather.png)
 
 Overview
 ========
