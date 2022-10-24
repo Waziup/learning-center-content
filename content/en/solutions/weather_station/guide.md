@@ -15,9 +15,10 @@ Here's what we will be learning:
 - How to transmit sensor data to Wazicloud using LoRa
 
 What parts do we need?
-=====================
-- SparkFun Weather Shield
-- SparkFun Weather Meter
+======================
+- SparkFun Weather Shield Kit
+- SparkFun Weather Meter Kit
+- Arduino Uno with USB Cable
 - Lora SX1276 Breakout Board
 - Waziup Gateway
 - Some Jumper Wires
@@ -28,7 +29,7 @@ To follow this user manual, one will need the following hardware:
 Hardware
   - Wazidev 
   
-![Parts](./media/parts_one.png)
+![Parts](./media/parts.png)
 
 Software
   - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
