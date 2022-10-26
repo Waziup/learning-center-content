@@ -725,6 +725,6 @@ Open the **Serial Monitor**. You should see more data than we saw in the previou
 
 ![Serial Monitor](./media/serial2.jpg)
 
-**Note:** The ```#batt_lvl``` is indicating 4.08V. This is correct and is the actual voltage read from the Arduino powered over USB. The GPS module will add 50-80mA to the overall power consumption. The Weather Shield runs at 3.3V and the Arduino will continue to run just fine down to about 3V. The reading is very helpful for monitoring your power source (USB, battery, solar, etc).
+**Note:** The ```batt_lvl``` is indicating 4.08V. This is correct and is the actual voltage read from the Arduino powered over USB. The GPS module will add 50-80mA to the overall power consumption. The Weather Shield runs at 3.3V and the Arduino will continue to run just fine down to about 3V. The reading is very helpful for monitoring your power source (USB, battery, solar, etc).
 
 Cheers!!
