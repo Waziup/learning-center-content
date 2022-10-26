@@ -16,7 +16,7 @@ Here's what we will be learning:
 
 What parts do we need?
 ======================
-To follow this user manual, one will need the following hardware and Software:
+To follow this user manual, one will need the following hardware and software:
 
 Hardware
 - SparkFun Weather Shield Kit
@@ -28,6 +28,16 @@ Hardware
 - Power Supply
 
 ![Parts](./media/parts.png)
+
+Things you should know about the Sparkfun Weather shield:
+
+- It Uses the [Si7021](https://www.sparkfun.com/products/13763) sensor, [MPL3115A2 barometric pressure](https://www.sparkfun.com/products/11084?_ga=2.39980774.510170626.1666488566-160177867.1666172664) sensor, and [ALS-PT19 light](https://www.sparkfun.com/products/12566?_ga=2.39980774.510170626.1666488566-160177867.1666172664) sensor.
+- Has connector for the [GP-735 compact GPS module](https://www.sparkfun.com/products/13670?_ga=2.216133586.510170626.1666488566-160177867.1666172664)
+- Has optional [RJ11 connector](https://www.sparkfun.com/products/132?_ga=2.203755092.510170626.1666488566-160177867.1666172664) footprints to connect the [SparkFun weather meters](https://www.sparkfun.com/products/15901)
+- Weather shield can operate from 3V to 10V and has built in voltage regulators and signal translators
+- Typical humidity accuracy of ±2%
+- Typical pressure accuracy of ±50Pa
+- Typical temperature accuracy of ±0.3C
 
 Software
   - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
