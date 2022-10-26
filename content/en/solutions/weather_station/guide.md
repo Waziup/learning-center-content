@@ -237,4 +237,8 @@ float get_battery_level()
 }
 ```````
 
+Open the **Serial Monitor**. You should see the following output:
+
+![Serial Monitor](./media/serial.jpg)
+
 Cheers!!
