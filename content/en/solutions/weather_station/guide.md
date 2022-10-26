@@ -16,6 +16,9 @@ Here's what we will be learning:
 
 What parts do we need?
 ======================
+To follow this user manual, one will need the following hardware and Software:
+
+Hardware
 - SparkFun Weather Shield Kit
 - SparkFun Weather Meter Kit
 - Arduino Uno with USB Cable
@@ -24,11 +27,6 @@ What parts do we need?
 - Some Jumper Wires
 - Power Supply
 
-To follow this user manual, one will need the following hardware:
-
-Hardware
-  - Wazidev 
-  
 ![Parts](./media/parts.png)
 
 Software
