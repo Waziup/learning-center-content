@@ -43,7 +43,20 @@ Software
   - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
   - Install [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) library by **Mikal Hart**
   - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
+  - Install [SparkFunMPL3115A2](https://github.com/sparkfun/MPL3115A2_Breakout/tree/master/Libraries/Arduino)library by **Sparkfun**
+  - Install [SparkFun_Si7021_Breakout_Library](https://github.com/sparkfun/SparkFun_Si7021_Arduino_Library)library by **Sparkfun**
 
-**Step \#1:** Installing TinyGPS Plus Library
+**Step \#1:** Assembling Weather Station
+========================================
+To get our weather station up and running, we need to:
+- Stack the weather shield on top of the arduino uno as shown below.
+![Weather Shield](./media/stack.png)
+
+- Assemble the weather meters using the guide [here](https://learn.sparkfun.com/tutorials/weather-meter-hookup-guide) as shown below.
+![Weather Meter](./media/meter.jpg)
+
+- Connect the weather meters to the weather shield as shown below.
+![Connection](./media/shield.png)
+
 
 Cheers!!
