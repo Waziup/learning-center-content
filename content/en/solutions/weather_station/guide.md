@@ -50,13 +50,16 @@ Software
 ========================================
 To get our weather station up and running, we need to:
 - Stack the weather shield on top of the arduino uno as shown below.
-![Weather Shield](./media/stack.png)
+
+![Weather Shield](./media/stack.jpg)
 
 - Assemble the weather meters using the guide [here](https://learn.sparkfun.com/tutorials/weather-meter-hookup-guide) as shown below.
+
 ![Weather Meter](./media/meter.jpg)
 
 - Connect the weather meters to the weather shield as shown below.
-![Connection](./media/shield.png)
+
+![Connection](./media/shield.jpg)
 
 
 Cheers!!
