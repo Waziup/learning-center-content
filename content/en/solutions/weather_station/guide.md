@@ -725,6 +725,24 @@ Open the **Serial Monitor**. You should see more data than we saw in the previou
 
 ![Serial Monitor](./media/serial2.jpg)
 
-**Note:** The ```batt_lvl``` is indicating 4.08V. This is correct and is the actual voltage read from the Arduino powered over USB. The GPS module will add 50-80mA to the overall power consumption. The Weather Shield runs at 3.3V and the Arduino will continue to run just fine down to about 3V. The reading is very helpful for monitoring your power source (USB, battery, solar, etc).
+**Note:** The `batt_lvl` is indicating 4.32V. This is correct and is the actual voltage read from the Arduino powered over USB. The GPS module will add 50-80mA to the overall power consumption. The Weather Shield runs at 3.3V and the Arduino will continue to run just fine down to about 3V. The reading is very helpful for monitoring your power source (USB, battery, solar, etc).
+
+**Step \#3:** Weather Station with LoRa
+=======================================
+
+To use LoRa for communication, we need to make a little modification to the code in previous example and wire up the SX1276 module to the sparkfun weather shield.
+
+Schematic
+---------
+
+![Lora Weather](./media/lora_weather.jpg)
+
+Code Sample
+-----------
+
+`````c
+
+
+`````
 
 Cheers!!
