@@ -1272,7 +1272,12 @@ void printWeather()
 }
 
 `````
-**NOTE:** 
-At this point we should see our weather data arrive on the gateway and wazicloud.
+After uploading the above code sample, we should see our weather data arrive on the gateway and wazicloud.
+
+**NOTE:** Even though we used `xlpp.addTemperature()` for most of the sensors, we can simply rename them on the gateway to their desired names.
+
+We can also setup notification on wazicloud, for when certain conditions are met. For example when `bat_lvl` is below 3.0v
+
+Kindly see Module 5 Lecture 3 for details on how to setup notifications on Wazicloud.
 
 Cheers!!
