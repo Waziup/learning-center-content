@@ -10,18 +10,19 @@ Luckily for us, we can use smart electronic devices to automate some of the abov
 Here's what we will be learning:
 - What parts are needed
 - How to wire up and read sensor values
-- How to wire up and trigger an actuator
+- How to trigger an actuator
 - How to use the actuator to control a water pump
+- How to communicate to the cloud over LoRa
 
 What parts do we need?
-=====================
+======================
 
 To follow this user manual, one will need the following hardware:
 
 Hardware
-  - an Arduino Uno with USB Cable
+  - WaziACT
+  - FT232 FTDI module with Mini USB Cable
   - Soil Moisture Sensor
-  - 5v Single Channel Relay
   - Submersible Water Pump
   - Some Jumper Wires
   - Power Supply
@@ -32,6 +33,7 @@ Hardware
 
 Software
   - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
+  - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
 
 **Step \#1:** Setting up the Soil Moisture Sensor
 ==============================
