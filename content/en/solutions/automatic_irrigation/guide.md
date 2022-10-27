@@ -22,14 +22,13 @@ To follow this user manual, one will need the following hardware:
 Hardware
   - WaziACT
   - FT232 FTDI module with Mini USB Cable
+  - Wazigate
   - Soil Moisture Sensor
   - Submersible Water Pump
   - Some Jumper Wires
   - Power Supply
 
 ![Parts One](./media/parts_one.png)
-![Some Jumper Wires](./media/jumper.png)
-
 
 Software
   - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
@@ -43,9 +42,9 @@ just insert it into the soil and then read it.
 
 Schematics
 ----------
-There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A0.
+There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A6.
 
-![Sensor Wiring](./media/moisture_wire.png)
+![Sensor Wiring](./media/waziACT_soil.jpg)
 
 Module interface:
 1. VCC: Connect to the 5v pole of the Arduino
