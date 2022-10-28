@@ -46,10 +46,12 @@ There are only three pins that you need to worry about on most of these analog s
 
 ![Sensor Wiring](./media/waziACT_soil.jpg)
 
+NOTE: we are powering the soil moisture sensor for **pin D6**. Each digital pin can with stand **40mA** max current draw. The soil moisture sensor is rated for **35mA**.
+
 Module interface:
-1. VCC: Connect to the 5v pole of the Arduino
-2. GND: Connect to the GND pole of the Arduino
-3. IN: Connect to Arduino analog pin A0
+1. VCC: Connect to the D6 pin of the WaziACT
+2. GND: Connect to the GND pin of the WaziACT
+3. IN: Connect to the WaziACT analog pin A6
 
 Code Sample
 -----------
@@ -59,11 +61,14 @@ Code Sample
  * Read soil humidity by measuring its resistance.
  ********************/
 
-int sensorPin = A0;
+int sensorPin = A6;
+int sensorPow = 6;
 
 void setup() {
   Serial.begin(38400);
-
+  pinMode(sensorPow, OUTPUT);
+  delay(100);
+  digitalWrite(sensorPow, HIGH);
 }
 
 void loop() {
@@ -76,18 +81,9 @@ void loop() {
 **Step \#2:** Setting up the Actuator(Relay)
 ============================================
 
-You may occasionally wish your Arduino to manage appliances with AC power, such as lamps, fans, and other home appliances. The Arduino, however, cannot directly control these higher voltage devices because it runs on 5 volts.
+You may occasionally wish to manage appliances with AC power, such as lamps, fans, and other home appliances. The WaziACT, however, cannot directly control these higher voltage devices because it runs on 3.3 volts.
 
-This is where the relay comes into play. You can use an Arduino to control the relay and the relay module to control the AC mains. In our case, we are controlling the 12 Volts supply of a water pump.
-                                 
-Schematics
-----------
-![relaywire](./media/relaywire.jpg)
-
-Module interface:
-1. VCC: Connect to the 5v pole of the Arduino
-2. GND: Connect to the GND pole of the Arduino
-3. IN: Connect to Arduino control pin 10
+This is where the relay comes into play.The waziACT has a relay module to control the AC mains. In our case, we are controlling the 12 Volts supply of a water pump.
 
 Code Sample
 -----------
@@ -97,7 +93,7 @@ Code Sample
  ********************/
 
 //Declaring pin 10 as the control pin    
-int RelayPin = 10;
+int RelayPin = 7;
 
 void setup() {
   //Set RelayPin as an output pin
@@ -118,44 +114,63 @@ void loop() {
   delay(5000);
 }
 ```
-**Step \#3:** Combining Sensing and Actuation for Automation
-============================================================
+**Step \#3:** Combining Sensing and Actuation with Lora Communication
+====================================================================================
 
-At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet.
-
-Extra Hardware Needed
-  - 12v Male Barrel Jack
-   
-![male jack](./media/jack.png)
+At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet. Also the WaziACT will constantly update Wazicloud with the current state of the soil through Wazigate.
 
 Schematics
 ----------
-![relaymoisurewire](./media/sensepump.jpg)
+![Final Schematic](./media/waziACT_soilv2.jpg)
 
 Code Sample
 -----------
 ```c
-/********************
- *  Program:  Automatic Irrigation
- ********************/
+#include <WaziDev.h>
+#include <xlpp.h>
+#include <Base64.h>
 
-//Declaring pin 10 as the control pin
-int RelayPin = 10;
+// NwkSKey (Network Session Key) and Appkey (AppKey) are used for securing LoRaWAN transmissions.
+// You need to copy them from/to your LoRaWAN server or gateway.
+// You need to configure also the devAddr. DevAddr need to be different for each devices!!
+// Copy'n'paste the DevAddr (Device Address): 26011D00
+unsigned char devAddr[4] = {0x26, 0x01, 0x1D, 0x00};
+
+// Copy'n'paste the key to your Wazigate: 23158D3BBC31E6AF670D195B5AED5525
+unsigned char appSkey[16] = {0x23, 0x15, 0x8D, 0x3B, 0xBC, 0x31, 0xE6, 0xAF, 0x67, 0x0D, 0x19, 0x5B, 0x5A, 0xED, 0x55, 0x25};
+
+// Copy'n'paste the key to your Wazigate: 23158D3BBC31E6AF670D195B5AED5525
+unsigned char nwkSkey[16] = {0x23, 0x15, 0x8D, 0x3B, 0xBC, 0x31, 0xE6, 0xAF, 0x67, 0x0D, 0x19, 0x5B, 0x5A, 0xED, 0x55, 0x25};
+
+WaziDev wazidev;
+
+//Declaring pin 7 as the control pin
+int RelayPin = 7;
+
+//Sensor Power Pin
+int sensorPow = 6;
 
 //Declaring pin A0 moisture sensing pin
-int sensorPin = A0;
+int sensorPin = A6;
 
 //Declaring dry and wet soil threshold values
 int const dryThreshold = 800;
 int const wetThreshold = 350;
 
-void setup() {
-  //Set RelayPin as an output pin
+void setup()
+{
+  Serial.begin(38400);
+  wazidev.setupLoRaWAN(devAddr, appSkey, nwkSkey);
+
   pinMode(RelayPin, OUTPUT);
+  pinMode(sensorPow, OUTPUT);
+  
 }
 
-void loop() {
-  //Read the soil moisture level
+XLPP xlpp(120);
+
+void loop(void)
+{
   int soilHumidity = analogRead(sensorPin);
 
   //Check if the soil moisture value is a number
@@ -166,8 +181,58 @@ void loop() {
       digitalWrite(RelayPin, LOW);
     }
   }
-
-  //Wait 5 seconds between reads/executions
+  
+  // 1
+  // Create xlpp payload.
+  
+  xlpp.reset();
+  
+  xlpp.addRelativeHumidity(1, soilHumidity);
+  
+  // 2.
+  // Send paload with LoRaWAN.
+  serialPrintf("LoRaWAN send ... ");
+  uint8_t e = wazidev.sendLoRaWAN(xlpp.buf, xlpp.len);
+  if (e != 0)
+  {
+    serialPrintf("Err %d\n", e);
+    delay(60000);
+    return;
+  }
+  serialPrintf("OK\n");
+  
+  // 3.
+  // Receive LoRaWAN message (waiting for 6 seconds only).
+  serialPrintf("LoRa receive ... ");
+  uint8_t offs = 0;
+  long startSend = millis();
+  e = wazidev.receiveLoRaWAN(xlpp.buf, &xlpp.offset, &xlpp.len, 6000);
+  long endSend = millis();
+  if (e != 0)
+  {
+    if (e == ERR_LORA_TIMEOUT){
+      serialPrintf("nothing received\n");
+    }
+    else
+    {
+      serialPrintf("Err %d\n", e);
+    }
+    delay(60000);
+    return;
+  }
+  serialPrintf("OK\n");
+  
+  serialPrintf("Time On Air: %d ms\n", endSend-startSend);
+  serialPrintf("LoRa SNR: %d\n", wazidev.loRaSNR);
+  serialPrintf("LoRa RSSI: %d\n", wazidev.loRaRSSI);
+  serialPrintf("LoRaWAN frame size: %d\n", xlpp.offset+xlpp.len);
+  serialPrintf("LoRaWAN payload len: %d\n", xlpp.len);
+  serialPrintf("Payload: ");
+  char payload[100];
+  base64_decode(payload, xlpp.getBuffer(), xlpp.len); 
+  serialPrintf(payload);
+  serialPrintf("\n");
+  
   delay(5000);
 }
 ```
