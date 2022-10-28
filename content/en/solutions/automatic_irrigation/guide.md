@@ -46,7 +46,7 @@ There are only three pins that you need to worry about on most of these analog s
 
 ![Sensor Wiring](./media/waziACT_soil.jpg)
 
-NOTE: we are powering the soil moisture sensor for **pin D6**. Each digital pin can with stand **40mA** max current draw. The soil moisture sensor is rated for **35mA**.
+NOTE: we are powering the soil moisture sensor from **pin D6**. Each digital pin can with stand **40mA** max current draw. The soil moisture sensor is rated for **35mA**.
 
 Module interface:
 1. VCC: Connect to the D6 pin of the WaziACT
