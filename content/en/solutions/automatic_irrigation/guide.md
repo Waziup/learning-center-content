@@ -119,6 +119,8 @@ void loop() {
 
 At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet. Also the WaziACT will constantly update Wazicloud with the current state of the soil through Wazigate.
 
+**NOTE:** Make sure to have a configured gateway up and running before uploading this next code. Kindly see the lectures under **Module 5 Lecture 2** for how to setup a Waziup Gateway.
+
 Schematics
 ----------
 ![Final Schematic](./media/waziACT_soilv2.jpg)
@@ -164,7 +166,8 @@ void setup()
 
   pinMode(RelayPin, OUTPUT);
   pinMode(sensorPow, OUTPUT);
-  
+  delay(100);
+  digitalWrite(sensorPow, HIGH);
 }
 
 XLPP xlpp(120);
@@ -237,4 +240,6 @@ void loop(void)
 }
 ```
 
-At this point, all we need to do is drop the water pump in a water resevoir and attach a pipe to the outlet of the pump to the plant.
+At this point, all we need to do is drop the water pump in a water resevoir and attach a pipe to the outlet of the pump, to the plant.
+
+we can also setup notifications on WaziCloud, for when the relay turns ON or OFF. We can use the soil figures we used in the previous example. That is `800` for dry soil(Relay ON) and `350` for a wet soil(Relay OFF).
