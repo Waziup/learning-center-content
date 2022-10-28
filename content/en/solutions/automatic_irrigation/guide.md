@@ -123,7 +123,7 @@ At this point, we want to trigger the relay to turn ON the water pump, when the 
 
 Schematics
 ----------
-![Final Schematic](./media/waziACT_soilv2.jpg)
+![Final Schematic](./media/waziACT_soilv3.jpg)
 
 Code Sample
 -----------
