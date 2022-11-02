@@ -32,7 +32,7 @@ Software
   - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
 
 **Step \#1:** Setting up the Soil Moisture Sensor
-==============================
+=================================================
 Soil moisture sensors measures the amount of water in the soil to maintain consistent and ideal soil conditions for plants.
 They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
 just insert it into the soil and then read it.
@@ -41,7 +41,7 @@ Schematics
 ----------
 There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A6.
 
-![Sensor Wiring](./media/waziACT_soil.jpg)
+![Sensor Wiring](./media/firewire.jpg)
 
 NOTE: we are powering the soil moisture sensor from **pin D6**. Each digital pin can with stand **40mA** max current draw. The soil moisture sensor is rated for **35mA**.
 
