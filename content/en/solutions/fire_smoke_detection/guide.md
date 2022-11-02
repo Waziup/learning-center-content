@@ -33,7 +33,7 @@ Software
   - Install the [Si7021](https://github.com/adafruit/Adafruit_Si7021) digital humidity and temperature sensor library by **Adafruit**
 
 **Step \#1:** Setting MQ5 Gas & Smoke Sensor
-=================================================
+============================================
 Under the **Sketch** menu in the Arduino IDE, locate **Include Libraries** and navigate to **Manage Libraries..** and click to open the libraries manager.
 
 ![Installing si7021](./media/lib1.png)
@@ -103,12 +103,12 @@ void loop() {
 }
 ```
 
-**Step \#2:** Triggering a Buzzer when Smoke or Gas is Detected
-===================================================================
+**Step \#3:** Triggering a Buzzer when Smoke or Gas is Detected
+===============================================================
 
-Users may occasionally be away from their mobile devices and may not see notifications come in from the cloud regarding the smoke gas, fire detection. It is therefore useful to add a buzzer to alert the user.
+Users may occasionally be away from their mobile devices, this means they may not see notifications come in from the cloud regarding smoke, gas or fire detection. It is therefore useful to add a buzzer to alert the user.
 
-Lets take a look at how to add a buzzer and add a few more codes to manage it.
+Lets take a look at how to add a buzzer and add a few more lines of code to manage it.
 
 Schematic
 ---------
@@ -174,16 +174,18 @@ void loop() {
   delay(500);
 }
 ```
-**Step \#3:** Combining Sensing and Actuation with Lora Communication
-====================================================================================
+**Step \#4:** Combining Sensing, Alert and Lora Communication
+=============================================================
 
-At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet. Also the WaziACT will constantly update Wazicloud with the current state of the soil through Wazigate.
+At this point, we want to the WaziDev to constantly update Wazicloud with the current state of the Sensors through Wazigate.
 
 **NOTE:** Make sure to have a configured gateway up and running before uploading this next code. Kindly see the lectures under **Module 5 Lecture 2** for how to setup a Waziup Gateway.
 
+In order to make our project mobile, we can add a battery to power the sensor and the Wazidev as shown below.
+
 Schematics
 ----------
-![Final Schematic](./media/waziACT_soilv3.jpg)
+![Final Schematic](./media/firewirev3.jpg)
 
 Code Sample
 -----------
@@ -191,7 +193,19 @@ Code Sample
 #include <WaziDev.h>
 #include <xlpp.h>
 #include <Base64.h>
+#include "Adafruit_Si7021.h"
 
+Adafruit_Si7021 sensor = Adafruit_Si7021();
+
+//MQ5 sensor pin
+int smokePin = A0;
+
+//Buzzer pin
+int buzzer = 13;
+
+//Setting temperature and smoke threshold values
+int temp_thresh = 33;
+int smoke_thresh = 200;
 // NwkSKey (Network Session Key) and Appkey (AppKey) are used for securing LoRaWAN transmissions.
 // You need to copy them from/to your LoRaWAN server or gateway.
 // You need to configure also the devAddr. DevAddr need to be different for each devices!!
@@ -206,43 +220,49 @@ unsigned char nwkSkey[16] = {0x23, 0x15, 0x8D, 0x3B, 0xBC, 0x31, 0xE6, 0xAF, 0x6
 
 WaziDev wazidev;
 
-//Declaring pin 7 as the control pin
-int RelayPin = 7;
-
-//Sensor Power Pin
-int sensorPow = 6;
-
-//Declaring pin A0 moisture sensing pin
-int sensorPin = A6;
-
-//Declaring dry and wet soil threshold values
-int const dryThreshold = 800;
-int const wetThreshold = 350;
-
 void setup()
 {
   Serial.begin(38400);
   wazidev.setupLoRaWAN(devAddr, appSkey, nwkSkey);
+  
+  //Declaring buzzer pin mode
+  pinMode(buzzer, OUTPUT);
 
-  pinMode(RelayPin, OUTPUT);
-  pinMode(sensorPow, OUTPUT);
-  delay(100);
-  digitalWrite(sensorPow, HIGH);
+  Serial.println("Si7021 test!");
+
+  //Activate sensor reading
+  if (!sensor.begin()) {
+    Serial.println("Did not find Si7021 sensor!");
+    while (true)
+      ;
+  }
+  
 }
 
 XLPP xlpp(120);
 
 void loop(void)
 {
-  int soilHumidity = analogRead(sensorPin);
+  //Read and Print Smoke Values
+  int smokeVal = analogRead(smokePin);
+  Serial.print("Smoke: ");
+  Serial.print(smokeVal);
 
-  //Check if the soil moisture value is a number
-  if (!(isnan(soilHumidity))) {
-    if (soilHumidity > dryThreshold) { //Turn Pump ON
-      digitalWrite(RelayPin, HIGH);
-    } else if (soilHumidity <= wetThreshold) { //Turn Pump OFF
-      digitalWrite(RelayPin, LOW);
-    }
+  //Read and Print Temp and Humidity Values
+  float hum = sensor.readHumidity();
+  float temp_deg = sensor.readTemperature();
+
+  Serial.print(" Humidity: ");
+  Serial.print(hum, 2);
+  Serial.print(" Temperature: ");
+  Serial.println(temp_deg, 2);
+
+  //Triggering the buzzer if the room is warm, smoke or gas is detected
+  if (smokeVal > smoke_thresh || temp_deg > temp_thresh) {
+    digitalWrite(buzzer, HIGH);
+    delay(1000);
+    digitalWrite(buzzer, LOW);
+    delay(500);
   }
   
   // 1
@@ -250,7 +270,9 @@ void loop(void)
   
   xlpp.reset();
   
-  xlpp.addRelativeHumidity(1, soilHumidity);
+  xlpp.addTemperature(1,temp_deg);
+  xlpp.addRelativeHumidity(1, hum);
+  xlpp.addTemperature(2, smokeVal); //rename this temperature sensor on wazigate as smoke or to what you prefer
   
   // 2.
   // Send paload with LoRaWAN.
@@ -300,6 +322,6 @@ void loop(void)
 }
 ```
 
-At this point, all we need to do is drop the water pump in a water resevoir and attach a pipe to the outlet of the pump, to the plant.
+At this point, all we need to do is flash the above code to the Wazidev and place the entire unit in our desired room/space for sensing.
 
-we can also setup notifications on WaziCloud, for when the relay turns ON or OFF. We can use the soil figures we used in the previous example. That is `800` for dry soil(Relay ON) and `350` for a wet soil(Relay OFF).
+we can also setup notifications on WaziCloud, for when the temperature, smoke or gas threshold conditions are met. Kindly see the lectures under **Module 5 Lecture 3** for how to setup a Notifications on Wazicloud.
