@@ -46,7 +46,7 @@ After installing we should see the label **INSTALLED** as shown below.
 
 We can now close the library manager.
 
-**Step \#2:** Setting MQ5 Gas & Smoke Sensor
+**Step \#2:** Setting up MQ5 Sensor
 =================================================
 The MQ5 Gas Sensor module is useful for gas leakage detecting. It can detect LPG, i-butane, methane, alcohol, Hydrogen, smoke and so on.
 
@@ -66,30 +66,51 @@ Module interface:
 Code Sample
 -----------
 ```c
+#include "Adafruit_Si7021.h"
 
-int sensorPin = A0;
-int sensorPow = 6;
+Adafruit_Si7021 sensor = Adafruit_Si7021();
+int smokePin = A0;
 
 void setup() {
   Serial.begin(38400);
-  pinMode(sensorPow, OUTPUT);
-  delay(100);
-  digitalWrite(sensorPow, HIGH);
+
+  Serial.println("Si7021 test!");
+  
+  if (!sensor.begin()) {
+    Serial.println("Did not find Si7021 sensor!");
+    while (true)
+      ;
+  }
 }
 
 void loop() {
-  int soilHumidity = analogRead(sensorPin);
-  Serial.println(soilHumidity);
-  delay(100);
+  //Read and Print Smoke Values
+  int smokeVal = analogRead(smokePin);
+  Serial.print("Smoke: ");
+  Serial.print(smokeVal);
+
+  //Read and Print Temp and Humidity Values
+  Serial.print(" Humidity: ");
+  Serial.print(sensor.readHumidity(), 2);
+  Serial.print(" Temperature: ");
+  Serial.println(sensor.readTemperature(), 2);
+
+  //Wait 1 second between reads
+  delay(1000);
 }
 ```
 
-**Step \#2:** Setting up the Actuator(Relay)
-============================================
+**Step \#2:** Triggering a Buzzer when Smoke or Gas is Detected
+===================================================================
 
-You may occasionally wish to manage appliances with AC power, such as lamps, fans, and other home appliances. The WaziACT, however, cannot directly control these higher voltage devices because it runs on 3.3 volts.
+Users may occasionally be away from their mobile devices and may not see notifications come in from the cloud regarding the smoke gas, fire detection. It is therefore useful to add a buzzer to alert the user.
 
-This is where the relay comes into play.The waziACT has a relay module to control the AC mains. In our case, we are controlling the 12 Volts supply of a water pump.
+Lets take a look at how to add a buzzer and add a few more codes to manage it.
+
+Schematic
+---------
+
+![Sensor Wiring](./media/firewirev2.jpg)
 
 Code Sample
 -----------
