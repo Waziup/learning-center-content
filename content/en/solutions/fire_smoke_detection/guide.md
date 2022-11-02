@@ -28,37 +28,46 @@ Hardware
 ![Parts One](./media/firedetection.png)
 
 Software
-  - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
+  - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
   - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
+  - Install the [Si7021](https://github.com/adafruit/Adafruit_Si7021) digital humidity and temperature sensor library by **Adafruit**
 
-**Step \#1:** Setting up the Soil Moisture Sensor
+**Step \#1:** Setting MQ5 Gas & Smoke Sensor
 =================================================
-Soil moisture sensors measures the amount of water in the soil to maintain consistent and ideal soil conditions for plants.
-They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
-just insert it into the soil and then read it.
+Under the **Sketch** menu in the Arduino IDE, locate **Include Libraries** and navigate to **Manage Libraries..** and click to open the libraries manager.
+
+![Installing si7021](./media/lib1.png)
+
+Search for **"Adafruit_Si7021"** in the search box and install the version by **Adafruit**
+
+After installing we should see the label **INSTALLED** as shown below.
+
+![Installed si7021](./media/si7021.png)
+
+We can now close the library manager.
+
+**Step \#2:** Setting MQ5 Gas & Smoke Sensor
+=================================================
+The MQ5 Gas Sensor module is useful for gas leakage detecting. It can detect LPG, i-butane, methane, alcohol, Hydrogen, smoke and so on.
+
+We can also measure the corresponding temperature of the space where we place our MQ5 sensor. This is because, as more smoke or fire gets trapped in a room, the temperature of the room also increases. Luckily for us, the wazidev has a digital humidity and temperature sensor. Lets put it to work.
 
 Schematics
 ----------
-There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A6.
+There are only three pins that you need to worry about on most of these analog sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A0.
 
 ![Sensor Wiring](./media/firewire.jpg)
 
-NOTE: we are powering the soil moisture sensor from **pin D6**. Each digital pin can with stand **40mA** max current draw. The soil moisture sensor is rated for **35mA**.
-
 Module interface:
-1. VCC: Connect to the D6 pin of the WaziACT
-2. GND: Connect to the GND pin of the WaziACT
-3. IN: Connect to the WaziACT analog pin A6
+1. VCC: Connect to the VCC pin of the WaziDev
+2. GND: Connect to the GND pin of the WaziDev
+3. IN: Connect to the WaziDev analog pin A0
 
 Code Sample
 -----------
 ```c
-/********************
- * Soil Moisture Tester
- * Read soil humidity by measuring its resistance.
- ********************/
 
-int sensorPin = A6;
+int sensorPin = A0;
 int sensorPow = 6;
 
 void setup() {
