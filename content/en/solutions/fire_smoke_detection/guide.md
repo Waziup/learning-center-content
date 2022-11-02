@@ -47,7 +47,7 @@ After installing we should see the label **INSTALLED** as shown below.
 We can now close the library manager.
 
 **Step \#2:** Setting up MQ5 Sensor
-=================================================
+===================================
 The MQ5 Gas Sensor module is useful for gas leakage detecting. It can detect LPG, i-butane, methane, alcohol, Hydrogen, smoke and so on.
 
 We can also measure the corresponding temperature of the space where we place our MQ5 sensor. This is because, as more smoke or fire gets trapped in a room, the temperature of the room also increases. Luckily for us, the wazidev has a digital humidity and temperature sensor. Lets put it to work.
@@ -69,6 +69,8 @@ Code Sample
 #include "Adafruit_Si7021.h"
 
 Adafruit_Si7021 sensor = Adafruit_Si7021();
+
+//MQ5 sensor pin
 int smokePin = A0;
 
 void setup() {
@@ -76,6 +78,7 @@ void setup() {
 
   Serial.println("Si7021 test!");
   
+  //Activate sensor reading
   if (!sensor.begin()) {
     Serial.println("Did not find Si7021 sensor!");
     while (true)
@@ -115,30 +118,60 @@ Schematic
 Code Sample
 -----------
 ```c
-/********************
- *  Program:  Relay Tester
- ********************/
+#include "Adafruit_Si7021.h"
 
-//Declaring pin 10 as the control pin    
-int RelayPin = 7;
+Adafruit_Si7021 sensor = Adafruit_Si7021();
+
+//MQ5 sensor pin
+int smokePin = A0;
+
+//Buzzer pin
+int buzzer = 13;
+
+//Setting temperature and smoke threshold values
+int temp_thresh = 33;
+int smoke_thresh = 200;
 
 void setup() {
-  //Set RelayPin as an output pin
-  pinMode(RelayPin, OUTPUT);
+  //Declaring buzzer pin mode
+  pinMode(buzzer, OUTPUT);
+
+  Serial.begin(38400);
+
+  Serial.println("Si7021 test!");
+
+  //Activate sensor reading
+  if (!sensor.begin()) {
+    Serial.println("Did not find Si7021 sensor!");
+    while (true)
+      ;
+  }
 }
 
 void loop() {
-  // Let's turn on the relay...
-  digitalWrite(RelayPin, LOW);
+  //Read and Print Smoke Values
+  int smokeVal = analogRead(smokePin);
+  Serial.print("Smoke: ");
+  Serial.print(smokeVal);
 
-  //Lets wait for 5 seconds
-  delay(5000);
-	
-  //Let's turn off the relay...
-  digitalWrite(RelayPin, HIGH);
+  //Read and Print Temp and Humidity Values
+  float hum = sensor.readHumidity();
+  float temp_deg = sensor.readTemperature();
 
-  //Lets wait for another 5 seconds
-  delay(5000);
+  Serial.print(" Humidity: ");
+  Serial.print(hum, 2);
+  Serial.print(" Temperature: ");
+  Serial.println(temp_deg, 2);
+
+  //Triggering the buzzer if the room is warm, smoke or gas is detected
+  if (smokeVal > smoke_thresh || temp_deg > temp_thresh) {
+    digitalWrite(buzzer, HIGH);
+    delay(1000);
+    digitalWrite(buzzer, LOW);
+    delay(500);
+  }
+  //Wait 1 second between reads
+  delay(500);
 }
 ```
 **Step \#3:** Combining Sensing and Actuation with Lora Communication
