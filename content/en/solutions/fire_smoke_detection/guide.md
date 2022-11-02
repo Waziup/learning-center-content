@@ -10,8 +10,7 @@ This fully automated fire detection and alarm system is equipped with a temperat
 Here's what we will be learning:
 - What parts are needed
 - How to wire up and read sensor values
-- How to trigger an actuator
-- How to use the actuator to control a water pump
+- How to trigger an effector(buzzer)
 - How to communicate to the cloud over LoRa
 
 What parts do we need?
@@ -21,12 +20,10 @@ To follow this user manual, one will need the following hardware:
 
 Hardware
   - WaziDev
-  - FT232 FTDI module with Mini USB Cable
+  - Micro USB Cable
   - Wazigate
-  - Soil Moisture Sensor
-  - Submersible Water Pump
+  - MQ5 Gas and Smoke Sensor
   - Some Jumper Wires
-  - Power Supply
 
 ![Parts One](./media/parts_one.png)
 
