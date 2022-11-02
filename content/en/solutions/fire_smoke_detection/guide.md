@@ -25,7 +25,7 @@ Hardware
   - MQ5 Gas and Smoke Sensor
   - Some Jumper Wires
 
-![Parts One](./media/parts_one.png)
+![Parts One](./media/firedetection.png)
 
 Software
   - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
