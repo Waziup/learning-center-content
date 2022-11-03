@@ -19,7 +19,7 @@ Here's what we will be learning:
 What parts do we need?
 ======================
 
-To follow this user manual, one will need the following hardware:
+To follow this user manual, one will need the following:
 
 Hardware
   - WaziACT
@@ -34,7 +34,6 @@ Hardware
 Software
   - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
   - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
-  - Install the [Si7021](https://github.com/adafruit/Adafruit_Si7021) digital humidity and temperature sensor library by **Adafruit**
 
 **Step \#1:** Installing Si7021 Sensor Library
 ============================================
