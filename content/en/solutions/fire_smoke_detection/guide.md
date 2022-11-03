@@ -46,7 +46,7 @@ After installing we should see the label **INSTALLED** as shown below.
 
 We can now close the library manager.
 
-**Step \#2:** Setting up MQ5 Sensor
+**Step \#2:** Setting up the MQ5 Sensor
 ===================================
 The MQ5 Gas Sensor module is useful for gas leakage detecting. It can detect LPG, i-butane, methane, alcohol, Hydrogen, smoke and so on.
 
@@ -103,7 +103,7 @@ void loop() {
 }
 ```
 
-**Step \#3:** Triggering a Buzzer when Smoke or Gas is Detected
+**Step \#3:** Triggering a Buzzer when Smoke, Gas or Fire is Detected
 ===============================================================
 
 Users may occasionally be away from their mobile devices, this means they may not see notifications come in from the cloud regarding smoke, gas or fire detection. It is therefore useful to add a buzzer to alert the user.
@@ -174,7 +174,7 @@ void loop() {
   delay(500);
 }
 ```
-**Step \#4:** Combining Sensing, Alert and Lora Communication
+**Step \#4:** Combining Sensing, Alarm and Lora Communication
 =============================================================
 
 At this point, we want to the WaziDev to constantly update Wazicloud with the current state of the Sensors through Wazigate.
