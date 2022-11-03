@@ -1,4 +1,4 @@
-![Water Spillage](./media/water_level.jpg)
+![Water Spillage](./media/tanks.jpg)
 
 Overview
 ========
