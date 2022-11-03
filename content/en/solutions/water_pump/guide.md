@@ -3,9 +3,12 @@
 Overview
 ========
 
-When a fire breaks out, time is of the essence. Prompt measures need to be taken to evacuate the trapped people and contain the fire before it spreads out of hand. However, to accomplish this we need a system that can detect fires before it is too late.
+Its very common to see water storage tanks overflowing in most places where a pump is used to top up when the water level in the tank is low. These overflow lead to wastage of water and higher electricity bill due to the water pumps running longer than necessary.
 
-This fully automated fire detection and alarm system is equipped with a temperature, humidity and smoke sensor.
+Luckily, we are in a digital age in which certain basic aspects of our daily lives can be automatic.
+
+In this guide, we will look at how to automatically control the water level in a tank by switching the water pump ON, when the water level goes below a predetermined level, The circuit automatically switches the water pump OFF when the tank is full as well.
+
 
 Here's what we will be learning:
 - What parts are needed
