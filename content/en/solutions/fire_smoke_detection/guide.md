@@ -324,4 +324,14 @@ void loop(void)
 
 At this point, all we need to do is flash the above code to the Wazidev and place the entire unit in our desired room/space for sensing.
 
+Since we used ```xlpp.addTemperature(2, smokeVal);``` for the smoke or gas values, we have to remane the sensor on the wazigate for clarity as shown below.
+
+![Remaning Smoke Sensor](./media/smoke_val.png)
+
+After remaning all our sensors and assigning them the appropriate units of measurement, we have:
+
+![Gateway Sensors Display](./media/gateway_val.png)
+
+We can also see the corresponding
+
 we can also setup notifications on WaziCloud, for when the temperature, smoke or gas threshold conditions are met. Kindly see the lectures under **Module 5 Lecture 3** for how to setup a Notifications on Wazicloud.
