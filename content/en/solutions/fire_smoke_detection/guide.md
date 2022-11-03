@@ -328,10 +328,14 @@ Since we used ```xlpp.addTemperature(2, smokeVal);``` for the smoke or gas value
 
 ![Remaning Smoke Sensor](./media/smoke_val.png)
 
-After remaning all our sensors and assigning them the appropriate units of measurement, we have:
+After renaming all our sensors and assigning them the appropriate units of measurement, we have:
 
 ![Gateway Sensors Display](./media/gateway_val.png)
 
-We can also see the corresponding
+We can also see the corresponding sensor data on the Wazicloud platform
+
+![Wazicloud Sensors Display](./media/wazicloudv2.png)
 
 we can also setup notifications on WaziCloud, for when the temperature, smoke or gas threshold conditions are met. Kindly see the lectures under **Module 5 Lecture 3** for how to setup a Notifications on Wazicloud.
+
+![Final Schematic](./media/notification.png)
