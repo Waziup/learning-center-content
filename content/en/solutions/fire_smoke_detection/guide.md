@@ -177,7 +177,7 @@ void loop() {
 **Step \#4:** Combining Sensing, Alarm and Lora Communication
 =============================================================
 
-At this point, we want to the WaziDev to constantly update Wazicloud with the current state of the Sensors through Wazigate.
+At this point, we want the WaziDev to constantly update Wazicloud with the current state of the Sensors through Wazigate.
 
 **NOTE:** Make sure to have a configured gateway up and running before uploading this next code. Kindly see the lectures under **Module 5 Lecture 2** for how to setup a Waziup Gateway.
 
