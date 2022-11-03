@@ -3,17 +3,17 @@
 Overview
 ========
 
-Its very common to see water storage tanks overflowing in most places where a pump is used to top up when the water level in the tank is low. These overflow lead to wastage of water and higher electricity bill due to the water pumps running longer than necessary.
+Its very common to see water storage tanks overflowing in most places where a pump is used. These overflows lead to wastage of water and higher electricity bills due to the water pumps running longer than necessary.
 
-Luckily, we are in a digital age in which certain basic aspects of our daily lives can be automatic.
+Luckily, we are in a digital age in which certain basic aspects of our daily lives can be automatated.
 
-In this guide, we will look at how to automatically control the water level in a tank by switching the water pump ON, when the water level goes below a predetermined level, The circuit automatically switches the water pump OFF when the tank is full as well.
+In this guide, we will look at how to automatically control the water level in a tank by switching the water pump ON, when the water level goes below a predetermined level. The circuit automatically switches the water pump OFF when the tank is full as well.
 
 
 Here's what we will be learning:
 - What parts are needed
 - How to wire up and read sensor values
-- How to trigger an effector(buzzer)
+- How to trigger an actuator
 - How to communicate to the cloud over LoRa
 
 What parts do we need?
@@ -22,10 +22,11 @@ What parts do we need?
 To follow this user manual, one will need the following hardware:
 
 Hardware
-  - WaziDev
-  - Micro USB Cable
+  - WaziACT
+  - FTDI FT232
+  - Mini USB Cable
   - Wazigate
-  - MQ5 Gas and Smoke Sensor
+  - SR04 Ultrasonic Sensor
   - Some Jumper Wires
 
 ![Parts One](./media/firedetection.png)
