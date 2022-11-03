@@ -32,7 +32,7 @@ Software
   - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
   - Install the [Si7021](https://github.com/adafruit/Adafruit_Si7021) digital humidity and temperature sensor library by **Adafruit**
 
-**Step \#1:** Setting MQ5 Gas & Smoke Sensor
+**Step \#1:** Installing Si7021 Sensor Library
 ============================================
 Under the **Sketch** menu in the Arduino IDE, locate **Include Libraries** and navigate to **Manage Libraries..** and click to open the libraries manager.
 
