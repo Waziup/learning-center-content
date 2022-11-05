@@ -39,9 +39,9 @@ Software
 **Step \#1:** Wiring and Reading Sensor Values
 ============================================
 
-To be able to detect the current water level in the resevoir, we need to use the waterproof ultrasonic distance sensor.
+To be able to detect the current water level in the tank, we need to use the waterproof ultrasonic distance sensor.
 
-The sensor head emits an ultrasonic wave and receives the wave reflected back from the target. Ultrasonic Sensors measure the distance to the target by measuring the time between the emission and reception.
+The sensor head emits an ultrasonic wave and receives the wave reflected back from the target. The ultrasonic Sensor measures the distance to the target by measuring the time between the emission and reception of the ultrasonic signal.
 
 ![Ultrasonic Working](./media/ultrasonicworking.png)
 
@@ -50,9 +50,83 @@ Schematic
 
 ![Water Level Wiring](./media/waterwire.jpg)
 
-**NOTE:** we used the digital pin d4 as the VCC/power source for the ultrasonic sensor. This is to enable us to switch off the sensor completely if need be. Because each digital pin can handle 40mA max current draw, the 30mA operation current of the sensor wont be an issue. we can see this from the manufactureres data sheet.
+**NOTE:** we used the digital pin d4 as the VCC/power source for the ultrasonic sensor. This is to enable us to switch off the sensor completely if need be in the future. Because each digital pin can handle 40mA max current draw, the 30mA operating current of the sensor wont be an issue. we can see this from the manufactureres data sheet.
+
+Lets also note that the waterproof ultrasonic sensor we are using has a minimum range of 25cm. This means that below 25cm the sensor reading might not be accurate. However we can read up to 5 meters max. This may good enough for most use cases.
 
 ![Sensor Specs](./media/specs.png)
+
+Code Sample
+-----------
+
+````c
+//sensor pins
+#define TrigPin  9
+#define EchoPin  5
+
+//sensor power pin
+#define powerPin  4
+
+void setup() {
+  Serial.begin(9600);
+  
+  pinMode(TrigPin, OUTPUT);
+  pinMode(EchoPin,INPUT_PULLUP);
+
+  pinMode(powerPin, OUTPUT);
+  delay(500);
+  digitalWrite(powerPin, HIGH);
+}
+
+void loop() {
+
+  read_sensors();
+
+}
+
+void read_sensor(){
+  unsigned long duration;
+  int distance;
+  int average = 0;
+  distance = 0;
+  duration = 0;
+  
+  while (average <= 100) {
+    digitalWrite(TrigPin, LOW);
+    delayMicroseconds(5);
+    digitalWrite(TrigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TrigPin, LOW);
+
+    duration = pulseIn(EchoPin, HIGH);
+    distance += duration*0.034/2;
+    average += 1;
+    delay(30);
+  }
+
+  distance = distance/average;
+  Serial.print("Distance: ");
+  Serial.print(distance); 
+  Serial.print(" cm");
+
+  checkValidity(distance);
+  toSend += "&";
+
+  distance = 0;
+  average = 0;
+  duration = 0;
+  delay(10);
+  
+}
+
+void checkValidity(int dis){
+  if(isnan(dis) || dis < 0){
+    toSend += String(0);
+  }else{
+    toSend += String(dis);
+  }
+}
+````
 
 **Step \#2:** Setting up the MQ5 Sensor
 ===================================
