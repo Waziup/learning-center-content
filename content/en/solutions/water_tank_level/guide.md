@@ -69,16 +69,16 @@ Code Sample
 
 void setup() {
   Serial.begin(9600);
-  
+
   //turning sensor on
   pinMode(powerPin, OUTPUT);
   delay(500);
   digitalWrite(powerPin, HIGH);
-  
+
   //declaring sensor pin modes
   pinMode(trigPin, OUTPUT);
   //inputpull up to prevent noise on echo pin
-  pinMode(echoPin,INPUT_PULLUP);
+  pinMode(echoPin, INPUT_PULLUP);
 
 }
 
@@ -98,21 +98,23 @@ void loop() {
     digitalWrite(trigPin, LOW);
 
     duration = pulseIn(echoPin, HIGH);
-    distance += duration*0.034/2;
+    distance += duration * 0.034 / 2;
     average += 1;
     delay(30);
   }
 
   //finding the average of 100 samples
-  distance = distance/average;
+  distance = distance / average;
 
   //checking to be sure the current distance value is a number and greater than 0
-  if(!(isnan(distance) || distance < 0)){
-    Serial.print("Distance: ");
-    Serial.print(distance); 
-    Serial.println(" cm");
+  if (!(isnan(distance) || distance < 0)) {
+    return;
   }
-  
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
   delay(10);
 }
 ````
@@ -129,121 +131,10 @@ Schematics
 
 ![Sensor Wiring](./media/waterwirev2.jpg)
 
-Module interface:
-1. VCC: Connect to the VCC pin of the WaziDev
-2. GND: Connect to the GND pin of the WaziDev
-3. IN: Connect to the WaziDev analog pin A0
-
 Code Sample
 -----------
 ```c
-#include "Adafruit_Si7021.h"
 
-Adafruit_Si7021 sensor = Adafruit_Si7021();
-
-//MQ5 sensor pin
-int smokePin = A0;
-
-void setup() {
-  Serial.begin(38400);
-
-  Serial.println("Si7021 test!");
-  
-  //Activate sensor reading
-  if (!sensor.begin()) {
-    Serial.println("Did not find Si7021 sensor!");
-    while (true)
-      ;
-  }
-}
-
-void loop() {
-  //Read and Print Smoke Values
-  int smokeVal = analogRead(smokePin);
-  Serial.print("Smoke: ");
-  Serial.print(smokeVal);
-
-  //Read and Print Temp and Humidity Values
-  Serial.print(" Humidity: ");
-  Serial.print(sensor.readHumidity(), 2);
-  Serial.print(" Temperature: ");
-  Serial.println(sensor.readTemperature(), 2);
-
-  //Wait 1 second between reads
-  delay(1000);
-}
-```
-
-**Step \#3:** Triggering a Buzzer when Smoke, Gas or Fire is Detected
-===============================================================
-
-Users may occasionally be away from their mobile devices, this means they may not see notifications come in from the cloud regarding smoke, gas or fire detection. It is therefore useful to add a buzzer to alert the user.
-
-Lets take a look at how to add a buzzer and add a few more lines of code to manage it.
-
-Schematic
----------
-
-![Sensor Wiring](./media/firewirev2.jpg)
-
-Code Sample
------------
-```c
-#include "Adafruit_Si7021.h"
-
-Adafruit_Si7021 sensor = Adafruit_Si7021();
-
-//MQ5 sensor pin
-int smokePin = A0;
-
-//Buzzer pin
-int buzzer = 13;
-
-//Setting temperature and smoke threshold values
-int temp_thresh = 33;
-int smoke_thresh = 200;
-
-void setup() {
-  //Declaring buzzer pin mode
-  pinMode(buzzer, OUTPUT);
-
-  Serial.begin(38400);
-
-  Serial.println("Si7021 test!");
-
-  //Activate sensor reading
-  if (!sensor.begin()) {
-    Serial.println("Did not find Si7021 sensor!");
-    while (true)
-      ;
-  }
-}
-
-void loop() {
-  //Read and Print Smoke Values
-  int smokeVal = analogRead(smokePin);
-  Serial.print("Smoke: ");
-  Serial.print(smokeVal);
-
-  //Read and Print Temp and Humidity Values
-  float hum = sensor.readHumidity();
-  float temp_deg = sensor.readTemperature();
-
-  Serial.print(" Humidity: ");
-  Serial.print(hum, 2);
-  Serial.print(" Temperature: ");
-  Serial.println(temp_deg, 2);
-
-  //Triggering the buzzer if the room is warm, smoke or gas is detected
-  if (smokeVal > smoke_thresh || temp_deg > temp_thresh) {
-    digitalWrite(buzzer, HIGH);
-    delay(1000);
-    digitalWrite(buzzer, LOW);
-    delay(500);
-  }
-  //Wait 1 second between reads
-  delay(500);
-}
 ```
 **Step \#4:** Combining Sensing, Alarm and Lora Communication
 =============================================================
