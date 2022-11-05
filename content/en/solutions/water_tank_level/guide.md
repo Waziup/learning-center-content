@@ -61,8 +61,8 @@ Code Sample
 
 ````c
 //sensor pins
-#define TrigPin  9
-#define EchoPin  5
+#define trigPin  9
+#define echoPin  5
 
 //sensor power pin
 #define powerPin  4
@@ -70,61 +70,50 @@ Code Sample
 void setup() {
   Serial.begin(9600);
   
-  pinMode(TrigPin, OUTPUT);
-  pinMode(EchoPin,INPUT_PULLUP);
-
+  //turning sensor on
   pinMode(powerPin, OUTPUT);
   delay(500);
   digitalWrite(powerPin, HIGH);
+  
+  //declaring sensor pin modes
+  pinMode(trigPin, OUTPUT);
+  //inputpull up to prevent noise on echo pin
+  pinMode(echoPin,INPUT_PULLUP);
+
 }
 
 void loop() {
 
-  read_sensors();
-
-}
-
-void read_sensor(){
-  unsigned long duration;
-  int distance;
+  //reading sensor values
+  unsigned long duration = 0;
+  int distance = 0;
   int average = 0;
-  distance = 0;
-  duration = 0;
-  
-  while (average <= 100) {
-    digitalWrite(TrigPin, LOW);
-    delayMicroseconds(5);
-    digitalWrite(TrigPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(TrigPin, LOW);
 
-    duration = pulseIn(EchoPin, HIGH);
+  //taking 100 distance samples
+  while (average <= 100) {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(5);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    duration = pulseIn(echoPin, HIGH);
     distance += duration*0.034/2;
     average += 1;
     delay(30);
   }
 
+  //finding the average of 100 samples
   distance = distance/average;
-  Serial.print("Distance: ");
-  Serial.print(distance); 
-  Serial.print(" cm");
 
-  checkValidity(distance);
-  toSend += "&";
-
-  distance = 0;
-  average = 0;
-  duration = 0;
-  delay(10);
-  
-}
-
-void checkValidity(int dis){
-  if(isnan(dis) || dis < 0){
-    toSend += String(0);
-  }else{
-    toSend += String(dis);
+  //checking to be sure the current distance value is a number and greater than 0
+  if(!(isnan(distance) || distance < 0)){
+    Serial.print("Distance: ");
+    Serial.print(distance); 
+    Serial.print(" cm");
   }
+  
+  delay(10);
 }
 ````
 
