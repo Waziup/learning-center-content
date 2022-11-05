@@ -28,8 +28,9 @@ Hardware
   - Wazigate
   - SR04 Ultrasonic Sensor
   - Some Jumper Wires
+  - Lora 868Mhz Antenna
 
-![Parts One](./media/firedetection.png)
+![Parts One](./media/autowater.png)
 
 Software
   - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
