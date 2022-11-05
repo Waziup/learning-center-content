@@ -110,24 +110,24 @@ void loop() {
   if(!(isnan(distance) || distance < 0)){
     Serial.print("Distance: ");
     Serial.print(distance); 
-    Serial.print(" cm");
+    Serial.println(" cm");
   }
   
   delay(10);
 }
 ````
 
-**Step \#2:** Setting up the MQ5 Sensor
-===================================
-The MQ5 Gas Sensor module is useful for gas leakage detecting. It can detect LPG, i-butane, methane, alcohol, Hydrogen, smoke and so on.
+**Step \#2:** Triggering an Actuator with Sensor Data
+=====================================================
 
-We can also measure the corresponding temperature of the space where we place our MQ5 sensor. This is because, as more smoke or fire gets trapped in a room, the temperature of the room also increases. Luckily for us, the wazidev has a digital humidity and temperature sensor. Lets put it to work.
+In our previous code snample, we were able to read sensor values. Lets now use those values to trigger the relay when the water level falls to say 100cm. We will also stop or turn off the pump when the water level rises to 30cm.
+
+NOTE: Since AC power is involved, please make sure you're wearing protective clothing. Make sure you're qualified/certified to handle the task at hand. You are 100% responsible for your safety and well being.
 
 Schematics
 ----------
-There are only three pins that you need to worry about on most of these analog sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A0.
 
-![Sensor Wiring](./media/firewire.jpg)
+![Sensor Wiring](./media/waterwirev2.jpg)
 
 Module interface:
 1. VCC: Connect to the VCC pin of the WaziDev
