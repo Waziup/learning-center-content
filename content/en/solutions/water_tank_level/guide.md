@@ -45,17 +45,14 @@ The sensor head emits an ultrasonic wave and receives the wave reflected back fr
 
 ![Ultrasonic Working](./media/ultrasonicworking.png)
 
-Under the **Sketch** menu in the Arduino IDE, locate **Include Libraries** and navigate to **Manage Libraries..** and click to open the libraries manager.
+Schematic
+---------
 
+![Water Level Wiring](./media/waterwire.jpg)
 
+**NOTE:** we used the digital pin d4 as the VCC/power source for the ultrasonic sensor. This is to enable us to switch off the sensor completely if need be. Because each digital pin can handle 40mA max current draw, the 30mA operation current of the sensor wont be an issue. we can see this from the manufactureres data sheet.
 
-Search for **"Adafruit_Si7021"** in the search box and install the version by **Adafruit**
-
-After installing we should see the label **INSTALLED** as shown below.
-
-![Installed si7021](./media/si7021.png)
-
-We can now close the library manager.
+![Sensor Specs](./media/specs.png)
 
 **Step \#2:** Setting up the MQ5 Sensor
 ===================================
