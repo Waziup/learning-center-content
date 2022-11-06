@@ -378,16 +378,16 @@ At this point, all we need to do is flash the above code to the WaziACT and atta
 
 Since we used ```xlpp.addTemperature(1, distance);``` for the distance or water level values, we have to rename the sensor on the wazigate for clarity as shown below.
 
-![Remaning Smoke Sensor](./media/smoke_val.png)
+![Remaning Sensor](./media/water_val.png)
 
 After renaming our sensor and assigning them the appropriate unit of measurement, we have:
 
-![Gateway Sensors Display](./media/gateway_val.png)
+![Gateway Sensor Display](./media/gateway_val.png)
 
 We can also see the corresponding sensor data on the Wazicloud platform
 
-![Wazicloud Sensors Display](./media/wazicloudv2.png)
+![Wazicloud Sensor Display](./media/wazicloudv2.png)
 
 we can also setup notifications on WaziCloud, for when the water level threshold conditions are met. Kindly see the lectures under **Module 5 Lecture 3** for how to setup a Notifications on Wazicloud.
 
-![Final Schematic](./media/notification.png)
+![Notifications](./media/notification.png)
