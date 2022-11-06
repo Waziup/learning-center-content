@@ -219,7 +219,7 @@ In order to make our project mobile, we can add a battery to power the sensor an
 
 Schematics
 ----------
-![Final Schematic](./media/firewirev3.jpg)
+![Final Schematic](./media/waterwirev3.jpg)
 
 Code Sample
 -----------
