@@ -134,12 +134,84 @@ Schematics
 Code Sample
 -----------
 ```c
+//sensor pins
+#define trigPin  9
+#define echoPin  5
 
+//sensor power pin
+#define powerPin  4
+
+//relay pin
+const int relayPin = 7;
+
+void setup() {
+  Serial.begin(9600);
+
+  //turning sensor on
+  pinMode(powerPin, OUTPUT);
+  delay(500);
+  digitalWrite(powerPin, HIGH);
+
+  //declaring relay pin mode
+  pinMode(relayPin, OUTPUT);
+  delay(500);
+  //make sure the relay isnt on during a restart
+  digitalWrite(relayPin, LOW);
+  
+  //declaring sensor pin modes
+  pinMode(trigPin, OUTPUT);
+  //inputpull up to prevent noise on echo pin
+  pinMode(echoPin, INPUT_PULLUP);
+
+}
+
+void loop() {
+
+  //reading sensor values
+  unsigned long duration = 0;
+  int distance = 0;
+  int average = 0;
+
+  //taking 100 distance samples
+  while (average <= 100) {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(5);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    duration = pulseIn(echoPin, HIGH);
+    distance += duration * 0.034 / 2;
+    average += 1;
+    delay(30);
+  }
+
+  //finding the average of 100 samples
+  distance = distance / average;
+
+  //checking to be sure the current distance value is a number and greater than 0
+  if (!(isnan(distance) || distance < 0)) {
+    return;
+  }
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  //full tank value of 30cm and low value of 100cm
+  if(distance < 30){//tank full
+    digitalWrite(relayPin, LOW);
+  }else if(distance > 100){//tank running low
+    digitalWrite(relayPin, HIGH);
+  }
+
+  delay(10);
+}
 ```
-**Step \#4:** Combining Sensing, Alarm and Lora Communication
+**Step \#4:** Combining Sensing, Actuation and Lora Communication
 =============================================================
 
-At this point, we want the WaziDev to constantly update Wazicloud with the current state of the Sensors through Wazigate.
+At this point, we want the WaziDev to constantly update Wazicloud with the current state of the tank through Wazigate.
 
 **NOTE:** Make sure to have a configured gateway up and running before uploading this next code. Kindly see the lectures under **Module 5 Lecture 2** for how to setup a Waziup Gateway.
 
