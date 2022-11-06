@@ -227,19 +227,17 @@ Code Sample
 #include <WaziDev.h>
 #include <xlpp.h>
 #include <Base64.h>
-#include "Adafruit_Si7021.h"
 
-Adafruit_Si7021 sensor = Adafruit_Si7021();
+//sensor pins
+#define trigPin  9
+#define echoPin  5
 
-//MQ5 sensor pin
-int smokePin = A0;
+//sensor power pin
+#define powerPin  4
 
-//Buzzer pin
-int buzzer = 13;
+//relay pin
+const int relayPin = 7;
 
-//Setting temperature and smoke threshold values
-int temp_thresh = 33;
-int smoke_thresh = 200;
 // NwkSKey (Network Session Key) and Appkey (AppKey) are used for securing LoRaWAN transmissions.
 // You need to copy them from/to your LoRaWAN server or gateway.
 // You need to configure also the devAddr. DevAddr need to be different for each devices!!
@@ -258,56 +256,76 @@ void setup()
 {
   Serial.begin(38400);
   wazidev.setupLoRaWAN(devAddr, appSkey, nwkSkey);
-  
-  //Declaring buzzer pin mode
-  pinMode(buzzer, OUTPUT);
 
-  Serial.println("Si7021 test!");
+  //turning sensor on
+  pinMode(powerPin, OUTPUT);
+  delay(500);
+  digitalWrite(powerPin, HIGH);
 
-  //Activate sensor reading
-  if (!sensor.begin()) {
-    Serial.println("Did not find Si7021 sensor!");
-    while (true)
-      ;
-  }
-  
+  //declaring relay pin mode
+  pinMode(relayPin, OUTPUT);
+  delay(500);
+  //make sure the relay isnt on during a restart
+  digitalWrite(relayPin, LOW);
+
+  //declaring sensor pin modes
+  pinMode(trigPin, OUTPUT);
+
+  //inputpull up to prevent noise on echo pin
+  pinMode(echoPin, INPUT_PULLUP);
+
 }
 
 XLPP xlpp(120);
 
 void loop(void)
 {
-  //Read and Print Smoke Values
-  int smokeVal = analogRead(smokePin);
-  Serial.print("Smoke: ");
-  Serial.print(smokeVal);
+  //reading sensor values
+  unsigned long duration = 0;
+  int distance = 0;
+  int average = 0;
 
-  //Read and Print Temp and Humidity Values
-  float hum = sensor.readHumidity();
-  float temp_deg = sensor.readTemperature();
+  //taking 100 distance samples
+  while (average <= 100) {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(5);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
 
-  Serial.print(" Humidity: ");
-  Serial.print(hum, 2);
-  Serial.print(" Temperature: ");
-  Serial.println(temp_deg, 2);
-
-  //Triggering the buzzer if the room is warm, smoke or gas is detected
-  if (smokeVal > smoke_thresh || temp_deg > temp_thresh) {
-    digitalWrite(buzzer, HIGH);
-    delay(1000);
-    digitalWrite(buzzer, LOW);
-    delay(500);
+    duration = pulseIn(echoPin, HIGH);
+    distance += duration * 0.034 / 2;
+    average += 1;
+    delay(30);
   }
-  
+
+  //finding the average of 100 samples
+  distance = distance / average;
+
+  //checking to be sure the current distance value is a number and greater than 0
+  if (!(isnan(distance) || distance < 0)) {
+    return;
+  }
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  //full tank value of 30cm and low value of 100cm
+  if (distance < 30) { //tank full
+    digitalWrite(relayPin, LOW);
+  } else if (distance > 100) { //tank running low
+    digitalWrite(relayPin, HIGH);
+  }
+
+  delay(10);
   // 1
   // Create xlpp payload.
-  
+
   xlpp.reset();
-  
-  xlpp.addTemperature(1,temp_deg);
-  xlpp.addRelativeHumidity(1, hum);
-  xlpp.addTemperature(2, smokeVal); //rename this temperature sensor on wazigate as smoke or to what you prefer
-  
+
+  xlpp.addTemperature(1, distance);
+
   // 2.
   // Send paload with LoRaWAN.
   serialPrintf("LoRaWAN send ... ");
@@ -319,7 +337,7 @@ void loop(void)
     return;
   }
   serialPrintf("OK\n");
-  
+
   // 3.
   // Receive LoRaWAN message (waiting for 6 seconds only).
   serialPrintf("LoRa receive ... ");
@@ -329,7 +347,7 @@ void loop(void)
   long endSend = millis();
   if (e != 0)
   {
-    if (e == ERR_LORA_TIMEOUT){
+    if (e == ERR_LORA_TIMEOUT) {
       serialPrintf("nothing received\n");
     }
     else
@@ -340,29 +358,29 @@ void loop(void)
     return;
   }
   serialPrintf("OK\n");
-  
-  serialPrintf("Time On Air: %d ms\n", endSend-startSend);
+
+  serialPrintf("Time On Air: %d ms\n", endSend - startSend);
   serialPrintf("LoRa SNR: %d\n", wazidev.loRaSNR);
   serialPrintf("LoRa RSSI: %d\n", wazidev.loRaRSSI);
-  serialPrintf("LoRaWAN frame size: %d\n", xlpp.offset+xlpp.len);
+  serialPrintf("LoRaWAN frame size: %d\n", xlpp.offset + xlpp.len);
   serialPrintf("LoRaWAN payload len: %d\n", xlpp.len);
   serialPrintf("Payload: ");
   char payload[100];
-  base64_decode(payload, xlpp.getBuffer(), xlpp.len); 
+  base64_decode(payload, xlpp.getBuffer(), xlpp.len);
   serialPrintf(payload);
   serialPrintf("\n");
-  
+
   delay(5000);
 }
 ```
 
-At this point, all we need to do is flash the above code to the Wazidev and place the entire unit in our desired room/space for sensing.
+At this point, all we need to do is flash the above code to the WaziACT and attach the ultrasonic head to the upper part of the desired tank for sensing.
 
-Since we used ```xlpp.addTemperature(2, smokeVal);``` for the smoke or gas values, we have to rename the sensor on the wazigate for clarity as shown below.
+Since we used ```xlpp.addTemperature(1, distance);``` for the distance or water level values, we have to rename the sensor on the wazigate for clarity as shown below.
 
 ![Remaning Smoke Sensor](./media/smoke_val.png)
 
-After renaming all our sensors and assigning them the appropriate units of measurement, we have:
+After renaming our sensor and assigning them the appropriate unit of measurement, we have:
 
 ![Gateway Sensors Display](./media/gateway_val.png)
 
@@ -370,6 +388,6 @@ We can also see the corresponding sensor data on the Wazicloud platform
 
 ![Wazicloud Sensors Display](./media/wazicloudv2.png)
 
-we can also setup notifications on WaziCloud, for when the temperature, smoke or gas threshold conditions are met. Kindly see the lectures under **Module 5 Lecture 3** for how to setup a Notifications on Wazicloud.
+we can also setup notifications on WaziCloud, for when the water level threshold conditions are met. Kindly see the lectures under **Module 5 Lecture 3** for how to setup a Notifications on Wazicloud.
 
 ![Final Schematic](./media/notification.png)
