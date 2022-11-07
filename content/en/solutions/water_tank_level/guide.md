@@ -97,7 +97,7 @@ void loop() {
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
 
-    duration = pulseIn(echoPin, HIGH);
+    duration = pulseIn(echoPin, HIGH, 1000);
     distance += duration * 0.034 / 2;
     average += 1;
     delay(30);
@@ -180,7 +180,7 @@ void loop() {
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
 
-    duration = pulseIn(echoPin, HIGH);
+    duration = pulseIn(echoPin, HIGH, 1000);
     distance += duration * 0.034 / 2;
     average += 1;
     delay(30);
@@ -293,7 +293,7 @@ void loop(void)
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
 
-    duration = pulseIn(echoPin, HIGH);
+    duration = pulseIn(echoPin, HIGH, 1000);
     distance += duration * 0.034 / 2;
     average += 1;
     delay(30);
