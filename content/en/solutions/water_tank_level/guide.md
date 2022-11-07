@@ -384,7 +384,7 @@ Since we used ```xlpp.addTemperature(1, distance);``` for the distance or water 
 
 ![Remaning Sensor](./media/water_rename.jpg)
 
-We can also see the corresponding sensor data on the Wazicloud platform
+If we take a look at the Wazicloud platform, we will also see the sensor value once again.
 
 ![Gateway Sensor Display](./media/wazicloud_water.png)
 
