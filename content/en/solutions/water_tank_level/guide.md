@@ -376,18 +376,18 @@ void loop(void)
 
 At this point, all we need to do is flash the above code to the WaziACT and attach the ultrasonic head to the upper part of the desired tank for sensing.
 
+If we take a look at the data in our serial monitor we should see something similar to the image below.
+
+![Serial Monitor](./media/serial.png)
+
 Since we used ```xlpp.addTemperature(1, distance);``` for the distance or water level values, we have to rename the sensor on the wazigate for clarity as shown below.
 
-![Remaning Sensor](./media/water_val.png)
-
-After renaming our sensor and assigning them the appropriate unit of measurement, we have:
-
-![Gateway Sensor Display](./media/gateway_val.png)
+![Remaning Sensor](./media/water_rename.jpg)
 
 We can also see the corresponding sensor data on the Wazicloud platform
 
-![Wazicloud Sensor Display](./media/wazicloudv2.png)
+![Gateway Sensor Display](./media/wazicloud_water.png)
 
 we can also setup notifications on WaziCloud, for when the water level threshold conditions are met. Kindly see the lectures under **Module 5 Lecture 3** for how to setup a Notifications on Wazicloud.
 
-![Notifications](./media/notification.png)
+![Notifications](./media/notification_water.png)
