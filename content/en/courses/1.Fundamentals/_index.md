@@ -7,13 +7,6 @@ weight: -1 # weight 0 is not possible, so we do -1 here
 thumbnail: introduction_to_iot.webp
 ---
 
-Test
-
-In this course you will learn step by step everything there is to know about IoT.
-The course is structured with external material and with material produced directly from the WAZIUP / WAZIHUB project.
-
-https://drive.google.com/file/d/1CqTnLfiC4t9jj7or6Kp3Z0zaXemS5PIp/view
-
 
 Introduction to IoT
 ===================
