@@ -81,8 +81,6 @@ To avoid any error while uploading your program to the board, you must select th
 
 Go to Tools → Board and select your board. For most of example illustrations, we are using an Arduino Uno board, but you must select the name, and sometime also the version, matching the board that you are using: Arduino Nano, Arduino Pro Mini 3.3v and 8MHz,...
 
-For WAZIUP/WAZIHUB bootcamps, we are using the WAZINano board. Select `Arduino Nano` as the target board.
-
 ![WaziNano](/lora_communication/img/WaziNano.jpg)
 
 {{% warning %}}
