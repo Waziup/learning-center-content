@@ -1,4 +1,4 @@
-![Auto Irrigation](./media/drip_irrigation.jpg)
+![Auto Irrigation](./media/thumbnail.png)
 
 Overview
 ========
@@ -32,7 +32,7 @@ The following hardware and software is required in order to follow this user gui
 - Powering:
   1) Option:
       - 4x AA battery holder 
-      - 4x AA battery 
+      - 4x 1,5V AA battery 
   2) Option:
       - MPPT solar charge controller
       - Solar panel 5V, 0,3W 
@@ -82,6 +82,20 @@ Due to space limitations of the box used in this guide, the analog pin has to be
 
 ![Watermark wiring](./media/20221118_125537.jpg)
 
+**Connections made to WaziAct:**
+
+The solar panel is connected to the solar charge controllers "IN" port. The first solar charge controllers "OUT" port is connected to the battery directly. The positive of second "OUT" port is connected to to the switch, whereas the minus terminal is connected to the switch, from the switch it should be connected to the positive VIN port of the WaziAct. The negative "OUT" port to the charge controller is connected directly to the negative VIN terminal of the WaziAct. 
+
+For the soil moisture sensor, you have to connect the positive lead (red cable) of the sensor to the "A1" port of the WaziAct. The negative lead is connected to "GND" terminal of the WaziAct. The signal cable (yellow) is connected to the "D5" port of the WaziAct. Additionally you have to bridge "A1" and "D5" with a 4,7kΩ resistor.
+
+The watermark soil moisture sensor is connected with only two wires to the WaziAct. The positive wire is connected to "D6" and the negative is connected to "A6". To acquire accurate readings you have to bridge "A6" to "D9" with a 10kΩ resistor.
+
+A complete schema of how to wire all connections can be obtained from the following:
+
+![Wiring](./media/wiring.png)
+
+
+
 **Step \#2:** Powering the WaziAct
 ============================================
 
@@ -99,8 +113,8 @@ Option 2:
 The second option is to use the sun to power the micro controller, this way, it is self-sufficient. The controller should be able to collect data over years without maintenance. 
 
 We use the following components:
-- MPPT solar charge controller
-- Solar panel 5V, 0,3W 
+- 5V MPPT solar charge controller
+- 5V Solar panel 0,3W 
 - 3,7V LiPo battery with 2500mAh (approximately 10Wh)
 
 The solar charge controller tracks the maximum power point and therefore uses the energy, supplied by the solar panel, in an efficient way. It can handle bigger panels, but since our power requirements are very little, we only use a small one. Which brings us to the solar panel, it has only 0,3W. To charge the 10Wh battery from 0-100% SOC, under optimal conditions, would take approximately 34h of direct sunlight. To put this in other words, the battery used is to big, but we still had them on the shelf and we wanted to have a buffer to have the device powered guaranteed. Compared to the WaziSense with its two super capacitors (0,0405Wh), the battery used here (10Wh) can store 250x the energy. So you can use a battery with 10% of the capacity (250mAh) and have still plenty of buffer left.
@@ -120,7 +134,9 @@ Since we have limited space, we cannot use the sealed connectors types. Therefor
 We recommend you to take a bigger case and use waterproof connectors to ensure minimum likelihood of a water/moisture breach. You could use one of the following connector types:
 
 ![waterproof connectors 1](media/20221118_130049.jpg)
+Aviation plug, IP68 SP13 3pin waterproof aviation connector
 ![waterproof connectors 2](media/20221118_130057.jpg)
+M20 IP68 Nylon Cable Gland with Locknut
 
 **Step \#4:** Transfer code to the WaziAct
 ==========================================
@@ -136,3 +152,25 @@ The code used in this project is available on the [OSIRRIS github page](https://
 
   **Step \#5:** Connect WaziAct to WaziGate
 ==========================================
+
+In the following all necessary steps to connect a WaziAct to a WaziGate are being explained:
+
+1. To flash the latest version of WaziGate ISO to a sd-card, you can just follow [this guide](https://waziup.io/documentation/wazigate/v2/install/). 
+2. Then access the WaziGate using the ip address of the device. 
+3. If you are using the WaziGate as an access point, connect your PC/Smartphone to a WIFI with the following SSID: "WAZIGATE_XXXXXXXXX", the address is "42.10.0.1". 
+4. If you connected the WaziGate to an access point, connect your PC/Smartphone to the same access point, you can type the assigned ip address. If you have only one WaziGate connected you can access the UI by typing "wazigate.local". 
+5. After you logged in, you are on the dashboard page. 
+6. There you can press the "+" button (situated in the button right corner) and add a device. 
+7. Afterward click on the device. In the next view you have to choose the "XLPP" codec for LoRa transmission. 
+8. Then click the three dots (situated in the top right corner), a context menu will open. Here you choose "make LoRaWAN".
+9. Add all the information you edited in your arduino script, the stock configuration is the following:
+    - device address: 26011DBC
+    - network shared key: 23158D3BBC31E6AF670D195B5AED5525
+10. Afterwards WaziGate creates all sensors automatically.
+11. Rename them and assign units and quantities, to increase visibility.
+
+  **Step \#6** Sync the Sensor Data to WaziCloud
+==========================================
+
+The [linked guide](https://waziup.io/documentation/wazicloud/dashboard/) shows how connect and synchronize the WaziGate to WaziCloud. 
+
