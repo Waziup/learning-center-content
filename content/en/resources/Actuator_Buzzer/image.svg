@@ -1,0 +1,19 @@
+<svg width="135" height="105" viewBox="0 0 135 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="107" height="90" transform="translate(0 8)" fill="#005D87"/>
+<rect x="16" y="78" width="13" height="8" fill="white" fill-opacity="0.3"/>
+<circle cx="45" cy="53" r="36" fill="#333333"/>
+<circle cx="45" cy="53" r="35" fill="#404040"/>
+<circle cx="45" cy="53" r="7" fill="#2D2D2D"/>
+<rect x="22" y="45" width="10" height="16" fill="#323232"/>
+<rect x="92" y="11" width="13" height="8" fill="white" fill-opacity="0.3"/>
+<rect x="92" y="86" width="13" height="8" fill="white" fill-opacity="0.3"/>
+<circle cx="6" cy="14" r="4" fill="white"/>
+<circle cx="6" cy="92" r="4" fill="white"/>
+<rect x="90" y="30" width="15" height="45" fill="#404040"/>
+<rect x="94" y="34" width="7" height="7" fill="#151515"/>
+<rect x="94" y="49" width="7" height="7" fill="#151515"/>
+<rect x="94" y="64" width="7" height="7" fill="#151515"/>
+<rect x="95" y="35" width="35" height="5" fill="#D9D9D9"/>
+<rect x="95" y="50" width="35" height="5" fill="#D9D9D9"/>
+<rect x="95" y="65" width="35" height="5" fill="#D9D9D9"/>
+</svg>
