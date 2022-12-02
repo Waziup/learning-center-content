@@ -1,40 +1,8 @@
-![Auto Irrigation](./media/autoirrigation.jpg)
+---
+---
 
-Overview
-========
 
-As you may already know, plants require water, light(usually sunlight), nutrients etc,...to grow healthy. While these factors can be easily provided, the problem is usually forgetfulness.
-
-Luckily for us, we can use smart electronic devices to automate some of the above mentioned entities required for plant growth, specifically watering.
-
-Here's what we will be learning:
-- What parts are needed
-- How to wire up and read sensor values
-- How to trigger an actuator
-- How to use the actuator to control a water pump
-- How to communicate to the cloud over LoRa
-
-What parts do we need?
-======================
-
-To follow this user manual, one will need the following hardware:
-
-Hardware
-  - WaziACT
-  - FT232 FTDI module with Mini USB Cable
-  - Wazigate
-  - Soil Moisture Sensor
-  - Submersible Water Pump
-  - Some Jumper Wires
-  - Power Supply
-
-![Parts One](./media/parts_one.png)
-
-Software
-  - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
-  - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
-
-**Step \#1:** Setting up the Soil Moisture Sensor
+Step #1: Setting up the Soil Moisture Sensor
 ==============================
 Soil moisture sensors measures the amount of water in the soil to maintain consistent and ideal soil conditions for plants.
 They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
@@ -78,7 +46,7 @@ void loop() {
 }
 ```
 
-**Step \#2:** Setting up the Actuator(Relay)
+Step #2: Setting up the Actuator(Relay)
 ============================================
 
 You may occasionally wish to manage appliances with AC power, such as lamps, fans, and other home appliances. The WaziACT, however, cannot directly control these higher voltage devices because it runs on 3.3 volts.
@@ -114,7 +82,9 @@ void loop() {
   delay(5000);
 }
 ```
-**Step \#3:** Combining Sensing and Actuation with Lora Communication
+
+
+Step #3: Combining Sensing and Actuation with Lora Communication
 ====================================================================================
 
 At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet. Also the WaziACT will constantly update Wazicloud with the current state of the soil through Wazigate.

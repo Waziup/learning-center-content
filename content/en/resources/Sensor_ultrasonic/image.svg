@@ -1,0 +1,127 @@
+<svg width="150" height="270" viewBox="0 0 150 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_36_1187)">
+<rect x="30" width="120" height="270" fill="#0294D5"/>
+<rect x="46" y="107" width="22" height="11" fill="white" fill-opacity="0.3"/>
+<rect x="32" y="13" width="13" height="8" fill="white" fill-opacity="0.3"/>
+<rect x="32" y="250" width="13" height="8" fill="white" fill-opacity="0.3"/>
+<rect x="112" y="107" width="8" height="57" fill="white" fill-opacity="0.3"/>
+<rect x="30" y="105" width="15" height="60" fill="#404040"/>
+<rect x="34" y="109" width="7" height="7" fill="#151515"/>
+<rect x="34" y="124" width="7" height="7" fill="#151515"/>
+<rect x="34" y="139" width="7" height="7" fill="#151515"/>
+<rect x="34" y="154" width="7" height="7" fill="#151515"/>
+<rect x="5" y="110" width="35" height="5" fill="#D9D9D9"/>
+<rect x="5" y="125" width="35" height="5" fill="#D9D9D9"/>
+<rect x="5" y="140" width="35" height="5" fill="#D9D9D9"/>
+<rect x="5" y="155" width="35" height="5" fill="#D9D9D9"/>
+<circle cx="90" cy="211" r="50" fill="#D9D9D9"/>
+<circle cx="90" cy="211" r="45" fill="#494949"/>
+<circle cx="90" cy="211" r="37" fill="#6C6C6C"/>
+<mask id="mask0_36_1187" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="28" y="149" width="124" height="124">
+<g clip-path="url(#clip1_36_1187)">
+<line x1="28.7789" y1="194.962" x2="106.721" y2="149.962" stroke="black"/>
+<line x1="31.2789" y1="199.292" x2="109.221" y2="154.292" stroke="black"/>
+<line x1="33.7789" y1="203.622" x2="111.721" y2="158.622" stroke="black"/>
+<line x1="36.2789" y1="207.952" x2="114.221" y2="162.952" stroke="black"/>
+<line x1="38.7789" y1="212.282" x2="116.721" y2="167.282" stroke="black"/>
+<line x1="41.2789" y1="216.613" x2="119.221" y2="171.613" stroke="black"/>
+<line x1="43.7789" y1="220.943" x2="121.721" y2="175.943" stroke="black"/>
+<line x1="46.2789" y1="225.273" x2="124.221" y2="180.273" stroke="black"/>
+<line x1="48.7789" y1="229.603" x2="126.721" y2="184.603" stroke="black"/>
+<line x1="51.2789" y1="233.933" x2="129.221" y2="188.933" stroke="black"/>
+<line x1="53.7789" y1="238.263" x2="131.721" y2="193.263" stroke="black"/>
+<line x1="56.2789" y1="242.593" x2="134.221" y2="197.593" stroke="black"/>
+<line x1="58.7789" y1="246.923" x2="136.721" y2="201.923" stroke="black"/>
+<line x1="61.2789" y1="251.254" x2="139.221" y2="206.254" stroke="black"/>
+<line x1="63.7789" y1="255.584" x2="141.721" y2="210.584" stroke="black"/>
+<line x1="66.2789" y1="259.914" x2="144.221" y2="214.914" stroke="black"/>
+<line x1="68.7789" y1="264.244" x2="146.721" y2="219.244" stroke="black"/>
+<line x1="71.2789" y1="268.574" x2="149.221" y2="223.574" stroke="black"/>
+<line x1="112.067" y1="250.221" x2="67.067" y2="172.279" stroke="black"/>
+<line x1="116.397" y1="247.721" x2="71.3971" y2="169.779" stroke="black"/>
+<line x1="120.727" y1="245.221" x2="75.7272" y2="167.279" stroke="black"/>
+<line x1="125.057" y1="242.721" x2="80.0574" y2="164.779" stroke="black"/>
+<line x1="94.7465" y1="260.221" x2="49.7465" y2="182.279" stroke="black"/>
+<line x1="99.0766" y1="257.721" x2="54.0766" y2="179.779" stroke="black"/>
+<line x1="103.407" y1="255.221" x2="58.4067" y2="177.279" stroke="black"/>
+<line x1="107.737" y1="252.721" x2="62.7369" y2="174.779" stroke="black"/>
+<line x1="129.387" y1="240.221" x2="84.3875" y2="162.279" stroke="black"/>
+<line x1="133.718" y1="237.721" x2="88.7176" y2="159.779" stroke="black"/>
+<line x1="138.048" y1="235.221" x2="93.0477" y2="157.279" stroke="black"/>
+<line x1="142.378" y1="232.721" x2="97.3779" y2="154.779" stroke="black"/>
+<line x1="147.208" y1="231.087" x2="102.208" y2="153.145" stroke="black"/>
+<line x1="77.426" y1="270.221" x2="32.426" y2="192.279" stroke="black"/>
+<line x1="81.7561" y1="267.721" x2="36.7561" y2="189.779" stroke="black"/>
+<line x1="86.0862" y1="265.221" x2="41.0862" y2="187.279" stroke="black"/>
+<line x1="90.4164" y1="262.721" x2="45.4164" y2="184.779" stroke="black"/>
+</g>
+</mask>
+<g mask="url(#mask0_36_1187)">
+<circle cx="90" cy="211" r="45" fill="#3C3C3C"/>
+</g>
+<circle cx="90.4711" cy="59.4711" r="50" fill="#D9D9D9"/>
+<circle cx="90.4711" cy="59.4711" r="45" fill="#494949"/>
+<circle cx="90.4711" cy="59.4711" r="37" fill="#6C6C6C"/>
+<mask id="mask1_36_1187" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="29" y="-2" width="123" height="123">
+<g clip-path="url(#clip2_36_1187)">
+<line x1="29.25" y1="43.433" x2="107.192" y2="-1.56698" stroke="black"/>
+<line x1="31.75" y1="47.7632" x2="109.692" y2="2.76315" stroke="black"/>
+<line x1="34.25" y1="52.0933" x2="112.192" y2="7.09329" stroke="black"/>
+<line x1="36.75" y1="56.4234" x2="114.692" y2="11.4234" stroke="black"/>
+<line x1="39.25" y1="60.7535" x2="117.192" y2="15.7535" stroke="black"/>
+<line x1="41.75" y1="65.0836" x2="119.692" y2="20.0837" stroke="black"/>
+<line x1="44.25" y1="69.4138" x2="122.192" y2="24.4138" stroke="black"/>
+<line x1="46.75" y1="73.7439" x2="124.692" y2="28.7439" stroke="black"/>
+<line x1="49.25" y1="78.074" x2="127.192" y2="33.074" stroke="black"/>
+<line x1="51.75" y1="82.4041" x2="129.692" y2="37.4041" stroke="black"/>
+<line x1="54.25" y1="86.7343" x2="132.192" y2="41.7343" stroke="black"/>
+<line x1="56.75" y1="91.0644" x2="134.692" y2="46.0644" stroke="black"/>
+<line x1="59.25" y1="95.3946" x2="137.192" y2="50.3946" stroke="black"/>
+<line x1="61.75" y1="99.7246" x2="139.692" y2="54.7246" stroke="black"/>
+<line x1="64.25" y1="104.055" x2="142.192" y2="59.0548" stroke="black"/>
+<line x1="66.75" y1="108.385" x2="144.692" y2="63.3849" stroke="black"/>
+<line x1="69.25" y1="112.715" x2="147.192" y2="67.7151" stroke="black"/>
+<line x1="71.75" y1="117.045" x2="149.692" y2="72.0452" stroke="black"/>
+<line x1="112.538" y1="98.6923" x2="67.5381" y2="20.75" stroke="black"/>
+<line x1="116.868" y1="96.1923" x2="71.8683" y2="18.25" stroke="black"/>
+<line x1="121.198" y1="93.6923" x2="76.1984" y2="15.75" stroke="black"/>
+<line x1="125.529" y1="91.1923" x2="80.5285" y2="13.25" stroke="black"/>
+<line x1="95.2176" y1="108.692" x2="50.2176" y2="30.75" stroke="black"/>
+<line x1="99.5477" y1="106.192" x2="54.5477" y2="28.25" stroke="black"/>
+<line x1="103.878" y1="103.692" x2="58.8779" y2="25.75" stroke="black"/>
+<line x1="108.208" y1="101.192" x2="63.208" y2="23.25" stroke="black"/>
+<line x1="129.859" y1="88.6923" x2="84.8586" y2="10.75" stroke="black"/>
+<line x1="134.189" y1="86.1923" x2="89.1888" y2="8.24998" stroke="black"/>
+<line x1="138.519" y1="83.6923" x2="93.5189" y2="5.74998" stroke="black"/>
+<line x1="142.849" y1="81.1923" x2="97.849" y2="3.24998" stroke="black"/>
+<line x1="147.679" y1="79.5583" x2="102.679" y2="1.616" stroke="black"/>
+<line x1="77.8971" y1="118.692" x2="32.8971" y2="40.75" stroke="black"/>
+<line x1="82.2272" y1="116.192" x2="37.2272" y2="38.25" stroke="black"/>
+<line x1="86.5574" y1="113.692" x2="41.5574" y2="35.75" stroke="black"/>
+<line x1="90.8875" y1="111.192" x2="45.8875" y2="33.25" stroke="black"/>
+</g>
+</mask>
+<g mask="url(#mask1_36_1187)">
+<circle cx="90.4711" cy="59.4711" r="45" fill="#3C3C3C"/>
+</g>
+<rect x="46" y="122" width="22" height="11" fill="white" fill-opacity="0.3"/>
+<rect x="46" y="137" width="22" height="11" fill="white" fill-opacity="0.3"/>
+<rect x="46" y="152" width="22" height="11" fill="white" fill-opacity="0.3"/>
+<circle cx="36" cy="6" r="4" fill="white"/>
+<rect x="122" y="107" width="13" height="56" rx="3" fill="#D9D9D9"/>
+<circle cx="144" cy="264" r="4" fill="white"/>
+<circle cx="36" cy="264" r="4" fill="white"/>
+<circle cx="144" cy="6" r="4" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_36_1187">
+<rect width="150" height="270" fill="white"/>
+</clipPath>
+<clipPath id="clip1_36_1187">
+<rect width="90" height="90" fill="white" transform="translate(28.5289 194.529) rotate(-30)"/>
+</clipPath>
+<clipPath id="clip2_36_1187">
+<rect width="90" height="90" fill="white" transform="translate(29 43) rotate(-30)"/>
+</clipPath>
+</defs>
+</svg>

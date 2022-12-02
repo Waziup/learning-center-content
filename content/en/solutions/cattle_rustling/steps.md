@@ -1,39 +1,8 @@
-![Cattle with Tag](./media/cattle.jpg)
+---
+---
 
-Overview
-========
-Cattle rustlings is increasingly becoming a major problem in many parts of Africa in recent years. Despite the growing level of cattle theft and its consequences for society, the situation has yet to receive an effective intervention.
 
-In this guided article we will look at how to build a simple tracking solutions for livestock using a method known as **Geofencing**.
-
-Here's what we will be learning:
-- What Geofencing means and how it works
-- What parts are needed
-- How to read and process GPS data
-- How to track objects with Geofencing
-- How to transmit data collected using LoRa
-
-What parts do we need?
-=====================
-
-To follow this user manual, one will need the following hardware:
-
-Hardware
-  - Wazidev with USB Mirco Cable
-  - Neo M8/7/6 GPS Breakout Board
-  - Active Ceramic GPS Antenna
-  - LoRa Gateway with Internet
-  - Some Jumper Wires
-  - LiPo/Li-ion Battery with Holder
-  
-![Parts One](./media/parts_one.png)
-
-Software
-  - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
-  - Install [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus) library by **Mikal Hart**
-  - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
-
-**Step \#1:** Installing TinyGPS Plus Library
+Step #1: Installing TinyGPS Plus Library
 =============================================
 Under the **Sketch** menu in the Arduino IDE, locate **Include Libraries** and navigate to **Manage Libraries..** and click to open the libraries manager.
 
@@ -49,7 +18,8 @@ After installing we should see the label **INSTALLED** as shown below.
 
 We can now close the library manager.
 
-**Step \#2:** Reading and Processing GPS Coordinates
+
+Step #2: Reading and Processing GPS Coordinates
 ====================================================
 In order to be sure our GPS sensor works, we need to atleast see some raw GPS data containing latitute, longitude, altitude etc...
 To do that we need to wire up our GPS breakout board to the Wazidev UART pins and run some basic GPS code.
@@ -147,7 +117,8 @@ where:
 - xxxxx is the longitude
 - yyyyy is the latitude
 
-**Step \#3:** Tracking Using Geofencing
+
+Step #3: Tracking Using Geofencing
 =======================================
 
 Now that we are able to see the GPS coordinates, the next thing is to set a fixed coordinate and determine how far new coordinates received are from fixed coordinate.
@@ -266,7 +237,8 @@ where:
 - ddddd is the distance between coordinates in meters
 - zzzzz is the altitude
 
-**Step \#4:** Transmitting Data using LoRa 
+
+Step #4: Transmitting Data using LoRa 
 =======================================
 
 To transmit the data collected over LoRa to the cloud, we need a gateway.
@@ -481,7 +453,8 @@ The correspongind data on the gateway will be mirrored on the WaziCloud as well.
 
 ![WaziCloud View](./media/wazicloudview.png)
 
-**Step \#5:** Final Touches
+
+Step #5: Final Touches
 ===========================
 
 At this point we need to setup a notification for when the value of **analogInput1** goes above a certain threshold. The threshold in question can be the radius of the cattle ranch land.
