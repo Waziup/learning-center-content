@@ -1,6 +1,6 @@
 ---
 date: 2023-01-13T09:00:00+00:00
-title: xxxxxxxxxx sensors
+title: CN3791 MPPT Solar Charger
 ---
 
 # Introduction
