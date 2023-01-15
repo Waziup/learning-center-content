@@ -3,11 +3,22 @@
 
 # CN3791 Specifications
 
-- 12V MPPT Solar Charger Module Technical Specifications:
-- Input Voltage: 12V/DC Max.
-- Output Voltage: Nominal 3.7V, Full Charge 4.2V (Lithium Battery)
-- Maximum Charge Current: 2A
-- Operating Temperature: -40C to +85C
-- Width: 20mm
-- Length: 45mm
-- Height: 10mm
+12V MPPT Solar Charger Module Technical Specifications:
+- Input Voltage:DC 6V
+- Charging Current:2A
+- PWM Switching Frequency:300KHz
+- Constant Voltage Charging Voltage:4.2V
+- Interface:2pin PH2.0/JST
+- Work Temperature:-25℃~85℃
+- Work Humidity:5%~95%RH
+- Size:45*20*9mm
+
+# Features
+
+- Trickle charging of deeply discharged batteries
+- Automatic recharge
+- Charge status and charge end status indication
+- Soft start
+- Battery overvoltage protection
+- Solar panel maximum power point tracking
+- Complete charge management for single-cell lithium batteries
