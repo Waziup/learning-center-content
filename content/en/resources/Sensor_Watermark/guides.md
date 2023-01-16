@@ -10,13 +10,15 @@ The sensor consists of a pair of highly corrosion resistant electrodes that are 
 
 The WATERMARK is designed to be a permanent sensor, placed in the soil to be monitored and “read” as often as necessary with a portable or stationary device. Internally installed gypsum provides some buffering for the effect of salinity levels normally found in irrigated agricultural crops and landscapes.
 
-![picxxyyzz](img/pic1.png)
+![picxxyyzz](img/pic1.jpg)
+
+![picxxyyzz](img/pic2.png)
 
 # Wiring
-![picxxyyzz](img/pic2.png)
+![picxxyyzz](img/pic2.jpg)
 
 # Code Example
 xxyyzz
 
 # Further documentation
-Documentation for this xxyyzz is available [here](https://).
+Documentation for this xxyyzz is available [here](http://www.emesystems.com/watermark/documents/watermark.pdf).
