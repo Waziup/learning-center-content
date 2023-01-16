@@ -18,7 +18,7 @@ The WATERMARK is designed to be a permanent sensor, placed in the soil to be mon
 ![picxxyyzz](img/pic3.jpg)
 
 ## How does it work?
-    From Kirchoff’s Law we know that voltage measured over two resistors connected in series, divide according to their respective resistance values. In our sensor interface we have one known resistor (1500Ω), and one unknown resistor value (this is our gypsum sensor)
+    From Kirchoff’s Law we know that voltage measured over two resistors connected in series, divide according to their respective resistance values. In our sensor interface we have one known resistor (1500Ω), and one unknown resistor value (this is our gypsum sensor).
 
     By measuring the voltages over the known and the unknown resistor, using the analog inputs of the Arduino board, we can calculate the sensor resistance value.
 
@@ -150,5 +150,5 @@ void sortMoistures() {
 ```
 
 # Further documentation
-Documentation for this sensor is available [here](http://www.emesystems.com/watermark/documents/watermark.pdf) 
-See also the datasheet [here](https://vanderleevineyard.com/1/post/2012/08/-the-vinduino-project-3-make-a-low-cost-soil-moisture-sensor-reader.html)
+Documentation for this sensor is available [here](https://vanderleevineyard.com/1/post/2012/08/-the-vinduino-project-3-make-a-low-cost-soil-moisture-sensor-reader.html)
+See also the datasheet [here](http://www.emesystems.com/watermark/documents/watermark.pdf) 
