@@ -17,7 +17,7 @@ The WATERMARK is designed to be a permanent sensor, placed in the soil to be mon
 # Wiring
 ![picxxyyzz](img/pic3.jpg)
 
-- How does it work?
+## How does it work?
     From Kirchoff’s Law we know that voltage measured over two resistors connected in series, divide according to their respective resistance values. In our sensor interface we have one known resistor (1500Ω), and one unknown resistor value (this is our gypsum sensor)
 
     By measuring the voltages over the known and the unknown resistor, using the analog inputs of the Arduino board, we can calculate the sensor resistance value.
