@@ -23,8 +23,8 @@ The following hardware and software is required in order to follow this user gui
 - Wires and jumpers
 - Watermark Sensor (Irrometer)
 - DS18B20 temperature sensor 
-- 10kOhm resistor, for the Watermark
-- 4.7kOhm resistor, for the DS18B20
+- 10 kOhm resistor, for the Watermark
+- 4.7 kOhm resistor, for the DS18B20
 - (OLED screen)
 - Waterproof casings (minimum: IP 55)
 - FTDI connector + USB cable
@@ -32,11 +32,11 @@ The following hardware and software is required in order to follow this user gui
 - Powering:
   1) Option:
       - 4x AA battery holder 
-      - 4x 1,5V AA battery 
+      - 4x 1,5 V AA battery 
   2) Option:
       - MPPT solar charge controller
-      - Solar panel 5V, 0,3W 
-      - 3,7V LiPo battery with 2500mAh
+      - Solar panel 5 V, 0,3 W 
+      - 3,7V LiPo battery with 2500 mAh
 
 
 
@@ -94,12 +94,12 @@ A complete schema of how to wire all connections can be obtained from the follow
 
 ![Wiring](./media/wiring.png)
 
-
+Since there are some space restrictions by the case, we choose to build this prototype, some connections are realized by soldering the wires at the back of the PCB of the WaziAct.
 
 **Step \#2:** Powering the WaziAct
 ============================================
 
-The WazAct micro-controller has a very little energy consumption. You can have power supplies from 4V-16V. 
+The WazAct micro-controller has a very little energy consumption. With 4 V it uses 2,5 mA in deep sleep, this results in a consumption of 10 mWh. You can have power supplies from 4 V - 16 V. 
 Therefore we came up with two solutions to power the device:
 
 Option 1:
@@ -113,11 +113,11 @@ Option 2:
 The second option is to use the sun to power the micro controller, this way, it is self-sufficient. The controller should be able to collect data over years without maintenance. 
 
 We use the following components:
-- 5V MPPT solar charge controller
-- 5V Solar panel 0,3W 
-- 3,7V LiPo battery with 2500mAh (approximately 10Wh)
+- 5 V MPPT solar charge controller
+- 5 V Solar panel 0,3 W 
+- 3,7 V LiPo battery with 2500mAh (approximately 10 Wh)
 
-The solar charge controller tracks the maximum power point and therefore uses the energy, supplied by the solar panel, in an efficient way. It can handle bigger panels, but since our power requirements are very little, we only use a small one. Which brings us to the solar panel, it has only 0,3W. To charge the 10Wh battery from 0-100% SOC, under optimal conditions, would take approximately 34h of direct sunlight. To put this in other words, the battery used is to big, but we still had them on the shelf and we wanted to have a buffer to have the device powered guaranteed. Compared to the WaziSense with its two super capacitors (0,0405Wh), the battery used here (10Wh) can store 250x the energy. So you can use a battery with 10% of the capacity (250mAh) and have still plenty of buffer left.
+The solar charge controller tracks the "maximum power point" and therefore uses the energy, supplied by the solar panel, in an efficient way. It can handle bigger panels, but since our power requirements are very little, we only use a small one. Which brings us to the solar panel, it has only 0,3 W. To charge the 10 Wh battery from 0-100% SOC, under optimal conditions, would take approximately 34h of direct sunlight. To put this in other words, the battery used is to big, but we still had them on the shelf and we wanted to have a buffer to have the device powered guaranteed. Compared to the WaziSense with its two super capacitors (0,0405 Wh), the battery used here (10 Wh) can store 250x the energy. So you can use a battery with 10% of the capacity (250 mAh) and have still plenty of buffer left.
 
 Additionally we added a switch to control the power state of the device from outside the case. This comes in handy, since we want to waterproof the devices further with silicone, to avoid any failure. But more on that in the next step.
 
