@@ -15,7 +15,7 @@ The WATERMARK is designed to be a permanent sensor, placed in the soil to be mon
 ![picxxyyzz](img/pic2.png)
 
 # Wiring
-![picxxyyzz](img/pic2.jpg)
+![picxxyyzz](img/pic3.jpg)
 
 # Code Example
 xxyyzz
