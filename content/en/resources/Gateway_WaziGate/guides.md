@@ -8,8 +8,6 @@ WaziGate is a IoT LoRa Gateway, ideal for all your remote IoT applications. The 
 
 ![picxxyyzz](img/pic1.png)
 
-# Documentation
-
 You can find all the WaziGate documentation here:
 
 Quick start

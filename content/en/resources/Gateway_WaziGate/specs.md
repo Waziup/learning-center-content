@@ -2,6 +2,7 @@
 ---
 
 # Specification
+
 The waziup gateway is essentially a raspberry pi with a Lora wazihat, antenna and power supply. Therefore it assumes the specification of the Raspberry pi model used. Below are the specs of the Pi 4 since it is the version commonly used for wazi-gateway these days.
 
 - Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
@@ -23,6 +24,7 @@ The waziup gateway is essentially a raspberry pi with a Lora wazihat, antenna an
 - Operating temperature: 0 – 50 degrees C ambient
 
 # Features
+
 - Edge capacity to host your applications
 - LoRa communication up to 10-12 Km
 - Permanent Wifi hotspot
