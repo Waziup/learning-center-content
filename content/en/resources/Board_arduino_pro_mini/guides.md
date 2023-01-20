@@ -23,4 +23,4 @@ The Arduino Pro Mini was designed and is manufactured by SparkFun Electronics.
 Download the full schematic diagram as PDF [here](https://www.arduino.cc/en/uploads/Main/Arduino-Pro-Mini-schematic.pdf)
 
 # Further documentation
-Documentation for this xxyyzz is available [here](https://learn.sparkfun.com/tutorials/using-the-arduino-pro-mini-33v/all).
+Documentation for this board is available [here](https://learn.sparkfun.com/tutorials/using-the-arduino-pro-mini-33v/all).
