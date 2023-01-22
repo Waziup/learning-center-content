@@ -9,6 +9,8 @@ As the name suggest, the wazihat sits on top of the raspberry pi to enable it to
 
 ![picxxyyzz](img/pic1.png)
 
+![picxxyyzz](img/pic2.png)
+
 # Further documentation
 
 Documentation for this hats SX12xx is available [here](https://cdn-shop.adafruit.com/product-files/3179/sx1276_77_78_79.pdf).
