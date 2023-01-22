@@ -19,8 +19,6 @@ To use this dc-dc converter, you have to hook up your power source to the VIN an
 
 ![picxxyyzz](img/pic4.jpg)
 
-![picxxyyzz](img/pic5.jpg)
-
 The regulator features an enable pin, EN, that can be used as a precision low-voltage cutoff thanks to its tight activation and deactivation thresholds (voltages below 0.7 V trigger a low-power sleep state, and voltages above 0.8 V re-enable the regulator). On this regulator version, EN is connected to VIN through a 12-turn potentiometer to provide a user-adjustable cutoff threshold, which is useful for battery powered applications where draining the battery below a particular voltage threshold could permanently damage it. The quiescent current draw in this sleep mode is dominated by the current in the resistor network from ENABLE to VIN, which is approximately 7 µA per volt on VIN (e.g. approximately 20 µA with 3 V in). See the Setting the cutoff voltage section below for details on how to use the built-in potentiometer to set the cutoff threshold.
 
 # Further documentation
