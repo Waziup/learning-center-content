@@ -1,7 +1,6 @@
 
-# CN3791 Specifications
+# Specifications
 
-12V MPPT Solar Charger Module Technical Specifications:
 - Input Voltage:DC 6V
 - Charging Current:2A
 - PWM Switching Frequency:300KHz
