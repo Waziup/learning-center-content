@@ -22,3 +22,4 @@
 - Power-saving feature maintains high efficiency at low currents (quiescent current is less than 1 mA while enabled)
 - Integrated over-temperature and short-circuit protection
 - Small size: 0.5″ × 0.6″ × 0.25″ (12.7 × 15.3 × 6.4 mm)
+- Enable pin for activating/deactivating the converter output
