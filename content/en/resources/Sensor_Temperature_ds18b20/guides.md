@@ -9,7 +9,7 @@ The DS18B20 digital temperature sensor is a 1-Wire sensor. So it communicates wi
 1-Wire bus. Several sensors can be connected to the same 1-Wire bus. In addition, each sensor has a unique 
 address, so there is no risk of conflict.
 
-![DS18B20](img/ds18b20.png)
+![DS18B20](img/ds18b20_.jpg)
 
 A 1-Wire bus is conventionally composed of the three wires: a ground, a power (5V) and a data. A 
 single external component is required to operate a 1-Wire bus: a simple 4.7K ohm resistor in 
@@ -19,12 +19,11 @@ In the second figure, you can see a water proof version of this sensor for outdo
 
 ![DS18B20](img/ds18b20_etanche.jpg)
 
-Documentation for this sensor is available [here](http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf).
-
 ## Connecting to Arduino
 
-To use a 1-Wire sensor, you need to include the [OneWire](https://github.com/PaulStoffregen/OneWire) library. In addition, using the [Dallas Temperature](https://github.com/milesburton/Arduino-Temperature-Control-Library/blob/master/DallasTemperature.h) library makes getting the temperature easy.
+![DS18B20](img/ds18b20.png)
 
+To use a 1-Wire sensor, you need to include the [OneWire](https://github.com/PaulStoffregen/OneWire) library. In addition, using the [Dallas Temperature](https://github.com/milesburton/Arduino-Temperature-Control-Library/blob/master/DallasTemperature.h) library makes getting the temperature easy.
 
 ![DS18B20](img/ds18b20-arduino.png)
 
