@@ -5,11 +5,7 @@ title: Light sensors
 
 # Introduction
 
-Photoresistors, also known as light dependent resistors (LDR), are light sensitive devices most often 
-used to indicate the presence or absence of light, or to measure the light intensity. In the dark, 
-their resistance is very high, sometimes up to 1MΩ, but when the LDR sensor is exposed to light, the 
-resistance drops dramatically, even down to a few ohms, depending on the light intensity. LDRs have a 
-sensitivity that varies with the wavelength of the light applied and are nonlinear devices. 
+Photoresistors, also known as light dependent resistors (LDR), are light sensitive devices most often used to indicate the presence or absence of light, or to measure the light intensity. In the dark, their resistance is very high, sometimes up to 1MΩ, but when the LDR sensor is exposed to light, the resistance drops dramatically even down to a few ohms, depending on the light intensity. LDRs have a sensitivity that varies with the wavelength of the light applied and are nonlinear devices. 
 
 ![ldr](img/ldr.jpeg)
 
