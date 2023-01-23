@@ -1,6 +1,6 @@
 ---
 date: 2020-07-24T09:00:00+00:00
-title: RFID tags 
+title: RC522 RFID tag
 ---
 
 # Introduction
@@ -12,6 +12,7 @@ RFID or Radio Frequency Identification system consists of two main components, a
 
 Passing the tag near the reader, makes it possible to read the Unique Identifier (UID) of the card as well as the recorded data. One of the most commonly found low-cost RFID is the RC522.
 
+![rfid](img/pic1.jpg)
 
 # Connecting RC522 module to Arduino
 
@@ -36,7 +37,7 @@ For better understanding, more documentation on the MFRC522 module can be found 
 
 We will use the MFRC522 library from https://github.com/miguelbalboa/rfid.
 
-``` arduino
+```c
 /* This is a MFRC522 library example; for further details and other examples see: https://github.com/miguelbalboa/rfid
  * 
  * Example sketch/program showing how to read data from a PICC (that is: a RFID Tag or Card) using a MFRC522 based RFID
@@ -306,3 +307,5 @@ For those of you who want to go further, you can start with the [Arduino_MFRC522
 - Test to see if your system works as expected
 - Going further: You can use the OLED example to display on an attached OLED screen whether authorization is granted or not
 
+# Further Documentation
+See further documentations for this sensor [here](https://lastminuteengineers.com/how-rfid-works-rc522-arduino-tutorial/)
