@@ -19,9 +19,9 @@ electrical waves. These electrical signals are then amplified and picked up by y
 
 Sensor > Arduino wiring is as fellows:
 
-  VCC: 5v
-  GND: GND
-  AO: A0(analog pin)
+  - VCC: 5v
+  - GND: GND
+  - AO: A0(analog pin)
 
 ![microphone](img/wiring.jpg)
 
