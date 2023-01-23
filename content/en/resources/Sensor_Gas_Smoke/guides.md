@@ -51,7 +51,8 @@ void loop()
   else{
     digitalWrite(ledPin, LOW);
   }
-}```
+}
+```
 
 # Further documentation
 Documentation for this xxyyzz is available [here](https://circuitdigest.com/microcontroller-projects/interfacing-mq5-gas-sensor-with-arduino).
