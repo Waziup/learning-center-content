@@ -15,10 +15,6 @@ A 1-Wire bus is conventionally composed of the three wires: a ground, a power (5
 single external component is required to operate a 1-Wire bus: a simple 4.7K ohm resistor in 
 pull-resistance to the power supply on the data pin.
 
-In the second figure, you can see a water proof version of this sensor for outdoor deployment.
-
-![DS18B20](img/ds18b20_etanche.jpg)
-
 ## Connecting to Arduino
 
 ![DS18B20](img/ds18b20.png)
