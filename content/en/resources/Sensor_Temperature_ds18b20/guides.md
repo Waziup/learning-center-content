@@ -79,5 +79,3 @@ void loop()
 # Further documentation
 
 Documentation for this sensor is available [here](http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf).
-
-
