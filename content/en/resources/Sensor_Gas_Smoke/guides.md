@@ -21,6 +21,7 @@ Also pin 7 of the arduino is connected to the positive terminal of a piezo buzze
 Connect the ground terminals of the buzzer and LED to the ground of the arduino as well.
 
 ![picxxyyzz](img/pic2.jpg)
+
 You can adjust the potentiometer on the back of the MQ5 sensor to increase or decrease its sensitivity.
 
 ![picxxyyzz](img/pic3.png)
