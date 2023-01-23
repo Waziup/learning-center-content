@@ -55,4 +55,4 @@ void loop()
 ```
 
 # Further documentation
-Documentation for this xxyyzz is available [here](https://circuitdigest.com/microcontroller-projects/interfacing-mq5-gas-sensor-with-arduino).
+Documentation for this Sensor is available [here](https://circuitdigest.com/microcontroller-projects/interfacing-mq5-gas-sensor-with-arduino).

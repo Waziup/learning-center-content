@@ -1,6 +1,6 @@
 ---
 date: 2020-07-24T09:00:00+00:00
-title: GPS & localization
+title: NEO-8M GPS Module
 ---
 
 # Introduction
