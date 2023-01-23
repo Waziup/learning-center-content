@@ -419,83 +419,9 @@ Making a prediction after calculated the linear equation is quite simple, you ju
 <img src="https://latex.codecogs.com/svg.image?y = B_{0} + B_{1} * x_{1}">
 </p>
 
-# How to approach a machine learning problem
 
-There are five major steps involved on how to approach a machine learning problem [Brow14]. They are being discussed below.
 
-## 1. Define the Problem
-
-In this phase one tires to understand the problem in holistic way. 
-This can be split into three questions.
-
-### 1. What is the problem?
-
-Here the problem is described, to further understand it. List assumptions and similar problems.
-
-### 2. Why this problem needs to be solved?
-
-This question includes advantages one gain from solving the problem. It is a motivation to think about benefits a solution provides.
-
-### 3. How would one solve the problem? 
-
-Try to understand how the problem would be solved manually, to get insights in this domain.
-
-## 2. Prepare Data 
-
-In that phase one tries to understand the data, for that some scatter plots or histograms are useful.
-
-### 1. Data Selection
-
-In data selection it is being examined what data is available, what data is missing and what is redundant or simply not needed. The relevant training examples are then chosen. 
-
-### 2. Data Preprocessing
-
-Data preprocessing tries to organize the selected data by formatting, cleaning and sampling.
-
-### 3. Data Transformation
-
-Data transformation involves engineering features by scaling, attribute aggregation and attribute decomposition. 
-
-## 3. Spot Check Algorithms
-
-Spot check algorithms means to compare different approaches solving the problem. There are some low code frameworks that let you compare different algorithms. They train different models on a given dataset. Afterwards they can compared according to different metrics.
-
-After a first spot check the most promising algorithms can be chosen. Afterwards parameters can be refined to make them even more effective in solving the problem, but this is part of the next step.
-
-## 4. Improve Results
-
-### 1. Algorithm Tuning: 
-
-In this process the hyperparameter of the model architecture are changed (in a specific range) and the model is trained in various combinations. The best model can be chosen afterwards.
-
-### 2. Ensemble Methods:
-
-Like stated before, there can be a combination of different machine learning models to give the best results. So, it should be considered to combine different approaches, if this is feasible.
-
-### 3. Extreme Feature Engineering
-
-In extreme feature engineering the attribute decomposition and aggregation seen in data preparation is being used to make the training data more explicit. It involves transforming data to forms that better relate to the learning targets. It can augment the value of your data and improves the overall performance of your model. It involves techniques like:
-
-- **Imputation**: handling the missing values in data
-- **Discretization**: grouping sets of values together in some logical fashion into buckets or bins
-- **Categorical encoding**: encode categorical values into numerical features -> simpler to learn
-- **Feature splitting**: splitting features into parts can improve the value of features
-- **Handling outliers**: outliers are unusually high or low values in a dataset, there are some options: 
-  - removal
-  - replacing
-  - capping 
-  - discretization 
-- **Variable transformations**: could help normalizing skewed data, e.g. logarithmic transformation
-- **Scaling**: scaling inputs of data can improve your model, here values are normalized, this can be achieved differently
-  - Variance scaling. data points are subtracted by their mean, the result is divided by the distribution variance, this gives a distribution with 0 mean and a variance of 1
-  - Min-Max scaling: rescaling the values in a range from 0 to 1
-- **Create features**: deriving new features from existing ones, done by simple mathematical operations like: mean, median, difference, sum, mode or a product of two values
-
-## 5. Present Results
-
-It is always good to summarize findings, to remember them and use them in future. In order to do so, they can be grouped into: **context, problem, solution, findings, limitations and conclusions**.
-
-<!-- TODO: finish-->
+<!-- TODO: add a finish note-->
 
 ## Sources
 
@@ -514,7 +440,6 @@ https://www.jeremyjordan.me/nn-learning-rate/, 2018
 
 [Bini18] Moshe Binieli, "Machine learning: an introduction to mean squared error and regression lines" https://www.freecodecamp.org/news/machine-learning-mean-squared-error-regression-line-c7dde9a26b93/ Version: 2022
 
-[Brow14] Jason Brownlee, "Applied Machine Learning Process" https://machinelearningmastery.com/process-for-working-through-machine-learning-problems/ Version 2019
 
 
 
