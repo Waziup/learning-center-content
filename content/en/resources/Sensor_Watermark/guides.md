@@ -151,4 +151,5 @@ void sortMoistures() {
 
 # Further documentation
 Documentation for this sensor is available [here](https://vanderleevineyard.com/1/post/2012/08/-the-vinduino-project-3-make-a-low-cost-soil-moisture-sensor-reader.html)
-See also the datasheet [here](http://www.emesystems.com/watermark/documents/watermark.pdf) 
+
+See also the datasheet [here](http://www.emesystems.com/watermark/documents/watermark.pdf)
