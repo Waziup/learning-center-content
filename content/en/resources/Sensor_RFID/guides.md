@@ -33,7 +33,9 @@ We will connect as follows:
 
 For better understanding, more documentation on the MFRC522 module can be found [here](src/sketch/libraries/MFRC522/doc/rfidmifare.pdf).
 
-# Code example 1: Arduino_MFRC522_DumpInfo.ino
+# Code example 1
+
+Arduino_MFRC522_DumpInfo.ino
 
 We will use the MFRC522 library from https://github.com/miguelbalboa/rfid.
 
@@ -158,7 +160,9 @@ To write the information in a tag, it is necessary to define three things: the s
 Also remember never select last block of any sector. Writing into ‘Sector Trailer’ block can make the block unusable.
 {{< /alert >}}
 
-# Code example 2: Arduino_MFRC522_ReadNUID.ino
+# Code example 2
+
+Arduino_MFRC522_ReadNUID.ino
 
 ``` c
 #include< SPI.h>
@@ -278,7 +282,9 @@ Once you run the example and bring the card near the RC522 module, you should se
 
 ![read_UID](img/read_UID.png)
 
-# Code example 3: Arduino_MFRC522_ReadAndWrite.ino
+# Code example 3
+
+Arduino_MFRC522_ReadAndWrite.ino
 
 For those of you who want to go further, there is another example which you can use and understand.
 
