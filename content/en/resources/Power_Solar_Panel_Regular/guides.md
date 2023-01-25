@@ -14,4 +14,4 @@ Set-up is easy as well, just plug your solar panel into one side of the solar ch
 ![picxxyyzz](img/pic2.png)
 
 # Further documentation
-Documentation for this xxyyzz is available [here](https://).
+Documentation for this board is available [here](https://www.laskakit.cz/user/related_files/dse-cn3791-2.pdf).
