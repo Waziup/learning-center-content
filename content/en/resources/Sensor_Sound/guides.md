@@ -15,6 +15,17 @@ electrical waves. These electrical signals are then amplified and picked up by y
 
 ![microphone](img/microphone.jpg)
 
+# Wiring
+
+Sensor > Arduino wiring is as fellows:
+
+  - VCC: 5v
+  - GND: GND
+  - AO: A0(analog pin)
+
+![microphone](img/wiring.jpg)
+
+**Note:** you can adjust the potentiometer on the sensor to increase/decrease the sensitivity
 
 # Code example
 
@@ -47,7 +58,7 @@ void loop(){
 
 Here is a more elaborated code which uses an interrupt to sample at 4kHz. The byte stream can be considered as an SPL stream that can be injected (or saved) into a player. It requires the `TimerOne` library.
 
-``` arduino
+```c
 #include <avr/io.h>
 #include <stdio.h>
 #include <avr/sleep.h>

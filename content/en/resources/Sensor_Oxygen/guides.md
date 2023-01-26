@@ -9,8 +9,7 @@ A dissolved oxygen meter is used to measure the dissolved oxygen in water, to re
                     
 ![DO](img/DO.jpg)
 
-
-                 
+   
 # Connecting to Arduino
 
 ![SEN0237](img/SEN0237.jpg)

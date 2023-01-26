@@ -1,7 +1,8 @@
 ---
-title: Dissolved Oxgen Sensor
+title: MQ5 Gas Sensor
 type: hardware
-desc:  Dissovled oxygen sensors are essentially used to detect water quality by measuring the amount of dissoved oxygen
+desc:  Ideal for detecting gas leaks
+color: "#bad8ff"
 tags:
     - Sensor
     - City

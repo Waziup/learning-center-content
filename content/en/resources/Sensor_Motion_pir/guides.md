@@ -11,16 +11,18 @@ are commonly found in appliances and gadgets used in homes or businesses. They a
 "Passive Infrared", "Pyroelectric", or "IR motion" sensors.
                     
 ![pir2](img/pir2.jpg)
-
-
                  
 # Connecting to Arduino
+
+![pir-arduino](img/pic1.png)
+
+**Note:** You can tweak the potentiometers on the PIR motion sensor to increase its sensitivity or reaction time.
 
 ![pir-arduino](img/pir-arduino.gif)
                     
 # Code example
 
-``` c
+```c
 /********************
  *  Program:  PIR sensor tester
  ********************/

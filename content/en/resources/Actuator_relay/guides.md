@@ -60,5 +60,6 @@ void loop() {
 
 # Further documentation
 
-Documentation for this sensor is available [here](https://lastminuteengineers.com/one-channel-relay-module-arduino-tutorial/).
+Documentation for this sensor is available [here](https://lastminuteengineers.com/one-channel-relay-module-arduino-tutorial/) 
+Learn more about how relays work [here](https://components101.com/switches/5v-single-channel-relay-module-pinout-features-applications-working-datasheet)
 

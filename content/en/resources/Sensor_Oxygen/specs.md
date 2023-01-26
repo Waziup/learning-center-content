@@ -1,7 +1,8 @@
 ---
 ---
 
-# Specs
+# Specification
+
 Dissolved Oxygen Probe
 1. Type: Galvanic Probe
 2. Detection Range: 0~20mg/L
