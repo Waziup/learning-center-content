@@ -1,3 +1,3 @@
 ---
-title: Board and Sensors
+title: Boards and Sensors
 ---
