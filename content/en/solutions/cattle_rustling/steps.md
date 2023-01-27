@@ -43,7 +43,7 @@ Code Sample
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
-//Declaring pin A0 as recieve and A1 as Transmit
+//Declaring pin A0 as receive and A1 as Transmit
 static const int RXPin = A0, TXPin = A1;
 
 //Setting GPS communication Speed to default of NEO-M8 board
@@ -135,7 +135,7 @@ Code Sample
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
-//Declaring pin A0 as recieve and A1 as Transmit
+//Declaring pin A0 as receive and A1 as Transmit
 static const int RXPin = A0, TXPin = A1;
 
 //Setting GPS communication Speed to default of NEO-M8 board
@@ -262,7 +262,7 @@ Code Sample
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
-//Declaring pin A0 as recieve and A1 as Transmit
+//Declaring pin A0 as receive and A1 as Transmit
 static const int RXPin = A0, TXPin = A1;
 
 //Setting GPS communication Speed to default of NEO-M8 board
