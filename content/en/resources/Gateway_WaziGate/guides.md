@@ -38,7 +38,7 @@ You need the following *hardware* to start:
 - A LoRa antenna
 - A LoRa Hat such as WaziHat
 
-![Hardware elements](media/image43.png)
+![Hardware elements](img/image43.png)
 
 You also need the following *software*:
  
@@ -57,7 +57,7 @@ There are only two simple steps to assemble your WaziGate.
 As WaziGate can perform Edge processing on you data, it is always a good idea to attach heat sinks in order to avoid overheating.
 Raspberry PI can have 3 heatsinks, on the 3 processors.
 
-![Heat sink mounting](media/image36.png)
+![Heat sink mounting](img/image36.png)
 
 {{%action%}}
 **Step \#2:** Mount a WaziHat on the Raspberry PI.
@@ -65,7 +65,7 @@ Raspberry PI can have 3 heatsinks, on the 3 processors.
 
 Be careful to align correctly the pins in the arrays.
 
-![WaziHat mounted](media/image28.png)
+![WaziHat mounted](img/image28.png)
 
 
 {{%warning%}}
@@ -80,27 +80,27 @@ Flash the WaziGate
 **Step \#1:** Download the latest version of the [Wazigate ISO image](https://downloads.waziup.io/WaziGate_latest.zip).
 {{%/action%}}
 
-![Save Wazigate ISO image](media/image34.png)
+![Save Wazigate ISO image](img/image34.png)
 
 {{%action%}}
 **Step \#2:** Download [Balena Etcher](https://www.balena.io/etcher/) and install it on your PC.
 {{%/action%}}
 
 
-![Balena etcher](media/image10.png)
+![Balena etcher](img/image10.png)
 
 
 {{%action%}}
 **Step \#3:** Open the ***Balena Etcher*** tool and select the downloaded zip file.
 {{%/action%}}
 
-![Select the ISO image](media/image22.png)
+![Select the ISO image](img/image22.png)
 
 {{%action%}}
 **Step \#4:** Insert your SD card to your PC and when appear, select it in **Etcher**
 {{%/action%}}
 
-![Select the SD card drive](media/image17.png)
+![Select the SD card drive](img/image17.png)
 
 {{%warning%}}
  **Warning:** Your Micro SD card must be at least **8 GB**. **16 GB** is better.     
@@ -112,13 +112,13 @@ If your laptop does not have the SD card reader, you need a USB adapter to conne
 **Step \#5:** Click on **Flash** to start flashing.
 {{%/action%}}
 
-![Flashing...](media/image27.png)
+![Flashing...](img/image27.png)
 
 {{%action%}}
 **Step \#6:** When Flashing is done, remove your Micro SD card and insert it into your raspberry pi.
 {{%/action%}}
 
-![Flashing complete](media/image15.png)
+![Flashing complete](img/image15.png)
 
 Congratulations! Your hardware is now ready.
 
@@ -134,13 +134,13 @@ Powering up Wazigate
 **Very Important**: always connect the antenna first, before powering up your device.
 {{%/warning%}}
 
-![Antenna attached](media/image41.png)
+![Antenna attached](img/image41.png)
 
 {{%action%}}
 **Step \#2:** Plug the power cable (micro usb) into the gateway and plug the adapter to the outlet.
 {{%/action%}}
 
-![Power adapter](media/image14.png)
+![Power adapter](img/image14.png)
 
 You should see a light is on and another light next to it is actively blinking.
 
@@ -161,13 +161,13 @@ So, be patient, it might take a couple of minutes for you to see the Wazigate Wi
 The WiFi hotspot has a similar name of what you see in the photo: ***WAZIGATE\_XXXXX***. 
 XXXXX usually is the ID of your gateway.                   
 
-![Select WaziGate hotspot](media/image26.png)
+![Select WaziGate hotspot](img/image26.png)
 
 {{%action%}}
 **Step \#2:** Connect to the Wazigate WiFi hotspot
 {{%/action%}}
 
-![Enter hotspot password](media/image38.png)
+![Enter hotspot password](img/image38.png)
 
 The default password for the hotspot is ***loragateway***            
 Enter the password and click on connect.                        
@@ -263,7 +263,7 @@ Connect to your gateway
 At this stage, your gateway should have access to internet. However in order to connect to it,we need to find its IP.
 If you have OLED installed on raspberry pi the IP will be shown directly on the screen
 
-![OLED IP](media/image50.jpg)
+![OLED IP](img/image50.jpg)
 
 Otherwise you can find it by following this simple tutorial:
 - Download AngryIP Scanner [here](https://angryip.org/download)
@@ -272,7 +272,7 @@ Otherwise you can find it by following this simple tutorial:
 
 The IP of the gateway should be in the result
 
-![IP scanner](media/image51.png)
+![IP scanner](img/image51.png)
 
 Use a web browser on your laptop and open http://<gateway IP>
 
@@ -285,20 +285,20 @@ Verify Gateway Registration
 
 Go to the [Waziup](https://waziup.io) website.
 
-![Waziup.io website](media/image35.png)
+![Waziup.io website](img/image35.png)
 
 {{%action%}}
 **Step \#2:** Click on "Go to Dashboard" and enter your credentials and Login.
 {{%/action%}}
 
 
-![Register a user](media/image37.png)
+![Register a user](img/image37.png)
 
 {{%action%}}
 **Step \#3:** Click on Gateways.
 {{%/action%}}
 
-![Gateways](media/image19.png)
+![Gateways](img/image19.png)
 
 If everything went well so far, you should see your gateway in the list.
 
@@ -312,7 +312,7 @@ Your gateway details will open.
 **Step \#5:** Then click on the "Remote access" button.
 {{%/action%}}
 
-![Gateway details](media/image25.png)
+![Gateway details](img/image25.png)
 
 {{%action%}}
 **Step \#5:** Logging into your Wazigate.
@@ -356,7 +356,7 @@ On Windows, do the following:
 
 Press  shortcut key combination Windows + R , type “control” and click ok button
 
-![Control panel](media/image44.png)
+![Control panel](img/image44.png)
 
 Here click on "Network and Internet" menu and then "Network and sharing center".
 
@@ -366,7 +366,7 @@ Here click on "Network and Internet" menu and then "Network and sharing center".
 
 Click on your internet connection and go to “Properties”.
 
-![Select connection](media/image46.png)
+![Select connection](img/image46.png)
 
 {{%action%}}
 **Step \#3:** Allow sharing connection.
@@ -374,7 +374,7 @@ Click on your internet connection and go to “Properties”.
 
 Switch to the “Sharing” tab and check the box to allow other users to connect to the internet through your computer.
 
-![Allow sharing W.](media/image47.png)
+![Allow sharing W.](img/image47.png)
 
 The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
 
@@ -401,7 +401,7 @@ If `nm-connection-editor` if not present, you need to install it.
 
 When it opens, select the wired connection item, clicking the edit button. In that menu, switch to the IPv4 tab, and select the method: ‘shared to other computers’
 
-![Allow sharing L.](media/image48.jpg)
+![Allow sharing L.](img/image48.jpg)
 
 After that, save everything and connect your cable if you haven’t already, and DHCP should kick-in and set everything up for you.
 
@@ -426,7 +426,7 @@ On Mac, do the following:
 
 In the Sharing menu, choose Internet Sharing from the list on the left. You will see Internet Sharing options.
 
-![Allow sharing M.](media/image49.jpg)
+![Allow sharing M.](img/image49.jpg)
 
 Select to share your connection from Wi-Fi, to computers using Ethernet.
 After that, click on the Internet Sharing checkbox to enable the service.

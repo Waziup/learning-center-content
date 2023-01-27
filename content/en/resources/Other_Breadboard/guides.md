@@ -20,7 +20,7 @@ Breadboard wiring guide
 
 Another common use of breadboards is testing out new parts, such as Integrated circuits (ICs). When you are trying to figure out how a part works and constantly rewiring things, you don’t want to have to solder your connections each time.
 
-![picxxyyzz](img/pic3.png)
+![picxxyyzz](img/pic3.jpg)
 Prototyping with a breadboard
 
 # Further Documentation
