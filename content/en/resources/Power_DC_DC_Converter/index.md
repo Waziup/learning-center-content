@@ -1,7 +1,7 @@
 ---
-title: xxxxx
-type: xxxxx
-desc: xxxxx 
+title: DC-DC Converter
+type: hardware
+desc: DC to DC converter
 tags:
-    - Sensor
+    - Power
 ---
