@@ -1,6 +1,6 @@
 ---
 date: 2023-01-13T09:00:00+00:00
-title: xxxxxxxxxx sensors
+title: Heart Rate and Proximity Sensor
 ---
 
 # Introduction
@@ -49,7 +49,7 @@ All we have to do is navigate to File > Examples > Sparkfun MAX3010x Pulse and P
 
 ![picxxyyzz](img/pic5.png)
 
-**NOTE:** There are other code samples available in the library....for example plotting of pulse and blood oxygen etc..
+**NOTE:** There are other code samples available for use in the library....for example plotting of pulse and blood oxygen etc..
 
 ![picxxyyzz](img/pic6.png)
 

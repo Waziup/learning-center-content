@@ -1,8 +1,11 @@
 ---
-title: xxxxx
-type: xxxxx
-desc: xxxxx 
-color: "#a5d1ff"
+title: MAX30102 Heart Rate and Proximity Sensor
+type: hardware
+desc: Heart Rate and Proximity Sensor
+color: "#f8cb58"
 tags:
     - Sensor
+    - Heart Rate
+    - Temperature
+    - Blood Oxygen
 ---
