@@ -9,8 +9,6 @@ The MAX30102 is an integrated pulse oximetry and heart-rate monitor biosensor mo
 
 The MAX30102 operates on a single 1.8V power supply and a separate 3.3V power supply for the internal LEDs. Communication is through a standard I2C-compatible interface. The module can be shut down through software with zero standby current, allowing the power rails to remain powered at all times.
 
-![picxxyyzz](img/pulse.jpg)
-
 ![picxxyyzz](img/pic.jpg)
 
 # Wiring
