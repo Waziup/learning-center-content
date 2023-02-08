@@ -9,13 +9,26 @@ The MAX30102 is an integrated pulse oximetry and heart-rate monitor biosensor mo
 
 The MAX30102 operates on a single 1.8V power supply and a separate 3.3V power supply for the internal LEDs. Communication is through a standard I2C-compatible interface. The module can be shut down through software with zero standby current, allowing the power rails to remain powered at all times.
 
-![picxxyyzz](img/picxxyyzz.jpg)
+![picxxyyzz](img/pulse.jpg)
+
+![picxxyyzz](img/pic.jpg)
 
 # Wiring
-xxyyzz
+
+![picxxyyzz](img/pic1.png)
+
+1. VCC:	5v of Arduino
+2. GND:	GND of Arduino
+3. SCL:	A5 of Arduino
+4. SDA:	A4 of Arduino
 
 # Code example
 xxyyzz
 
+```c
+
+```
+
 # Further documentation
-Documentation for this xxyyzz is available [here](https://).
+
+Further documentation for this sensor is available [here](https://).
