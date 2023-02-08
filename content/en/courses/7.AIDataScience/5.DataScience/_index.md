@@ -6,9 +6,6 @@ description: This course will show how to analyse IoT data.
 This course will show how to analyse IoT data, using Python. The first thing to do is to import, clean and prepare the data for analysis. We will then show various techniques to extract information from the data. 
 
 
-**Data Science**
-=============
-
 Definition
 =========
 
@@ -33,7 +30,7 @@ The science of machine learning entails creating algorithms that can change with
 - tumor classification
 - price prediction
 
-In deep learning, a branch of machine learning, computer programs learn complex ideas by deriving them from simpler ones. The "deep" neural networks used by these algorithms are multilayered (hence the name). Deep learning has a significant positive impact on performance in machine learning applications like natural language processing.
+In deep learning, a branch of machine learning, computer programs learn complex ideas by deriving them from simpler ones. The "deep" neural networks used by these algorithms are multilayered (hence the name). Deep learning has a significant positive impact on performance in machine learning applications like natural language processing or computer vision.
 
 Data science: What is it?
 Data science involves transforming, visualizing, and manipulating data in order to derive insightful conclusions from the findings. These insights are frequently used to guide people, companies, and even governments.
@@ -45,7 +42,7 @@ Human analysts were indispensable when it came to identifying patterns in data u
 Why Machine Learning Is Useful in Data Science?
 Automated model construction for data analysis is where machine learning is useful. Machine learning is used when we give computers the fundamental data science tasks of classification, clustering, and anomaly detection.
 
-We can create self-improving learning algorithms that take data as input and provide statistical inferences. The algorithms take action whenever they notice a change in pattern, without relying on hard-coded programming.
+We can create self-improving learning algorithms that take data as input and provide statistical inferences. The algorithms take action whenever they notice a change in pattern, without relying on hard-coded software programming.
 
 Let's talk about some terminology used to classify various machine-learning algorithms before we look at specific data analysis issues. First, we can consider that the majority of algorithms are either regression-based (where machines predict values) or classification-based (where machines classify data into categories).
 
@@ -66,7 +63,7 @@ The most important machine learning techniques in data science are:
 - **Neural Networks** are a type of deep learning algorithm that is used to classify data points into different classes. 
 - **Anomaly Detection** is an unsupervised learning technique used to detect outliers or anomalies in data. It is used to identify unusual patterns or events in data that could signify a potential problem.
 
-These algorithms allow us to better understand data, identify trends, and make predictions. Additionally, they are used for tasks such as supervised learning, unsupervised learning, and reinforcement learning. The basics are already discussed in length in the [Machine Leaning lecture](../2.MachineLearning/_index.md). 
+These algorithms allow us to better understand data, identify trends, and make predictions. Additionally, they are used for tasks such as supervised learning, unsupervised learning, and reinforcement learning. The basics are already discussed in length in the [Machine Learning lecture](../2.MachineLearning/_index.md). 
 
 We examine how machine learning can scale and automate data analysis in this course. A few significant machine learning algorithms are outlined, and their practical applications are shown. While machine learning can increase the accuracy and scalability of data analysis, it's important to keep in mind that humans are still the ones who must actually evaluate the results.
 
@@ -307,6 +304,11 @@ plt.plot(temp_vals)
 plt.show()
 ```
 Now you can start using the retrieved data. A next step would be to clean, interpolate and prepare the data for analysis.
+
+Linear Regression
+=================
+
+In the [Machine Learning lecture](../2.MachineLearning/_index.md) you can find a comprehensive guide, that explains the fundamentals of Linear Regression. 
 
 
 Python Libraries used in Data Analysis
@@ -567,6 +569,265 @@ The amount of data that is available; more data is frequently more beneficial, p
 Shorter time horizons are frequently easier to predict with greater confidence than longer ones.
 Frequency of forecast updates: Forecasts may need to be revised frequently over time or they may only need to be created once and then remain static (updating forecasts as new information becomes available frequently yields more accurate predictions).
 Forecast temporal frequency — Often, forecasts can be made at lower or higher frequencies, enabling the ue of data up-sampling and down-sampling (which can be useful for modeling).
+
+In the following there is an example, taken from the [GitHub repository of PyCaret](https://github.com/pycaret/pycaret/blob/master/examples/TimeSeries_Forecasting.ipynb).
+
+Since January 1, 2012, every wholesale liquor purchase made by retailers in the state of Iowa for sale to consumers is included in this dataset.
+
+The wholesale distribution of alcoholic beverages intended for retail sale is under the control of the State of Iowa, so this dataset provides a comprehensive picture of retail alcoholic beverage sales in the entire state.
+
+First step is to **download the dataset**:
+
+```python
+import pandas as pd
+
+url = 'https://drive.google.com/file/d/1g3UG_SWLEqn4rMuYCpTHqPlF0vnIDRDB/view?usp=sharing'
+path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+df2 = pd.read_csv(path)
+```
+
+Print some lines and get an **overview about the data** and select useful part of data for the task:
+
+```python
+# print first entries
+df2.head(5)
+# selecting the needed columns
+df2_ds = df2[['date','sale_dollars']] 
+# sort them by date
+df2_ds=df2_ds.sort_index(axis=0)
+# show last entries
+df2_ds.tail(5)
+```
+
+**Sort them by date** and set date as index:
+
+```python
+
+aggregated=df2_ds.groupby('date',as_index=True).sum()
+# show first and last date
+print(min(aggregated.index))
+print(max(aggregated.index))
+aggregated.index=pd.to_datetime(aggregated.index)
+```
+
+Next step is to **create the features**, we will create function for that purpose:
+
+```python
+def create_features(df):
+    """
+    Creates time series features from datetime index
+    """
+    df['date'] = df.index
+    df['dayofweek'] = df['date'].dt.dayofweek
+    df['quarter'] = df['date'].dt.quarter
+    df['month'] = df['date'].dt.month
+    df['year'] = df['date'].dt.year
+    df['dayofyear'] = df['date'].dt.dayofyear
+    df['dayofmonth'] = df['date'].dt.day
+    df['weekofyear'] = df['date'].dt.weekofyear
+    df['flag'] = pd.Series(np.where(df['date'] >= np.datetime64('2020-03-03'), 1, 0), index=df.index) #flag for COVID-19
+    #df['rolling_mean_7'] = df['sale_dollars'].shift(7).rolling(window=7).mean()
+    #df['lag_7'] = df['sale_dollars'].shift(7)
+    #df['lag_15']=df['sale_dollars'].shift(15)
+    #df['lag_last_year']=df['sale_dollars'].shift(52).rolling(window=15).mean()
+  
+    
+    X = df[['dayofweek','quarter','month','year',
+           'dayofyear','dayofmonth','weekofyear','flag','sale_dollars']]
+    X.index=df.index
+    return X
+```
+
+To create a training and test set, we have to **split the data**: (at the time of split_date):
+
+```python
+def split_data(data, split_date):
+    return data[data.index <= split_date].copy(), \
+           data[data.index >  split_date].copy()
+```
+
+To get a **visual overview** about the data, training set and test set to be specific, we print the data with the help of matplotlib:
+
+```python
+aggregated=create_features(aggregated)
+train, test = split_data(aggregated, '2020-06-15') # splitting the data for training before 15th June
+
+plt.figure(figsize=(20,10))
+plt.xlabel('date')
+plt.ylabel('sales')
+plt.plot(train.index,train['sale_dollars'],label='train')
+plt.plot(test.index,test['sale_dollars'],label='test')
+plt.legend()
+plt.show()
+```
+
+There is a lot of variation in the date and the dates are not continuous, so there are gaps. In this case, we have the option of imputeing the missing date or leaving it alone. Because we are using this data for predictive modeling rather than time series forecasting, one of the main reasons we won't create missing dates is because the data isn't dependent on the recent past but rather on the features' relationships with sales over time.
+
+The next step is to **feed the data into PyCaret**, to realize this we havge to call PyCaret setup function:
+
+```python
+reg = setup(data = train, 
+             target = 'sale_dollars',
+             numeric_imputation = 'mean',
+             categorical_features = ['dayofweek','quarter','month','year','dayofyear','dayofmonth','weekofyear',
+                                     'flag']  , 
+            transformation = True, transform_target = True, 
+                  combine_rare_levels = True, rare_level_threshold = 0.1,
+                  remove_multicollinearity = True, multicollinearity_threshold = 0.95, 
+             silent = True)
+```
+
+Now comes the part where PyCaret shines, with the following line we can compare over 20 different models. So we do not have to **train 20 different models** individually. Here we select the top three models.
+
+```python
+# returns best models - takes a little time to run
+top3 = compare_models(n_select = 3)
+```
+
+Now we chose the **most promising model**, for this data it is a light gradient boosting machine:
+
+```python
+#we create a model using light gbm
+lightgbm = create_model('lightgbm')
+```
+
+Next step is to **tune the hyperparameters** of the model, with just one line of code:
+
+```python
+tuned_lightgbm = tune_model(lightgbm) 
+```
+
+To **visualize the performance** of the model, we plot residuals, prediction and feature importance:
+
+```python
+# Residuals
+plot_model(lightgbm)
+# Prediction Error
+plot_model(lightgbm, plot = 'error')
+# Feature importance 
+plot_model(tuned_lightgbm, plot='feature')
+```
+
+To show some metrics that describe the performance of the model we call the **predict_model function**:
+
+```python 
+# Show some metrics
+predict_model(tuned_lightgbm);
+# Finalize the model
+final_lightgbm = finalize_model(tuned_lightgbm)
+# Final Light Gradient Boosting Machine parameters for deployment
+print(final_lightgbm)
+# Show some metrics about the finalized model
+predict_model(final_lightgbm);  
+```
+
+Next step is to **validate our model**, to do this we use the test data and compare it with our prediction:
+
+```python
+unseen_predictions = predict_model(final_lightgbm, data=test)
+unseen_predictions.head()
+unseen_predictions.loc[unseen_predictions['Label'] < 0, 'Label'] = 0 #removing any negative values
+```
+
+To **visualize the data** we introduce a plot_series function:
+
+```python
+def plot_series(time, series,i, format="-", start=0, end=None):
+    #plt.figure(figsize=(20,10))
+    plt.plot(time[start:end], series[start:end], format,label=i)
+    plt.xlabel("Date")
+    plt.ylabel("Sales (Dollar)")
+    plt.legend()
+
+plt.figure(figsize=(20,10))
+plot_series(test.index, test['sale_dollars'],"True")
+#plot_series(train['ds'],train['y'])
+plot_series(test.index, unseen_predictions['Label'],"Baseline")
+```
+
+To **compare the prediction with our baseline** test set we introduce a different metric:
+
+```python
+
+def calc_smape(y_hat, y):
+        return 100/len(y) * np.sum(2 * np.abs(y_hat - y) / (np.abs(y) + np.abs(y_hat)))
+
+calc_smape(test['sale_dollars'].values,unseen_predictions['Label'].values)
+```
+We will consider 78.3 as our baseline SMAPE score and will compare it from now on with other models:
+
+An accuracy metric built on percentage (or relative) errors is known as the symmetric mean absolute percentage error (SMAPE). The absolute error divided by the magnitude of the precise value yields the relative error. SMAPE has a lower bound and an upper bound, unlike the mean absolute percentage error.
+
+Next step is to **blend the models**:
+
+Now, using four algorithms—Huber, Random Forest, XGBoost, and LightGBM—we will build a blend model.
+
+```python
+# create models for blending
+huber = create_model('huber', verbose = False)
+rf = create_model('rf', verbose = False)
+lightgbm = create_model('lightgbm', verbose = False)
+xgb = create_model('xgboost',verbose=False)
+     
+# tune the created models for blending
+tuned_rf = tune_model(rf)
+tuned_huber = tune_model(huber)
+tuned_lightgbm = tune_model(lightgbm)
+tuned_xgb = tune_model(xgb)
+```
+
+Again we **print the residuals** for each model and compare them:
+
+```python
+plot_model(tuned_huber)
+plot_model(huber)
+plot_model(lightgbm)
+plot_model(xgb)
+```
+
+Now we will **blend the different models**, we use tuned_rf, tuned_lightgbm, tuned_xgb, tuned_huber:
+
+```python
+blend_specific = blend_models(estimator_list = [tuned_rf,tuned_lightgbm,tuned_xgb,tuned_huber])
+```
+
+Finalize the model and print metrics:
+
+```python
+predict_model(blend_specific);
+# Finalize model:
+final_model = finalize_model(blend_specific)
+```
+
+Next step is to **validate our model**, to do this we use the test data and compare it with our prediction:
+
+```python
+unseen_predictions_2 = predict_model(final_model, data=test, round=0)
+unseen_predictions_2.loc[unseen_predictions_2['Label'] < 0, 'Label'] = 0
+unseen_predictions_2.head()
+```
+
+We also print the **validation of test and prediction (blending):**
+
+```python
+plt.figure(figsize=(20,5))
+plot_series(test.index, test['sale_dollars'],"True")
+plot_series(test.index, unseen_predictions_2['Label'],'Blend')
+```
+
+Next step is to calculate **SMAPE** with the updated model and compare it to our baseline: 
+
+```python
+calc_smape(test['sale_dollars'].values,unseen_predictions_2['Label'].values)
+```
+
+We improved our model with blending, now the SMAPE went from 78.3 (without blending) to 59.5 (with blending). The blend model is a major improvment over the baseline model.
+
+Last step is **Stacking** for sake of simplicity we will skip the step at the moment.
+
+**Further steps:**
+
+The model isn't finished yet, but we can always go back and combine the features of other models.
 
 ## Sources
 

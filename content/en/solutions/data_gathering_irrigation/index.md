@@ -18,7 +18,7 @@ architecture:
       y: 90
       params: {}
     - id: 3
-      type: Board_Solar_Panel_Regular
+      type: Power_Solar_Panel_Regular
       steps: [1, 2, 3, 4]
       rot: 0
       x: 555
