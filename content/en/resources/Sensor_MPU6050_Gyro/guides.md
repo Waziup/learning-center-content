@@ -169,4 +169,4 @@ Before we take a look at the results, let me quickly explain how to get the erro
 Finally, using the Serial.print function we can print the Roll, Pitch and Yaw values on the serial monitor and see whether the sensor works properly.
 
 # Further documentation
-Further documentation for this sensor is available [here](https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/).
+For 3D visualization and further documentation for this sensor, visit [here](https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/).
