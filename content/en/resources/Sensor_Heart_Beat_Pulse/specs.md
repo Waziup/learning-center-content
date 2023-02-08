@@ -3,6 +3,17 @@
 
 # Specifications
 
+- Maximum Current Consumption	6mA
+- Voltage	3.3-5V 
+- Sample Rate	50Hz – 3200Hz
+- Temperature Range	 -40°C to +85°C
+- Temperature Accuracy	±1˚C
+- ADC Resolution	18 bits
+- IR LED peak wavelength	880nm
+- Red LED peak wavelength	660nm
+
+# Features
+
 - Heart-Rate Monitor and Pulse Oximeter Biosensor in LED Reflective Solution
 - Tiny 5.6mm x 3.3mm x 1.55mm 14-Pin Optical Module
 - Integrated Cover Glass for Optimal, Robust Performance

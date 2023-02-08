@@ -11,9 +11,15 @@ The MAX30102 operates on a single 1.8V power supply and a separate 3.3V power su
 
 ![picxxyyzz](img/pic.jpg)
 
+# Heart Rate Measurement
+
+To measure the heart rate, we do not require the Red LED, only the IR LED is needed. This is because oxygenated hemoglobin absorbs more infrared light.
+
+The heartbeat rate is the ratio of time between two consecutive heartbeats. Similarly, when the human blood is circulated in the human body then this blood is squeezed in capillary tissues. As a result, the volume of capillary tissues is increased but this volume is decreased after each heartbeat. This change in volume of capillary tissues affects the infrared light of the sensor, which transmits light after each heartbeat.
+
 # Wiring
 
-![picxxyyzz](img/pic1.png)
+![picxxyyzz](img/pic1.jpg)
 
 1. VCC:	5v of Arduino
 2. GND:	GND of Arduino
@@ -21,6 +27,7 @@ The MAX30102 operates on a single 1.8V power supply and a separate 3.3V power su
 4. SDA:	A4 of Arduino
 
 # Code example
+
 xxyyzz
 
 ```c
@@ -29,4 +36,4 @@ xxyyzz
 
 # Further documentation
 
-Further documentation for this sensor is available [here](https://).
+Further documentation for this sensor is available [here](https://microcontrollerslab.com/max30102-pulse-oximeter-heart-rate-sensor-arduino/).
