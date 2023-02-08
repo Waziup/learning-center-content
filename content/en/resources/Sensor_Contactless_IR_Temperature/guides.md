@@ -24,6 +24,10 @@ The tiny device is highly accurate and precise due to its powerful ADC. A 17-bit
 To install the MLX90614 library navigate to the Arduino library manager from the Sketch menu as shown below
 Sketch > Include Library > Manage Libraries
 
+![picxxyyzz](img/pic5.png)
+
+when the library manager opens up, search for **MLX90614** and install the version by Adafruit as shown
+
 ![picxxyyzz](img/pic2.png)
 
 We should see the **INSTALLED** inscription after the installation is done
