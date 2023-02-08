@@ -1,6 +1,6 @@
 ---
 date: 2023-01-13T09:00:00+00:00
-title: xxxxxxxxxx sensors
+title: MLX90614 Contactless IR Sensor
 ---
 
 # Introduction
@@ -94,4 +94,5 @@ void loop() {
 ```
 
 # Further documentation
-Documentation for this Sensor is available [here](https://microcontrollerslab.com/mlx90614-contactless-ir-temperature-sensor-pinout-interfacing-arduino/).
+
+Further documentation for this Sensor is available [here](https://microcontrollerslab.com/mlx90614-contactless-ir-temperature-sensor-pinout-interfacing-arduino/).

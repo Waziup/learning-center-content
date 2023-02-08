@@ -5,4 +5,5 @@ desc: xxxxx
 color: "#80C2D9"
 tags:
     - Sensor
+    - Temperature
 ---
