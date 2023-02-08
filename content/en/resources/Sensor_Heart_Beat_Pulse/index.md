@@ -8,4 +8,5 @@ tags:
     - Heart Rate
     - Temperature
     - Blood Oxygen
+    - Proximity
 ---
