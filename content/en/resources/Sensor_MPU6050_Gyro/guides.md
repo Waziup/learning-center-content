@@ -15,7 +15,7 @@ The MPU-6050 devices combine a 3-axis gyroscope and a 3-axis accelerometer on th
 
 # Wiring
 
-![picxxyyzz](img/pic1.jpg)
+![picxxyyzz](img/pic1.png)
 
 1. VCC:	5v of Arduino
 2. GND:	GND of Arduino
