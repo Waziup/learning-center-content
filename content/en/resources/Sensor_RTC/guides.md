@@ -111,4 +111,4 @@ Here's what the output looks like.
 
 # Further documentation
 
-Documentation for this xxyyzz is available [here](https://lastminuteengineers.com/ds3231-rtc-arduino-tutorial/).
+Documentation for this device is available [here](https://lastminuteengineers.com/ds3231-rtc-arduino-tutorial/).
