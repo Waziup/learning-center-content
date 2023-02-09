@@ -35,22 +35,22 @@ We should see the **INSTALLED** inscription after the installation is done
 
 # Code example
 
-Luckily for us the code for this sensor comes with the library installation.
+There are a number of code examples that come with the library installation.
 
-All we have to do is navigate to File > Examples > uRTCLib > uRTCLib_set_print_Date_Time
+All we have to do is navigate to File > Examples > uRTCLib
 
 ![picxxyyzz](img/pic5.png)
 
-**NOTE:** we have to set the date and time of the rtc once in order to have a correct date and time.
+Feel free to check out any of the above code examples later on. For now we will use the simplified code sample below
 
-Setting of the time and date can be done on line 122
+Setting of the time and date can be done on line 18
 
 ```c
-rtc.set(0, 42, 16, 6, 2, 5, 15);
-//RTCLib::set(byte second, byte minute, byte hour, byte dayOfWeek, byte dayOfMonth, byte month, byte year)
+  rtc.set(0, 56, 12, 5, 13, 1, 22);
+  // rtc.set(second, minute, hour, dayOfWeek, dayOfMonth, month, year)
 ```
 
-After setting the time and date we can now read and display the rtc data using the following code sample.
+**NOTE:** we have to set the date and time of the rtc once in order to have a correct date and time. Also make sure to comment out line 18 after running the code the first time.
 
 ```c
 #include "Arduino.h"
@@ -70,7 +70,7 @@ void setup() {
   // Comment out below line once you set the date & time.
   // Following line sets the RTC with an explicit date & time
   // for example to set January 13 2022 at 12:56 you would call:
-   //This is used to set the date and time -----> rtc.set(0, 56, 12, 5, 13, 1, 22);
+  rtc.set(0, 56, 12, 5, 13, 1, 22);
   // rtc.set(second, minute, hour, dayOfWeek, dayOfMonth, month, year)
   // set day of week (1=Sunday, 7=Saturday)
 }
