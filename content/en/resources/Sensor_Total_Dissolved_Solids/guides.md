@@ -105,6 +105,10 @@ int getMedianNum(int bArray[], int iFilterLen)
 }
 ```
 
+After uploading the sample code above, insert the TDS probe into water and gently stir it and wait for the readings to be stable.
+
+![picxxyyzz](img/pic2.png)
+
 # Further Documentation and Calibration
 
 Documentation for this sensor is available [here](https://wiki.dfrobot.com/Gravity__Analog_TDS_Sensor___Meter_For_Arduino_SKU__SEN0244).
