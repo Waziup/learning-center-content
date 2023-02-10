@@ -1,7 +1,8 @@
 ---
 ---
 
-# Specs
+# Specifications
+
 Signal Conversion Board (Transmitter) V2
 1. Supply Voltage: 3.3~5.5V
 2. Output Voltage: 0~3.0V
