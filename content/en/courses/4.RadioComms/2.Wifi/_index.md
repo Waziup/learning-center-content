@@ -49,7 +49,7 @@ We will briefly explain the steps used in the example below to use the WiFi modu
 
 If using ESP8266, use `ESP98266WiFi.h` header file. In case you are using ESP32, use the `WiFi.h`.
 
-``` arduino
+```c++
 #if defined ESP8266 || defined ARDUINO_ESP8266_ESP01
 #include <ESP8266WiFi.h>
 #else
@@ -59,7 +59,7 @@ If using ESP8266, use `ESP98266WiFi.h` header file. In case you are using ESP32,
 
 Define the network SSID and password, here for demonstration purpose, we usually use a smartphone sharing 3G/4G as WiFi access point. Note that it is not possible to use a WiFi that requires pop-up windows or a complex authentication mechanism.
 
-``` arduino
+```c++
 char* ssid = "iPhoneD";
 char* password = "hello123";
 ```
@@ -67,7 +67,7 @@ char* password = "hello123";
 Then we define a dedicated function to setup the WiFi. `setup_wifi()` mainly 
 defines the connection to the WiFi network using the SSID and the password, and then check if the WiFi is successfully connected.
 
-``` arduino
+```c++
 void setup_wifi() {
   WiFi.begin(ssid, password);
 }
@@ -75,7 +75,7 @@ void setup_wifi() {
 
 In `setup()`, in addition to define the input pins we mainly call `setup_wifi()`function to connect to WiFi.
 
-``` arduino
+```c++
 void setup() {
   delay(3000); 
   Serial.begin(38400);
@@ -92,7 +92,7 @@ void setup() {
 
 In `loop()`, we first check if the WiFi is connected. If is not connected, we attempt to connect to the WiFi again.
 
-``` arduino
+``` c++
 if (WiFi.status() != WL_CONNECTED) {
 
     unsigned long start=millis();    
@@ -104,7 +104,7 @@ if (WiFi.status() != WL_CONNECTED) {
 
 Then, if WiFi is connected and connection to the wifi client is established, then we upload to the ThingSpeak channel using a REST API.
 
-``` arduino
+```c++
 if (WiFi.status() == WL_CONNECTED) { 
  
     WiFiClient client;
@@ -133,7 +133,7 @@ Complete example
 
 Here is the complete working and tested example of the an Arduino board with WiFi. Data is uploaded to our LoRa demo ThingSpeak channel 66794: https://thingspeak.com/channels/66794 on field 3. Check on the [channel page](https://thingspeak.com/channels/66794) for the data you are uploading.
 
-``` arduino
+```c++
 // if you have an ESP8266 based board
 #define ESP8266
 

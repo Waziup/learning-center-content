@@ -20,7 +20,7 @@ Simple Web App
 The simplest Web application is composed of just HTML + Javascript.
 Here is an example:
 
-```
+```html
 <html>
   <body>
     <script>
@@ -52,14 +52,14 @@ After some seconds, this is what you should see:
 Once you open the file, the script part will also be executed.
 The first part is:
 
-```
+```js
 fetch("https://api.waziup.io/api/v2/devices/MyDevice/sensors/TC1/values")
 ```
 
 We perform a call on a URL. This URL is the address of a specific sensor called "TC1" mounted on a device called "MyDevice".
 Once this fetch is done, the second part kicks off, using the response from the fetch: 
 
-```
+```js
   .then(res => res.json())
   .then(json => {
          ...
@@ -70,14 +70,14 @@ Once this fetch is done, the second part kicks off, using the response from the 
 The above code receives the response from the fetch, then proceeds to decode it as JSON.
 With the JSON, we call this function:
 
-```
+```js
 document.getElementById("device_value")
 ```
 
 This piece of code will give you the element from the HTML page which have the ID "device_value".
 Where did you see that ID before? Ah! It's here:
 
-```
+```html
     <div id="device_value">
       Loading...
     </div>
@@ -87,7 +87,7 @@ So, the function `getElementById` will return a pointer to this exact section of
 The idea is to change it "on the fly" and insert our sensor value there.
 This is done by the next section of the code:
 
-```
+```js
 .innerHTML = "The temperature is: " + json.value.value + " C";
 ```
 
@@ -136,7 +136,7 @@ Let's look at some examples.
 Please find the [example for a graph](https://github.com/Waziup/WaziApps-examples/blob/master/www/graph/index.html).
 
 
-```
+```html
 <html>
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
@@ -163,13 +163,13 @@ Please find the [example for a graph](https://github.com/Waziup/WaziApps-example
 We use the same technique as before: We have a HTML tag that will be replace by live content using a script.
 Here, we have a `<canvas>` with ID "myChart":
 
-```
+```html
 <canvas id="myChart" width="800" height="600">Loading...</canvas>
 ```
 
 It will be replaced by a graph:
 
-```
+```js
 new Chart(document.getElementById("myChart").getContext("2d"),
           {type: "line", data: { labels: labels, datasets: [{label: "Device values", data: data }]}});
 ```
@@ -189,7 +189,7 @@ Bootstrap is a framework built on the top of HTML and CSS3, with some optional J
 It contains design templates for forms, buttons, tables, navigation, modals, image carousels...
 Here is a basic example for a [three collumns design](https://getbootstrap.com/docs/5.2/layout/grid/):
 
-```
+```html
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
@@ -219,14 +219,14 @@ In this section, we'll overview some Web development frameworks useful for devel
 ReactJS is a Javascript library for writing UIs. 
 The basic example looks like that:
 Javascript:
-```
+```tsx
 ReactDOM.render(
   <h1>Hello, world!</h1>,
   document.getElementById('root')
 );
 ```
 HTML:
-```
+```html
 <div id="root">
     <!-- This element's contents will be replaced with your component. -->
 </div>
@@ -256,7 +256,7 @@ Angular uses a templating system directly in the HTML (while ReactJS uses JSX).
 Here is an example:
 
 Typescript:
-```
+```tsx
 import { Component } from '@angular/core';
 
 @Component ({
@@ -268,7 +268,7 @@ export class HelloWorldInterpolationComponent {
 }
 ```
 HTML:
-```
+```tsx
 <p>{{ message }}</p>
 ```
 
@@ -286,7 +286,8 @@ That means that it focuses on the rendering of information, leaving the business
 It is a "progressive" framework because you can extend its functionality with official and third-party packages, such as Vue Router or Vuex, to turn it into an actual framework.
 Here is an example.
 Javascript:
-```
+
+```vue
 import { createApp } from 'vue'
 
 createApp({
@@ -297,8 +298,10 @@ createApp({
   }
 }).mount('#app')
 ```
+
 HTML:
-```
+
+```vue
 <div id="app">
   <button @click="count++">
     Count is: {{ count }}

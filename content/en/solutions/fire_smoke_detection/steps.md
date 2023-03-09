@@ -35,6 +35,7 @@ Module interface:
 
 Code Sample
 -----------
+
 ```c
 #include "Adafruit_Si7021.h"
 
@@ -87,6 +88,7 @@ Schematic
 
 Code Sample
 -----------
+
 ```c
 #include "Adafruit_Si7021.h"
 
@@ -160,6 +162,7 @@ Schematics
 
 Code Sample
 -----------
+
 ```c
 #include <WaziDev.h>
 #include <xlpp.h>
@@ -295,7 +298,7 @@ void loop(void)
 
 At this point, all we need to do is flash the above code to the Wazidev and place the entire unit in our desired room/space for sensing.
 
-Since we used ```xlpp.addTemperature(2, smokeVal);``` for the smoke or gas values, we have to rename the sensor on the wazigate for clarity as shown below.
+Since we used `xlpp.addTemperature(2, smokeVal);` for the smoke or gas values, we have to rename the sensor on the wazigate for clarity as shown below.
 
 ![Remaning Smoke Sensor](./media/smoke_val.png)
 

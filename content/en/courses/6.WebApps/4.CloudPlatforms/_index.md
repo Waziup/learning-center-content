@@ -50,7 +50,7 @@ You just need to fill the channel name for now.
 
 Step 3: Go in the "API" section and try the various API endpoints.
 For instance, try:
-```
+```sh
 curl -X POST "https://api.thingspeak.com/update?api_key=B5BM1GNV8BXLMQWB" -d "field1=5"
 ```
 

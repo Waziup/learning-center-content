@@ -300,8 +300,8 @@ We need to modify slightly this example to work for our wiring.
 Since the DHT11 data pin is connected to the WaziDev pin 2, we need to change that fact in the code.
 Locate the line:
 
-```
-#Define DHTPIN 6
+```c
+#define DHTPIN 6
 ```
 
 And change the value from "6" to "2".
@@ -311,7 +311,7 @@ And change the value from "6" to "2".
 The next trick is to set the WaziDev pin \#3 to HIGH, in order to power the DHT11.
 Locate the line:
 
-```
+```c
 pinMode(7, OUTPUT); digitalWrite(7, HIGH);
 ```
 
