@@ -18,6 +18,9 @@ A breadboard power supply is a device that allows you to provide power to your b
 
  3. Connect the power supply to the breadboard: The breadboard power supply typically has two output pins that you can connect to the breadboard. Connect the positive (+) output pin to the red (+) power rail on your breadboard and the negative (-) output pin to the blue (-) power rail.
 
+ ![picxxyyzz](img/pic1.jpg)
+ Gently push the power supply board pins into power rails on the breadboard.
+
  ![picxxyyzz](img/pic3.jpg)
 
  4. Connect your components: Once the power supply is connected, you can start connecting your components to the breadboard. Make sure you connect them to the appropriate power rails (positive to red and negative to blue).
