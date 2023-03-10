@@ -25,7 +25,7 @@ Lets also note that the waterproof ultrasonic sensor we are using has a minimum 
 Code Sample
 -----------
 
-````c
+```c
 //sensor pins
 #define trigPin  9
 #define echoPin  5
@@ -83,7 +83,7 @@ void loop() {
 
   delay(10);
 }
-````
+```
 
 
 Step #2: Triggering an Actuator with Sensor Data
@@ -100,6 +100,7 @@ Schematics
 
 Code Sample
 -----------
+
 ```c
 //sensor pins
 #define trigPin  9
@@ -192,6 +193,7 @@ Schematics
 
 Code Sample
 -----------
+
 ```c
 #include <WaziDev.h>
 #include <xlpp.h>
@@ -349,7 +351,7 @@ If we take a look at the data in our serial monitor we should see something simi
 
 ![Serial Monitor](./media/serial.png)
 
-Since we used ```xlpp.addTemperature(1, distance);``` for the distance or water level values, we have to rename the sensor on the wazigate for clarity as shown below.
+Since we used `xlpp.addTemperature(1, distance);` for the distance or water level values, we have to rename the sensor on the wazigate for clarity as shown below.
 
 ![Remaning Sensor](./media/water_rename.jpg)
 

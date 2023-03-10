@@ -28,7 +28,7 @@ Step #2: Trying a Basic Weather Station
 Code Sample
 -----------
 
-```````c
+```c
 /*
  Weather Shield Example
  By: Nathan Seidle
@@ -190,7 +190,7 @@ float get_battery_level()
 
   return (rawVoltage);
 }
-```````
+```
 
 Open the **Serial Monitor**. You should see the following output:
 
@@ -205,7 +205,7 @@ At this point, we can be a little more adventurous and try out all the bells and
 Code Sample
 -----------
 
-`````c
+```c
 /* 
  Weather Shield Example
  By: Nathan Seidle
@@ -675,7 +675,7 @@ void printWeather()
 
 }
 
-`````
+```
 
 Open the **Serial Monitor**. You should see more data than we saw in the previous basic example:
 
@@ -697,7 +697,7 @@ Schematic
 Code Sample
 -----------
 
-`````c
+```c
 #include <Wire.h> //I2C needed for sensors
 #include "SparkFunMPL3115A2.h" //Pressure sensor - Search "SparkFun MPL3115" and install from Library Manager
 #include "SparkFun_Si7021_Breakout_Library.h" //Humidity sensor - Search "SparkFun Si7021" and install from Library Manager
@@ -1227,8 +1227,8 @@ void printWeather()
   serialPrintf("\n");
 
 }
+```
 
-`````
 After uploading the above code sample, we should see our weather data arrive on the gateway and wazicloud.
 
 **NOTE:** Even though we used `xlpp.addTemperature()` for most of the sensors, we can simply rename them on the gateway to their desired names.

@@ -20,7 +20,7 @@ To open an existing project example, select File → Example → Basics → (sel
 
 For explanation, we will take one of the simplest of examples named `AnalogReadSerial`. It reads a value from analog pin A0 and print it.
 
-``` arduino
+```c++
 // the setup routine runs once when you press reset: 
 void setup() 
 {

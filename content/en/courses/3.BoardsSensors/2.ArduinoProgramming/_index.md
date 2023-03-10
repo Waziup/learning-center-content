@@ -47,7 +47,7 @@ To create a new project, select File → New. And then edit the file.
 To open an existing project example, select File → Example → Basics → (select the example from the list).
 For explanation, we will take one of the simplest of examples named `AnalogReadSerial`. It reads a value from analog pin A0 and print it.
 
-``` arduino
+```c++
 // the setup routine runs once when you press reset: 
 void setup() 
 {
@@ -144,17 +144,17 @@ Arduino Specific Functions
 ---------------------------
 
 Here are the most important functions:
-```
+```c++
 pinMode(pin, mode)
 ```
 This function configures a digital pin to read (input) or write (output) a digital value
 
-```
+```c++
 digitalWrite(pin, value)
 ```
 digitalWrite writes the digital value (HIGH or LOW) to a pin set for output
 
-```
+```c++
 digitalRead(pin)
 ```
 Reads a digital value (HIGH or LOW) on a pin set for input
@@ -164,13 +164,13 @@ There is also the analog versions of the above: `analogRead` and `analogWrite`.
 
 To write to the Serial monitor, you can use `print` and `println`.
 
-```
+```c++
 Serial.println(string)
 ```
 
 
 `delay` is also very useful:
-```
+```c++
 delay(int)
 ```
 

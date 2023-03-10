@@ -39,7 +39,7 @@ Module interface:
 Code Sample
 -----------
 
-````c
+```c
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 
@@ -106,7 +106,7 @@ void displayInfo() {
   //wait 1 second between checks
   delay(1000);
 }
-````
+```
 
 **NOTE:** It takes a while to obtain an accurate GPS lock on the location of the board. This Could take anywhere from seconds to several minutes for values to begin showing up in the serial monitor in this form
 
@@ -130,7 +130,8 @@ Lets take a look at how to implement the Haversine Formular in our previous GPS 
 
 Code Sample
 -----------
-`````c
+
+```c
 //Adding GPS and Software Serial Library
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
@@ -226,7 +227,8 @@ float calcDistance(float lat1, float lon1, float lat2, float lon2) {
 float dtor(float fdegrees) {
   return (fdegrees * PI / 180);
 }
-`````
+```
+
 The data from the serial monitor this time would look like this.
 **Sats:** vvvvv **Location:** xxxxx yyyyy ddddd **Altitude:** zzzzz
 
@@ -252,7 +254,7 @@ Adding the above functions and making final changes to the code we have:
 Code Sample
 -----------
 
-``````c
+```c
 //Adding Wazidev Libraries
 #include <WaziDev.h>
 #include <xlpp.h>
@@ -440,7 +442,8 @@ float calcDistance(float lat1, float lon1, float lat2, float lon2) {
 float dtor(float fdegrees) {
   return (fdegrees * PI / 180);
 }
-``````
+```
+
 We will see the following from the serial monitor:
 
 ![Serial Output](./media/serial.png)

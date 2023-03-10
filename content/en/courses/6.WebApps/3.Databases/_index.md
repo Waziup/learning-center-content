@@ -37,7 +37,7 @@ Here is how to store, and retrieve IoT data with Mongo.
 First, you need to install MongoDB on your system.
 Then, start of the Mongo client with the command `mongo`:
 
-```
+```js
 $ mongo
 > use myapp
 > db.createCollection("iot_data")
@@ -51,7 +51,7 @@ We then create a collection of document, called "iot_data".
 This collection will contain the datapoints form our IoT object!
 
 We then insert a first datapoint:
-```
+```json
 { "sensor_id" : "TC1", 
   "device_id" : "MyDevice", 
   "value" : "25.6", 
@@ -62,7 +62,7 @@ This is the recommanded format for an IoT datapoint. It contains an ID for the d
 The last line retrieves that datapoint from the collection.
 Here is an example in NodeJS:
 
-```
+```js
 const { MongoClient } = require("mongodb");
 const client = new MongoClient('mongodb://127.0.0.1');
 async function run() {
@@ -88,7 +88,7 @@ Optimizations
 If your app grows big, you will have millions of datapoints in the database.
 That's when you might notice some slow-down when retrieving data.
 It will be useful to create an [index](https://www.mongodb.com/docs/manual/indexes/), based on the most often made query in your database.
-```
+```js
 > db.iot_data.createIndex( { timestamp : 1 } )
 {
     "createdCollectionAutomatically" : false,
@@ -107,7 +107,7 @@ SQL databases
 SQL databases stores data in tables. This allows for more structure and more control over your data.
 Two popular examples are MySQL and PostgreSQL.
 Here is an example with [MySQL](https://www.mysql.com):
-```
+```js
 $ mysql
 > CREATE TABLE iot_data (sensor_id VARCHAR(20), device_id VARCHAR(20), value VARCHAR(20), timestamp DATE);
 > INSERT INTO iot_data VALUES ("TC1","MyDevice","25.6","2016-06-08T18:20:27.873Z");
@@ -127,7 +127,7 @@ The last line shows how to extract the values and timestamps from all datapoints
 
 Finally, here is the example with NodeJS:
 
-```
+```js
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
