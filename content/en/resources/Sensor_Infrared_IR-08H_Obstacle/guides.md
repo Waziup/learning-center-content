@@ -1,5 +1,5 @@
 ---
-date: 2023-01-13T09:00:00+00:00
+date: 2023-03-14T09:00:00+00:00
 title: IR-08H Infrared Obstacle Avoidance Sensor
 ---
 
