@@ -1,5 +1,7 @@
 ---
 title: Computer Vision
+difficulty: advanced
+duration: 6h
 ---
 
 

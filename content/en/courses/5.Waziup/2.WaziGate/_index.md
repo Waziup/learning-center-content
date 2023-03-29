@@ -1,6 +1,8 @@
 ---
 title: WaziGate
 description: The second course will take us through the WaziGate parts and features.
+difficulty: beginner
+duration: 4h
 ---
 
 WaziGate Overview

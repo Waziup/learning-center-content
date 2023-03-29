@@ -1,5 +1,7 @@
 ---
 title: Fundamentals of AI
+difficulty: intermediate
+duration: 5h
 ---
 
 Introduction

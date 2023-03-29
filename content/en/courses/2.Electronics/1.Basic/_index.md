@@ -3,6 +3,8 @@ module: 1
 lecture: 1
 title: Basics of electronics for IoT
 description: In this course, we will learn the basics of electronic needed to start building IoT prototypes.
+difficulty: intermediate
+duration: 3h
 ---
 
 Introduction

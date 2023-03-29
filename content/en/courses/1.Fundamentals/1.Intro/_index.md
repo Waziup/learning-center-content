@@ -3,6 +3,8 @@ module: 1
 lecture: 1
 title: Introduction to IoT
 description: The first course will touch on the fundamentals of IoT.
+difficulty: beginner
+duration: 2h
 ---
 
 Introduction to IoT

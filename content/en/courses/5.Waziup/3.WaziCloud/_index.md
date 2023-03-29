@@ -1,6 +1,8 @@
 ---
 title: The WaziCloud
 description: This course will cover the basics of using the WaziCloud.
+difficulty: beginner
+duration: 4h
 ---
 
 Introduction

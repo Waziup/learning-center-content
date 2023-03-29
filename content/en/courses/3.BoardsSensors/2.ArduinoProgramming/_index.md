@@ -3,6 +3,8 @@ module: 1
 lecture: 1
 title: Arduino Programming
 description: This course will show you how to program your Arduino.
+difficulty: beginner
+duration: 4h
 ---
 
 This course will show you how to program your Arduino. First of all, we will install the Arduino IDE, and configure it.

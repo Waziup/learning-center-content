@@ -1,6 +1,8 @@
 ---
 title: IoT Web apps
 description: This course will show you how to develop a Web interface for your IoT application.
+difficulty: intermediate
+duration: 4h
 ---
 
 Introduction

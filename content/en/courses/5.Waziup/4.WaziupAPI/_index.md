@@ -1,6 +1,8 @@
 ---
 title: Waziup API
 description: This course will show you how to use Waziup API.
+difficulty: intermediate
+duration: 3h
 ---
 
 The Waziup API

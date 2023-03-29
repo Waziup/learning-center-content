@@ -2,7 +2,9 @@
 module: 1
 lecture: 1
 title: Microcontrollers 
-description: The therory behind microcontrollers 
+description: The therory behind microcontrollers
+difficulty: beginner
+duration: 1h
 ---
 
 Bit definition

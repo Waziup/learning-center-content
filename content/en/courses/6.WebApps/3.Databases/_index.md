@@ -1,6 +1,8 @@
 ---
 title: Databases and IoT data management
-description: 
+description:
+difficulty: intermediate
+duration: 3h
 ---
 
 This course will show you how to manage your IoT data in databases.

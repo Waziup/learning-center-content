@@ -3,6 +3,8 @@ module: 1
 lecture: 1
 title: Overview of boards and peripherals
 description: This course will go through the various IoT development boards available on the market.
+difficulty: intermediate
+duration: 4h
 ---
 
 This course will go through the various IoT development boards available on the market.

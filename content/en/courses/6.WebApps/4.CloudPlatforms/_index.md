@@ -1,6 +1,8 @@
 ---
 title: Cloud Platforms
 description: What is an IoT Cloud platform?
+difficulty: intermediate
+duration: 3h
 ---
 
 In this course, we will explain first what is an IoT Cloud platform. We will then survey various existing platforms: ThingSpeak, Ubidots and Blynk. We will upload our own IoT data to these platforms using a Wifi capable IoT board.

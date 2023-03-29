@@ -1,6 +1,8 @@
 ---
 title: WaziDev board series 
 description: Waziup compatible development boards
+difficulty: beginner
+duration: 1h
 ---
 
 Development boards

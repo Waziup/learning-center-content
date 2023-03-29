@@ -1,6 +1,8 @@
 ---
 title: Business Model Canvas 
-description: 
+description:
+difficulty: beginner
+duration: 3h
 ---
 
 Introduction

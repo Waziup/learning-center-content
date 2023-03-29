@@ -1,6 +1,8 @@
 ---
 title: Wifi IoT devices
 description: This course will present the WiFi technology usage in IoT.
+difficulty: intermediate
+duration: 3h30m
 ---
 
 Introduction

@@ -1,5 +1,7 @@
 ---
 title: Machine Learning
+difficulty: advanced
+duration: 7h
 ---
 
 Introduction
@@ -17,6 +19,7 @@ This allows it to learn how to perform a task.
 Corentin: I removed this section from the introduction because it seemed too in-depth. However it could be used in this course.
 
 TODO-->
+
 # Overview of different Machine learning algorithms grouped by similarity
 
 In the following there is an overview about the different algorithms that are being used in machine learning, they are grouped by similarity.
