@@ -22,9 +22,9 @@ architecture:
     - from: 1
       to: 2
       color: "#0066FF"
-      x: 480
-      y: 500
-      l: [435]
+      x: 548
+      y: 563
+      l: [273]
 ---
 
 Overview

@@ -23,9 +23,9 @@ architecture:
     - from: 1
       to: 2
       color: "#99C2FF"
-      x: 360
-      y: 220
-      l: [400]
+      x: 448
+      y: 221
+      l: [183]
 ---
 
 Overview

@@ -29,16 +29,16 @@ architecture:
       to: 2
       color: "#99C2FF"
       # x and y are the starting point of the line
-      x: 255
-      y: 120
+      x: 300
+      y: 132
       # l is the path of the line: horiz., vertic., ...
-      l: [402]
+      l: [270]
     - from: 1
       to: 2
       color: "#99C2FF"
-      x: 400
-      y: 295
-      l: [340]
+      x: 495
+      y: 307
+      l: [75]
 ---
 
 Overview

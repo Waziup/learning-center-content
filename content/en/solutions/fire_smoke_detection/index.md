@@ -32,16 +32,16 @@ architecture:
       to: 3
       color: "#0066FF"
       # x and y are the starting point of the line
-      x: 320
-      y: 312
+      x: 412
+      y: 120
       # l is the path of the line: horiz., vertic., ...
-      l: [239]
+      l: [113]
     - from: 2
       to: 3
       color: "#0066FF"
-      x: 334
-      y: 140
-      l: [326]
+      x: 383
+      y: 293
+      l: [142]
 ---
 
 # Overview

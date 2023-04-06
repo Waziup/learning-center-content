@@ -30,15 +30,15 @@ architecture:
     - from: 3
       to: 1
       color: "#99C2FF"
-      x: 227
-      y: 147
-      l: [420]
+      x: 204
+      y: 105
+      l: [291]
     - from: 3
       to: 1
       color: "#99C2FF"
-      x: 420
-      y: 360
-      l: [240]
+      x: 526
+      y: 405
+      l: [74]
 ---
 
 Overview

@@ -47,29 +47,35 @@ architecture:
       params: {}
   lines:
     - from: 1
+      to: 3
+      color: "#0066FF"
+      x: 491
+      y: 513
+      l: [67]
+    - from: 3
       to: 4
       color: "#0066FF"
-      x: 435
-      y: 500
-      l: [525]
+      x: 841
+      y: 513
+      l: [69]
     - from: 2
       to: 3
       color: "#0066FF"
       x: 690
-      y: 355
-      l: [0, 140]
+      y: 387
+      l: [0, 43]
     - from: 4
       to: 5
       color: "#0066FF"
-      x: 1270
-      y: 360
-      l: [190]
+      x: 1311
+      y: 355
+      l: [116]
     - from: 4
       to: 6
       color: "#0066FF"
-      x: 1270
-      y: 200
-      l: [390]
+      x: 1311
+      y: 202
+      l: [291]
 ---
 
 Overview
