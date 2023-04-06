@@ -21,10 +21,10 @@ AI is separated in many subfields, in this lesson we will elaborate on some of t
 
 How the fields overlap and are interlinked is conveyed in the following visualization.
 
-![How the AI disciplines are connected to each other.](img/ai_ml_dl.png)
-<p style="text-align: center;">
-How the AI disciplines are connected and interlinked to each other [Con21]. 
-</p>
+<figure
+  src="img/ai_ml_dl.png"
+  caption="How the AI disciplines are connected and interlinked to each other. [Con21]">
+</figure>
 
 Artificial Intelligence is the most general scientific field.
 One subfield of Artificial Intelligence is Machine Learning.
@@ -103,10 +103,10 @@ Semi-Supervised learning is usually used to solve the following problems:
 So, it works on interacting with the environment. The type of input data is not predefined. An agent rewards the model for success and does not reward it for a failure.
 There following illustration 
 
-![Diagram showing the components in a typical Reinforcement Learning (RL) system. An agent takes actions in an environment which is interpreted into a reward and a representation of the state which is fed back into the agent.](img/Reinforcement_learning_diagram.svg)
-<p style="text-align: center;">
-Diagram showing the components in a typical Reinforcement Learning (RL) system. An agent takes actions in an environment which is interpreted into a reward and a representation of the state which is fed back into the agent. [Meg17]. 
-</p> 
+<figure
+  src="img/Reinforcement_learning_diagram.svg"
+  caption="Diagram showing the components in a typical Reinforcement Learning (RL) system. An agent takes actions in an environment which is interpreted into a reward and a representation of the state which is fed back into the agent. [Meg17]">
+</figure>
 
 Algorithms where reinforced learning is applied are Q-Learning and SARSA.
 Reinforced Learning learning is usually used to solve the following problems:
@@ -141,10 +141,10 @@ Computer Vision
 This section introduces the basic techniques of image-based recognition.
 Under the computer-aided recognition of images, or Computer Vision, one understands various techniques to locate elements in images or identify and catalog videos. 
 
-![Example picture of object detection.](img/kite.jpg)
-<p style="text-align: center;">
-Example picture of object detection [Rath17]. 
-</p>
+<figure
+  src="img/kite.jpg"
+  caption="Example picture of object detection [Rath17].">
+</figure>
 
 The goal is to use an automated process to gain a visual understanding while distinguishing between relevant and less distinguish relevant information. This is a complex process that otherwise reserved only for the human visual system, part of the nervous system.
 Computer Vision is a subfield of Deep Learning, which is a subfield of Machine Learning, Machine Learning on the other hand belongs to Artificial Intelligence. 
@@ -177,10 +177,11 @@ Natural Language Processing
 
 Natural Language Processing (NLP) examines how natural language in the form of text or spoken language data can be processed algorithmically with the help of computers. It is a subfield of Artificial Intelligence and shares some techniques with Machine Learning and also the subfield Deep Learning. This relationship is illustrated in the following schematic:
 
-![How is NLP interlinked with AI, ML and DL](img/nlp_machinelearning.png)
-<p style="text-align: center;">
-How is Natural Language Processing interlinked with Artificial Intelligence, Machine Learning and Deep Learning [Bala21].
-</p>
+<figure
+  src="img/nlp_machinelearning.png"
+  alt="How is NLP interlinked with AI, ML and DL"
+  caption="How is Natural Language Processing interlinked with Artificial Intelligence, Machine Learning and Deep Learning [Bala21].">
+</figure>
 
 It is the interface between linguistics and computer science. The goal of NLP is the capability of understanding the contents of documents and accurately extract information and insights contained in the documents as well as categorize and organize the documents themselves. 
 
