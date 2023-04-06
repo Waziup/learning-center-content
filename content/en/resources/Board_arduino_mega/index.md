@@ -1,8 +1,8 @@
 ---
 title: Arduino Mega
-type: hardware
+type: microcontroller
 desc: An Arduino board
 color: "#acdcd7"
 tags:
-    - Board
+    - Arduino
 ---

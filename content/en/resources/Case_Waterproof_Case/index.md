@@ -1,6 +1,6 @@
 ---
 title: Waterproof case
-type: hardware
+type: case
 desc: A waterproof case
 color: "#67502e"
 tags:

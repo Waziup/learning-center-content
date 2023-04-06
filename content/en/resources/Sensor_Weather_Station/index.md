@@ -1,8 +1,9 @@
 ---
 title: Weather Station
-type: hardware
+type: sensor
 desc: Weather Station Kit
 color: "#e5b9a6"
 tags:
-    - Sensor
+    - City
+    - Agriculture
 ---

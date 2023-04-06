@@ -1,8 +1,7 @@
 ---
 title: OLED display 
-type: hardware
+type: actuator
 desc: An OLED small display screen
 color: "#a5d1ff"
-tags:
-    - Actuator
+tags: []
 ---

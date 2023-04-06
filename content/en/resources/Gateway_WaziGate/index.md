@@ -1,8 +1,10 @@
 ---
 title: WaziGate
-type: hardware
+type: microcontroller
 desc: WaziGate allows you to connect many devices through LoRaWAN.
 color: "#f8cb58"
 tags:
-    - Gateway
+    - Waziup
+    - LoRa
+    - LoRaWAN
 ---

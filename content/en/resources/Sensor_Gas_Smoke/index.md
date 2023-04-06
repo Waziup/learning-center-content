@@ -1,10 +1,10 @@
 ---
 title: MQ5 Gas Sensor
-type: hardware
+type: sensor
 desc:  Ideal for detecting gas leaks
 color: "#bad8ff"
 tags:
-    - Sensor
     - City
     - Agriculture
+    - Health
 ---

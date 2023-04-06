@@ -1,7 +1,5 @@
 ---
 title: DC-DC Converter
-type: hardware
+type: power-management
 desc: DC to DC converter
-tags:
-    - Power
 ---

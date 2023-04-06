@@ -1,7 +1,8 @@
 ---
 title: Watermark Sensor
-type: hardware
+type: sensor
 desc: Watermark Sensor
 tags:
-    - Sensor
+    - Agriculture
+    - City
 ---

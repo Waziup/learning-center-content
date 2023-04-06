@@ -1,10 +1,8 @@
 ---
 title: Total Dissolved Solids Sensor
-type: hardware
+type: sensor
 desc: Total Dissolved Solids Sensor 
 color: "#a5d1ff"
 tags:
-    - Sensor
-    - Water
-    - Agric
+    - Agriculture
 ---

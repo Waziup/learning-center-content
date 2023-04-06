@@ -1,8 +1,6 @@
 ---
 title: Photoresistors
-type: hardware
+type: sensor
 desc: Light sensitive devices
 color: "#e6e6e6"
-tags:
-    - Sensor
 ---

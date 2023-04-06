@@ -1,6 +1,6 @@
 ---
 title: Battery
-type: hardware
+type: power-management
 desc: Power, power, power!
 color: "#212121"
 tags:

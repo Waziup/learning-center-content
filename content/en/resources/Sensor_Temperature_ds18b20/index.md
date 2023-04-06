@@ -1,10 +1,9 @@
 ---
 title: Digital temperature sensor
-type: hardware
+type: sensor
 desc: Measure ambient temperature
 color: "#eeeeee"
 tags:
-    - Sensor
     - City
     - Agriculture
 ---

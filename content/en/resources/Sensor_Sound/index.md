@@ -1,8 +1,8 @@
 ---
 title: Sound sensor
-type: hardware
+type: sensor
 desc: A microphone based sensor
 color: "#a7e3ff"
 tags:
-    - Sensor
+    - City
 ---

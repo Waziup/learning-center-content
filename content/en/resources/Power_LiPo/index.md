@@ -1,7 +1,5 @@
 ---
 title: Li-Po Battery
-type: hardware
+type: power-management
 desc: Li-Po Battery
-tags:
-    - Power
 ---

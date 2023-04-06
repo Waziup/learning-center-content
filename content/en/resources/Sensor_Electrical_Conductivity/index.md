@@ -1,8 +1,6 @@
 ---
 title: Electrical Conductivity
-type: hardware
+type: sensor
 desc: Measures the amount of electrolytes in a liquid 
 color: "#BEFFE6"
-tags:
-    - Sensor
 ---

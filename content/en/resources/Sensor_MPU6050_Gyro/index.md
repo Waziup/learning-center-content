@@ -1,10 +1,6 @@
 ---
 title: Gyro
-type: hardware
+type: sensor
 desc: Gyro sensor with 6 degrees of freedom 
 color: "#a5d1ff"
-tags:
-    - Sensor
-    - Motion
-    - Tracking
 ---

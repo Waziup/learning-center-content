@@ -1,8 +1,6 @@
 ---
 title: Battery holder
-type: hardware
+type: power-management
 desc: Holds one battery.
 color: "#89e1fd"
-tags:
-    - Power
 ---
