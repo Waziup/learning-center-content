@@ -16,7 +16,7 @@ Once the preliminaries completed, head to the following sections:
 - [Gateways](#gateways)
 - [MQTT access](#mqtt)
 
-This documentation is available in [PDF format](/docs/WaziCloud_API_Reference-V2.1.pdf).
+<!-- This documentation is available in [PDF format](/docs/WaziCloud_API_Reference-V2.1.pdf). -->
 
 ## Preliminaries
 
@@ -579,7 +579,7 @@ The gateway then needs to push regularly it's "heartbeat" on the /gateways/{gw_i
 
 As a simple approach, a gateway can just push datapoints on existing devices on the platform.
 The devices and sensors should be created beforehand on the [dashboard](https://dashboard.waziup.io).
-To create the device, follow [this tutorial](/documentation/wazicloud).
+To create the device, follow [this tutorial](/resources/waziup/wazicloud).
 We will not use any authentication, so the sensor need to be public.
 
 We are now ready to push a new datapoint!

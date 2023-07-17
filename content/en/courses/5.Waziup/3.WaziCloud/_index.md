@@ -62,7 +62,7 @@ At this point, you have two choices:
 
 The Waziup gateway will automatically create devices on the WaziCloud dashboard for you.
 **So, if you have a WaziGate, you should already be able to find your devices in this page!**
-For example, your [WaziDev](https://www.waziup.io/documentation/wazidev/) should be listed here.
+For example, your [WaziDev](/resources/waziup/wazidev) should be listed here.
 
 ![Devices page](./img/devices.png)
 

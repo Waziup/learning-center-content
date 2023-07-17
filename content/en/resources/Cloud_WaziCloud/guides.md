@@ -7,14 +7,14 @@ title: WaziGate
 
 You can build a full application with Waziup, without programming!
 In this tutorial, we'll learn how to build a soil monitoring application able to display the soil moisture and to send notifications on SMS, twitter and voice messages.
-This documentation is available in [PDF format](/docs/WaziCloud_User_Manual-V2.1.pdf).
+<!-- This documentation is available in [PDF format](/docs/WaziCloud_User_Manual-V2.1.pdf). -->
 
 
 ## Login
 
 The first thing you need to do is to create a login and a password.
 You should already have a gateway and a sensor node ready and configured.
-If not, please check [this section](/documentation/wazigate/).
+If not, please check [this section](/resources/waziup/wazigate).
 
 **Step \#1:** [Open the WaziCloud dashboard](https://dashboard.waziup.io/).
 
@@ -31,7 +31,7 @@ You will receive an email to confirm your registration.
 Once registered, you can now log in.
 
 <alert type="warning">
-**IMPORTANT: Once created your login and password, [you need to insert them in your gateway](/documentation/wazigate)!**
+**IMPORTANT: Once created your login and password, [you need to insert them in your gateway](/resources/waziup/wazigate)!**
 </alert>
 
 ## Devices
@@ -47,7 +47,7 @@ At this point, you have two choices:
 
 The Waziup gateway will automatically create devices on the WaziCloud dashboard for you.
 So, if you have a WaziGate, you should already be able to find your devices in this page!
-For example, your [WaziDev](/documentation/wazidev/) should be listed here.
+For example, your [WaziDev](/resources/waziup/wazidev) should be listed here.
 
 ![Devices page](img/dashboard/devices.png)
 
@@ -167,7 +167,7 @@ It also shows all the devices that are connected to that gateway.
 You can click a device to navigate to that device.
 
 You can open the own Gateway UI by clicking on the "Remote access" button.
-This will open the [login screen for your gateway UI](/documentation/wazigate).
+This will open the [login screen for your gateway UI](http://wazigate.local).
 
 Finally, you can edit the parameters of your gateway and delete it, using the corresponding buttons. 
 
@@ -215,7 +215,7 @@ You should see the number of times this notification was sent, and the time for 
 ## Projects
 
 A project allows you to get all your assets in the same place: gateways, devices, notifications, maps, graphics...
-The first thing to do is to connect your [gateways](/documentation/wazigate/) and [devices](/documentation/wazidev/).
+The first thing to do is to connect your [gateways](/resources/waziup/wazigate) and [devices](/resources/waziup/wazidev).
 Once they are connected, you can click on the button "Create a project".
 
 ![Project form](img/dashboard/project_create.png)

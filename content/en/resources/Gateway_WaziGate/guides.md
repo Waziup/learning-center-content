@@ -19,7 +19,7 @@ Overview
 ========
 
 This document will guide you through the steps to assemble your Wazigate and configure it in order to connect to the Waziup Cloud.
-This documentation is available in [PDF format](/docs/WaziGate_User_Manual-V1.0.pdf).
+<!-- This documentation is available in [PDF format](/docs/WaziGate_User_Manual-V1.0.pdf). -->
 
 Prepare the Gateway Hardware
 ============================
@@ -42,7 +42,7 @@ You need the following *hardware* to start:
 
 You also need the following *software*:
  
-- [Wazigate ISO image](https://downloads.waziup.io/WaziGate_latest.zip)
+- [Wazigate ISO image](https://downloads.waziup.io/)
 - [Balena Etcher](https://www.balena.io/etcher/)
 
 Assemble the WaziGate
@@ -77,7 +77,7 @@ Flash the WaziGate
 ------------------
 
 {{%action%}}
-**Step \#1:** Download the latest version of the [Wazigate ISO image](https://downloads.waziup.io/WaziGate_latest.zip).
+**Step \#1:** Download the latest version of the [Wazigate ISO image](https://downloads.waziup.io/).
 {{%/action%}}
 
 ![Save Wazigate ISO image](img/image34.png)
@@ -438,7 +438,7 @@ Sensor Device preparation
 
 Once your gateway is all setup, let's receive and send LoRaWAN messages!
 You need a LoRa capable device, such as WaziDev.
-With WaziDev, you need to install the WaziDev sketchbook, as instructed [here](/documentation/wazidev/user-manual/).
+With WaziDev, you need to install the WaziDev sketchbook, as instructed [here](/resources/waziup/wazidev#installation-and-configuration-of-your-ide).
 
 In Arduino IDE, select the `File ▸ Sketchbook ▸ LoRaWAN ▸ Actuation` to open the LoRaWAN Actuation example sketch. You can find this and other Arduino example sketches on our public open-source [Wazidev GitHub repository](https://github.com/Waziup/WaziDev/tree/master/examples) too.
 
@@ -509,7 +509,7 @@ In the "Devices" menu entry, search for you device using the filters.
 Here it is! Double congratulations! 
 Next steps:
 - [develop a Web app reading your sensor](/documentation/wazicloud/customapp/)
-- [develop a gateway app](/documentation/wazigate/v2/waziapps/)
+- [develop a gateway app](/resources/waziup/wazigate#wazigate-apps)
 - try some actuation (keep reading).
 
 Actuation
@@ -571,6 +571,6 @@ WaziGate Apps
 
 A full video course of some example applications is available [here](/courses/waziapps/).
 
-A tutorial for a computer-vision application is available [here](/courses/waziapps_ai/). 
+A tutorial for a computer-vision application is available [here](/courses/waziup/data-analysis-and-ai/computer-vision). 
 
 A tutorial for a Jupyterlab application is available [here](/courses/waziapps_jupyter/).
