@@ -15,7 +15,7 @@ It will also show step by step:
 -   how to compile and upload the code,
 -   how to see and use your sensors in the cloud.
 
-This documentation is available in [PDF format](/docs/WaziDev_User_Manual-V1.0.pdf).
+<!-- This documentation is available in [PDF format](/docs/WaziDev_User_Manual-V1.0.pdf). -->
 
 What do you need to start?
 ==========================
@@ -188,7 +188,7 @@ For example, here is how to connect a DHT11 temperature and humidity sensor:
 ![dht11 arduino](./media/Adht11.png)
 
 
-Many more sensor examples can be found in the ["Connect your sensors"](/documentation/wazidev/sensors) and ["Connect your actuators"](/documentation/wazidev/sensors) page.
+<!-- Many more sensor examples can be found in the ["Connect your sensors"](/documentation/wazidev/sensors) and ["Connect your actuators"](/documentation/wazidev/sensors) page. -->
 
 High current/voltage 
 --------------------

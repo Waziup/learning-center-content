@@ -16,7 +16,7 @@ Once the preliminaries completed, head to the following sections:
 - [Gateways](#gateways)
 - [MQTT access](#mqtt)
 
-This documentation is available in [PDF format](/docs/WaziCloud_API_Reference-V2.1.pdf).
+<!-- This documentation is available in [PDF format](/docs/WaziCloud_API_Reference-V2.1.pdf). -->
 
 ## Preliminaries
 
