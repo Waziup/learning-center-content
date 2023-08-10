@@ -32,8 +32,6 @@ If your application is written in Javascript, you can use the [Waziup library](h
 It's easier!
 All documentation is provided in the README files in the repository.
 
-If you have an application using previous versions of the API, use the [migration guide](#v2-migration-guide).
-
 ## Access control
 
 This tutorial will guide you through the access control features of the Waziup API version 2, step by step.
@@ -579,7 +577,7 @@ The gateway then needs to push regularly it's "heartbeat" on the /gateways/{gw_i
 
 As a simple approach, a gateway can just push datapoints on existing devices on the platform.
 The devices and sensors should be created beforehand on the [dashboard](https://dashboard.waziup.io).
-To create the device, follow [this tutorial](/documentation/wazicloud).
+To create the device, follow [this tutorial](/resources/waziup/wazicloud).
 We will not use any authentication, so the sensor need to be public.
 
 We are now ready to push a new datapoint!
