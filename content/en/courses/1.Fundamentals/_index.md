@@ -4,7 +4,6 @@ description: The main fundamentals of IoT
 weight: -1 # weight 0 is not possible, so we do -1 here
 difficulty: beginner
 duration: 2h
-# https://pixabay.com/illustrations/devices-background-copy-space-6001296/
 thumbnail: introduction_to_iot.webp
 ---
 

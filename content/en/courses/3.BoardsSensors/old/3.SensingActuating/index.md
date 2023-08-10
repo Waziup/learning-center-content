@@ -1,4 +1,0 @@
----
-title: Sensing and actuating
----
-
