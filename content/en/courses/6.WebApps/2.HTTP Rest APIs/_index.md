@@ -1,6 +1,8 @@
 ---
 title: HTTP REST APIs
 description: This course will show you how to use HTTP APIs.
+difficulty: intermediate
+duration: 2h
 ---
 
 This course will show you how to use HTTP APIs. We will go through the architecture of each protocol, and how to send and retrieve data. Additionally, the course will show you how to design APIs, with all the do’s and don’ts.
@@ -30,7 +32,7 @@ That means that everything will be represented as a URL, in particular every "re
 ![url](img/url.png)
 
 HTTP methods
-------------
+============
 
 There are 4 main HTTP methods used in REST APIs: POST, PUT, GET and DELETE.
 They match more or less with the CRUD operations: Create, Read, Update and Delete.
@@ -42,7 +44,7 @@ GET will retrieve a resource. Finally, DELETE suppresses a resource.
 There are additional methods that you may incounter: PATCH, HEAD, OPTIONS...
 
 Query parameters
-----------------
+============
 
 Query parameters can be added on a request (usually a GET), to make it more precise.
 They can be used for querying, filtering or sorting.
@@ -50,7 +52,7 @@ For example, if you have an endpoint to retrieve cars, you can refine your query
 Similarly, to get the list of users whose name matches tom: `GET /users?name=tom`
 
 Headers
--------
+============
 
 Header are an often misunderstood part of HTTP protocol.
 Headers allows you to add additional informations on the request or response.
@@ -68,7 +70,7 @@ The "Bearer" authorization requires a token, which is a more secured way to comm
 
 
 HTTP Response Status Code
--------------------------
+============
 
 Any HTTP request will give you a [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). They are:
 - 1xx Informational Codes
@@ -83,7 +85,7 @@ With 3xx codes, the server is telling you "I understood your request, but this r
 4xx codes means "you made a mistake". 5xx codes means "I made a mistake".
 
 A full request
---------------
+============
 
 With all this in mind, let's build a full request.
 We want to read all the cities visited by a user. 

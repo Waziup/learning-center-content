@@ -65,7 +65,7 @@ Blynk
 
 Blynk is another IoT Cloud platform to connect your devices to.
 
-After you created an account (www.blynk.com), you can start the Wizard:
+After you created an account (https://www.blynk.io), you can start the Wizard:
 
 ![blinkWiz](img/blinkWiz.png)
 

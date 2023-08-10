@@ -1,7 +1,11 @@
 ---
 title: MQTT APIs
 description: This course will show you how to use MQTT APIs.
+difficulty: intermediate
+duration: 2h
 ---
+
+# Introduction
 
 MQTT (Message Queue Telemetry Transport) is a publish-subscribe messaging protocol designed for lightweight M2M communications.
 It is very useful in IoT applications, as we will see.
@@ -9,7 +13,7 @@ It is very useful in IoT applications, as we will see.
 <youtube>ozqQEhM5IPo</youtube>
 
 HTTP vs MQTT
-------------
+============
 
 There is a major difference between HTTP and MQTT: HTTP is a "request-response" protocol.
 You perform a request, the server responds, and completely forgets about you.
@@ -29,7 +33,7 @@ The following picture show the HTTP methods vs the MQTT operations.
 ![HTTPvsMQTT](img/HTTPvsMQTT.png)
 
 Architecture
-------------
+============
 
 The architecture of MQTT is based on a central server, called the "broker".
 All clients can publish informations to the broker, and also subscribe on informations.
@@ -41,7 +45,7 @@ Client C is a presence detector, than will publish any detection on the "human-p
 As soon as the publish is done, the server will send an update on any subscribed clients.
 
 Topics
-------
+======
 
 A topic is a string that the broker uses to filter messages for each connected client.
 The topic consists of one or more topic levels. Each topic level is separated by a forward slash (topic level separator).
@@ -58,8 +62,11 @@ You can also subscribe on all sub-topics using the wildcard "#":
 ![topicwild2](img/topicwild2.png)
 
 
+Other features
+==============
+
 Quality of service
--------------------
+------------------
 
 MQTT supports the following Quality of Service levels:
 - Fire and forget (0): Client sends message to broker. Doesn’t care what happens to it.
