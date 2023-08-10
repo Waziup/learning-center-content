@@ -12,14 +12,6 @@ Machine learning is a process that uses an algorithm to analyze data, learn from
 Unlike software, which was programmed by hand and performed tasks by specific instructions, the machine can be trained using large amounts of data and algorithms.
 This allows it to learn how to perform a task.
 
-<!-- TODO: Corentin: to complete -->
-
-<!--
-
-Corentin: I removed this section from the introduction because it seemed too in-depth. However it could be used in this course.
-
-TODO-->
-
 # Overview of different Machine learning algorithms grouped by similarity
 
 In the following there is an overview about the different algorithms that are being used in machine learning, they are grouped by similarity.
@@ -390,8 +382,6 @@ This is done by reducing the absolute size of the sum of all coefficients in the
 So, in course of the training process of machine learning model, one important aspect is to avoid overfitting.
 This is happening because your model learns all the noisy features of your dataset.
 Noisy data points do not represent the properties of your data. By leaning those points, your model gets more flexible but is also prone to overfitting.
-
-In the [previous module](1.RegressionBasics.md) we learned the difference between bias and variance, these concepts are important to understand the phenomena of overfitting.
 
 Regularization is a form of regression, it constraints, regularizes or shrinks the used coefficients near to zero. 
 There are two commonly used regularization methods for linear models:

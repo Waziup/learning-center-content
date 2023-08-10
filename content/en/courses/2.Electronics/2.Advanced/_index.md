@@ -74,7 +74,7 @@ Note that on many microcontrollers, SDA and SCL lines are usually mapped to pre-
 Being a low-speed bus technology, it is possible to use other pins for SDA and SCL lines provided that the software library allows so.
 
 {{% warning%}}
-See the [OLED](/sensors/oled) example for connecting a small I2C OLED screen.
+See the [OLED](/resources/waziup/oled-display) example for connecting a small I2C OLED screen.
 {{%/warning%}}
 
 SPI bus
