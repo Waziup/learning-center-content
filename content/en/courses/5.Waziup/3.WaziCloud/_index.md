@@ -45,7 +45,7 @@ All communications will be secured by SSL.
 You will receive an email to confirm your registration.
 Once registered, you can now log in.
 
-**IMPORTANT: Once created your login and password, [you need to insert them in your gateway](/documentation/wazigate).**
+**IMPORTANT: Once created your login and password, [you need to insert them in your gateway](https://lab.waziup.io/resources/waziup/wazigate).**
 
 Devices
 =======
@@ -61,7 +61,7 @@ At this point, you have two choices:
 
 The Waziup gateway will automatically create devices on the WaziCloud dashboard for you.
 **So, if you have a WaziGate, you should already be able to find your devices in this page!**
-For example, your [WaziDev](/resources/waziup/wazidev) should be listed here.
+For example, your [WaziDev](/resources/waziup/wazidev/) should be listed here.
 
 ![Devices page](./img/devices.png)
 
@@ -151,7 +151,7 @@ Gateways
 ========
 
 In this section, we'll learn how to connect and configure your gateway on the Waziup Dashboard.
-If you install the [WaziGate](https://www.waziup.io/documentation/wazigate/), it should already appear in this page.
+If you install the [WaziGate](/resources/waziup/wazigate), it should already appear in this page.
 
 ![Gateways list](./img/gateways_list.png)
 
@@ -166,7 +166,7 @@ It also shows all the devices that are connected to that gateway.
 You can click a device to navigate to that device.
 
 You can open the own Gateway UI by clicking on the "Remote access" button.
-This will open the [login screen for your gateway UI](https://www.waziup.io/documentation/wazigate).
+This will open the [login screen for your gateway UI](/resources/waziup/wazigate).
 
 Finally, you can edit the parameters of your gateway and delete it, using the corresponding buttons. 
 

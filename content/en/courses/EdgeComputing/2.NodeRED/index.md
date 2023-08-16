@@ -30,7 +30,7 @@ Create a Node-RED flow with:
 - a Function node that would decrease the received temperature by 1.8 degree Celcius
 - an MQTT output node that will publish the new temperature on `UPPA/Duboue/S25/realtemp` topic on `test.mosquitto.org` MQTT broker
 
-![node-red-1](node-red/img/node-red-1.png)
+![node-red-1](img/node-red-1.png)
 
 In the Function node, you can add simple Javascript code to process `msg.payload` which will normally contain the received temperature (string format) on `UPPA/Duboue/S25/temp`. You can also add a debug node after the MQTT input node to verify that you can correctly receive on `UPPA/Duboue/S25/temp`. You can then test your Node-RED flow by deploying it (Deploy button) and use `mosquitto_pub` and `mosquitto_sub` commands to respectively publish on `UPPA/Duboue/S25/temp` and receive on `UPPA/Duboue/S25/#`.
 
@@ -61,7 +61,7 @@ In a second step, you will add a ThingSpeak node to publish the modified tempera
 > npm install node-red-contrib-thingspeak42
 ```
 
-![node-red-2](node-red/img/node-red-2.png)
+![node-red-2](img/node-red-2.png)
 
 
 You can then use our ThingSpeak LoRa test channel (https://thingspeak.com/channels/66794, the write key is `SGSH52UGPVAUYG3S`) and assign the modified temperature to the field of your choice (field 1 to field 8). The Node-RED ThingSpeak node works as follows: for each field, you need to indicate a matching topic that will trigger the upload on that field. So, somewhere in the Function node, you need to assign `msg.topic` to the topic you chose for that field. In this example, you can just take `msg.topic= UPPA/Duboue/S25/realtemp`. If your Node-RED flow is correct, you should also see the temperature value you published on `UPPA/Duboue/S25/realtemp` uploaded on the ThingSpeak channel as well. Check on the [channel page](https://thingspeak.com/channels/66794) for the data you are uploading.
@@ -74,7 +74,7 @@ To add an additional data sub-flow in the current flow, simply add new processin
 
 Here, you will use an Inject node to inject the string "Sensor6/temp/21.6" to the Node-RED flow. That would emulate reception of data from a physical sensor node. From a Node-RED perspective, `msg.payload` will be set to `Sensor6/temp/21.6`. This string will then be injected into a Change node. At this point, to better understand how Node-RED messages work and their format you may have a look at [Steves Node-Red Guide on "Understanding and Using The Node-Red Message Object"](https://stevesnoderedguide.com/node-red-message-object) and [Node-RED documentation on "Working with messages"](https://nodered.org/docs/user-guide/messages).
 
-![node-red-3](node-red/img/node-red-3.png)
+![node-red-3](img/node-red-3.png)
 
 Configure the Change node to translate "Sensor6" into "UPPA/Duboue/S25" and "temp" into "realtemp". Then add a new Function node to process (split) `UPPA/Duboue/S25/realtemp/21.6` in order to have `msg.topic` set to `UPPA/Duboue/S25/realtemp` and `msg.payload` changed to `21.6`. You can use Javascript `msg.payload.lastIndexOf()`, `msg.payload.substring()` and `msg.payload.length` to write your processing code. Remember that you can add debug nodes to verify at each step of your Node-RED flow that it performs as expected.
 
@@ -102,7 +102,7 @@ Sensor6/temp/21.5
 ...
 ```
 
-![node-red-4](node-red/img/node-red-4.png)
+![node-red-4](img/node-red-4.png)
 
 To do so, you may need to install the Tail node with:
 
