@@ -28,7 +28,6 @@ The full WaziCloud documentation is [here](https://www.waziup.io/documentation/w
 Registration
 ============
 
-
 The first thing you need to do is to create a login and a password.
 You should already have a gateway and a sensor node ready and configured.
 

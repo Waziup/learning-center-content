@@ -569,8 +569,8 @@ It is now up to you to really make some actuation by reading this value in your 
 WaziGate Apps
 =============
 
-A full video course of some example applications is available [here](/courses/waziapps/).
+A full video course of some example applications is available [here](https://github.com/Waziup/waziup.io-old/blob/master/content/courses/waziapps/index.md).
 
-A tutorial for a computer-vision application is available [here](/courses/waziup/data-analysis-and-ai/computer-vision). 
+A tutorial for a computer-vision application is available [here](https://github.com/Waziup/wazigate-webcam-inference). 
 
-A tutorial for a Jupyterlab application is available [here](/courses/waziapps_jupyter/).
+A tutorial for a Jupyterlab application is available [here](https://github.com/Waziup/wazigate-jupyterlab).
