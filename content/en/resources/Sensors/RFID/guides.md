@@ -1,6 +1,7 @@
 ---
 date: 2020-07-24T09:00:00+00:00
 title: RC522 RFID tag
+type: guide
 ---
 
 # Introduction

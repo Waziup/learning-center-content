@@ -1,7 +1,7 @@
 ---
 date: 2020-07-24T09:00:00+00:00
 title: HC-SR04
-weight: 1
+type: guide
 ---
 
 # Introduction

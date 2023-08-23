@@ -1,6 +1,7 @@
 ---
 date: 2023-02-08T09:00:00+00:00
 title: DS3231 Real Time clock Sensor
+type: guide
 ---
 
 # Introduction

@@ -1,6 +1,7 @@
 ---
 date: 2023-01-13T09:00:00+00:00
 title: MPU6050 Gyro Sensor
+type: guide
 ---
 
 # Introduction

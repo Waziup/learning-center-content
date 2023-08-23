@@ -1,6 +1,7 @@
 ---
 date: 2023-02-08T09:00:00+00:00
 title: MLX90614 Contactless IR Sensor
+type: guide
 ---
 
 # Introduction

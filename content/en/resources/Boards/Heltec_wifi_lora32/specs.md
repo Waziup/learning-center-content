@@ -1,4 +1,5 @@
 ---
+type: spec
 ---
 
 # Specs

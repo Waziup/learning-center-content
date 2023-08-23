@@ -1,5 +1,6 @@
 ---
 title: WaziDev User Manual
+type: guide
 ---
 
 Overview

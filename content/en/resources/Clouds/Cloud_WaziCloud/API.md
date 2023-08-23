@@ -1,4 +1,6 @@
 ---
+title: WaziCloud API
+type: spec
 ---
 
 # API

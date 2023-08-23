@@ -1,6 +1,7 @@
 ---
 date: 2023-02-10T09:00:00+00:00
 title: Turbidity Sensor
+type: guide
 ---
 
 # Introduction

@@ -1,4 +1,6 @@
 ---
+title: Specifications
+type: spec
 ---
 
 # Specs

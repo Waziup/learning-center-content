@@ -1,6 +1,7 @@
 ---
 date: 2023-01-13T09:00:00+00:00
-title: xxxxxxxxxx sensors
+title: Weather Station guide
+type: guide
 ---
 
 # Introduction
