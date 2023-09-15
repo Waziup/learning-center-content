@@ -1,12 +1,5 @@
 ---
 title: WaziGate quick start
-layout: single
-menu:
-  main:
-    title: Quick start
-    name: docwazigatequick
-    parent: wazigate 
-    weight: 1
 ---
 
 A short introduction...

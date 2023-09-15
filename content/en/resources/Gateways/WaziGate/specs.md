@@ -1,4 +1,5 @@
 ---
+title: Specifications
 type: spec
 ---
 
