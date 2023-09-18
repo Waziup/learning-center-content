@@ -1,3 +1,4 @@
+---
 name: Getting Started with Waziup Technologies
 desc: |
   This unit will cover the basics of Waziup technologies. It will introduce
@@ -12,3 +13,4 @@ courses:
   - id: waziup/waziup/wazigate
   - id: waziup/waziup/the-wazicloud
   - id: waziup/waziup/waziup-api
+---

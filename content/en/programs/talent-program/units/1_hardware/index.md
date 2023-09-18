@@ -1,3 +1,4 @@
+---
 name: Hardware & Communications
 desc: |
   This unit will cover the basics of hardware and communications. It will
@@ -14,3 +15,4 @@ courses:
   - id: waziup/boards-and-sensors/overview-of-boards-and-peripherals
   - id: waziup/boards-and-sensors/overview-of-sensors-and-actuators
   - id: waziup/radio-communications-and-networking/wireless-communication-essentials
+---

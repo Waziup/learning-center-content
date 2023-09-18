@@ -1,3 +1,4 @@
+---
 name: Prototyping
 desc: |
   Create your own IoT prototype using Waziup IoT hardware and software.
@@ -7,3 +8,4 @@ solutions:
   - id: waziup/talent-program/prototype
     roles:
       - editor
+---
