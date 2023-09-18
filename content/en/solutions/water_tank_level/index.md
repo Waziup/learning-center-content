@@ -6,21 +6,21 @@ desc: |
 architecture:
   resources:
     - id: 1
-      type: Board_WaziAct
+      type: waziup/waziact
       steps: [1, 2, 3]
       rot: 0
       x: 600
       y: 30
       params: {}
     - id: 2
-      type: Sensor_ultrasonic
+      type: waziup/ultrasonic-sensor
       steps: [1]
       rot: 180
       x: 360
       y: 270
       params: {}
     - id: 3 
-      type: Other_water_pump
+      type: waziup/water-pump
       steps: [2]
       rot: 0
       x: 60

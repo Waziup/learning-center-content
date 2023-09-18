@@ -5,14 +5,14 @@ desc: |
 architecture:
   resources:
     - id: 1
-      type: Sensor_Weather_Station
+      type: waziup/weather-station
       steps: [1, 2, 3, 4]
       rot: 0
       x: 30
       y: 15
       params: {}
     - id: 2
-      type: Board_Arduino_Uno
+      type: waziup/arduino-uno
       steps: [1, 2, 3, 4]
       rot: 0
       x: 780
