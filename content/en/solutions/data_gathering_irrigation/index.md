@@ -4,42 +4,42 @@ desc: With the help of this guide you will be able to build a device to track mo
 architecture:
   resources:
     - id: 1
-      type: Power_Solar_Panel
+      type: waziup/solar-panel
       steps: [1, 2, 3, 4]
       rot: 0
       x: 85
       y: 98
       params: {}
     - id: 2
-      type: Power_LiPo
+      type: waziup/li-po-battery
       steps: [1, 2, 3, 4]
       rot: 0
       x: 585
       y: 90
       params: {}
     - id: 3
-      type: Power_Solar_Panel_Regular
+      type: waziup/solar-panel-regulator
       steps: [1, 2, 3, 4]
       rot: 0
       x: 555
       y: 435
       params: {}
     - id: 4
-      type: Board_WaziAct
+      type: waziup/waziact
       steps: [1, 2, 3, 4]
       rot: 0
       x: 915
       y: 90
       params: {}
     - id: 5
-      type: Sensor_Temperature_DS18B20
+      type: waziup/digital-temperature-sensor
       steps: [1, 2, 3, 4]
       rot: 0
       x: 1440
       y: 300
       params: {}
     - id: 6
-      type: Sensor_Watermark
+      type: waziup/watermark-sensor
       steps: [1, 2, 3, 4]
       rot: 0
       x: 1605

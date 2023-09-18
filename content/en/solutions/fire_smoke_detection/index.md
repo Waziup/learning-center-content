@@ -6,7 +6,7 @@ architecture:
   resources:
     # ids are generated
     - id: 1
-      type: Sensor_Gas_Smoke
+      type: waziup/mq5-gas-sensor
       steps: [2, 4]
       # rotation: 0, 90, 180 or 270
       rot: 0
@@ -14,14 +14,14 @@ architecture:
       y: 60
       params: {}
     - id: 2
-      type: Actuator_Buzzer
+      type: waziup/buzzer
       steps: [3, 4]
       rot: 0
       x: 240
       y: 240
       params: {}
     - id: 3
-      type: Board_WaziDev
+      type: waziup/wazidev
       steps: [1, 2, 3, 4]
       rot: 0
       x: 540

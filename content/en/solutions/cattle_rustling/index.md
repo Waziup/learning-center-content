@@ -6,14 +6,14 @@ desc: |
 architecture:
   resources:
     - id: 1
-      type: Board_WaziDev
+      type: waziup/wazidev
       steps: [1]
       rot: 0
       x: 645
       y: 15
       params: {}
     - id: 2
-      type: Sensor_GPS
+      type: waziup/gps
       steps: [1, 2, 3, 4, 5]
       rot: 0
       x: 30

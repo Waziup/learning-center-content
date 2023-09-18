@@ -4,21 +4,21 @@ desc: As you may already know, plants require water, light (usually sunlight), n
 architecture:
   resources:
     - id: 1
-      type: Sensor_soilMoisture
+      type: waziup/soil-moisture-sensor
       steps: [1]
       rot: 0
       x: 360
       y: 225
       params: {}
     - id: 2
-      type: Board_WaziAct
+      type: waziup/waziact
       steps: [1, 2, 3]
       rot: 0
       x: 570
       y: 45
       params: {}
     - id: 3 
-      type: Other_water_pump
+      type: waziup/water-pump
       steps: [2]
       rot: 0
       x: 60
