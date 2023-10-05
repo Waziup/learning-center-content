@@ -79,7 +79,7 @@ architecture:
 ---
 
 Overview
-========
+----
 
 With the help of this guide you will be able to build a device to track moisture and soil temperature. We use it to collect data for different purposes. [Congduc Pham](https://cpham.perso.univ-pau.fr) created similar devices for the [Intel-Irris Project](https://intel-irris.eu), they also got a [github repository](https://github.com/CongducPham/PRIMA-Intel-IrriS). In the OSIRRIS we want to create a dataset, to automate irrigation for a farm. Therefore we use a slightly different configuration to meet the requirements. 
 
@@ -91,7 +91,7 @@ Here's what we will be learning:
 - 
 
 What parts are required?
-======================
+----
 
 The following hardware and software is required in order to follow this user guide:
 

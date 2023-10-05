@@ -44,7 +44,8 @@ architecture:
       l: [142]
 ---
 
-# Overview
+Overview
+----
 
 When a fire breaks out, time is of the essence. Prompt measures need to be taken to evacuate the trapped people and contain the fire before it spreads out of hand. However, to accomplish this we need a system that can detect fires before it is too late.
 
@@ -57,7 +58,8 @@ Here's what we will be learning:
 - How to communicate to the cloud over LoRa
 
 
-# What parts do we need?
+What parts do we need?
+----
 
 To follow this user manual, one will need the following hardware:
 

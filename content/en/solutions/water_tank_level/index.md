@@ -42,7 +42,7 @@ architecture:
 ---
 
 Overview
-========
+----
 
 Its very common to see water storage tanks overflowing in most places where a pump is used. These overflows lead to wastage of water and higher electricity bills due to the water pumps running longer than necessary.
 
@@ -58,7 +58,7 @@ Here's what we will be learning:
 - How to communicate to the cloud over LoRa
 
 What parts do we need?
-======================
+----
 
 To follow this user manual, one will need the following:
 

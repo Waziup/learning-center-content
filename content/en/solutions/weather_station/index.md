@@ -28,7 +28,8 @@ architecture:
 ---
 
 Overview
-========
+----
+
 A weather station is a facility, either on land or sea, with instruments and equipment for measuring atmospheric conditions to provide information for weather forecasts and to study the weather and climate.
 
 In recent years weather stations have become increasingly porpular among DIYers but the issue has always been with how to build a low-cost but functional station. In this guide, we will look at how to build a weather staion from scratch. 
@@ -44,7 +45,8 @@ Here's what we will be learning:
 - How to transmit sensor data to Wazicloud using LoRa
 
 What parts do we need?
-======================
+----
+
 To follow this user manual, one will need the following hardware and software:
 
 Hardware
