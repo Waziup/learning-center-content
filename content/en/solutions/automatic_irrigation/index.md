@@ -42,7 +42,7 @@ architecture:
 ---
 
 Overview
-========
+-------
 
 As you may already know, plants require water, light (usually sunlight), nutrients etc, ... to grow healthy. While these factors can be easily provided, the problem is usually forgetfulness.
 
@@ -57,7 +57,7 @@ Here's what we will be learning:
 
 
 What parts do we need?
-======================
+-----
 
 To follow this user manual, one will need the following hardware:
 

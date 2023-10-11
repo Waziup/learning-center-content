@@ -1,3 +1,4 @@
+---
 name: HUBIquitous Talent Program
 desc: |
   The Talent Program is the capacity building arm of the HUBiquitous project.
@@ -8,3 +9,8 @@ desc: |
   advanced topics like Machine Learning for IoT  and Big Data.
 from: 2023-12-01
 to: 2024-02-28
+---
+
+# Talent Program
+
+The Talent Program is the capacity building arm of the HUBiquitous project.

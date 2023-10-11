@@ -29,7 +29,7 @@ architecture:
 ---
 
 Overview
-========
+-----
 Cattle rustlings is increasingly becoming a major problem in many parts of Africa in recent years. Despite the growing level of cattle theft and its consequences for society, the situation has yet to receive an effective intervention.
 
 In this guided article we will look at how to build a simple tracking solutions for livestock using a method known as **Geofencing**.
@@ -43,7 +43,7 @@ Here's what we will be learning:
 
 
 What parts do we need?
-=====================
+----
 
 To follow this user manual, one will need the following hardware:
 
