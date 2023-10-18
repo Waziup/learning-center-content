@@ -6,4 +6,13 @@ duration: 2w
 ---
 
 
-The co-design sessions will...
+![co-design](img/co-design.png)
+
+A co-design session will be organized by a **codesign expert** with the startups that request it.
+The co-design session will detail the product strategy/service of the startup.
+During the co-design sessions, we will: 
+- define user stories
+- list requirements
+- define the prototype architecture
+- create UI designs
+- create hardware designs

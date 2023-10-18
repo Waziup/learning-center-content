@@ -7,7 +7,7 @@ to: 2024-01-31
 
 
 
-# What is the HUBIquitous Accelerator Program?
+## What is the HUBIquitous Accelerator Program?
 
 The HUBIquitous Accelerator Program is a **3 month program** aiming at improving your **IoT prototype and business model**.
 
@@ -17,7 +17,7 @@ The objectives of the program are:
 - Facilitate accelerated **business growth**.
 - Foster synergies between the selected participants, the mentors and partner.
 
-# Who can participate?
+## Who can participate?
 
 The accelerator is for:
 - Entrepreneurs 
@@ -31,6 +31,11 @@ From the folowing countries:
 - Tanzania
 - Kenya
 
+## Domains
+
+The following domains of applications will be selected:
+
+![domains](img/domains.png)
 
 # Timeline
 
@@ -42,4 +47,6 @@ This is the timeline of the program:
 
 ![awards](img/awards.png)
 
+# Documentation
 
+Download the [accelerator handbook](https://hubiquitous.eu/wp-content/uploads/2022/05/Hubiquitous-1st-Open-Call-Guide-for-Applicants.pdf)!
