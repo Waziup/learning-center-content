@@ -5,6 +5,9 @@ from: 2023-11-01
 to: 2024-01-31
 ---
 
+![hubiquitous logo](hubiquitous-logo.png)
+
+# Second Accelerator Program
 
 
 ## What is the HUBIquitous Accelerator Program?
