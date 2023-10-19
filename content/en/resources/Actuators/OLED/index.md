@@ -1,4 +1,5 @@
 ---
+id: oled_res
 title: OLED display 
 type: actuator
 desc: An OLED small display screen

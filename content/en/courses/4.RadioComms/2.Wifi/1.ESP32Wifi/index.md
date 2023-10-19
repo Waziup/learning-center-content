@@ -1,4 +1,5 @@
 ---
+id: wifi_course
 title: Wifi IoT devices
 description: This course will present the WiFi technology usage in IoT.
 difficulty: intermediate

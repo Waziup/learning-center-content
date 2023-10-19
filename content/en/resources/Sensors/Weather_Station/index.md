@@ -1,4 +1,5 @@
 ---
+id: weather_res
 title: Weather Station
 type: sensor
 desc: Weather Station Kit

@@ -1,4 +1,5 @@
 ---
+id: capacitive_soil_res
 title: Capacitive Soil Moisture Sensor v1.2
 type: sensor
 desc: Capacitive Soil Moisture Sensor v1.2 

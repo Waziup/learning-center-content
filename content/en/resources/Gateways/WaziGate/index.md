@@ -1,4 +1,5 @@
 ---
+id: wazigate_res
 title: WaziGate
 type: microcontroller
 desc: WaziGate allows you to connect many devices through LoRaWAN.

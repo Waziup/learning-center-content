@@ -1,4 +1,5 @@
 ---
+id: rest_course
 title: HTTP REST APIs
 description: This course will show you how to use HTTP APIs.
 difficulty: intermediate

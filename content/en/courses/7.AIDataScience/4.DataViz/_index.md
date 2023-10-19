@@ -1,4 +1,5 @@
 ---
+id: data_vis_course
 title: Data visualizations
 description: In this lesson, we'll learn the basics about Data Visualizations.
 difficulty: beginner

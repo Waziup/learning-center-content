@@ -1,4 +1,5 @@
 ---
+id: wazicloud_course
 title: The WaziCloud
 description: This course will cover the basics of using the WaziCloud.
 difficulty: beginner

@@ -1,4 +1,5 @@
 ---
+id: WaziDev_course
 title: WaziDev board series 
 description: Waziup compatible development boards
 difficulty: beginner

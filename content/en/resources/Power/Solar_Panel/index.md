@@ -1,4 +1,5 @@
 ---
+id: solar_panel_res
 title: Solar panel
 type: power-management
 desc: Power from the Sun.

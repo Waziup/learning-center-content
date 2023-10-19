@@ -1,4 +1,5 @@
 ---
+id: waziact_res
 title: WaziAct
 type: microcontroller
 desc: This board allow to develop IoT devices with LoRaWAN.

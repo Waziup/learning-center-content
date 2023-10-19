@@ -1,4 +1,5 @@
 ---
+id: gps_res
 title: GPS 
 type: sensor
 desc: A Global Positioning System module for getting your position using satellite data.

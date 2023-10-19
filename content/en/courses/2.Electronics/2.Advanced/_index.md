@@ -1,6 +1,5 @@
 ---
-module: 1
-lecture: 1
+id: elec_advanced_course
 title: Advanced electronics for IoT
 description: In this course, we’ll study several extremely common communication protocols for electronic boards.
 difficulty: advanced

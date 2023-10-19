@@ -1,4 +1,5 @@
 ---
+id: case_res
 title: Waterproof case
 type: case
 desc: A waterproof case

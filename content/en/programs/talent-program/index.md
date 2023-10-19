@@ -1,4 +1,5 @@
 ---
+id: talent_program
 name: HUBIquitous Talent Program
 desc: |
   The Talent Program is the capacity building arm of the HUBiquitous project.

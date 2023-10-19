@@ -1,4 +1,5 @@
 ---
+id: radio_comm_course
 title: Long range radio communications
 description: This course will present long range wireless technologies. 
 difficulty: intermediate

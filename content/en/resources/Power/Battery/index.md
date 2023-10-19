@@ -1,4 +1,5 @@
 ---
+id: battery_res
 title: Battery
 type: power-management
 desc: Power, power, power!

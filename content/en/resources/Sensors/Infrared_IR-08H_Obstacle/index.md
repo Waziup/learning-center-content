@@ -1,4 +1,5 @@
 ---
+id: ir_res
 title: IR-08H Infrared Obstacle Avoidance Sensor
 type: sensor
 desc: IR-08H Infrared Obstacle Avoidance Sensor 

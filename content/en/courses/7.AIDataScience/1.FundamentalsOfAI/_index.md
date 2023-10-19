@@ -1,4 +1,5 @@
 ---
+id: ai_fundamentals_course
 title: Fundamentals of AI
 difficulty: intermediate
 duration: 5h

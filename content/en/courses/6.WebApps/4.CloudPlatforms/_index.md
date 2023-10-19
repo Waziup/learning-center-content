@@ -1,4 +1,5 @@
 ---
+id: cloud_course
 title: Cloud Platforms
 description: What is an IoT Cloud platform?
 difficulty: intermediate

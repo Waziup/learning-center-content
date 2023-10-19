@@ -1,4 +1,5 @@
 ---
+id: ard_uno_res
 title: Arduino Uno
 type: hardware
 desc: Arduino Uno

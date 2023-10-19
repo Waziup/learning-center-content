@@ -1,4 +1,5 @@
 ---
+id: mqtt_course
 title: MQTT APIs
 description: This course will show you how to use MQTT APIs.
 difficulty: intermediate
