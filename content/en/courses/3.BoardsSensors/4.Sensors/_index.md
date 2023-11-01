@@ -1,4 +1,5 @@
 ---
+id: sensors_course
 title: Wiring and programming sensors
 description: In this course, we will learn how to wire and program sensors.
 difficulty: intermediate

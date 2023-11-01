@@ -1,4 +1,5 @@
 ---
+id: analog_temp_res
 title: Analog temperature sensor
 type: sensor
 desc: This sensor produces an output which is proportional to the temperature

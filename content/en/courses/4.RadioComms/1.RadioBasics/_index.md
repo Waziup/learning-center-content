@@ -1,4 +1,5 @@
 ---
+id: wireless_essentials_course
 title: Wireless communication essentials
 description: This course will introduce the basics of wireless communications.
 difficulty: beginner

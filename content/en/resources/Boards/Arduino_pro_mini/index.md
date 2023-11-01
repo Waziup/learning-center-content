@@ -1,4 +1,5 @@
 ---
+id: ard_promini_res
 title: Arduino Pro Mini
 type: microcontroller
 desc: |

@@ -1,4 +1,5 @@
 ---
+id: ups_res
 title: UPS_HAT
 type: power-management
 desc: Uninterruptible power supply module

@@ -1,4 +1,5 @@
 ---
+id: ml_course
 title: Machine Learning
 difficulty: advanced
 duration: 7h

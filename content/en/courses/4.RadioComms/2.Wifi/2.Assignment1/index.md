@@ -1,4 +1,5 @@
 ---
+id: wifi_assign
 title: "Assignment 1: Use WiFi to upload data from IoT devices"
 description: This assignment will show how upload data from an IoT device connected to a WiFi network.
 difficulty: intermediate

@@ -1,4 +1,5 @@
 ---
+id: buzzer_res
 title: Buzzer
 type: actuator
 desc: A buzzing or beeping audio signaling device.

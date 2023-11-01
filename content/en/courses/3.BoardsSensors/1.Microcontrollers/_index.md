@@ -1,6 +1,5 @@
 ---
-module: 1
-lecture: 1
+id: microcontrollers_course
 title: Microcontrollers 
 description: The therory behind microcontrollers
 difficulty: beginner

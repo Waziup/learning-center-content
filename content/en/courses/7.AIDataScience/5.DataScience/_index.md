@@ -1,4 +1,5 @@
 ---
+id: data_analysis_course
 title: IoT data analysis
 description: This course will show how to analyse IoT data.
 difficulty: advanced

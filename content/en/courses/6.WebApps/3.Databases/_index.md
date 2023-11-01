@@ -1,4 +1,5 @@
 ---
+id: database_course
 title: Databases and IoT data management
 description:
 difficulty: intermediate

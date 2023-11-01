@@ -1,4 +1,5 @@
 ---
+id: breadboard_res
 title: Breadboard
 type: hardware
 desc: A quick way to create electronic circuits.

@@ -1,6 +1,5 @@
 ---
-module: 1
-lecture: 1
+id: arduino_programming_course
 title: Arduino Programming
 description: This course will show you how to program your Arduino.
 difficulty: beginner

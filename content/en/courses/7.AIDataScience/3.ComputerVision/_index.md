@@ -1,4 +1,5 @@
 ---
+id: cv_course
 title: Computer Vision
 difficulty: advanced
 duration: 6h

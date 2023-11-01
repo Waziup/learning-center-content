@@ -5,7 +5,7 @@ desc: |
 from: 2021-01-01
 to: 2021-12-31
 solutions:
-  - id: waziup/talent-program/prototype
+  - id: waziup/automatic-irrigation
     roles:
       - editor
 ---

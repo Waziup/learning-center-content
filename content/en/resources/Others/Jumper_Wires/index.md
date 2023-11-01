@@ -1,4 +1,5 @@
 ---
+id: wires_res
 title: Jumper Wires
 type: hardware
 desc: Low level signal connectors.

@@ -1,4 +1,5 @@
 ---
+id: waziup_api_course
 title: Waziup API
 description: This course will show you how to use Waziup API.
 difficulty: intermediate

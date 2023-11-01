@@ -1,4 +1,5 @@
 ---
+id: mq5_gas_res
 title: MQ5 Gas Sensor
 type: sensor
 desc:  Ideal for detecting gas leaks

@@ -1,4 +1,5 @@
 ---
+id: rtc_res
 title: DS3231 RTC
 type: hardware
 desc: Real Time Clock 
