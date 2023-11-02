@@ -6,8 +6,8 @@ desc: |
   the Waziup IoT software. The unit will also cover the basics of the Waziup
   IoT platform, including the Waziup IoT platform architecture, the Waziup
   IoT platform components, and the Waziup IoT platform APIs.
-from: 2021-01-01
-to: 2021-12-31
+duration: 3w
+delay_start: 2w
 courses:
   - id: waziup/waziup/wazidev-board-series
   - id: waziup/waziup/wazigate

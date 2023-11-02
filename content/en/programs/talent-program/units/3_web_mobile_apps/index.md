@@ -7,8 +7,8 @@ desc: |
   development for IoT platforms, including the basics of web and mobile apps
   development, the basics of web and mobile apps development for IoT platforms,
   and the basics of web and mobile apps development for the Waziup IoT platform.
-from: 2021-01-01
-to: 2021-12-31
+duration: 2w
+delay_start: 5w
 courses:
   - id: waziup/web-&-mobile-iot-applications/databases-and-iot-data-management
   - id: waziup/web-&-mobile-iot-applications/iot-web-apps

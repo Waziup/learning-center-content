@@ -7,8 +7,8 @@ desc: |
   the basics of communication protocols, including the Internet Protocol
   (IP) suite, and the basics of wireless communication protocols, including
   WiFi, Bluetooth, and LoRaWAN.
-from: 2021-01-01
-to: 2021-12-31
+duration: 2w
+delay_start: 0w
 courses:
   - id: waziup/introduction-to-iot/introduction-to-iot
   - id: waziup/electronics/basics-of-electronics-for-iot
