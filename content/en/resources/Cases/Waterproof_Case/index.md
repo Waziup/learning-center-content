@@ -8,3 +8,10 @@ tags:
     - City
     - Agriculture
 ---
+
+# Introduction
+
+This is a simple case for your outdoor applications.
+
+![case](img/case.png)
+
