@@ -1,7 +1,8 @@
 ---
 date: 2023-01-13T09:00:00+00:00
-title: WaziGate user manual
+title: WaziGate User Manual
 type: guide
+rank: 2
 ---
 
 # Introduction
@@ -9,27 +10,14 @@ WaziGate is a IoT LoRa Gateway, ideal for all your remote IoT applications. The 
 
 ![picxxyyzz](img/pic1.png)
 
-You can find all the WaziGate documentation here:
-
-Quick start
-Installation
-LoRaWAN
-WaziGate Apps
-
-Overview
-========
-
 This document will guide you through the steps to assemble your Wazigate and configure it in order to connect to the Waziup Cloud.
-<!-- This documentation is available in [PDF format](/docs/WaziGate_User_Manual-V1.0.pdf). -->
 
-Prepare the Gateway Hardware
-============================
+
+WaziGate hardware
+=================
 
 If you have a Raspberry PI and want to setup your WaziGate yourself this section is for you.
 If you already have your Wazigate in a box, just [skip](#flash-the-wazigate) this section.
-
-What do you need to start?
---------------------------
 
 You need the following *hardware* to start:
 
@@ -46,8 +34,6 @@ You also need the following *software*:
 - [Wazigate ISO image](https://downloads.waziup.io/)
 - [Balena Etcher](https://www.balena.io/etcher/)
 
-Assemble the WaziGate
----------------------
 
 There are only two simple steps to assemble your WaziGate.
 
@@ -74,8 +60,8 @@ Be careful to align correctly the pins in the arrays.
 {{%/warning%}}
 
 
-Flash the WaziGate 
-------------------
+Flashing
+=========
 
 {{%action%}}
 **Step \#1:** Download the latest version of the [Wazigate ISO image](https://downloads.waziup.io/).
@@ -125,7 +111,7 @@ Congratulations! Your hardware is now ready.
 
 
 Powering up Wazigate
---------------------
+=====================
 
 {{%action%}}
 **Step \#1:** Attach the antenna
@@ -259,7 +245,7 @@ Do not enter your gateway password here.
 If you receive an error message, it mean either you enter a wrong login/password, or you are not connected to internet.
 
 Connect to your gateway
------------------------
+=======================
 
 At this stage, your gateway should have access to internet. However in order to connect to it,we need to find its IP.
 If you have OLED installed on raspberry pi the IP will be shown directly on the screen
@@ -323,116 +309,6 @@ Your gateway details will open.
 
 If you see something like this, then Congratulations! :) You made it.                   
 Now you can simply manage your gateway remotely through your Waziup dashboard.
-
-Annex
-=====
-
-Connect with Ethernet cable to PC
----------------------------------
-
-This section will guide you to connect your Wazigate to your PC using an Ethernet cable.
-**This is needed only if you want to connect your gateway to your PC directly with an ethernet cable**.
-
-You should have the following hardware:
-
-- A Waziup gateway with power cable (mini USB)
-- A laptop/PC with an RJ45 slot or adapter
-- A RJ45 cable (simple network cable)
-- Internet access on your laptop/PC
-
-First, connect the RJ45 cable between your laptop/PC and the WaziGate.
-
-In order to connect from your computer to the WaziGate, we need to activate the DHCP service on your computer.
-The local DHCP will attribute an IP address to the WaziGate.
-This option is usually called "Share the internet connection" on your computer.
-The following sections show the procedure for Windows, Mac and Linux.
-
-### Windows
-
-On Windows, do the following:
-
-{{%action%}}
-**Step \#1:** Open Control panel.
-{{%/action%}}
-
-Press  shortcut key combination Windows + R , type “control” and click ok button
-
-![Control panel](img/image44.png)
-
-Here click on "Network and Internet" menu and then "Network and sharing center".
-
-{{%action%}}
-**Step \#2:** Select sharing connection.
-{{%/action%}}
-
-Click on your internet connection and go to “Properties”.
-
-![Select connection](img/image46.png)
-
-{{%action%}}
-**Step \#3:** Allow sharing connection.
-{{%/action%}}
-
-Switch to the “Sharing” tab and check the box to allow other users to connect to the internet through your computer.
-
-![Allow sharing W.](img/image47.png)
-
-The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
-
-
-### Linux
-
-On Linux, do the following:
-
-{{%action%}}
-**Step \#1:** Open connection editor.
-{{%/action%}}
-
-Open the connection editor  through the terminal using the comand:
-```
-  nm-connection-editor
-```
-<br>
-
-If `nm-connection-editor` if not present, you need to install it.
-
-{{%action%}}
-**Step \#2:** Sharing connection.
-{{%/action%}}
-
-When it opens, select the wired connection item, clicking the edit button. In that menu, switch to the IPv4 tab, and select the method: ‘shared to other computers’
-
-![Allow sharing L.](img/image48.jpg)
-
-After that, save everything and connect your cable if you haven’t already, and DHCP should kick-in and set everything up for you.
-
-The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
-
-**Note:** if you need to get the IP address of the connection, you can use ifconfig. You’ll only need this if DHCP doesn’t automatically configure everything.
-
-### Mac
-
-On Mac, do the following:
-
-{{%action%}}
-**Step \#1:** Open Sharing menu.
-{{%/action%}}
-
--	Open System Preferences. It’s typically found on your dock, if not, it’s in your Applications folder.
--	In System Preferences, under Internet & Wireless, go into the Sharing menu.
-
-{{%action%}}
-**Step \#2:** Sharing connection.
-{{%/action%}}
-
-In the Sharing menu, choose Internet Sharing from the list on the left. You will see Internet Sharing options.
-
-![Allow sharing M.](img/image49.jpg)
-
-Select to share your connection from Wi-Fi, to computers using Ethernet.
-After that, click on the Internet Sharing checkbox to enable the service.
-
-The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
 
 Sensor Device preparation
 ==================
@@ -575,3 +451,115 @@ A full video course of some example applications is available [here](/courses/wa
 A tutorial for a computer-vision application is available [here](/courses/waziup/data-analysis-and-ai/computer-vision). 
 
 A tutorial for a Jupyterlab application is available [here](/courses/waziapps_jupyter/).
+
+
+Annex: Connect with Ethernet cable to PC
+=====
+
+
+
+This section will guide you to connect your Wazigate to your PC using an Ethernet cable.
+**This is needed only if you want to connect your gateway to your PC directly with an ethernet cable**.
+
+You should have the following hardware:
+
+- A Waziup gateway with power cable (mini USB)
+- A laptop/PC with an RJ45 slot or adapter
+- A RJ45 cable (simple network cable)
+- Internet access on your laptop/PC
+
+First, connect the RJ45 cable between your laptop/PC and the WaziGate.
+
+In order to connect from your computer to the WaziGate, we need to activate the DHCP service on your computer.
+The local DHCP will attribute an IP address to the WaziGate.
+This option is usually called "Share the internet connection" on your computer.
+The following sections show the procedure for Windows, Mac and Linux.
+
+### Windows
+
+On Windows, do the following:
+
+{{%action%}}
+**Step \#1:** Open Control panel.
+{{%/action%}}
+
+Press  shortcut key combination Windows + R , type “control” and click ok button
+
+![Control panel](img/image44.png)
+
+Here click on "Network and Internet" menu and then "Network and sharing center".
+
+{{%action%}}
+**Step \#2:** Select sharing connection.
+{{%/action%}}
+
+Click on your internet connection and go to “Properties”.
+
+![Select connection](img/image46.png)
+
+{{%action%}}
+**Step \#3:** Allow sharing connection.
+{{%/action%}}
+
+Switch to the “Sharing” tab and check the box to allow other users to connect to the internet through your computer.
+
+![Allow sharing W.](img/image47.png)
+
+The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
+
+
+### Linux
+
+On Linux, do the following:
+
+{{%action%}}
+**Step \#1:** Open connection editor.
+{{%/action%}}
+
+Open the connection editor  through the terminal using the comand:
+```
+  nm-connection-editor
+```
+<br>
+
+If `nm-connection-editor` if not present, you need to install it.
+
+{{%action%}}
+**Step \#2:** Sharing connection.
+{{%/action%}}
+
+When it opens, select the wired connection item, clicking the edit button. In that menu, switch to the IPv4 tab, and select the method: ‘shared to other computers’
+
+![Allow sharing L.](img/image48.jpg)
+
+After that, save everything and connect your cable if you haven’t already, and DHCP should kick-in and set everything up for you.
+
+The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
+
+**Note:** if you need to get the IP address of the connection, you can use ifconfig. You’ll only need this if DHCP doesn’t automatically configure everything.
+
+### Mac
+
+On Mac, do the following:
+
+{{%action%}}
+**Step \#1:** Open Sharing menu.
+{{%/action%}}
+
+-	Open System Preferences. It’s typically found on your dock, if not, it’s in your Applications folder.
+-	In System Preferences, under Internet & Wireless, go into the Sharing menu.
+
+{{%action%}}
+**Step \#2:** Sharing connection.
+{{%/action%}}
+
+In the Sharing menu, choose Internet Sharing from the list on the left. You will see Internet Sharing options.
+
+![Allow sharing M.](img/image49.jpg)
+
+Select to share your connection from Wi-Fi, to computers using Ethernet.
+After that, click on the Internet Sharing checkbox to enable the service.
+
+The WaziGate should now have an IP. You can connect to it using this link: http://wazigate.local.
+
+

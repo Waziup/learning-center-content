@@ -6,6 +6,7 @@ desc: Ultrasonic Sensor HC-SR04 is a sensor that can measure distance. It emits 
 color: "#a3d5ff"
 tags:
     - City
+    - Industry
 ---
 
 # Introduction

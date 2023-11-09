@@ -5,7 +5,6 @@ type: sensor
 desc: Watermark Sensor
 tags:
     - Agriculture
-    - City
 ---
 
 # Introduction

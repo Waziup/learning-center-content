@@ -1,17 +1,18 @@
 ---
 date: 2023-01-13T09:00:00+00:00
-title: WaziGate dashboard user guide
+title: Dashboard User Guide
 type: guide
+rank: 1
 ---
 
-# Dashboard
+# Introduction
 
 You can build a full application with Waziup, without programming!
 In this tutorial, we'll learn how to build a soil monitoring application able to display the soil moisture and to send notifications on SMS, twitter and voice messages.
 <!-- This documentation is available in [PDF format](/docs/WaziCloud_User_Manual-V2.1.pdf). -->
 
 
-## Login
+# Login
 
 The first thing you need to do is to create a login and a password.
 You should already have a gateway and a sensor node ready and configured.
@@ -35,7 +36,7 @@ Once registered, you can now log in.
 **IMPORTANT: Once created your login and password, [you need to insert them in your gateway](/resources/waziup/wazigate)!**
 </alert>
 
-## Devices
+# Devices
 
 Clicking on the “Devices” menu entry will lead you to the devices page.
 If this is your first time on Waziup, you should not have any devices here:
@@ -60,7 +61,7 @@ You can filter the list by domain, visibility or status.
 If you have a lot of devices, you can often find the one you are looking for by filtering by "Active" or "New".
 A device is showed as "New" if it has been created in the last 24 hours.
 
-### Manual creation
+## Manual creation
 
 If you want to create your devices yourself on the dashboard, follow this procedure:
 
@@ -99,7 +100,7 @@ For your first devices, it is advised to set them to "Public", they will be easi
 *Gateway* contains the gateway ID that transmitted this device. It is optional.
 
 
-### Device details
+## Device details
 
 Click on one of your devices.
 The following page will show you more details.
@@ -130,7 +131,7 @@ You can update your location with three methods:
 
 
 
-## Sensors
+# Sensors
 
 Click on one of the sensors to open the sensors details page.
 
@@ -150,7 +151,7 @@ Setting up this metadata is not mandatory, however is it much better to get if y
 It will also allow you to create nicer graphics.
 
 
-## Gateways
+# Gateways
 
 In this section, we'll learn how to connect and configure your gateway on the Waziup Dashboard.
 If you install the [WaziGate](/documentation/wazigate/), it should already appear in this page.
@@ -173,7 +174,7 @@ This will open the [login screen for your gateway UI](http://wazigate.local).
 Finally, you can edit the parameters of your gateway and delete it, using the corresponding buttons. 
 
 
-## Notifications
+# Notifications
 
 The notifications allow you to program SMS or Twitter messages, triggered by events on your sensors.
 For instance, if a sensor value becomes too high, a SMS will be sent to the user.
@@ -213,7 +214,7 @@ You can click on that notification to view the details.
 Did you receive anything?
 You should see the number of times this notification was sent, and the time for the last sending in the box "Status".
 
-## Projects
+# Projects
 
 A project allows you to get all your assets in the same place: gateways, devices, notifications, maps, graphics...
 The first thing to do is to connect your [gateways](/resources/waziup/wazigate) and [devices](/resources/waziup/wazidev).
@@ -233,33 +234,3 @@ Finally, all devices and sensor values are displayed on the graph.
 
 
 
-
-# Grafana
-
-![account](img/grafana/account.png)
-
-## Data source
-
-![grafana_data_source](img/grafana/data_source.png)
-
-
-![grafana_add_source](img/grafana/add_source.png)
-
-https://api.waziup.io/api/v2/devices/UPPA-TESTS_Sensor3/sensors/TC2/values
-
-![source_conf](img/grafana/source_conf.png)
-
-## Panel
-
-![add_panel](img/grafana/add_panel.png)
-
-![grafana_fields](img/grafana/fields.png)
-
-![panel](img/grafana/panel.png)
-
-## Embbeding
-
-![share](img/grafana/share.png)
-
-
-![embbed](img/grafana/embbed.png)

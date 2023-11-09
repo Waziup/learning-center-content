@@ -7,6 +7,7 @@ color: "#bad8ff"
 tags:
     - City
     - Agriculture
+    - Industry
 ---
 
 # Introduction

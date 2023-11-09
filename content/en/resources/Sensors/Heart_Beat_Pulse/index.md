@@ -5,7 +5,6 @@ type: sensor
 desc: Heart Rate and Proximity Sensor
 color: "#f8cb58"
 tags:
-    - Sensor
     - Health
 ---
 

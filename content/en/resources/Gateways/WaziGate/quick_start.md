@@ -1,5 +1,6 @@
 ---
-title: WaziGate quick start
+title: WaziGate Quick Start
+rank: 1
 ---
 
 A short introduction...

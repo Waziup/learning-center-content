@@ -6,6 +6,7 @@ desc: Total Dissolved Solids Sensor
 color: "#a5d1ff"
 tags:
     - Agriculture
+    - City
 ---
 
 # Introduction

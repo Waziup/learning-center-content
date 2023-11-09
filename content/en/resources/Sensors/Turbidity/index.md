@@ -6,6 +6,8 @@ desc: Measuring the level of liquid opaqueness
 color: "#a5d1ff"
 tags:
     - Agriculture
+    - City
+    - Industry
 ---
 
 # Introduction

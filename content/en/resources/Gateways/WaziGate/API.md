@@ -1,9 +1,10 @@
 ---
-title: WaziGate Edge
+title: WaziGate Edge API
 type: spec
+rank: 3
 ---
 
-# API
+# HTTP REST
 
 ## Overview
 

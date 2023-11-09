@@ -43,8 +43,8 @@ For the examples using the cloud, one also needs a configured [WaziGate](https:/
 
 
 
-Installation and configuration of your IDE
-==========================================
+Installation of the IDE
+=======================
 
 This section will guide through the installation of Arduino IDE and its
 configuration for the WaziDev.
@@ -174,7 +174,7 @@ Select the processor "ATmega328P (3.3V, 8 MHz)" in the Tools -\> Processor menu.
 
 Finally, the Programmer needs to be "AVRISP mkll".
 
-Connecting you Sensors and Actuators
+Connect your Sensors and Actuators
 ====================================
 
 The WaziDev presents a number of "pins" where you can connect your sensors and actuators.
@@ -536,28 +536,4 @@ Characteristics
 
 - IDE: Arduino compatible  (Select **Pro Mini 3.3V 8Mhz**)
 
-Annex
-=====
 
-Use LoRaWAN with WaziDev V1.3
-----------------------
-
-If you have a WaziDev V1.3 device and want to use LoRaWAN some changes are needed.
-Note that WaziDev V1.4 is already capable of LoRaWAN, without changes.
-On your WaziDev V1.3, it is required to solder a small cable between the D3 pin of the WaziDev and the LoRa chip, as can been seen in the image below.
-You also have to close the JR solder pans together with a welding point.
-To do this you will need:
-- A welder
-- A connecting cable about 2/3 cm long
-
-![Modernize](./media/image32.png)
-
-Proceed as follow:
-1. solder one extremity of the cable to the D3 pin of the WaziDev
-2. solder the other end of the cable to the 2nd pin of the LoRa chip. You need to be quite precise!
-3. solder the JR pads together. This is quite easy, you just need to apply some weilding to join the two pads of JR together.
-
-That's it! You should now be able to upload LoRaWAN sketches to you WaziDev.
-Technically, we need this change for the [LMIC library](https://github.com/matthijskooijman/arduino-lmic#dio-pins), that we use for LoRaWAN.
-- Closing JR will connect LoRa DIO0 pin to the Pro mini pin D2.
-- slodering the wire will connect LoRa DIO1 to the Pro mini pin D3.
