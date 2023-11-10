@@ -37,73 +37,53 @@ You also need the following *software*:
 
 There are only two simple steps to assemble your WaziGate.
 
-{{%action%}}
 **Step \#1:** Attach the heat sinks. 
-{{%/action%}}
 
 As WaziGate can perform Edge processing on you data, it is always a good idea to attach heat sinks in order to avoid overheating.
 Raspberry PI can have 3 heatsinks, on the 3 processors.
 
 ![Heat sink mounting](img/image36.png)
 
-{{%action%}}
 **Step \#2:** Mount a WaziHat on the Raspberry PI.
-{{%/action%}}
 
 Be careful to align correctly the pins in the arrays.
 
 ![WaziHat mounted](img/image28.png)
 
 
-{{%warning%}}
 **Note:** If you do not have a ***Wazihat*** board and want to use your own LoRa module, please refer to [this documentation](https://github.com/CongducPham/tutorials/blob/master/Low-cost-LoRa-GW-step-by-step.pdf).
-{{%/warning%}}
 
 
 Flashing
 =========
 
-{{%action%}}
 **Step \#1:** Download the latest version of the [Wazigate ISO image](https://downloads.waziup.io/).
-{{%/action%}}
 
 ![Save Wazigate ISO image](img/image34.png)
 
-{{%action%}}
 **Step \#2:** Download [Balena Etcher](https://www.balena.io/etcher/) and install it on your PC.
-{{%/action%}}
-
 
 ![Balena etcher](img/image10.png)
 
-
-{{%action%}}
 **Step \#3:** Open the ***Balena Etcher*** tool and select the downloaded zip file.
-{{%/action%}}
+
 
 ![Select the ISO image](img/image22.png)
 
-{{%action%}}
 **Step \#4:** Insert your SD card to your PC and when appear, select it in **Etcher**
-{{%/action%}}
 
 ![Select the SD card drive](img/image17.png)
 
-{{%warning%}}
- **Warning:** Your Micro SD card must be at least **8 GB**. **16 GB** is better.     
-{{%/warning%}}
-          
-If your laptop does not have the SD card reader, you need a USB adapter to connect your Micro SD card to your PC.  
+**Warning:** Your Micro SD card must be at least **8 GB**. **16 GB** is better.
 
-{{%action%}}
+          
+If your laptop does not have the SD card reader, you need a USB adapter to connect your Micro SD card to your PC.
+
 **Step \#5:** Click on **Flash** to start flashing.
-{{%/action%}}
 
 ![Flashing...](img/image27.png)
 
-{{%action%}}
 **Step \#6:** When Flashing is done, remove your Micro SD card and insert it into your raspberry pi.
-{{%/action%}}
 
 ![Flashing complete](img/image15.png)
 
@@ -113,19 +93,13 @@ Congratulations! Your hardware is now ready.
 Powering up Wazigate
 =====================
 
-{{%action%}}
 **Step \#1:** Attach the antenna
-{{%/action%}}
 
-{{%warning%}}
 **Very Important**: always connect the antenna first, before powering up your device.
-{{%/warning%}}
 
 ![Antenna attached](img/image41.png)
 
-{{%action%}}
 **Step \#2:** Plug the power cable (micro usb) into the gateway and plug the adapter to the outlet.
-{{%/action%}}
 
 ![Power adapter](img/image14.png)
 
@@ -138,9 +112,7 @@ Configuration
 Find the Wazigate Web UI
 ------------------------
 
-{{%action%}}
 **Step \#1:** Find the wazigate hotspot
-{{%/action%}}
 
 When you power up Wazigate for the first time, it usually does some self-configs and reboots itself.
 So, be patient, it might take a couple of minutes for you to see the Wazigate WiFi hotspot to connect to.                  
@@ -150,18 +122,14 @@ XXXXX usually is the ID of your gateway.
 
 ![Select WaziGate hotspot](img/image26.png)
 
-{{%action%}}
 **Step \#2:** Connect to the Wazigate WiFi hotspot
-{{%/action%}}
 
 ![Enter hotspot password](img/image38.png)
 
 The default password for the hotspot is ***loragateway***            
 Enter the password and click on connect.                        
                                 
-{{%action%}}
 **Step \#3:** Open the Wazigate Web UI.
-{{%/action%}}
 
 Wazigate is configured through a web user interface.
 When you connect to the Wazigate hotspot, you need to open your browser and go to one of the following addresses:
@@ -174,10 +142,8 @@ Then you should see something like this.
 
 Please enter the default username and password and click on **Login**.
 
-{{%warning%}}
 For security reasons, please change the default password as soon as you can see the profile page.
 This page can be found in the "User Profile" menu.
-{{%/warning%}}
 
 ![Password change](img/password_change.png)
 
@@ -186,59 +152,44 @@ This page can be found in the "User Profile" menu.
 Connecting to the Internet
 --------------------------
 
-{{%action%}}
 **Step \#1:** Select menu Settings/Wifi.
-{{%/action%}}
 
 A list of available Wifi networks will show up:
 ![Wifi list](img/wifi_list.png)
 
 Once Wazigate found all the available WiFi networks in range, click on the network that you want to connect to.
 
-{{%action%}}
 **Step \#2:** Enter the password for that network and click on "connect".
-{{%/action%}}
 
 ![wifi password](img/wifi_pass.png)
 
-{{%warning%}}
+
 **Warning:** Once you setup your WaziGate to connect to a WiFi network, you will lose the Hotspot connection.
-{{%/warning%}}
 
 If you enter your WiFi password correctly and the internet is available, after a few minutes you will be able to see it in your WaziCloud dashboard.
 
-{{%warning%}}
 **Note:** If Wazigate does not manage to connect to your WiFi due to wrong credentials or not being in the range of the WiFi router, it will rollback to the hotspot mode and you need to connect to it again and start over. *This might take a few minutes depending on the router.*
-{{%/warning%}}
 
 Registration with the Cloud
 ---------------------------
 
-{{%warning%}}
-If you do not have an account on [Waziup dashboard](https://dashboard.waziup.io/), you need to create one first.
-{{%/warning%}}
+**Attention** If you do not have an account on [Waziup dashboard](https://dashboard.waziup.io/), you need to create one first.
 
 A Waziup account enables you to receive all your sensor data in your dashboard and manage your Wazigate remotely.
 
-{{%action%}}
 **Step \#1:** Clik on the **Sync** menu.
-{{%/action%}}
+
 ![Sync page](img/sync.png)
 
-{{%action%}}
 **Step \#2:** Enter you Cloud Username and Password and click Save.
-{{%/action%}}
 
-{{%warning%}}
+
 You need to enter your CLOUD login/password, collected on https://dashboard.waziup.io/. 
 Do not enter your gateway password here.
-{{%/warning%}}
 
 ![Cloud login save](img/sync_save.png)
 
-{{%action%}}
 **Step \#3:** Flip the Active Sync ON.
-{{%/action%}}
 
 ![Active Sync](img/active_sync.png)
 
@@ -266,48 +217,40 @@ Use a web browser on your laptop and open http://<gateway IP>
 Verify Gateway Registration
 ---------------------------
 
-{{%action%}}
 **Step \#1:** Open the waziup dashboard
-{{%/action%}}
 
 Go to the [Waziup](https://waziup.io) website.
 
 ![Waziup.io website](img/image35.png)
 
-{{%action%}}
 **Step \#2:** Click on "Go to Dashboard" and enter your credentials and Login.
-{{%/action%}}
 
 
 ![Register a user](img/image37.png)
 
-{{%action%}}
 **Step \#3:** Click on Gateways.
-{{%/action%}}
 
 ![Gateways](img/image19.png)
 
 If everything went well so far, you should see your gateway in the list.
 
-{{%action%}}
+
 **Step \#4:** Click on your gateway.
-{{%/action%}}
 
 Your gateway details will open.
 
-{{%action%}}
 **Step \#5:** Then click on the "Remote access" button.
-{{%/action%}}
+
 
 ![Gateway details](img/image25.png)
 
-{{%action%}}
+
 **Step \#5:** Logging into your Wazigate.
-{{%/action%}}
+
 
 ![Remote login](img/remote_login.png)
 
-If you see something like this, then Congratulations! :) You made it.                   
+If you see something like this, then Congratulations! :) You made it.
 Now you can simply manage your gateway remotely through your Waziup dashboard.
 
 Sensor Device preparation
@@ -365,9 +308,8 @@ Once the keys filled in, save.
 
 ![Lorawan Keys](img/wazigate_lorawan_keys.png)
 
-{{%warning%}}
-You need to make 100% sure that the keys are equal. In particular, check that `AppSkey` and `NwkSkey` are not swapped.
-{{%/warning%}}
+**Attention:** You need to make 100% sure that the keys are equal. In particular, check that `AppSkey` and `NwkSkey` are not swapped.
+
 Please also make sure that the `DevAddr` is unique, i.e. you don't have two devices with the same `DevAddr`.
 
 You should also select XLPP (or the older LPP) as the payload encoding, as we recommend these low-power payloads for use with the Wazidev. Have a look at our [Arduino XLPP library](https://github.com/Waziup/arduino-xlpp) for example sketches, or check out the [CayenneLPP Arduino library from TheThingsNetwork](https://www.thethingsnetwork.org/docs/devices/arduino/api/cayennelpp/).
@@ -479,9 +421,7 @@ The following sections show the procedure for Windows, Mac and Linux.
 
 On Windows, do the following:
 
-{{%action%}}
 **Step \#1:** Open Control panel.
-{{%/action%}}
 
 Press  shortcut key combination Windows + R , type “control” and click ok button
 
@@ -489,17 +429,14 @@ Press  shortcut key combination Windows + R , type “control” and click ok bu
 
 Here click on "Network and Internet" menu and then "Network and sharing center".
 
-{{%action%}}
 **Step \#2:** Select sharing connection.
-{{%/action%}}
 
 Click on your internet connection and go to “Properties”.
 
 ![Select connection](img/image46.png)
 
-{{%action%}}
 **Step \#3:** Allow sharing connection.
-{{%/action%}}
+
 
 Switch to the “Sharing” tab and check the box to allow other users to connect to the internet through your computer.
 
@@ -512,9 +449,7 @@ The WaziGate should now have an IP. You can connect to it using this link: http:
 
 On Linux, do the following:
 
-{{%action%}}
 **Step \#1:** Open connection editor.
-{{%/action%}}
 
 Open the connection editor  through the terminal using the comand:
 ```
@@ -524,9 +459,7 @@ Open the connection editor  through the terminal using the comand:
 
 If `nm-connection-editor` if not present, you need to install it.
 
-{{%action%}}
 **Step \#2:** Sharing connection.
-{{%/action%}}
 
 When it opens, select the wired connection item, clicking the edit button. In that menu, switch to the IPv4 tab, and select the method: ‘shared to other computers’
 
@@ -542,16 +475,12 @@ The WaziGate should now have an IP. You can connect to it using this link: http:
 
 On Mac, do the following:
 
-{{%action%}}
 **Step \#1:** Open Sharing menu.
-{{%/action%}}
 
 -	Open System Preferences. It’s typically found on your dock, if not, it’s in your Applications folder.
 -	In System Preferences, under Internet & Wireless, go into the Sharing menu.
 
-{{%action%}}
 **Step \#2:** Sharing connection.
-{{%/action%}}
 
 In the Sharing menu, choose Internet Sharing from the list on the left. You will see Internet Sharing options.
 
