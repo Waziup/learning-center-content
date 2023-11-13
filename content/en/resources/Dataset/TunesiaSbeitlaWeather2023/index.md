@@ -1,6 +1,6 @@
 ---
-id: tunesia-sbtelia-weather-2023
-title: Tuneisa Sbeitla Weather 2023
+id: tunesia-sbeitla-weather-2023
+title: Tunisia Sbeitla Weather 2023
 type: dataset
 desc: Weather data from Sbeitla, Tunesia, as collected by Waziup e.V. in 2023 and made available for free.
 color: "#f1f1f1"
@@ -10,7 +10,7 @@ tags:
     - "2023"
 ---
 
-# Sbteile (Tunesia) Weather Station
+# Sbeitla (Tunesia) Weather Station
 
 ![Weather Station](https://img.shields.io/badge/Weather%20Station-cornflowerblue?style=flat-square&logo=rainmeter)
 [![Sbteila, Tunesia](https://img.shields.io/badge/Sbeitla%2C%20Tunesia-green?style=flat-square&logo=google%20maps&logoColor=white
@@ -58,6 +58,6 @@ https://www.google.de/maps/place/Sbeitla,+Tunesien
 
 Data has been binned to a 10 minute interval. It is available as CSV file.
 
-- [Sbteile CSV Dataset File 2023](dataset.csv)
+- [Sbeitla CSV Dataset File 2023](dataset.csv)
 
 Temperatures are in `°C`, Soil Tension in `hPa`.
