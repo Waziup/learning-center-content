@@ -1,6 +1,7 @@
 ---
 title: WaziCloud API
 type: spec
+rank: 2
 ---
 
 # API

@@ -21,5 +21,8 @@ The WAZIUP Cloud platform allows you to manage your sensors, actuators and IoT d
 
 ![Dashboard](img/cloud_dashboard.png)
 
-Go ahead and [try it](https://dashboard.waziup.io/)!
+Go ahead and [try the *WaziCloud Dashboard*](https://dashboard.waziup.io/)!
+
+WaziCloud also have an extensive *API* to store and retrieve your data, to manage your devices and to run your IoT applications.
+You can access it [here](https://api.waziup.io/docs).
 
