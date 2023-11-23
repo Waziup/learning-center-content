@@ -1,10 +1,7 @@
 ---
+id: intro_iot_mod
 title: Introduction to IoT
 description: The main fundamentals of IoT
-weight: -1 # weight 0 is not possible, so we do -1 here
-difficulty: beginner
-duration: 2h
-thumbnail: introduction_to_iot.webp
 ---
 
 

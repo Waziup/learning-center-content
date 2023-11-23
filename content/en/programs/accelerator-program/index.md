@@ -8,7 +8,7 @@ to: 2024-01-31
 
 ![hubiquitous logo](hubiquitous-logo.png)
 
-# Second Accelerator Program
+# The Accelerator Program
 
 
 ## What is the HUBIquitous Accelerator Program?
