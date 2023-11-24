@@ -1,4 +1,5 @@
 ---
+id: talent_prototyping_unit
 name: Prototyping
 desc: |
   Create your own IoT prototype using Waziup IoT hardware and software.

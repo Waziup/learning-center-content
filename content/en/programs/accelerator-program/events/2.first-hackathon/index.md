@@ -1,4 +1,5 @@
 ---
+id: acc_hackathon_event
 name: Hackathon
 desc: Initial hackathon and startup selection
 from: 2023-11-06

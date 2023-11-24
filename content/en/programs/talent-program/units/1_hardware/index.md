@@ -1,4 +1,5 @@
 ---
+id: talent_hardware_unit
 name: Hardware & Communications
 desc: |
   This unit will cover the basics of hardware and communications. It will

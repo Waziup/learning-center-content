@@ -1,4 +1,5 @@
 ---
+id: acc_codesign_unit
 name: Co-design sessions
 desc: We will perform co-design sessions with each startups to design precisely your products.
 delay_start: 2w

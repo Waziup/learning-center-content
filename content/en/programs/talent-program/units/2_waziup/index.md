@@ -1,4 +1,5 @@
 ---
+id: talent_waziup_unit
 name: Getting Started with Waziup Technologies
 desc: |
   This unit will cover the basics of Waziup technologies. It will introduce
