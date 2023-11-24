@@ -1,24 +1,24 @@
 ---
-id: tunesia-sbeitla-weather-2023
+id: tunisia-sbeitla-weather-2023
 title: Tunisia Sbeitla Weather 2023
 type: dataset
-desc: Weather data from Sbeitla, Tunesia, as collected by Waziup e.V. in 2023 and made available for free.
+desc: Weather data from Sbeitla, Tunisia, as collected by Waziup e.V. in 2023 and made available for free.
 color: "#f1f1f1"
 tags:
     - Waziup
-    - Tunesia
+    - Tuni/sia
     - "2023"
 ---
 
-# Sbeitla (Tunesia) Weather Station
+# Introduction
 
 ![Weather Station](https://img.shields.io/badge/Weather%20Station-cornflowerblue?style=flat-square&logo=rainmeter)
-[![Sbteila, Tunesia](https://img.shields.io/badge/Sbeitla%2C%20Tunesia-green?style=flat-square&logo=google%20maps&logoColor=white
+[![Sbteila, Tunisia](https://img.shields.io/badge/Sbeitla%2C%20Tunesia-green?style=flat-square&logo=google%20maps&logoColor=white
 )](https://www.google.de/maps/place/Sbeitla,+Tunesien)
 ![12k Values](https://img.shields.io/badge/12k-Values-gray?style=flat-square&labelColor=lightgray
 )
 
-Starting Feb. 2023 Waziup started collecting weather data from a weather station in Sbeitla, Tunesia. The data is collected every 5 minutes from a remote wather station and transmitted to a [WaziGate](https://lab.waziup.io/resources/waziup/wazigate) nearby. The data is available for free for everyone.
+Starting Feb. 2023 Waziup started collecting weather data from a weather station in Sbeitla, Tunisia. The data is collected every 5 minutes from a remote wather station and transmitted to a [WaziGate](https://lab.waziup.io/resources/waziup/wazigate) nearby. The data is available for free for everyone.
 
 ![On-Site Weather Station](on-site.webp)
 
@@ -46,7 +46,7 @@ SenseCAP LoRaWAN S2120 Weather Station collects and uploads air temperature, hum
 
 https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html
 
-# Sbteile (Tunesia) Location
+# Location
 
 Sbeitla or Sufetula is a small town in west-central Tunisia. Nearby are the Byzantine ruins of Sufetula, containing the best preserved Byzantine forum temples in Tunisia. It was the entry point of the Muslim conquest of North Africa.
 
