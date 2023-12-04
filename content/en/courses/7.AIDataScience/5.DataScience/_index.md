@@ -6,13 +6,13 @@ difficulty: advanced
 duration: 7h
 ---
 
-This course will show how to analyse IoT data, using Python. The first thing to do is to import, clean and prepare the data for analysis. We will then show various techniques to extract information from the data. 
+This course will show how to analyse IoT data, using Python. The first thing to do is to import, clean and prepare the data for analysis. We will then show various techniques to extract information from data. 
 
 
 Definition
 =========
 
-Data Science a branch of computer science where we study how to store, use and analyze data for deriving information from it.
+Data Science is a branch of computer science where we study how to store, use and analyze data for deriving information from it.
 
 Finding important insights within mountains of complicated or seemingly unimportant data is the ultimate goal of data science. Data science frequently focuses on creating the models and algorithms that will be used during the data analysis process rather than actually performing the analysis itself.
 
@@ -27,7 +27,8 @@ A car next to you stops automatically when a pedestrian steps in front of it, an
 Let's now examine each discipline's foundations before examining how machine learning supports data science.
 
 How does machine learning work?
-The science of machine learning entails creating algorithms that can change without human intervention by learning from data on their own. These algorithms develop their own logic as we provide data to them, resulting in solutions that are applicable to a variety of aspects of our world, including:
+The science of machine learning entails creating algorithms that can change without human intervention by learning from data on their own. These algorithms develop their own logic as we provide data to them, resulting in solutions that are applicable to a variety of aspects of our world, including e.g.:
+
 - fraud detection
 - web searches
 - tumor classification
@@ -55,14 +56,16 @@ For instance, a supervised algorithm might calculate a home's value after examin
 
 Despite the fact that these machine-learning models are very popular, humans are still required to determine the ultimate implications of data analysis. It's up to us humans to interpret the findings or make choices about, say, how to clean the data.
 
-Machine-Learning Algorithms in Data Science.
+Machine-Learning Algorithms in Data Science:
+-------------------------------------------
+
 Let's now examine six popular machine-learning techniques that are applied to analyze data. We will discuss some of their real-world applications in addition to reviewing their structure.
 
 The most important machine learning techniques in data science are:
 - **Regression** is a supervised learning technique used to predict a numerical value given a set of input features. It is commonly used to predict continuous values like stock prices, house prices, or sales figures.
 - **Classification** is a supervised learning technique used to predict a categorical value given a set of input features. It is commonly used to classify images or documents into different classes.
 - **Clustering** is an unsupervised learning technique used to group similar data points together. It is used to identify underlying structures in the data and is commonly used in customer segmentation. 
-- **Decision Tree** are a supervised learning technique used to make decisions based on a set of input features. It is used to create a model that can classify data points into different classes.
+- **Decision Trees** are a supervised learning technique used to make decisions based on a set of input features. It is used to create a model that can classify data points into different classes.
 - **Neural Networks** are a type of deep learning algorithm that is used to classify data points into different classes. 
 - **Anomaly Detection** is an unsupervised learning technique used to detect outliers or anomalies in data. It is used to identify unusual patterns or events in data that could signify a potential problem.
 
@@ -73,7 +76,7 @@ We examine how machine learning can scale and automate data analysis in this cou
 Data preparation and problem definition
 ================
 
-In this step it is being discussed on how to prepare the data you want analyze.
+In this point it is being discussed on how to prepare the data we want to analyze.
 
 ## How to approach a machine learning problem
 
@@ -253,6 +256,10 @@ A more in-depth mathematical explanation of the r2 score is given by Paul Johnso
 
 How to retrieve values from the WaziCloud platform
 ================
+
+Retrieve values in JSON via curl
+--------------------------------
+
 Get desired values via the **curl** command. In the following data is being retrieved from the WaziGate 
 
 You can get an overview about the possible queries from WaziCloud by visiting [Swagger](https://api.waziup.io/docs/#/Sensors/get_devices__device_id__sensors__sensor_id__values "Swagger").
@@ -307,6 +314,19 @@ plt.plot(temp_vals)
 plt.show()
 ```
 Now you can start using the retrieved data. A next step would be to clean, interpolate and prepare the data for analysis.
+
+Download values in *.csv
+------------------------
+
+You can also download the gateway's data in *.csv file format. You can use to perform a backup, to have all data in one place and for machine learning applications. There are three possibilities to do so:
+
+![Export section of the WaziGate.](img/export.png)
+<p style="text-align: center;">Export section of the WaziGate.
+</p>
+
+- Export the data of all sensors and actuators to a tree of CSV files
+- Export the data of all sensors and actuators to one CSV file
+- Export the data of all sensors and actuators to one CSV file. Additionally it also includes custom timespans and all data can be summarized in time bins. This is perfect for machine learning applications.
 
 Linear Regression
 =================
@@ -420,7 +440,7 @@ PyCaret is an alternative low-code library to the other open-source machine lear
 Pycaret has a comprehensive [tutorial section](https://pycaret.gitbook.io/docs/get-started/installation) everything is explained in detail there.
 
 It can be used to tackle problems for different applications, most important ones are:
-- Classifiction
+- Classification
 - Regression
 - Clustering
 - Anomaly Detection
@@ -430,9 +450,13 @@ It can be used to tackle problems for different applications, most important one
 
 There are [notebooks](https://pycaret.gitbook.io/docs/get-started/tutorials) provided for different applications, mentioned beforehand.
 
+**Disadvantages**
+
+Documentation of pycaret is not that comprehensive. Due to the fact, that is a low code framework, you give those simple functions many arguments, which makes it also hard to read sometimes.
+
 In the following we will have some practical examples in two areas: **Regression and Time Series Forecasting**
 
-### Regression 
+### **Regression** 
 
 Pycaret let's you compare 25 different regression algorithms, some of them are just named in the following:
 - Gradient Boosting Regressor
@@ -464,6 +488,7 @@ First we load some example data, in this case it is insurance data.
 # load the example dataset
 data = get_data('insurance')
 ```
+
 The next step is it to setup the objective, here we hand over the loaded data and set the target, we want to estimate. Here the charges are the target variable.
 
 ```python
@@ -483,6 +508,7 @@ Here we took a "Light Gradient Boosting Machine"
 # create a promising model from the list
 lightgbm = create_model('lightgbm')
 ```
+
 Here we train the model with different learning rates to avoid effects like overfitting.
 
 ```python
@@ -562,18 +588,18 @@ print(loaded_bestmodel)
 Those are the basic steps involved on how to create models, chose the most suitable ones, improve them, analyze them and save/load them. Normally it would involve much more work and analysis, but the low code framework makes those easy to implement and efficient, which leaves more time interpret results and fast prototyping.
 
 
-### Time Series Forecasting
+### **Time Series Forecasting**
 
-On the basis of confirmed historical data, time series models are used to forecast events. Moving average, smooth-based types, and ARIMA are typical examples. It's important to choose the model that works best based on the individual time series because not all models will produce the same results for the same dataset.
+On the basis of confirmed historical data, time series models are used to forecast events. Moving average, smooth-based types and Autoregressive integrated moving average (ARIMA) are typical examples. It's important to choose the model that works best based on the individual time series because not all models will produce the same results for the same dataset.
 
 It's crucial to know your goal when forecasting. Ask questions about: to help you focus in on the particulars of your predictive modeling issue.
 
 The amount of data that is available; more data is frequently more beneficial, providing more opportunity for exploratory data analysis, model testing and tuning, and model fidelity.
 Shorter time horizons are frequently easier to predict with greater confidence than longer ones.
 Frequency of forecast updates: Forecasts may need to be revised frequently over time or they may only need to be created once and then remain static (updating forecasts as new information becomes available frequently yields more accurate predictions).
-Forecast temporal frequency — Often, forecasts can be made at lower or higher frequencies, enabling the ue of data up-sampling and down-sampling (which can be useful for modeling).
+Forecast temporal frequency — Often, forecasts can be made at lower or higher frequencies, enabling the use of data up-sampling and down-sampling (which can be useful for modeling).
 
-In the following there is an example, taken from the [GitHub repository of PyCaret](https://github.com/pycaret/pycaret/blob/master/examples/TimeSeries_Forecasting.ipynb).
+In the following there is an example, taken from the [GitHub repository of PyCaret](https://github.com/pycaret/pycaret/blob/3.0.0.rc7/examples/TimeSeries_Forecasting.ipynb).
 
 Since January 1, 2012, every wholesale liquor purchase made by retailers in the state of Iowa for sale to consumers is included in this dataset.
 
@@ -751,7 +777,6 @@ plot_series(test.index, unseen_predictions['Label'],"Baseline")
 To **compare the prediction with our baseline** test set we introduce a different metric:
 
 ```python
-
 def calc_smape(y_hat, y):
         return 100/len(y) * np.sum(2 * np.abs(y_hat - y) / (np.abs(y) + np.abs(y_hat)))
 
