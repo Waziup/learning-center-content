@@ -3,7 +3,7 @@ id: acc_business_unit
 name: Business Plan 
 desc: We will prepare your business plan 
 delay_start: 2w
-duration: 3w
+duration: 1w
 courses:
   - id: waziup/business-support/business-model-canvas
 ---

@@ -3,7 +3,7 @@ id: acc_test_unit
 name: Test and validation
 desc: Testing and preparing your prototype for demo
 delay_start: 9w
-duration: 3w
+duration: 1w
 ---
 
 During this phase, you will validate your prototype and prepare for the final demo.
