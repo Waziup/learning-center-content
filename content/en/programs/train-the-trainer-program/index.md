@@ -1,7 +1,7 @@
 ---
 id: ttt_program
 name: Train the Trainer Program
-desc: With this program, you will learn how to create new products and services based on IoT, in collaboration with European and African DIHs/TechHubs. It aims to improve the innovation capacity for entrepreneurs and start-ups.
+desc: A comprehensive program covering fundamental IoT concepts, hardware, application development and how to make Hubs to be self sustainable.
 from: 2023-02-19
 to: 2024-03-29
 ---
