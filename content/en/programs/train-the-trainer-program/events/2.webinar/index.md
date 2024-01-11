@@ -3,6 +3,7 @@ id: waziup-intro_event
 name: Introducing Waziup Technologies
 desc: Introductory meeting oon waziup technologies and ecosystem.
 delay_start: 1d
+from: 2024-02-26
 ---
 
 **Online Webinar**

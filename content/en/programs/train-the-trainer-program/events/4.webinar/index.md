@@ -3,6 +3,7 @@ id: prototyping-workshop-event
 name: Data analysis, visualisations and AI Workshop
 desc: Online session on data analysis and artificial intelligence concepts.
 delay_start: 1d
+from: 2024-03-11
 ---
 
 **Online Webinar**
