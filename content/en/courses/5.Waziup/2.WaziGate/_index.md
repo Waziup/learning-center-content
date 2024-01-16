@@ -13,6 +13,11 @@ Let's start this lesson on the WaziGate with a tour of its parts and features.
 
 <youtube>QCZssYIdKss</youtube>
 
+WaziGate contains a full LoRaWAN stack, with Network Server, Application Server and UIs. Those components are provided by Chirpstack. It is able to decrypt completely the LoRaWAN frames. The decrypted data can be used locally by the WaziApps. It is also pushed to the Cloud API. The following diagram shows the architecture:
+
+
+
+
 OS installation
 ===============
 

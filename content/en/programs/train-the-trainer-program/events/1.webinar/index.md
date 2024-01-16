@@ -6,7 +6,7 @@ delay_start: 1d
 from: 2024-02-19
 ---
 
-**Online Webinar**
+Online Webinar
 
 February 19th, 2024  
 2:00 PM - 3:30 PM, Central European Time.
