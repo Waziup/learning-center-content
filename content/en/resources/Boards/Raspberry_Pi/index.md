@@ -1,7 +1,7 @@
 ---
-id: Raspberry-Pie-res
-title: raspberry Pi
-type: boards
+id: Raspberry-Pi-res
+title: Raspberry Pi
+type: hardware
 desc: A mini computer
 color: "#acbbd7"
 tags:
