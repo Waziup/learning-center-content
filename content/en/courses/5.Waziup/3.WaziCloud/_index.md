@@ -24,7 +24,10 @@ Finally, the “projects” feature is demonstrated, allowing the user to conven
 
 <youtube>e3lnWpQQRpc</youtube>
 
-The full WaziCloud documentation is [here](https://www.waziup.io/documentation/wazicloud/dashboard/).
+### Resources
+- Full Documentation: [WaziCloud](https://www.waziup.io/documentation/wazicloud/dashboard/)
+
+
 
 Registration
 ============
@@ -46,7 +49,11 @@ All communications will be secured by SSL.
 You will receive an email to confirm your registration.
 Once registered, you can now log in.
 
-**IMPORTANT: Once created your login and password, [you need to insert them in your gateway](https://lab.waziup.io/resources/waziup/wazigate).**
+> :warning: **Warning:** Do not push the big red button.
+
+> [!IMPORTANT]  
+> Once created your login and password, [you need to insert them in your gateway](https://lab.waziup.io/resources/waziup/wazigate).
+
 
 Devices
 =======

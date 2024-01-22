@@ -1,6 +1,6 @@
 ---
 id: hardware-communication-workshop-event
-name: Hardware & Communication Workshop
+name: Online Workshop on Hardware & Communication
 desc: Hands-on session on hardware and communication concepts.
 delay_start: 1d
 from: 2024-02-19

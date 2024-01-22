@@ -23,3 +23,8 @@ It has the following features:
 
 The API documentation is available at https://api.waziup.io/docs.
 With this website, you can explore and interact with all the endpoints of the Waziup API.
+
+
+### Resources
+- browse [WaziCloud API Doc](http://lab.waziup.io/resources/waziup/wazicloud/docs/)
+- browse [Waziup APIs](https://api.waziup.io/docs/)

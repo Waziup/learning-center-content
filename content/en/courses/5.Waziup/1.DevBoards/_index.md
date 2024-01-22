@@ -16,6 +16,11 @@ Welcome to  the **WaziDev Board Series** course, where we dive into the innovati
 
 <youtube>ir_EQOdyZQA</youtube>
 
+### Resources
+- browse [WaziDev](http://lab.waziup.io/resources/waziup/wazidev)
+- browse [WaziAct](http://lab.waziup.io/resources/waziup/waziact)
+- browse [WaziSense](http://lab.waziup.io/resources/waziup/wazisense)
+
 WaziDev
 ========
 **Overview**
@@ -47,6 +52,10 @@ WaziDev is a Sensing and Actuation development board for IoT applications. It tr
 - SRAM: 2 KB
 - EEPROM: 1 KB
 - Clock Speed: 8 MHz
+
+### Resources
+- browse [WaziDev](http://lab.waziup.io/resources/waziup/wazidev)
+
 
 WaziSense
 ==========
@@ -80,6 +89,9 @@ The wazisense is an all in one style development board for projects involving ou
 - SPI: 1
 - I2C: 1
 
+### Resources
+- browse [WaziSense](http://lab.waziup.io/resources/waziup/wazisense)
+
 WaziHat Pro Single
 ==================
 **Overview**
@@ -102,6 +114,9 @@ Wazihat sits on top of the raspberry pi to enable it to communicate with sensor 
 - Max Current Draw in Operation: 120 mA
 - Standby Current Draw: 1.8 mA
 - Sleep Current Draw: 1 uA
+
+### Resources
+- browse [WaziHat Pro Signle](http://lab.waziup.io/resources/waziup/wazihat-pro-single)
 
 WaziAct
 ========
@@ -135,8 +150,6 @@ The WaziAct is an all-in-one development board for projects involving the great 
 - EEPROM: 1 KB
 - Clock Speed: 8 MHz
 
+### Resources
+- browse [WaziAct](http://lab.waziup.io/resources/waziup/waziact)
 
-References
-==========
-
-You can find the user manual of WaziDev [here](https://www.waziup.io/documentation/wazidev/).
