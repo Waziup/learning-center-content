@@ -1,7 +1,7 @@
 ---
 id: Raspberry-Pi-res
 title: Raspberry Pi
-type: boards
+type: hardware
 desc: A mini computer
 color: "#acbbd7"
 tags:
@@ -50,7 +50,7 @@ PCIe 2.0 x1 interface for fast peripherals (requires separate M.2 HAT or other a
 
 The Raspberry Pi has continually evolved, providing a range of options catering to various needs, from simple educational projects to more complex applications. Understanding the differences between the versions helps users choose the right Raspberry Pi for their specific requirements.
 
-### Model
+### Models
 - Raspberry Pi 5
 - Raspberry Pi 4
 - Raspberry Pi 3
