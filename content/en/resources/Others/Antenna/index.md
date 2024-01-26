@@ -31,12 +31,15 @@ In comparison to other IoT antennas like Chip and Whip, wire antennas are more c
 Among the most expensive of the often used antennas, whip antennas are among the best-performing IoT antennas. They physically connect to the PCB via a coaxial connector and are often placed outside the device container. A popular kind of monopole antenna that works well for wireless communication in ISM, LoRa, and LPWAN-based applications is the whip antenna. Whip antennas are perfect for designs that make use of several transceivers, like walkie-talkies, cars, routers, gateways, and hand-held radios.
 
 ![Alt text](<img/whip antenna.jpg>)
+
 ## Antenna on PCB
 Antenna on PCB (AoPCB) is the term for the antenna or antenna pattern which is embedded on a PCB utilizing modern manufacturing technologies. These technologies are usually copper traces on circuit boards. Because PCB antennas can combine antenna design at a fundamental level, they are inexpensive and provide significant design freedom. Antennas on PCBs have the disadvantage of taking up space on the circuit board, which can be very problematic in designs that are extremely sophisticated or ultra-compact and have a lot of sensors and components. These antennas are perfect for robotics, automobiles, and USB dongles.
 
 ![Alt text](<img/antenna on PCB.png>)
 
-# Antennas for LoRa devices
+
+# Antennas for LoRa device
+
 
 Wireless signals for LoRa devices and networks are sent and received by LoRa antennas. Long-range communications via unlicensed radio frequencies are made possible by a spread spectrum modulation technique known as LoRa, or long-range communications.
 

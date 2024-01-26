@@ -19,96 +19,50 @@ With its many features, including HDMI outputs, USB ports, and GPIO (General Pur
 
 ![Alt text](img/Raspberry-Pi-5.jpg)
 
-# Existing Models of Raspberry Pie
-## Raspberry Pi 1 Series
-   
-### Raspberry Pi Model A
-   *Release Date: February 2013*
 
-Key Features:
-- Processor: Broadcom BCM2835 SoC
-- Memory: 256MB RAM
-- Connectivity: 1x USB 2.0 port, HDMI and composite video output
-- Expansion: GPIO (General Purpose Input/Output) pins for hardware interfacing
-
-
-### Raspberry Pi Model B
-*Release Date: February 2013*
-
-Additional Features:
-- Processor: Broadcom BCM2835 SoC
-- Memory: 512MB RAM
-- Connectivity: 2x USB 2.0 ports, 10/100 Ethernet port
-- Expansion: GPIO pins, DSI (Display Serial Interface), CSI (Camera Serial Interface)
-
-## Raspberry Pi 2 Series
-
-### Raspberry Pi 2 Model B
-*Release Date: February 2015*
-
-Key Upgrades:
-- Processor: Quad-core ARM Cortex-A7 CPU
-- Memory: 1GB RAM
-- Connectivity: 4x USB 2.0 ports, HDMI, DSI, CSI
-- Expansion: GPIO pins
-
-
-## Raspberry Pi 3 Series
-
-### Raspberry Pi 3 Model B
-*Release Date: February 2016*
-
-Notable Features:
-- Processor: Quad-core ARM Cortex-A53 CPU
-- Memory: 1GB RAM
-- Connectivity: 4x USB 2.0 ports, HDMI, DSI, CSI
-- Wireless: Built-in Wi-Fi (802.11n) and Bluetooth 4.1
-- Expansion: GPIO pins, 40-pin header
-
-
-### Raspberry Pi 3 Model B+
-*Release Date: March 2018*
-
-Enhancements:
-- Processor: Quad-core ARM Cortex-A53 CPU
-- Memory: 1GB RAM
-- Connectivity: 4x USB 2.0 ports, HDMI, DSI, CSI
-- Wireless: Dual-band Wi-Fi (802.11ac) and Bluetooth 4.2
-- Networking: Gigabit Ethernet
-- Expansion: GPIO pins, 40-pin header
-
-## Raspberry Pi 4 Series
-
-### Raspberry Pi 4 Model B
-*Release Date: June 2019*
-
-Significant Upgrades:
-- Processor: Quad-core Cortex-A72 CPU
-- Memory: Options for 2GB, 4GB, or 8GB LPDDR4 RAM
-- Connectivity: 2x USB 3.0 ports, 2x USB 2.0 ports, 2x micro HDMI ports for dual 4K display support, USB-C for power
-- Networking: True Gigabit Ethernet
-- Expansion: GPIO pins, 40-pin header
-
-
-## Raspberry Pi Pico
-*Release Date: January 2021*
-
-- Microcontroller Board:
-- Microcontroller: RP2040 dual-core ARM Cortex-M0+
-- Memory: 264KB RAM
-- Connectivity: 26x GPIO pins, 3x ADC channels, 2x UART, I2C, SPI
-- Features: Programmable I/O, flexible clock frequency
-  
-
-The Raspberry Pi has continually evolved, providing a range of options catering to various needs, from simple educational projects to more complex applications. Understanding the differences between the versions helps users choose the right Raspberry Pi for their specific requirements.
-
-# Features of Raspberry Pie
+# Features 
 
 On initial interaction with Raspberry Pi designs, an inexperienced computer user may find them slightly confusing. The board has a number of embedded features, each with a unique purpose. In general, the many features regulate the characteristics of a typical computer in the twenty-first century, including peripheral port connectivity, Bluetooth, processor quality and speed, and software compatibility. All things are made possible by the characteristics of Raspberry Pi computers.
 
 ![Alt text](img/Features_of_RPi.png)
 
+# Specifications
 
-# Getting Started with Raspberry Pi
-If this is your first time with Raspberry Pie then click [here](https://www.raspberrypi.com/documentation/computers/getting-started.html) to learn more on how to get started with RPi from their official raspberry Pie documentation.
+- Broadcom BCM2712 2.4GHz quad-core 64-bit Arm Cortex-A76 CPU, with cryptography extensions, 512KB per-core L2 caches and a 2MB shared L3 cache
+VideoCore VII GPU, supporting OpenGL ES 3.1, Vulkan 1.2
+- Dual 4Kp60 HDMI® display output with HDR support
+4Kp60 HEVC decoder
+- LPDDR4X-4267 SDRAM (4GB and 8GB SKUs available at launch)
+- Dual-band 802.11ac Wi-Fi®
+- Bluetooth 5.0 / Bluetooth Low Energy (BLE)
+microSD card slot, with support for high-speed SDR104 mode
+- 2 × USB 3.0 ports, supporting simultaneous 5Gbps operation
+- 2 × USB 2.0 ports
+Gigabit Ethernet, with PoE+ support (requires separate PoE+ HAT)
+- 2 × 4-lane MIPI camera/display transceivers
+PCIe 2.0 x1 interface for fast peripherals (requires separate M.2 HAT or other adapter)
+- 5V/5A DC power via USB-C, with Power Delivery support
+- Raspberry Pi standard 40-pin header
+- Real-time clock (RTC), powered from external battery
+- Power button
+
+# Existing Models of Raspberry Pie
+
+The Raspberry Pi has continually evolved, providing a range of options catering to various needs, from simple educational projects to more complex applications. Understanding the differences between the versions helps users choose the right Raspberry Pi for their specific requirements.
+
+### Models
+- Raspberry Pi 5
+- Raspberry Pi 4
+- Raspberry Pi 3
+- Raspberry Pi 2
+- Raspberry Pi 1 Model B+
+- Raspberry Pi 1 Model A+
+- Raspberry Pi Zero
+
+# Raspberry Pi as Wazigate
+WaziGate is an IoT LoRaWAN Gateway, ideal for all your remote IoT applications. To learn more on how to use Raspberry Pi as Wazigate , click [here](https://lab.waziup.io/resources/waziup/wazigate).
+
+# Learn more
+If this is your first time with Raspberry Pi then click [here](https://www.raspberrypi.com/documentation/computers/getting-started.html) to learn more on how to get started with RPi from their official Raspberry Pie documentation.
+
 ![Alt text](img/Getting_started_with_RPi.png)
