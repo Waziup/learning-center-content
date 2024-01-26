@@ -31,7 +31,7 @@ MQTT follows a publish-subscribe architecture, which involves two major componen
 
 A broker is a central intermediary/server responsible for managing the communication between publishers and subscribers
 
-![Messages flow from publisher to subscriber in broker](./img/broker.webp)
+![Messages flow from publisher to subscriber in broker](./img/broker.png)
 
 Here are example of common broker services,
 
@@ -43,7 +43,7 @@ Here are example of common broker services,
 
 **Publish-subscribe architecture**
 
-![MQTT Publish-subscribe artchitecture](./img/pub_sub.webp)
+![MQTT Publish-subscribe artchitecture](./img/pub_sub.png)
 
 In MQTT messages are published on topics. Clients receive messages by subscribing to topics. From the figure above, the publisher publishes a sensor temperature value of 21.9 to the temperature topics. Topics are simple strings treated as a hierarchy, using a slash (/) as a separator.
 
