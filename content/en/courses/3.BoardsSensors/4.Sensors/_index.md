@@ -287,6 +287,11 @@ we can also setup notifications on WaziCloud, for when the relay turns ON or OFF
 
 Distance Sensors
 =================
+Distance sensors (or proximity sensors) generally work by outputting a signal of some kind, (eg laser, IR LED, ultrasonic waves) and then reading how it has changed on its return. That change may be in the intensity of the returned signal or the time it takes the signal to return.
+
+![Alt text](img/distance-sensing-image.jpg)
+
+Here we are going to use waterproof ultrasonic sensor SR04 to learn the process of wiring and programming an ultrasonic sensor.
 
 ### Here's what we will be learning:
 - What parts are needed
