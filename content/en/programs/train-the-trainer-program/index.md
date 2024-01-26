@@ -8,7 +8,7 @@ to: 2024-03-29
 
 <!-- ![hubiquitous logo](hubiquitous-logo.png) -->
 
-### Unlock IoT Excellence
+### Overview
 
 <!-- | **Level**             | Beginner                                                               |
 |-----------------------|------------------------------------------------------------------------|
@@ -47,6 +47,5 @@ The Techub Catalyst Program intends to bring at least 10 African Tech Hubs to a 
 
 ### Documentation
 
-Download the [accelerator handbook](https://hubiquitous.eu/wp-content/uploads/2022/05/Hubiquitous-1st-Open-Call-Guide-for-Applicants.pdf)!
+Download the [accelerator handbook](https://hubiquitous.eu/wp-content/uploads/2022/05/Hubiquitous-1st-Open-Call-Guide-for-Applicants.pdf)
 
-## Contacts
