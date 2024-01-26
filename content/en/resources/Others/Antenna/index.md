@@ -19,7 +19,7 @@ The numerous types of IoT antennas that are frequently employed in IoT devices a
 ## Chip Antennas
 Chip antennas have a limited bandwidth and are tiny in size. Larger ground planes help them function better, which could make integrating a board with a high component density more difficult. Due to their short range, chip antennas are the best option for small IoT devices like Computers, GPS devices, satellite radios, and others that employ low-frequency bands.
 
-![Alt text](img/chip antenna.png)
+![Alt text](img/chip_antenna.png)
 
 ## Wire Antennas
 In comparison to other IoT antennas like Chip and Whip, wire antennas are more cost-effective. Antenna size grows as frequency decreases since wire antenna size is inversely related to frequency, which can present design issues. Wire antennas provide good radio frequency performance and can be mounted to the PCB over a ground plane or linked via coaxial cable. They come in a variety of patterns and shapes, including dipole, loop, and helix. These antennas are widely utilized in connected automobiles, smart building solutions, and other applications.
