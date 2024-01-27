@@ -1,10 +1,15 @@
-# <u> MQTT </u>
+---
+id: mqtt_course
+title: "MQTT for embbeded programming"
+descripton: "MQTT can be used to communicate with your remote devices and sensors"
+---
 
-## Introduction
+
+# Introduction
 
 MQTT is a messaging protocal for Internet of Things (IoT). The protocal is designed for transporting messages under low bandwidth. MQTT has find its applications in industries like automotive industry, manufacturing, and telecommunication.
 
-## MQTT Publish & Subscribe model
+# MQTT Publish & Subscribe model
 
 MQTT follows a publish-subscribe architecture, which involves two major components: **publishers** and **subscribers**.
 
@@ -26,7 +31,7 @@ MQTT follows a publish-subscribe architecture, which involves two major componen
 
 A broker is a central intermediary/server responsible for managing the communication between publishers and subscribers
 
-![Messages flow from publisher to subscriber in broker](./img/broker.webp)
+![Messages flow from publisher to subscriber in broker](./img/broker.png)
 
 Here are example of common broker services,
 
@@ -38,7 +43,7 @@ Here are example of common broker services,
 
 **Publish-subscribe architecture**
 
-![MQTT Publish-subscribe artchitecture](./img/pub_sub.webp)
+![MQTT Publish-subscribe artchitecture](./img/pub_sub.png)
 
 In MQTT messages are published on topics. Clients receive messages by subscribing to topics. From the figure above, the publisher publishes a sensor temperature value of 21.9 to the temperature topics. Topics are simple strings treated as a hierarchy, using a slash (/) as a separator.
 
@@ -46,7 +51,7 @@ The subscribers, having subscribed to the topic, they will receive the message f
 
 To learn more on MQTT, you can refer to [https://mqtt.org/](https://mqtt.org/).
 
-## Why use MQTT
+# Why use MQTT
 
 - Lightweight and efficient and can therefore be used in resource contrained devices that need real time communication
 - MQTT can handle bi-directional communication, hence providing real time communication
@@ -54,7 +59,7 @@ To learn more on MQTT, you can refer to [https://mqtt.org/](https://mqtt.org/).
 - The protocal is sucre, transfering messages in encrypted formats
 - Reliable in sending messages in IoT use cases. This is because it has Quality of Services (QoS)
 
-## Using MQTT with microcontrollers
+# Using MQTT with microcontrollers
 
 ESP8266 will be used to impement the MQTT architecture.
 

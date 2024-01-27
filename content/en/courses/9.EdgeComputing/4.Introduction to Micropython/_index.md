@@ -1,6 +1,10 @@
-# <u> Introduction to Micropython </u>
+---
+id: micropython_course
+title: "Micropython"
+descripton: "Micropython is ..."
+---
 
-## Overview
+# Overview
 Are you interested with learning IoT, and building connected devices? If so, you're in luck Micropython can help you build all these fun stuff and a lot more. In this course you will learn
 - Differences between MicroPython and other programming languages
 - Advantages
@@ -8,7 +12,7 @@ Are you interested with learning IoT, and building connected devices? If so, you
 - GPIO Programming with Micropython
 - Micropython use cases
 
-## What is Micropython
+# What is Micropython
 
 Python has been growing its popularity in the developer community, being used from DevOps, statistical analysis and also desktop services. With the need to elevate python use to be used in microcontrollers, the MicroPython language was introduced.
 
@@ -33,7 +37,7 @@ The two languages share the same syntax but differ in their implementation, use 
 - **Interactive development** <br>
     - Micropython emphasizes on Read-Eval-Print-Loop (REPL) in development. This feature offers developers with ability to rest code interactively. CPython offers the interactive feature, but emphasis on this is used in writing scripts.
 
-## Basics of Micropython
+# Basics of Micropython
 
 **Installation**
 
@@ -84,7 +88,7 @@ led_status = 'ON'
 print_led_status(led_status)
 ```
 
-## GPIO Programming with micropython
+# GPIO Programming with micropython
 Required hardware
 
 1. LED x1
@@ -104,7 +108,7 @@ led.value(0)           # Turn off the LED
 
 ```
 
-## Micropython use cases
+# Micropython use cases
 
 1. **Devices for the Internet of Things (IoT)**
 

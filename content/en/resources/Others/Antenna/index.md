@@ -19,23 +19,23 @@ The numerous types of IoT antennas that are frequently employed in IoT devices a
 ## Chip Antennas
 Chip antennas have a limited bandwidth and are tiny in size. Larger ground planes help them function better, which could make integrating a board with a high component density more difficult. Due to their short range, chip antennas are the best option for small IoT devices like Computers, GPS devices, satellite radios, and others that employ low-frequency bands.
 
-![Alt text](<img/chip antenna.png>)
+![Alt text](img/chip_antenna.png)
 
 ## Wire Antennas
 In comparison to other IoT antennas like Chip and Whip, wire antennas are more cost-effective. Antenna size grows as frequency decreases since wire antenna size is inversely related to frequency, which can present design issues. Wire antennas provide good radio frequency performance and can be mounted to the PCB over a ground plane or linked via coaxial cable. They come in a variety of patterns and shapes, including dipole, loop, and helix. These antennas are widely utilized in connected automobiles, smart building solutions, and other applications.
 
-![Alt text](<img/wire antenna.jpg>)
+![Alt text](img/wire_antenna.jpg)
 
 ## Whip Antennas
 
 Among the most expensive of the often used antennas, whip antennas are among the best-performing IoT antennas. They physically connect to the PCB via a coaxial connector and are often placed outside the device container. A popular kind of monopole antenna that works well for wireless communication in ISM, LoRa, and LPWAN-based applications is the whip antenna. Whip antennas are perfect for designs that make use of several transceivers, like walkie-talkies, cars, routers, gateways, and hand-held radios.
 
-![Alt text](<img/whip antenna.jpg>)
+![Alt text](img/whip_antenna.jpg)
 
 ## Antenna on PCB
 Antenna on PCB (AoPCB) is the term for the antenna or antenna pattern which is embedded on a PCB utilizing modern manufacturing technologies. These technologies are usually copper traces on circuit boards. Because PCB antennas can combine antenna design at a fundamental level, they are inexpensive and provide significant design freedom. Antennas on PCBs have the disadvantage of taking up space on the circuit board, which can be very problematic in designs that are extremely sophisticated or ultra-compact and have a lot of sensors and components. These antennas are perfect for robotics, automobiles, and USB dongles.
 
-![Alt text](<img/antenna on PCB.png>)
+![Alt text](img/antenna_on_PCB.png)
 
 
 # Antennas for LoRa device
