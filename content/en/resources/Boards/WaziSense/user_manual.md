@@ -811,7 +811,7 @@ _Figure 39:_ 2 AA or Rechargeable batteries connected to WaziSense board
     
 
 
-![alt_text](images/image43.png "image_tooltip")
+![arduino vcc library](img/arduinovcclibrary.png "image_tooltip")
 
 
 
@@ -823,8 +823,7 @@ _Figure 40:_ Arduino_Vcc library in local Arduino libraries folder
 
     
 
-![alt_text](images/image44.png "image_tooltip")
-
+![read batt voltage](img/readbattvoltage.png "image_tooltip")
 
 
 _Figure 41:_ Read_Battery_Voltage sketch in local Arduino examples folder
@@ -836,7 +835,7 @@ _Figure 41:_ Read_Battery_Voltage sketch in local Arduino examples folder
     
 
 
-![alt_text](images/image45.png "image_tooltip")
+![read battery voltage sketch](img/readbatteryvoltagesketch.png "image_tooltip")
 
 
 
@@ -924,7 +923,7 @@ void loop() {
 
 
 
-![alt_text](images/image46.png "image_tooltip")
+![alt_text](img/setfullandlowbattvalues.png "image_tooltip")
 
 
 _Figure 43:_ low and full battery voltages of Li-ion or Li-po battery set in sketch
@@ -936,7 +935,7 @@ _Figure 43:_ low and full battery voltages of Li-ion or Li-po battery set in ske
 
 
 
-![alt_text](images/image47.png "image_tooltip")
+![battery stats in serial monitor](img/batterystatsinserialmonitor.png "image_tooltip")
 
 
 _Figure 44:_ Arduino serial monitor displaying battery voltage and percentage
@@ -952,7 +951,7 @@ The I2C SDA and SCL terminal block is wired to the pins A4 and A5 of the Atmega3
 
 
 
-![alt_text](images/image48.png "image_tooltip")
+![i2c port](img/i2cport.png "image_tooltip")
 
 
 _Figure 45:_ I2C Port pinout on WaziSense
@@ -969,7 +968,7 @@ The FTDI port is used to program the ATmega328p microcontroller. It is advised t
 
 
 
-![alt_text](images/image49.png "image_tooltip")
+![ftdi connection](img/ftdiconnection.png "image_tooltip")
 
 
 _Figure 46:_ how to connect an FTDI to the WaziSense
@@ -978,7 +977,7 @@ _Figure 46:_ how to connect an FTDI to the WaziSense
 
 
 
-![alt_text](images/image50.png "image_tooltip")
+![alternative ftdi wiring](img/altftdiwiring.png "image_tooltip")
 
 
 _Figure 47:_ how to use other FTDIs with the WaziSense
@@ -991,7 +990,7 @@ The WaziSense v2 SPI layout is similar to what is found on many development boar
 
 
 
-![alt_text](images/image51.png "image_tooltip")
+![spi port](img/spiport.png "image_tooltip")
 
 
 _Figure 48:_ Wazisense SPI header layout
@@ -1000,7 +999,7 @@ The onboard LoRa RFM95W communicates with the ATmega328p over SPI, therefore use
 
 
 
-![alt_text](images/image52.png "image_tooltip")
+![atmega lora solder pads](img/atmegalorasolderpads.png "image_tooltip")
 
 
 _Figure 49:_ Wazisense ATmega328p SPI to RFM95W connection pads
@@ -1013,7 +1012,7 @@ To use the WaziSense for Lora communication, there is a need to connect an anten
 
 
 
-![alt_text](images/image53.png "image_tooltip")
+![antenna and sma to ufl](img/antennasmatoufl.png "image_tooltip")
 
 
 _Figure 50:_ How to connect an antenna to the WaziSense
@@ -1027,7 +1026,7 @@ All the **square-shaped** holes are connected to ground. However every other hol
 
 
 
-![alt_text](images/image54.png "image_tooltip")
+![prototyping area](img/prototypingarea.png "image_tooltip")
 
 
 _Figure 51:_ WaziSense Prototyping area highlighted in orange rectangle
