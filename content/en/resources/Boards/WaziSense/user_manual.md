@@ -662,7 +662,7 @@ void loop() {
 
 
 
-![alt_text](images/image36.png "image_tooltip")
+![sensor data in serial monitor](img/sensordatainserialmonitor.png "image_tooltip")
 
 
 
@@ -683,7 +683,7 @@ void loop() {
     
 
 
-![alt_text](images/image37.png "image_tooltip")
+![soil moisture](img/soilmoisture.png "image_tooltip")
 
 
 
@@ -695,7 +695,7 @@ void loop() {
     
 
 
-![alt_text](images/image38.png "image_tooltip")
+![soil moisture sketch](img/soilmoisturesketch.png "image_tooltip")
 
 
 
@@ -739,23 +739,18 @@ void loop() {
 ```
 
 
-
     After uploading the above sketch, the serial monitor should begin to display soil moisture data at 1 second intervals.
 
 
     
-
-
-![alt_text](images/image39.png "image_tooltip")
-
+![soil moisture in serial monitor](img/soilmoistureinserialmonitor.png "image_tooltip")
 
 
     _Figure 36:_ Serial monitor showing soil moisture sensor data
 
 
 
-
-![alt_text](images/image40.png "image_tooltip")
+![extra analog pins](img/extraanalogpins.png "image_tooltip")
 
 
 
@@ -787,7 +782,7 @@ void loop() {
 
 
 
-![alt_text](images/image41.gif "image_tooltip")
+![blinking onboard led](img/blinkingonboardled.gif "image_tooltip")
 
 
 _Figure 38:_ WaziSense onboard LED blinking
@@ -804,7 +799,7 @@ The WaziSense v2 can read the voltage of any battery connected to it. There are 
 
 
 
-![alt_text](images/image42.png "image_tooltip")
+![read battery voltage](img/readbatteryvoltage.png "image_tooltip")
 
 
 _Figure 39:_ 2 AA or Rechargeable batteries connected to WaziSense board
