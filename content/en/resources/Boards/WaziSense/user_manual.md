@@ -1,4 +1,9 @@
-# 1. Introduction
+---
+title: WaziDev User Manual
+type: guide
+---
+
+# Introduction
 
 IoT enhances precision agriculture, livestock management, and environmental monitoring by enabling real-time data collection, remote control, and predictive analytics. 
 
@@ -14,7 +19,7 @@ The users include:
 * **Hobbyists, students** or people with some engineering or technical background, looking to learn something new or build on an existing skill.
 
 
-# 2. Board Overview
+# Board Overview
 
 The WaziSense v2 is a low-power development board specifically designed to address the unique challenges of agricultural and environmental monitoring applications in harsh outdoor deployment conditions.
 
@@ -27,10 +32,10 @@ Equipped with solar battery charging capacity, low power long range communicatio
 _Figure 1:_ WaziSense v2 in an environmental monitoring use case 
 
 
-# 3. Hardware Specifications
+# Hardware Specifications
 
 
-## 3.1. Lora
+## Lora
 
 The WaziSense v2  LoRa module is an **RFM95W (SX1276)**. The wiring of the lora module to the ATmega328p is as follows:
 
@@ -52,7 +57,7 @@ Since the RFM95W is a 3.3v module, it is powered from the 3.3v output of the onb
 _Figure 2:_ SX1276 power consumption details
 
 
-## 3.2. Microcontroller
+## Microcontroller
 
 The microcontroller on the WaziSense v2 is a **3.3v 8MHz ATmega328p**. The pin designations and specifications are as follows:
 
@@ -82,7 +87,7 @@ Operating voltage | 3.3v
 Operating Temperature | -40°C to 85°C
 
 
-## 3.3. Regulator
+## Regulator
 
 The 3.3v voltage regulator has part number HE2031A33MPR and is labeled U2 on the WaziSense v2.
 
@@ -104,7 +109,7 @@ The package type of the 3.3v voltage regulator on the WaziSense v2 is SOT89. The
 _Figure 3:_ 3.3v regulator on WaziSense v2
 
 
-## 3.4. Battery and Solar Charging
+## Battery and Solar Charging
 
 The solar and battery charging system is built around a **CN3791 **IC. The CN3791 is a highly integrated solar power management IC designed specifically for solar-powered applications. It provides a comprehensive solution for harvesting and managing energy from solar panels efficiently. Here are a some of its specifications with respect to WaziSense v2 design:
 
@@ -122,7 +127,7 @@ The solar and battery charging system is built around a **CN3791 **IC. The CN379
 * Operating Ambient Temperature: -40℃ to ＋85℃
 
 
-## 3.5. Sensor Power Ports
+## Sensor Power Ports
 
 The sensor power ports on the WaziSense v2 are built around two TPM2102BC3 N-channel mosfets capable of handling up to 20v @ 2.5A Max with VGS of 2.5v. This mechanism allows users to digitally turn ON sensors only when needed to conserve energy.
 
@@ -133,7 +138,7 @@ The sensor power ports on the WaziSense v2 are built around two TPM2102BC3 N-cha
 _Figure 4:_ Sensor Power section of WaziSense v2
 
 
-## 3.6. Board Dimensions
+## Board Dimensions
 
 The WaziSense v2 board dimensions are as follows.
 
@@ -159,7 +164,7 @@ The WaziSense v2 board dimensions are as follows.
 _Figure 5:_ WaziSense v2 dimensions
 
 
-# 4. Getting Started
+# Getting Started
 
 
 ![getting started](img/gettingstarted.png "image_tooltip")
@@ -168,7 +173,7 @@ _Figure 5:_ WaziSense v2 dimensions
 _Figure 6:_ Features of the WaziSense v2 board
 
 
-## 4.1. Adding Waziup Resources to Arduino IDE
+## Adding Waziup Resources to Arduino IDE
 
 In order to be able to program and use the WaziSense v2 with Lora, sensors and related peripherals, we need to configure the arduino environment.
 
@@ -241,7 +246,7 @@ _Figure 12:_ Waziup resources showing in Arduino IDE
 6. Select the resource sketch example and make changes where required for the preferred use case.
 
 
-## 4.2. Uploading to the Right Board
+## Uploading to the Right Board
 
 The microcontroller on the WaziSense is a 3.3v 8MHz ATmega328p, as such, users need navigate to the “**Tools Menu**” and select “**Arduino Pro or Pro Mini**” under “**Board**:” and “**ATmega328p (3.3V, 8MHz)**” under “**Processor:**”.
 
@@ -255,7 +260,7 @@ _Figure 13:_ Selecting the right board parameters for the WaziSense
 **Note:** Make sure to select the correct “**Communication Port Number**” of your FTDI.
 
 
-## 4.3. Lora
+## Lora
 
 To use the WaziSense v2 with lora, you first need to add all relevant Waziup resources to your arduino IDE as demonstrated in “**Section 4.1**” above.
 
@@ -464,7 +469,7 @@ The Wazigate dashboard should also receive and indicate the dummy date transmitt
     _Figure 23:_ Wazigate dashboard showing received sensor value.
 
 
-## 4.4. Regulator and Input Voltage Configuration
+## Regulator and Input Voltage Configuration
 
 The WaziSense v2 supports the use of different types of batteries at different voltages. For instance, two AA batteries in series will amount to 3v, and a lithium-ion/polymer battery will output about 4.2v when fully charged. 
 
@@ -483,7 +488,7 @@ _Figure 24:_ shows the 2 Input voltage configuration
 **Note:** Leaving the input voltage jumper in the **BATT **position may damage your board, if a voltage sufficiently above 3.3v is applied.
 
 
-## 4.5. Battery Charging with Solar
+## Battery Charging with Solar
 
 The solar battery charging circuit supports input voltages between 5.2v to 28v and output 4.2v at 4A max. This means that the WaziSense can be used together with most readily available solar panels on the market and the rate of battery charging depends on the solar panel connected.
 
@@ -499,7 +504,7 @@ _Figure 25:_ how to connect a rechargeable battery and solar panel
 **Note:** When using a solar panel, make sure the battery connected is rechargeable.
 
 
-## 4.6. Sensor Power Ports
+## Sensor Power Ports
 
 In order to conserve battery energy, sensors can be digitally turned on or off using the sensor power port.
 
@@ -537,7 +542,7 @@ _Figure 26:_ how to turn the power port D6 ON
 _Figure 27:_ how to connect a sensor to the power ports
 
 
-### 4.6.1. Output Voltage For Sensor Power Port 
+### Output Voltage For Sensor Power Port 
 
 
     Occasionally users might want to connect sensors or peripherals that may draw high sudden currents during operation. The high sudden currents can be provided by the connected battery or power source directly by configuring the **H1** sensor power jumper. 
@@ -557,10 +562,10 @@ By setting the H1 jumper to the **BATT **position, sensors or peripherals attach
     _Figure 28:_ how to configure H1 jumper for sensors or peripherals
 
 
-## 4.7. Analog and Digital Sensor Ports
+## Analog and Digital Sensor Ports
 
 
-### 4.7.1. Using Digital Sensors
+### Using Digital Sensors
 
 To use a digital sensor such as a DH11 with the WaziSense v2:
 
@@ -670,7 +675,7 @@ void loop() {
 
 
 
-### 4.7.2. Using Analog Sensors
+### Using Analog Sensors
 
 
     To use an analog sensor such as a soil moisture sensor with the WaziSense v2
@@ -758,7 +763,7 @@ void loop() {
 
 
 
-## 4.8. Onboard LED
+## Onboard LED
 
 The OnBoard LED is attached to digital pin 8. As such it can triggered by using any generic blink sketch as shown below;
 
@@ -788,7 +793,7 @@ void loop() {
 _Figure 38:_ WaziSense onboard LED blinking
 
 
-## 4.9. Reading Battery Voltage
+## Reading Battery Voltage
 
 The WaziSense v2 can read the voltage of any battery connected to it. There are two approaches as shown in_ figure 29 _below.
 
@@ -941,10 +946,10 @@ _Figure 43:_ low and full battery voltages of Li-ion or Li-po battery set in ske
 _Figure 44:_ Arduino serial monitor displaying battery voltage and percentage
 
 
-# 5. Peripheral Interfaces
+# Peripheral Interfaces
 
 
-## 5.1. I2C Port
+## I2C Port
 
 The I2C SDA and SCL terminal block is wired to the pins A4 and A5 of the Atmega328p respectively. 
 
@@ -959,7 +964,7 @@ _Figure 45:_ I2C Port pinout on WaziSense
 **NOTE:** The SDA and SCL ports can be used as regular analog pins. That is A4 and A5 as shown in figure 29 above.
 
 
-## 5.2. FTDI Port
+## FTDI Port
 
 The FTDI port is used to program the ATmega328p microcontroller. It is advised to use an **FT232RL **FTDI programmer because its pins are already aligned with the WaziSense v2 FTDI port.
 
@@ -983,7 +988,7 @@ _Figure 46:_ how to connect an FTDI to the WaziSense
 _Figure 47:_ how to use other FTDIs with the WaziSense
 
 
-## 5.3. SPI Port
+## SPI Port
 
 The WaziSense v2 SPI layout is similar to what is found on many development boards, including the arduino uno, mega etc.. Therefore the WaziSense v2 SPI header is compatible with existing modules in the arduino ecosystem.
 
@@ -1005,7 +1010,7 @@ The onboard LoRa RFM95W communicates with the ATmega328p over SPI, therefore use
 _Figure 49:_ Wazisense ATmega328p SPI to RFM95W connection pads
 
 
-## 5.4. IPEX Antenna Port
+## IPEX Antenna Port
 
 To use the WaziSense for Lora communication, there is a need to connect an antenna. A **Female UFL to Female SMA** connector and** **an **antenna with a Male SMA** connector is needed. The aforementioned parts need to be connected to the Wazisense as shown below. 
  
@@ -1018,7 +1023,7 @@ To use the WaziSense for Lora communication, there is a need to connect an anten
 _Figure 50:_ How to connect an antenna to the WaziSense
 
 
-## 5.5. Prototyping Area
+## Prototyping Area
 
 The prototyping area on the WaziSense v2 serves as a simple way to add extra components such as resistors, diodes etc.. to the WaziSense v2 board during prototyping/testing/deployment.
 
