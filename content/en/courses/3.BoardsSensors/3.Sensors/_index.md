@@ -12,9 +12,11 @@ Introduction
 ========
 Human capability has been expanded in various ways by technology, and sensor technology has increased human perceptive range. Given the speed at which current technology is developing. IoT, big data, cloud computing, and related technologies are in high demand. It is extensively used in a variety of fields, including economics, national defense, science and technology, and daily life.
 
+![Alt text](img/sensors-working-principle-01.png)
+
 A device that provides a usable output in response to a specified measurement.The sensor attains a physical parameter and converts it into a signal suitable for processing (e.g. electrical, mechanical, optical) the characteristics of any device or material to detect the presence of a particular physical quantity. The output of the sensor is a signal which is converted to a human-readable form like changes in characteristics, changes in resistance, capacitance, impedance, etc. In various systems the transducer might be used as an actuator. The transducer helps to convert a signal from one physical structure to another or one type of energy into another type.
 
-![Alt text](img/sensors-working-principle-01.png)
+
 
 
 Overview of Various Sensors
@@ -66,14 +68,14 @@ Wiring a sensor to a microprocessor typically involves connecting the sensor's o
 
 Programming
 ========
-For this section the first thing you need to do is install [Arduino IDE](https://www.arduino.cc/en/software). Install the latest version from their official website. 
+For this section the first thing you need to do is installing [Arduino IDE](https://www.arduino.cc/en/software). Install the latest version from their official website. 
 
 For in depth learning, please complete
 [this course](https://lab.waziup.io/courses/5_5hHxJIBIk?topic=0).
 
-Advanced topics: Communication Protocols, Calibration
+Advanced topics: Communication Protocols
 ======
-# Communication Protocols
+
 Both wired and wireless communication protocols are subsets of the communication protocols. To guarantee the efficient transport of data to the designated location, the communication protocol specifies the format that the data unit uses, the information and meaning that the information unit should have, the connection mode, and the timing when the information is delivered and received.
 
 ### Wireless Protocols
@@ -109,7 +111,8 @@ Even in our wireless world, wired protocols still have a crucial role, particula
 
 Selecting the appropriate protocol will largely depend on the application and the environment. Always consider factors like range, power consumption, data rate, and the type of devices being connected when making your choice.
 
-# Calibration
+Advanced topics: Calibration
+======
 There are a lot of good sensors these days and many are 'good enough' out of the box for many non-critical applications.  But in order to achieve the best possible accuracy, a sensor should be calibrated in the system where it will be used. 
 
 There are different methods available for calibration but among them **one point calibration** is the simplest type of calibration. If your sensor output is already scaled to useful measurement units, a one point calibration can be used to correct for sensor offset errors.
@@ -122,7 +125,7 @@ To calibrate one point at a time:
 ![Alt text](img/sensors_SinglePoint.png)
 
 
-Example
+A Complete Example 
 ====
 
 ### Here's what we will be learning from this example:
