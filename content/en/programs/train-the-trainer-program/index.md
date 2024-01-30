@@ -2,7 +2,7 @@
 id: ttt_program
 name: 'HUBiquitous Catalyst Program: Train The Trainer'
 desc: This program uplifts Tech Hubs with virtual and in-person "Train-the-Trainers," providing a "Solution Box" for in-house IoT labs. By the end of the program, Hubs will be able to launch IoT certification courses and develop Minimal Viable Products.
-from: 2023-02-19
+from: 2024-02-19
 to: 2024-03-29
 ---
 
