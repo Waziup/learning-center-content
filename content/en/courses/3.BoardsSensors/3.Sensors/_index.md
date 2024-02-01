@@ -33,25 +33,41 @@ A few of the most popular ones are shown here in brief:
    - IR Sensor (IR Transmitter / IR LED)
    - Photodiode (IR Receiver)
    - Light Dependent Resistor
+  
+  ![Alt text](img/Light_Sensor-01.png)
+
 2. Temperature Sensor: As the name suggests, these track temperature variations. They're the bread and butter of HVAC systems and many industrial processes.
-   - Thermistor
-   - Thermocouple
-3. Pressure/Force/Weight Sensor: Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
+
+![Alt text](img/temperature_sensor-01.png)
+1. Pressure/Force/Weight Sensor: Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
    - Strain Gauge (Pressure Sensor)
-   - Load Cells (Weight Sensor)
+   - Load Cell (Weight Sensor)
+  
+  ![Alt text](img/wieght_sensor-01.png)
+  
 4. Proximity Sensors: Handy for robotics and security systems, these sensors detect the presence or absence of an object within a certain range.
-   - PIR Sensor
+   - Ultrasonic proximity sensors
+   - Photoelectric proximity sensors
+   - Capacitive proximity sensors
+   - Magnetic proximity sensors
+   - IR and PIR proximity sensors
+  
+![Alt text](img/proximity_sensor-01.png)
 
+5. Gas Sensors: A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
 
+![Alt text](img/gas_sensor-01.png)
 
+6. Soil Moisture Sensors: Soil moisture is basically the amount/content of water present in the soil. This can be measured using a soil moisture sensor either resistive or capacitive.
+
+![Alt text](img/soil_moisture_sensor-01.png)
 
 Wiring
 ====
-Before programming we must be aware of how to properly wire them.
+Before programming we must be aware of how to wire them properly.
 Wiring a sensor to a microprocessor typically involves connecting the sensor's output to one of the input pins on the microprocessor.
 
-- **Identifying & Gathering the Components:** 
-  The first and important step is to identify all the necessary sensors and microprocessors or microcontrollers or any kind of development board (e.g. Wazisense), that you will need for your project and gather them.
+
 - **Understanding the Pinouts:** 
   Look at the datasheet or documentation for your sensor & processor to understand its pinout. Identify the pins for power (VCC), ground (GND), and signal/output.
 - **Power Supply & Ground Connection:** 
@@ -61,9 +77,6 @@ Wiring a sensor to a microprocessor typically involves connecting the sensor's o
   Connect the output pin of the sensor to one of the input pins on the microprocessor. This is typically a digital or analog pin, depending on the type of sensor.
 - **Veryfying Wiring:**
   Double-check all connections to make sure they are secure and accurate. Incorrect wiring can lead to malfunction or damage.
-- **Writing Code & Testing:**
-  Write the necessary code to read data from the sensor through the microprocessor. This involves configuring the input/output pins, reading sensor data, and processing it in your program.
-  Upload the code to your microprocessor and test the setup. Check if the sensor readings are being correctly interpreted by your microprocessor.
 
 
 Programming
