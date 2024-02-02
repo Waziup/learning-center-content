@@ -391,21 +391,8 @@ we can also setup notifications on WaziCloud, for when the relay turns ON or OFF
 Exercise
 ===
 
-In this part try to do a project using the following hardware and software.
+After completing this course you should be able to do the following exercise by youself.
+```
+Make an Automatic water level controller using Ultrasonic sensor and WaziAct development board. Use the WaziAct to trigger the water pump when the water level in water tank crosses a certain limit. 
 
-Hardware
-  - WaziACT
-  - FTDI FT232
-  - Mini USB Cable
-  - Wazigate
-  - SR04 Ultrasonic Sensor
-  - Some Jumper Wires
-  - Lora 868Mhz Antenna
-
-![Alt text](img/autowater.png)
-
-Software
-  - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
-  - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
-
-
+```
