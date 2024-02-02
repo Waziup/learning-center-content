@@ -28,69 +28,69 @@ Units
 We have 7 units of learning distributed into three main sections:
 
 - Introduction
-   1. Introduction
+    1. Introduction
 - Section One - Sensing
-   2. Intel-IrriS Device
+    2. Intel-IrriS Device
 - Section Two - Data gathering
-   3. About the Gateway
-   4. Install and use in the field
-   5. How to collect and analyze the data
+    3. About the Gateway
+    4. Install and use in the field
+    5. How to collect and analyze the data
 - Section Three - Follow up
-   6. Maintainance, piloting and feedback from existing deployments
-   7. Go further/beside
+    6. Maintainance, piloting and feedback from existing deployments
+    7. Go further/beside
 
 Modules Details 
 ===============
 The 7 units of learning have the following structure:
 1. Intro
-   1. Intel-IrriS why/what for?
-   2. This program what for?
-   3. Intel-IrriS structure
+    1. Intel-IrriS why/what for?
+    2. This program what for?
+    3. Intel-IrriS structure
 2. Intel-IrriS Device
-   1. Device's hardware
-   2. Sensors
-   3. Order it   
-   4. Build it
-   5. Device's software
+    1. Device's hardware
+    2. Sensors
+    3. Order it    
+    4. Build it
+    5. Device's software
 3. About the Gateway
-   1. Generic wazigate
-   2. Intel-IrriS specific soft and hard
-      1. IIWA
-      2. Home assistant
-      3. OLED
-   3. Set it up
+    1. Generic wazigate
+    2. Intel-IrriS specific soft and hard
+        1. IIWA
+        2. Home assistant
+        3. OLED
+    3. Set it up
 4. Install and use in the field
-   1. Starter Kit
-   2. Gateway boot options/preparation/autoboot
-   3. Plug the sensor in the field
-   4. A Use case to exemplify
+    1. Starter Kit
+    2. Gateway boot options/preparation/autoboot
+    3. Plug the sensor in the field
+    4. A Use case to exemplify
 5. How to collect and analyze the data
-   1. Collect
-   2. Analyze
-   3. AI - prediction tools
+    1. Collect
+    2. Analyze
+    3. AI - prediction tools
 6. Maintainance, piloting and feedback from existing deployments
-   1. Feedback support
-   2. Farmer training program
-   3. This program in question
+    1. Feedback support
+    2. Farmer training program
+    3. This program in question
 7. Go further/beside
-   1. IoT
-      1. Intro to Iot
-      2. Arduino
-   2. Irrigation
-   3. Design choices
-      1. Choice of sensors
-      2. Choice of hardware parts
-      3. Underlying wireless
-      4. Choice of antennas
-   4. Water-soil-plant interraction
-   5. Smart agriculture
-   6. calibration
-   7. Experience in controlled environments
-   8. Data Science
-   9. Other
-      1. Trends IOT and future research
-      2. Electronics
-      3. Web programming
-      
+    1. IoT
+        1. Intro to Iot
+        2. Arduino
+    2. Irrigation
+    3. Design choices
+        1. Choice of sensors
+        2. Choice of hardware parts
+        3. Underlying wireless
+        4. Choice of antennas
+    4. Water-soil-plant interraction
+    5. Smart agriculture
+    6. calibration
+    7. Experience in controlled environments
+    8. Data Science
+    9. Other
+        1. Trends IOT and future research
+        2. Electronics
+        3. Web programming
+        
 
 
