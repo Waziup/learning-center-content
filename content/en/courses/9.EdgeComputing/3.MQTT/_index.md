@@ -4,7 +4,6 @@ title: "MQTT for embbeded programming"
 descripton: "MQTT can be used to communicate with your remote devices and sensors"
 ---
 
-
 # Introduction
 
 MQTT is a messaging protocal for Internet of Things (IoT). The protocal is designed for transporting messages under low bandwidth. MQTT has find its applications in industries like automotive industry, manufacturing, and telecommunication.
@@ -67,13 +66,13 @@ ESP8266 will be used to impement the MQTT architecture.
 
 First things first, include a subscribe/publish library.
 
-```
+```c++
 #include <PubSubClient.h>
 ```
 
 Test MQTT parameters: topic, temperature and MQTT server address
 
-```
+```c++
 char *topicin = "UPPA/test";
 char *topicout = "UPPA/Duboue/S25/temp";
 char *msgTemp  = "22.5";
@@ -82,14 +81,14 @@ char* mqtt_server = "test.mosquitto.org";
 
 Define the publish/subscribe client. This will be the client to connect to a particular topic.
 
-```
+```c++
 WiFiClient espClient;
 PubSubClient client(espClient);
 ```
 
 Define a **function callback()** that will listen and process incoming message from a given subscribed topic. This is not needed if you only publish, which is more typical of an end-device. Normally, the messages are received in realtime.
 
-```
+```c++
 void callback(char* topic, byte* payload, unsigned int length) {
   Serial.print("Message arrived [");
   Serial.print(topic);
@@ -101,7 +100,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 Define a function reconnect() to keep trying to connect to the MQTT broket until it is successful. Here the client id can be random because the MQTT broker we use does not require authentication.
 
-```
+```c++
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
@@ -126,13 +125,13 @@ void reconnect() {
 
 In function setup(), setup the MQTT server. This acts as the broker. It facilitates communication between publishers and subscribers.
 
-```
+```c++
 client.setServer(mqtt_server, 1883);
 ```
 
 In function loop(), check if client is connected, if not then reconnect
 
-```
+```c++
 void loop() {
 
   if (!client.connected()) {
@@ -142,7 +141,7 @@ void loop() {
 
 At the end, publish the message on specified topic
 
-```
+```c++
 int e=client.publish(topicout, msgTemp);
 ```
 
@@ -151,7 +150,7 @@ To test the MQTT publishing from the IoT device, we will use a computer with an 
 
 In all the following examples and assignments, if you do not have access to a computer with a terminal window to use `mosquitto_sub` and `mosquitto_pub` command line, you can use the [HiveMQ MQTT web client](http://www.hivemq.com/demos/websocket-client/) to subscribe and publish in place of `mosquitto_sub` and `mosquitto_pub`. In this case, also replace the [MQTT broker](broker.hivemq.com) `test.mosquitto.org` by `broker.hivemq.com` in the Arduino example
 
-```
+```c++
 char* mqtt_server = "broker.hivemq.com";
 ```
 

@@ -5,7 +5,9 @@ descripton: "Micropython is ..."
 ---
 
 # Overview
+
 Are you interested with learning IoT, and building connected devices? If so, you're in luck Micropython can help you build all these fun stuff and a lot more. In this course you will learn
+
 - Differences between MicroPython and other programming languages
 - Advantages
 - Basics of Micropython
@@ -18,24 +20,26 @@ Python has been growing its popularity in the developer community, being used fr
 
 Therefore, MicroPython is an efficient implementation of Python 3, but specifically used in embedded systems and microcontrollers. MicroPython brings simplicity into Python programming to resource-constrained devices. For this reason, MicroPython becomes and fit language to be used in IoT, Robotics and other embedded systems.
 
-**MicroPython features** 
+**MicroPython features**
+
 - **Lightweight and compact** <br>
-    - Micropython is  designed to run on microcontrollers with limited resources, therefore, providing minimal and powerful subset of Python
+  - Micropython is designed to run on microcontrollers with limited resources, therefore, providing minimal and powerful subset of Python
 - **Compatibility** <br>
-    - Micropython is compatible with the syntax used in Python3. Developers with existing skills in Python3 can leverage the skills to program microcontrollers.
+  - Micropython is compatible with the syntax used in Python3. Developers with existing skills in Python3 can leverage the skills to program microcontrollers.
 - **Cross platform support** <br>
-    - Micropython can be used to program a varieties of microcontrollers like ESP32, ESP8266, STM32, Raspberry pi Pico among others. This feature offers reusability of code with minimal modification when transitioning between different microcontrollers.
+  - Micropython can be used to program a varieties of microcontrollers like ESP32, ESP8266, STM32, Raspberry pi Pico among others. This feature offers reusability of code with minimal modification when transitioning between different microcontrollers.
 - **Extensivity** <br>
-    - This feature allows libraries to be used to intergrate platform-oriented functionalities offering flexibility to the language
+  - This feature allows libraries to be used to intergrate platform-oriented functionalities offering flexibility to the language
 
 **How is MicroPython different from standard Python?**
 The two languages share the same syntax but differ in their implementation, use cases anf the target platforms. The notable difference are:
+
 - **Target audience & platform** <br>
-    - Micropython is essentially designed for microcontrollers and other resource contrained devices, while python (CPython) designed for large memory footprint with abundant resources
+  - Micropython is essentially designed for microcontrollers and other resource contrained devices, while python (CPython) designed for large memory footprint with abundant resources
 - **Execution environment** <br>
-    - Micropython runs on bare metal or its the microcontroller's OS, while python runs on top of other OS like Windows, macOS and abstracts the hardware details
+  - Micropython runs on bare metal or its the microcontroller's OS, while python runs on top of other OS like Windows, macOS and abstracts the hardware details
 - **Interactive development** <br>
-    - Micropython emphasizes on Read-Eval-Print-Loop (REPL) in development. This feature offers developers with ability to rest code interactively. CPython offers the interactive feature, but emphasis on this is used in writing scripts.
+  - Micropython emphasizes on Read-Eval-Print-Loop (REPL) in development. This feature offers developers with ability to rest code interactively. CPython offers the interactive feature, but emphasis on this is used in writing scripts.
 
 # Basics of Micropython
 
@@ -48,29 +52,34 @@ Micropython supports REPL which allows you to enter python commands directly. Th
 **Hello world with Micropython**
 All micropython scripts end with .py extension just like in standard python. An example of filename can be _hello.py_
 Create a file named **hello.py**. In the script, add the print function which will output/display text
-```
+
+```py
 print("Hello world")
 ```
+
 Run the code, and it should output _Hello world_ from the serial monitor.
 
 **Varables and data types**
 
 Micropython supports common data types, like in standard python:
-- Integers: ```delay_seconds = 5```
-- Floats: ```temperature = 17.1```
-- Strings: ```led_status = "ON"```
-- Lists ```my_boards = ['STM32','ESP8266','ESP32']```
-- Tuple ```board_elements = ('Actuators','Sensors','LEDs')```
-- Dictionary ```sensor_data = {'temperature':23.1, 'timestamp':'23:44:00PM'}```
+
+- Integers: `delay_seconds = 5`
+- Floats: `temperature = 17.1`
+- Strings: `led_status = "ON"`
+- Lists `my_boards = ['STM32','ESP8266','ESP32']`
+- Tuple `board_elements = ('Actuators','Sensors','LEDs')`
+- Dictionary `sensor_data = {'temperature':23.1, 'timestamp':'23:44:00PM'}`
 
 **Control flow**
 Micropython supports control flow statements like:
+
 - if
 - else
 - elif
 - while
 - for
-```
+
+```py
 if x > 0:
     print("Positive number")
 else:
@@ -80,15 +89,16 @@ else:
 **Functions**
 Functions in micropython are defined using the `def` keyword. For instance, the function below takes an argument of LED status and prints it as output.
 
-```
+```py
 def print_led_status(status):
-    print(f"led is {status}") // output: led is ON
+    print(f"led is {status}") #output: led is ON
 
 led_status = 'ON'
 print_led_status(led_status)
 ```
 
 # GPIO Programming with micropython
+
 Required hardware
 
 1. LED x1
@@ -97,14 +107,15 @@ Required hardware
 4. Jumper cables
 
 Youl will learn how to blink an LED using micropython. This will give you an understanding on how to interact with General-Purpose Input/Output (GPIO) to control other external devices like LEDs.
-```
+
+```py
 from machine import Pin
 import time
 
-led = Pin(2, Pin.OUT)  # GPIO Pin 2 as an output
-led.value(1)           # Turn on the LED
-time.sleep(1)          # Pause for 1 second
-led.value(0)           # Turn off the LED
+led = Pin(2, Pin.OUT) # GPIO Pin 2 as an output
+led.value(1) # Turn on the LED
+time.sleep(1) # Pause for 1 second
+led.value(0) # Turn off the LED
 
 ```
 
@@ -129,40 +140,3 @@ Home automation projects that utilize microcontrollers to operate lights, sensor
 5. **Industrial automation**
 
 MicroPython is a versatile and accessible scripting language that may be used in industrial settings for automation and control systems. It is useful for managing machinery and processes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
