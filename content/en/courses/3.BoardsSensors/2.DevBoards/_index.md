@@ -73,9 +73,43 @@ The Arduino GIGA R1 WiFi is designed for ambitious makers who want to step up th
 
 IoT Development board Catagories : NodeMCU ESP8266 & ESP32
 ===
+IoT development boards are hardware platforms that facilitate the creation and prototyping of Internet of Things (IoT) projects. Two popular categories of IoT development boards are NodeMCU ESP8266 and ESP32.
+
+![alt text](img/ESP8266_ESP32-01.png)
+
+## ESP8266
+---
+The ESP8266 is a low-cost Wi-Fi chip developed by Espressif Systems. It can be used as a standalone device, or as a UART to Wi-Fi adaptor to allow other microcontrollers to connect to a Wi-Fi network. For example, you can connect an ESP8266 to an Arduino to add Wi-Fi capabilities to your Arduino board. The most practical application is using it as a standalone device.
+
+With the ESP8266, you can control inputs and outputs as you would do with an Arduino, but with Wi-Fi capabilities. This means you can bring your projects online, which is great for home automation and internet of things applications.
+
+## ESP32
+---
+The ESP32 is a family of low-cost, low-power System on a Chip (SoC) microcontrollers by Espressif that has a dual-core processor, Bluetooth and Wi-Fi connectivity. If you are familiar with the ESP8266, the ESP32 is a feature-rich replacement that comes with a ton of more functionality.
 
 
+### The following table shows the main differences between the ESP8266 and the ESP32 chips:
 
+| **Features** | E**SP8266** | **ESP32** |
+| ----------- | ----------- | --------- |
+| MCU | Xtensa Single-core 32-bit L106 | Xtensa Dual-Core 32-bit LX6 with 600 DMIPS |
+| 802.11 b/g/n Wi-Fi | HT20 | HT40 |
+| Bluetooth | X | Bluetooth 4.2 and BLE |
+| Typical Frequency | 80 MHz | 160 MHz |
+| SRAM | X | ✓ |
+| Flash | X | ✓ |
+| GPIO | 17 | 34 |
+| Hardware /Software PWM | None / 8 channels | None / 16 channels |
+| SPI/I2C/I2S/UART | 2/1/2/2 | 4/2/2/2 |
+| ADC | 10-bit | 12-bit |
+| CAN | X | ✓ |
+| Ethernet MAC Interface | X | ✓ |
+| Touch Sensor | X | ✓ |
+| Temperature Sensor | X | ✓(old versions) |
+| Hall effect sensor | X | ✓ |
+| Price | $ (3$ – $6) | $$ ($6 – $12) |
+
+The choice between the two often depends on the specific requirements of the project. With ESP32 being preferred for more feature-rich and demanding applications, they are commonly used for projects requiring more computational power, higher data transfer rates, and additional connectivity options. Whereas in case of ESP8266, they are compact, cost-effective, and suitable for a variety of IoT projects such as home automation, sensor nodes, and Wi-Fi-enabled devices.
 
 IoT Development board Catagories : Wazi-Dev series
 ===
