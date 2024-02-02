@@ -79,6 +79,9 @@ Wiring a sensor to a microprocessor typically involves connecting the sensor's o
   Double-check all connections to make sure they are secure and accurate. Incorrect wiring can lead to malfunction or damage.
 
 
+
+
+
 Programming
 ========
 For this section the first thing you need to do is installing [Arduino IDE](https://www.arduino.cc/en/software). Install the latest version from their official website. 
@@ -141,7 +144,7 @@ To calibrate one point at a time:
 A Complete Example 
 ====
 
-### Here's what we will be learning from this example:
+ Here's what we will be learning from this example:
 
 - What parts are needed
 - How to wire up and read sensor values
@@ -150,7 +153,7 @@ A Complete Example
 - How to communicate to the cloud over LoRa
 
 
-### What parts do we need?
+
 
 You will need the following hardware and software:
 
@@ -169,13 +172,15 @@ Software
   - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
   - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
 
-## Step #1: Setting up the Soil Moisture Sensor
 
+---
+### Step 1: Setting up the Soil Moisture Sensor
+---
 Soil moisture sensors measures the amount of water in the soil to maintain consistent and ideal soil conditions for plants.
 They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
 just insert it into the soil and then read it.
 
-### Schematics
+#### Schematics
 
 There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A6.
 
@@ -213,9 +218,9 @@ void loop() {
   delay(100);
 }
 ```
-
-## Step #2: Setting up the Actuator(Relay)
-
+---
+### Step 2: Setting up the Actuator(Relay)
+---
 
 You may occasionally wish to manage appliances with AC power, such as lamps, fans, and other home appliances. The WaziACT, however, cannot directly control these higher voltage devices because it runs on 3.3 volts.
 
@@ -251,15 +256,15 @@ void loop() {
 }
 ```
 
-
-## Step #3: Combining Sensing and Actuation with Lora Communication
-
+---
+### Step #3: Combining Sensing and Actuation with Lora Communication
+---
 
 At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet. Also the WaziACT will constantly update Wazicloud with the current state of the soil through Wazigate.
 
 **NOTE:** Make sure to have a configured gateway up and running before uploading this next code. Kindly see the lectures under **Module 5 Lecture 2** for how to setup a Waziup Gateway.
 
-### Schematics
+#### Schematics
 
 ![Alt text](img/waziACT_soilv3.jpg)
 
