@@ -77,11 +77,17 @@ IoT Development board Catagories : NodeMCU ESP8266 & ESP32
 
 
 
-## Wazi-Dev series
+IoT Development board Catagories : Wazi-Dev series
+===
 
 
 
-## Raspberry PI
+
+IoT Development board Catagories : Raspberry PI
+===
+
+
+
 
 
 ## Teensy
