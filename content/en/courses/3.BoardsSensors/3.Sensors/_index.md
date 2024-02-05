@@ -29,23 +29,24 @@ A few of the most popular ones are shown here in brief:
 
 
 
-1. Light Sensor: These detect light levels and are commonly used in automatic lighting systems and cameras.
+1. **Light Sensor:** These detect light levels and are commonly used in automatic lighting systems and cameras.
    - IR Sensor (IR Transmitter / IR LED)
    - Photodiode (IR Receiver)
    - Light Dependent Resistor
   
   ![Alt text](img/Light_Sensor-01.png)
 
-2. Temperature Sensor: As the name suggests, these track temperature variations. They're the bread and butter of HVAC systems and many industrial processes.
+2. **Temperature Sensor:** As the name suggests, these track temperature variations. They're the bread and butter of HVAC systems and many industrial processes.
 
 ![Alt text](img/temperature_sensor-01.png)
-1. Pressure/Force/Weight Sensor: Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
+
+3. **Pressure/Force/Weight Sensor:** Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
    - Strain Gauge (Pressure Sensor)
    - Load Cell (Weight Sensor)
   
   ![Alt text](img/wieght_sensor-01.png)
   
-4. Proximity Sensors: Handy for robotics and security systems, these sensors detect the presence or absence of an object within a certain range.
+4. **Proximity Sensors:** Handy for robotics and security systems, these sensors detect the presence or absence of an object within a certain range.
    - Ultrasonic proximity sensors
    - Photoelectric proximity sensors
    - Capacitive proximity sensors
@@ -54,11 +55,11 @@ A few of the most popular ones are shown here in brief:
   
 ![Alt text](img/proximity_sensor-01.png)
 
-5. Gas Sensors: A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
+5.** Gas Sensors:** A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
 
 ![Alt text](img/gas_sensor-01.png)
 
-6. Soil Moisture Sensors: Soil moisture is basically the amount/content of water present in the soil. This can be measured using a soil moisture sensor either resistive or capacitive.
+6. **Soil Moisture Sensors:** Soil moisture is basically the amount/content of water present in the soil. This can be measured using a soil moisture sensor either resistive or capacitive.
 
 ![Alt text](img/soil_moisture_sensor-01.png)
 
@@ -69,69 +70,132 @@ Wiring a sensor to a microprocessor typically involves connecting the sensor's o
 
 
 - **Understanding the Pinouts:** 
+  
   Look at the datasheet or documentation for your sensor & processor to understand its pinout. Identify the pins for power (VCC), ground (GND), and signal/output.
 - **Power Supply & Ground Connection:** 
+  
   Connect the power pin (VCC) of the sensor to an appropriate power source on your microprocessor board. This is often a 5V or 3.3V pin, depending on the sensor's requirements.
   Connect the ground pin (GND) of the sensor to the ground (GND) pin on the microprocessor.
 - **Signal/Output Connection:** 
+  
   Connect the output pin of the sensor to one of the input pins on the microprocessor. This is typically a digital or analog pin, depending on the type of sensor.
 - **Veryfying Wiring:**
+  
   Double-check all connections to make sure they are secure and accurate. Incorrect wiring can lead to malfunction or damage.
 
 
+**Example**
+---
+Lets first look at the pinout of WaziSense board and MQ2 gas sensor.
 
-
+![alt text](img/WaziSense_Pinout.png)
+![alt text](img/wiring_example1-01.png)
+ Now we have to connect the sensor power pin (1-vcc) & ground pin (2-Gnd) to dev board power port, which is + pin & - pin of D7/D6. 
+ Then for getting the output we have to connect the output pin (4-Analog out) to an Analog port of board, which can be A2/A1. 
 
 Programming
 ========
 For this section the first thing you need to do is installing [Arduino IDE](https://www.arduino.cc/en/software). Install the latest version from their official website. 
 
-For in depth learning, please complete
+For getting started with programming, please complete
 [this course](https://lab.waziup.io/courses/5_5hHxJIBIk?topic=0).
+
+**Some most used functions are described below with examples:**
+
+- This following example contains the bare minimum of code you will need for a sketch to compile properly on Arduino Software (IDE): the `setup()` method and the `loop()` method.
+```c
+void setup() {
+  // put your setup code here, to run once:
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+}
+```
+  1.  The `setup()` function is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each powerup or reset of the board.
+
+  2. The `loop()` function does precisely what its name suggests, and loops consecutively, allowing your program to change and respond as it runs. Code in the loop() section of your sketch is used to actively control the board.
+
+  3. Any line that starts with `two slashes (//)` will not be read by the compiler, so you can write anything you want after it. The two slashes may be put after functional code to keep comments on the same line. Commenting your code like this can be particularly helpful in explaining, both to yourself and others, how your program functions step by step.
+
+-  The following example shows how to blink a LED with delay. After wiring LED with Arduino you may upload the following code or you may also load it from the menu `File/Examples/01.Basics/Blink . `
+```c
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                      // wait for a second
+}
+```
+
+1. The first thing you need to do is to initialize LED_BUILTIN pin as an output pin with the line with the following command:
+`pinMode(LED_BUILTIN, OUTPUT);`
+
+2. In the main loop, to turn the LED on use the following command: 
+`digitalWrite(LED_BUILTIN, HIGH);`
+This supplies 5 volts to the LED anode. That creates a voltage difference across the pins of the LED, and lights it up.
+
+3. To turn the LED off use the following command:
+`digitalWrite(LED_BUILTIN, LOW);`
+That takes the LED_BUILTIN pin back to 0 volts, and turns the LED off. 
+4. In between the on and the off, to get enough time for a person to see the change, the `delay()` command is used. When you use the `delay()` command, nothing else happens for that amount of time. 
+
+
+
+Apart from the ones described up there are a handful of new commands available.  To learn more about these commands please go through [this page.](https://www.arduino.cc/reference/en/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Advanced topics: Communication Protocols
 ======
 
-Both wired and wireless communication protocols are subsets of the communication protocols. To guarantee the efficient transport of data to the designated location, the communication protocol specifies the format that the data unit uses, the information and meaning that the information unit should have, the connection mode, and the timing when the information is delivered and received.
 
-### Wireless Protocols
-Wireless communication has become a crucial part of modern technology. From remote control toys to advanced industrial machinery, wireless protocols play a critical role. Here are some common ones:
 
-1. RFID (Radio Frequency Identification)
-
-2. Infrared
-
-3. ZigBee
-
-4. Bluetooth
-
-5. GPRS (General Packet Radio Service)
-6. 4G
-
-7. Wifi
-
-8. NB-IoT (Narrowband Internet of Things)
-
- 
-### Wired Protocols
-Even in our wireless world, wired protocols still have a crucial role, particularly in industrial and high-data-rate applications.
-
-1. MBus (Meter-Bus)
-
-2. USB (Universal Serial Bus)
-3. RS232
-
-4. RS485
-
-5. Ethernet
-
-Selecting the appropriate protocol will largely depend on the application and the environment. Always consider factors like range, power consumption, data rate, and the type of devices being connected when making your choice.
 
 Advanced topics: Calibration
 ======
-There are a lot of good sensors these days and many are 'good enough' out of the box for many non-critical applications.  But in order to achieve the best possible accuracy, a sensor should be calibrated in the system where it will be used. 
+We use various systems and equipment to measure physical quantities, but accuracy can be affected by factors like temperature and humidity. Equipment calibration is essential to address errors in measurements. Sensors, electronic devices sensitive to environmental changes, require calibration to improve performance and measure structural errors. Calibration compares expected and measured values, identifying the difference as structural error.There are a lot of good sensors these days and many are 'good enough' out of the box for many non-critical applications.  But in order to achieve the best possible accuracy, a sensor should be calibrated in the system where it will be used. 
 
-There are different methods available for calibration but among them **one point calibration** is the simplest type of calibration. If your sensor output is already scaled to useful measurement units, a one point calibration can be used to correct for sensor offset errors.
+There are three standard calibration methods used for sensors. They are-
+
+- One point calibration.
+- Two-point calibration.
+- Multi-Point Curve Fitting.
+
+Before knowing these methods we have to know the concept of Characteristic curve. Every sensor has a characteristic curve that shows the response of the senor to the given input value. In the calibration process, this characteristic curve of the sensor is compared with its ideal linear response.
+
+Some of the terms used with the characteristic curve are-
+
+- **Offset** – This value tells us whether the sensor output is higher or lower than the ideal linear response.
+- **Sensitivity or Slope** – This gives the rate of change of sensor output. A difference in slope shows that the sensor output changes at a different rate than the ideal response.
+- **Linearity** – Not all sensors have a linear characteristic curve over the given measurement range.
+
+**One point calibration** 
+
+It is the simplest type of calibration. If your sensor output is already scaled to useful measurement units, a one point calibration can be used to correct for sensor offset errors.
 To calibrate one point at a time:
 1. Use your sensor to take a measurement.
 2. Examine that measurement in relation to your benchmark.
@@ -139,6 +203,27 @@ To calibrate one point at a time:
 4. To get the calibrated value, add the offset to each sensor reading in your code.
   
 ![Alt text](img/sensors_SinglePoint.png)
+
+**Two-point calibration**
+
+A Two Point Calibration is a little more complex.  But it can be applied to either raw or scaled sensor outputs. A Two Point calibration essentially re-scales the output and is capable of correcting both slope and offset errors.  Two point calibration can be used in cases where the sensor output is known to be reasonably linear over the measurement range.  
+To perform a two point calibration:
+
+1. Take two measurements with your sensor:  One near the low end of the measurement range and one near the high end of the measurement range.  Record these readings as "RawLow" and "RawHigh"
+2. Repeat these measurements with your reference instrument.  Record these readings as "ReferenceLow" and "ReferenceHigh"
+3. Calculate "RawRange" as RawHigh – RawLow.
+4. Calculate "ReferenceRange" as ReferenceHigh – ReferenceLow
+5. In your code, calculate the "CorrectedValue" using the formula below:
+   
+`CorrectedValue = (((RawValue – RawLow) * ReferenceRange) / RawRange) + ReferenceLow`
+
+![alt text](img/sensors_TwoPoint.png)
+
+**Multi-Point Curve Fitting**
+
+Sensors that are not linear over the measurement range require some curve-fitting to achieve accurate measurements over the measurement range. A common case requiring curve-fitting is thermocouples at extremely hot or cold temperatures.  While nearly linear over a fairly wide range, they do deviate significantly at extreme temperatures.
+
+![alt text](img/sensors_nonLinear.png)
 
 
 A Complete Example 
@@ -195,7 +280,7 @@ Module interface:
 3. IN: Connect to the WaziACT analog pin A6
 
 Code Sample
-------------
+-----------
 ```c
 /********************
  * Soil Moisture Tester
@@ -392,7 +477,8 @@ Exercise
 ===
 
 After completing this course you should be able to do the following exercise by youself.
-```
-Make an Automatic water level controller using Ultrasonic sensor and WaziAct development board. Use the WaziAct to trigger the water pump when the water level in water tank crosses a certain limit. 
 
-```
+`
+Make an Automatic water level controller using Ultrasonic sensor and WaziAct development board.
+Use the WaziAct to trigger the water pump when the water level in water tank crosses a certain limit. 
+`
