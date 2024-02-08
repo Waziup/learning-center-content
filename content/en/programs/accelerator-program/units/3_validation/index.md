@@ -30,4 +30,4 @@ Testing and validation are continuous processes demanding iteration and experime
 Testing and validation extend beyond personal gains; they also benefit your team, stakeholders, and customers. Share and document your insights with clarity and persuasion, utilizing visual aids, stories, and examples. Additionally, document your process, methods, tools, feedback, data, changes, and outcomes. This practice facilitates progress tracking, justifies decisions, and prevents the repetition of mistakes.
 
 ## References
-1. [Product planing](https://www.linkedin.com/advice/0/how-do-you-learn-from-product-testing-validation) from LinkedIn.
+1. [Product Planing](https://www.linkedin.com/advice/0/how-do-you-learn-from-product-testing-validation) from LinkedIn.
