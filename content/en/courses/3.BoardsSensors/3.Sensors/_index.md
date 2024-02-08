@@ -28,40 +28,47 @@ Sensor's acts as the devices eyes and ears and gather important information from
 A few of the most popular ones are shown here in brief:
 
 
-
-1. **Light Sensor:** These detect light levels and are commonly used in automatic lighting systems and cameras.
+1. **Light Sensor :** These detect light levels and are commonly used in automatic lighting systems and cameras.
+   
    - IR Sensor (IR Transmitter / IR LED)
    - Photodiode (IR Receiver)
    - Light Dependent Resistor
   
   ![Alt text](img/Light_Sensor-01.png)
 
-2. **Temperature Sensor:** As the name suggests, these track temperature variations. They're the bread and butter of HVAC systems and many industrial processes.
+2. **Temperature Sensor :** As the name suggests, these track temperature variations. They're the bread and butter of HVAC systems and many industrial processes.
 
 ![Alt text](img/temperature_sensor-01.png)
 
-3. **Pressure/Force/Weight Sensor:** Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
+3. **Pressure/Force/Weight Sensor :** Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
    - Strain Gauge (Pressure Sensor)
    - Load Cell (Weight Sensor)
-  
+   
   ![Alt text](img/wieght_sensor-01.png)
-  
-4. **Proximity Sensors:** Handy for robotics and security systems, these sensors detect the presence or absence of an object within a certain range.
+
+4. **Proximity Sensors :** Handy for robotics and security systems, these sensors detect the presence or absence of an object within a certain range.
    - Ultrasonic proximity sensors
    - Photoelectric proximity sensors
    - Capacitive proximity sensors
    - Magnetic proximity sensors
    - IR and PIR proximity sensors
   
+
+   
+
 ![Alt text](img/proximity_sensor-01.png)
 
-5.** Gas Sensors:** A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
-
+5. **Gas Sensors :** A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
+   
 ![Alt text](img/gas_sensor-01.png)
 
-6. **Soil Moisture Sensors:** Soil moisture is basically the amount/content of water present in the soil. This can be measured using a soil moisture sensor either resistive or capacitive.
-
+6. **Soil Moisture Sensors :** Soil moisture is basically the amount/content of water present in the soil. This can be measured using a soil moisture sensor either resistive or capacitive.
+   
 ![Alt text](img/soil_moisture_sensor-01.png)
+
+
+
+
 
 Wiring
 ====
@@ -90,8 +97,10 @@ Lets first look at the pinout of WaziSense board and MQ2 gas sensor.
 
 ![alt text](img/WaziSense_Pinout.png)
 ![alt text](img/wiring_example1-01.png)
- Now we have to connect the sensor power pin (1-vcc) & ground pin (2-Gnd) to dev board power port, which is + pin & - pin of D7/D6. 
- Then for getting the output we have to connect the output pin (4-Analog out) to an Analog port of board, which can be A2/A1. 
+
+ Now we have to connect the `sensor power pin (Vcc)` & `ground pin (Gnd)` to dev board power port, which is `+` pin & `-` pin of port D7/D6. 
+
+ Then for getting the output we have to connect the `output pin (Analog out)` to an `Analog port` of board, which can be A2/A1. 
 
 Programming
 ========
@@ -172,8 +181,137 @@ Apart from the ones described up there are a handful of new commands available. 
 Advanced topics: Communication Protocols
 ======
 
+various communication protocols that are used by microcontrollers, microprocessors and ICs for communicating with various sensors, electronic drivers, input and output devices.
+
+**Inter-Integrated Circuit (I2C) Protocol**
+
+Allows the communication between devices or sensors connected via Two Wire Interface Bus.
+
+I2C is also known as inter-integrated circuit, it is often called “I squared C” in short. I2C protocol was developed by Philips Semiconductors in 1982. I2C communication bus is primarily used for communication between ICs, sensors and peripherals etc. over a short distance within a circuit board.
+
+It is a two wire communication which sends and receives data serially; the two bus lines are SDA – serial data and SCL – serial clock.
+
+The communication mode is half duplex, meaning bi-directional communication but only one device can send data and other must receive and the receiver cannot send data to the other simultaneously. 
+
+In I2C the data is synchronized using a clock bus which makes sure the data is sent and received properly.
+
+I2C utilizes open collector / open drain configuration meaning the I2C bus can be only pulled LOW but cannot pull HIGH, so we need to connect two external pull-up resistors on SDA and SCL lines ranging from 4.7K to 10K depending on the specifications.
+
+The I2C bus can have multiple master devices and multiple slave devices in the same two wire bus.
+
+The maximum limit of the number of devices that can be connected to the bus depends on the address modes (length).
+
+If the I2C uses 7-bit address for recognizing a master or slave device, then maximum 128 devices can be connected, if it uses 10-bit address, then 1024 devices can be connected on a same bus.  
 
 
+Speed of I2C bus:
+
+- Standard mode: 100 Kb/s.
+- Full speed mode: 400 Kb/s.
+- Fast mode: 1 Mb/s.
+- High speed mode: 3.2 Mb/s.
+
+![alt text](img/12C_01-01.png)
+
+Data framing of I2C & timing diagram:
+
+- The communication begins with a start condition; the start condition is satisfied when SCL is at HIGH and SDA changes from HIGH to LOW, you can see in the timing diagram highlighted in yellow ( on left hand side).
+- The next piece of data is device address. Every I2C device has an address (7 or 10 bits) so that we can write or read data from that particular I2C device. 
+- The device addresses are transferred as individual bits just like any other protocols, a bit is allowed to change from HIGH to LOW or LOW to HIGH only when the SCL is at LOW (highlighted in blue). A bit is read by the receiver when SCL is at HIGH – highlighted in green, this is the same for all data chunks. Please note that in I2C the data bits are transmitted from MSB to LSB.
+- The next bit is called read / write, the master decides whether the data need to be written or read from the slave device: 1 is for reading from slave, 0 is for writing data on salve.
+- An acknowledgement bit is sent to the master device by a slave indicating that communication was successful and the intended slave device exists in the I2C bus. 
+- Next data chunk is 1 byte of data (8 bits) in either direction (by master or slave) depending on the R/W bit. 
+- After the one byte of data an acknowledgement bit is sent by the received device (master or slave). For every succeeding one byte of data in either direction, one acknowledgement bit is sent by the receiving device.
+- Once the data transmission is completed a stop condition is initiated. Stop condition is initiated when SCL is at HIGH, SDA transitions from LOW to HIGH. Stop condition is monitored by all the masters in a bus so that they can initiate a new communication with a slave device in the same bus.
+
+![alt text](img/12C_02-01.png)
+
+**Arduino & Serial Peripheral Interface (SPI):**
+
+Serial Peripheral Interface (SPI) is a synchronous serial data protocol used by microcontrollers for communicating with one or more peripheral devices quickly over short distances.
+
+SPI stands for Serial Peripheral Interface; it was developed by Motorola in 1980s. It is synchronous serial communication meaning it requires a clock signal to sync data between master and slave devices and it is full-duplex, meaning it can send and receive data simultaneously.
+
+SPI protocol is single master multi-slave protocol, meaning there will be only one master device and may have two or more slave devices. SPI is also known as a four-wire serial bus.
+
+The SPI protocol needs four wires to interface and operate between master and slave device. 
+
+- SCLK – Serial clock – output from master device.
+- MOSI – Master out slave in – data output from master device.
+- MISO – Master in slave out – data input from salve device.
+- SS / CS – slave select / chip select. The slave select is active low line and can be any general purpose I/O pin of a microcontroller.
+
+Master & slave:
+![alt text](img/SPI_01-01.png)
+Multi-slave:
+![alt text](img/SPI_02-01.png)
+
+Timing diagram of SPI communication:
+
+![alt text](img/SPI_03-01.png)
+
+There are four modes of SPI communication:
+
+Please refer to the above timing diagram while reading the explanation given below.
+
+
+CPOL = 0 & CPHASE = 0: 
+MODE 0: When CPOL is set to 0, the idle state of the clock is LOW and when CPHASE (CPHA) is set to 0, the data will be read when the clock is at rising edge and the data bit is allowed to change when the clock is falling edge. 
+
+CPOL = 0 & CPAHSE = 1
+MODE 1: When CPOL is set to 0, the idle clock state is LOW and when CPHASE (CPHA) is set to 1, the data will be read when the clock is at falling edge and the data bit is allowed to change when the clock at rising edge. 
+
+CPOL = 1 & CPAHSE = 0
+MODE 2: When CPOL is set to 1, the idle clock state is HIGH and when CPHASE (CPHA) is set to 0, the data will be read when the clock is at falling edge and the data bit is allowed to change when the clock at rising edge. 
+
+CPOL = 1 & CPAHSE = 1
+MODE 3: When CPOL is set to 1, the idle clock state is HIGH and when CPHASE (CPHA) is set to 1, the data will be read when the clock is at rising edge and the data bit is allowed to change when the clock is at falling edge. 
+
+This concludes SPI communication protocol.
+
+
+**Universal Asynchronous Receiver-Transmitter (UART):**
+
+UART is a serial communication protocol that transmits and receives data one bit at time from least significant bit to most significant bit.
+
+We need two devices for establishing a UART communication and it is full duplex, meaning the data can be transmitted and received simultaneously.
+
+UART communication requires two wires (bus); Tx – transmit, Rx- receive and a common ground for completing the circuit between the two devices. The Tx of one device will be connected to the Rx of the other device and similarly the Rx of one device is connected to the Tx of another device.
+
+![alt text](img/UART_01-01.png)
+
+**Data framing for UART:**
+
+Data frame or timing diagram is an important aspect of any communication protocol because it describes how the data bits are transmitted, received and synchronized on a communication bus.
+
+A firmware program developer writes a program code based on the timing diagram for proper communication between sensors, microcontrollers and peripherals. 
+
+- During the idle state the Tx and Rx lines are pull high and we can see in the above timing diagram.
+- When data transmission starts, it always begin with a “start bit”, here the start-bit is transmitted by pulling the transmit line to LOW for some time and after this the actual data bits gets transmitted. 
+- D0 to D8 are the data bits and this data length can vary depending on the requirement. The minimum length is 5 bits (D0 to D4) and can extend up to 9 bits (till D8). From D0 to D8 the bits can be high or low depending on what you are sending and that’s why the diagram is shown with high and low lines simultaneously. In most applications LSB or least significant bits are transmitted first.
+- An optional parity bit can be transmitted and this optional bit is to check the data integrity on the receiving end. 
+- The next bit is called “stop bit” and this stop bit can be one or two bits in length.    
+- After the stop bit, the transmit line is pulled HIGH until the next data frame is transmitted. 
+  
+The time length of a bit is determined by the baud rate and it is time critical. Before transmitting some data from one device to another it is mandatory to set the baud rate of both the devices the same
+
+![alt text](img/UART_02-01.png)
+
+**Controller Area Network (CAN) :**
+
+CAN protocol was developed for automotive vehicles to simplify communication between various sensors, drivers and peripherals etc. CAN is a multi-master bus and there are no slave devices and all nodes act as a master.
+
+It sends and receives data serially and the mode of communication is half duplex and asynchronous. Since the communication is asynchronous the bit rate of the all CAN devices must be the same in a bus. 
+
+CAN is also a message broadcast system, meaning the data send over CAN bus is not targeted (from device A to device B like I2C or SPI), instead the broadcasted data will be read by all CAN devices and if the sent data is relevant to a CAN device it will process the data further and other CAN devices simply disregard the information.
+
+Unlike I2C where a device address exists, CAN devices do not have a device address but it has an identifier.
+
+Identifier conveys how important the message is (priority) and also used for arbitration management when multiple CAN devices start to communicate on the bus simultaneously. 
+
+CAN is a two wire protocol, its wires are twisted pair and unshielded. The two ends of the bus are terminated with 120 ohm resistors. The two wires of CAN bus are CAN HIGH and CAN LOW.
+
+![alt text](img/CAN_01-01.png)
 
 Advanced topics: Calibration
 ======
@@ -258,9 +396,8 @@ Software
   - Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
 
 
----
+
 ### Step 1: Setting up the Soil Moisture Sensor
----
 Soil moisture sensors measures the amount of water in the soil to maintain consistent and ideal soil conditions for plants.
 They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
 just insert it into the soil and then read it.
@@ -280,7 +417,7 @@ Module interface:
 3. IN: Connect to the WaziACT analog pin A6
 
 Code Sample
------------
+
 ```c
 /********************
  * Soil Moisture Tester
@@ -303,16 +440,15 @@ void loop() {
   delay(100);
 }
 ```
----
+
 ### Step 2: Setting up the Actuator(Relay)
----
+
 
 You may occasionally wish to manage appliances with AC power, such as lamps, fans, and other home appliances. The WaziACT, however, cannot directly control these higher voltage devices because it runs on 3.3 volts.
 
 This is where the relay comes into play.The waziACT has a relay module to control the AC mains. In our case, we are controlling the 12 Volts supply of a water pump.
 
 Code Sample
------------
 ```c
 /********************
  *  Program:  Relay Tester
@@ -341,9 +477,8 @@ void loop() {
 }
 ```
 
----
+
 ### Step #3: Combining Sensing and Actuation with Lora Communication
----
 
 At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet. Also the WaziACT will constantly update Wazicloud with the current state of the soil through Wazigate.
 
@@ -354,7 +489,6 @@ At this point, we want to trigger the relay to turn ON the water pump, when the 
 ![Alt text](img/waziACT_soilv3.jpg)
 
 Code Sample
------------
 ```c
 #include <WaziDev.h>
 #include <xlpp.h>
