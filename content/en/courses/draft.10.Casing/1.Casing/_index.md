@@ -1,6 +1,8 @@
 ---
 title: Designing cases for devices
 description: In this course we will learn how to build an outdoor casing for your IoT solution.
+difficulty: beginner
+duration: 3h
 ---
 
 # Designing cases for devices

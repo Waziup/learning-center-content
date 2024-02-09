@@ -9,6 +9,9 @@ duration: 4h
 This course will go through the various IoT development boards available on the market.
 In particular, we will review the Arduino Series boards, the NodeMCU ESP8266 & ESP32, the Wazi-Dev series, the Raspberry PI, the Teensy the Sipeed MAIX Bit and finally the Nvidia Jetson Nano.
 
+Introduction
+===
+
 IoT Development board Catagories : Arduino 
 ===
 
@@ -34,7 +37,7 @@ There are multiple versions of Arduino boards are available in the market. Some 
 
 ![Alt text](img/Arduino-types-01.png)
 
-## Arduino Uno Rev3
+### Arduino Uno Rev3
 ---
 The Arduino UNO is the best board to get started with electronics and coding. If this is your first experience tinkering with the platform, the UNO is the most robust board you can start playing with. The UNO is the most used and documented board of the whole Arduino family.
 
@@ -42,21 +45,21 @@ Arduino Uno is a microcontroller board based on the ATmega328P [datasheet](https
 
 ![Alt text](img/Pinout-Uno.png)
 
-## Arduino Mega 2560 Rev3
+### Arduino Mega 2560 Rev3
 ---
 
 The Arduino Mega 2560 is a microcontroller board based on the ATmega2560 [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf). It has 54 digital input/output pins (of which 15 can be used as PWM outputs), 16 analog inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB connection, a power jack, an ICSP header, and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started. The Mega 2560 board is compatible with most shields designed for the Uno and the former boards Duemilanove or Diecimila.
 
 ![Alt text](img/Pinout-Mega2560rev3_latest.png)
 
-## Arduino Nano
+### Arduino Nano
 ---
 
 The Arduino Nano is a small, complete, and breadboard-friendly board based on the ATmega328 (Arduino Nano 3.x) [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf). It has more or less the same functionality of the Arduino Duemilanove, but in a different package. It lacks only a DC power jack, and works with a Mini-B USB cable instead of a standard one.
 
 ![Alt text](img/Pinout-NANO_latest.png)
 
-## Arduino Micro
+### Arduino Micro
 ---
 The Micro is a microcontroller board based on the ATmega32U4 [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf), developed in conjunction with Adafruit. It has 20 digital input/output pins (of which 7 can be used as PWM outputs and 12 as analog inputs), a 16 MHz crystal oscillator, a micro USB connection, an ICSP header, and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a micro USB cable to get started. It has a form factor that enables it to be easily placed on a breadboard.
 
@@ -64,7 +67,7 @@ The Micro board is similar to the Arduino Leonardo in that the ATmega32U4 has bu
 
 ![Alt text](img/Pinout-Micro_latest.png)
 
-## Arduino GIGA R1 WiFi
+### Arduino GIGA R1 WiFi
 ---
 
 The Arduino GIGA R1 WiFi is designed for ambitious makers who want to step up their game. It levels the playing field for gamers, artists, sound designers and anyone coming to the tech world with big ideas on a budget – because it packs advanced features into an accessible component, with the same form factor as our popular Mega and Due.
@@ -75,20 +78,22 @@ IoT Development board Catagories : NodeMCU ESP8266 & ESP32
 ===
 IoT development boards are hardware platforms that facilitate the creation and prototyping of Internet of Things (IoT) projects. Two popular categories of IoT development boards are NodeMCU ESP8266 and ESP32.
 
-![alt text](img/ESP8266_ESP32-01.png)
 
-## ESP8266
+
+### ESP8266
 ---
 The ESP8266 is a low-cost Wi-Fi chip developed by Espressif Systems. It can be used as a standalone device, or as a UART to Wi-Fi adaptor to allow other microcontrollers to connect to a Wi-Fi network. For example, you can connect an ESP8266 to an Arduino to add Wi-Fi capabilities to your Arduino board. The most practical application is using it as a standalone device.
 
 With the ESP8266, you can control inputs and outputs as you would do with an Arduino, but with Wi-Fi capabilities. This means you can bring your projects online, which is great for home automation and internet of things applications.
 
-## ESP32
+### ESP32
 ---
 The ESP32 is a family of low-cost, low-power System on a Chip (SoC) microcontrollers by Espressif that has a dual-core processor, Bluetooth and Wi-Fi connectivity. If you are familiar with the ESP8266, the ESP32 is a feature-rich replacement that comes with a ton of more functionality.
 
+![alt text](img/ESP8266_ESP32-01.png)
 
 ### The following table shows the main differences between the ESP8266 and the ESP32 chips:
+
 
 | **Features** | E**SP8266** | **ESP32** |
 | ----------- | ----------- | --------- |
@@ -111,11 +116,34 @@ The ESP32 is a family of low-cost, low-power System on a Chip (SoC) microcontrol
 
 The choice between the two often depends on the specific requirements of the project. With ESP32 being preferred for more feature-rich and demanding applications, they are commonly used for projects requiring more computational power, higher data transfer rates, and additional connectivity options. Whereas in case of ESP8266, they are compact, cost-effective, and suitable for a variety of IoT projects such as home automation, sensor nodes, and Wi-Fi-enabled devices.
 
-IoT Development board Catagories : Wazi-Dev series
+IoT Development board Catagories : Wazi-dev series
 ===
+Waziup development boards, namely WaziDev, WaziSense and WaziAct
 
+**WaziDev**
 
+WaziDev is a Sensing and Actuation development board for IoT applications. It transmits data up to 7Km using the RFM95W LoRa module with an embedded LoRa antenna. It is easily programmable and customizable, using Arduino technology. Embedded is a Lipo battery charger for solar panels and low power options. An ideal solution for start-ups and entrepreneurs who want to rapidly prototype IoT applications.
 
+![alt text](img/wazidev.jpg)
+
+**WaziSense**
+
+The WaziSense is specifically engineered to tackle the special demands of agricultural and environmental monitoring applications in challenging outdoor deployment scenarios, it is a low-power development board.
+With features like low power long range communication, multiple ports for simple connection to a variety of digital and analog sensors, and the ability to charge solar batteries, the WaziSense gives farmers, researchers, agricultural experts, and enthusiasts a flexible platform to effortlessly monitor, control, and optimize their operations.
+
+![alt text](img/Wazisense.png)
+
+**WaziHat Pro Single**
+
+Wazihat sits on top of the raspberry pi to enable it to communicate with sensor nodes and actuators via LoRa. The wazihat pro single is fitted with a 0.96" OLED and an SX1276 chip. Beyond the waziup edge operating system of the raspberry pi, the wazihat is essentially the reason the raspberry pi can serve as a LoRa gateway.
+
+![alt text](img/wazihatprosingle.jpg)
+
+**WaziAct**
+
+WaziAct is designed to play as a production LoRa actuator node. It has an on board mechanical Relay which can be connected to an external circuit e.g. a water pump. It exposed a number of terminals which can be connected to other relays or even sensors; for example to check the vibration of a water pump to make sure it is turned on and send the status to the gateway.
+
+![alt text](img/waziact.jpg)
 
 IoT Development board Catagories : Raspberry PI
 ===
@@ -124,16 +152,18 @@ IoT Development board Catagories : Raspberry PI
 
 
 
-## Teensy
+IoT Development board Catagories : Teensy
+===
 
 
+IoT Development board Catagories : Sipeed MAIX Bit
+===
 
-## Sipeed MAIX Bit
-
-
-## Nvidia Jetson Nano
-
+IoT Development board Catagories : Nvidia Jetson Nano
+===
+![alt text](<img/Nvidia Jetson Nano-01.png>)
 Important Features
 ===
+
 Examples
 ===
