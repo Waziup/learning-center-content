@@ -22,37 +22,10 @@ Data science aims to use that data to predict the results of decisions made in t
 Introduction
 ==========
 
-A car next to you stops automatically when a pedestrian steps in front of it, an unsolicited email skips your inbox and goes straight to spam, and an advertisement for the item you were considering yesterday appears on your social media feed over the course of an hour. Artificial intelligence has been the driving force behind all of these events, which is what unites them. And the driving force behind them all are machine-learning algorithms that forecast outcomes using data.
-
-Let's now examine each discipline's foundations before examining how machine learning supports data science.
-
-How does machine learning work?
-The science of machine learning entails creating algorithms that can change without human intervention by learning from data on their own. These algorithms develop their own logic as we provide data to them, resulting in solutions that are applicable to a variety of aspects of our world, including e.g.:
-
-- fraud detection
-- web searches
-- tumor classification
-- price prediction
-
-In deep learning, a branch of machine learning, computer programs learn complex ideas by deriving them from simpler ones. The "deep" neural networks used by these algorithms are multilayered (hence the name). Deep learning has a significant positive impact on performance in machine learning applications like natural language processing or computer vision.
-
-Data science: What is it?
 Data science involves transforming, visualizing, and manipulating data in order to derive insightful conclusions from the findings. These insights are frequently used to guide people, companies, and even governments.
 
-Simple linear regression can be used by data scientist to forecast customer behavior, stock prices, or insurance claims. They could use classification and regression trees (CART) to produce homogeneous clusters, or they could use graphs to represent the portfolio of a financial technology company to gain some insight into how their decisions might be affected.
-
-Human analysts were indispensable when it came to identifying patterns in data up until the last decades of the 20th century. They remain crucial today for feeding the right data to learning algorithms and deducing meaning from algorithmic output, but machines can and do carry out a large portion of the analytical work themselves.
-
 Why Machine Learning Is Useful in Data Science?
-Automated model construction for data analysis is where machine learning is useful. Machine learning is used when we give computers the fundamental data science tasks of classification, clustering, and anomaly detection.
-
-We can create self-improving learning algorithms that take data as input and provide statistical inferences. The algorithms take action whenever they notice a change in pattern, without relying on hard-coded software programming.
-
-Let's talk about some terminology used to classify various machine-learning algorithms before we look at specific data analysis issues. First, we can consider that the majority of algorithms are either regression-based (where machines predict values) or classification-based (where machines classify data into categories).
-
-After that, let's make a distinction between supervised and unsupervised algorithms. After adequate data training, a supervised algorithm outputs target values. In contrast, an unsupervised machine-learning algorithm does not require an output variable as guidance during the learning process.
-
-For instance, a supervised algorithm might calculate a home's value after examining the prices (the output variable) of comparable homes, whereas an unsupervised algorithm might search for hidden patterns in housing that is currently on the market.
+Automated model construction for data analysis is where machine learning is useful. Machine learning is used when we give computers the fundamental data science tasks of classification, clustering, and anomaly detection. We can create self-improving learning algorithms that take data as input and provide statistical inferences. The algorithms take action whenever they notice a change in pattern, without relying on hard-coded software programming.
 
 Despite the fact that these machine-learning models are very popular, humans are still required to determine the ultimate implications of data analysis. It's up to us humans to interpret the findings or make choices about, say, how to clean the data.
 
@@ -76,44 +49,28 @@ We examine how machine learning can scale and automate data analysis in this cou
 Data preparation and problem definition
 ================
 
-In this point it is being discussed on how to prepare the data we want to analyze.
-
-## How to approach a machine learning problem
-
-There are five major steps involved on how to approach a machine learning problem [Brow14]. They are being discussed below.
+There are five major steps involved on how to approach a machine learning problem [Brow14]. They are being discussed below:
 
 ## 1. Define the Problem
 
 In this phase one tires to understand the problem in holistic way. 
 This can be split into three questions.
 
-### 1. What is the problem?
+- What is the problem? - here the problem is described, to further understand it. List assumptions and similar problems.
 
-Here the problem is described, to further understand it. List assumptions and similar problems.
+- Why this problem needs to be solved? - this question includes advantages one gain from solving the problem. It is a motivation to think about benefits a solution provides.
 
-### 2. Why this problem needs to be solved?
-
-This question includes advantages one gain from solving the problem. It is a motivation to think about benefits a solution provides.
-
-### 3. How would one solve the problem? 
-
-Try to understand how the problem would be solved manually, to get insights in this domain.
+- How would one solve the problem? - try to understand how the problem would be solved manually, to get insights in this domain.
 
 ## 2. Prepare Data 
 
 In that phase one tries to understand the data, for that some scatter plots or histograms are useful.
 
-### 1. Data Selection
+- Data Selection - in data selection it is being examined what data is available, what data is missing and what is redundant or simply not needed. The relevant training examples are then chosen. 
 
-In data selection it is being examined what data is available, what data is missing and what is redundant or simply not needed. The relevant training examples are then chosen. 
+- Data Preprocessing - data preprocessing tries to organize the selected data by formatting, cleaning and sampling.
 
-### 2. Data Preprocessing
-
-Data preprocessing tries to organize the selected data by formatting, cleaning and sampling.
-
-### 3. Data Transformation
-
-Data transformation involves engineering features by scaling, attribute aggregation and attribute decomposition. 
+- Data Transformation - data transformation involves engineering features by scaling, attribute aggregation and attribute decomposition. 
 
 ## 3. Spot Check Algorithms
 
@@ -123,32 +80,20 @@ After a first spot check the most promising algorithms can be chosen. Afterwards
 
 ## 4. Improve Results
 
-### 1. Algorithm Tuning: 
+- Algorithm Tuning - in this process the hyperparameter of the model architecture are changed (in a specific range) and the model is trained in various combinations. The best model can be chosen afterwards.
 
-In this process the hyperparameter of the model architecture are changed (in a specific range) and the model is trained in various combinations. The best model can be chosen afterwards.
+- Ensemble Methods - like stated before, there can be a combination of different machine learning models to give the best results. So, it should be considered to combine different approaches, if this is feasible.
 
-### 2. Ensemble Methods:
+- Extreme Feature Engineering - in extreme feature engineering the attribute decomposition and aggregation seen in data preparation is being used to make the training data more explicit. It involves transforming data to forms that better relate to the learning targets. It can augment the value of your data and improves the overall performance of your model. It involves techniques like:
 
-Like stated before, there can be a combination of different machine learning models to give the best results. So, it should be considered to combine different approaches, if this is feasible.
-
-### 3. Extreme Feature Engineering
-
-In extreme feature engineering the attribute decomposition and aggregation seen in data preparation is being used to make the training data more explicit. It involves transforming data to forms that better relate to the learning targets. It can augment the value of your data and improves the overall performance of your model. It involves techniques like:
-
-- **Imputation**: handling the missing values in data
-- **Discretization**: grouping sets of values together in some logical fashion into buckets or bins
-- **Categorical encoding**: encode categorical values into numerical features -> simpler to learn
-- **Feature splitting**: splitting features into parts can improve the value of features
-- **Handling outliers**: outliers are unusually high or low values in a dataset, there are some options: 
-  - removal
-  - replacing
-  - capping 
-  - discretization 
-- **Variable transformations**: could help normalizing skewed data, e.g. logarithmic transformation
-- **Scaling**: scaling inputs of data can improve your model, here values are normalized, this can be achieved differently
-  - Variance scaling. data points are subtracted by their mean, the result is divided by the distribution variance, this gives a distribution with 0 mean and a variance of 1
-  - Min-Max scaling: rescaling the values in a range from 0 to 1
-- **Create features**: deriving new features from existing ones, done by simple mathematical operations like: mean, median, difference, sum, mode or a product of two values
+1) **Imputation**: handling the missing values in data
+2) **Discretization**: grouping sets of values together in some logical fashion into buckets or bins
+3) **Categorical encoding**: encode categorical values into numerical features -> simpler to learn
+4) **Feature splitting**: splitting features into parts can improve the value of features
+5) **Handling outliers**: outliers are unusually high or low values in a dataset, there are some options: removal, replacing, capping, discretization. 
+6) **Variable transformations**: could help normalizing skewed data, e.g. logarithmic transformation
+7) **Scaling**: scaling inputs of data can improve your model. Here values are normalized. This can be achieved differently with methods such as: Variance scaling where data points are subtracted by their mean, the result is divided by the distribution variance; and Min-Max scaling whereby we rescale the values in a range from 0 to 1
+8) **Create features**: deriving new features from existing ones, done by simple mathematical operations like: mean, median, difference, sum, mode or a product of two values
 
 ## 5. Present Results
 
@@ -184,9 +129,6 @@ Combining the above two equations, we get:
 Variance
 --------
 
-<!-- TODO: make difference between BIAS clear -->
-
-
 Variance is also known as **Variance Error** or **Error due to Variance**.
 Variance measures how close observed values are to predicted values or, in other words, how far observed values are spread out from their mean (predicted) values.
 The goal is here to have a low value, this means the prediction is accurate compared to the observed values. 
@@ -201,6 +143,8 @@ Bias is a constant or vector that shows the difference of the model's prediction
 <p style="text-align: center;">
 Difference between variance and bias illustrated [Fort12]. 
 </p>
+
+In summary, bias measures how closely the model's predictions match the true values, while variance measures how much the predictions vary with changes in the training data. Balancing bias and variance is crucial for building models that generalize well to unseen data
 
 Correlation
 -----------
@@ -254,8 +198,8 @@ A high value means that the variables are perfectly correlated, there is no vari
 A more in-depth mathematical explanation of the r2 score is given by Paul Johnson in his lecture ["Extending R-squared beyond ordinary least-squares linear regression"](https://www.slideshare.net/pcdjohnson/extending-rsquared-beyond-ordinary-leastsquares-linear-regression-95949488)
 
 
-How to retrieve values from the WaziCloud platform
-================
+Exercise - data collection from WaziCloud
+========================================
 
 Retrieve values in JSON via curl
 --------------------------------
@@ -356,6 +300,10 @@ Matplotlib
 
 Matplotlib is the plotting library to produce quality figures such as histogram, scatter plot etc… It is widely used for Data visualization.
 
+### Matplotlib exercise
+
+The simple example code below will load some test data and use Matplotlib to visualize the data:
+
 ```python
 import matplotlib.pyplot as plt 
  
@@ -375,7 +323,7 @@ plt.xlabel('X-Axis')
 plt.show()
 ```
 
-This code results in the following plotted diagram:
+This code results in the following plotted diagram. We cans see that there is a relationship between the X and Y values, that is, as they are nearly proportional to each other.
 
 ![Matplotlib](img/plotmatplotlib.png)
 

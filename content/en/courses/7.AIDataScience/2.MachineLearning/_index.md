@@ -209,9 +209,6 @@ Combining the above two equations, we get:
 Variance
 --------
 
-<!-- TODO: make difference between BIAS clear -->
-
-
 Variance is also known as **Variance Error** or **Error due to Variance**.
 Variance measures how close observed values are to predicted values or, in other words, how far observed values are spread out from their mean (predicted) values.
 The goal is here to have a low value, this means the prediction is accurate compared to the observed values. 
@@ -226,6 +223,8 @@ Bias is a constant or vector that shows the difference of the model's prediction
 <p style="text-align: center;">
 Difference between variance and bias illustrated [Fort12]. 
 </p>
+
+In summary, bias measures how closely the model's predictions match the true values, while variance measures how much the predictions vary with changes in the training data. Balancing bias and variance is crucial for building models that generalize well to unseen data
 
 Correlation
 -----------
@@ -413,9 +412,57 @@ Making a prediction after calculated the linear equation is quite simple, you ju
 <img src="https://latex.codecogs.com/svg.image?y = B_{0} + B_{1} * x_{1}">
 </p>
 
+X is the input value while Y is the output(predicted) value.
 
 
-<!-- TODO: add a finish note-->
+Linear Regression exercise
+==========================
+
+In this exercise we will use Google Colab to train a regression model that uses a real dataset to predict the prices of houses in California. 
+
+After doing this Colab, you'll know how to do the following:
+- Read a .csv file into a pandas DataFrame
+- Examine a dataset
+- Experiment with different features in building a model
+- Tune a model's hyperparameters
+
+A complete code of this exercise can be found in this [Google Colab project](https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/linear_regression_with_a_real_dataset.ipynb?hl=en) that was published by Google.
+
+When developing and implementing machine learning models, we typically start with the creation of a dataset, analyze and/or clean it, train a model, test the model, if necessary, retrain the model before deploying it for inference. These steps have been highlighted in the project. 
+
+---
+### Step 1: Open the project
+---
+
+First open the Google Colab project using [this link](https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/linear_regression_with_a_real_dataset.ipynb?hl=en). If you haven't signed in to a Google account on the computer browser, click "Sign in" and enter your email address and password of a Google account.
+
+![Open project](img/Google_Colab_screenshot_1.png)
+
+---
+### Step 2: Run the project
+---
+
+Next, after opening the project and having signed in to a Google account, we can simply run the entire code by clicking on "Runtime" and then "Run all". This will create a virtual computer for you and it will run the code.
+
+![Run the code](img/Google_Colab_screenshot_2.png)
+
+---
+### Step 3: Understanding the project
+---
+
+After running the code, we can see that the project first loads a CSV file and examines it to see the type of data that it contains and also identify metrics for each column, such as: count, mean, standard deviation, minimum and maximum values in each column, and the quantiles.
+
+Using these values, we can identify the outliers in our dataset. When you see anomalies in a column, become more careful about using that column as a feature. That said, anomalies in potential features sometimes mirror  anomalies in the label, which could make the column   be (or seem to be) a powerful feature.
+
+Next, the code loads and trains a Keras model using the specified number of epochs. Traditionally, we use a 80/20 split for training and test data; that is, 80% of the dataset it used to train the model and the remaining 20% (unseen data) is used to test the model. During the model's training process we can see that the values for loss and root_mean_squred_error are reducing as the number of epochs increases. But why?
+
+![Model training](img/Google_Colab_screenshot_3.png)
+
+This is because during each iteration of training a model, the model learns the dataset better. Simply, this makes the model be able to give more correct results as compared to the incorrect ones, hence the lower loss and error values as the number of training cycles increases.
+
+Finally, when the training process is complete, we test the model by giving it unseen data. In this case, look at the preceding table. How close is the predicted value to the label value? In other words, does your model accurately predict house values?
+
+![Model predictions](img/Google_Colab_screenshot_4.png)
 
 ## Sources
 
