@@ -28,7 +28,7 @@ Sensor's acts as the devices eyes and ears and gather important information from
 A few of the most popular ones are shown here in brief:
 
 
-1. **Light Sensor :** These detect light levels and are commonly used in automatic lighting systems and cameras.
+- **Light Sensor :** These detect light levels and are commonly used in automatic lighting systems and cameras.
    
    - IR Sensor (IR Transmitter / IR LED)
    - Photodiode (IR Receiver)
@@ -36,17 +36,17 @@ A few of the most popular ones are shown here in brief:
   
   ![Alt text](img/Light_Sensor-01.png)
 
-2. **Temperature Sensor :** As the name suggests, these track temperature variations. They're the bread and butter of HVAC systems and many industrial processes.
+- **Temperature Sensor :** As the name suggests, these track temperature variations. They're the bread and butter of HVAC systems and many industrial processes.
 
 ![Alt text](img/temperature_sensor-01.png)
 
-3. **Pressure/Force/Weight Sensor :** Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
+- **Pressure/Force/Weight Sensor :** Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
    - Strain Gauge (Pressure Sensor)
    - Load Cell (Weight Sensor)
    
   ![Alt text](img/wieght_sensor-01.png)
 
-4. **Proximity Sensors :** Handy for robotics and security systems, these sensors detect the presence or absence of an object within a certain range.
+- **Proximity Sensors :** Handy for robotics and security systems, these sensors detect the presence or absence of an object within a certain range.
    - Ultrasonic proximity sensors
    - Photoelectric proximity sensors
    - Capacitive proximity sensors
@@ -58,11 +58,11 @@ A few of the most popular ones are shown here in brief:
 
 ![Alt text](img/proximity_sensor-01.png)
 
-5. **Gas Sensors :** A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
+- **Gas Sensors :** A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
    
 ![Alt text](img/gas_sensor-01.png)
 
-6. **Soil Moisture Sensors :** Soil moisture is basically the amount/content of water present in the soil. This can be measured using a soil moisture sensor either resistive or capacitive.
+- **Soil Moisture Sensors :** Soil moisture is basically the amount/content of water present in the soil. This can be measured using a soil moisture sensor either resistive or capacitive.
    
 ![Alt text](img/soil_moisture_sensor-01.png)
 
@@ -363,11 +363,94 @@ Sensors that are not linear over the measurement range require some curve-fittin
 
 ![alt text](img/sensors_nonLinear.png)
 
+**Example :**
+
+One technique for calibrating sensor input is demonstrated below:
+
+  The circuit:
+  - analog sensor (potentiometer will do) attached to analog input 0
+  - LED attached from digital pin 9 to ground through 220 ohm resistor
+  
+![alt text](img/circuit.png)
+
+**Code:**
+````c
+/*
+
+  The sensor readings
+  during the first five seconds of the sketch execution define the minimum and
+  maximum of expected values attached to the sensor pin.
+
+  The sensor minimum and maximum initial values may seem backwards. Initially,
+  you set the minimum high and listen for anything lower, saving it as the new
+  minimum. Likewise, you set the maximum low and listen for anything higher as
+  the new maximum.
+
+  created 29 Oct 2008
+  by David A Mellis
+  modified 30 Aug 2011
+  by Tom Igoe
+  modified 07 Apr 2017
+  by Zachary J. Fields
+
+  This example code is in the public domain.
+
+  https://www.arduino.cc/en/Tutorial/BuiltInExamples/Calibration
+*/
+
+// These constants won't change:
+const int sensorPin = A0;  // pin that the sensor is attached to
+const int ledPin = 9;      // pin that the LED is attached to
+
+// variables:
+int sensorValue = 0;   // the sensor value
+int sensorMin = 1023;  // minimum sensor value
+int sensorMax = 0;     // maximum sensor value
+
+
+void setup() {
+  // turn on LED to signal the start of the calibration period:
+  pinMode(13, OUTPUT);
+  digitalWrite(13, HIGH);
+
+  // calibrate during the first five seconds
+  while (millis() < 5000) {
+    sensorValue = analogRead(sensorPin);
+
+    // record the maximum sensor value
+    if (sensorValue > sensorMax) {
+      sensorMax = sensorValue;
+    }
+
+    // record the minimum sensor value
+    if (sensorValue < sensorMin) {
+      sensorMin = sensorValue;
+    }
+  }
+
+  // signal the end of the calibration period
+  digitalWrite(13, LOW);
+}
+
+void loop() {
+  // read the sensor:
+  sensorValue = analogRead(sensorPin);
+
+  // in case the sensor value is outside the range seen during calibration
+  sensorValue = constrain(sensorValue, sensorMin, sensorMax);
+
+  // apply the calibration to the sensor reading
+  sensorValue = map(sensorValue, sensorMin, sensorMax, 0, 255);
+
+  // fade the LED using the calibrated value:
+  analogWrite(ledPin, sensorValue);
+}
+`````
 
 A Complete Example 
 ====
 
- Here's what we will be learning from this example:
+Here's what we will be learning from this example:
 
 - What parts are needed
 - How to wire up and read sensor values
