@@ -14,7 +14,7 @@ Deployment and piloting is a huge step in any IoT project. In this course, we wi
 Before an IoT solution is deployed, there are critical steps taken to ensure that the systems functions properly. These steps include
 preparation, installation, configuration, intergration, testing, then finally doing the deployment.
 
-## Preparation
+## Preparation & assembly
 
 The preparation phase includes gathering all the necessary hardware components like sensors, actuators and the casing itself. Taking for instance
 a solution for monitoring temperatures using `Waziup dev` boards, you will need to gather,
@@ -22,6 +22,10 @@ a solution for monitoring temperatures using `Waziup dev` boards, you will need 
 - Temperature sensors
 - Microcontroller board e.g Wazidev, wazisense etc
 - The casing
+
+<img src=./img/casing.JPEG width=320 height=420>
+
+<img src=./img/casing-1.JPEG width=320 height=280>
 
 Ensure all the devices are functioning well before the assembly and installation procedure.
 
@@ -39,11 +43,11 @@ Ensure that your device has access to enough power supply. For solar application
 
 In this phase, you need to have access to the gateway user interface, you can access it from http://wazigate.local
 
-<img src=./img/gateway-ui.png width=720 height=380d>
+<img src=./img/gateway-ui.png width=720 height=380>
 
 The configuration steps includes setting the user specific data like sensor configuration.
 
-<img src=./img/sensor-setting.png width=720 height=380d>
+<img src=./img/sensor-setting.png width=720 height=380>
 
 You can set the kind of sensors connected, set actuators connected to your device as well as setting the Wi-Fi connections.
 
@@ -65,6 +69,8 @@ The testing phase is used to validate the performance of the device. Some of the
 Since testing is an important step in any IoT application, more about testing will be touched on in the next module.
 
 ## Deployment
+
+<img src=./img/majiup-casing.png width=420 height=500>
 
 Once testing is complete and the tests result to success, the system is deemed ready for deployment.
 
