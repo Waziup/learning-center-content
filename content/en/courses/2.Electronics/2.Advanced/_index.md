@@ -6,7 +6,10 @@ difficulty: advanced
 duration: 3h
 ---
 
-In this course, we’ll study several extremely common communication protocols for electronic boards. In the IoT world, GPIO is very used, such as with the Raspberry PI. I2C, SPI and UART will also be explained.
+Introduction
+============
+
+In this course, we will explore widely used communication protocols for electronic boards in the context of the Internet of Things (IoT). In the IoT realm, General Purpose Input/Output (GPIO) pins play a crucial role in connecting prototyping boards such as Arduino, Raspberry Pi, or WaziSense to peripherals. These GPIOs often come equipped with special features that enable seamless communication between prototyping boards and the sensors or devices they are connected to. The course will delve into key protocols like I2C, SPI, and UART, shedding light on their functionalities and applications in IoT scenarios.
 
 GPIO
 ====
@@ -16,11 +19,11 @@ It may be used as an input or output, or both, and is controllable by software.
 
 **Input pins** act like a voltage meter. They can be either digital or analog:
 
-- *Digital pins* will send 0 for a voltage under half of the maximum expected and 1 for values above the half.
+- *Digital pins* will send 0 for a voltage under half of the maximum expected and 1 for values above the half. Therefore a 5v board will have 0-2.5v as 0 or OFF and values greater than 2.5-5v as 1 or ON.
 - *Analog pins*, on the other hand, will send values from 0 to 1024, depending on what the respective sensor is detecting.
 
 **Output pins** can also be *digital* or *analog*. Digital pins will output 5V or 3.3V if given the value 1.
-The voltage depends on the type of the board. The WaziDev ouput is 3.3V, but some Arduino boards like Arduino UNO outputs 5V.
+The voltage depends on the type of board. The WaziDev's ouput is 3.3V, but some Arduino boards like Arduino UNO outputs 5V.
 For the Raspbery PI, the GPIO pins output 3.3 V.
 
 ![GPIO](img/GPIO.png)
@@ -28,30 +31,33 @@ For the Raspbery PI, the GPIO pins output 3.3 V.
 In a nutshell, output pins have the functionality of a battery, like you can see in the previous figure.
 The anode of the LED is connected through the resistor to the output pin. The cathode will be connected to the ground.
 
-A lot of boards does not have a DAC (Digital to Analog Converter), and thus cannot perform directly an analog output.
-In this case, we use a method to simulate the analog output called PWM (Pulse With Modulation).
+A lot of boards do not have a DAC (Digital to Analog Converter), and thus cannot perform directly output an analog signal.
+
+In this case, we use a method called PWM (Pulse With Modulation) to simulate the analog signals output.
 
 
 PWM
 ---
 
-Pulse with modulation is generating signals like this:
+Pulse with modulation is used to generat signals like this:
 
 ![PWM](img/PWM.png)
 
-Pins capable of generating PWM are generating quadratic periodical signals.
-PWM comes from the duty cycle of the pulse: how much of the period of the signal is one and how much is 0.
+Pins capable of generating PWM are generat quadratic periodical signals.
+PWM comes from the duty cycle of the pulse: how much of the period of the signal is 1 and how much is 0.
+
 PWM pins are controled with numbers between 0 to 255.
 If we ask for a signal of 0 it will generate a line with 0, which is similar to a GPIO writing Low.
-If we go to 255 the signal must be 1 the whole period. In between, it depends.
-For example if you have 64 , 25% of the time the signal will be 1 and so on.
+
+If we go to 255, the signal will be 1 the whole period.
+For example if you have 64 , 25% of the time the signal will be 1 and so on. This means that if you for instance have an LED connected to that output pin with the PWM, the LED will be at approximately 25% of its brightness as well.
 
 
 I2C bus
 =======
 
 I2C (Inter-Integrated Circuit) is one of the most popular communication protocol used in embedded systems.
-It has been designed by Philips for simple audio-video appliances controlled by the microcontroller.
+It was designed by Philips for simple audio-video appliances controlled by the microcontroller.
 
 There are many chips that can be connected to the processor with this interface which uses SDA (data) and SCL (clock) pins:
 
@@ -64,17 +70,15 @@ There are many chips that can be connected to the processor with this interface 
 
 In an I2C bus, each device (slave) has an assigned address to allow the master (microcontroller) to indicate which I2C slave it is communicating with.
 
-![i2c-bus](img/i2c-bus.png)
+![i2c-bus](img/i2c.png)
 
 Note that on many microcontrollers, SDA and SCL lines are usually mapped to pre-defined pins. For instance, on Arduino boards using the ATmega328P microcontroller, SDA is usually pin A4 and SCL is usually pin A5. **You need to check the board's schematic!**
 
 ![i2c-pins](img/i2c-pins.png)
 
-Being a low-speed bus technology, it is possible to use other pins for SDA and SCL lines provided that the software library allows so.
+Being a low-speed bus technology, it is possible to use other pins for SDA and SCL lines provided that the software library allows it.
 
-{{% warning%}}
 See the [OLED](/resources/waziup/oled-display) example for connecting a small I2C OLED screen.
-{{%/warning%}}
 
 SPI bus
 =======
@@ -93,7 +97,15 @@ Note that on many microcontrollers, MISO, MOSI and SCK lines are mapped to pre-d
 1-wire
 ======
 
-1-Wire is a device communications bus system designed by Dallas Semiconductor Corp. that provides low-speed (16.3 kbit/s) data, signaling, and power over a single conductor.
-It is typically used to communicate with very simple and low-speed devices such as simple digital sensors.
+1-Wire is a communication protocol designed by Dallas Semiconductor, now a part of Maxim Integrated, to enable simple and efficient communication with devices using a single wire. This innovative technology allows data and power to be transmitted over a single wire, simplifying wiring and reducing complexity in various applications. Known for its ease of use and low-cost implementation, 1-Wire has found applications in diverse fields, including temperature sensing, authentication, and identification, making it a versatile solution for a wide range of embedded systems and IoT devices.
 
+![spi-lora](img/onewire.png)
 
+UART
+======
+
+UART (Universal Asynchronous Receiver/Transmitter) is a fundamental communication protocol extensively used in embedded systems, notably with popular platforms like Arduino. In the context of Arduino, UART serves as a crucial mechanism for serial communication between the microcontroller on the Arduino board and external devices. It allows for the transmission and reception of data in a sequential, bit-by-bit fashion. Arduino boards typically have dedicated pins labeled as RX (Receive) and TX (Transmit) for UART communication.
+
+In some cases, one can also use software Libraries to define two pins as UART(TX and RX) if the microcontroller in choice allows it. For instance, in the example below, pin 2 and 3 are used as UART for interfacing a GPS module with an Arduino UNO.
+
+![UART](img/uart.jpg)
