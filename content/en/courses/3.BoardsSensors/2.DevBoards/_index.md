@@ -152,7 +152,13 @@ WaziAct is designed to play as a production LoRa actuator node. It has an on boa
 IoT Development board Catagories : Raspberry Pi
 ===
 
+The Raspberry Pi is a tiny yet powerful technology that allows hobbyists, enthusiasts, and amateurs to explore a wide range of opportunities. This credit card-sized computer was created by the Raspberry Pi Foundation with accessibility, affordability, and versatility in mind.
 
+Fundamentally, the Raspberry Pi is a platform that promotes exploration and innovation rather than merely a tiny computer. The Raspberry Pi offers an easy way to get started with electronics, whether you want to learn to program, make electronic projects, set up a media center, or even build your own mini-server.
+
+With its many features, including HDMI outputs, USB ports, and GPIO (General Purpose Input/Output) pins, the Raspberry Pi is like an empty canvas just waiting for your artistic interpretation.
+
+![alt text](img/Raspberry-Pi-5.jpg)
 
 
 
