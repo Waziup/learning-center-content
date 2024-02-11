@@ -6,32 +6,161 @@ difficulty: beginner
 duration: 2h
 ---
 
-Introduction to IoT
-===================
+# Introduction to IoT
 
 The first course will touch on the fundamentals of IoT. After a short history of the creation of IoT, the course will explain briefly what IoT is and why it is important.
 It will also show some of its application use cases and domains.
 
 <youtube>IIgDQbp2-dY</youtube>
 
+## History of the Internet of Things
 
-The term “Internet of Things” was coined by Kevin Ashton in 1999. 
-Ashton, who was working in supply chain optimization, wanted to attract senior management’s attention to a new exciting technology called RFID. 
+The actual idea of connected devices had been around longer, at least since the 70s. Back then, the idea was often called “embedded internet” or “pervasive computing”.
+
+![Iot Image](img/image1.png)
+
+The term “Internet of Things” was coined by Kevin Ashton in 1999. 
+
+Ashton who was working in supply chain optimization, wanted to attract senior management’s attention to a new exciting technology called RFID.
+
 Because the internet was the hottest new trend in 1999, he called his presentation “Internet of Things”.
 
-The internet of things is an extension of the current internet, further into the physical world.
-We can collect data from the physical world using sensors and also effect changes in the physical world using actuators or effectors.
+![Kevin Ashton](img/image2.png)
 
-![IoTdevices](img/IoTdevices.png)
+## Why is IoT Popular Now?
 
-IoT is increasingly becoming popular because of advances in smartphone technology, internet connectivity, wearables and its relationship with open source, big data, security and privacy and software-defined networking.
+IoT is increasingly becoming popular because of  advances in smartphone technology, internet connectivity, wearables and its relationship with open source, big data, security and privacy and software-defined networking.
 
-The applications of IoT are wide: wearables, smart home automation, precision agriculture, smart city...
-It is pervasing both consumer industrial worlds.
+![image](img/image3.png)
 
-![components](img/components.png)
+## What is IoT?
 
-Finally, the challenges facing IoT are the security, the lack of strong regulations, availability of skilled talent, compatibility, bandwidth and customer expectations.
+The internet of Things is the extension of the internet we already know and use, further into our physical world. This is achieved by the use of sensors, actuators and effectors.
+
+![image](img/image4.png)
+
+Smart devices can perform tasks with some degree of automation or user interaction.
+
+Connected devices can communicate with other devices or networks, often over the internet.
+
+IoT devices are a subset of connected devices that are designed to collect and exchange data with minimal human intervention for various applications.
+
+## Types of IoT Devices
+
+IoT devices can generally be grouped into 3 categories namely:
+
+- Consumer IoT
+- Enterprise IoT
+- Industrial IoT (IIoT)
+
+### Consumer IoT
+Consumer IoT devices are physical personal devices like wearables and home appliances that gather data, and then uses that data to provide insights or take an automated action.
+
+![image](img/image6.png)
+
+### Enterprise IoT
+
+Enterprise IoT devices refer to the use of Physical 'things’, thus IoT devices in business processes for reducing manual work and increasing overall business efficiency. A typical example will be the use of IoT devices in logistics and automatic tracking and logging of the where abouts of shipments.
+
+![image](img/image7.png)
+
+### Industrial IoT
+
+Industrial IoT refers to Interconnected sensors, instruments, and other devices networked together with computers for industrial applications, including manufacturing and energy management.
+
+![image](img/image8.png)
+
+## IoT Opportunities
+### Agriculture
+With smartphones, apps, sensors and controllers, farmers can control field conditions remotely and implement precision irrigation for optimized harvest.
+
+![image](img/image9.png)
+
+### Energy
+With IoT, it is easier to limit the consumption of electricity and fuel. For instance Smart homes are able to automatically self regulate and dissable appliances when not in use or turn of lights when no one in a room and give real-time updates on energy consumption.
+
+![image](img/image10.png)
+
+### Health Care
+Remote patient monitoring, real-time data analysis and operational efficiency through connected devices and systems. It has the potential to enhance disease management, reduce healthcare costs, and provide personalized healthcare solutions.
+
+![image](img/image11.png)
+
+### Transportation
+
+This can be beneficial to owners in terms of fuel usage, emissions per trip, notifications on a car or spare part malfunctioning, driver behavior, speed limiter, geographic locations, door and trunk lock/unlock, social media sharing and more.
+
+![image](img/image12.png)
+
+## Applications of IoT
+### Wearables
+
+**Wearable technology** is a hallmark of IoT applications and is one of the earliest industries to have adopted IoT Technologies. 
+
+These wearables provide real-time insights, promoting healthier lifestyles and enabling remote healthcare monitoring and analysis.
+
+![image](img/image13.png)
+
+**Smart Home Application** These smart home devices monitor and/or control home attributes such as lighting, climate, entertainment systems, and appliances. It is the highest IoT application on all measured channels.
+
+![image](img/image14.png)
+
+**Health Care** IoT applications can turn reactive medical-based systems into proactive wellness-based systems. IoT opens ways to a sea of valuable data through analysis, real-time field data, and testing. 
+
+![image](img/image15.png)
+
+**Smart City Applications** These include traffic management to water distribution, waste management, urban security and environmental monitoring to solve traffic congestion problems, reduce noise and pollution and help make cities safer.
+
+![image](img/image16.png)
+
+**Agricultural Applications** To feed the world’s ever-growing population, one needs to marry agriculture to technology and obtain best results. There are numerous possibilities in this field. One of them is Smart Farming, this is also known as precision agriculture.
+
+![image](img/image17.png)
+
+**Industrial Automation** This is one of the fields where both faster developments, as well as the quality of products, are the critical factors for a higher ROI. With IoT Applications, one could even re-engineer products and their packaging to deliver better performance in both cost and customer experience.
+
+![image](img/image18.png)
+
+Lets take a look at some of the activities and advantages of Iot in Industrial Automation
+
+![image](img/image19.png)
+
+
+## Challenges Facing IoT
+
+- ### Security
+    The interconnected nature of these devices creates a vast attack surface, making them susceptible to cyber threats. Issues such as insufficient encryption, weak authentication, and the sheer volume of devices make safeguarding IoT networks complex, requiring robust security measures to protect against potential breaches and unauthorized access.
+
+- ### Regulations – Lack of Strong Regulations
+    Without stringent guidelines, the industry faces issues related to privacy, data protection, and standardization. This lack of oversight can lead to inconsistent security practices, making it difficult to address potential risks and vulnerabilities effectively. Establishing clear and comprehensive regulations is crucial for ensuring the responsible development and deployment of IoT technologies.
+
+- ### Availability of skilled Talent
+    As the demand for professionals with expertise in areas such as cybersecurity, data analytics, and IoT architecture increases, a shortage of qualified individuals hinders the seamless development and maintenance of IoT systems. Bridging this skills gap is essential for effectively addressing the complexities of IoT implementation and ensuring the continued innovation and security of interconnected devices.
+
+- ### Compatibility
+    The diverse array of devices, protocols, and standards within the IoT ecosystem often leads to interoperability issues. Ensuring seamless communication and integration among various devices becomes challenging, hindering the potential for a unified and efficient IoT infrastructure. Addressing compatibility concerns is crucial for fostering a cohesive and interconnected environment that maximizes the benefits of IoT technology.
+
+- ### Bandwidth
+    The increasing number of connected devices generates substantial data traffic, placing strain on existing network infrastructures. Limited bandwidth can result in slower data transfer, latency issues, and potential disruptions in communication between IoT devices. Overcoming bandwidth limitations is crucial for ensuring the efficient and real-time exchange of data, facilitating the seamless functionality of interconnected devices in various applications, from smart cities to industrial IoT deployments.
+
+- ### Customer Expectations
+    As consumers become more tech-savvy, they anticipate seamless integration, user-friendly interfaces, and enhanced functionalities from IoT devices. Striking a balance between innovation and user satisfaction becomes crucial. Managing evolving expectations, addressing privacy concerns, and delivering reliable, intuitive IoT solutions are key factors in navigating this challenge successfully. Adapting to and exceeding customer expectations is essential for the sustained growth and acceptance of IoT technologies in the market.
+
+
+## Importance of the Right Choice of Technology
+
+- ### Time & Cost
+    The right IoT technology streamlines processes, reducing development time and costs, accelerating deployment.
+
+- ### Support
+    Robust support ensures IoT system reliability, quick issue resolution, and overall operational stability.
+
+- ### Integrations
+    Proper technology choices facilitate seamless integration, enhancing interoperability and the overall effectiveness of the IoT ecosystem.
+
+- ### Business fit & Innovation
+    Aligning technology with business needs fosters innovation, driving IoT solutions that meet industry demands and enable sustained growth.
+
 
 IoT Architecture
 ================
