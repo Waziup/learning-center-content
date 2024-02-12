@@ -102,22 +102,63 @@ print_led_status(led_status)
 Required hardware
 
 1. LED x1
-2. Resistor x1 (1k)
+2. Resistor x1 (220)
 3. Microcontroller
 4. Jumper cables
+5. ESP8266 or ESP32 development board
 
 Youl will learn how to blink an LED using micropython. This will give you an understanding on how to interact with General-Purpose Input/Output (GPIO) to control other external devices like LEDs.
 
+**Procedure**
+
+1. Install MicroPython on your ESP board. Follow this [Instructable](https://docs.sunfounder.com/projects/esp32-starter-kit/en/latest/micropython/python_start/install_micropython.html) to install.
+2. Download the MicroPython firmware suitable for your board from the official MicroPython website.
+3. Follow the instructions provided by your board's manufacturer to flash the firmware onto your board.
+4. Connect the LED:
+
+- Connect the anode (longer leg) of the LED to a GPIO pin on your board (for example, GPIO pin 2).
+- Connect the cathode (shorter leg) of the LED to a current-limiting resistor (around 220 ohms).
+- Connect the other end of the resistor to the ground (GND) pin on your board.
+- Connect your board to your computer:
+
+5. Use a USB cable to connect your ESP board to your computer.
+6. Write the MicroPython code:
+
+Open a text editor and write the following code:
+
 ```py
-from machine import Pin
+# Import the necessary modules
+import machine
 import time
 
-led = Pin(2, Pin.OUT) # GPIO Pin 2 as an output
-led.value(1) # Turn on the LED
-time.sleep(1) # Pause for 1 second
-led.value(0) # Turn off the LED
+# Define the GPIO pin connected to the LED
+led_pin = machine.Pin(2, machine.Pin.OUT)
+
+# Function to toggle the LED state
+def toggle_led():
+    led_pin.value(not led_pin.value())
+
+# Main loop to toggle the LED every second
+while True:
+    toggle_led()
+    time.sleep(1)
 
 ```
+
+Use a tool like ampy to transfer the main.py file to your ESP board. You can install ampy using `pip`:
+Transfer the code to your ESP board with the command
+
+```
+pip install adafruit-ampy
+```
+
+Then, you can transfer the file to your board using a command like this:
+
+```
+ampy --port /dev/ttyUSB0 put main.py
+```
+
+_Note: Replace /dev/ttyUSB0 with the appropriate serial port of your board._
 
 # Micropython use cases
 
