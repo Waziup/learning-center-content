@@ -25,3 +25,4 @@ You can follow the courses at your own pace. For example 3 courses per week will
 We will then start the prototyping. You need to get the components necessary for your prototype: ask your local hub (see the hub partners in each countries).
 
 <!-- ![comps](img/comps.png) -->
+
