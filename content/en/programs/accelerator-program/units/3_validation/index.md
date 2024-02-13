@@ -2,8 +2,8 @@
 id: acc_test_unit
 name: Test and validation
 desc: Testing and preparing your prototype for demo
-delay_start: 9w
-duration: 3w
+delay_start: 3w
+duration: 1w
 ---
 ![test and validation](test.svg)
 

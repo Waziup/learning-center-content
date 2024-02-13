@@ -2,8 +2,8 @@
 id: acc_fundraising_unit
 name: Fundraising strategy
 desc: This unit will cover the basics of fundraising.
-delay_start: 8w
-duration: 4w
+delay_start: 7w
+duration: 1w
 ---
 ![comps](fund.svg)
 

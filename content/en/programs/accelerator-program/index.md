@@ -2,8 +2,8 @@
 id: acc_program
 name: Accelerator Program
 desc: With this program, you will learn how to create new products and services based on IoT, in collaboration with European and African DIHs/TechHubs. It aims to improve the innovation capacity for entrepreneurs and start-ups.
-from: 2023-11-01
-to: 2024-01-31
+from: 2024-01-01
+to: 2024-02-29
 ---
 
 # Join the Hubiquitous Accelerator Program

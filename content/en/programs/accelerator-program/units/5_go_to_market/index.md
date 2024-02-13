@@ -1,9 +1,9 @@
 ---
 id: acc_gotomarket_unit
 name: Go to market
-desc: ??
-delay_start: 5w
-duration: 4w
+desc: In this part of the program we will encompass various aspects of a business, including product development, pricing, marketing, sales, and customer support.
+delay_start: 6w
+duration: 1w
 ---
 ![comps](market.svg)
 

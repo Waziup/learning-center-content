@@ -2,8 +2,8 @@
 id: acc_prototyping_unit
 name: Prototyping
 desc: Prototyping your products
-delay_start: 2w
-duration: 6w
+delay_start: 1w
+duration: 2w
 courses:
   - id: waziup/introduction-to-iot/introduction-to-iot
   - id: waziup/electronics/basics-of-electronics-for-iot
