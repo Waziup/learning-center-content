@@ -14,7 +14,7 @@ to: 2024-03-29
 |-----------------------|------------------------------------------------------------------------|
 | **Course**            | 10 Courses                                                             |
 | **Duration**          | 6 Weeks                                                                |
-| **Getting Certified** | Complete all courses and participate the physical workshop in the end  | -->
+| **Getting Certified** | Complete all courses and participate in the physical workshop in the end  | -->
 
 
 
@@ -47,5 +47,5 @@ The Techub Catalyst Program intends to bring at least 10 African Tech Hubs to a 
 
 # Documentation
 
-Download the [accelerator handbook](https://hubiquitous.eu/wp-content/uploads/2022/05/Hubiquitous-1st-Open-Call-Guide-for-Applicants.pdf)
+Here is a link to the [accelerator handbook](https://hubiquitous.eu/wp-content/uploads/2022/05/Hubiquitous-1st-Open-Call-Guide-for-Applicants.pdf).
 
