@@ -48,11 +48,6 @@ The time intervals will be shown on the graphics, following the horizontal axes.
 Nyquist theorem says that in order to reproduce an accurate signal, you need to sample at least twice faster than the highest frequency of the signal.
 This means that if the bandwidth is lower than the highest frequency, the signal will be altered. 
 
-<quiz id="0261c201-7f4e-4c9e-a171-60158676498c" type="single-choice" title="What is 4x4?">
-	<answer feedback="Thats wrong!">It's 17.</answer>
-	<answer feedback="Nope.">Something like 123.</answer>
-	<answer feedback="You got it!" right>It's an all-wheel drive car.</answer>
-</quiz>
 
 Basic laws
 ==========

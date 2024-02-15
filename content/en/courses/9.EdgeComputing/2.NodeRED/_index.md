@@ -2,6 +2,8 @@
 id: nodered_course
 title: "Graphical logic programming"
 description: "Using NodeRED"
+difficulty: advanced
+duration: 3h
 ---
 
 # Introduction

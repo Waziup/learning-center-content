@@ -1,11 +1,13 @@
 ---
 id: micropython_course
 title: "Micropython"
-descripton: "Micropython is ..."
+description: "Micropython is an implementation of Python 3 for embedded systems and microcontrollers"
+difficulty: advanced
+duration: 3h
 ---
 
 # Overview
-Are you interested with learning IoT, and building connected devices? If so, you're in luck Micropython can help you build all these fun stuff and a lot more. In this course you will learn
+Are you interested with learning IoT, and building connected devices? If so, you're in luck Micropython can help you build all these fun stuff and a lot more. In this course you will learn:
 - Differences between MicroPython and other programming languages
 - Advantages
 - Basics of Micropython

@@ -8,12 +8,10 @@ courses:
   - id: waziup/introduction-to-iot/introduction-to-iot
   - id: waziup/electronics/basics-of-electronics-for-iot
   - id: waziup/boards-and-sensors/overview-of-boards-and-peripherals
-  - id: waziup/boards-and-sensors/arduino-programming
   - id: waziup/radio-communications-and-networking/wireless-communication-essentials
   - id: waziup/radio-communications-and-networking/wifi-iot-devices
   - id: waziup/web-&-mobile-iot-applications/iot-web-apps
   - id: waziup/web-&-mobile-iot-applications/http-rest-apis
-  - id: waziup/web-&-mobile-iot-applications/mqtt-apis
 ---
 
 This is the main unit of the accelerator program.
