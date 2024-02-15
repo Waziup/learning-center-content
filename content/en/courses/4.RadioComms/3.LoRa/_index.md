@@ -208,7 +208,7 @@ LoRa enables long-range communication at low power consumptions. This has made i
 Exercise on LoRa to LoRa communication
 ======================================
 
-![WaziDev to WaziDev LoRa chat](./media/WaziDev_to%20WaziDev_LoRa_chat.png)
+![WaziDev to WaziDev LoRa chat](./media/WaziDev_to_WaziDev_LoRa_chat.png)
 
 Hardware:
 - 2 Waziup LoRa boards like the WaziDev. It's not a must for the boards to be the same
@@ -233,11 +233,11 @@ To do this simple exercise, we will upload an example code to two WaziDev boards
 
 First, open Arduino IDE and then the WaziDev LoRa chat example. This can be opened by navigating to Files -> Sketchbook -> LoRa -> WaziDev_to_WaziDev_Chat; as shown below.
 
-![Open WaziDev LoRa chat code](./media/WaziDev_to%20WaziDev_LoRa_chat_screenshot_1.png)
+![Open WaziDev LoRa chat code](./media/WaziDev_to_WaziDev_LoRa_chat_screenshot_1.png)
 
 Next, using a USB cable, connect one of the WaziDev boards to the computer, select the correct COM port of the board and upload the sketch to it.
 
-![Select correct COM port](./media/WaziDev_to%20WaziDev_LoRa_chat_screenshot_2.png)
+![Select correct COM port](./media/WaziDev_to_WaziDev_LoRa_chat_screenshot_2.png)
 
 ---
 ### Step 2: Upload the second LoRa code
@@ -257,7 +257,7 @@ If you are not using Arduino IDE version 2, on one instance of the Arduino IDE, 
 
 We can now interact with the two WaziDev's serial communications at the same time. On one Serial Monitor, enter some text like "Hello world" and click "Send" while the other Serial Monitor is showing "Receiving ...". The "Hello world" message will then be sent from that WaziDev to the other via LoRa and we will see it on the other Serial Monitor. 
 
-![Chat using LoRa](./media/WaziDev_to%20WaziDev_LoRa_chat_screenshot_3.png)
+![Chat using LoRa](./media/WaziDev_to_WaziDev_LoRa_chat_screenshot_3.png)
 
 Annexes
 =======
