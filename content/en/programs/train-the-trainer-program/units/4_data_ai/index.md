@@ -12,4 +12,4 @@ courses:
   - id: waziup/data-analysis-and-ai/iot-data-analysis
 ---
 
-Lorem Ipsum
+This unit will cover the basics of data analysis, data visualisation and Artificial Intelligence (AI). It will introduce the participants to the fundamentals of AI and how data analysis and visualization technologies are used to develop AI systems. The unit will also cover an introduction to Machine Learning(ML) and example of ML applications such as Computer Vision.

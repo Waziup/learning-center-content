@@ -2,12 +2,11 @@
 id: acc_codesign_unit
 name: Co-design sessions
 desc: We will perform co-design sessions with each startups to design precisely your products.
-delay_start: 2w
-duration: 2w
+delay_start: 0w
+duration: 1w
 ---
 
-
-![co-design](img/co-design.png)
+![co-design](img/codesign.svg)
 
 A co-design session will be organized by a **codesign expert** with the startups that request it.
 The co-design session will detail the product strategy/service of the startup.

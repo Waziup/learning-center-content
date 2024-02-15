@@ -19,7 +19,6 @@ February 19th, 2024
 - Timeline
 - Awards
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This exciting kickoff event will feature a presentation of the program, activities, timelines and expected outcomes. We believe that this kickoff will generate clarity and passion, leading to a mutual understanding of our goal.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
+Get ready to embark on an innovative and collaborative journey as we lay the groundwork for major accomplishments.

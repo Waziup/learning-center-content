@@ -9,7 +9,7 @@ tags:
     - API
 ---
 
-# Introduction
+## Introduction
 
 The WAZIUP Cloud platform allows you to manage your sensors, actuators and IoT data. WAZIUP Cloud platform offers everything that you need for your application:
 - Remote connection of your sensors and actuators
