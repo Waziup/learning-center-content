@@ -15,82 +15,80 @@ It will also show some of its application use cases and domains.
 
 ## History of the Internet of Things
 
-The actual idea of connected devices had been around longer, at least since the 70s. Back then, the idea was often called “embedded internet” or “pervasive computing”.
+The emergence of the first devices with internet connectivity in the early 1980s marked the beginning of the Internet of Things. Wi-Fi and Bluetooth's invention made it possible for devices to connect wirelessly (without any cable connections). IoT's first stages mostly were RFID Radio Frequency Identification technology. RFID made it possible to monitor and identify anything via radio waves. RFID tags were fixed to items, and they could be scanned to get data and find out where they were.
 
-![Iot Image](img/image1.png)
+Kevin Ashton who was working in supply chain optimization, wanted to attract senior management’s attention to this new exciting technology. Because the internet was the hottest new trend in 1999, he called his presentation “Internet of Things”.
 
-The term “Internet of Things” was coined by Kevin Ashton in 1999. 
+<!-- ![Iot Image](img/iot-timeline.png) -->
 
-Ashton who was working in supply chain optimization, wanted to attract senior management’s attention to a new exciting technology called RFID.
+<figure src="img/iot-timeline.png" maxWidth="600px" cation="iot-timeline"></figure>
 
-Because the internet was the hottest new trend in 1999, he called his presentation “Internet of Things”.
 
-![Kevin Ashton](img/image2.png)
+<!-- ## Why is IoT Popular Now?
 
-## Why is IoT Popular Now?
+IoT is increasingly becoming popular because of  advances in smartphone technology, internet connectivity, wearables and its relationship with open source, big data, security and privacy and software-defined networking. 
 
-IoT is increasingly becoming popular because of  advances in smartphone technology, internet connectivity, wearables and its relationship with open source, big data, security and privacy and software-defined networking.
-
-![image](img/image3.png)
+![image](img/image3.png)-->
 
 ## What is IoT?
+The last decade has witnessed a surge in attention towards the Internet of Things (IoT), a paradigm that involves the connection of physical objects to the internet. These objects, encompassing machinery, automobiles, structures, and various items, collectively form the Internet of Things, equipped with firmware, internet connectivity, and sensor technologies.
 
-The internet of Things is the extension of the internet we already know and use, further into our physical world. This is achieved by the use of sensors, actuators and effectors.
+This era marks a transformative shift, enabling machines to communicate not only with people but also with each other, courtesy of the IoT concept. The application of IoT technology extends to diverse domains such as smart homes, smart cities, industrial machinery, and wearable technologies.
 
-![image](img/image4.png)
+Industries are experiencing a profound impact from the increasing integration of IoT. Reshaping sectors like manufacturing, transportation, agriculture, and healthcare, IoT is ushering in unprecedented changes. Its influence on the future is undeniable, promising significant transformations.
+
+<!-- The internet of Things is the extension of the internet we already know and use, further into our physical world. This is achieved by the use of sensors, actuators and effectors. -->
+
+<!-- ![image](img/image4.png) -->
+<!-- 
 
 Smart devices can perform tasks with some degree of automation or user interaction.
 
 Connected devices can communicate with other devices or networks, often over the internet.
 
-IoT devices are a subset of connected devices that are designed to collect and exchange data with minimal human intervention for various applications.
+IoT devices are a subset of connected devices that are designed to collect and exchange data with minimal human intervention for various applications. -->
+
 
 ## Types of IoT Devices
+The internet of Things is the extension of the internet we already know and use, further into our physical world. This is achieved by the use of sensors, actuators and effectors. These devices are a subset of connected devices that are designed to collect and exchange data with minimal human intervention for various applications.
 
-IoT devices can generally be grouped into 3 categories namely:
+IoT devices can generally be grouped into 3 categories namely- **Consumer IoT, Enterprise IoT** and **Industrial IoT (IoT)**
+![image](img/iot-device-type.png)
 
-- Consumer IoT
-- Enterprise IoT
-- Industrial IoT (IIoT)
 
-### Consumer IoT
-Consumer IoT devices are physical personal devices like wearables and home appliances that gather data, and then uses that data to provide insights or take an automated action.
+**Consumer IoT** devices are physical personal devices like wearables and home appliances that gather data, and then uses that data to provide insights or take an automated action.
 
-![image](img/image6.png)
+**Enterprise IoT** devices refer to the use of Physical 'things’, thus IoT devices in business processes for reducing manual work and increasing overall business efficiency. A typical example will be the use of IoT devices in logistics and automatic tracking and logging of the where abouts of shipments.
 
-### Enterprise IoT
+**Industrial IoT** refers to Interconnected sensors, instruments, and other devices networked together with computers for industrial applications, including manufacturing and energy management.
 
-Enterprise IoT devices refer to the use of Physical 'things’, thus IoT devices in business processes for reducing manual work and increasing overall business efficiency. A typical example will be the use of IoT devices in logistics and automatic tracking and logging of the where abouts of shipments.
 
-![image](img/image7.png)
-
-### Industrial IoT
-
-Industrial IoT refers to Interconnected sensors, instruments, and other devices networked together with computers for industrial applications, including manufacturing and energy management.
-
-![image](img/image8.png)
-
-## IoT Opportunities
+## IoT Scopes
+![image](img/iot-scope.png)
 ### Agriculture
-With smartphones, apps, sensors and controllers, farmers can control field conditions remotely and implement precision irrigation for optimized harvest.
+The scope of IoT in agriculture is nothing short of revolutionary, promising a future where precision and efficiency converge to redefine farming practices. By deploying advanced sensors, automated machinery, and real-time data analytics, IoT enables farmers to monitor crop health, optimize irrigation, and precisely manage resources. Smart agriculture facilitates timely decision-making, minimizes waste, and maximizes yield. From remote sensing technologies to smart drones, the integration of IoT in agriculture not only boosts productivity but also promotes sustainable and resource-efficient farming methods. As the world grapples with the challenge of feeding a growing population, the transformative potential of IoT in agriculture emerges as a beacon of innovation, offering a path towards resilient, data-driven, and eco-friendly farming practices.
 
-![image](img/image9.png)
+<!-- ![image](img/image9.png) -->
 
 ### Energy
-With IoT, it is easier to limit the consumption of electricity and fuel. For instance Smart homes are able to automatically self regulate and dissable appliances when not in use or turn of lights when no one in a room and give real-time updates on energy consumption.
+<!-- With IoT, it is easier to limit the consumption of electricity and fuel. For instance Smart homes are able to automatically self regulate and dissable appliances when not in use or turn of lights when no one in a room and give real-time updates on energy consumption. -->
+In the energy sector, IoT catalyzes transformative change, revolutionizing how power is produced, distributed, and consumed. The interconnected network of devices, sensors, and grids enables real-time monitoring, optimizing energy use for both consumers and providers. Empowered by IoT, smart grids dynamically respond to demand fluctuations, enhancing overall grid reliability. The impact extends from intelligently managing energy consumption in smart homes to streamlining operations in industrial setups. IoT not only boosts energy efficiency but also paves the way for seamless integration of renewable sources, aligning with global sustainability goals. The marriage of IoT and energy signifies not just innovation but a fundamental reimagining of our approach to power in a connected, intelligent future.
 
-![image](img/image10.png)
+<!-- ![image](img/image10.png) -->
 
 ### Health Care
-Remote patient monitoring, real-time data analysis and operational efficiency through connected devices and systems. It has the potential to enhance disease management, reduce healthcare costs, and provide personalized healthcare solutions.
+<!-- Remote patient monitoring, real-time data analysis and operational efficiency through connected devices and systems. It has the potential to enhance disease management, reduce healthcare costs, and provide personalized healthcare solutions. -->
 
-![image](img/image11.png)
+In the dynamic landscape of healthcare, IoT unfolds as a catalyst for profound change, ushering in an epoch where personalized, data-centric health management takes center stage. With an array of connected devices, wearables, and intelligent healthcare systems, real-time monitoring becomes not just a possibility but a personalized reality for individuals. Empowering patients to actively engage in their well-being, IoT in health extends its reach to healthcare providers, offering precise insights and timely interventions. Beyond individual care, the impact reverberates across the healthcare spectrum, influencing infrastructure with remote patient monitoring, predictive equipment maintenance, and optimized operations. This technological revolution signifies not only an improvement in diagnostics and treatment outcomes but also a paradigm shift towards preventive healthcare, making IoT a transformative force in shaping the future of well-being.
+
+<!-- ![image](img/image11.png) -->
 
 ### Transportation
 
-This can be beneficial to owners in terms of fuel usage, emissions per trip, notifications on a car or spare part malfunctioning, driver behavior, speed limiter, geographic locations, door and trunk lock/unlock, social media sharing and more.
+<!-- This can be beneficial to owners in terms of fuel usage, emissions per trip, notifications on a car or spare part malfunctioning, driver behavior, speed limiter, geographic locations, door and trunk lock/unlock, social media sharing and more. -->
+In transportation, IoT promises unparalleled efficiency and safety. By connecting vehicles and infrastructure, real-time data analytics optimize traffic flow, enable predictive vehicle maintenance, and enhance safety measures. This translates into reduced congestion, lower emissions, and streamlined supply chains. From smart logistics to connected cars improving route efficiency, the benefits of IoT in transportation are tangible, steering us towards a future where mobility is not only connected but also smart, safe, and environmentally conscious.
 
-![image](img/image12.png)
+<!-- ![image](img/image12.png) -->
 
 ## Applications of IoT
 ### Wearables
@@ -119,7 +117,7 @@ These wearables provide real-time insights, promoting healthier lifestyles and e
 
 **Industrial Automation** This is one of the fields where both faster developments, as well as the quality of products, are the critical factors for a higher ROI. With IoT Applications, one could even re-engineer products and their packaging to deliver better performance in both cost and customer experience.
 
-![image](img/image18.png)
+![image](img/industrial.application.png)
 
 Lets take a look at some of the activities and advantages of Iot in Industrial Automation
 
