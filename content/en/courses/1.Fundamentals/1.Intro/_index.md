@@ -19,9 +19,9 @@ The emergence of the first devices with internet connectivity in the early 1980s
 
 Kevin Ashton who was working in supply chain optimization, wanted to attract senior management’s attention to this new exciting technology. Because the internet was the hottest new trend in 1999, he called his presentation “Internet of Things”.
 
-<!-- ![Iot Image](img/iot-timeline.png) -->
+![Iot Image](img/iot-timeline.png)
 
-<figure src="img/iot-timeline.png" maxWidth="600px" cation="iot-timeline"></figure>
+<!-- <figure src="img/iot-timeline.png" maxWidth="600px" cation="iot-timeline"></figure> -->
 
 
 <!-- ## Why is IoT Popular Now?
@@ -52,7 +52,8 @@ IoT devices are a subset of connected devices that are designed to collect and e
 ## Types of IoT Devices
 The internet of Things is the extension of the internet we already know and use, further into our physical world. This is achieved by the use of sensors, actuators and effectors. These devices are a subset of connected devices that are designed to collect and exchange data with minimal human intervention for various applications.
 
-IoT devices can generally be grouped into 3 categories namely- **Consumer IoT, Enterprise IoT** and **Industrial IoT (IoT)**
+IoT devices can generally be grouped into 3 categories namely- **Consumer IoT, Enterprise IoT** and **Industrial IoT**
+
 ![image](img/iot-device-type.png)
 
 
