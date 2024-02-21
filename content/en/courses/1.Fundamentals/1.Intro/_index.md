@@ -92,33 +92,32 @@ In transportation, IoT promises unparalleled efficiency and safety. By connectin
 <!-- ![image](img/image12.png) -->
 
 ## Applications of IoT
-### Wearables
 
 **Wearable technology** is a hallmark of IoT applications and is one of the earliest industries to have adopted IoT Technologies. 
 
 These wearables provide real-time insights, promoting healthier lifestyles and enabling remote healthcare monitoring and analysis.
 
-![image](img/image13.png)
+<!-- ![image](img/image13.png) -->
 
-**Smart Home Application** These smart home devices monitor and/or control home attributes such as lighting, climate, entertainment systems, and appliances. It is the highest IoT application on all measured channels.
+**Smart Home Applications** monitor and/or control home attributes such as lighting, climate, entertainment systems, and appliances. It is the highest IoT application on all measured channels.
 
-![image](img/image14.png)
+<!-- ![image](img/image14.png) -->
 
 **Health Care** IoT applications can turn reactive medical-based systems into proactive wellness-based systems. IoT opens ways to a sea of valuable data through analysis, real-time field data, and testing. 
 
-![image](img/image15.png)
+<!-- ![image](img/image15.png) -->
 
-**Smart City Applications** These include traffic management to water distribution, waste management, urban security and environmental monitoring to solve traffic congestion problems, reduce noise and pollution and help make cities safer.
+**Smart City Applications** include traffic management to water distribution, waste management, urban security and environmental monitoring to solve traffic congestion problems, reduce noise and pollution and help make cities safer.
 
-![image](img/image16.png)
+<!-- ![image](img/image16.png) -->
 
-**Agricultural Applications** To feed the world’s ever-growing population, one needs to marry agriculture to technology and obtain best results. There are numerous possibilities in this field. One of them is Smart Farming, this is also known as precision agriculture.
+**Agricultural Applications** enhance not only conventional, large-scale operations but also support trends like organic, family, and transparent farming. Smart farming can also provide more efficient water usage or optimization of inputs and treatments. Now, let’s discuss the major applications of IoT-based smart farming that are revolutionizing agriculture.
 
-![image](img/image17.png)
+<!-- ![image](img/image17.png) -->
 
-**Industrial Automation** This is one of the fields where both faster developments, as well as the quality of products, are the critical factors for a higher ROI. With IoT Applications, one could even re-engineer products and their packaging to deliver better performance in both cost and customer experience.
+**Industrial Automation** is one of the fields where both faster developments, as well as the quality of products, are the critical factors for a higher ROI. With IoT Applications, one could even re-engineer products and their packaging to deliver better performance in both cost and customer experience.
 
-![image](img/industrial.application.png)
+<!-- ![image](img/industrial.application.png) -->
 
 Lets take a look at some of the activities and advantages of Iot in Industrial Automation
 
