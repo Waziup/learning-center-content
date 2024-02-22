@@ -8,13 +8,17 @@ duration: 2h
 
 # Introduction to IoT
 
-The first course will touch on the fundamentals of IoT. After a short history of the creation of IoT, the course will explain briefly what IoT is and why it is important.
-It will also show some of its application use cases and domains.
+<!-- The first course will touch on the fundamentals of IoT. After a short history of the creation of IoT, the course will explain briefly what IoT is and why it is important.
+It will also show some of its application use cases and domains. -->
+The last decade has witnessed a surge in attention towards the Internet of Things (IoT), a paradigm that involves the connection of physical objects to the internet. These objects, encompassing machinery, automobiles, structures, and various items, collectively form the Internet of Things, equipped with firmware, internet connectivity, and sensor technologies.
+
+This era marks a transformative shift, enabling machines to communicate not only with people but also with each other, courtesy of the IoT concept. The application of IoT technology extends to diverse domains such as smart homes, smart cities, industrial machinery, and wearable technologies.
+
+Industries are experiencing a profound impact from the increasing integration of IoT. Reshaping sectors like manufacturing, transportation, agriculture, and healthcare, IoT is ushering in unprecedented changes. Its influence on the future is undeniable, promising significant transformations.
 
 <youtube>IIgDQbp2-dY</youtube>
 
-## History of the Internet of Things
-
+## History of IoT
 The emergence of the first devices with internet connectivity in the early 1980s marked the beginning of the Internet of Things. Wi-Fi and Bluetooth's invention made it possible for devices to connect wirelessly (without any cable connections). IoT's first stages mostly were RFID Radio Frequency Identification technology. RFID made it possible to monitor and identify anything via radio waves. RFID tags were fixed to items, and they could be scanned to get data and find out where they were.
 
 Kevin Ashton who was working in supply chain optimization, wanted to attract senior management’s attention to this new exciting technology. Because the internet was the hottest new trend in 1999, he called his presentation “Internet of Things”.
@@ -64,7 +68,9 @@ IoT devices can generally be grouped into 3 categories namely- **Consumer IoT, E
 **Industrial IoT** refers to Interconnected sensors, instruments, and other devices networked together with computers for industrial applications, including manufacturing and energy management.
 
 
-## IoT Scopes
+IoT Domains
+=======
+
 ![image](img/iot-scope.png)
 ### Agriculture
 The scope of IoT in agriculture is nothing short of revolutionary, promising a future where precision and efficiency converge to redefine farming practices. By deploying advanced sensors, automated machinery, and real-time data analytics, IoT enables farmers to monitor crop health, optimize irrigation, and precisely manage resources. Smart agriculture facilitates timely decision-making, minimizes waste, and maximizes yield. From remote sensing technologies to smart drones, the integration of IoT in agriculture not only boosts productivity but also promotes sustainable and resource-efficient farming methods. As the world grapples with the challenge of feeding a growing population, the transformative potential of IoT in agriculture emerges as a beacon of innovation, offering a path towards resilient, data-driven, and eco-friendly farming practices.
@@ -91,41 +97,42 @@ In transportation, IoT promises unparalleled efficiency and safety. By connectin
 
 <!-- ![image](img/image12.png) -->
 
-## Applications of IoT
-### Wearables
+
+
+
+Applications of IoT
+=====
 
 **Wearable technology** is a hallmark of IoT applications and is one of the earliest industries to have adopted IoT Technologies. 
 
 These wearables provide real-time insights, promoting healthier lifestyles and enabling remote healthcare monitoring and analysis.
 
-![image](img/image13.png)
+<!-- ![image](img/image13.png) -->
 
-**Smart Home Application** These smart home devices monitor and/or control home attributes such as lighting, climate, entertainment systems, and appliances. It is the highest IoT application on all measured channels.
+**Smart Home Applications** monitor and/or control home attributes such as lighting, climate, entertainment systems, and appliances. It is the highest IoT application on all measured channels.
 
-![image](img/image14.png)
+<!-- ![image](img/image14.png) -->
 
 **Health Care** IoT applications can turn reactive medical-based systems into proactive wellness-based systems. IoT opens ways to a sea of valuable data through analysis, real-time field data, and testing. 
 
-![image](img/image15.png)
+<!-- ![image](img/image15.png) -->
 
-**Smart City Applications** These include traffic management to water distribution, waste management, urban security and environmental monitoring to solve traffic congestion problems, reduce noise and pollution and help make cities safer.
+**Smart City Applications** include traffic management to water distribution, waste management, urban security and environmental monitoring to solve traffic congestion problems, reduce noise and pollution and help make cities safer.
 
-![image](img/image16.png)
+<!-- ![image](img/image16.png) -->
 
-**Agricultural Applications** To feed the world’s ever-growing population, one needs to marry agriculture to technology and obtain best results. There are numerous possibilities in this field. One of them is Smart Farming, this is also known as precision agriculture.
+**Agricultural Applications** enhance not only conventional, large-scale operations but also support trends like organic, family, and transparent farming. Smart farming can also provide more efficient water usage or optimization of inputs and treatments. Now, let’s discuss the major applications of IoT-based smart farming that are revolutionizing agriculture.
 
-![image](img/image17.png)
+<!-- ![image](img/image17.png) -->
 
-**Industrial Automation** This is one of the fields where both faster developments, as well as the quality of products, are the critical factors for a higher ROI. With IoT Applications, one could even re-engineer products and their packaging to deliver better performance in both cost and customer experience.
-
-![image](img/industrial.application.png)
-
-Lets take a look at some of the activities and advantages of Iot in Industrial Automation
+**Industrial Automation** is one of the fields where both faster developments, as well as the quality of products, are the critical factors for a higher ROI. With IoT Applications, one could even re-engineer products and their packaging to deliver better performance in both cost and customer experience. Following shows some of the activities and advantages of Iot in Industrial Automation
+<!-- ![image](img/industrial.application.png) -->
 
 ![image](img/image19.png)
 
 
-## Challenges Facing IoT
+Challenges Facing IoT
+======
 
 - ### Security
     The interconnected nature of these devices creates a vast attack surface, making them susceptible to cyber threats. Issues such as insufficient encryption, weak authentication, and the sheer volume of devices make safeguarding IoT networks complex, requiring robust security measures to protect against potential breaches and unauthorized access.
@@ -166,7 +173,7 @@ IoT Architecture
 
 There is no single consensus on an architecture for IoT, which is agreed on universally.
 However, different architectures have been proposed by different researchers.
-The 3 and 5 layer architectures are the most widely used. However the 3 layer is the most commonly used so in this lecture we will look at the 3 layer architecture. The three first layers are: 
+The 3 and 5 layer architectures are the most widely used. However the 3 layer is the most commonly used. so in this lecture we will look at the 3 layer architecture. The three first layers are: 
 - *The perception layer* has sensors for sensing and gathering information about the environment.
 - *The transport layer* allows to connect together to the smart things, network devices, and servers. It also transmits and processes sensor data.
 - *The application layer* delivers application specific services to the user. It defines various applications in which the Internet of Things can be deployed.
@@ -175,17 +182,24 @@ Additionally, we sometimes add two more layers:
 - *The business layer* manages the whole IoT system, including applications, business and profit models, and users’ privacy.
 - *The processing layer*, also known as the middleware or edge layer, allows to process, store and analyze sensor data.
 
-In Waziup, we divide the architecture in three layers:
+#### Waziup Architecture
+Waziup adopts a three-layer architecture, providing a robust framework for IoT applications.
 
-![archi](img/archi.png)
+![archi](img/waziup-ecosystem.png)
 
-WaziDev is a development platform, capable of sending data through LoRaWAN to the WaziGate.
-The WaziGate processes locally the data and forwards it to the WaziCloud, were the user applications lives.
-More on this in Waziup module!
+<!-- WaziDev is a development platform, capable of sending data through LoRaWAN to the WaziGate.
+The WaziGate processes locally the data and forwards it to the WaziCloud, were the user applications live.
+More on this in Waziup module! -->
+- The Perception Layer is embodied by WaziDev, a development platform equipped with sensors to collect and sense environmental information.
 
+- Moving to the Transport Layer, WaziGate takes center stage. It locally processes data received from WaziDev, utilizing LoRaWAN for efficient data transmission to the WaziCloud.
 
-Networking & protocols
+- At the core of the system lies the Application Layer residing in WaziCloud. This layer hosts user applications, delivering specialized services to end-users and defining the myriad applications in which IoT can be applied.
+
+IoT Technologies
 =======================
+
+## Networking & Protocols
 
 Protocols are systems of rules and procedures that allow two or more entities to communicate.
 The TCP/IP protocol stack is at the heart of the Internet, which is the “I” in IoT, or course!
@@ -200,20 +214,18 @@ Here are few protocols used with IoT:
 - *MQTT* is a publish/subscribe messaging transport that is extremely lightweight and ideal for connecting small devices to constrained networks.
 
 
-Radio communications
-====================
+## Radio communications
 
 Radio communications are an essential part of IoT.
 
 Our course on radio communications will introduce the basics of wireless communications: wireless transmission fundamentals including radio propagation models, antenna technologies, wireless link budget and the relationship between modulation, throughput, energy and transmission range.
 
-Web & mobile IoT applications
-=============================
+## Web & mobile IoT applications
 
 A complete IoT application should always include a web or mobile application.
 Our course will show you how to develop a Web interface for your IoT application. At first, we will develop a very simple Web application, based solely on HTML and Javascript. We will build on this knowledge to go to the next step: the Web frameworks. We will show the basics of three of the most popular frameworks: ReactJS, Angular and Vue.
 
-Data analysis and AI
+<!-- Data analysis and AI
 ====================
 
 When people think of AI, most of them think of Artificial General Intelligence (AGI). An AGI can do everything what humans do (and even better). But the sad truth is, that mankind is not even close to develop a "real AGI". Nowadays AI is very focused on some specific use cases, therefore one can speak of a Artificial Narrow Intelligence (ANI). Because you train it on a specific thing its capabilities are limited. If you try to use it for another task, it will not perform like you would expect it. AI is separated in many subfields, in this lesson we will elaborate on some of them:
@@ -221,10 +233,10 @@ When people think of AI, most of them think of Artificial General Intelligence (
     Machine Learning (ML)
     Deep Leaning (DL)
     Computer Vision (CV)
-    Natural Language Processing (NLP)
+    Natural Language Processing (NLP) -->
 
 
-Business support
+<!-- Business support
 ================
 
-We also provide business support for creating your IoT startup. Please checkout our courses on business, for instance how to build a business canvas.
+We also provide business support for creating your IoT startup. Please checkout our courses on business, for instance how to build a business canvas. -->
