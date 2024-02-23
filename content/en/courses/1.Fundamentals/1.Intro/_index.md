@@ -32,14 +32,7 @@ Kevin Ashton who was working in supply chain optimization, wanted to attract sen
 
 IoT is increasingly becoming popular because of  advances in smartphone technology, internet connectivity, wearables and its relationship with open source, big data, security and privacy and software-defined networking. 
 
-![image](img/image3.png)-->
-
-## What is IoT?
-The last decade has witnessed a surge in attention towards the Internet of Things (IoT), a paradigm that involves the connection of physical objects to the internet. These objects, encompassing machinery, automobiles, structures, and various items, collectively form the Internet of Things, equipped with firmware, internet connectivity, and sensor technologies.
-
-This era marks a transformative shift, enabling machines to communicate not only with people but also with each other, courtesy of the IoT concept. The application of IoT technology extends to diverse domains such as smart homes, smart cities, industrial machinery, and wearable technologies.
-
-Industries are experiencing a profound impact from the increasing integration of IoT. Reshaping sectors like manufacturing, transportation, agriculture, and healthcare, IoT is ushering in unprecedented changes. Its influence on the future is undeniable, promising significant transformations.
+![image](img/image3.png) -->
 
 <!-- The internet of Things is the extension of the internet we already know and use, further into our physical world. This is achieved by the use of sensors, actuators and effectors. -->
 
@@ -70,29 +63,21 @@ IoT devices can generally be grouped into 3 categories namely- **Consumer IoT, E
 
 IoT Domains
 =======
+The Internet of Things (IoT) encapsulates a transformative vision, weaving a web of interconnected devices that communicate seamlessly, gather data, and drive innovation across diverse sectors. This overarching concept extends its influence into various realms, fundamentally altering the landscape of industries and everyday life. As we delve into specific applications within agriculture, health, energy, and transportation, the holistic IoT scope emerges as a force shaping a more intelligent, efficient, and interconnected future. This section explores the transformative potential of IoT, providing insights into its overarching impact and the specific breakthroughs it brings to key sectors.
 
-![image](img/iot-scope.png)
-### Agriculture
+
+![image](img/scope-agriculture.svg)
 The scope of IoT in agriculture is nothing short of revolutionary, promising a future where precision and efficiency converge to redefine farming practices. By deploying advanced sensors, automated machinery, and real-time data analytics, IoT enables farmers to monitor crop health, optimize irrigation, and precisely manage resources. Smart agriculture facilitates timely decision-making, minimizes waste, and maximizes yield. From remote sensing technologies to smart drones, the integration of IoT in agriculture not only boosts productivity but also promotes sustainable and resource-efficient farming methods. As the world grapples with the challenge of feeding a growing population, the transformative potential of IoT in agriculture emerges as a beacon of innovation, offering a path towards resilient, data-driven, and eco-friendly farming practices.
 
-<!-- ![image](img/image9.png) -->
 
-### Energy
-<!-- With IoT, it is easier to limit the consumption of electricity and fuel. For instance Smart homes are able to automatically self regulate and dissable appliances when not in use or turn of lights when no one in a room and give real-time updates on energy consumption. -->
+![image](img/scope-energy.svg)
 In the energy sector, IoT catalyzes transformative change, revolutionizing how power is produced, distributed, and consumed. The interconnected network of devices, sensors, and grids enables real-time monitoring, optimizing energy use for both consumers and providers. Empowered by IoT, smart grids dynamically respond to demand fluctuations, enhancing overall grid reliability. The impact extends from intelligently managing energy consumption in smart homes to streamlining operations in industrial setups. IoT not only boosts energy efficiency but also paves the way for seamless integration of renewable sources, aligning with global sustainability goals. The marriage of IoT and energy signifies not just innovation but a fundamental reimagining of our approach to power in a connected, intelligent future.
 
-<!-- ![image](img/image10.png) -->
 
-### Health Care
-<!-- Remote patient monitoring, real-time data analysis and operational efficiency through connected devices and systems. It has the potential to enhance disease management, reduce healthcare costs, and provide personalized healthcare solutions. -->
-
+![image](img/scope-health.svg)
 In the dynamic landscape of healthcare, IoT unfolds as a catalyst for profound change, ushering in an epoch where personalized, data-centric health management takes center stage. With an array of connected devices, wearables, and intelligent healthcare systems, real-time monitoring becomes not just a possibility but a personalized reality for individuals. Empowering patients to actively engage in their well-being, IoT in health extends its reach to healthcare providers, offering precise insights and timely interventions. Beyond individual care, the impact reverberates across the healthcare spectrum, influencing infrastructure with remote patient monitoring, predictive equipment maintenance, and optimized operations. This technological revolution signifies not only an improvement in diagnostics and treatment outcomes but also a paradigm shift towards preventive healthcare, making IoT a transformative force in shaping the future of well-being.
 
-<!-- ![image](img/image11.png) -->
-
-### Transportation
-
-<!-- This can be beneficial to owners in terms of fuel usage, emissions per trip, notifications on a car or spare part malfunctioning, driver behavior, speed limiter, geographic locations, door and trunk lock/unlock, social media sharing and more. -->
+![image](img/scope-transport.svg)
 In transportation, IoT promises unparalleled efficiency and safety. By connecting vehicles and infrastructure, real-time data analytics optimize traffic flow, enable predictive vehicle maintenance, and enhance safety measures. This translates into reduced congestion, lower emissions, and streamlined supply chains. From smart logistics to connected cars improving route efficiency, the benefits of IoT in transportation are tangible, steering us towards a future where mobility is not only connected but also smart, safe, and environmentally conscious.
 
 <!-- ![image](img/image12.png) -->
@@ -103,29 +88,27 @@ In transportation, IoT promises unparalleled efficiency and safety. By connectin
 Applications of IoT
 =====
 
-**Wearable technology** is a hallmark of IoT applications and is one of the earliest industries to have adopted IoT Technologies. 
-
-These wearables provide real-time insights, promoting healthier lifestyles and enabling remote healthcare monitoring and analysis.
+ - **Wearable technology** is a hallmark of IoT applications and is one of the earliest industries to have adopted IoT Technologies. These wearables provide real-time insights, promoting healthier lifestyles and enabling remote healthcare monitoring and analysis.
 
 <!-- ![image](img/image13.png) -->
 
-**Smart Home Applications** monitor and/or control home attributes such as lighting, climate, entertainment systems, and appliances. It is the highest IoT application on all measured channels.
+ - **Smart Home Applications** monitor and/or control home attributes such as lighting, climate, entertainment systems, and appliances. It is the highest IoT application on all measured channels.
 
 <!-- ![image](img/image14.png) -->
 
-**Health Care** IoT applications can turn reactive medical-based systems into proactive wellness-based systems. IoT opens ways to a sea of valuable data through analysis, real-time field data, and testing. 
+ - **Health Care** IoT applications can turn reactive medical-based systems into proactive wellness-based systems. IoT opens ways to a sea of valuable data through analysis, real-time field data, and testing. 
 
 <!-- ![image](img/image15.png) -->
 
-**Smart City Applications** include traffic management to water distribution, waste management, urban security and environmental monitoring to solve traffic congestion problems, reduce noise and pollution and help make cities safer.
+ - **Smart City Applications** include traffic management to water distribution, waste management, urban security and environmental monitoring to solve traffic congestion problems, reduce noise and pollution and help make cities safer.
 
 <!-- ![image](img/image16.png) -->
 
-**Agricultural Applications** enhance not only conventional, large-scale operations but also support trends like organic, family, and transparent farming. Smart farming can also provide more efficient water usage or optimization of inputs and treatments. Now, let’s discuss the major applications of IoT-based smart farming that are revolutionizing agriculture.
+ - **Agricultural Applications** enhance not only conventional, large-scale operations but also support trends like organic, family, and transparent farming. Smart farming can also provide more efficient water usage or optimization of inputs and treatments. Now, let’s discuss the major applications of IoT-based smart farming that are revolutionizing agriculture.
 
 <!-- ![image](img/image17.png) -->
 
-**Industrial Automation** is one of the fields where both faster developments, as well as the quality of products, are the critical factors for a higher ROI. With IoT Applications, one could even re-engineer products and their packaging to deliver better performance in both cost and customer experience. Following shows some of the activities and advantages of Iot in Industrial Automation
+ - **Industrial Automation** is one of the fields where both faster developments, as well as the quality of products, are the critical factors for a higher ROI. With IoT Applications, one could even re-engineer products and their packaging to deliver better performance in both cost and customer experience. Following shows some of the activities and advantages of Iot in Industrial Automation
 <!-- ![image](img/industrial.application.png) -->
 
 ![image](img/image19.png)
