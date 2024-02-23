@@ -79,7 +79,7 @@ nano docker-compose.yml
 
 Copy and paste the content below in the docker compose file
 
-```
+```bash
 version: "3.8"
 
 services:
@@ -207,7 +207,7 @@ The block contains, inject -> function -> http request -> debug
 
 Double click the function block (getAuthToken) and enter the content below
 
-```
+```js
 var username = "admin";
 var password = "loragateway";
 
@@ -298,7 +298,7 @@ The setValue -> 1/0 sets the data to be send to the gateway. Let's look into thi
 
 This is the code for sending an actuator val of 1
 
-```
+```js
 var value = JSON.parse(1);
 msg.payload = value;
 return msg;
@@ -306,7 +306,7 @@ return msg;
 
 To send a val of 0, paste the code below into the setValue -> 0 block
 
-```
+```js
 var value = JSON.parse(0);
 msg.payload = value;
 return msg;
