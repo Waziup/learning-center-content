@@ -2,13 +2,13 @@
 id: hardware-communication-workshop-event
 name: Online Workshop on Hardware & Communication
 desc: Hands-on session on hardware and communication concepts.
-delay_start: 1d
-from: 2024-02-19
+delay_start: 0d
+from: 2024-02-26
 ---
 
 Online Webinar
 
-February 19th, 2024  
+February 26th, 2024  
 2:00 PM - 3:30 PM, Central European Time.
 
 **Platform**: Zoom

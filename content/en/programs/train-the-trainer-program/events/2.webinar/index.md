@@ -3,12 +3,12 @@ id: waziup-intro_event
 name: Introducing Waziup Technologies
 desc: Introductory meeting oon waziup technologies and ecosystem.
 delay_start: 1d
-from: 2024-02-26
+from: 2024-03-04
 ---
 
 **Online Webinar**
 
-February 26th, 2024  
+March 4th, 2024  
 2:00 PM - 3:30 PM, Central European Time.
 
 **Platform**: Zoom

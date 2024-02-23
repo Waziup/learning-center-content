@@ -3,12 +3,12 @@ id: web-mobile-application-workshop-event
 name: Web & Mobile Application Development Workshop
 desc: Hands-on session to reinforce web and mobile application development concepts.
 delay_start: 1d
-from: 2024-03-04
+from: 2024-03-11
 ---
 
 **Online Webinar**
 
-March 4th, 2024  
+March 11th, 2024  
 2:00 PM - 3:30 PM, Central European Time.
 
 **Platform**: Zoom

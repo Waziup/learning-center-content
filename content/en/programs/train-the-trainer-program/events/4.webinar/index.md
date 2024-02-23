@@ -2,13 +2,13 @@
 id: prototyping-workshop-event
 name: Data analysis, visualisations and AI Workshop
 desc: Online session on data analysis and artificial intelligence concepts.
-delay_start: 1d
-from: 2024-03-11
+delay_start: 0d
+from: 2024-03-18
 ---
 
 **Online Webinar**
 
-March 11th, 2024  
+March 18th, 2024  
 2:00 PM - 3:30 PM, Central European Time.
 
 **Platform**: Zoom
