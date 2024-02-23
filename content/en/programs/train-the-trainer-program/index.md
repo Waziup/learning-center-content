@@ -1,7 +1,7 @@
 ---
 id: ttt_program
-name: 'HUBiquitous Catalyst Program: Train The Trainer'
-desc: This program uplifts Tech Hubs with virtual and in-person "Train-the-Trainers," providing a "Solution Box" for in-house IoT labs. By the end of the program, Hubs will be able to launch IoT certification courses and develop Minimal Viable Products.
+name: 'Train The Trainer'
+desc: This Train The Trainer is part of the Hubiquitous Catalyst program. The program uplifts Tech Hubs with virtual and in-person "Train-the-Trainers," providing a "Solution Box" for in-house IoT labs. By the end of the program, Hubs will be able to launch IoT certification courses and develop Minimal Viable Products.
 from: 2024-02-19
 to: 2024-03-29
 ---
@@ -45,7 +45,7 @@ The Techub Catalyst Program intends to bring at least 10 African Tech Hubs to a 
 ![awards](img/program_outline.png) -->
 
 
-# Documentation
+# More infos
 
-Here is a link to the [accelerator handbook](https://hubiquitous.eu/wp-content/uploads/2022/05/Hubiquitous-1st-Open-Call-Guide-for-Applicants.pdf).
+Please see the [Catalyst Program webpage](https://hubiquitous.eu/techhub-catalyst-program/)
 
