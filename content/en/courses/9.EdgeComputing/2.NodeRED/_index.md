@@ -28,6 +28,112 @@ or
 
 Then, you can use a web browser to connect to the local Node-RED web interface on `http://127.0.0.1:1880`.
 
+# Installing Node-RED on Wazigate
+
+Wazigate is a raspberry pi powered IoT gateway. Therefore, we can get the docker image for node red and run it on the wazigate. In this module, you will learn how to - Install and run Nodered and run it on the wazigate
+
+- Downloading images from dockerhub
+- Setting up waziapps
+
+1. Power you wazigate and ensure that ssh is enabled in your wazigate.
+2. Login to the wazigate using the command
+
+```
+ssh pi@wazigate.local
+```
+
+The default password is `loragateway`
+If the wazigate.local does not work for you, replace the command with (wazigate.local) with the IP address of the gateway. You can find the IP address of the gateway under wazigate dashboard
+
+![Wazigate dashboard](./img/ip-address.png)
+
+The command should look like `ssh pi@192.168.0.104`
+
+3. Download docker image for node using the command below. The command will install the latest version of node-red in your wazigate.
+
+```
+ docker pull nodered/node-red
+```
+
+Issue the command below to check if the image is downloaded,
+
+```
+docker images
+```
+
+![docker-images](./img/node-red-docker.png)
+
+The image should be visible as shown above
+
+4. Create a docker compose file to setup the docker image you just downloaded
+
+```
+touch docker-compose.yml
+```
+
+Open the docker compose file using the command below,
+
+```
+nano docker-compose.yml
+```
+
+Copy and paste the content below in the docker compose file
+
+```bash
+version: "3.8"
+
+services:
+  node-red:
+    build: .
+    image: nodered/node-red
+    environment:
+      - TEST_VAR=1
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./serve:/app/serve
+    restart: unless-stopped
+    network_mode: "host"
+
+networks:
+  default:
+    external:
+      name: wazigate
+
+```
+
+![Docker compose](./img/docker-compose.png)
+
+5. Start the docker container by issueing the command.
+
+```
+docker-compose up -d
+```
+
+![Docker compose up -d](./img/docker-compose-start.png)
+
+This command creates the docker container for node red and starts it on detached mode
+
+6. Access the nodered from gateway,
+
+Navigate to you gateway ip address and add the port 1880 as shown below,
+
+```
+http://192.168.0.104:1880/
+```
+
+The format is `http:///<ip-address>:<port-number>`
+
+You can also use `wazigate.local` as shown below:
+
+```
+http://wazigate.local:1880/
+```
+
+By issueing either of the commands you should receive a node red window as shown below
+
+![Wazigate-nodered](./img/wazigate-nodered.png)
+
 # A simple Node-RED flow with Wazigate
 
 In this exercise you will create a `node-red` flow that will:
@@ -101,7 +207,7 @@ The block contains, inject -> function -> http request -> debug
 
 Double click the function block (getAuthToken) and enter the content below
 
-```
+```js
 var username = "admin";
 var password = "loragateway";
 
@@ -192,7 +298,7 @@ The setValue -> 1/0 sets the data to be send to the gateway. Let's look into thi
 
 This is the code for sending an actuator val of 1
 
-```
+```js
 var value = JSON.parse(1);
 msg.payload = value;
 return msg;
@@ -200,7 +306,7 @@ return msg;
 
 To send a val of 0, paste the code below into the setValue -> 0 block
 
-```
+```js
 var value = JSON.parse(0);
 msg.payload = value;
 return msg;
@@ -230,113 +336,6 @@ To confirm whether the request was successful. navigate to your gateway -> dashb
 The full block representation is shown below
 
 ![Full block representation](./img/full-block.png)
-
-# Installing Node-RED on Wazigate
-
-Wazigate is a raspberry pi powered IoT gateway. Therefore, we can get the docker image for node red and run it on the wazigate. In this module, you will learn how to - Install and run Nodered and run it on the wazigate
-
-- Downloading images from dockerhub
-- Setting up waziapps
-
-1. Power you wazigate and ensure that ssh is enabled in your wazigate.
-2. Login to the wazigate using the command
-
-```
-ssh pi@wazigate.local
-```
-
-The default password is `loragateway`
-If the wazigate.local does not work for you, replace the command with (wazigate.local) with the IP address of the gateway. You can find the IP address of the gateway under wazigate dashboard
-
-![Wazigate dashboard](./img/ip-address.png)
-
-The command should look like `ssh pi@192.168.0.104`
-
-3. Download docker image for node using the command below. The command will install the latest version of node-red in your wazigate.
-
-```
- docker pull nodered/node-red
-```
-
-Issue the command below to check if the image is downloaded,
-
-```
-docker images
-```
-
-![docker-images](./img/node-red-docker.png)
-
-The image should be visible as shown above
-
-4. Create a docker compose file to setup the docker image you just downloaded
-
-```
-touch docker-compose.yml
-```
-
-Open the docker compose file using the command below,
-
-```
-nano docker-compose.yml
-```
-
-Copy and paste the content below in the docker compose file
-
-```
-version: "3.8"
-
-services:
-  node-red:
-    build: .
-    image: nodered/node-red
-    environment:
-      - TEST_VAR=1
-    ports:
-      - "1880:1880"
-    volumes:
-      - ./serve:/app/serve
-    restart: unless-stopped
-    network_mode: "host"
-
-networks:
-  default:
-    external:
-      name: wazigate
-
-```
-
-![Docker compose](./img/docker-compose.png)
-
-5. Start the docker container by issueing the command.
-
-```
-docker-compose up -d
-```
-
-![Docker compose up -d](./img/docker-compose-start.png)
-
-This command creates the docker container for node red and starts it on detached mode
-
-6. Access the nodered from gateway,
-
-Navigate to you gateway ip address and add the port 1880 as shown below,
-
-```
-http://192.168.0.104:1880/
-```
-
-The format is `http:///<ip-address>:<port-number>`
-
-You can also use `wazigate.local` as shown below:
-
-```
-http://wazigate.local:1880/
-```
-
-By issueing either of the commands you should receive a node red window as shown below
-
-![Wazigate-nodered](./img/wazigate-nodered.png)
-
 <!--
 ## Writing a simple Node-RED flow with MQTT nodes
 

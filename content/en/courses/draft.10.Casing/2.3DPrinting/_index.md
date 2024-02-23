@@ -97,71 +97,74 @@ Before 3D printing, a digital model of the object is created using computer-aide
 
 **Fused Deposition Modeling (FDM):**
 
-Most common and affordable, suitable for a wide range of applications.
+  Most common and affordable, suitable for a wide range of applications.
+
 **Stereolithography (SLA):**
 
-Offers high precision and smooth surface finishes, commonly used for detailed prototypes.
+  Offers high precision and smooth surface finishes, commonly used for detailed prototypes.
+
 **Selective Laser Sintering (SLS):**
 
-Utilizes lasers to fuse powdered materials, enabling the printing of complex and functional parts.
+  Utilizes lasers to fuse powdered materials, enabling the printing of complex and functional parts.
+
 **Digital Light Processing (DLP):**
 
-Similar to SLA but employs a digital light projector for curing layers.
+  Similar to SLA but employs a digital light projector for curing layers.
 
 ## Design file formats
 
 **STL (Standard Tessellation Language)**
 
-The STL file format is a widely used file format in 3D printing. It represents 3D geometry as a collection of triangular facets, defining the surface of the object. STL files use a mesh structure to approximate the surface of a 3D model, breaking it down into a series of connected triangles.
-STL files come in two formats - binary (compressed, smaller file size) and ASCII (human-readable but larger file size).
+  The STL file format is a widely used file format in 3D printing. It represents 3D geometry as a collection of triangular facets, defining the surface of the object. STL files use a mesh structure to approximate the surface of a 3D model, breaking it down into a series of connected triangles.
+  STL files come in two formats - binary (compressed, smaller file size) and ASCII (human-readable but larger file size).
 
 **OBJ (Wavefront OBJ)**
 
-_Description:_ Developed by Wavefront Technologies, OBJ files support both geometry and material properties.
+  _Description:_ Developed by Wavefront Technologies, OBJ files support both geometry and material properties.
 
-_Applications:_ Commonly used for 3D graphics and is compatible with 3D modeling software.
+  _Applications:_ Commonly used for 3D graphics and is compatible with 3D modeling software.
 
 **AMF (Additive Manufacturing File Format)**
 
-_Description:_ A more advanced file format than STL, AMF supports color, materials, and more detailed geometry.
+  _Description:_ A more advanced file format than STL, AMF supports color, materials, and more detailed geometry.
 
-_Applications:_ Suitable for complex designs with intricate features and color information.
+  _Applications:_ Suitable for complex designs with intricate features and color information.
 
 **3MF (3D Manufacturing Format)**
 
-_Description:_ Developed by the 3MF Consortium, 3MF is an XML-based file format supporting color, materials, and more.
+  _Description:_ Developed by the 3MF Consortium, 3MF is an XML-based file format supporting color, materials, and more.
 
-_Applications:_ A modern format aimed at addressing some limitations of STL, offering enhanced capabilities for multi-material and multi-color printing.
+  _Applications:_ A modern format aimed at addressing some limitations of STL, offering enhanced capabilities for multi-material and multi-color printing.
 
 **STEP (Standard for the Exchange of Product Data)**
 
-_Description:_ A CAD file format that represents 3D objects using parametric information.
+  _Description:_ A CAD file format that represents 3D objects using parametric information.
 
-_Applications:_ Widely used in the manufacturing industry for exchanging information between different CAD systems.
+  _Applications:_ Widely used in the manufacturing industry for exchanging information between different CAD systems.
 
 ### Slicers
 
-A slicer is a crucial piece of software in the 3D printing process that takes a 3D model, typically in STL format, and converts it into a series of instructions (G-code) that the 3D printer understands.
+  A slicer is a crucial piece of software in the 3D printing process that takes a 3D model, typically in STL format, and converts it into a series of instructions (G-code) that the 3D printer understands.
 
 **Key Functions**
 
-- The slicer breaks down the 3D model into horizontal layers, determining how each layer will be printed.
-- It calculates the toolpath for the 3D printer's nozzle or laser, outlining the route it should follow for each layer.
-- Some slicers can automatically generate support structures for overhanging parts of the model.
+  - The slicer breaks down the 3D model into horizontal layers, determining how each layer will be printed.
+  - It calculates the toolpath for the 3D printer's nozzle or laser, outlining the route it should follow for each layer.
+  - Some slicers can automatically generate support structures for overhanging parts of the model.
 
 **Role of Slicers in 3D Printing**
 
-The slicer translates the 3D model into a language the 3D printer understands – G-code. G-code consists of specific instructions for movements, temperatures, and other parameters.
+  The slicer translates the 3D model into a language the 3D printer understands – G-code. G-code consists of specific instructions for movements, temperatures, and other parameters.
 
-- Users can specify the thickness of each printed layer, affecting the level of detail and printing speed.
-- Slicers allow users to control the amount of infill (internal structure) within the printed object, balancing strength and material usage.
-- Users can adjust the speed at which the printer moves, influencing the overall print time and quality.
+    - Users can specify the thickness of each printed layer, affecting the level of detail and printing speed.
+    - Slicers allow users to control the amount of infill (internal structure) within the printed object, balancing strength and material usage.
+    - Users can adjust the speed at which the printer moves, influencing the overall print time and quality.
 
-Slicers analyze the 3D model and can automatically generate support structures to ensure that overhanging or bridging sections of the object print successfully.
-These supports are designed to be easily removable after the print is complete.
+  Slicers analyze the 3D model and can automatically generate support structures to ensure that overhanging or bridging sections of the object print successfully.
+  These supports are designed to be easily removable after the print is complete.
 
-- Slicers provide a visual representation of how each layer will be printed, allowing users to identify potential issues before printing.
-- Users can also estimate the time it will take to print a model and the amount of material required.
+    - Slicers provide a visual representation of how each layer will be printed, allowing users to identify potential issues before printing.
+    - Users can also estimate the time it will take to print a model and the amount of material required.
 
 **Popular slicers**
 
@@ -206,33 +209,31 @@ These supports are designed to be easily removable after the print is complete.
 
 **PLA (Polylactic Acid)**
 
-_Overview:_ One of the most popular and widely used 3D printing materials.
+  _Overview:_ One of the most popular and widely used 3D printing materials.
 
-Biodegradable and derived from renewable resources (cornstarch or sugarcane).
-Low melting point, making it easy to print with.
-Suitable for a wide range of applications, especially prototyping and hobbyist projects.
+  Biodegradable and derived from renewable resources (cornstarch or sugarcane).
+  Low melting point, making it easy to print with.
+  Suitable for a wide range of applications, especially prototyping and hobbyist projects.
 
 **ABS (Acrylonitrile Butadiene Styrene)**
 
-_Overview:_ A durable and impact-resistant thermoplastic widely used in various industries.
+  _Overview:_ A durable and impact-resistant thermoplastic widely used in various industries.
 
-Higher melting point than PLA, making it suitable for functional prototypes.
-Excellent layer adhesion but may produce unpleasant fumes during printing.
-Commonly used in automotive and electronic components.
+  Higher melting point than PLA, making it suitable for functional prototypes.
+  Excellent layer adhesion but may produce unpleasant fumes during printing.
+  Commonly used in automotive and electronic components.
 
 **PETG (Polyethylene Terephthalate Glycol)**
 
-_Overview:_ A variant of PET with improved transparency and flexibility.
+  _Overview:_ A variant of PET with improved transparency and flexibility.
 
-Combines the strength of ABS with the ease of printing associated with PLA.
-Good chemical resistance and toughness.
-Suitable for applications requiring durability and clarity, such as bottle prototypes.
-
-[TODO]
+  Combines the strength of ABS with the ease of printing associated with PLA.
+  Good chemical resistance and toughness.
+  Suitable for applications requiring durability and clarity, such as bottle prototypes.
 
 ## The 3D printing process
 
-### Loading files to a 3D printer
+**Loading files to a 3D printer**
 
 **Wired & Wireless**
 
@@ -271,38 +272,38 @@ Follow manufacturer instructions for establishing a connection.
 1. Calibration and Leveling of the Print Bed
    It ensures an even and consistent first layer, crucial for successful prints. It prevents issues like adhesion problems, warping, and uneven surfaces.
 
-**Steps for Bed Calibration:**
+  **Steps for Bed Calibration:**
 
-- **Home the Printer:** Use the printer's interface to move the print head to the home position.
-- **Disable Steppers:** Disable the stepper motors to manually move the print head and adjust the bed.
-- **Leveling Screws:** Adjust the leveling screws at each corner of the bed until a sheet of paper can be moved with slight resistance between the nozzle and bed.
-- **Repeat:** Recheck and adjust as needed, ensuring the entire bed is uniformly leveled.
+  - **Home the Printer:** Use the printer's interface to move the print head to the home position.
+  - **Disable Steppers:** Disable the stepper motors to manually move the print head and adjust the bed.
+  - **Leveling Screws:** Adjust the leveling screws at each corner of the bed until a sheet of paper can be moved with slight resistance between the nozzle and bed.
+  - **Repeat:** Recheck and adjust as needed, ensuring the entire bed is uniformly leveled.
 
 2. Checking and Calibrating the Extruder
 
-Ensures accurate filament extrusion, preventing under or over-extrusion issues.
-Maintains consistent layer adhesion and print quality.
+  Ensures accurate filament extrusion, preventing under or over-extrusion issues.
+  Maintains consistent layer adhesion and print quality.
 
-**Steps for Extruder Calibration:**
+  **Steps for Extruder Calibration:**
 
-- **Mark Filament:** Mark a point on the filament, a known distance (e.g., 100mm) from the extruder.
-- **Extrude Filament:** Use the printer interface to command the extruder to feed a specified length of filament.
-- **Measure:** Measure the distance between the mark and the extruder after extrusion.
-- **Calculate and Adjust:** If the actual extruded length differs from the commanded length, calculate the correction factor and adjust the extruder steps per millimeter in the firmware.
+  - **Mark Filament:** Mark a point on the filament, a known distance (e.g., 100mm) from the extruder.
+  - **Extrude Filament:** Use the printer interface to command the extruder to feed a specified length of filament.
+  - **Measure:** Measure the distance between the mark and the extruder after extrusion.
+  - **Calculate and Adjust:** If the actual extruded length differs from the commanded length, calculate the correction factor and adjust the extruder steps per millimeter in the firmware.
 
 3. Temperature Settings and Considerations
 
-**Hotend Temperature:**
+  **Hotend Temperature:**
 
-PLA: Typically printed between 190°C to 220°C.
-ABS: Requires higher temperatures, usually between 230°C to 260°C.
-PETG: Printed at temperatures ranging from 220°C to 250°C.
+  PLA: Typically printed between 190°C to 220°C.
+  ABS: Requires higher temperatures, usually between 230°C to 260°C.
+  PETG: Printed at temperatures ranging from 220°C to 250°C.
 
-**Bed Temperature:**
+  **Bed Temperature:**
 
-PLA: Often does not require a heated bed but benefits from temperatures around 50°C.
-ABS: Heated bed temperatures between 80°C to 100°C.
-PETG: A heated bed around 75°C to 85°C is recommended.
+  PLA: Often does not require a heated bed but benefits from temperatures around 50°C.
+  ABS: Heated bed temperatures between 80°C to 100°C.
+  PETG: A heated bed around 75°C to 85°C is recommended.
 
 ### Post-Printing Procedures
 

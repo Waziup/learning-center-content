@@ -39,7 +39,7 @@ Arduino boards are versatile and widely used for a variety of projects, ranging 
 
 There are multiple versions of Arduino boards are available in the market. Some of them are explained here.
 
-![Alt text](img/Arduino-types-01.png)
+![alt text](img/Arduino-types-.png)
 
 **Arduino Uno Rev3**
 ---
@@ -94,7 +94,7 @@ With the ESP8266, you can control inputs and outputs as you would do with an Ard
 ---
 The ESP32 is a family of low-cost, low-power System on a Chip (SoC) microcontrollers by Espressif that has a dual-core processor, Bluetooth and Wi-Fi connectivity. If you are familiar with the ESP8266, the ESP32 is a feature-rich replacement that comes with a ton of more functionality.
 
-![alt text](img/ESP8266_ESP32-01.png)
+![alt text](img/ESP8266_ESP32.png)
 
 ### The following table shows the main differences between the ESP8266 and the ESP32 chips:
 
@@ -128,7 +128,7 @@ Waziup development boards, namely WaziDev, WaziSense and WaziAct
 
 WaziDev is a Sensing and Actuation development board for IoT applications. It transmits data up to 7Km using the RFM95W LoRa module with an embedded LoRa antenna. It is easily programmable and customizable, using Arduino technology. Embedded is a Lipo battery charger for solar panels and low power options. An ideal solution for start-ups and entrepreneurs who want to rapidly prototype IoT applications.
 
-![alt text](img/wazidev.jpg)
+![alt text](img/wazidev.png)
 
 **WaziSense**
 
@@ -141,13 +141,13 @@ With features like low power long range communication, multiple ports for simple
 
 Wazihat sits on top of the raspberry pi to enable it to communicate with sensor nodes and actuators via LoRa. The wazihat pro single is fitted with a 0.96" OLED and an SX1276 chip. Beyond the waziup edge operating system of the raspberry pi, the wazihat is essentially the reason the raspberry pi can serve as a LoRa gateway.
 
-![alt text](img/wazihatprosingle.jpg)
+![alt text](img/wazihatprosingle.png)
 
 **WaziAct**
 
 WaziAct is designed to play as a production LoRa actuator node. It has an on board mechanical Relay which can be connected to an external circuit e.g. a water pump. It exposed a number of terminals which can be connected to other relays or even sensors; for example to check the vibration of a water pump to make sure it is turned on and send the status to the gateway.
 
-![alt text](img/waziact.jpg)
+![alt text](img/waziact.png)
 
 IoT Development board Catagories : Raspberry Pi
 ===
@@ -197,5 +197,3 @@ Here are some important features of each of the mentioned IoT development boards
   
 These features collectively make each of these IoT development boards a compelling choice for building innovative IoT solutions.
 
-Examples
-===

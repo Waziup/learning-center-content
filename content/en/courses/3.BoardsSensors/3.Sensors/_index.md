@@ -12,7 +12,7 @@ Introduction
 ========
 Human capability has been expanded in various ways by technology, and sensor technology has increased human perceptive range. Given the speed at which current technology is developing. IoT, big data, cloud computing, and related technologies are in high demand. It is extensively used in a variety of fields, including economics, national defense, science and technology, and daily life.
 
-![Alt text](img/sensors-working-principle-01.png)
+![alt text](img/sensors-working-principle.png)
 
 A device that provides a usable output in response to a specified measurement.The sensor attains a physical parameter and converts it into a signal suitable for processing (e.g. electrical, mechanical, optical) the characteristics of any device or material to detect the presence of a particular physical quantity. The output of the sensor is a signal which is converted to a human-readable form like changes in characteristics, changes in resistance, capacitance, impedance, etc. In various systems the transducer might be used as an actuator. The transducer helps to convert a signal from one physical structure to another or one type of energy into another type.
 
@@ -34,18 +34,18 @@ A few of the most popular ones are shown here in brief:
    - Photodiode (IR Receiver)
    - Light Dependent Resistor
   
-  ![Alt text](img/Light_Sensor-01.png)
+  ![alt text](img/Light_Sensor.png)
 
 - **Temperature Sensor :** As the name suggests, these track temperature variations. They're the bread and butter of HVAC systems and many industrial processes.
 
-![Alt text](img/temperature_sensor-01.png)
+  ![alt text](img/temperature_sensor.png)
 
 - **Pressure/Force/Weight Sensor :** Monitoring air or fluid pressure is their forte. You'll find them in vehicles, medical devices, and weather monitoring systems.
    - Strain Gauge (Pressure Sensor)
    - Load Cell (Weight Sensor)
    
-  ![Alt text](img/wieght_sensor-01.png)
-
+  ![alt text](img/wieght_sensor.png)
+ 
 - **Proximity Sensors :** Handy for robotics and security systems, these sensors detect the presence or absence of an object within a certain range.
    - Ultrasonic proximity sensors
    - Photoelectric proximity sensors
@@ -54,17 +54,17 @@ A few of the most popular ones are shown here in brief:
    - IR and PIR proximity sensors
   
 
-   
+   ![alt text](img/proximity_sensor.png)
 
-![Alt text](img/proximity_sensor-01.png)
+
 
 - **Gas Sensors :** A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
-   
-![Alt text](img/gas_sensor-01.png)
+
+   ![alt text](img/gas_sensor.png)
 
 - **Soil Moisture Sensors :** Soil moisture is basically the amount/content of water present in the soil. This can be measured using a soil moisture sensor either resistive or capacitive.
    
-![Alt text](img/soil_moisture_sensor-01.png)
+   ![alt text](img/soil_moisture_sensor.png)
 
 
 
@@ -96,7 +96,7 @@ Wiring a sensor to a microprocessor typically involves connecting the sensor's o
 Lets first look at the pinout of WaziSense board and MQ2 gas sensor.
 
 ![alt text](img/WaziSense_Pinout.png)
-![alt text](img/wiring_example1-01.png)
+![alt text](img/wiring_example1.png)
 
  Now we have to connect the `sensor power pin (Vcc)` & `ground pin (Gnd)` to dev board power port, which is `+` pin & `-` pin of port D7/D6. 
 
@@ -211,7 +211,7 @@ Speed of I2C bus:
 - Fast mode: 1 Mb/s.
 - High speed mode: 3.2 Mb/s.
 
-![alt text](img/12C_01-01.png)
+![alt text](img/12C_01.png)
 
 Data framing of I2C & timing diagram:
 
@@ -224,7 +224,7 @@ Data framing of I2C & timing diagram:
 - After the one byte of data an acknowledgement bit is sent by the received device (master or slave). For every succeeding one byte of data in either direction, one acknowledgement bit is sent by the receiving device.
 - Once the data transmission is completed a stop condition is initiated. Stop condition is initiated when SCL is at HIGH, SDA transitions from LOW to HIGH. Stop condition is monitored by all the masters in a bus so that they can initiate a new communication with a slave device in the same bus.
 
-![alt text](img/12C_02-01.png)
+![alt text](img/12C_02.png)
 
 **Arduino & Serial Peripheral Interface (SPI):**
 
@@ -242,13 +242,16 @@ The SPI protocol needs four wires to interface and operate between master and sl
 - SS / CS – slave select / chip select. The slave select is active low line and can be any general purpose I/O pin of a microcontroller.
 
 Master & slave:
-![alt text](img/SPI_01-01.png)
+
+![alt text](img/SPI_01.png)
+
 Multi-slave:
-![alt text](img/SPI_02-01.png)
+
+![alt text](img/SPI_02.png)
 
 Timing diagram of SPI communication:
 
-![alt text](img/SPI_03-01.png)
+![alt text](img/SPI_03.png)
 
 There are four modes of SPI communication:
 
@@ -278,7 +281,7 @@ We need two devices for establishing a UART communication and it is full duplex,
 
 UART communication requires two wires (bus); Tx – transmit, Rx- receive and a common ground for completing the circuit between the two devices. The Tx of one device will be connected to the Rx of the other device and similarly the Rx of one device is connected to the Tx of another device.
 
-![alt text](img/UART_01-01.png)
+![alt text](img/UART_01.png)
 
 **Data framing for UART:**
 
@@ -295,7 +298,7 @@ A firmware program developer writes a program code based on the timing diagram f
   
 The time length of a bit is determined by the baud rate and it is time critical. Before transmitting some data from one device to another it is mandatory to set the baud rate of both the devices the same
 
-![alt text](img/UART_02-01.png)
+![alt text](img/UART_02.png)
 
 **Controller Area Network (CAN) :**
 
@@ -311,7 +314,7 @@ Identifier conveys how important the message is (priority) and also used for arb
 
 CAN is a two wire protocol, its wires are twisted pair and unshielded. The two ends of the bus are terminated with 120 ohm resistors. The two wires of CAN bus are CAN HIGH and CAN LOW.
 
-![alt text](img/CAN_01-01.png)
+![alt text](img/CAN.png)
 
 Advanced topics: Calibration
 ======
@@ -489,7 +492,7 @@ just insert it into the soil and then read it.
 
 There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A6.
 
-![Alt text](img/waziACT_soil.jpg)
+![alt text](img/waziACT_soil.png)
 
 
 NOTE: we are powering the soil moisture sensor from **pin D6**. Each digital pin can with stand **40mA** max current draw. The soil moisture sensor is rated for **35mA**.
@@ -569,7 +572,7 @@ At this point, we want to trigger the relay to turn ON the water pump, when the 
 
 #### Schematics
 
-![Alt text](img/waziACT_soilv3.jpg)
+![alt text](img/waziACT_soilv3.png)
 
 Code Sample
 ```c

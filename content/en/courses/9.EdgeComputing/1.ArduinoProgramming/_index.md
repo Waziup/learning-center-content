@@ -166,81 +166,81 @@ Serial.println(string)
 delay(int)
 ```
 
-## Arduino programming tasks
+## Arduino programming Exercise
 
 1. **Blinking LED**
 
-**Objective: Learn how to control an LED using Arduino.**
+  **Objective: Learn how to control an LED using Arduino.**
 
-Components Needed:
+  Components Needed:
 
-1. Arduino board
-2. Breadboard
-3. LED
-4. Resistor (220-330 ohms)
-5. Jumper wires
+  1. Arduino board
+  2. Breadboard
+  3. LED
+  4. Resistor (220-330 ohms)
+  5. Jumper wires
 
-Instructions:
+  Instructions:
 
-- Connect the longer leg (anode) of the LED to digital pin 13 on the Arduino through the resistor.
-- Connect the shorter leg (cathode) of the LED to the ground (GND) pin on the Arduino.
+  - Connect the longer leg (anode) of the LED to digital pin 13 on the Arduino through the resistor.
+  - Connect the shorter leg (cathode) of the LED to the ground (GND) pin on the Arduino.
 
-_schematic_
+  _schematic_
 
-![Shematic](./img/sch-1-blink-led.png)
+  ![Shematic](./img/sch-1-blink-led.png)
 
-- Upload the following simple code to make the LED blink:
+  - Upload the following simple code to make the LED blink:
 
-```cpp
-void setup() {
-  pinMode(13, OUTPUT);
-}
+  ```cpp
+  void setup() {
+    pinMode(13, OUTPUT);
+  }
 
-void loop() {
-  digitalWrite(13, HIGH);
-  delay(1000);
-  digitalWrite(13, LOW);
-  delay(1000);
-}
-```
+  void loop() {
+    digitalWrite(13, HIGH);
+    delay(1000);
+    digitalWrite(13, LOW);
+    delay(1000);
+  }
+  ```
 
 2. Potentiometer-controlled LED brightness
 
-**Objective: Control the brightness of an LED using a potentiometer.**
+  **Objective: Control the brightness of an LED using a potentiometer.**
 
-Components Needed:
+  Components Needed:
 
-1. Arduino board
-2. Breadboard
-3. LED
-4. Resistor (220-330 ohms)
-5. Potentiometer (10k ohms)
-6. Jumper wires
+  1. Arduino board
+  2. Breadboard
+  3. LED
+  4. Resistor (220-330 ohms)
+  5. Potentiometer (10k ohms)
+  6. Jumper wires
 
-Instructions:
+  Instructions:
 
-- Connect the LED and resistor as in the previous exercise.
-- Connect one end of the potentiometer to the 5V pin on the Arduino, the other end to the GND pin, and the middle pin to analog pin A0.
+  - Connect the LED and resistor as in the previous exercise.
+  - Connect one end of the potentiometer to the 5V pin on the Arduino, the other end to the GND pin, and the middle pin to analog pin A0.
 
-_schematic_
+  _schematic_
 
-![Schematic](./img/sch-2-var-pot.png)
+  ![Schematic](./img/sch-2-var-pot.png)
 
-- Upload the following code
+  - Upload the following code
 
-```cpp
-int potPin = A0;  // Pin connected to the potentiometer
-int ledPin = 9;   // Pin connected to the LED
+  ```cpp
+  int potPin = A0;  // Pin connected to the potentiometer
+  int ledPin = 9;   // Pin connected to the LED
 
-void setup() {
-  pinMode(ledPin, OUTPUT);
-}
+  void setup() {
+    pinMode(ledPin, OUTPUT);
+  }
 
-void loop() {
-  int val = analogRead(potPin);  // Read potentiometer value (0-1023)
-  int brightness = map(val, 0, 1023, 0, 255);  // Map value to LED brightness (0-255)
-  analogWrite(ledPin, brightness);  // Set LED brightness
-}
-```
+  void loop() {
+    int val = analogRead(potPin);  // Read potentiometer value (0-1023)
+    int brightness = map(val, 0, 1023, 0, 255);  // Map value to LED brightness (0-255)
+    analogWrite(ledPin, brightness);  // Set LED brightness
+  }
+  ```
 
 To study Arduino programming more in depth, you can head to [this course](https://startingelectronics.org/software/arduino/learn-to-program-course/).
