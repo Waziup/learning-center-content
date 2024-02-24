@@ -13,8 +13,6 @@ courses:
   - id: microcontrollers_course
 ---
 
+<!-- ![hardware](img/hardware.jpg) -->
 
-![hardware](img/hardware.jpg)
-
-This unit will cover the basics of hardware and communications. It will introduce the participants to the basics of electronics, microcontrollers, sensors, actuators, and communication protocols. The unit will also cover the basics of communication protocols, including the Internet Protocol (IP) suite, and the basics of wireless communication protocols, including WiFi, Bluetooth, and LoRaWAN.
-
+In this part of the program, participants will delve into the fundamentals of electronic devices, microcontrollers, sensors, and actuators. The unit provides an insightful exploration of communication protocols, such as the Internet Protocol (IP) suite, and delves into wireless communication, featuring WiFi, Bluetooth, and LoRaWAN. This comprehensive course equips participants with essential knowledge to understand the intricacies of hardware components and communication technologies.
