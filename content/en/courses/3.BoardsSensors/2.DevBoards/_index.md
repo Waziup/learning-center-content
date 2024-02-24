@@ -158,7 +158,7 @@ Fundamentally, the Raspberry Pi is a platform that promotes exploration and inno
 
 With its many features, including HDMI outputs, USB ports, and GPIO (General Purpose Input/Output) pins, the Raspberry Pi is like an empty canvas just waiting for your artistic interpretation.
 
-![alt text](img/Raspberry-Pi-5.jpg)
+![alt text](img/Raspberry-Pi-5.png)
 
 
 
