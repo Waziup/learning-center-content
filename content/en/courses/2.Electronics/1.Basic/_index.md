@@ -11,6 +11,8 @@ Introduction
 
 Current, voltage, wires… IoT is, at its base, just electronics. In this course, we will learn the basics that you need to know to start building IoT prototypes. First of all, we’ll learn what an electric signal is, analogous or digital. We then learn about the electronics laws: Ohm’s law and Kirchhoff’s law. We’ll introduce basic components such as resistors and capacitors. Finally, two very useful circuits will be introduced: the Voltage Divider and Current limiter. 
 
+![elec](img/elec.png)
+
 Electric signals
 ================
 
@@ -328,3 +330,21 @@ There is much more to know about transistors: bridges, oscillators, amplifiers..
 
 Sources: https://ocw.cs.pub.ro/courses/iot/courses/02
 
+
+Exercice 1
+==========
+
+For this exercice, you need to realize a voltage divider.
+Your voltage divider will divide the voltage from a battery by two.
+For example, for a 9V battery, you should obtain 4.5V.
+
+You need:
+- A breadboard
+- A battery
+- Two resistors
+- A voltmeter.
+
+You need to plug-in the resistors and battery as explained in the topic on resistors.
+Check the output voltage: how much did you get?
+
+When you have completed the exercice, click on "Mark topic done".

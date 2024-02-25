@@ -7,33 +7,38 @@ duration: 4h
 ---
 
 This course will go through the various IoT development boards available on the market.
-In particular, we will review the Arduino Series boards, the NodeMCU ESP8266 & ESP32, the Wazi-Dev series, the Raspberry Pi.
+In particular, we will review the Arduino Series boards, the NodeMCU ESP8266 & ESP32, the WaziDev series, the Raspberry Pi.
 
 Introduction
 ===
-The constant need for innovation and connectivity in the rapidly evolving field of Internet of Things (IoT) development fuels the need for flexible and potent development platforms. Presenting a broad range of IoT development boards, each with specific features and capabilities to suit a variety of applications and projects.
+In this course, we are presenting a broad range of IoT development boards, each with specific features and capabilities to suit a variety of applications and projects.
+Explore the world of IoT development boards and go on an innovative and exploratory trip with us. 
+These boards present countless opportunities to realize your IoT ambitions, regardless of your level of experience as a developer or your level of enthusiasm.
 
-Explore the world of IoT development boards and go on an innovative and exploratory trip with us. These boards present countless opportunities to realize your IoT ambitions, regardless of your level of experience as a developer or your level of enthusiasm.
 
-
-IoT Development board Catagories : Arduino 
+Arduino 
 ===
 
-Arduino is an open-source electronics platform that consists of both hardware and software components. At its core, an Arduino development board is a physical computing platform designed to make it easy for hobbyists, students, and professionals to create interactive electronic projects. The development board provides a simple and flexible way to interface with sensors, actuators, and other electronic components.
+Arduino is an **open-source electronics platform** that consists of both hardware and software components. 
+**The development board provides a simple and flexible way to interface with sensors, actuators, and other electronic components.**
+The Arduino development board make it easy to create interactive electronic projects for hobbyists, students and professionals.
 
 Key features of Arduino development boards include:
+- A microcontroller
+- Input/Output (I/O) pins
+- USB interfaces
+- A programming environment
 
-1. **Microcontroller:** The heart of the Arduino board is a microcontroller, which is a small computer on a single integrated circuit. Different Arduino boards may use various microcontrollers, such as the popular Atmel AVR series or ARM-based processors.
 
-2. **Input/Output (I/O) Pins:** Arduino boards typically have a set of digital and analog input/output pins that allow you to connect the board to various electronic components, such as sensors, LEDs, motors, and more. These pins can be programmed to read inputs or control outputs.
+The heart of the Arduino board is a **microcontroller**, which is a small computer on a single integrated circuit. Different Arduino boards may use various microcontrollers, such as the popular Atmel AVR series or ARM-based processors.
+Arduino boards also have a set of digital and analog **input/output pins** that allow you to connect the board to various electronic components, such as sensors, LEDs, motors, and more. These pins can be programmed to read inputs or control outputs.
+Arduino boards also have a built-in **USB interface**, making it easy to connect the board to a computer for programming and communication. The USB interface is also used to power the Arduino board in many cases.
 
-3. **USB Interface:** Arduino boards often come with a built-in USB interface, making it easy to connect the board to a computer for programming and communication. The USB interface is also used to power the Arduino board in many cases.
+Arduino uses a simplified **programming language and integrated development environment** (IDE) that is easy for beginners to learn. The language is based on C/C++ but is simplified for ease of use.
 
-4. **Programming Environment:** Arduino uses a simplified programming language and integrated development environment (IDE) that is easy for beginners to learn. The language is based on C/C++ but is simplified for ease of use.
+Additionally, **Arduino shields** can be stacked on top of the main Arduino board to provide additional functionalities, such as WiFi connectivity, motor control, or GPS.
 
-5. **Open-Source:** Arduino is open-source, meaning that the hardware designs and software code are freely available for anyone to use, modify, and distribute. This open nature has contributed to the widespread adoption of Arduino in the maker and electronics communities.
-
-6. **Shields:** Arduino shields are additional boards that can be stacked on top of the main Arduino board to provide additional functionalities, such as WiFi connectivity, motor control, or GPS.
+Arduino is **open-source**, meaning that the hardware designs and software code are freely available for anyone to use, modify, and distribute. This open nature has contributed to the widespread adoption of Arduino in the maker and electronics communities.
 
 Arduino boards are versatile and widely used for a variety of projects, ranging from simple LED blinking exercises for beginners to complex robotics and home automation systems. They serve as an excellent platform for learning about electronics and programming, and their accessibility has contributed to the growth of the maker movement.
 
@@ -41,18 +46,23 @@ There are multiple versions of Arduino boards are available in the market. Some 
 
 ![alt text](img/Arduino-types-.png)
 
-**Arduino Uno Rev3**
----
-The Arduino UNO is the best board to get started with electronics and coding. If this is your first experience tinkering with the platform, the UNO is the most robust board you can start playing with. The UNO is the most used and documented board of the whole Arduino family.
+## Arduino Uno Rev3
 
-Arduino Uno is a microcontroller board based on the ATmega328P [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf). It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz ceramic resonator (CSTCE16M0V53-R0), a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.. You can tinker with your Uno without worrying too much about doing something wrong, worst case scenario you can replace the chip for a few dollars and start over again.
+
+**The Arduino UNO is one of the best board to get started with electronics and coding**. If this is your first experience tinkering with the platform, the UNO is the most robust board you can start playing with. The UNO is the most used and documented board of the whole Arduino family.
+
+Arduino Uno is a microcontroller board based on the [ATmega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf). It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz ceramic resonator (CSTCE16M0V53-R0), a USB connection, a power jack, an ICSP header and a reset button. 
+
+It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started... You can tinker with your Uno without worrying too much about doing something wrong, worst case scenario you can replace the chip for a few dollars and start over again.
 
 ![Alt text](img/Pinout-Uno.png)
 
 **Arduino Mega 2560 Rev3**
 ---
 
-The Arduino Mega 2560 is a microcontroller board based on the ATmega2560 [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf). It has 54 digital input/output pins (of which 15 can be used as PWM outputs), 16 analog inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB connection, a power jack, an ICSP header, and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started. The Mega 2560 board is compatible with most shields designed for the Uno and the former boards Duemilanove or Diecimila.
+The Arduino Mega 2560 is a microcontroller board based on the [ATmega2560](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf). It has 54 digital input/output pins (of which 15 can be used as PWM outputs), 16 analog inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB connection, a power jack, an ICSP header, and a reset button. 
+
+The Mega 2560 board is compatible with most shields designed for the Uno and the former boards Duemilanove or Diecimila.
 
 ![Alt text](img/Pinout-Mega2560rev3_latest.png)
 
@@ -78,7 +88,7 @@ The Arduino GIGA R1 WiFi is designed for ambitious makers who want to step up th
 
 ![Alt text](img/Pinout-Giga.png)
 
-IoT Development board Catagories : NodeMCU ESP8266 & ESP32
+NodeMCU ESP8266 & ESP32
 ===
 IoT development boards are hardware platforms that facilitate the creation and prototyping of Internet of Things (IoT) projects. Two popular categories of IoT development boards are NodeMCU ESP8266 and ESP32.
 
@@ -120,7 +130,7 @@ The ESP32 is a family of low-cost, low-power System on a Chip (SoC) microcontrol
 
 The choice between the two often depends on the specific requirements of the project. With ESP32 being preferred for more feature-rich and demanding applications, they are commonly used for projects requiring more computational power, higher data transfer rates, and additional connectivity options. Whereas in case of ESP8266, they are compact, cost-effective, and suitable for a variety of IoT projects such as home automation, sensor nodes, and Wi-Fi-enabled devices.
 
-IoT Development board Catagories : Wazi-dev series
+WaziDev series
 ===
 Waziup development boards, namely WaziDev, WaziSense and WaziAct
 
@@ -149,7 +159,7 @@ WaziAct is designed to play as a production LoRa actuator node. It has an on boa
 
 ![alt text](img/waziact.png)
 
-IoT Development board Catagories : Raspberry Pi
+Raspberry PI
 ===
 
 The Raspberry Pi is a tiny yet powerful technology that allows hobbyists, enthusiasts, and amateurs to explore a wide range of opportunities. This credit card-sized computer was created by the Raspberry Pi Foundation with accessibility, affordability, and versatility in mind.
@@ -163,30 +173,30 @@ With its many features, including HDMI outputs, USB ports, and GPIO (General Pur
 
 
 
-Important Features
+Summary
 ===
 Here are some important features of each of the mentioned IoT development boards:
 
 **Arduino Series Boards:**
 
-- Ease of Use: Arduino boards are known for their beginner-friendly approach, making them accessible to users of all skill levels.
-- Rich Ecosystem: Arduino boasts a vast ecosystem of libraries, shields, and community support, facilitating rapid prototyping and development.
-- Cross-Platform Compatibility: Arduino IDE supports multiple operating systems, enabling seamless development across Windows, macOS, and Linux platforms.
-- Wide Range of Models: Arduino offers a diverse range of boards catering to various project requirements, from compact microcontrollers to more powerful models with enhanced capabilities.
+- **Ease of Use**: Arduino boards are known for their beginner-friendly approach, making them accessible to users of all skill levels.
+- **Rich Ecosystem**: Arduino boasts a vast ecosystem of libraries, shields, and community support, facilitating rapid prototyping and development.
+- **Cross-Platform Compatibility**: Arduino IDE supports multiple operating systems, enabling seamless development across Windows, macOS, and Linux platforms.
+- **Wide Range of Models**: Arduino offers a diverse range of boards catering to various project requirements, from compact microcontrollers to more powerful models with enhanced capabilities.
   
 **NodeMCU ESP8266 & ESP32:**
 
-- Built-in Wi-Fi Connectivity: NodeMCU boards come equipped with integrated Wi-Fi modules, enabling seamless connectivity to wireless networks and the internet.
-- Low Power Consumption: ESP8266 and ESP32 chips are known for their energy efficiency, making them suitable for battery-powered IoT devices.
-- Rich Peripheral Support: These boards feature a plethora of GPIO pins and hardware interfaces, facilitating interfacing with sensors, actuators, and other peripherals.
-- Arduino IDE Compatibility: NodeMCU boards can be programmed using the Arduino IDE, leveraging the familiar Arduino ecosystem for development.
+- **Built-in Wi-Fi**: NodeMCU boards come equipped with integrated Wi-Fi modules, enabling seamless connectivity to wireless networks and the internet.
+- **Low Power Consumption**: ESP8266 and ESP32 chips are known for their energy efficiency, making them suitable for battery-powered IoT devices.
+- **Rich Peripheral Support**: These boards feature a plethora of GPIO pins and hardware interfaces, facilitating interfacing with sensors, actuators, and other peripherals.
+- **Arduino IDE Compatibility**: NodeMCU boards can be programmed using the Arduino IDE, leveraging the familiar Arduino ecosystem for development.
   
-**Wazi-Dev Series:**
+**WaziDev Series:**
 
-- Modularity and Expandability: Wazi-Dev boards are designed with modularity in mind, allowing developers to easily expand functionality through interchangeable modules and accessories.
-- Versatility: These boards are versatile, supporting a wide range of sensors, communication protocols, and interfaces, making them suitable for diverse IoT applications.
-- Open-Source Hardware and Software: Wazi-Dev embraces the principles of open-source development, providing transparent access to schematics, firmware, and documentation.
-- Scalability: Wazi-Dev offers scalability, allowing developers to scale their projects from prototypes to production deployments seamlessly.
+- **Modularity and Expandability**: WaziDev boards are designed with modularity in mind, allowing developers to easily expand functionality through interchangeable modules and accessories.
+- **Versatility**: These boards are versatile, supporting a wide range of sensors, communication protocols, and interfaces, making them suitable for diverse IoT applications.
+- **Open-Source Hardware and Software**: WaziDev embraces the principles of open-source development, providing transparent access to schematics, firmware, and documentation.
+- **Scalability**: WaziDev offers scalability, allowing developers to scale their projects from prototypes to production deployments seamlessly.
   
 **Raspberry Pi:**
 
