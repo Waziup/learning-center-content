@@ -31,7 +31,7 @@ This is very important: if you don't do that, your course progress will not be r
 At the end of each course topics, **you need to click on the button "Mark as done" to register your progress.**
 Please be honest! :)
 
-![mark_topic_done](img/mark_topic_done.png)
+![mark](img/mark.png)
 
 PS. You can skip this one if you are already familiar with IoT!
 
