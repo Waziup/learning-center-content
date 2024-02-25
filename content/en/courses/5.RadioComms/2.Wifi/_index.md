@@ -1,6 +1,6 @@
 ---
 id: wifi_dev_course
-title: Wifi IoT devices
+title: Wifi radio communications
 description: This course will present the WiFi technology usage in IoT.
 difficulty: intermediate
 duration: 3h30m

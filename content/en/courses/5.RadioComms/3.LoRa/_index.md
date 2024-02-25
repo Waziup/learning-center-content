@@ -1,19 +1,26 @@
 ---
 id: radio_comm_course
-title: Long range radio communications
+title: LoRa radio communications
 description: This course will present long range wireless technologies. 
 difficulty: intermediate
 duration: 0h30m
 ---
 
-Cellular technologies such as 3G/4G will be presented and compared against more adapted wireless technologies for IoT such as LoRa and NB-IoT. These 2 latter technologies will be explained in detail as they represent the best energy vs range tradeoff. A focus will be made on LoRa wireless communication technologies to present the LoRa & LoRaWAN ecosystem.
+Introduction
+============
+
+LoRa (Long Range) is a low-power wide-area network (LPWAN) **radio protocol** developed by Semtech.
+It is based on spread spectrum modulation techniques derived from chirp spread spectrum (CSS) technology.
+It was developed by Cycleo of Grenoble, France and acquired by Semtech, the founding member of the LoRa Alliance.
+
+LoRaWAN is based on LoRa. It is a Low Power, Wide Area (LPWA) **networking protocol** designed to wirelessly connect battery operated ‘things’ to the internet in regional, national or global networks, and targets key Internet of Things (IoT) requirements such as bi-directional communication, end-to-end security, mobility and localization services.
+LoRaWAN® network architecture is deployed in a star-of-stars topology in which gateways relay messages between end-devices and a central network server.
+
+In this course, we will look and both LoRa and LoRaWAN technologies, and provide some usage examples.
 
 LoRa
 ====
 
-LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol developed by Semtech.
-It is based on spread spectrum modulation techniques derived from chirp spread spectrum (CSS) technology.
-It was developed by Cycleo of Grenoble, France and acquired by Semtech, the founding member of the LoRa Alliance.
 
 Introduction
 ------------
@@ -75,7 +82,6 @@ Basic chirps are simply a ramp from fmin to fmax (up-chirp) or fmax to fmin (dow
 
 
 
-
 LoRaWAN
 =======
 
@@ -84,8 +90,10 @@ Introduction
 
 The LoRaWAN® specification is a Low Power, Wide Area (LPWA) networking protocol designed to wirelessly connect battery operated ‘things’ to the internet in regional, national or global networks, and targets key Internet of Things (IoT) requirements such as bi-directional communication, end-to-end security, mobility and localization services.
 LoRaWAN® network architecture is deployed in a star-of-stars topology in which gateways relay messages between end-devices and a central network server.
+
 The gateways are connected to the network server via standard IP connections and act as a transparent bridge, simply converting RF packets to IP packets and vice versa. The wireless communication takes advantage of the Long Range characteristics of the LoRaÒ physical layer, allowing a single-hop link between the end-device and one or many gateways.
 All modes are capable of bi-directional communication, and there is support for multicast addressing groups to make efficient use of spectrum during tasks such as Firmware Over-The-Air (FOTA) upgrades or other mass distribution messages.
+
 The specification defines the device-to-infrastructure (LoRa®) physical layer parameters & (LoRaWAN®) protocol and so provides seamless interoperability between manufacturers, as demonstrated via the device certification program.
 While the specification defines the technical implementation, it does not define any commercial model or type of deployment (public, shared, private, enterprise) and so offers the industry the freedom to innovate and differentiate how it is used.
 The LoRaWAN® specification is developed and maintained by the LoRa Alliance®: an open association of collaborating members.
@@ -192,44 +200,23 @@ For example in Europe for uplink transmissions 8 different frequencies are used.
 - **Hop time** is the amount of time needed to change from one frequency to another in which the radio is not transmitting
 
 
-LoRa use cases
-==============
 
-LoRa enables long-range communication at low power consumptions. This has made it popular in LPWAN (Low Power Wide Area Network) applications. Some use cases of LoRa/LoRaWAN are:
+Exercise
+========
 
-- Agriculture: LoRa allows farmers to remotely monitor several agriculture parameters, such as temperature, humidity, and soil moisture content. It is also possible to control irrigation systems remotely such as turning on sprinklers at the farm. This increases agricultural production and enables farmers to use more efficient farming techniques.
-- Smart cities: to connect devices like air sensors, street lights, smart parking meters, etc., cities typically use wireless wide area networks such as LoRa. LoRa is also integrated into infrastructures in order to facilitate automation, enable remote control, and equipment management.
-- Smart buildings: with little infrastructure and maintenance required, LoRa is being used in buildings to monitor conditions such as temperature, humidity, occupancy/motion sensing, water meters, fire; and even execute remote control operations such as turning on lights or control the air conditioning units.
-- Industries: LoRa supports various industrial IoT applications such as remote monitoring of equipment  and also remote control of machines.
-- Healthcare: LoRa enables doctors to remotely monitor patient's conditions.
-- Wildlife conservation: by deploying LoRa sensors in the forests such as smart cameras, motion sensors, smart acoustic devices, etc.; we are able to monitor wildlife movement and also identify poaching activities.
-
-
-Exercise on LoRa to LoRa communication
-======================================
+In this exercise, we will do a simple LoRa to LoRa communication. For this, we will use two [WaziDev boards](http://lab.waziup.io/resources/waziup/wazidev) and we will send and receive LoRa messages on each board. The WaziDev board has an Atmega328P-AU microcontroller that is connected to an RFM95W LoRa module. A LoRa module is a device that has a LoRa transceiver chip.
 
 ![WaziDev to WaziDev LoRa chat](./media/WaziDev_to_WaziDev_LoRa_chat.png)
 
-Hardware:
-- 2 Waziup LoRa boards like the WaziDev. It's not a must for the boards to be the same
-- If using the WaziDev board, then a Micro USB cable for programming
-- If using the WaziSense or WaziAct board, then an FTDI module (like FT232) and a Mini USB cable for programming
-- If using the WaziSense or WaziAct board, then an 868MHz LoRa antenna
-
-Software
-- Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
-- Install the [WaziDev](https://github.com/Waziup/WaziDev/archive/master.zip) libraries for LoRa communication. Follow the guide [here](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook)
-
-
-In this exercise, we will do a simple LoRa to LoRa communication. For this, we will use two [WaziDev boards](http://lab.waziup.io/resources/waziup/wazidev) and we will send and receive LoRa messages on each board. The WaziDev board has an Atmega328P-AU microcontroller that is connected to an RFM95W LoRa module. A LoRa module is a device that has a LoRa transceiver chip.
+You will need two Waziup LoRa boards like the WaziDev, with it's antenna.
+Please also install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
 
 If you are not familiar with the WaziDev board, there is a "Waziup" course that gives a comprehensive tutorial on the WaziDev board, and also other similar LoRa boards from Waziup. The WaziDev [documentation](https://waziup.io/documentation/wazidev/user-manual/#install-the-wazidev-sketchbook) also describes how to download and configure the Arduino IDE accordingly.
 
 To do this simple exercise, we will upload an example code to two WaziDev boards and then use a Serial connection software, like the Arduino's Serial Monitor, to send and view the LoRa communications between the boards.
 
----
-### Step 1: Upload the first LoRa code
----
+
+## Step 1: Upload the first LoRa code
 
 First, open Arduino IDE and then the WaziDev LoRa chat example. This can be opened by navigating to Files -> Sketchbook -> LoRa -> WaziDev_to_WaziDev_Chat; as shown below.
 
@@ -239,17 +226,13 @@ Next, using a USB cable, connect one of the WaziDev boards to the computer, sele
 
 ![Select correct COM port](./media/WaziDev_to_WaziDev_LoRa_chat_screenshot_2.png)
 
----
-### Step 2: Upload the second LoRa code
----
+## Step 2: Upload the second LoRa code
 
 A really cool feature with the Arduino IDE version 2 is that the Serial Monitor is linked to the sketch windows you have open. For example, we can open a new Arduino sketch, copy-paste the example code to it, and finally upload the code to the board. Afterwards, we can select the port and board for each window, and have two Serial Monitors running at the same time. 
 
 However, if you do not have the Arduino IDE version 2, then you can open another instance of the Arduino IDE by running the Arduino software that is on the computer's Desktop or the applications list. Note that we need to start another Arduino IDE instance and not open a new window. Finally, connect the other WaziDev board to the computer and upload the example code to it.
 
----
-### Step 3: Open two Serial Monitors
----
+## Step 3: Open two Serial Monitors
 
 If you are using Arduino IDE version 2, open two Serial Monitors for the board and port configuration of each window. Set the Serial Monitors' Baud Rate to 9600 (as configured in the code) and set the ending character to "Both NL & CR". 
 

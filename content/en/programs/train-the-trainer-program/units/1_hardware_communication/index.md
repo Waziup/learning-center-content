@@ -31,7 +31,7 @@ This is very important: if you don't do that, your course progress will not be r
 At the end of each course topics, **you need to click on the button "Mark as done" to register your progress.**
 Please be honest! :)
 
-![mark_as_done](img/mark_as_done.png)
+![mark_topic_done](img/mark_topic_done.png)
 
 PS. You can skip this one if you are already familiar with IoT!
 
@@ -58,8 +58,14 @@ Don't forget to click "Mark topic done" when you have finished.
 
 ## Radio communications and networking
 
+To complete a full IoT prototype, you also need to know about long range communications.
+We will cover the following course:
 - Wireless communication essentials
+- Wifi radio communications
+- LoRa radio communications
 
+Please do the Wifi exercice, and the LoRa exercice.
+Don't forget to click "Mark topic done" when you have finished.
 
 
 
