@@ -698,7 +698,32 @@ Exercise
 
 After completing this course you should be able to do the following exercise by youself.
 
+*Task*
+
 `
-Make an Automatic water level controller using Ultrasonic sensor and WaziAct development board.
-Use the WaziAct to trigger the water pump when the water level in water tank crosses a certain limit. 
+Use an Ultrasonic sensor and a WaziUp development board to measure the water level in a water tank.
 `
+
+*Hints*
+
+Required Hardware
+
+- WaziUp development board
+- FT232 FTDI module with Mini USB Cable
+- Wazigate
+- SR04 Ultrasonic Sensor
+- Lora 868Mhz Antenna
+- Some Jumper Wires
+
+
+Required Software
+
+- Arduino IDE for the programming aspects
+- WaziDev libraries for LoRa communication
+
+Module interface:
+
+1. VCC: Connect to the D5 pin of the development board
+2. GND: Connect to the GND pin of the development board
+3. Rx: Connect to the D3 pin of the development board
+4. Tx: Connect to the D4 pin of the development board
