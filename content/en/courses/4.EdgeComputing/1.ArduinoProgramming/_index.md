@@ -166,7 +166,8 @@ Serial.println(string)
 delay(int)
 ```
 
-## Arduino programming Exercise
+Exercise
+========
 
 1. **Blinking LED**
 

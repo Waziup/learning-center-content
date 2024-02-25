@@ -10,7 +10,11 @@ courses:
   - id: elec_advanced_course
   - id: boards_course
   - id: sensors_course
-  - id: microcontrollers_course
+  - id: arduino_programming_course
+  - id: wireless_essentials_course
+  - id: wifi_dev_course
+  - id: radio_comm_course
+  
 ---
 
 <!-- ![hardware](img/hardware.jpg) -->
@@ -45,8 +49,17 @@ Don't forget to click "Mark topic done" when you have finished.
 Once you have finished with the basic electronics, you can move on to the boards and sensors, with the following courses:
 - Overview of boards and peripherals
 - Wiring and programming sensors
+- Arduino Programming
 
-Please do the exercice in the "Wiring and programming sensors" course.
+With those courses, you will have the basic knowledge to create and program you first IoT prototypes!
+
+Please do the exercice in the "Wiring and programming sensors" and the "Arduino programming" courses.
 Don't forget to click "Mark topic done" when you have finished.
+
+## Radio communications and networking
+
+- Wireless communication essentials
+
+
 
 
