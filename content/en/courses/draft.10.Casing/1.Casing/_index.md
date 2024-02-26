@@ -33,14 +33,14 @@ These requirements describe specific features for the casing. In the development
 
 1. The IoT board dimensions you are using. For instance, the `wazisense v2` board has dimension of 70mmx52mm. This means that the minimum casing size should be able to accomodate this board
 
-<img src="./img/example-casing.png" width=250 height=200 />
+  <img src="./img/example-casing.png" width=250 height=200 />
 
 2. The internal accessories to be used and their dimensions. These inlude, sensor modules, battery etc.
 3. Casing ports. These provide opening to access the sensor cables. This is incase your casing has wires that go out of the casing. For this step, you can use cable glands or any available cable management techniques. The objective is to have a neat casing.
 
-<!-- ![Cable gland](./img/cable-gland.jpg) ![Casing example](./img/casing-1.png) -->
-<img src="./img/cable-gland.jpg" width=250 height=200 />
-<img src="./img/casing-1.png" width=250 height=200 />
+  <!-- ![Cable gland](./img/cable-gland.jpg) ![Casing example](./img/casing-1.png) -->
+  <img src="./img/cable-gland.jpg" width=250 height=200 />
+  <img src="./img/casing-1.png" width=250 height=200 />
 
 4.  Finally, take into account the mounting mechanism. The casing designed should be mounted on platforms like, walls, poles etc. Some casing however, don't need to be mounted like wearbles.
 

@@ -1,24 +1,19 @@
 ---
-id: hardware-communication-workshop-event
-name: Online Workshop on Hardware & Communication
+id: wb-1
+name: Introduction to the WAZILAB platform & Unit 1 (Hardware & communications)
 desc: Hands-on session on hardware and communication concepts.
-delay_start: 1d
-from: 2024-02-19
+delay_start: 0d
+from: 2024-02-26
 ---
 
 Online Webinar
 
-February 19th, 2024  
-2:00 PM - 3:30 PM, Central European Time.
+February 26th, 2024  
+10:00 AM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Presentation of the program
-- Hackathon
-- Timeline
-- Awards
-
-This exciting kickoff event will feature a presentation of the program, activities, timelines and expected outcomes. We believe that this kickoff will generate clarity and passion, leading to a mutual understanding of our goal.
-
-Get ready to embark on an innovative and collaborative journey as we lay the groundwork for major accomplishments.
+- introduction of the WaziLab platform.
+- Presentation of the first Unit (Hardware and communications)
+- Q/A session

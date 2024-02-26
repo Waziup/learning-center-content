@@ -11,6 +11,8 @@ Introduction
 
 Current, voltage, wires… IoT is, at its base, just electronics. In this course, we will learn the basics that you need to know to start building IoT prototypes. First of all, we’ll learn what an electric signal is, analogous or digital. We then learn about the electronics laws: Ohm’s law and Kirchhoff’s law. We’ll introduce basic components such as resistors and capacitors. Finally, two very useful circuits will be introduced: the Voltage Divider and Current limiter. 
 
+![elec](img/elec.png)
+
 Electric signals
 ================
 
@@ -328,3 +330,68 @@ There is much more to know about transistors: bridges, oscillators, amplifiers..
 
 Sources: https://ocw.cs.pub.ro/courses/iot/courses/02
 
+
+Exercice 1: Ohm's Law Calculation
+==========
+
+**Task**
+Design a circuit with an LED that has a maximum current requirement of 10mA. The power supply for the circuit is a 3V battery. Calculate the resistance needed in the circuit using Ohm's law.
+
+![exercise](img/exercise1.png)
+
+**Expected Outcome**
+- Use Ohm's law to determine the appropriate resistance required for an LED with a given maximum current and voltage supply.
+
+What you need:
+
+- Calulator
+- Sheet of paper
+- Pen/Pencil
+
+**What to keep in mind**
+
+- Ohm's law equation: V = I*R and using change of subject we can have R = V/I or I = V/R
+- The "m" in 10mA stand for milli and A for Ampere(see the chart below for the prefix conversion units)
+
+![exercise](img/exercise1_1.png)
+
+**Safety Precautions:**
+- Ensure the voltage levels used are within the safe operating range of your components.
+- Double-check connections to prevent short circuits.
+- Use appropriate gear. Safety first!
+
+**Fun Part**: you can also build this circuit in reality to experience how it works. You will however need an AA battery holder, an LED, a few resistors with different values, breadboard and jumper wires.
+
+Exercise 2: Voltage Divider Calculation
+==============
+
+**Task:**
+Hey there! Ready to dive into some real circuit action? Awesome! Let's create a voltage divider circuit using two resistors, one with a resistance of 1k ohm and the other with 2.2k ohms. Our power source is a 5V battery.
+
+Now, the exciting part, your job is to calculate the voltage output across the second resistor! Trust me, it's not as complicated as it sounds.
+
+**Expected Outcome:**
+By the end of this exercise, you'll be the master of voltage dividers. You should be able to confidently determine the output voltage in a circuit with different resistor values and a multimeter to confirm the output.
+
+**What you need:**
+- Circuit diagram with two resistors (1k ohm and 2.2k ohms) and a 5V input source
+- Calculator
+- Digital/Analog Multimeter
+- Breadboard
+- 5v power source
+- 1kΩ and 2.2kΩ Resistor
+- Jumper wires
+
+**What to keep in mind:**
+- You've got this! Remember the voltage divider equation:
+
+	![exercise](img/exercise2.png)
+
+- Think about how changing resistor values affects the output voltage.
+
+**Safety Precautions:**
+- Ensure the voltage levels used are within the safe operating range of your components.
+- Double-check connections to prevent short circuits.
+- Use appropriate gear. Safety first!
+
+Ready to unleash your inner circuit wizard? Let's go!

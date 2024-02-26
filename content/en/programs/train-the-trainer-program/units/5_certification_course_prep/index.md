@@ -2,7 +2,8 @@
 id: iot_certif_prep_phase_unit
 name: IoT certification course phase preparation
 desc: At this part of the program each engaged hub will run an IoT certification course and develop two innovative MVPs.
-duration: 6w
+delay_start: 5w
+duration: 1w
 ---
 
 Each engaged hub will run a 1-2 months IoT program, with an open call and select the persons for an IoT training and one bootcamp.
