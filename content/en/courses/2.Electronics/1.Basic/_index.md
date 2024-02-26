@@ -360,7 +360,7 @@ What you need:
 - Double-check connections to prevent short circuits.
 - Use appropriate gear. Safety first!
 
-**Fun Part**: you can also build this circuit in reality to experience how it works. You will however need an AA battery holder, LED, a few resistors with different values, breadboard and jumper wires.
+**Fun Part**: you can also build this circuit in reality to experience how it works. You will however need an AA battery holder, an LED, a few resistors with different values, breadboard and jumper wires.
 
 Exercise 2: Voltage Divider Calculation
 ==============
