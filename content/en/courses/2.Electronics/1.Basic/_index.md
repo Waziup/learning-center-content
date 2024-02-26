@@ -355,9 +355,10 @@ What you need:
 
 ![exercise](img/exercise1_1.png)
 
-**Safety Precautions**
-
-- Please use appropriate gear if you intend to build this circuit.
+**Safety Precautions:**
+- Ensure the voltage levels used are within the safe operating range of your components.
+- Double-check connections to prevent short circuits.
+- Use appropriate gear. Safety first!
 
 **Fun Part**: you can also build this circuit in reality to experience how it works. You will however need an AA battery holder, LED, a few resistors with different values, breadboard and jumper wires.
 
@@ -389,7 +390,8 @@ By the end of this exercise, you'll be the master of voltage dividers. You shoul
 - Think about how changing resistor values affects the output voltage.
 
 **Safety Precautions:**
-- As we embark on this electrifying journey, just be mindful of the voltage levels and use appropriate protective gear. Safety first!
-- Make sure you're using appropriate resistor values to keep the current in check.
+- Ensure the voltage levels used are within the safe operating range of your components.
+- Double-check connections to prevent short circuits.
+- Use appropriate gear. Safety first!
 
 Ready to unleash your inner circuit wizard? Let's go!

@@ -109,3 +109,92 @@ UART (Universal Asynchronous Receiver/Transmitter) is a fundamental communicatio
 In some cases, one can also use software Libraries to define two pins as UART(TX and RX) if the microcontroller in choice allows it. For instance, in the example below, pin 2 and 3 are used as UART for interfacing a GPS module with an Arduino UNO.
 
 ![UART](img/uart.jpg)
+
+Exercise 1: I2C Communication with MAX30102 Heart Rate Monitor
+==========
+
+**Task:**
+Welcome to the I2C communication exercise using the MAX30102 Heart Rate Monitor! In this session, our primary goal is to learn and practice I2C communication by integrating the MAX30102 sensor, which utilizes this protocol. Please refer to the detailed guide on the XYZ page for step-by-step instructions.
+
+**Expected Outcome:**
+By the end of this exercise, you should have hands-on experience with I2C communication, specifically with the MAX30102 sensor. You'll gain insights into connecting I2C devices, installing libraries, and running code for heart rate measurement.
+
+**What you need:**
+- MAX30102 sensor module
+- Arduino board
+- Jumper wires
+- Breadboard
+
+**Safety Precautions**
+
+- Ensure the voltage levels used are within the safe operating range of your components.
+- Double-check connections to prevent short circuits.
+- Use appropriate gear. Safety first!
+
+**Instructions:**
+1. **Refer to [MAX30102 Documentation](http://lab.staging.waziup.io/resources/waziup/max30102-heart-rate-and-proximity-sensor)
+ Page:**
+   - Go to the [MAX30102 Documentation](http://lab.staging.waziup.io/resources/waziup/max30102-heart-rate-and-proximity-sensor) page where detailed instructions for setting up the MAX30102 sensor through I2C communication are provided.
+   - Follow the step-by-step guide for wiring connections and installing the MAX30102 library.
+
+2. **Wiring for I2C:**
+   - Connect the MAX30102 sensor to the Arduino, emphasizing the I2C pins.
+   - Double-check the wiring to ensure proper I2C connections:
+     - SDA: A4 of Arduino
+     - SCL: A5 of Arduino
+
+3. **Library Installation:**
+   - Access the Arduino Library Manager from the Sketch menu: Sketch > Include Library > Manage Libraries.
+   - Search for "MAX30102" and install the version provided by Adafruit, as shown in the XYZ guide.
+
+4. **Code Example:**
+   - Open the example specified in the [MAX30102 Documentation](http://lab.staging.waziup.io/resources/waziup/max30102-heart-rate-and-proximity-sensor)
+   - Examine the code and understand how it leverages I2C communication for heart rate measurement.
+
+5. **Upload and Monitor:**
+   - Upload the code to your Arduino board.
+   - Open the Serial Monitor (Tools > Serial Monitor) to observe the heart rate readings.
+
+6. **Record and Reflect:**
+   - Document your experience, any challenges faced, and observations during the I2C communication setup with MAX30102.
+
+**Finish Line:**
+Congratulations! You've successfully practiced I2C communication using the MAX30102 Heart Rate Monitor. Consider exploring more I2C-based sensors and devices to broaden your understanding of this widely used communication protocol in the realm of IoT. Stay curious and keep exploring!
+
+
+Exercise 2: Exploring GPIOs with 5V Single Channel Relay Module
+
+**Task**
+
+In this exercise, you will dive into the practical application of General Purpose Input/Output (GPIO) pins, focusing on the control of a 5V Single Channel Relay Module. The goal is to understand how GPIOs work, especially when interfacing with external devices. By following the detailed instructions on the provided [Relay Documentation](http://lab.staging.waziup.io/resources/waziup/5v-single-channel-relay) page, you'll be able to successfully control the relay using your Arduino.
+
+**What You Need**
+
+- Arduino Board with Power Cable: Any Arduino board with available GPIO pins.
+- 5V Single Channel Relay Module: This will be the device you control using GPIOs.
+- Jumper Wires: To establish connections between the Arduino and the relay module.
+
+**What to Keep in Mind**
+
+1. **GPIO Pins:** Understand the distinction between input and output pins.
+   - *Input Pins:* Receive signals.
+   - *Output Pins:* Transmit signals.
+
+2. **Relay Functionality:** a relay functions as an electrical switch.
+   - *Connecting to Arduino:* Follow the prescribed connections (VCC, GND, IN) for proper functioning.
+
+3. **Code Example:** Familiarize yourself with the provided code example.
+   - *RelayPin:* The designated pin for relay control in the code.
+
+4. **Experimentation:** Feel free to experiment with different GPIO pins and code modifications.
+   - *Task 1:* Connect the relay to a different digital pin.
+   - *Task 2:* Adjust delay durations to observe the relay's switching frequency.
+
+## Safety Precautions to Observe
+
+- Ensure the voltage levels used are within the safe operating range of your components.
+- Double-check connections to prevent short circuits.
+- Use appropriate gear. Safety first!
+- Relay Module: Handle the relay module with care, and avoid contact with its components while powered.
+
+Now, let's get started! Head over to the [Relay Documentation](http://lab.staging.waziup.io/resources/waziup/5v-single-channel-relay) Page and follow the step-by-step guide to explore GPIOs.
