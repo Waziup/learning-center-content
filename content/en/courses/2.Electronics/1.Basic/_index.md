@@ -366,9 +366,9 @@ Exercise 2: Voltage Divider Calculation
 ==============
 
 **Task:**
-Hey there! Ready to dive into some real circuit action? Awesome! Let's create a voltage divider circuit using two resistors – one with a resistance of 1k ohm and the other with 2.2k ohms. Our power source is a 5V battery.
+Hey there! Ready to dive into some real circuit action? Awesome! Let's create a voltage divider circuit using two resistors, one with a resistance of 1k ohm and the other with 2.2k ohms. Our power source is a 5V battery.
 
-Now, the exciting part – your job is to calculate the voltage output across the second resistor! Trust me, it's not as complicated as it sounds.
+Now, the exciting part, your job is to calculate the voltage output across the second resistor! Trust me, it's not as complicated as it sounds.
 
 **Expected Outcome:**
 By the end of this exercise, you'll be the master of voltage dividers. You should be able to confidently determine the output voltage in a circuit with different resistor values and a multimeter to confirm the output.
