@@ -208,6 +208,62 @@ Our course on radio communications will introduce the basics of wireless communi
 A complete IoT application should always include a web or mobile application.
 Our course will show you how to develop a Web interface for your IoT application. At first, we will develop a very simple Web application, based solely on HTML and Javascript. We will build on this knowledge to go to the next step: the Web frameworks. We will show the basics of three of the most popular frameworks: ReactJS, Angular and Vue.
 
+
+Exercise: Self-Evaluation Exercise
+===========
+
+**Task**
+
+This exercise is designed to help you gauge your understanding of the fundamental concepts covered in the course. There are 20 questions spanning various aspects of IoT, including history, applications, challenges, and technologies. Take your time to reflect on the content covered in the module and answer the questions to the best of your knowledge.
+
+**Reflection Questions**
+
+1. What is the Internet of Things (IoT), and why is it considered transformative?
+
+2. Who is credited with coining the term "Internet of Things," and what was the motivation behind it?
+
+3. What role did RFID technology play in the early stages of IoT development?
+
+4. In the context of IoT devices, explain the purpose of sensors, actuators, and effectors.
+
+5. Name the three categories into which IoT devices are generally grouped.
+
+6. Differentiate between Consumer IoT, Enterprise IoT, and Industrial IoT, providing examples for each.
+
+7. In what domains does IoT have a significant impact, according to the provided information?
+
+8. How does IoT revolutionize agriculture, as discussed in the module?
+
+9. What transformative changes does IoT bring to the energy sector?
+
+10. Explain the role of IoT in healthcare, highlighting its impact on patient care and infrastructure.
+
+11. How does IoT contribute to improving efficiency and safety in transportation?
+
+12. List five applications of IoT, providing a brief description of each.
+
+13. Identify and describe at least three challenges facing IoT technology.
+
+14. Why is the lack of strong regulations considered a challenge in the IoT industry?
+
+15. How does the availability of skilled talent impact the development and maintenance of IoT systems?
+
+16. Discuss the issue of compatibility in the IoT ecosystem and its significance.
+
+17. Why is bandwidth a critical factor in the successful implementation of IoT applications?
+
+18. How do customer expectations influence the development of IoT technologies?
+
+19. What are the key factors highlighted in the "Importance of the Right Choice of Technology" section?
+
+20. Briefly describe the three-layer architecture adopted by Waziup for IoT applications.
+
+**Self-Reflection**
+
+After answering the questions, take a moment to review your responses. Consider revisiting the relevant sections of the module if any questions posed a challenge. This exercise aims to reinforce your understanding of the introductory concepts of IoT, and your self-reflection will guide further learning.
+
+
+
 <!-- Data analysis and AI
 ====================
 
