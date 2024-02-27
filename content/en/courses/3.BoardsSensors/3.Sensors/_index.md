@@ -57,7 +57,6 @@ For example:
 - Ultrasonic proximity sensors
 - Photoelectric proximity sensors
 - Capacitive proximity sensors
-- Magnetic proximity sensors
 - IR and PIR proximity sensors
   
 
@@ -68,6 +67,32 @@ For example:
 A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
 
 ![alt text](img/gas_sensor.png)
+
+From the figure above we can see that almost all the gas sensors are identical. So while choosing right gas sensor you must remember which types of gas they can measure and which types of gas you need to measure. Thus you can select the appropriate gas sensor.
+
+ The following table  shows the list of different types of Gas Sensors and what gases they sense.
+
+| **Sensor Name** | **Gas to Measure** |
+| ----------- | ----------- |
+| MQ-2 | Methane, Butane, LPG, Smoke |
+| MQ-3 | Alcohol, Ethanol, Smoke |
+| MQ-4 | Methane, CNG Gas |
+| MQ-5 | Natural gas, LPG |
+| MQ-6 | LPG, butane |
+| MQ-7 | Carbon Monoxide |
+| MQ-8 | Hydrogen Gas |
+| MQ-9 | Carbon Monoxide, flammable gasses |
+| MQ-131 | Ozone |
+| MQ-135 | Air Quality |
+| MQ-136 | Hydrogen Sulphide gas |
+| MQ-137 | Ammonia |
+| MQ-138 | Benzene, Toluene, Alcohol, Propane, Formaldehyde gas, Hydrogen |
+| MQ-214 | Methane, Natural Gas |
+| MQ-216 | Natural gas, Coal Gas |
+| MQ-303A | Alcohol, Ethanol, smoke |
+| MQ-306A | LPG, butane |
+| MQ-307A | Carbon Monoxide |
+| MQ-309A | Carbon Monoxide, flammable gas |
 
 ## Soil Moisture Sensors
 
