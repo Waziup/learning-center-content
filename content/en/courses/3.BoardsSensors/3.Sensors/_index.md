@@ -11,9 +11,9 @@ Sensors are a fundamental part of IoT. In this course, we will learn how to wire
 Introduction
 ========
 
-A sensor is a device that provides a usable output in response to a specified measurement. The sensor attains a physical parameter and converts it into a signal suitable for processing. The output of the sensor is a signal which is converted to a human-readable form like changes in characteristics, changes in resistance, capacitance, impedance, etc. In various systems the transducer might be used as an actuator. The transducer helps to convert a signal from one physical structure to another or one type of energy into another type.
+A sensor is a device that provides a usable output in response to a specified measurement. The sensor attains a physical parameter and converts it into a signal suitable for processing. The output of the sensor is a signal which is converted to a human-readable form like changes in characteristics, changes in resistance, capacitance, impedance, etc. In various systems the transducer might be used as an actuator. The transducer helps to convert a signal from one physical structure to another or one type of energy into another type. The following feagure shows the working principle of sensors.
 
-![alt text](img/sensors-working-principle.png)
+![sensors-working-principle](img/sensors-working-principle.png)
 
 
 Overview of Various Sensors
@@ -237,6 +237,8 @@ Sensors that are not linear over the measurement range require some curve-fittin
 
 ## Example
 
+This example semonstrates one techinque for calibrating sensor input. The Arduino takes sensor readings for five seconds during the startup, and tracks the highest and lowest values it gets. These sensor readings during the first five seconds of the sketch execution define the minimum and maximum of expected values for the readings taken during the loop.
+
 One technique for calibrating sensor input is demonstrated below. The circuit has:
 - an analog sensor (potentiometer will do) attached to analog input 0
 - a LED attached from digital pin 9 to ground through 220 ohm resistor
@@ -246,22 +248,6 @@ One technique for calibrating sensor input is demonstrated below. The circuit ha
 **Code:**
 ````c
 /*
-
-  The sensor readings
-  during the first five seconds of the sketch execution define the minimum and
-  maximum of expected values attached to the sensor pin.
-
-  The sensor minimum and maximum initial values may seem backwards. Initially,
-  you set the minimum high and listen for anything lower, saving it as the new
-  minimum. Likewise, you set the maximum low and listen for anything higher as
-  the new maximum.
-
-  created 29 Oct 2008
-  by David A Mellis
-  modified 30 Aug 2011
-  by Tom Igoe
-  modified 07 Apr 2017
-  by Zachary J. Fields
 
   This example code is in the public domain.
 
