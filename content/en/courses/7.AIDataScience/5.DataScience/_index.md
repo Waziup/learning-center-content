@@ -111,19 +111,19 @@ In the following the important metrics like variance, bias, r2-score and mean sq
 So the error in a machine learning model is made up of:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Error = Reducible Error + Irreducible Error">
+<img src="https://latex.codecogs.com/svg.image?Error%20=%20Reducible%20Error%20+%20Irreducible%20Error">
 </p>
 
 The reducible Error is the sum of squared Bias and Variance.
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Reducible Error = Bias^2 + Variance">
+<img src="https://latex.codecogs.com/svg.image?Reducible%20Error%20=%20Bias^2%20+%20Variance">
 </p>
 
 Combining the above two equations, we get:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Error = Bias^2 + Variance + Irreducible Error">
+<img src="https://latex.codecogs.com/svg.image?Reducible%20Error%20=%20Bias^2%20+%20Variancehttps://latex.codecogs.com/svg.image?Error%20=%20Bias^2%20+%20Variance%20+%20Irreducible%20Error">
 </p>
 
 Variance
@@ -170,7 +170,7 @@ Mean Square Error
 The metric Mean Square Error (MSE) describes the average of the square errors, the larger the number of MSE is, the larger the error. The metric is defined as the following:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?MSE = \frac{1}{n} \sum^{n}_{i=1}(Y_{i}-\hat{Y}{}_{i})^2">
+<img src="https://latex.codecogs.com/svg.image?MSE%20=%20\frac{1}{n}%20\sum^{n}_{i=1}(Y_{i}-\hat{Y}{}_{i})^2">
 </p>
 
 The diagram below shows a graph that was created using linear regression. 
@@ -190,7 +190,7 @@ R2-Score
 The r2 score closely relates to Mean Square Error (explained in the last bulletin). It is a percentage, that varies from *0* % - *100* %. The r2 score shows a ratio of variances:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?R2_{score} = \frac {\text{total variance explained by the model}} {\text{total variance}} = 1 \&space;- \&space; \frac {\text{total sum of residuals}}{\text{total sum of squares}}">
+<img src="https://latex.codecogs.com/svg.image?R2_{score}%20=%20\frac%20{\text{total%20variance%20explained%20by%20the%20model}}%20{\text{total%20variance}}%20=%201%20\&space;-%20\&space;%20\frac%20{\text{total%20sum%20of%20residuals}}{\text{total%20sum%20of%20squares}}">
 </p>
 
 A high value means that the variables are perfectly correlated, there is no variance. A low value would indicate a low level of correlation, that means in most cases, that the model is not suitable for the given task.
