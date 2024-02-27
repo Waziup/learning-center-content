@@ -18,7 +18,8 @@ Electric signals
 
 A signal is a function that conveys information about a phenomena.
 
-<img src="img/signals.png" width="300" />
+![elec](img/signals.png)
+
 
 
 A signal can be represented in two ways:
@@ -85,7 +86,9 @@ Buttons
 
 This section explains how to correctly connect a button to a board. A button, also called a switch, is an electric component that can break an electrical circuit by interrupting the current. When used in schematics, there are multiple possible symbols to depict it.
 
+
 ![button_symbol](img/button_symbol.png)
+
 ![button_symbol2](img/button_symbol2.png)
 
 
