@@ -269,10 +269,11 @@ void loop() {
     delay(10000);  
  }
 ```
-
+<!---
 The raw source of the sketch example is visible [here](src/sketch/Arduino_ESP_Temp_ThingSpeak/Arduino_ESP_Temp_ThingSpeak.ino).
 
 The code is ready for an Heltec WiFi LoRa 32 board so OLED is activated.
+-->
 
 
 
@@ -513,8 +514,10 @@ void loop() {
  }
 ```
 
+<!---
 The raw source of the sketch example is visible [here](src/sketch/Arduino_ESP_Temp_ThingSpeak/Arduino_ESP_Temp_ThingSpeak.ino).
 
 The code is ready for an Heltec WiFi LoRa 32 board so OLED is activated.
+-->
 
 

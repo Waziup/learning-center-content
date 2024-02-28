@@ -55,7 +55,9 @@ Arduino Uno is a microcontroller board based on the [ATmega328P](https://ww1.mic
 
 It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started... You can tinker with your Uno without worrying too much about doing something wrong, worst case scenario you can replace the chip for a few dollars and start over again.
 
+
 ![Alt text](img/Pinout-Uno.png)
+
 
 **Arduino Mega 2560 Rev3**
 ---
@@ -63,6 +65,7 @@ It contains everything needed to support the microcontroller; simply connect it 
 The Arduino Mega 2560 is a microcontroller board based on the [ATmega2560](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2549-8-bit-AVR-Microcontroller-ATmega640-1280-1281-2560-2561_datasheet.pdf). It has 54 digital input/output pins (of which 15 can be used as PWM outputs), 16 analog inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB connection, a power jack, an ICSP header, and a reset button. 
 
 The Mega 2560 board is compatible with most shields designed for the Uno and the former boards Duemilanove or Diecimila.
+
 
 ![Alt text](img/Pinout-Mega2560rev3_latest.png)
 
@@ -200,10 +203,10 @@ Here are some important features of each of the mentioned IoT development boards
   
 **Raspberry Pi:**
 
-- Powerful Computing: Raspberry Pi boards feature powerful ARM-based processors, capable of handling a wide range of computational tasks.
-- Extensive Peripheral Support: Raspberry Pi offers a plethora of GPIO pins, USB ports, HDMI output, and camera interfaces, enabling interfacing with a diverse array of peripherals and displays.
-- Linux-based Operating System: Raspberry Pi runs on a variety of Linux-based operating systems, providing access to a vast software ecosystem and development tools.
-- Community and Support: Raspberry Pi has a vibrant community and extensive online resources, making it easy for users to find support, tutorials, and project ideas.
+- **Powerful Computing**: Raspberry Pi boards feature powerful ARM-based processors, capable of handling a wide range of computational tasks.
+- **Extensive Peripheral Support**: Raspberry Pi offers a plethora of GPIO pins, USB ports, HDMI output, and camera interfaces, enabling interfacing with a diverse array of peripherals and displays.
+- **Linux-based Operating System**: Raspberry Pi runs on a variety of Linux-based operating systems, providing access to a vast software ecosystem and development tools.
+- **Community and Support**: Raspberry Pi has a vibrant community and extensive online resources, making it easy for users to find support, tutorials, and project ideas.
   
 These features collectively make each of these IoT development boards a compelling choice for building innovative IoT solutions.
 
