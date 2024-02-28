@@ -11,9 +11,9 @@ Sensors are a fundamental part of IoT. In this course, we will learn how to wire
 Introduction
 ========
 
-A sensor is a device that provides a usable output in response to a specified measurement. The sensor attains a physical parameter and converts it into a signal suitable for processing. The output of the sensor is a signal which is converted to a human-readable form like changes in characteristics, changes in resistance, capacitance, impedance, etc. In various systems the transducer might be used as an actuator. The transducer helps to convert a signal from one physical structure to another or one type of energy into another type.
+A sensor is a device that provides a usable output in response to a specified measurement. The sensor attains a physical parameter and converts it into a signal suitable for processing. The output of the sensor is a signal which is converted to a human-readable form like changes in characteristics, changes in resistance, capacitance, impedance, etc. In various systems the transducer might be used as an actuator. The transducer helps to convert a signal from one physical structure to another or one type of energy into another type. The following feagure shows the working principle of sensors.
 
-![alt text](img/sensors-working-principle.png)
+![sensors-working-principle](img/sensors-working-principle.png)
 
 
 Overview of Various Sensors
@@ -57,7 +57,6 @@ For example:
 - Ultrasonic proximity sensors
 - Photoelectric proximity sensors
 - Capacitive proximity sensors
-- Magnetic proximity sensors
 - IR and PIR proximity sensors
   
 
@@ -68,6 +67,32 @@ For example:
 A gas sensor is an electronic device that is used to detect the presence and concentration of specific gases in the air. The most common types of gases that are detected by these sensors include carbon monoxide (CO), hydrogen (H2), methane (CH4), and propane (C3H8).
 
 ![alt text](img/gas_sensor.png)
+
+From the figure above we can see that almost all the gas sensors are identical. So while choosing right gas sensor you must remember which types of gas they can measure and which types of gas you need to measure. Thus you can select the appropriate gas sensor.
+
+ The following table  shows the list of different types of Gas Sensors and what gases they sense.
+
+| **Sensor Name** | **Gas to Measure** |
+| ----------- | ----------- |
+| MQ-2 | Methane, Butane, LPG, Smoke |
+| MQ-3 | Alcohol, Ethanol, Smoke |
+| MQ-4 | Methane, CNG Gas |
+| MQ-5 | Natural gas, LPG |
+| MQ-6 | LPG, butane |
+| MQ-7 | Carbon Monoxide |
+| MQ-8 | Hydrogen Gas |
+| MQ-9 | Carbon Monoxide, flammable gasses |
+| MQ-131 | Ozone |
+| MQ-135 | Air Quality |
+| MQ-136 | Hydrogen Sulphide gas |
+| MQ-137 | Ammonia |
+| MQ-138 | Benzene, Toluene, Alcohol, Propane, Formaldehyde gas, Hydrogen |
+| MQ-214 | Methane, Natural Gas |
+| MQ-216 | Natural gas, Coal Gas |
+| MQ-303A | Alcohol, Ethanol, smoke |
+| MQ-306A | LPG, butane |
+| MQ-307A | Carbon Monoxide |
+| MQ-309A | Carbon Monoxide, flammable gas |
 
 ## Soil Moisture Sensors
 
@@ -212,6 +237,8 @@ Sensors that are not linear over the measurement range require some curve-fittin
 
 ## Example
 
+This example semonstrates one techinque for calibrating sensor input. The Arduino takes sensor readings for five seconds during the startup, and tracks the highest and lowest values it gets. These sensor readings during the first five seconds of the sketch execution define the minimum and maximum of expected values for the readings taken during the loop.
+
 One technique for calibrating sensor input is demonstrated below. The circuit has:
 - an analog sensor (potentiometer will do) attached to analog input 0
 - a LED attached from digital pin 9 to ground through 220 ohm resistor
@@ -221,22 +248,6 @@ One technique for calibrating sensor input is demonstrated below. The circuit ha
 **Code:**
 ````c
 /*
-
-  The sensor readings
-  during the first five seconds of the sketch execution define the minimum and
-  maximum of expected values attached to the sensor pin.
-
-  The sensor minimum and maximum initial values may seem backwards. Initially,
-  you set the minimum high and listen for anything lower, saving it as the new
-  minimum. Likewise, you set the maximum low and listen for anything higher as
-  the new maximum.
-
-  created 29 Oct 2008
-  by David A Mellis
-  modified 30 Aug 2011
-  by Tom Igoe
-  modified 07 Apr 2017
-  by Zachary J. Fields
 
   This example code is in the public domain.
 
