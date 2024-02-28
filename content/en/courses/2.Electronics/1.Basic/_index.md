@@ -338,6 +338,7 @@ Exercise 1: Ohm's Law Calculation
 ==========
 
 **Task**
+
 Design a circuit with an LED that has a maximum current requirement of 10mA. The power supply for the circuit is a 3V battery. Calculate the resistance needed in the circuit using Ohm's law.
 
 ![exercise](img/exercise1.png)
