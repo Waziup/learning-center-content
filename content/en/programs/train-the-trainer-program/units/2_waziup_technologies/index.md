@@ -2,7 +2,7 @@
 id: waziup_tech__unit
 name: Waziup Technologies
 desc: This unit introduces participants to Waziup technologies, covering the Waziup IoT platform, hardware, software, architecture, components, and APIs.
-delay_start: 2w
+delay_start: 1w
 duration: 1w
 courses:
   - id: WaziDev_course
@@ -11,6 +11,52 @@ courses:
   - id: waziup_api_course
 ---
 
-This unit will cover the basics of Waziup technologies. It will introduce the participants to the Waziup IoT platform, the Waziup IoT hardware, and the Waziup IoT software. The unit will also cover the basics of the Waziup IoT platform, including the Waziup IoT platform architecture, the Waziup IoT platform components, and the Waziup IoT platform APIs.
+This unit will cover the basics of Waziup technologies. 
+The Waziup platform is an end-to-end solution to develop IoT prototypes.
+It allows Long range communications with the LoRaWAN network, and can run your applications at the Edge.
 
-<!-- ![comps](img/comps.png) -->
+![archi](img/archi.png)
+
+You should find all the components in your Solution Box. **TODO: describe Solution Box and give a link to the corresponding page.**
+
+**Task:** Add all the components from the Solution Box in the "My Lab" section.
+
+## The WaziDev series
+
+WaziDev, WaziSense and WaziAct are Sensing and Actuation development board for IoT applications. They transmits data up to 7Km using LoRaWAN. It is easily programmable and customizable, using Arduino technology.
+
+Please go through the course on **WaziDev board series** below.
+
+You can also find the documentation for the boards in the Lab.
+
+**Task:** Install the WaziDev and WaziSense.
+Go through all the instruction in [WaziDev](https://lab.waziup.io/resources/waziup/wazidev), and realize the "Blink a LED" and "Temperature and humidity sensor" exercices.
+
+When done, please take a picture and upload it in the Drive folder.
+
+
+## The WaziGate
+
+WaziGate is an IoT LoRaWAN Gateway, ideal for all your remote IoT applications. The Gateway can cover up to 100 IoT Sensors and actuator nodes.
+
+Please go through the course on **WaziGate** course, and also the [WaziGate documentation](https://lab.waziup.io/resources/waziup/wazigate) in the Lab.
+
+**Task:** You need to install your WaziGate. Please follow the video courses, and also the WaziGate documentation in the Lab.
+Please take a photo of your installed WaziGate!
+
+## The WaziCloud
+
+Please follow the **WaziCloud** course and execute all the steps.
+
+**Task:** Make sure that your WaziGate is connected to your WaziCloud account. Please take a photo of your Cloud dashboard and upload it.
+
+Optionally, you can follow the WaziCloud API course.
+
+## End to end application
+
+When you have done all the courses, you should be able to build your first end-to-end prototype with Waziup!
+
+**Task:** Measure a temperature using the DHT11 sensor, and send it to the WaziCloud dashboard.
+Please take a photo and upload it.
+
+

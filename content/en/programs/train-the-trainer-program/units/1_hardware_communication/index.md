@@ -2,7 +2,7 @@
 id: hardware_&_communication_unit
 name: Hardware & Communication
 desc: This unit covers the basics of hardware and communications.
-delay_start: 1w
+delay_start: 0w
 duration: 1w
 courses:
   - id: iot_intro_course
@@ -41,7 +41,9 @@ Two courses await you on electronics:
 - Basics of electronics for IoT
 - Advanced electronics for IoT
 
-Please do the exercice in the Basics of electronics.
+**Please do the exercice in the Basics of electronics and Advanced electronics.**
+****You need to take a photo of your prototype and upload it the corresponding Drive folder**.
+
 Don't forget to click "Mark topic done" when you have finished.
 
 ## Boards and sensors
