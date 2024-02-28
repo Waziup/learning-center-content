@@ -331,7 +331,7 @@ There is much more to know about transistors: bridges, oscillators, amplifiers..
 Sources: https://ocw.cs.pub.ro/courses/iot/courses/02
 
 
-Exercice 1: Ohm's Law Calculation
+Exercise 1: Ohm's Law Calculation
 ==========
 
 **Task**
