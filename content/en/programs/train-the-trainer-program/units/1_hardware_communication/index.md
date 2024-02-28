@@ -41,7 +41,9 @@ Two courses await you on electronics:
 - Basics of electronics for IoT
 - Advanced electronics for IoT
 
-Please do the exercice in the Basics of electronics.
+**Please do the exercice in the Basics of electronics and Advanced electronics.**
+****You need to take a photo of your prototype and upload it the corresponding Drive folder**.
+
 Don't forget to click "Mark topic done" when you have finished.
 
 ## Boards and sensors
