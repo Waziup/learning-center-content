@@ -9,9 +9,9 @@ duration: 4h
 Introduction
 ============
 
-This course will cover the basics of using the WaziCloud.
-The WaziCloud allows you to display our sensor measurements and to control your actuators.
-You can also monitor your gateways.
+Welcome to the WaziCloud Basics Course!
+
+This course is designed to help you understand the fundamentals of using the WaziCloud platform. WaziCloud enables you to visualize sensor measurements, control actuators, and monitor your gateways seamlessly.
 
 The first step is to create an account on Web interface.
 The course will then show how to create and connect devices.
@@ -32,34 +32,45 @@ Finally, the “projects” feature is demonstrated, allowing the user to conven
 Registration
 ============
 
-The first thing you need to do is to create a login and a password.
-You should already have a gateway and a sensor node ready and configured.
+Welcome to WaziCloud Registration! Follow these steps to get started:
 
-**Step \#1:** [Open the WaziCloud dashboard](https://dashboard.waziup.io/).
+**Step #1:** Create Your Account
 
-![login](img/login.png)
+- Navigate to the [WaziCloud dashboard](https://dashboard.waziup.io/).
+  
+  ![WaziCloud Login](img/login.png)
 
-You can create a new account by clicking on “Register” of by using a social network OpenId procedure.
-All communications will be secured by SSL. 
+- Choose either of the following options:
+  - Click on "Register" to create a new account.
+  - Opt for the social network OpenID procedure.
+  
+- All communications during the registration process are secured by SSL.
 
-**Step \#2:** fill in the fields. 
+**Step #2:** Fill in Your Details
 
-![register](img/register.png)
+- Complete the required fields in the registration form.
+  
+  ![Registration Form](img/register.png)
 
-You will receive an email to confirm your registration.
-Once registered, you can now log in.
+- Ensure accuracy in your information.
 
-> :warning: **Warning:** Do not push the big red button.
+- After submission, you will receive an email to confirm your registration.
 
-> [!IMPORTANT]  
-> Once created your login and password, [you need to insert them in your gateway](https://lab.waziup.io/resources/waziup/wazigate).
+**Step #3:** Log In After Registration
+
+- Once registered, log in using your newly created login and password.
+
+<alert severity='warning'> Please avoid pressing the big red button.</alert>
+<alert severity='info'> fter creating your login and password, [insert them into your gateway](https://lab.waziup.io/resources/waziup/wazigate).</alert>
+
+Now you're all set to explore the features of WaziCloud. Happy exploring!
+
 
 
 Devices
 =======
 
-Clicking on the “Devices” menu entry will lead you to the devices page.
-If this is your first time on Waziup, you should not have any devices here:
+Start by clicking on the "Devices" menu entry. This action will direct you to the dedicated devices page. If this is your first time visit to the dashboard, you won't find any devices listed on this page yet. Don't worry the following will guide you through the exciting journey of discovering and managing devices on the Waziup platform.
 
 ![no_devices](img/no_devices.png)
 

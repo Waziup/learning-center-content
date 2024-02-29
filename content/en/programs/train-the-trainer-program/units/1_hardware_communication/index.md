@@ -36,6 +36,7 @@ Please be honest! :)
 <alert type='success'><b>Task 1:</b> Answer the questions in the questionaire at the end of the course.</alert>
 
 PS. You can skip this one if you are already familiar with IoT!
+
 ## Electronics
 
 Two courses await you on electronics:
@@ -48,6 +49,8 @@ You need to take a photo of your prototype and upload it the corresponding Drive
 </alert>
 
 Don't forget to click "Mark topic done" when you have finished.
+
+<alert type='success'><b>Task:</b> take all the 4 exercise in the course to comeplete the unit.</alert>
 
 ## Boards and sensors
 
@@ -68,6 +71,8 @@ You need to take a photo of your prototype and upload it the corresponding Drive
 
 Don't forget to click "Mark topic done" when you have finished.
 
+<alert type='success'><b>Task:</b> take the Question-Answer exercise and practical exercise in the courses to complete the unit.</alert>
+
 ## Radio communications and networking
 
 To complete a full IoT prototype, you also need to know about long range communications.
@@ -79,5 +84,6 @@ We will cover the following course:
 <alert type='success'><b>Task 4:</b> Please do the Wifi exercice, and the LoRa exercice. Take a photo of your prototype and upload it to the Drive folder.</alert>
 Don't forget to click "Mark topic done" when you have finished.
 
+<alert type='success'><b>Task:</b> take the Question-Answer exercise and 2 practical exercise in the courses to complete the unit.</alert>
 
 

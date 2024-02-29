@@ -11,11 +11,15 @@ WaziGate Overview
 
 <!-- Let's start this lesson on the WaziGate with a tour of its parts and features. -->
 
-<youtube>QCZssYIdKss</youtube>
 
 WaziGate is a IoT LoRa Gateway, ideal for all your remote IoT applications. The Gateway can cover up to 100 IoT Sensors and actuator nodes using LoRa radio network: Weather stations, soil monitoring, GPS applications... The possibilities are endless! The Gateway can also control your actuators, such as electro-valves. You can host your own applications directly in the gateway, and connect to it through WiFi. The gateway can easily work without Internet connectivity and still provides data to end-users through its embedded database and web-based visualization module.
 
+<youtube>QCZssYIdKss</youtube>
+
+<alert type='info'> Please get informed. The downloadable file are listed bellow in the resources section.</alert>
+
 ### Resources
+- browse [WaziGate User Manual](http://lab.waziup.io/resources/waziup/wazigate)
 - download [Gateway ISO Image](https://downloads.waziup.io/)
 - download [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 - browse [Raspberry Pi 5](http://lab.waziup.io/resources/waziup/raspberry-pi)
@@ -80,17 +84,15 @@ In this part you will get to know about WaziGate UI and its features.
 
 <youtube>SAwH-iR18hc</youtube>
 
-<alert type='info'> Soon we will launch a newer version of WaziGate UI with some killer features. Stay connected for update!</alert>
 
 ### Resources
 - browse [WaziGate](http://lab.waziup.io/resources/waziup/wazigate)
 
 Configuring Internet
 ====================
+Let's now configure the internet on your WaziGate following two steps:
 
 <youtube>aucdo0knjh4</youtube>
-
-Let's now configure the internet on your WaziGate following two steps:
 
 **Step # 1:** Select menu Settings/Wifi.
 
@@ -98,27 +100,28 @@ Once Wazigate found all the available WiFi networks in range, click on the netwo
 
 **Step #2:** Enter the password for that network and click on "connect".
 
-<alert type='warning'> <li>Once you setup your WaziGate to connect to a WiFi network, you will lose the Hotspot connection.</li>
-<li>**Note:** If Wazigate does not manage to connect to your WiFi due to wrong credentials or not being in the range of the WiFi router, it will rollback to the hotspot mode and you need to connect to it again and start over. This might take a few minutes depending on the router.</li>
-</alert>
+<alert type='warning'> Once you setup your WaziGate to connect to a WiFi network, you will lose the Hotspot connection.</alert>
 
 Configuring the Gateway
 ======================
 
+
+Let's now configure the rest of your WaziGate according to the video Tutorial.
+
 <youtube>YeDg1wnJhQY</youtube>
-
-### Resources
-- browse [Waziup Dashboard](https://dashboard.waziup.io)
-- browse [WaziGate](http://lab.waziup.io/resources/waziup/wazigate)
-
-Let's now configure the rest of your WaziGate.
 
 Waziup account enables you to receive all your sensor data in your dashboard and manage your Wazigate remotely. If you do not have an account on [Waziup dashboard](https://login.waziup.io/auth/realms/waziup/protocol/openid-connect/auth?client_id=dashboard&redirect_uri=https%3A%2F%2Fdashboard.waziup.io%2F&state=7c9547dd-c0bf-4b2a-8642-bdc13a3949a3&response_mode=fragment&response_type=code&scope=openid&nonce=1a520f4b-4814-4607-8472-aaeba34f5b6b), you need to create one first. Then follow the steps:
 
 **Step #1:** Clik on the Sync menu. 
 **Step #2:** Enter you Cloud Username and Password and click Save.
-<alert type='warning'> You need to enter your CLOUD login/password, collected on https://dashboard.waziup.io/. Do not enter your gateway password here.</alert>
 **Step #3:** Flip the Active Sync ON.
+
+<alert type='warning'> You need to enter your CLOUD login/password, collected on https://dashboard.waziup.io/. Do not enter your gateway password here.</alert>
+
+### Resources
+- browse [Waziup Dashboard](https://dashboard.waziup.io)
+- browse [WaziGate](http://lab.waziup.io/resources/waziup/wazigate)
+
 
 LoRaWAN Sensing and Actuating
 =============================
