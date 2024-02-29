@@ -19,7 +19,7 @@ It allows Long range communications with the LoRaWAN network, and can run your a
 
 You should find all the components in your Solution Box. **TODO: describe Solution Box and give a link to the corresponding page.**
 
-<alert severity='info'><b>Task:</b> Add all the components from the Solution Box in the "My Lab" section.</alert>
+<alert severity='success'><b>Task:</b> Add all the components from the Solution Box in the "My Lab" section.</alert>
 
 ## The WaziDev series
 
@@ -29,7 +29,7 @@ Please go through the course on **WaziDev board series** below.
 
 You can also find the documentation for the boards in the Lab.
 
-<alert severity='info'><b>Task:</b> Install the WaziDev and WaziSense. Go through all the instruction in [WaziDev](https://lab.waziup.io/resources/waziup/wazidev), and realize the "Blink a LED" and "Temperature and humidity sensor" exercices.</alert>
+<alert severity='success'><b>Task:</b> Install the WaziDev and WaziSense. Go through all the instruction in [WaziDev](https://lab.waziup.io/resources/waziup/wazidev), and realize the "Blink a LED" and "Temperature and humidity sensor" exercices.</alert>
 
 
 When done, please take a picture and upload it in the Drive folder.
@@ -41,14 +41,14 @@ WaziGate is an IoT LoRaWAN Gateway, ideal for all your remote IoT applications. 
 
 Please go through the course on **WaziGate** course, and also the [WaziGate documentation](https://lab.waziup.io/resources/waziup/wazigate) in the Lab.
 
-<alert severity='info'><b>Task:</b> You need to install your WaziGate. Please follow the video courses, and also the WaziGate documentation in the Lab.
+<alert severity='success'><b>Task:</b> You need to install your WaziGate. Please follow the video courses, and also the WaziGate documentation in the Lab.
 Please take a photo of your installed WaziGate!</alert>
 
 ## The WaziCloud
 
 Please follow the **WaziCloud** course and execute all the steps.
 
-<alert severity='info'><b>Task:</b> Make sure that your WaziGate is connected to your WaziCloud account. Please take a photo of your Cloud dashboard and upload it.</alert>
+<alert severity='success'><b>Task:</b> Make sure that your WaziGate is connected to your WaziCloud account. Please take a photo of your Cloud dashboard and upload it.</alert>
 
 Optionally, you can follow the WaziCloud API course.
 
@@ -56,7 +56,7 @@ Optionally, you can follow the WaziCloud API course.
 
 When you have done all the courses, you should be able to build your first end-to-end prototype with Waziup!
 
-<alert severity='info'><b>Task:</b> Measure a temperature using the DHT11 sensor, and send it to the WaziCloud dashboard. Please take a photo and upload it.</alert>
+<alert severity='success'><b>Task:</b> Measure a temperature using the DHT11 sensor, and send it to the WaziCloud dashboard. Please take a photo and upload it.</alert>
 
 
 

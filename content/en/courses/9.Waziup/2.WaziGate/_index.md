@@ -38,11 +38,10 @@ From here and onward you will be guided through the steps to assemble your Wazig
 There are only two simple steps to assemble your WaziGate:
 
 **Step #1:** Attach the heat sinks.
-
 ![heat sink](img/heat-sink.png)
 
-**Step #2:** Mount a WaziHat on the Raspberry PI.
 
+**Step #2:** Mount a WaziHat on the Raspberry PI.
 ![heat sink](img/wazihat-mount.png)
 
 
@@ -50,7 +49,7 @@ There are only two simple steps to assemble your WaziGate:
 
 Nice! Now that you have all the required resources you are ready to go. First, start with flashing the WaziGate as shown in the video tutorial earlier.
 
-<alert severity='warning'>Your Micro SD card must be at least **8 GB**. **16 GB** is better. </alert>  
+<alert severity='warning'>Your Micro SD card must be at least <b>8 GB</b> but <b>16 GB</b> is better.</alert>  
 
 
 ### Resources
