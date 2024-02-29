@@ -226,8 +226,8 @@ At the end of the training, the **weights** are **stored in a model**. This can 
 A more in depth overview about CNNs can be obtained the [CS231n Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/convolutional-networks/), which is a great written article with all the fundamentals. 
 
 
-A Computer Vision WaziApp
-=========================
+Exercice: A Computer Vision WaziApp
+==================================
 
 ![Computer Vision WaziApp](img/wazigate-webcam-inference.png)
 
