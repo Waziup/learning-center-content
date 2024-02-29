@@ -35,6 +35,8 @@ Please be honest! :)
 
 PS. You can skip this one if you are already familiar with IoT!
 
+<alert type='success'><b>Task:</b> take the Question-Answer exercise in the course.</alert>
+
 ## Electronics
 
 Two courses await you on electronics:
@@ -46,6 +48,8 @@ Two courses await you on electronics:
 
 Don't forget to click "Mark topic done" when you have finished.
 
+<alert type='success'><b>Task:</b> take all the 4 exercise in the course to comeplete the unit.</alert>
+
 ## Boards and sensors
 
 Once you have finished with the basic electronics, you can move on to the boards and sensors, with the following courses:
@@ -55,8 +59,11 @@ Once you have finished with the basic electronics, you can move on to the boards
 
 With those courses, you will have the basic knowledge to create and program you first IoT prototypes!
 
+
 Please do the exercice in the "Wiring and programming sensors" and the "Arduino programming" courses.
 Don't forget to click "Mark topic done" when you have finished.
+
+<alert type='success'><b>Task:</b> take the Question-Answer exercise and practical exercise in the courses to complete the unit.</alert>
 
 ## Radio communications and networking
 
@@ -69,5 +76,6 @@ We will cover the following course:
 Please do the Wifi exercice, and the LoRa exercice.
 Don't forget to click "Mark topic done" when you have finished.
 
+<alert type='success'><b>Task:</b> take the Question-Answer exercise and 2 practical exercise in the courses to complete the unit.</alert>
 
 

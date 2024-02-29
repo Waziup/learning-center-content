@@ -70,8 +70,7 @@ Now you're all set to explore the features of WaziCloud. Happy exploring!
 Devices
 =======
 
-Clicking on the “Devices” menu entry will lead you to the devices page.
-If this is your first time on Waziup, you should not have any devices here:
+Start by clicking on the "Devices" menu entry. This action will direct you to the dedicated devices page. If this is your first time visit to the dashboard, you won't find any devices listed on this page yet. Don't worry the following will guide you through the exciting journey of discovering and managing devices on the Waziup platform.
 
 ![no_devices](img/no_devices.png)
 
