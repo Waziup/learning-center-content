@@ -22,50 +22,40 @@ For this, you will touch several key aspects of app development:
 
 Please go through all the courses below. You can mark them as "done" when you are ready.
 
-<alert type='success'><b>Task 1:</b> Develop a small web app.</alert>
-
-You task here will be to develop a small web app that:
-- reads data from the WaziCloud API using HTTP REST
-- store the data in a Mongo database
-- Display the data on the web page
-
-
-
-
 ## IoT Web apps
 
 Please go through the course on **IoT Web apps** below.
 
-You will bee introduced with a simple html and javascript code. You will also get to know how to create simple web apps using different frontend technologies.
+You will be introduced with a simple HTML and javascript code. You will also get to know how to create simple web apps using different frontend technologies.
 
-<alert type='success'><b>Task:</b> 1. Create a simple web app. Display a time series graph or a map for geographical data utilizing the App</alert>
+<alert type='success'><b>Task 1:</b> Run the examples given. Display a time series graph or a map for geographical data.</alert>
 
 
-## HTTP REST APIs
+## APIs
 
 Please go through the course on **HTTP REST APIs** below in the course section.
 
-<alert type='success'><b>Task:</b> Please familiarize with APIs, how they work. Also get familiered with the Waziup APIs</alert>
+<alert type='success'><b>Task 2:</b> Please familiarize with APIs, how they work.</alert>
+
+Please also follow the **MQTT APIs** course in the course section.
+
+<alert type='success'><b>Task 3:</b> Please familiarize with MQTT APIs and have a better understanding of its architecture.</alert>
+
+Optionally, you can follow the WaziCloud API course.
 
 ## Databases and IoT data management
 
 Please follow the **Databases and IoT data management** course and execute all the steps.
 
-<alert type='success'><b>Task:</b> Install the MongoDB on your system and insert the prescribed data points intot the database. Learn how to optimize queries.</alert>
+<alert type='success'><b>Task 4:</b> Install the MongoDB on your system and insert the prescribed data points into the database. Learn how to optimize queries.</alert>
 
 
-## Cloud Platforms
+## A small web app
 
-Please follow the **Cloud Platforms** course and execute all the steps.
+Using all the knowledge gained in this unit, your task will be to develop a small web app. The web app should:
+- read data from the WaziCloud API using HTTP REST
+- store the data in a Mongo database
+- Display the data on the web page
 
-<alert type='success'><b>Task:</b> Create account on **ThingSpeak** and complete all the steps as describes. Get familiar with other platforms as well.</alert>
-
-
-## MQTT APIs
-
-Please follow the **MQTT APIs** course in the course section.
-
-<alert type='success'><b>Task:</b> Please familiarize with MQTT APIs and have a better understanding of its architecture.</alert>
-
-Optionally, you can follow the WaziCloud API course.
+<alert type='success'><b>Task 5:</b> Develop a small web app.</alert>
 

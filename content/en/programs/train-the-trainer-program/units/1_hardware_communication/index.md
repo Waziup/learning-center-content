@@ -50,8 +50,6 @@ You need to take a photo of your prototype and upload it the corresponding Drive
 
 Don't forget to click "Mark topic done" when you have finished.
 
-<alert type='success'><b>Task:</b> take all the 4 exercise in the course to comeplete the unit.</alert>
-
 ## Boards and sensors
 
 Once you have finished with the basic electronics, you can move on to the boards and sensors, with the following courses:
@@ -71,8 +69,6 @@ You need to take a photo of your prototype and upload it the corresponding Drive
 
 Don't forget to click "Mark topic done" when you have finished.
 
-<alert type='success'><b>Task:</b> take the Question-Answer exercise and practical exercise in the courses to complete the unit.</alert>
-
 ## Radio communications and networking
 
 To complete a full IoT prototype, you also need to know about long range communications.
@@ -83,7 +79,5 @@ We will cover the following course:
 
 <alert type='success'><b>Task 4:</b> Please do the Wifi exercice, and the LoRa exercice. Take a photo of your prototype and upload it to the Drive folder.</alert>
 Don't forget to click "Mark topic done" when you have finished.
-
-<alert type='success'><b>Task:</b> take the Question-Answer exercise and 2 practical exercise in the courses to complete the unit.</alert>
 
 
