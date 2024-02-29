@@ -237,7 +237,7 @@ Sensors that are not linear over the measurement range require some curve-fittin
 
 ## Example
 
-This example semonstrates one techinque for calibrating sensor input. The Arduino takes sensor readings for five seconds during the startup, and tracks the highest and lowest values it gets. These sensor readings during the first five seconds of the sketch execution define the minimum and maximum of expected values for the readings taken during the loop.
+This example demonstrates one technique for calibrating sensor input. The Arduino takes sensor readings for five seconds during the startup, and tracks the highest and lowest values it gets. These sensor readings during the first five seconds of the sketch execution define the minimum and maximum of expected values for the readings taken during the loop.
 
 One technique for calibrating sensor input is demonstrated below. The circuit has:
 - an analog sensor (potentiometer will do) attached to analog input 0

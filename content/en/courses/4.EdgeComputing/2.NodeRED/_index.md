@@ -134,7 +134,7 @@ By issueing either of the commands you should receive a node red window as shown
 
 ![Wazigate-nodered](./img/wazigate-nodered.png)
 
-# A simple Node-RED flow with Wazigate
+# Exercice: Node-RED flow with Wazigate
 
 In this exercise you will create a `node-red` flow that will:
 

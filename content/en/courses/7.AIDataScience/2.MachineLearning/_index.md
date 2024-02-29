@@ -415,8 +415,8 @@ Making a prediction after calculated the linear equation is quite simple, you ju
 X is the input value while Y is the output(predicted) value.
 
 
-Linear Regression exercise
-==========================
+Exercise: Linear Regression
+===========================
 
 In this exercise we will use Google Colab to train a regression model that uses a real dataset to predict the prices of houses in California. 
 
