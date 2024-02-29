@@ -15,7 +15,7 @@ This unit will cover the basics of Waziup technologies.
 The Waziup platform is an end-to-end solution to develop IoT prototypes.
 It allows Long range communications with the LoRaWAN network, and can run your applications at the Edge.
 
-![archi](../../../../courses/1.Fundamentals/1.Intro/img/waziup-ecosystem.png#width=800)
+![archi](../../../../courses/1.Fundamentals/1.Intro/img/waziup-ecosystem.png#width=700)
 
 You should find all the components in your Solution Box. **TODO: describe Solution Box and give a link to the corresponding page.**
 
