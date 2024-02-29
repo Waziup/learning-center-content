@@ -33,7 +33,7 @@ Microcontrollers usually must have low-power requirements since many devices the
 
 The microcontroller chip is a high-speed device, but as compared with a computer it is slow. Thus each instruction will be executed within the microcontroller at a quick speed. Once the supply is turned ON, then the quartz oscillator will be activated through the control logic register. For a few seconds, as the early preparation is in development, then parasite capacitors will be charged.
 
-![Microcontroller architecture](microcontroller.png)
+![Microcontroller architecture](./img/microcontroller.png)
 
 Once the voltage level achieves its highest value & oscillator’s frequency turns into the stable process of writing bits over special function registers. Everything happens based on the CLK of the oscillator & overall electronics will start working. All this takes extremely few nanoseconds.
 
@@ -45,7 +45,7 @@ The microcontrollers are characterized regarding bus-width, instruction set, and
 
 The types of the microcontroller are shown in the figure, they are characterized by their bits, memory architecture, memory/devices, and instruction set.
 
-![Microcontrollers classification](image.png)
+![Microcontrollers classification](./img/image.png)
 
 **Bit classification**
 
