@@ -52,9 +52,8 @@ configuration for the WaziDev.
 Install Arduino IDE
 -------------------
 
-{{%action%}}
+
 **Step \#1:** Download Arduino IDE from here: [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
-{{%/action%}}
 
 
 Download what suits your computer (Windows, MAC, Unix).
