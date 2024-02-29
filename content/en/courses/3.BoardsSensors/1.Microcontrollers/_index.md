@@ -108,7 +108,7 @@ The level of a pin can be:
 - `HIGH` (5V or 3.3V depending on the operating voltage of the board)
 - something in between, for analog pins.
 
-<img width='520' src='image-1.png' alt='Arduino MCU ports'></img>
+![archi](img/image-1.png#width=700)
 
 For instance, you can power a low-power physical sensor with a pin configured as OUTPUT, and set the pin to HIGH. Usually, pins default to input direction on power-up or reset. Your program can set or change the directionality of a pin at any time.
 
@@ -123,9 +123,9 @@ If you need to power control a power-hungry device such as a GPS sensor for inst
 
 The Atmel 8-bit AVR RISC-based microcontroller combines 32 KB ISP flash memory with read-while-write capabilities, 1 KB EEPROM, 2 KB SRAM, 23 general-purpose I/O lines, 32 general-purpose working registers, 3 flexible timer/counters with compare modes, internal and external interrupts, serial programmable USART, a byte-oriented 2-wire serial interface, SPI serial port, 6-channel 10-bit A/D converter (8 channels in TQFP and QFN/MLF packages), programmable watchdog timer with internal oscillator, and 5 software-selectable power-saving modes. The device operates between 1.8 and 5.5 volts. The device achieves throughput approaching 1 MIPS/MHz ([wikipedia](https://en.wikipedia.org/wiki/ATmega328))
 
-<img width=768 src=img/atmega328p.png></img>
+![archi](img/atmega328p.png#width=768)
 
-<img width=768 src=img/ports.png></img>
+![archi](img/ports.png#width=768)
 
 # From microcontroller to dev board
 
@@ -163,27 +163,27 @@ Here are some boards using these families of ARM microcontrollers. There are ple
 
 These boards are powered by Atmel’s SAMD21 MCU, which features a 32-bit ARM Cortex® M0+ core.
 
-<img width=600 src=img/arduino-m0.jpg></img>
+![archi](img/arduino-m0.jpg#width=600)
 
-<img width=600 src=img/feather-m0.png></img>
+![archi](img/feather-m0.png#width=600)
 
 **Teensy boards**
 
 The Teensy 3.2 board is powered by NXP Semiconductors/Freescale MCU, which features a 32-bit ARM Cortex® M4 core.
 
-<img width=600 src=img/teensy32.jpg></img>
+![archi](img/teensy32.jpg#width=600)
 
 **STM32 Nucleo 32**
 
 The board is powered by an STM32F303K8T6 MCU, which features a 32-bit ARM Cortex® M4F core.
 
-<img width=600 src=img/stm32-nucleo.jpeg></img>
+![archi](img/stm32-nucleo.jpeg#width=600)
 
 **Raspberry Pico**
 
 The board is powered by RP2040, which features a 32-bit ARM Cortex® M0 core.
 
-<img width=600 src=img/PICO-Image-2.jpg></img>
+![archi](img/PICO-Image-2.jpg#width=600)
 
 ## ESP8286/ESP32
 
@@ -192,8 +192,8 @@ The ESP8266 is a low-cost Wi-Fi microchip, with built-in TCP/IP networking softw
 The ESP32 is the successor of the ESP8286 and "employs either a Tensilica Xtensa LX6 microprocessor in both dual-core and single-core variations, Xtensa LX7 dual-core microprocessor or a single-core RISC-V microprocessor and includes built-in antenna switches, RF balun, power amplifier, low-noise receive amplifier, filters, and power-management modules", quoted from [wikipedia](https://en.wikipedia.org/wiki/ESP32).
 They are therefore not following and using the ARM Cortex-M architecture but the Tensilica Xtensa LX6/7 architecture.
 
-<img width=600 src=img/esp32-wroom.jpg></img>
+![archi](img/esp32-wroom.jpg#width=600)
 
 Many ESP8286/ESP32-based boards are available on the market and their embedded WiFi make them very easy to be connected to the Internet. Below are the Heltec WiFi LoRa 32 with a small embedded OLED screen and the more common Node-MCU based on ESP32-WROOM.
 
-<img width=600 src=img/heltec_wroom.jpg></img>
+![archi](img/heltec_wroom.jpg#width=600)

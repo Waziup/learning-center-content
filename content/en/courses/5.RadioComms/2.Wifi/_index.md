@@ -6,48 +6,46 @@ difficulty: intermediate
 duration: 3h30m
 ---
 
-Introduction
-============
+# Introduction
 
 This course will present general public wireless technologies such as WiFi. These versatile wireless technologies can be used in specific IoT domains when short range or Internet connectivity should be available on the device itself. These technologies can also be used in training sessions to introduce higher level IoT protocol stacks such as MQTT.
 We will use the popular chips ESP8266 or ESP32 as an example, as this chip as Wifi embbeded.
 
-The ESP8266 WiFi board
-======================
+# The ESP8266 WiFi board
 
 For this course, we will use the ESP8266.
-The [ESP8266](https://en.wikipedia.org/wiki/ESP8266) is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability produced by Shanghai-based Chinese manufacturer Espressif Systems . The chip is usually embedded on a board such as the NodeMCU (see picture below) to make it easier to use. Most of ESP8266-based boards are compatible with Arduino IDE provided that you install the required addons. 
+The [ESP8266](https://en.wikipedia.org/wiki/ESP8266) is a low-cost Wi-Fi microchip with full TCP/IP stack and microcontroller capability produced by Shanghai-based Chinese manufacturer Espressif Systems . The chip is usually embedded on a board such as the NodeMCU (see picture below) to make it easier to use. Most of ESP8266-based boards are compatible with Arduino IDE provided that you install the required addons.
 
 ![ESP8286](img/ESP8286.png)
 
 The successor to these microcontroller chips is the ESP32. Again, many boards based on the ESP32 are available. Below are the Heltec WiFi LoRa 32 with a small embedded OLED screen and the more common ESP32-WROOM.
 
-![SHT_etanche](img/heltec_wroom.jpg)
+![archi](img/heltec_wroom.jpg#width=720)
 
-Installation
-============
+# Installation
 
-First install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the [officiel Arduino web site](https://www.arduino.cc/en/main/software).
+1. First install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the [officiel Arduino web site](https://www.arduino.cc/en/main/software).
 
-Start Arduino IDE and open the Preferences window. Then for ESP8286 enter `http://arduino.esp8266.com/stable/package_esp8266com_index.json`.
-For generic ESP32 enter `https://dl.espressif.com/dl/package_esp32_index.json`.
+2. Start Arduino IDE and open the Preferences window. Then for ESP8286 enter `http://arduino.esp8266.com/stable/package_esp8266com_index.json`.
+   For generic ESP32 enter `https://dl.espressif.com/dl/package_esp32_index.json`.
 
-Then open Boards Manager from Tools → Board menu, then search & install "ESP8266" or "ESP32" or "Heltec ESP32" platforms. Select your board, ESP8266 or ESP32 or Heltec ESP32, from Tools → Board menu to compile for the correct platform.
+3. Then open Boards Manager from Tools → Board menu, then search & install "ESP8266" or "ESP32" or "Heltec ESP32" platforms. Select your board, ESP8266 or ESP32 or Heltec ESP32, from Tools → Board menu to compile for the correct platform.
 
-After connecting the ESP32, select the serial port and if you don’t see the serial port in your Arduino IDE, you will need to install the [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
+4. After connecting the ESP32, select the serial port and if you don’t see the serial port in your Arduino IDE, you will need to install the [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
 
-You can read the [following page](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/) which has a YouTube video to see all these steps.
- 
-You can refer to GitHub page for [ESP8266](https://github.com/esp8266/Arduino#installing-with-boards-manager) for futher information on Arduino core for ESP8286 WiFi chip.
-   
+The following resources are useful for the installation process,
+
+- [Installing arduino IDE in windows](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+
+- [Github repository on ESP8286](https://github.com/esp8266/Arduino#installing-with-boards-manager)
+
 As there are many boards based on both ESP8266 or ESP32, you can refer to the following [wikipedia page](https://en.wikipedia.org/wiki/ESP8266) to identify your board.
 
-Send sensor data on Wifi
-========================
+# Send sensor data to Wazigate from ESP board
 
 In the example, we will send temparature measurements over Wifi.
-We will first set up the wifi and establish the connection. If the connection is successful, we measure the temperature. The temperature value is then uploaded to a ThingSpeak channel. 
- 
+We will first set up the wifi and establish the connection. If the connection is successful, we measure the temperature. The temperature value is then uploaded to a ThingSpeak channel.
+
 If using ESP8266, use `ESP98266WiFi.h` header file. In case you are using ESP32, use the `WiFi.h`.
 
 ```c++
@@ -65,7 +63,7 @@ char* ssid = "iPhoneD";
 char* password = "hello123";
 ```
 
-Then we define a dedicated function to setup the WiFi. `setup_wifi()` mainly 
+Then we define a dedicated function to setup the WiFi. `setup_wifi()` mainly
 defines the connection to the WiFi network using the SSID and the password, and then check if the WiFi is successfully connected.
 
 ```c++
@@ -78,14 +76,14 @@ In `setup()`, in addition to define the input pins we mainly call `setup_wifi()`
 
 ```c++
 void setup() {
-  delay(3000); 
+  delay(3000);
   Serial.begin(38400);
 
-  // for the temperature sensor 
+  // for the temperature sensor
   pinMode(TEMP_PIN_READ, INPUT);
-  
-  // Print a start message 
-  Serial.println(F("Simple Temp WiFi+ThingSpeak demo"));  
+
+  // Print a start message
+  Serial.println(F("Simple Temp WiFi+ThingSpeak demo"));
 
   setup_wifi();
 }
@@ -93,10 +91,10 @@ void setup() {
 
 In `loop()`, we first check if the WiFi is connected. If is not connected, we attempt to connect to the WiFi again.
 
-``` c++
+```c++
 if (WiFi.status() != WL_CONNECTED) {
 
-    unsigned long start=millis();    
+    unsigned long start=millis();
     while (WiFi.status() != WL_CONNECTED && millis()-start<15000) {
         WiFi.begin(ssid, password);
      }
@@ -106,27 +104,27 @@ if (WiFi.status() != WL_CONNECTED) {
 Then, if WiFi is connected and connection to the wifi client is established, then we upload to the ThingSpeak channel using a REST API.
 
 ```c++
-if (WiFi.status() == WL_CONNECTED) { 
- 
+if (WiFi.status() == WL_CONNECTED) {
+
     WiFiClient client;
     HTTPClient http;
-	
+
     // Your Domain name with URL path or IP address with path
     http.begin(client, server);
-		
+
     // Specify content-type header
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
     // Data to send with HTTP POST
-    String httpRequestData = "api_key=" + apiKey + "&field3=" + String(temp);           
+    String httpRequestData = "api_key=" + apiKey + "&field3=" + String(temp);
     // Send HTTP POST request
     int httpResponseCode = http.POST(httpRequestData);
-	 
+
     Serial.print("HTTP Response code: ");
     Serial.println(httpResponseCode);
-			
+
     // Free resources
-    http.end();     
- } 
+    http.end();
+ }
 ```
 
 ## Complete example
@@ -156,7 +154,7 @@ String apiKey = "SGSH52UGPVAUYG3S";
 // To upload on thingspeak
 const char* server = "http://api.thingspeak.com/update";
 
-#define TEMP_PIN_READ  A0 //will be pin 36 on the Heltec 
+#define TEMP_PIN_READ  A0 //will be pin 36 on the Heltec
 #define TEMP_SCALE  5000.0
 
 // setting up the wifi
@@ -171,7 +169,7 @@ void setup_wifi() {
   WiFi.begin(ssid, password);
 
   unsigned long start=millis();
-  
+
   while (WiFi.status() != WL_CONNECTED && millis()-start<15000) {
     delay(500);
     Serial.print(".");
@@ -186,19 +184,19 @@ void setup_wifi() {
       Serial.println(WiFi.localIP());
   }
   else {
-      Serial.println("WiFi not connected");          
+      Serial.println("WiFi not connected");
   }
-} 
+}
 
 void setup() {
-  delay(3000); 
+  delay(3000);
   Serial.begin(38400);
 
-  // for the temperature sensor 
+  // for the temperature sensor
   pinMode(TEMP_PIN_READ, INPUT);
-  
-  // Print a start message 
-  Serial.println(F("Simple Temp WiFi+ThingSpeak demo"));  
+
+  // Print a start message
+  Serial.println(F("Simple Temp WiFi+ThingSpeak demo"));
 
   setup_wifi();
 }
@@ -207,7 +205,7 @@ void loop() {
 
     if (WiFi.status() != WL_CONNECTED) {
 
-        unsigned long start=millis();    
+        unsigned long start=millis();
         while (WiFi.status() != WL_CONNECTED && millis()-start<15000) {
           Serial.print("Attempting to connect to WPA SSID: ");
           Serial.println(ssid);
@@ -218,10 +216,10 @@ void loop() {
     }
 
     if (WiFi.status() == WL_CONNECTED) {
-        Serial.println("Connected to AP");   
+        Serial.println("Connected to AP");
     }
     else  {
-        Serial.println("WiFi not connected");        
+        Serial.println("WiFi not connected");
     }
 
     int value = analogRead(TEMP_PIN_READ);
@@ -229,10 +227,10 @@ void loop() {
     Serial.println(value);
 
     float temp;
-  
-    // change here how the temperature should be computed depending on your sensor type 
+
+    // change here how the temperature should be computed depending on your sensor type
     temp = (value*TEMP_SCALE/1024.0)/10;
-  
+
     if (isnan(temp)) {
       Serial.println("Failed to read from Temp sensor!");
     }
@@ -240,52 +238,50 @@ void loop() {
         Serial.print("Temperature: ");
         Serial.print(temp);
         Serial.println("Temperature: ");
-             
-      if (WiFi.status() == WL_CONNECTED) { 
- 
+
+      if (WiFi.status() == WL_CONNECTED) {
+
           WiFiClient client;
           HTTPClient http;
-	
+
           // Your Domain name with URL path or IP address with path
           http.begin(client, server);
-		
+
           // Specify content-type header
           http.addHeader("Content-Type", "application/x-www-form-urlencoded");
           // Data to send with HTTP POST
-          String httpRequestData = "api_key=" + apiKey + "&field3=" + String(temp);           
+          String httpRequestData = "api_key=" + apiKey + "&field3=" + String(temp);
           // Send HTTP POST request
           int httpResponseCode = http.POST(httpRequestData);
-	 
+
           Serial.print("HTTP Response code: ");
           Serial.println(httpResponseCode);
-			
+
           // Free resources
-          http.end();    
-          
+          http.end();
+
           Serial.println("Upload to Thingspeak");
-      } 
+      }
     }
-      
-    delay(10000);  
+
+    delay(10000);
  }
 ```
+
 <!---
 The raw source of the sketch example is visible [here](src/sketch/Arduino_ESP_Temp_ThingSpeak/Arduino_ESP_Temp_ThingSpeak.ino).
 
 The code is ready for an Heltec WiFi LoRa 32 board so OLED is activated.
 -->
 
-
-
-Exercice
-========
+# Exercice
 
 We saw previously that the `loop()` function first check if the WiFi is connected. If is not connected, we attempt to connect to the WiFi again.
 
-``` c++
+```c++
 if (WiFi.status() != WL_CONNECTED) {
 
-		unsigned long start=millis();    
+		unsigned long start=millis();
 		while (WiFi.status() != WL_CONNECTED && millis()-start<15000) {
 			Serial.print("Attempting to connect to WPA SSID: ");
 			Serial.println(ssid);
@@ -296,10 +292,10 @@ if (WiFi.status() != WL_CONNECTED) {
 }
 
 if (WiFi.status() == WL_CONNECTED) {
-		Serial.println("Connected to AP");   
+		Serial.println("Connected to AP");
 }
 else  {
-		Serial.println("WiFi not connected");        
+		Serial.println("WiFi not connected");
 }
 ```
 
@@ -313,14 +309,14 @@ In `setup()`, we additionally define the input pins for an analog temperature se
 
 ```c++
 void setup() {
-  delay(3000); 
+  delay(3000);
   Serial.begin(38400);
 
-  // for the temperature sensor 
+  // for the temperature sensor
   pinMode(TEMP_PIN_READ, INPUT);
-  
-  // Print a start message 
-  Serial.println(F("Simple Temp WiFi+ThingSpeak demo"));  
+
+  // Print a start message
+  Serial.println(F("Simple Temp WiFi+ThingSpeak demo"));
 
   setup_wifi();
 }
@@ -331,7 +327,7 @@ In `loop()`, after checking that the WiFi is connected and connection to the wif
 ```c++
 if (WiFi.status() != WL_CONNECTED) {
 
-		unsigned long start=millis();    
+		unsigned long start=millis();
 		while (WiFi.status() != WL_CONNECTED && millis()-start<15000) {
 			Serial.print("Attempting to connect to WPA SSID: ");
 			Serial.println(ssid);
@@ -342,40 +338,38 @@ if (WiFi.status() != WL_CONNECTED) {
 }
 
 if (WiFi.status() == WL_CONNECTED) {
-		Serial.println("Connected to AP");   
+		Serial.println("Connected to AP");
 }
 else  {
-		Serial.println("WiFi not connected");        
+		Serial.println("WiFi not connected");
 }
 
-if (WiFi.status() == WL_CONNECTED) { 
- 
+if (WiFi.status() == WL_CONNECTED) {
+
     WiFiClient client;
     HTTPClient http;
-	
+
     // Your Domain name with URL path or IP address with path
     http.begin(client, server);
-		
+
     // Specify content-type header
     http.addHeader("Content-Type", "application/x-www-form-urlencoded");
     // Data to send with HTTP POST
-    String httpRequestData = "api_key=" + apiKey + "&field3=" + String(temp);           
+    String httpRequestData = "api_key=" + apiKey + "&field3=" + String(temp);
     // Send HTTP POST request
     int httpResponseCode = http.POST(httpRequestData);
-	 
+
     Serial.print("HTTP Response code: ");
     Serial.println(httpResponseCode);
-			
+
     // Free resources
-    http.end();     
-} 
+    http.end();
+}
 ```
 
 ![thingspeak](img/thingspeak.png)
 
-
 ## Solution
-
 
 Here is the complete working and tested solution for the an Arduino board with WiFi. Data is uploaded to our LoRa demo ThingSpeak channel 66794: https://thingspeak.com/channels/66794 on field 3. Check on the [channel page](https://thingspeak.com/channels/66794) for the data you are uploading.
 
@@ -402,7 +396,7 @@ String apiKey = "SGSH52UGPVAUYG3S";
 // To upload on thingspeak
 const char* server = "http://api.thingspeak.com/update";
 
-#define TEMP_PIN_READ  A0 //will be pin 36 on the Heltec 
+#define TEMP_PIN_READ  A0 //will be pin 36 on the Heltec
 #define TEMP_SCALE  5000.0
 
 // setting up the wifi
@@ -417,7 +411,7 @@ void setup_wifi() {
   WiFi.begin(ssid, password);
 
   unsigned long start=millis();
-  
+
   while (WiFi.status() != WL_CONNECTED && millis()-start<15000) {
     delay(500);
     Serial.print(".");
@@ -430,19 +424,19 @@ void setup_wifi() {
       Serial.println(WiFi.localIP());
   }
   else {
-      Serial.println("WiFi not connected");          
+      Serial.println("WiFi not connected");
   }
-} 
+}
 
 void setup() {
-  delay(3000); 
+  delay(3000);
   Serial.begin(38400);
 
-  // for the temperature sensor 
+  // for the temperature sensor
   pinMode(TEMP_PIN_READ, INPUT);
-  
-  // Print a start message 
-  Serial.println(F("Simple Temp WiFi+ThingSpeak demo"));  
+
+  // Print a start message
+  Serial.println(F("Simple Temp WiFi+ThingSpeak demo"));
 
   setup_wifi();
 }
@@ -451,7 +445,7 @@ void loop() {
 
     if (WiFi.status() != WL_CONNECTED) {
 
-        unsigned long start=millis();    
+        unsigned long start=millis();
         while (WiFi.status() != WL_CONNECTED && millis()-start<15000) {
           Serial.print("Attempting to connect to WPA SSID: ");
           Serial.println(ssid);
@@ -462,10 +456,10 @@ void loop() {
     }
 
     if (WiFi.status() == WL_CONNECTED) {
-        Serial.println("Connected to AP");   
+        Serial.println("Connected to AP");
     }
     else  {
-        Serial.println("WiFi not connected");        
+        Serial.println("WiFi not connected");
     }
 
     int value = analogRead(TEMP_PIN_READ);
@@ -473,10 +467,10 @@ void loop() {
     Serial.println(value);
 
     float temp;
-  
-    // change here how the temperature should be computed depending on your sensor type 
+
+    // change here how the temperature should be computed depending on your sensor type
     temp = (value*TEMP_SCALE/1024.0)/10;
-  
+
     if (isnan(temp)) {
       Serial.println("Failed to read from Temp sensor!");
     }
@@ -484,33 +478,33 @@ void loop() {
         Serial.print("Temperature: ");
         Serial.print(temp);
         Serial.println("Temperature: ");
-             
-      if (WiFi.status() == WL_CONNECTED) { 
- 
+
+      if (WiFi.status() == WL_CONNECTED) {
+
           WiFiClient client;
           HTTPClient http;
-	
+
           // Your Domain name with URL path or IP address with path
           http.begin(client, server);
-		
+
           // Specify content-type header
           http.addHeader("Content-Type", "application/x-www-form-urlencoded");
           // Data to send with HTTP POST
-          String httpRequestData = "api_key=" + apiKey + "&field3=" + String(temp);           
+          String httpRequestData = "api_key=" + apiKey + "&field3=" + String(temp);
           // Send HTTP POST request
           int httpResponseCode = http.POST(httpRequestData);
-	 
+
           Serial.print("HTTP Response code: ");
           Serial.println(httpResponseCode);
-			
+
           // Free resources
-          http.end();    
-          
+          http.end();
+
           Serial.println("Upload to Thingspeak");
-      } 
+      }
     }
-      
-    delay(10000);  
+
+    delay(10000);
  }
 ```
 
@@ -519,5 +513,3 @@ The raw source of the sketch example is visible [here](src/sketch/Arduino_ESP_Te
 
 The code is ready for an Heltec WiFi LoRa 32 board so OLED is activated.
 -->
-
-
