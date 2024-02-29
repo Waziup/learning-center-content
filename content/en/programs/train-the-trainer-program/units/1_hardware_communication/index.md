@@ -33,16 +33,19 @@ Please be honest! :)
 
 ![mark](img/mark.png)
 
-PS. You can skip this one if you are already familiar with IoT!
+<alert type='success'><b>Task 1:</b> Answer the questions in the questionaire at the end of the course.</alert>
 
+PS. You can skip this one if you are already familiar with IoT!
 ## Electronics
 
 Two courses await you on electronics:
 - Basics of electronics for IoT
 - Advanced electronics for IoT
 
-**Please do the exercice in the Basics of electronics and Advanced electronics.**
-****You need to take a photo of your prototype and upload it the corresponding Drive folder**.
+<alert type='success'><b>Task 2:</b> 
+Please do the exercices in the "Wiring and programming sensors" and the "Arduino programming" courses.
+You need to take a photo of your prototype and upload it the corresponding Drive folder.
+</alert>
 
 Don't forget to click "Mark topic done" when you have finished.
 
@@ -55,7 +58,14 @@ Once you have finished with the basic electronics, you can move on to the boards
 
 With those courses, you will have the basic knowledge to create and program you first IoT prototypes!
 
-Please do the exercice in the "Wiring and programming sensors" and the "Arduino programming" courses.
+<alert type='success'><b>Task 3:</b> Please do the exercices in all three courses.</alert>
+
+The exercices are:
+- the questionnaire in the first course
+- the Ultrasonic sensor exercice
+- the LED blinking exercice
+You need to take a photo of your prototype and upload it the corresponding Drive folder.
+
 Don't forget to click "Mark topic done" when you have finished.
 
 ## Radio communications and networking
@@ -66,7 +76,7 @@ We will cover the following course:
 - Wifi radio communications
 - LoRa radio communications
 
-Please do the Wifi exercice, and the LoRa exercice.
+<alert type='success'><b>Task 4:</b> Please do the Wifi exercice, and the LoRa exercice. Take a photo of your prototype and upload it to the Drive folder.</alert>
 Don't forget to click "Mark topic done" when you have finished.
 
 

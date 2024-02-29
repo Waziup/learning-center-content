@@ -9,18 +9,12 @@ duration: 7h
 This course will show how to analyse IoT data, using Python. The first thing to do is to import, clean and prepare the data for analysis. We will then show various techniques to extract information from data. 
 
 
-Definition
-=========
+Introduction
+==========
 
 Data Science is a branch of computer science where we study how to store, use and analyze data for deriving information from it.
 
-Finding important insights within mountains of complicated or seemingly unimportant data is the ultimate goal of data science. Data science frequently focuses on creating the models and algorithms that will be used during the data analysis process rather than actually performing the analysis itself.
-
-Data science aims to use that data to predict the results of decisions made in the future, whereas data analysis uses past data to provide insights that can guide future decisions. On the basis of enormous amounts of historical data, predictions are made using the emerging fields of machine learning and pattern recognition.
-
-
-Introduction
-==========
+Data science aims to use that data to predict the results of decisions made in the future, whereas data analysis uses past data to provide insights that can guide future decisions. On the basis of enormous amounts of historical data, predictions are made using the emerging fields of machine learning and pattern recognit
 
 Data science involves transforming, visualizing, and manipulating data in order to derive insightful conclusions from the findings. These insights are frequently used to guide people, companies, and even governments.
 
@@ -53,47 +47,44 @@ There are five major steps involved on how to approach a machine learning proble
 
 ## 1. Define the Problem
 
-In this phase one tires to understand the problem in holistic way. 
-This can be split into three questions.
+In this phase you should try to understand the problem in a holistic way. 
+This can be split into three questions:
 
-- What is the problem? - here the problem is described, to further understand it. List assumptions and similar problems.
+- What is the problem?
+- Why this problem needs to be solved? 
+- How would one solve the problem?
 
-- Why this problem needs to be solved? - this question includes advantages one gain from solving the problem. It is a motivation to think about benefits a solution provides.
-
-- How would one solve the problem? - try to understand how the problem would be solved manually, to get insights in this domain.
+First, you need to describe probperly the problem, to further understand it. List assumptions and similar problems.
+Then try to understand what are the advantages gained from solving the problem.
+It is a motivation to think about benefits a solution provides.
+Finally, try to understand how the problem would be solved manually, to get insights in this domain.
 
 ## 2. Prepare Data 
 
-In that phase one tries to understand the data, for that some scatter plots or histograms are useful.
+In that phase you need to understand the data, for that some scatter plots or histograms are useful.
+This involves three steps:
+- Data Selection The relevant training examples are then chosen. 
+- Data Preprocessing
+- Data Transformation 
 
-- Data Selection - in data selection it is being examined what data is available, what data is missing and what is redundant or simply not needed. The relevant training examples are then chosen. 
-
-- Data Preprocessing - data preprocessing tries to organize the selected data by formatting, cleaning and sampling.
-
-- Data Transformation - data transformation involves engineering features by scaling, attribute aggregation and attribute decomposition. 
-
+Data selection is the process of examining what data is available, what data is missing and what is redundant or simply not needed.
+Data preprocessing tries to organize the selected data by formatting, cleaning and sampling.
+Data transformation involves engineering features by scaling, attribute aggregation and attribute decomposition. 
+  
 ## 3. Spot Check Algorithms
 
 Spot check algorithms means to compare different approaches solving the problem. There are some low code frameworks that let you compare different algorithms. They train different models on a given dataset. Afterwards they can compared according to different metrics.
 
-After a first spot check the most promising algorithms can be chosen. Afterwards parameters can be refined to make them even more effective in solving the problem, but this is part of the next step.
+After a first spot check, the most promising algorithms can be chosen. Afterwards, parameters can be refined to make them even more effective in solving the problem, but this is part of the next step.
 
 ## 4. Improve Results
 
-- Algorithm Tuning - in this process the hyperparameter of the model architecture are changed (in a specific range) and the model is trained in various combinations. The best model can be chosen afterwards.
+In order to improve the results, you can start by tuning your algorithms. In this process the hyperparameter of the model architecture are changed (in a specific range) and the model is trained in various combinations. The best model can be chosen afterwards.
 
-- Ensemble Methods - like stated before, there can be a combination of different machine learning models to give the best results. So, it should be considered to combine different approaches, if this is feasible.
+There can also be a combination of different machine learning models that gives the best results. This is called Ensemble methods.
+So, it should be considered to combine different approaches, if this is feasible.
 
-- Extreme Feature Engineering - in extreme feature engineering the attribute decomposition and aggregation seen in data preparation is being used to make the training data more explicit. It involves transforming data to forms that better relate to the learning targets. It can augment the value of your data and improves the overall performance of your model. It involves techniques like:
-
-1) **Imputation**: handling the missing values in data
-2) **Discretization**: grouping sets of values together in some logical fashion into buckets or bins
-3) **Categorical encoding**: encode categorical values into numerical features -> simpler to learn
-4) **Feature splitting**: splitting features into parts can improve the value of features
-5) **Handling outliers**: outliers are unusually high or low values in a dataset, there are some options: removal, replacing, capping, discretization. 
-6) **Variable transformations**: could help normalizing skewed data, e.g. logarithmic transformation
-7) **Scaling**: scaling inputs of data can improve your model. Here values are normalized. This can be achieved differently with methods such as: Variance scaling where data points are subtracted by their mean, the result is divided by the distribution variance; and Min-Max scaling whereby we rescale the values in a range from 0 to 1
-8) **Create features**: deriving new features from existing ones, done by simple mathematical operations like: mean, median, difference, sum, mode or a product of two values
+Finally, in "extreme feature engineering", the attribute decomposition and aggregation seen in data preparation is being used to make the training data more explicit. It involves transforming data to forms that better relate to the learning targets. It can augment the value of your data and improves the overall performance of your model. 
 
 ## 5. Present Results
 
@@ -198,88 +189,8 @@ A high value means that the variables are perfectly correlated, there is no vari
 A more in-depth mathematical explanation of the r2 score is given by Paul Johnson in his lecture ["Extending R-squared beyond ordinary least-squares linear regression"](https://www.slideshare.net/pcdjohnson/extending-rsquared-beyond-ordinary-leastsquares-linear-regression-95949488)
 
 
-Exercise - data collection from WaziCloud
-========================================
-
-Retrieve values in JSON via curl
---------------------------------
-
-Get desired values via the **curl** command. In the following data is being retrieved from the WaziGate 
-
-You can get an overview about the possible queries from WaziCloud by visiting [Swagger](https://api.waziup.io/docs/#/Sensors/get_devices__device_id__sensors__sensor_id__values "Swagger").
-All you need is your **device_id** and the **sensor_id**, you can find them by visiting the [WaziCloud](https://dashboard.waziup.io/ "WaziCloud").
-
-```python
-response = !curl -s -X GET "https://api.waziup.io/api/v2/devices/0242ac1200023852/sensors/temperatureSensor_0/values" -H "accept: application/json;charset=utf-8"
-print ("This is the response: \n\n",response)
-```
-We can create a **list** from the **JSON** to organize our values:
-
-```python
-import json
-# Opening JSON file
-
-print(type(response))
-rep_str = str(response).replace("'",'')
-print(type(rep_str))
-
-# create JSON list
-response_list = json.loads(rep_str)
-
-# Print first value
-print(response_list[0][0])
-```
-
-```python
-# Get temparature of first "value"
-print("First value: ", response_list[0][0]["value"])
-print("Values in total: ", len(response_list[0]))
-```
-
-Or an **NumPy** ndarray:
-
-```python
-import numpy as np
-
-temp_vals = np.array([])
-
-for n in range(len(response_list[0])):
-    temp_vals = np.append(temp_vals, response_list[0][n]["value"], axis=None)
-
-print("Temperature values: ",temp_vals)
-```
-
-Plot the values, with **Matplotlib**:
-
-```python
-import matplotlib.pyplot as plt
-
-plt.plot(temp_vals)
-plt.show()
-```
-Now you can start using the retrieved data. A next step would be to clean, interpolate and prepare the data for analysis.
-
-Download values in *.csv
-------------------------
-
-You can also download the gateway's data in *.csv file format. You can use to perform a backup, to have all data in one place and for machine learning applications. There are three possibilities to do so:
-
-![Export section of the WaziGate.](img/export.png)
-<p style="text-align: center;">Export section of the WaziGate.
-</p>
-
-- Export the data of all sensors and actuators to a tree of CSV files
-- Export the data of all sensors and actuators to one CSV file
-- Export the data of all sensors and actuators to one CSV file. Additionally it also includes custom timespans and all data can be summarized in time bins. This is perfect for machine learning applications.
-
-Linear Regression
-=================
-
-In the [Machine Learning lecture](../2.MachineLearning/_index.md) you can find a comprehensive guide, that explains the fundamentals of Linear Regression. 
-
-
-Python Libraries used in Data Analysis
-=====================================
+Data Analysis with Python
+=========================
 
 In the following there are some important python packages named and described, that are useful in the context of data analysis.
 
@@ -808,4 +719,80 @@ The model isn't finished yet, but we can always go back and combine the features
 ## Sources
 
 [Brow14] Jason Brownlee, "Applied Machine Learning Process" https://machinelearningmastery.com/process-for-working-through-machine-learning-problems/ Version 2019
+
+
+Exercise: data collection from WaziCloud
+========================================
+
+Retrieve values in JSON via curl
+--------------------------------
+
+Get desired values via the **curl** command. In the following data is being retrieved from the WaziGate 
+
+You can get an overview about the possible queries from WaziCloud by visiting [Swagger](https://api.waziup.io/docs/#/Sensors/get_devices__device_id__sensors__sensor_id__values "Swagger").
+All you need is your **device_id** and the **sensor_id**, you can find them by visiting the [WaziCloud](https://dashboard.waziup.io/ "WaziCloud").
+
+```python
+response = !curl -s -X GET "https://api.waziup.io/api/v2/devices/0242ac1200023852/sensors/temperatureSensor_0/values" -H "accept: application/json;charset=utf-8"
+print ("This is the response: \n\n",response)
+```
+We can create a **list** from the **JSON** to organize our values:
+
+```python
+import json
+# Opening JSON file
+
+print(type(response))
+rep_str = str(response).replace("'",'')
+print(type(rep_str))
+
+# create JSON list
+response_list = json.loads(rep_str)
+
+# Print first value
+print(response_list[0][0])
+```
+
+```python
+# Get temparature of first "value"
+print("First value: ", response_list[0][0]["value"])
+print("Values in total: ", len(response_list[0]))
+```
+
+Or an **NumPy** ndarray:
+
+```python
+import numpy as np
+
+temp_vals = np.array([])
+
+for n in range(len(response_list[0])):
+    temp_vals = np.append(temp_vals, response_list[0][n]["value"], axis=None)
+
+print("Temperature values: ",temp_vals)
+```
+
+Plot the values, with **Matplotlib**:
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(temp_vals)
+plt.show()
+```
+Now you can start using the retrieved data. A next step would be to clean, interpolate and prepare the data for analysis.
+
+Download values in *.csv
+------------------------
+
+You can also download the gateway's data in *.csv file format. You can use to perform a backup, to have all data in one place and for machine learning applications. There are three possibilities to do so:
+
+![Export section of the WaziGate.](img/export.png)
+<p style="text-align: center;">Export section of the WaziGate.
+</p>
+
+- Export the data of all sensors and actuators to a tree of CSV files
+- Export the data of all sensors and actuators to one CSV file
+- Export the data of all sensors and actuators to one CSV file. Additionally it also includes custom timespans and all data can be summarized in time bins. This is perfect for machine learning applications.
+
 

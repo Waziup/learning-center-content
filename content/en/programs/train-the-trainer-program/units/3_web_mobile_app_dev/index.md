@@ -7,10 +7,28 @@ duration: 1w
 courses:
   - id: webapps_course
   - id: rest_course
+  - id: mqtt_course
   - id: database_course
   - id: cloud_course
-  - id: mqtt_course
 ---
 
-This unit will cover the basics of IoT platforms web and mobile apps. It will introduce the participants to the basics of web and mobile apps development for IoT platforms. The unit will also cover the basics of web and mobile apps development for IoT platforms, including the basics of web and mobile apps development, the basics of web and mobile apps development for IoT platforms, and the basics of web and mobile apps development for the Waziup IoT platform.
+A good IoT prototype should come with a web or mobile app. This unit will cover the basics of web and mobile app development.
+For this, you will touch several key aspects of app development:
+
+- The framework
+- The APIs
+- The database
+- The Cloud platforms
+
+Please go through all the courses below. You can mark them as "done" when you are ready.
+
+<alert type='success'><b>Task 1:</b> Develop a small web app.</alert>
+
+You task here will be to develop a small web app that:
+- reads data from the WaziCloud API using HTTP REST
+- store the data in a Mongo database
+- Display the data on the web page
+
+
+
 
