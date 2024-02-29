@@ -38,10 +38,12 @@ From here and onward you will be guided through the steps to assemble your Wazig
 There are only two simple steps to assemble your WaziGate:
 
 **Step #1:** Attach the heat sinks.
+
 ![heat sink](img/heat-sink.png)
 
 
 **Step #2:** Mount a WaziHat on the Raspberry PI.
+
 ![heat sink](img/wazihat-mount.png)
 
 
@@ -49,7 +51,7 @@ There are only two simple steps to assemble your WaziGate:
 
 Nice! Now that you have all the required resources you are ready to go. First, start with flashing the WaziGate as shown in the video tutorial earlier.
 
-<alert severity='warning'>Your Micro SD card must be at least <b>8 GB</b> but <b>16 GB</b> is better.</alert>  
+<alert type='warning'>Your Micro SD card must be at least <b>8 GB</b> but <b>16 GB</b> is better.</alert>
 
 
 ### Resources
@@ -78,7 +80,7 @@ In this part you will get to know about WaziGate UI and its features.
 
 <youtube>SAwH-iR18hc</youtube>
 
-<alert severity='info'> Soon we will launch a newer version of WaziGate UI with some killer features. stay connected for update!</alert>
+<alert type='info'> Soon we will launch a newer version of WaziGate UI with some killer features. Stay connected for update!</alert>
 
 ### Resources
 - browse [WaziGate](http://lab.waziup.io/resources/waziup/wazigate)
@@ -96,7 +98,7 @@ Once Wazigate found all the available WiFi networks in range, click on the netwo
 
 **Step #2:** Enter the password for that network and click on "connect".
 
-<alert severity='warning'> <li>Once you setup your WaziGate to connect to a WiFi network, you will lose the Hotspot connection.</li>
+<alert type='warning'> <li>Once you setup your WaziGate to connect to a WiFi network, you will lose the Hotspot connection.</li>
 <li>**Note:** If Wazigate does not manage to connect to your WiFi due to wrong credentials or not being in the range of the WiFi router, it will rollback to the hotspot mode and you need to connect to it again and start over. This might take a few minutes depending on the router.</li>
 </alert>
 
@@ -115,7 +117,7 @@ Waziup account enables you to receive all your sensor data in your dashboard and
 
 **Step #1:** Clik on the Sync menu. 
 **Step #2:** Enter you Cloud Username and Password and click Save.
-<alert severity='warning'> You need to enter your CLOUD login/password, collected on https://dashboard.waziup.io/. Do not enter your gateway password here.</alert>
+<alert type='warning'> You need to enter your CLOUD login/password, collected on https://dashboard.waziup.io/. Do not enter your gateway password here.</alert>
 **Step #3:** Flip the Active Sync ON.
 
 LoRaWAN Sensing and Actuating
