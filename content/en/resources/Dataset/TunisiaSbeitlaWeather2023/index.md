@@ -6,7 +6,7 @@ desc: Weather data from Sbeitla, Tunisia, as collected by Waziup e.V. in 2023 an
 color: "#f1f1f1"
 tags:
     - Waziup
-    - Tuni/sia
+    - Tunisia
     - "2023"
 ---
 
@@ -20,7 +20,7 @@ tags:
 
 Starting Feb. 2023 Waziup started collecting weather data from a weather station in Sbeitla, Tunisia. The data is collected every 5 minutes from a remote wather station and transmitted to a [WaziGate](https://lab.waziup.io/resources/waziup/wazigate) nearby. The data is available for free for everyone.
 
-![On-Site Weather Station](on-site.webp)
+![On-Site Weather Station](img/on-site.png)
 
 ## Installation of Waziup e.V.'s sensor system on Farms in Tunisia
 
@@ -40,7 +40,7 @@ https://www.waziup.io/research-innovation/projects/osirris/
 
 # SenseCAP S2120 Weather Station
 
-![SenseCAP S2120 Weather Station](sensecap-s2120-weather-station.png)
+![SenseCAP S2120 Weather Station](img/sensecap-s2120-weather-station.png)
 
 SenseCAP LoRaWAN S2120 Weather Station collects and uploads air temperature, humidity, wind speed/direction, Rainfall Intensity, light intensity, UV index, and barometric pressure data supported by worldwide LoRaWAN networks. The S2120 weather station is suitable for applications in gardens, agriculture, meteorology, urban environmental monitoring, and other scenarios. It also enables low maintenance cost for its ultra-low power consumption, reliable performance, built-in Bluetooth for OTA configuration and remote device management.
 

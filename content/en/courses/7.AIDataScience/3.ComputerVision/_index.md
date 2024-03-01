@@ -23,40 +23,9 @@ Consequently, information on the localization of the object in the image and con
 History
 =======
 
-<!-- Corentin: Maybe lighter section? -->
+Scientists have been investigating machine-based visual data processing for more than 60 years. Artificial neural networks (ANNs) were first conceptualized by Rosenblatt in 1958 with his perceptron, while Hubel and Wiesel's investigations on the cat cortical neuron emphasized the importance of basic features such as edges in visual processing. Important contributions included Kelley's 1960 study of ideal flight routes and the commercial use of the ADALINE model for echo filtering. The goal of Roberts' 1963 thesis, which influenced subsequent work, was to convert 2D photos into 3D representations.
 
-For more than 60 years scientists have been dealing with the subject of using machines to extract the visual meaning of data.
-Rosenblatt introduced the perceptron in 1958, it is a simplified artificial one neural network (ANN) and in this context the first representative [Ros58].
-The developed "Mark I Perceptron" Machine could already recognize simple digits with an array of 400 photocells. 
-
-Now an example should be mentioned, which has nothing to do with software development. However, this can be seen as an inspiration for the research field and later published work. 
-The neurophysiologists David Hubel and Torsten Wiesel [HW59] examined the sensitivity of simpler and more complex ones Neurons in the striped cortex of cats. This was from the point of view of Stimulus orientation or orientation selectivity quantitatively studied. 
-
-![Sensitivity of simpler and more complex ones Neurons.](img/hubel_cat.jpg)
-<p style="text-align: center;">Sensitivity of simpler and more complex ones Neurons [HW59].</p>
-
-The researchers found that there are simple and complex neurons in the primary visual cortex and that visual processing always begins with simple structures such as oriented edges. This means that in the process of image processing initially not holistic objects are recognized, but simple geometries are processed first. The neural networks used today learn the features in the same order.
-
-In 1960, Henry J. Kelley published an important paper that attempted to calculate optimal flight paths of airplanes based on gradients. The findings are used as the basis for backpropagation.
-
-In 1960, the ADALINE model [Som] was presented by Bernard Widrow and ME Hoff, it represents an artificial neural network. This is the first to be commercialized applied, here a real-time echo filtering was carried out with analogue telephones.
-
-In 1963 Lawrence Roberts published "Machine perception of three-dimensional solids" [Rob63]. The aim of this doctoral thesis was to convert 2D photographs to line drawings process, which are then processed into three-dimensional representations will. The real world was reduced to simple geometric figures.
-
-The first working deep learning networks were created by Alexey Ivakhnenko and V.G. Lapa presented. In 1971 they published the first computer-aided identification system called "Alpha".
-
-Another influential contribution was made in 1982 by David Marr, a British Neuroscientist, provided [Mar82]. He proved that seeing in the broadest sense is a hierarchical process. He developed a prototype with which it is possible to  create three-dimensional representations of the environment in order to use them later
-to interact. He also developed a CV framework, where algorithms were used are offered, which recognize simple features, i.e. corners and edges. This rudimentary understanding of the scene provided the basis for later work and paved the way for gaining a higher understanding of the scene.
-
-At the same time, the Japanese computer scientist Kunihiko Fukushima developed his own organizing artificial neural network. The network includes simple and complex cells. With the help of the network called "Neocognition".
-Patterns are recognized, it consisted of several layers of folding.
-A few years later, French scientist Yann LeCun published his changes or additions to Fukushima's convolution layer architecture. He refined the principle of error feedback (backprop-learn). 
-After a few years of work in the field, he published "LeNet-5". This may be the first modern convolutional neural network (CNN) be considered. LeNet-5 has been used on a large scale to automate handwritten digits on personal and commercial bank checks in the United States recognize [LBB+98]. A lower threshold of the recognition quality of the bank fixed. *50%* of bank checks must be scanned with an error rate of *1%*, the rest can be rejected by the system and becomes a human recognition assigned editor. This work also advanced the development of the MNIST image database, which is one of the essential image databases.
-
-Just before the year 2000, the focus shifted to image-based recognition. Many researchers stopped reconstructing 3D models and thus no longer followed path suggested by Marr. It now became more feature-oriented Object recognition focused.
-
-An image based recognition is used in many areas today, such as autonomous driving on the road, face recognition in public places, facilities for determining plant species, tagging photos and videos or also in the healthcare system for evaluating visual data. Despite the impressive recent advances, we are not close to a rather all-encompassing
-solution not yet close.
+Ivakhnenko and Lapa's 1971 "Alpha" system, which exemplified early deep learning, represented further breakthroughs. The hierarchical character of visual processing was highlighted in Marr's 1982 work. Milestones were reached by Fukushima's "Neocognition" and LeCun's CNN advancements, such as the check processing application in LeNet-5. By the late 1990s, feature-based object identification became the main focus. Today, image processing finds applications in autonomous driving, facial recognition, and healthcare, though challenges still remain.
 
 
 Convolutional Neural Networks
@@ -255,6 +224,23 @@ At the end of the training, the **weights** are **stored in a model**. This can 
 ## Further information
 
 A more in depth overview about CNNs can be obtained the [CS231n Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/convolutional-networks/), which is a great written article with all the fundamentals. 
+
+
+Exercice: A Computer Vision WaziApp
+==================================
+
+![Computer Vision WaziApp](img/wazigate-webcam-inference.png)
+
+In this exercise, we will learn how to build a WaziApp (application running on a WaziGate) that is capable of performing object detection. With the help of this application you can utilize the WaziGate to track objects and evaluate their occurrences. This is done via a Raspberry Pi camera, a Webcam or a URL using the Real Time Streaming Protocol (RTSP). The link to GitHub repository is [here](https://github.com/Waziup/wazigate-webcam-inference/tree/main).
+
+
+The Machine Learning models are trained with the COCO (Common Objects in Context) dataset. It contains 80 classes, that are listed [here](https://github.com/Waziup/wazigate-webcam-inference/blob/main/coco_tiny_yolov5/labelmap.txt). Simply, this means that the Machine Learning model is able to detect and locate the listed objects in an image.
+
+For now you can choose between two models for object detection:
+- Mobile Net v1 (224x224)
+- Yolo Version 5s (320x320)
+
+The repository has a documentation of how you can install and run this WaziApp on a WaziGate.
 
 Sources
 =======

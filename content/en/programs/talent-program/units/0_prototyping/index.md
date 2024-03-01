@@ -3,8 +3,8 @@ id: talent_prototyping_unit
 name: Prototyping
 desc: |
   Create your own IoT prototype using Waziup IoT hardware and software.
-duration: 12w
-delay_start: 0d
+duration: 1w
+delay_start: 0w
 solutions:
   - id: waziup/automatic-irrigation
     roles:
