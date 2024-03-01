@@ -53,8 +53,7 @@ Install Arduino IDE
 -------------------
 
 
-**Step \#1:** Download Arduino IDE from here: [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
-
+<alert severity='info'>**Step \#1:** Download Arduino IDE from here: [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)</alert>
 
 Download what suits your computer (Windows, MAC, Unix).
 Here we have as an example some screenshots for Windows users.
@@ -64,7 +63,7 @@ Choose the components to install:
 ![Choose Arduino components (select all)](./media/image10.png)
 
 
-<alert severity='info'> **Step \#2:** Choose the installation directory (recommended: keep the default one)</alert>
+<alert severity='info'>**Step \#2:** Choose the installation directory (recommended: keep the default one)</alert>
 
 ![Choose installation directory](./media/image5.png)
 
@@ -72,13 +71,9 @@ The process will extract and install all the required files to execute
 properly the Arduino Software (IDE)
 
 ![Arduino files extraction](./media/image15.png)
-
-
-{{%note%}} 
-If you use Linux there is a guide here: [https://www.arduino.cc/en/Guide/Linux](https://www.arduino.cc/en/Guide/Linux).
-
-If you use Mac there is a guide here: [https://www.arduino.cc/en/Guide/MacOSX](https://www.arduino.cc/en/Guide/MacOSX).
-{{%/note%}} 
+ 
+<alert severity='info'> If you use Linux there is a guide here: [https://www.arduino.cc/en/Guide/Linux](https://www.arduino.cc/en/Guide/Linux).</alert>
+<alert severity='info'> If you use Mac there is a guide here: [https://www.arduino.cc/en/Guide/MacOSX](https://www.arduino.cc/en/Guide/MacOSX).</alert>
 
 
 Install the WaziDev sketchbook
@@ -97,8 +92,7 @@ In this section one will configure the Arduino IDE to use the WaziDev sketchbook
 Let's say one unzipped the file to /home/cdupont/WaziDev-1.0 for example.
 Next step is to configure Arduino IDE to use this sketchbook.
 
-<alert severity='info'>
-**Step \#2:** In the Arduino IDE Preferences, change the "sketchbook location" to the WaziDev sketchbook folder.
+<alert severity='info'>**Step \#2:** In the Arduino IDE Preferences, change the "sketchbook location" to the WaziDev sketchbook folder.
 </alert>
 
 ![Arduino IDE Preferences menu](./media/image29.png)
@@ -115,25 +109,20 @@ Configure the Arduino IDE
 
 In this section, we will configure the various parameters of the Arduino IDE to work with WaziDev on you PC.
 
-<alert severity='info'>
-**Step \#1:** Connect your WaziDev board to your PC via USB cable.
+<alert severity='info'>**Step \#1:** Connect your WaziDev board to your PC via USB cable.
 </alert>
 
 ![WaziDev cable connection](./media/image12.jpg)
 
 If you see some lights turning on, that means your USB connection is working.
 
-<alert severity='info'>
-**Step \#2:** Open your Arduino IDE.
-</alert>
+<alert severity='info'>**Step \#2:** Open your Arduino IDE.</alert>
 
 On Linux, you need to open it as an **administrator** (i.e. type "sudo arduino"). You should see something like this:
 
 ![Arduino IDE screen](./media/image1.png)
 
-<alert severity='info'>
-**Step \#3:** Select the right port.
-</alert>
+<alert severity='info'>**Step \#3:** Select the right port.</alert>
 
 In the **Tools** menu, click on the **Port** submenu. The **port**
 depends on your Operating System. You should select a port similar to
@@ -147,24 +136,18 @@ these:
 
 **Attention:** If you don't see the corresponding port in the Port menu, then you need to install the required drivers.
 
-<alert severity='info'>
-**Step \#4 (optional):** Install the drivers. **Skip this section** if you already see the right port in the port menu.
-</alert>
+<alert severity='info'>**Step \#4 (optional):** Install the drivers. **Skip this section** if you already see the right port in the port menu.</alert>
 
 Please follow the instructions on the page and install the corresponding driver on your computer.
 After installing you should be able to see the port and the board information in your Arduino IDE under the **Tools** menu.
 
-<alert severity='info'>
-**Step \#5:** Select the Board.
-</alert>
+<alert severity='info'>**Step \#5:** Select the Board.</alert>
 
 Select the board "Arduino Pro or Pro Mini" in the Tools -\> Board menu.
 
 ![Board selection in a unix OS Arduino IDE: Arduino Pro or Mini](./media/image30.png)
 
-<alert severity='info'>
-**Step \#6:** Select the Processor.
-</alert>
+<alert severity='info'>**Step \#6:** Select the Processor.</alert>
 
 Select the processor "ATmega328P (3.3V, 8 MHz)" in the Tools -\> Processor menu.
 
@@ -229,9 +212,7 @@ Hello World: Blink a LED
 
 Let's try now the WaziDev! Upload the first program.
 
-<alert severity='info'>
-**Step \#1:** Select the **blink** program in the examples menu.
-</alert>
+<alert severity='info'>**Step \#1:** Select the **blink** program in the examples menu.</alert>
 
 Select the menu File -\> Examples -\> 0.1 Basic -\> Blink.
 
@@ -240,9 +221,7 @@ Select the menu File -\> Examples -\> 0.1 Basic -\> Blink.
 
 Once this is done, the "Blink" program should appear in the editor.
 
-<alert severity='info'>
-**Step \#3:** Compiling and uploading the code to WaziDev.
-</alert>
+<alert severity='info'>**Step \#3:** Compiling and uploading the code to WaziDev.</alert>
 
 Click on the arrow button to compile and upload your program.
 
@@ -267,9 +246,7 @@ Temperature and humidity sensor
 
 In this example, a temperature and humidity sensor: the DHT11, will be wired and programmed.
 
-<alert severity='info'>
-**Step \#1:** Connect the DHT11 to the WaziDev.
-</alert>
+<alert severity='info'>**Step \#1:** Connect the DHT11 to the WaziDev.</alert>
 
 With the DHT11, the simplest wiring possible is: no wires!
 DHT11 have a GND (ground) pin, a data pin, and a VCC pin.
@@ -282,12 +259,8 @@ Be careful to align the pins:
 
 ![Direct connection of the DHT11 with WaziDev](./media/image6.jpg)
 
-<alert severity='info'>
-**Step \#1:** Connect the DHT11 to the WaziDev.
-</alert>
-<alert severity='info'>
-**Step \#2:** Select and tweak the DHT11 example.
-</alert>
+<alert severity='info'>**Step \#1:** Connect the DHT11 to the WaziDev.</alert>
+<alert severity='info'>**Step \#2:** Select and tweak the DHT11 example.</alert>
 
 
 This example is located in File -\> Sketchbook -\> sensors -\> Temperature -\> DHT11.
@@ -318,9 +291,7 @@ Uncomment that line, and change the two values to 3.
 
 
 
-<alert severity='info'>
-**Step \#3:** Install the DHT library using Library Manager.
-</alert>
+<alert severity='info'>**Step \#3:** Install the DHT library using Library Manager.</alert>
 
  Go to Sketch -\> Include Library -\> Libraries Manager.
 
@@ -339,15 +310,11 @@ Uncomment that line, and change the two values to 3.
  **NOTE:** Repeat step **3** for all other sensors you use. i.e search and install the required sensor libraries using the library manager.
 
 
-<alert severity='info'>
-**Step \#4:** Compile and upload the code.
-</alert>
+<alert severity='info'>**Step \#4:** Compile and upload the code.</alert>
 
 You just need to hit the arrow button.
 
-<alert severity='info'>
-**Step \#5:** Open the Arduino IDE Serial Monitor.
-</alert>
+<alert severity='info'>**Step \#5:** Open the Arduino IDE Serial Monitor.</alert>
 
 In the Tools menu open the serial monitor and then set the data rate to 38400 baud.
 
@@ -362,27 +329,19 @@ Cloud application
 We'll now reuse our DHT11 to upload data to the Cloud.
 **Note that you need an active WaziGate close to you.**
 
-<alert severity='info'>
-**Step \#1:** Plug in your DHT11 as shown in the previous example.
-</alert>
+<alert severity='info'>**Step \#1:** Plug in your DHT11 as shown in the previous example.</alert>
 
-<alert severity='info'>
-**Step \#2:** Select the LoRa\_DHT11 example.
-</alert>
+<alert severity='info'>**Step \#2:** Select the LoRa\_DHT11 example.</alert>
 
 It is located in the menu File -\> LoRa -\> LoRa\_DHT.
 
-<alert severity='info'>
-**Step \#3:** Adjust the source code.
-</alert>
+<alert severity='info'>**Step \#3:** Adjust the source code.</alert>
 
 Verify that the Pins are correct in the file "my\_DHT\_sensor\_code.h" visible in the Arduino IDE.
 
 In the file "LoRa\_DHT.ino" find "***\#define node\_addr 8***" then change the number **8** to your desired number (for example: the number written on the wazidev label).
 
-<alert severity='info'>
-**Step \#4:** Compile and upload.
-</alert>
+<alert severity='info'>**Step \#4:** Compile and upload.</alert>
 
 You should obtain a successful upload.
 At this stage, your device is already sending data to the Cloud!

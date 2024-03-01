@@ -23,7 +23,7 @@ The emergence of the first devices with internet connectivity in the early 1980s
 
 Kevin Ashton who was working in supply chain optimization, wanted to attract senior management’s attention to this new exciting technology. Because the internet was the hottest new trend in 1999, he called his presentation “Internet of Things”.
 
-![Iot Image](img/iot-timeline.png)
+![Iot Image](img/iot-timeline.png#width=900)
 
 <!-- <figure src="img/iot-timeline.png" maxWidth="600px" cation="iot-timeline"></figure> -->
 
