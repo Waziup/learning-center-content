@@ -27,7 +27,9 @@ The successor to these microcontroller chips is the ESP32. Again, many boards ba
 1. First install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the [officiel Arduino web site](https://www.arduino.cc/en/main/software).
 
 2. Start Arduino IDE and open the Preferences window. Then for ESP8286 enter `http://arduino.esp8266.com/stable/package_esp8266com_index.json`.
-   For generic ESP32 enter `https://dl.espressif.com/dl/package_esp32_index.json`.
+   For generic ESP32 enter `https://dl.espressif.com/dl/package_esp32_index.json`. In case you have to put multiple URLs togrther make sure to separate them with a comma.
+
+   ![alt text](img/Installation_1.png)
 
 3. Then open Boards Manager from Tools → Board menu, then search & install "ESP8266" or "ESP32" or "Heltec ESP32" platforms. Select your board, ESP8266 or ESP32 or Heltec ESP32, from Tools → Board menu to compile for the correct platform.
 
@@ -274,7 +276,7 @@ The raw source of the sketch example is visible [here](src/sketch/Arduino_ESP_Te
 The code is ready for an Heltec WiFi LoRa 32 board so OLED is activated.
 -->
 
-# Exercice
+# Exercise
 
 We saw previously that the `loop()` function first check if the WiFi is connected. If is not connected, we attempt to connect to the WiFi again.
 
