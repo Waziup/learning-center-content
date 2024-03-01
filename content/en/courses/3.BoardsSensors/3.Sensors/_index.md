@@ -237,71 +237,78 @@ Sensors that are not linear over the measurement range require some curve-fittin
 
 ## Example
 
-This example demonstrates one technique for calibrating sensor input. The Arduino takes sensor readings for five seconds during the startup, and tracks the highest and lowest values it gets. These sensor readings during the first five seconds of the sketch execution define the minimum and maximum of expected values for the readings taken during the loop.
+This example demonstrates one technique for calibrating soil moisture sensor. Let's discuss it step by step.
 
-One technique for calibrating sensor input is demonstrated below. The circuit has:
-- an analog sensor (potentiometer will do) attached to analog input 0
-- a LED attached from digital pin 9 to ground through 220 ohm resistor
-  
-![alt text](img/circuit.png)
+**Required hardware:**
 
-**Code:**
+To do this example you will need the following hardware:
+1. Wazidev board
+2. Soil moisture Sensor
+3. 2 types of soil sample (dry & saturated) 
+
+**Steps:**
+
+1. Connect you sensor to the dev board and upload the following code
+
+   **Module interface:**
+
+   - VCC: Connect to the Vcc pin of the WaziDev
+   - GND: Connect to the GND pin of the WaziDev
+   - AnalogPin: Connect to the WaziDev analog pin A0
+
+    **Code:**
 ````c
-/*
-
-  This example code is in the public domain.
-
-  https://www.arduino.cc/en/Tutorial/BuiltInExamples/Calibration
-*/
-
-// These constants won't change:
-const int sensorPin = A0;  // pin that the sensor is attached to
-const int ledPin = 9;      // pin that the LED is attached to
-
-// variables:
-int sensorValue = 0;   // the sensor value
-int sensorMin = 1023;  // minimum sensor value
-int sensorMax = 0;     // maximum sensor value
-
+int sensor=A0, soil;
 
 void setup() {
-  // turn on LED to signal the start of the calibration period:
-  pinMode(13, OUTPUT);
-  digitalWrite(13, HIGH);
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("Serial begin");
+  delay(2000);
 
-  // calibrate during the first five seconds
-  while (millis() < 5000) {
-    sensorValue = analogRead(sensorPin);
-
-    // record the maximum sensor value
-    if (sensorValue > sensorMax) {
-      sensorMax = sensorValue;
-    }
-
-    // record the minimum sensor value
-    if (sensorValue < sensorMin) {
-      sensorMin = sensorValue;
-    }
-  }
-
-  // signal the end of the calibration period
-  digitalWrite(13, LOW);
 }
 
 void loop() {
-  // read the sensor:
-  sensorValue = analogRead(sensorPin);
-
-  // in case the sensor value is outside the range seen during calibration
-  sensorValue = constrain(sensorValue, sensorMin, sensorMax);
-
-  // apply the calibration to the sensor reading
-  sensorValue = map(sensorValue, sensorMin, sensorMax, 0, 255);
-
-  // fade the LED using the calibrated value:
-  analogWrite(ledPin, sensorValue);
+  // put your main code here, to run repeatedly:
+  soil = analogRead(sensor);
+  Serial.println(soil);
+  delay(2000);
 }
 `````
+
+2. Then collect the Raw values from the dry sample and weight sample of soil. In my case it was- 
+   - Raw high( for dry soil ) -  891
+   - Raw Low( for weight soil ) - 370
+
+3. Then update your code like the following code to map the calibrated values:
+
+   **Code:**
+````c
+int sensor=A0, soil;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Serial.println("Serial begin");
+  delay(2000);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  soil = analogRead(sensor);
+  Serial.println(String("Soil Val: ") + soil);
+  soil=map(soil, 891, 370, 0, 100);
+  Serial.println(String(" Value after mapped: ")+soil);
+  delay(2000);
+
+}
+`````
+**OUTPUT:**
+
+You will get to see the following types of output in your serial monitor. Now you can modify the code and put some conditions to get notified according to your needs.
+
+![alt text](<img/Calibration output.png>)
 
 A Complete Example 
 ====
@@ -379,15 +386,15 @@ Exercise
 
 After completing this course you should be able to do the following exercise by youself.
 
-*Task*
+**Task**
 
 `
 Use an Ultrasonic sensor and a WaziUp development board to measure the water level in a water tank.
 `
 
-*Hints*
+**Hints**
 
-Required Hardware
+*Required Hardware*
 
 - WaziUp development board
 - FT232 FTDI module with Mini USB Cable
@@ -397,14 +404,85 @@ Required Hardware
 - Some Jumper Wires
 
 
-Required Software
+*Required Software*
 
 - Arduino IDE for the programming aspects
 - WaziDev libraries for LoRa communication
 
-Module interface:
+*Module interface:*
 
 1. VCC: Connect to the D5 pin of the development board
 2. GND: Connect to the GND pin of the development board
 3. Rx: Connect to the D3 pin of the development board
 4. Tx: Connect to the D4 pin of the development board
+
+**Solution:**
+
+*Steps:*
+
+1. Connect the hardwares like the following schematic:
+
+![alt text](img/waterwire.jpg)
+
+2. Upload the following code: 
+
+```c
+//sensor pins
+#define trigPin  9
+#define echoPin  5
+
+//sensor power pin
+#define powerPin  4
+
+  void setup() {
+  Serial.begin(9600);
+  
+  //turning sensor on
+  pinMode(powerPin, OUTPUT);
+  delay(500);
+  digitalWrite(powerPin, HIGH);
+  
+  //declaring sensor pin modes
+  pinMode(trigPin, OUTPUT);
+  //inputpull up to prevent noise on echo pin
+  pinMode(echoPin, INPUT_PULLUP);
+  
+}
+
+  void loop() {
+  
+  //reading sensor values
+  unsigned long duration = 0;
+  int distance = 0;
+  int average = 0;
+  
+  //taking 100 distance samples
+    while (average <= 100) {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(5);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+    
+    duration = pulseIn(echoPin, HIGH, 1000);
+    distance += duration * 0.034 / 2;
+    average += 1;
+    delay(30);
+  }
+  
+  //finding the average of 100 samples
+  distance = distance / average;
+  
+  //checking to be sure the current distance value is a number and greater than 0
+    if (!(isnan(distance) || distance < 0)) {
+    return;
+  }
+  
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+  
+  delay(10);
+}
+
+```
