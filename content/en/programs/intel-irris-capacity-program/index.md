@@ -42,23 +42,31 @@ We have 7 units of learning distributed into three main sections:
 Modules Details 
 ===============
 The 7 units of learning have the following structure:
+### Introduction
 1. Intro
    1. Intel-IrriS why/what for?
    2. This program what for?
    3. Intel-IrriS structure
+### Section One - Sensing
 2. Intel-IrriS Device
    1. Device's hardware
    2. Sensors
    3. Order it   
    4. Build it
    5. Device's software
+   6. Device debug
+### Section Two - Data gathering
 3. About the Gateway
    1. Generic wazigate
    2. Intel-IrriS specific soft and hard
       1. IIWA
       2. Home assistant
       3. OLED
+      4. LoRa Chirpstack server
    3. Set it up
+   	  1. Intel-IrriS image
+   	  2. Frequency setting
+   	  3. Sync to Wazicloud waziup.io
 4. Install and use in the field
    1. Starter Kit
    2. Gateway boot options/preparation/autoboot
@@ -68,6 +76,7 @@ The 7 units of learning have the following structure:
    1. Collect
    2. Analyze
    3. AI - prediction tools
+### Section Three - Follow up
 6. Maintainance, piloting and feedback from existing deployments
    1. Feedback support
    2. Farmer training program

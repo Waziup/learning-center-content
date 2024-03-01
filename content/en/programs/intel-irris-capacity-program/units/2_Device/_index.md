@@ -29,6 +29,10 @@ Device's software
 =================
 bla
 
+Device's debug
+=================
+bla
+
 ![ex im](img/II-mini.png)
 
 <youtube>wgfhedtyjhdt</youtube>
