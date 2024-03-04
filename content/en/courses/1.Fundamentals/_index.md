@@ -1,6 +1,7 @@
 ---
 id: intro_iot_mod
 title: Introduction to IoT
+shortTitle: 'IoT'
 description: The main fundamentals of IoT
 ---
 
