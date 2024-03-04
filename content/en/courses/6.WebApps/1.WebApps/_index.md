@@ -192,24 +192,140 @@ Bootstrap is a framework built on the top of HTML and CSS3, with some optional J
 It contains design templates for forms, buttons, tables, navigation, modals, image carousels...
 Here is a basic example for a [three collumns design](https://getbootstrap.com/docs/5.2/layout/grid/):
 
+**Responsive design**
+Before getting to understand how bootstrap and other styling works, we need to understand the concept of `responsive designs`. Responsive design  is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction. The major categories of screen sizes are,
+
+- Extra-extra large screens (XXL)
+- Extra large screens (XL)
+- Large screens
+- Medium screens
+- Small screens
+- Extra small screens
+- Extra-extra small screens
+
+When designing web pages, you have to account for each screen size. However, in most cases you will use at least 3 screen sizes. Below is an image describing the break points for common designs
+
+![alt text](./img/breakpoints.png)
+
+Bootstrap will take care of this by allocating respective columns in each screen size.
+
+**Installing bootstrap**
+You can use a CDN to access bootstrap features. We will be using approach due to its flexibility. You can find other approaches in [this](https://getbootstrap.com/docs/5.3/getting-started/download/) installation tutorial.
+
 ```html
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+```
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+```
+
+**Creating a responsive container using bootstrap**
+Create a html skeleton file below. You can get this HTML boiler plate by typing `!` in the code editor. Let's first save the file as `index.html`.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Bootstrap container</title>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+```
+We added the `link` and `script` tag in the file to use bootstrap classes.
+If you are using vs code, install a live server extension to view the changes we make to our index file.
+
+![Live server](./img/live-server.png)
+
+Add this content to the body context
+
+```html
+<div class="container card mt-5 p-2 shadow">
+  <h1>Waziup API with Bootsrap</h1>
+  <div class="row p-2">
+      <div class="col-sm-4">
+      <h2>Sensor 1</h2>
+      <p id="t1">Loading...</p>
+      </div>
+      <div class="col-sm-4">
+      <h2>Sensor 2</h2>
+      <p id="t2">Loading...</p>
+      </div>
+      <div class="col-sm-4">
+      <h2>Sensor 3</h2>
+      <p id="t3">Loading...</p>
+      </div>
   </div>
 </div>
 ```
+![simple-dashboard](./img/simple-dashboard.png)
+
+Finally, we add the response from the request to the t1,t2,t3 IDs.
+
+```html
+<script>
+    const headers = {
+        'Content-Type':'application/json' 
+    }
+    
+    const getTemperature = async() =>{
+
+      try {
+          //You can create your own devices on the wazicloud dashboard and add sensors
+          const fetchTemperatureValue1 = await fetch('https://api.waziup.io/api/v2/devices/bootstrap/sensors/TC/values');
+          const fetchTemperatureValue2 = await fetch('https://api.waziup.io/api/v2/devices/bootstrap/sensors/TC2/values');
+          const fetchTemperatureValue3 = await fetch('https://api.waziup.io/api/v2/devices/bootstrap/sensors/TC3/values');
+
+          const res1 = await fetchTemperatureValue1.json();
+          const res2 = await fetchTemperatureValue2.json();
+          const res3 = await fetchTemperatureValue3.json();
+
+          const val1 = res1[0].value;
+          const val2 = res2[0].value;
+          const val3 = res3[0].value;
+
+          //document.getElementById('t1').innerHTML = `Value: ${val1} &degC`
+         // document.getElementById('t2').innerHTML = `Value: ${val2} &degC`
+        //  document.getElementById('t3').innerHTML = `Value: ${val3} &degC`
+          
+      } catch(error){
+          console.log(error)
+      }
+    }
+    
+    getTemperature();
+    
+</script>
+```
+
+The images below demonstrates the responsiveness at different screen widths:
+
+**Desktop View**
+
+![dashboard1](./img/dashboard1.png)
+
+**Tablet View**
+
+![dashboard2](./img/dashboard2.png)
+
+**Mobile View**
+
+![dashboard3](./img/dashboard3.png)
+
+Lets discuss the bootstrap classes used here
+
+1. container -  contain, pad, and align your content within a given device or viewport
+2. card - flexible container with borders and border radius
+3. row - Rows are wrappers for columns
+4. mt-5 - Add margin top of 5px
+5. p-2 - Add padding 2px
+6. shadow - Adding a box shadow
+7. col - width specifiers for rows
 
 In this example, Bootstrap provides the definitions of CSS classes "row" and "col-sm-4".
 Bootstrap is reactive by default, so your web page will look good on any screen size.
@@ -220,32 +336,126 @@ ReactJS
 In this section, we'll overview some Web development frameworks useful for developping IoT applications.
 
 ReactJS is a Javascript library for writing UIs. 
-The basic example looks like that:
-Javascript:
-```tsx
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-);
+
+We will use `vite` to create the react app. Issue the command below to create and run react app.
+
 ```
-HTML:
+npm create vite@latest my-app --template react
+```
+```
+cd my-app
+```
+```
+npm install
+```
+```
+npm run dev
+```
+
+This starts a simple react app as shown below,
+
+![Vite-react](./img/vite-react.png)
+
+We will re-use the content from the `bootstrap module` to build our react application.
+
+First things first, lets install our bootstrap library in react. Add this link tag to the index.html,
+
 ```html
-<div id="root">
-    <!-- This element's contents will be replaced with your component. -->
-</div>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+```
+After adding the bootstrap link, copy this content to the app.jsx file,
+
+```js
+import { useState } from 'react'
+import './App.css'
+import { useEffect } from 'react'
+
+function App() {
+
+  const [sensorVals, setSensorVals] = useState({
+    sensor1: null,
+    sensor2: null,
+    sensor3: null
+  })
+
+  const getSensorValues = async() => {
+    try {
+
+      const fetchTemperatureValue1 = await fetch('https://api.waziup.io/api/v2/devices/bootstrap/sensors/TC/values');
+      const fetchTemperatureValue2 = await fetch('https://api.waziup.io/api/v2/devices/bootstrap/sensors/TC2/values');
+      const fetchTemperatureValue3 = await fetch('https://api.waziup.io/api/v2/devices/bootstrap/sensors/TC3/values');
+
+      const res1 = await fetchTemperatureValue1.json();
+      const res2 = await fetchTemperatureValue2.json();
+      const res3 = await fetchTemperatureValue3.json();
+
+      setSensorVals({
+        sensor1: res1[0].value,
+        sensor2: res2[0].value,
+        sensor3: res3[0].value
+      })
+
+    } catch(error){
+      console.log(error)
+    }
+  }
+
+  useEffect(()=>{
+    getSensorValues()
+  })
+
+  return (
+    <>
+      <h1>React Waziup Application</h1>
+      <div className="card">
+        <div className="row p-2">
+          <div class="col-sm-4">
+          <h2>Sensor 1</h2>
+          <p id="t1">
+            {
+              sensorVals.sensor1 ? `${sensorVals.sensor1}` : '---'
+            } &deg;C
+          </p>
+          </div>
+          <div className="col-sm-4">
+          <h2>Sensor 2</h2>
+          <p id="t2">
+            {
+              sensorVals.sensor2 ? `${sensorVals.sensor2}` : '---'
+            } &deg;C
+          </p>
+          </div>
+          <div className="col-sm-4">
+          <h2>Sensor 3</h2>
+          <p id="t3">
+            {
+              sensorVals.sensor3 ? `${sensorVals.sensor3}` : '---'
+            } &deg;C
+          </p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default App
+
 ```
 
-The example works exactly the same than before: first we call a function `ReactDOM.render` from the ReactJS library.
-This function will proceed to replace the content of the HTML `div` with the ID "root".
+The browser should automatically pull these changes and load them into the app as shown below.
 
+![react-app](./img/react-app.png)
 
-ReactJS uses [JSX](https://fr.reactjs.org/docs/introducing-jsx.html), a syntax extension for JavaScript that mimics HTML.
-In fact, `<h1>Hello, world!</h1>` in the script above is *not* HTML!
-It is Javascript. JSX is syntactix sugar that looks like HTML, but the compiler will transform it to javascript.
+In the above code, we use same context like in bootstrap to fetch the data from waziup API. However there are two main features that are added,
 
-ReactJS is also based on [Components](https://reactjs.org/docs/components-and-props.html). 
-Components are renderable parts of a web page. 
-They are very usefull for splitting the UI into independent, reusable pieces.
+- useEffect hook -  We use this hook to tell our app to run the function to fetch data only once
+- useState hook - We use this hook to handle the state of our app variables, i.e storing the retrieved values from the API
 
 Angular
 =======
