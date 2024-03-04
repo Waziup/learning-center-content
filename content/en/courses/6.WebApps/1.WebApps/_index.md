@@ -289,9 +289,9 @@ Finally, we add the response from the request to the t1,t2,t3 IDs.
           const val2 = res2[0].value;
           const val3 = res3[0].value;
 
-          //document.getElementById('t1').innerHTML = `Value: ${val1} &degC`
-         // document.getElementById('t2').innerHTML = `Value: ${val2} &degC`
-        //  document.getElementById('t3').innerHTML = `Value: ${val3} &degC`
+          document.getElementById('t1').innerHTML = `Value: ${val1} &degC`
+          document.getElementById('t2').innerHTML = `Value: ${val2} &degC`
+          document.getElementById('t3').innerHTML = `Value: ${val3} &degC`
           
       } catch(error){
           console.log(error)
