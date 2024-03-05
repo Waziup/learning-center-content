@@ -6,7 +6,7 @@ difficulty: intermediate
 duration: 2h
 ---
 
-This course will show you how to use HTTP APIs. We will go through the architecture of each protocol, and how to send and retrieve data. Additionally, the course will show you how to design APIs, with all the do’s and don’ts.
+This course will show you how to use HTTP APIs. We will go through the architecture of each protocol, and how to send and retrieve data. Additionally, the course will show you how to design APIs, with all the do’s and don’ts. At the end of the course, we will demonstrate how to consume waziup API from the cloud using postman.
 
 <youtube>CHTOr1ZWcog</youtube>
 
@@ -249,3 +249,83 @@ GET /cars?limit=100&offset=0
 ```
 This command retrieve the first 100 cars. The next 100 can be retrieve by setting `offset=100`. 
 
+# Waziup APIs with Postman
+In this exercise we will be consuming wazicloud API. We will understand how to send `GET`, `PUT` and `POST` request using postman. We will also understand how to get access token for authentication using postman.
+
+**Prerequisites**
+
+- Postman - You can download postman from [this](https://www.postman.com/) page or use an online version of postman
+- Wazicloud account - You need to have wazicloud account. You can set one from [this](https://dashboard.waziup.io/) page
+- Active internet connnection
+
+For more reference on using the API, you can find the complete documentation [here](https://api.waziup.io/docs)
+
+**Obtaining auth token**
+The authentication endpoint receives a post request. The request contains body with username and password. The body is in json format. The token received will be in text format. We need to start postman, and head over to creating the request.
+
+The endpoint to obtain the request is,
+
+```
+https://api.waziup.io/api/v2/auth/token
+```
+
+Paste the above url in the request input section. Remember to toggle the method to `POST`. Otherwise, you will receive an error, METHOD NOT ALLOWED.
+
+![auth-postman](./img/auth.png)
+
+We need now to provide our login credentials before sending the request.
+```json
+{
+    "username":"your-username",
+    "password":"your-password"
+}
+```
+![credentials](./img/credentials.png)
+
+After issuing the correct credentials, we should receive our response along with the token. The token contains our credential information like username etc.
+
+![token](./img/token.png)
+
+**Listing devices connected to our cloud**
+
+To list connected devices on our cloud, send a `GET` command to the endpoint below.
+```
+https://api.waziup.io/api/v2/devices
+```
+
+Since we need to retrieve our devices only, add a query string with your username as the owner. Below is an example,
+```
+https://api.waziup.io/api/v2/devices?q=owner==username
+```
+_NB_ Replace the username with the wazicloud username.
+
+![devices](./img/devices.png)
+
+**Editing device**
+Editing is normally a `PUT` request. Lets first retrieve the device we want to edit. Issue this `PUT` command in postman.
+
+```
+https://api.waziup.io/api/v2/devices/DEVICE_ID
+```
+
+![edit-device](./img/edit-device.png)
+
+_NB_ Supply the correct device id you want to retrieve
+
+To edit the device, you need to supply the auth token you obtained from `auth/token`. 
+
+Under the body section, add the name of the device.
+
+![edit-body](./img/edit-body.png)
+
+The request should return a 204 status. If you try retrieving the device once more, you get the device's name has been edited successfully.
+
+![rename-res](./img/rename-res.png)
+
+**Learner's Task**
+
+We have already performed, GET, PUT/UPDATE,
+
+1. Perform the following HTTP request on the waziup API.
+ - POST
+ - DELETE

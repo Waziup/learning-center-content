@@ -457,9 +457,17 @@ In the above code, we use same context like in bootstrap to fetch the data from 
 - useEffect hook -  We use this hook to tell our app to run the function to fetch data only once
 - useState hook - We use this hook to handle the state of our app variables, i.e storing the retrieved values from the API
 
+In the next frameworks let's touch on how to use them. The setup process is similar to that of React framework. However, in the template section, you can use vue, angular.
+
+```
+npm create vite@latest my-app --template vue
+```
+```
+npm create vite@latest my-app --template angular
+```
+
 Angular
 =======
-
 
 [Angular](https://getbootstrap.com/) is built on `Typescript`.
 TypeScript is a strongly typed programming language that builds on JavaScript.
@@ -500,7 +508,7 @@ It is a "progressive" framework because you can extend its functionality with of
 Here is an example.
 Javascript:
 
-```vue
+```jsx
 import { createApp } from 'vue'
 
 createApp({
@@ -514,7 +522,7 @@ createApp({
 
 HTML:
 
-```vue
+```html
 <div id="app">
   <button @click="count++">
     Count is: {{ count }}
