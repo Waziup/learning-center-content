@@ -90,12 +90,69 @@ More info, more models, and market references for both chipsets and antennae her
 
 
 ## 3. The solar panels
+The Solar panel must fit the casing, Intel- IrriS selected this model: Mini solar panel 6 V 0.6 W 100 mA 60x90mm.
+The PCBA has a circuit designed to make the device work with this solar panel and NiMh rechargeable batteries.
+The WaziSense v2 however is designed for Li-ion or Li-Po 3.7v batteries. 
 
-## 4. The other components
+
+## 4. List of components
+Most of the needed components are listed here:
+[hardware-parts](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-IrriS-low-cost-sensor-hardware-parts.pdf)
+
+Here a brief table summary:
+
+
+||for PCBv2|for PCBA|for Solar PCBA |
+|-----|--------|----------|----|
+|12-pin screw terminal block (green)|1 or 2|  | |
+|2-pin or 4-pin screw terminal block (green) | 1 || |
+|12-pin female header | 2 |||
+|RFM95W (868MHz) or RFM96W (433MHz)| 1 |||
+|SMA female PCB connector for 1.6mm PCB| 1 |||
+|Arduino ProMini, 3.3v 8MHz with 1 6-pin 90° and 2 12-pin male headers | 1 |1|1|
+|Pack of minimum 9 2.54mm male pin headers (1 4-pin, 1 3-pin, 1 2-pin) | | 1 | 1 |
+|ABS waterproof enclosure with screws and joint| 1 | 1| 1|
+|2-AA battery holder|1|1||
+|2 AA batteries 1.5V|1|1||
+|3AAA NiMh 1.2V rechargeable batteries|||1|
+|Mini solar panel 6 V 0.6 W 100 mA 60x90mm|||1|
+|Breadboard/Dupont cables | | 1 F-F | 2 F-F + 2 M-M |
+|switch with pre-soldered wires|1|1|1|
+|waterproof cap for the switch|1|1|1|
+|Cable gland PG7 (select PG7)|1|1|1|
+|nylon joint for pg7 (diameter 12.4)|1|1|1|
+|3dBi 868MHz or 3dBi 433MHz antenna|1|1|1|
+|Flat-face seal for outer antenna junction (6x11x0.8mm)|1|1|1|
+|1 4.7 kOhm*, 1 or 2 10kOhm** resistor |1||| 
+| 10 heat-shrink tubes to isolate wires***|1|||
+| 1 or 2 Two-paired screw terminals (dominos)**| 1 |1|1|
+| 1 or 2 2-joint-wire for irometer tensiometer**| 1 |1|1|
+
+*for devices with temperature sensors, see 2.ii\
+** for devices with 1 or 2 watermark sensors, see 2.ii\
+*** 2 tubes for each resistor's end wire
+
+
+
+For the device assembly, preparation and programming, you will also need: 
+- 1 USB Serial FTDI breakout 3.3V (and USB connector to laptop);
+- Solder station / soldering iron with thin solder wire;
+- tiny slotted (flat) screwdriver for the screw terminal blocks;
+- normal cruciform screwdriver;
+- drill for the plastic casing, with various bit size.
+
+
 
 2.ii. Sensors
 =============
 bla
+SEN0308 capacitive soil sensor
+DS18B20 temperature sensor for soil temperature
+you will need a 4.7 kOhm resistor
+Irrometer Watermark water tension sensor
+you will need a resistor from 7kOhm to 14kOhm (we use 10kOhm)
+A set of heat-shrink tubes to isolate wires
+
 
 2.iii. Order it
 ===============
