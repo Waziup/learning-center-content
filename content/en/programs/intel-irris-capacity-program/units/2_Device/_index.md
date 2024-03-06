@@ -126,7 +126,7 @@ Here a brief table summary:
 |1 4.7 kOhm*, 1 or 2 10kOhm** resistor |1||| 
 | 10 heat-shrink tubes to isolate wires***|1|||
 | 1 or 2 Two-paired screw terminals (dominos)**| 1 |1|1|
-| 1 or 2 2-joint-wire for irometer tensiometer**| 1 |1|1|
+| 1 or 2 15cm chunk of 2-joint-wire for irometer tensiometer**| 1 |1|1|
 
 *for devices with temperature sensors, see 2.ii\
 ** for devices with 1 or 2 watermark sensors, see 2.ii\
@@ -176,8 +176,8 @@ bla
 <youtube>wgfhedtyjhdt</youtube>
 
 
-<quiz id="0261c201-7AAAAAAAAAAA171-60158676498c" type="single-choice" title="What is 4x4?">
-	<answer feedback="Thats wrong!">It's 17.</answer>
-	<answer feedback="Nope.">Something like 123.</answer>
-	<answer feedback="You got it!" right>It's an all-wheel drive car.</answer>
+<quiz id="0261c201-7AAAAAAAAAAA171-60158676498c" type="single-choice" title="What frequency band is allowed for LoRa in EUrope?">
+	<answer feedback="Nope.">433 Mhz</answer>
+	<answer feedback="You got it!" right>868 MHz</answer>
+	<answer feedback="Thats wrong!">Both 433 and 868 MHz</answer>
 </quiz>
