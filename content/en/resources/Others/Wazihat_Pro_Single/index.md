@@ -10,6 +10,7 @@ tags:
     - Waziup
     - LoRa
     - LoRaWAN
+    - MVP-DIY-Kit
 ---
 
 # Introduction

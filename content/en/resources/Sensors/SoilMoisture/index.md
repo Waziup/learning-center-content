@@ -6,6 +6,7 @@ desc: The SparkFun Soil Moisture Sensor is a simple breakout for measuring the m
 color: "#b4d0e9"
 tags:
     - Agriculture
+    - MVP-DIY-Kit
 ---
 
 # Introduction

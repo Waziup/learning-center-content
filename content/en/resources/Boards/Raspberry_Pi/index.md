@@ -6,6 +6,7 @@ desc: A mini computer
 color: "#acbbd7"
 tags:
     - mini computer
+    - MVP-DIY-Kit
 ---
 
 # Introduction
