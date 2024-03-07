@@ -28,14 +28,21 @@ Units
 We have 7 units of learning distributed into three main sections:
 
 * Introduction
+
   1. Introduction
+
 * Section One - Sensing
+
   2. Intel-IrriS Device
+
 * Section Two - Data gathering
+
   3. About the Gateway
   4. Install and use in the field
   5. How to collect and analyze the data
+
 * Section Three - Follow up
+
   6. Maintainance, piloting and feedback from existing deployments
   7. Go further/beside
 

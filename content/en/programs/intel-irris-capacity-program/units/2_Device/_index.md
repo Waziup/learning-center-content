@@ -64,6 +64,7 @@ Different versions are available on the market, with different features, most ar
 Note that in this pictures, the same type of Integrated Circuit (IC) is used: RF96. 
 I took from the datasheets the following tables summarizing frequency compatibilities:
 - for ICs:
+
 | IC Number | Frequency Range | Spreading Factor | Bandwidth | Effective Bitrate | Estimated Sensitivity |
 | --------- | --------------- | --- |--------------- |--------------- |--------------- |
 | RF96 | 137 - 1020 MHz | 6 - 12 | 7.8 - 500 kHz | .018 - 37.5 kbps | -111 to -148 dBm |
@@ -71,6 +72,7 @@ I took from the datasheets the following tables summarizing frequency compatibil
 | RF98 | 137 - 525 MHz | 6- 12 | 7.8 - 500 kHz | .018 - 37.5 kbps | -111 to -148 dBm |
 
 - for LoRa chipsets:
+
 | Chipset Number | Frequency Band | Spreading Factor | Bandwidth | Effective Bitrate | Estimated Sensitivity |
 | --------- | --------------- | --- |--------------- |--------------- |--------------- |
 | RFM95W | 868\915 MHz | 6 - 12 | 125 - 500 kHz | .293 - 37.5 kbps | -111 to -136 dBm |
@@ -102,56 +104,73 @@ Most of the needed components are listed here:
 Here a brief table summary:
 
 
-||for PCBv2|for PCBA|for Solar PCBA |
+||for PCBv2|for PCBA|for solar PCBA |
 |-----|--------|----------|----|
-|12-pin screw terminal block (green)|1 or 2|  | |
-|2-pin or 4-pin screw terminal block (green) | 1 || |
-|12-pin female header | 2 |||
-|RFM95W (868MHz) or RFM96W (433MHz)| 1 |||
-|SMA female PCB connector for 1.6mm PCB| 1 |||
-|Arduino ProMini, 3.3v 8MHz with 1 6-pin 90° and 2 12-pin male headers | 1 |1|1|
-|Pack of minimum 9 2.54mm male pin headers (1 4-pin, 1 3-pin, 1 2-pin) | | 1 | 1 |
+|12-pin screw terminal block (green)|1^ or 2| - | - |
+|2-pin or 4-pin screw terminal block (green) | 1 |-|- |
+|12-pin female header | 2 |-|-|
+|RFM95W (868&thinsp;MHz) or RFM96W (433&thinsp;MHz)| 1 |-|-|
+|SMA female PCB connector for 1.6&thinsp;mm PCB| 1 |-|-|
+|Arduino ProMini, 3.3&thinsp;V 8&thinsp;MHz with 1 6-pin 90° and 2 12-pin male headers | 1 |1|1|
+|Pack of minimum 9 2.54&thinsp;mm male pin headers (1 4-pin, 1 3-pin, 1 2-pin) | -| 1 | 1 |
 |ABS waterproof enclosure with screws and joint| 1 | 1| 1|
-|2-AA battery holder|1|1||
-|2 AA batteries 1.5V|1|1||
-|3AAA NiMh 1.2V rechargeable batteries|||1|
-|Mini solar panel 6 V 0.6 W 100 mA 60x90mm|||1|
-|Breadboard/Dupont cables | | 1 F-F | 2 F-F + 2 M-M |
-|switch with pre-soldered wires|1|1|1|
-|waterproof cap for the switch|1|1|1|
-|Cable gland PG7 (select PG7)|1|1|1|
-|nylon joint for pg7 (diameter 12.4)|1|1|1|
-|3dBi 868MHz or 3dBi 433MHz antenna|1|1|1|
-|Flat-face seal for outer antenna junction (6x11x0.8mm)|1|1|1|
-|1 4.7 kOhm*, 1 or 2 10kOhm** resistor |1||| 
-| 10 heat-shrink tubes to isolate wires***|1|||
-| 1 or 2 Two-paired screw terminals (dominos)**| 1 |1|1|
-| 1 or 2 15cm chunk of 2-joint-wire for irometer tensiometer**| 1 |1|1|
+|2-AA battery holder|1|1|-|
+|2 AA batteries 1.5&thinsp;V|1|1|-|
+|3 AAA NiMh 1.2&thinsp;V rechargeable batteries|-|-|1|
+|Mini solar panel 6&thinsp;V 0.6&thinsp;W 100&thinsp;mA 60x90&thinsp;mm|-|-|1|
+|Female (F) or male (M) tipped breadboard/Dupont cables^^ | -| 1 FF | 2 FF + 2 MM |
+|Switch with pre-soldered wires|1|1|1|
+|Waterproof cap for the switch|1|1|1|
+|Cable gland PG7 with nylon joint|1|1|1|
+|3&thinsp;dBi 868&thinsp;MHz or 3&thinsp;dBi 433&thinsp;MHz antenna|1|1|1|
+|Flat-face seal for outer antenna junction (6x11x0.8&thinsp;mm)|1|1|1|
+|1 4.7&thinsp;kOhm*, 1 or 2** 10&thinsp;kOhm resistor(s) |1|-|-| 
+| 10 heat-shrink tubes to isolate wires***|1|-|-|
+| 1 or 2 two-paired screw terminals (dominos)**| 1 |1|1|
+| 1 or 2 15&thinsp;cm chunks of 2-joint-wire for irometer tensiometer**| 1 |1|1|
 
+^for devices with a capacitive sensor only, see 2.ii\
+^^for solar PCBA devices, 2 jumper junctions can be used instead of the 2 FF jumper wires.\
 *for devices with temperature sensors, see 2.ii\
 ** for devices with 1 or 2 watermark sensors, see 2.ii\
 *** 2 tubes for each resistor's end wire
 
-
+[comment]: # "|Nylon joint for pg7 (diameter 12.4)|1|1|1|"
 
 For the device assembly, preparation and programming, you will also need: 
 - 1 USB Serial FTDI breakout 3.3V (and USB connector to laptop);
-- Solder station / soldering iron with thin solder wire;
-- tiny slotted (flat) screwdriver for the screw terminal blocks;
-- normal cruciform screwdriver;
-- drill for the plastic casing, with various bit size.
+- a solder station / soldering iron with thin solder wire;
+- a tiny slotted (flat) screwdriver for the screw terminal blocks;
+- a comon cruciform screwdriver;
+- a drill for the plastic casing, with 7&thinsp;mm and 13&thinsp;mm bits for metal, and a step bit could ease;
+- a flat cutter, a wire stripper/cutter, a needle-nose plier, etc.
 
+
+[comment]: # "8-12&thinsp;mm drill bit for old gw case"
 
 
 2.ii. Sensors
 =============
-bla
-SEN0308 capacitive soil sensor
-DS18B20 temperature sensor for soil temperature
-you will need a 4.7 kOhm resistor
-Irrometer Watermark water tension sensor
-you will need a resistor from 7kOhm to 14kOhm (we use 10kOhm)
-A set of heat-shrink tubes to isolate wires
+We selected in Intel-IrriS three sensors:
+- the *SEN0308 capacitive* soil sensor;
+- the *WM200 Irrometer Watermark* water tension sensor;
+- the *DS18B20 temperature sensor* for soil temperature.
+
+We further detail them and why we chose them.
+
+The three sensor types can be confirgured on the device, in the following combinations or *device type*:
+
+||C|W|CT|WT|2WT|
+|-|-|-|-|-|-|
+|SEN0308|1|-|1|-|-|
+|WM200|-|1|-|1|2|
+|DS18B20|-|-|1|1|1|
+
+The most common device type are C, WT and 2WT. 2WT is particularly helpfull to obtain information at two different depths in ground, giving insights of the water movements in the soil.
+
+
+
+[comment]: # "you will need a resistor from 7kOhm to 14kOhm (we use 10kOhm)"
 
 
 2.iii. Order it
