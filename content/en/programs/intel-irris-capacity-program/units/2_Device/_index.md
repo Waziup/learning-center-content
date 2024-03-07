@@ -168,9 +168,38 @@ The three sensor types can be confirgured on the device, in the following combin
 
 The most common device type are C, WT and 2WT. 2WT is particularly helpfull to obtain information at two different depths in ground, giving insights of the water movements in the soil.
 
+## 1. The *SEN0308 capacitive* soil sensor
+![Capacitive](img/SEN0308.jpeg)
 
+
+The cost of capacitive sensors is relatively low (especially when compared to TDR, -time domain reflectometry, probes), which makes it possible to instrument field with a low budget or (if keeping the same budget) by increasing the sensor's density in a given field.
+Moreover, their power consumption can be very low and some require low excitation voltages to operate (as low as 3 volts) which allows for a high autonomy with reasonable battery capacities. Finally, they are also relatively easy to install.
+
+The disadvantage of the capacitive method is that the signal is difficult to interpret in the absence of additional information, on the sensor itself and the characteristics of the environment, i.e. soil characteristics (mainly clay content) and the concentration of dissolved minerals. This disadvantage has been compensated in Intel-IrriS by allowing the user and the system to provide contextual information, particularly on soil types, and by recommending a calibration before use. 
+
+Two models of capacitive sensors built by the DFRobot company are commonly used at the moment: SEN0193 & SEN0308 which cost around 5 & 20 euros, respectively. Compared with the SEN0193 version, the SEN0308 sensor has increased waterproof performance; as it can still be used after being immersed in water according to DFRobot. With an increased plate length, the capacitive electrode plate has increased length (12cm approximately) to measure more accurately the soil moisture (in addition, the circuit performances are presented as optimized). Finally, the sensor has a wide input voltage (3.3V-5.5V) and is compatible with Arduino, ESP32, micro:bit, control board, Raspberry Pi and other common control boards.
+
+A complete report about the capacitve measurement method and about this sensor model can be found here:
+[Capcitive-KPIs-D3.6b](https://intel-irris.eu/wp-content/uploads/2023/09/D3.6b.pdf)
+
+More info on this sensor can be found here:
+[SEN0308-details](https://wiki.dfrobot.com/Waterproof_Capacitive_Soil_Moisture_Sensor_SKU_SEN0308)
+
+
+## 2. The *WM200 Irrometer Watermark* water tension sensor
+
+A nice description and basic code example here:
+[Watermark-WM200](../../../../resources/Sensors/Watermark/index.md); 
 
 [comment]: # "you will need a resistor from 7kOhm to 14kOhm (we use 10kOhm)"
+
+## 3. The *DS18B20 temperature sensor* for soil temperature
+
+A nice description and basic code example here:
+[DS18B20 temperature sensor](../../../../resources/Sensors/Temperature_DS18B20/index.md); 
+
+
+
 
 
 2.iii. Order it
