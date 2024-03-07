@@ -7,5 +7,6 @@ color: "#9ba9d1"
 tags:
     - Solar
     - Agriculture
+    - MVP-DIY-Kit
 ---
 

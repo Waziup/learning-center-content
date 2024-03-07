@@ -6,6 +6,7 @@ desc: Used for Lora communication
 color: "#acabd7"
 tags:
     - communication
+    - MVP-DIY-Kit
 ---
 
 # Introduction

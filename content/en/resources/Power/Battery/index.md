@@ -6,4 +6,5 @@ desc: Power, power, power!
 color: "#212121"
 tags:
     - Power
+    - MVP-DIY-Kit
 ---

@@ -4,7 +4,8 @@ title: OLED display
 type: actuator
 desc: An OLED small display screen
 color: "#a5d1ff"
-tags: []
+tags:
+  - MVP-DIY-Kit
 ---
 
 
