@@ -62,6 +62,7 @@ The 7 units of learning have the following structure:
    4. Build it
    5. Device's software
    6. Device debug
+   7. Device's Quizz
 ### Section Two - Data gathering
 3. About the Gateway
    1. Generic wazigate
