@@ -108,7 +108,66 @@ To send the data to the cloud, you can simply use a simple `curl` command or hav
 
 Create an index.html component for our app. Paste the code below:
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>MQTT-Waziup</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
 
+        body {
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            height: 100dvh  ;
+        }
+        .sensor-card {
+            padding: 0.5rem;
+            box-shadow: 0 0 12px 0 gray;
+            width: 22rem;
+            border-radius: 8px;
+            aspect-ratio: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: large;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="sensor-card">
+        <h1 id="sensor-id">Sensor</h1>
+        <article>
+            Received Value: <span id="val">---</span>
+        </article>
+    </div>
+</body>
+</html>
+
+_NB_ Use the compile js code in the script tag, you can use browserify to compile the js to work on browser
+
+```
+npm install browserify
+```
+
+```
+browserify main.js -o main.js
+```
 
 In the html elements we simply declare where the sensor values will be displayed.
 
@@ -127,31 +186,32 @@ Use this js code to listen to incoming data. Use script tag to import the code b
 const mqtt = require("mqtt");
 
 // Connect to mqtt client
-const mqttClient = mqtt.connect("mqtt://api.waziup.io")
+const mqttClient = mqtt.connect("mqtt://api.waziup.io");
 
 // Obtain the device and sensor ID from the wazicloud. Ensure you have devices set up already
 const deviceId = 'ESPDEVICE';
 const sensorId = 'TC';
 
 // Declare a topic (endpoint) where we want to listen update from
-const topic = `/devices/${deviceId}/sensors/${sensorId}/value`;
-
+const topic = `devices/${deviceId}/sensors/${sensorId}/value`;
 // When we are connected to the client, subscribe to the defined topic
 mqttClient.on("connect", ()=>{
     mqttClient.subscribe(topic, (error)=>{
         if (error) {
-            alert("Failed to connect MQTT")
+            console.log("Failed to connect MQTT");
         } else {
-            alert(`Connected to MQTT \nTopic: ${topic}`)
+            console.log(`Connected to MQTT \nTopic: ${topic}`);
         }
     })
 })
 
 // Update the UI when we receive data
 mqttClient.on("message", (receivedTopic, message)=>{
+    console.log("Received...")
     console.log("Topic: ", receivedTopic);
+    console.log(message);
+    document.getElementById("val").innerHTML = message.value
 })
-
 ```
 
 Before receiving any value, the UI could look like this without any populated value,
