@@ -743,10 +743,12 @@ To make API call to the wazicloud, we need to change the file at,
  `angular-waziup > src > app > app.component.ts`
 
 Lets install the dependency for making http request,
-``` npm install @angular/common
+``` 
+npm install @angular/common
 ```
 
 Let's now update the app.component.ts file
+
 ```ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
