@@ -56,13 +56,19 @@ The 7 units of learning have the following structure:
    3. Intel-IrriS structure
 ### Section One - Sensing
 2. Intel-IrriS Device
-   1. Device's hardware
-   2. Sensors
-   3. Order it   
-   4. Build it
-   5. Device's software
-   6. Device debug
-   7. Device's Quizz
+   1. Get the Device's components
+      1. Order the PCB
+      2. Order the sensors
+      3. Order the other parts
+   2. Build the Device
+   3. Program the Device
+   4. Debug the Device
+   5. Learn more info
+      1. PCB variants
+      2. Power consumption studies
+
+[comment]: # "   7. Device's Quizz"
+
 ### Section Two - Data gathering
 3. About the Gateway
    1. Generic wazigate

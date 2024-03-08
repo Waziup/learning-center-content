@@ -220,10 +220,11 @@ During the project, we provided some links to online webs that had available in 
 The provided web links to some vendors are only given as example. An actor willing to order the Intel-IrriS pieces should search from other vendors, available in her region, and catalog items or packs/offer that would allow to optimize cost at the time of ordering.
 
 You could walk the following steps:
-1. Parse the components table up [here](#4-list-of-components) according to the chosen quantity and type of PCB, and to the device type and sensors;
-2. Summarize your list of required material, according to your already available stock;
-3. Find the best vendors for your needed quantities and region;
-4. Prepare combined orders to reduce travel costs.
+1. Parse the components table up [here](#4-list-of-components) according to the chosen quantity and type of PCB, and to the device types and sensors;
+2. Summarize your list of required material, including the sensors, and according to your already available stock;
+3. Find the best vendors and offers for your needed quantities and region;
+4. Prepare combined orders of different pieces from the same vendors to reduce travel costs and delays;
+5. Make the orders :)
 
 [comment]: # "[here](../_index.md#4-list-of-components) or "
 
@@ -234,6 +235,13 @@ bla
 2.v. Device's software
 ======================
 bla
+
+[comment]: # "Il faut identifier les étapes que l'on va demander aux 'apprenants' de valider, et ce qu'ils faut qu'ils montrent ou vérifient. Par exemple: 'When flashing the ProMini with the INTEL-IRRIS code, what do you see in the Serial Monitor?'"
+
+[comment]: # "déjà, qu'ils arrivent bien à récupérer le code du github, à configurer l'arduino IDE, à sélectionner le bon board, ..."
+
+
+
 
 2.vi. Device's debug
 ====================

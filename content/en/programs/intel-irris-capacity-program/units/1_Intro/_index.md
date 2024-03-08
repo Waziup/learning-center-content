@@ -9,6 +9,10 @@ duration: 3h
 
 bla
 
+Dans l'intro, on peut présenter les objectifs du INTEL-IRRIS capacity building program en mentionnant que le déploiement de capteurs à faible coût en mode DIY généralement se heurte à des difficultés à réellement satisfaire les contraintes d'un déploiement réel. INTEL-IRRIS présente une solution qui a été éprouvée et testée.
+
+
+
 Intel-IrriS why/what for?
 =========================
 bla
