@@ -107,7 +107,7 @@ Note that instead of using `http`, we will be using `mqtt` protocal.
 To send the data to the cloud, you can simply use a simple `curl` command or have an active device on the gateway that streams the values to the cloud. In this task, we will be sending data using curl.
 
 Create an index.html component for our app. Paste the code below:
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,6 +158,7 @@ Create an index.html component for our app. Paste the code below:
     </div>
 </body>
 </html>
+```
 
 _NB_ Use the compile js code in the script tag, you can use browserify to compile the js to work on browser
 
