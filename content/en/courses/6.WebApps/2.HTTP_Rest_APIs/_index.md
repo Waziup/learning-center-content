@@ -160,7 +160,7 @@ It is good practice to use only plural for resource names:
 
 Even if you address a single resource, use plural. Your API will look more consistant.
 
-**GET method should not alter the state**
+## GET method should not alter the state
 
 Use PUT, POST and DELETE methods instead of the GET method to alter
 the state.
@@ -170,14 +170,14 @@ Do not use GET method or Query parameters for state changes:
 - Bad: `GET /users/711/activate`
 - Good: `PUT /users/711/activated` (with body data = `true` or `false`)
 
-**Use sub-resources for relations**
+## Use sub-resources for relations
 
 If you want to express a relation between two resources, you can use a subresource:
 
 - Returns a list of drivers for car 711: `GET /cars/711/drivers/`
 - Returns driver #4 for car 711: `GET /cars/711/drivers/4`
 
-**Use HTTP headers for serialization formats**
+## Use HTTP headers for serialization formats
 
 Both client and server need to know which format is used for the communication.
 The format has to be specified in the HTTP-Header:
@@ -189,7 +189,7 @@ You don't need to put the format on the URL:
 
 - Bad: `GET /data?format=json`
 
-**Versioning**
+## Versioning
 
 As your API becomes successful, more and more users will use it.
 However, you will want to be able to make changes to it, without impacting existing users.
@@ -203,7 +203,7 @@ Use a simple ordinal number and avoid dot notation such as 2.5.
 You can plan to make big releases with all breaking changes and update your version number at this time.
 For smaller, non breaking changes, you can just update your API without updating the version number.
 
-**Error handling**
+## Error handling
 
 To handle errors in your API, you can make an extensive use of HTTP error codes.
 Here are some interresting codes:
@@ -219,7 +219,7 @@ Here are some interresting codes:
 - 408 Request timeout
 - 500 Internal server error
 
-**Filtering**
+## Filtering
 
 When a big number of items can be returned, it's important to give the user the capacity to filter it.
 It can be done on a field by field basis:
@@ -235,13 +235,13 @@ GET /cars?q="color==!red&&mileage<100000"
 
 The request above search for cars than are not red and with a mileage of less than 100000Kms.
 
-**Sorting**
+## Sorting
 
 It is also usefule to allow ascending and descending sorting over some fields.
 For example, this request returns a list of cars sorted by ascending models:
 GET /cars?sort=model
 
-**Paging**
+## Paging
 
 Some requests could return a huge amount of data.
 You can use "paging" to return data little by little.
@@ -257,7 +257,7 @@ This command retrieve the first 100 cars. The next 100 can be retrieve by settin
 
 In this exercise we will be consuming wazicloud API. We will understand how to send `GET`, `PUT` and `POST` request using postman. We will also understand how to get access token for authentication using postman.
 
-**Prerequisites**
+## Prerequisites
 
 - Postman - You can download postman from [this](https://www.postman.com/) page or use an online version of postman
 - Wazicloud account - You need to have wazicloud account. You can set one from [this](https://dashboard.waziup.io/) page
@@ -265,7 +265,8 @@ In this exercise we will be consuming wazicloud API. We will understand how to s
 
 For more reference on using the API, you can find the complete documentation [here](https://api.waziup.io/docs)
 
-**Obtaining auth token**
+## Obtaining auth token
+
 The authentication endpoint receives a post request. The request contains body with username and password. The body is in json format. The token received will be in text format. We need to start postman, and head over to creating the request.
 
 The endpoint to obtain the request is,
@@ -275,6 +276,8 @@ https://api.waziup.io/api/v2/auth/token
 ```
 
 Paste the above url in the request input section. Remember to toggle the method to `POST`. Otherwise, you will receive an error, METHOD NOT ALLOWED.
+
+The following image shows how you should structure your request.
 
 ![auth-postman](./img/auth.png)
 
@@ -287,9 +290,13 @@ We need now to provide our login credentials before sending the request.
 }
 ```
 
+In postman, the body field should appear as below,
+
 ![credentials](./img/credentials.png)
 
 After issuing the correct credentials, we should receive our response along with the token. The token contains our credential information like username etc.
+
+The following image shows the expected response that contains the user auth token.
 
 ![token](./img/token.png)
 
@@ -307,28 +314,34 @@ Since we need to retrieve our devices only, add a query string with your usernam
 https://api.waziup.io/api/v2/devices?q=owner==username
 ```
 
-_NB_ Replace the username with the wazicloud username.
+<alert type='warning'>Replace the username with the wazicloud username</alert>
+
+You should receive a response containing your own devices as shown in the following image.
 
 ![devices](./img/devices.png)
 
-**Editing device**
+## Editing device
 Editing is normally a `PUT` request. Lets first retrieve the device we want to edit. Issue this `PUT` command in postman.
 
 ```
 https://api.waziup.io/api/v2/devices/DEVICE_ID
 ```
 
+The image below shows how you should structure your postman request.
+
 ![edit-device](./img/edit-device.png)
 
-_NB_ Supply the correct device id you want to retrieve
+<alert type='warning'>Supply the correct device id you want to retrieve</alert>
 
 To edit the device, you need to supply the auth token you obtained from `auth/token`.
 
-Under the body section, add the name of the device.
+Under the body section, add the name of the device as shown in the image below.
 
 ![edit-body](./img/edit-body.png)
 
 The request should return a 204 status. If you try retrieving the device once more, you get the device's name has been edited successfully.
+
+In the following picture, we can see the response status 204, showing that the device was edited successfully.
 
 ![rename-res](./img/rename-res.png)
 

@@ -89,7 +89,7 @@ In the event that the client goes offline, the broker stores all messages that t
 
 In this task, we will be building a simple MQTT application that listens to paticular sensor updates from the `wazicloud`.
 
-**Prerequisites**
+## Prerequisites
 
 To build the application, we will need the following setup
 
@@ -160,7 +160,7 @@ Create an index.html component for our app. Paste the code below:
 </html>
 ```
 
-_NB_ Use the compile js code in the script tag, you can use browserify to compile the js to work on browser
+<alert type='warning'>Use the compile js code in the script tag, you can use browserify to compile the js to work on browser</alert>
 
 ```
 npm install browserify
@@ -172,7 +172,7 @@ browserify main.js -o main.js
 
 In the html elements we simply declare where the sensor values will be displayed.
 
-**Subscribing to mqtt**
+## Subscribing to mqtt
 
 Install this mqtt library to facilitate the connection and subscription to the cloud.
 
@@ -217,6 +217,8 @@ mqttClient.on("message", (receivedTopic, message)=>{
 
 Before receiving any value, the UI could look like this without any populated value,
 
+The image below shows how the UI should appear before any data has been received.
+
 ![mqtt-empty](./img/mqtt1.png)
 
 Issue the curl command below to push a sensor to the wazicloud.
@@ -226,9 +228,12 @@ curl -X POST "https://api.waziup.io/api/v2/devices/ESPDEVICE/sensors/TC/value" -
 
 ```
 
-_NB_: Use the correct device id and sensor id.
+<alert type=warning>Use the correct device id and sensor id</alert>
 
-The UI should be automatically populated with the value you sent
+The UI should be automatically populated with the value you sent.
+
+Below is an image illustrating the outcome expected when data is send to the API.
+
 ![mqtt2](./img/mqtt2.png)
 
 # Exercise

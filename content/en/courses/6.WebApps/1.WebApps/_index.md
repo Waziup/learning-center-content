@@ -187,7 +187,7 @@ Bootstrap is a framework built on the top of HTML and CSS3, with some optional J
 It contains design templates for forms, buttons, tables, navigation, modals, image carousels...
 Here is a basic example for a [three collumns design](https://getbootstrap.com/docs/5.2/layout/grid/):
 
-**Responsive design**
+## Responsive design
 Before getting to understand how bootstrap and other styling works, we need to understand the concept of `responsive designs`. Responsive design is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction. The major categories of screen sizes are,
 
 - Extra-extra large screens (XXL)
@@ -198,13 +198,15 @@ Before getting to understand how bootstrap and other styling works, we need to u
 - Extra small screens
 - Extra-extra small screens
 
-When designing web pages, you have to account for each screen size. However, in most cases you will use at least 3 screen sizes. Below is an image describing the break points for common designs
+When designing web pages, you have to account for each screen size. However, in most cases you will use at least 3 screen sizes. Below is an image describing the break points for common designs.
+
+The image below shows various screen dimensions that are adopted in responsive design.
 
 ![alt text](./img/breakpoints.png)
 
 Bootstrap will take care of this by allocating respective columns in each screen size.
 
-**Installing bootstrap**
+## Installing bootstrap
 You can use a CDN to access bootstrap features. We will be using approach due to its flexibility. You can find other approaches in [this](https://getbootstrap.com/docs/5.3/getting-started/download/) installation tutorial.
 
 ```html
@@ -224,7 +226,7 @@ You can use a CDN to access bootstrap features. We will be using approach due to
 ></script>
 ```
 
-**Creating a responsive container using bootstrap**
+## Creating a responsive container using bootstrap
 Create a html skeleton file below. You can get this HTML boiler plate by typing `!` in the code editor. Let's first save the file as `index.html`.
 
 ```html
@@ -254,6 +256,10 @@ Create a html skeleton file below. You can get this HTML boiler plate by typing 
 We added the `link` and `script` tag in the file to use bootstrap classes.
 If you are using vs code, install a live server extension to view the changes we make to our index file.
 
+You can download the live server extension from vscode marketplace. 
+
+Successful download should appear as shown in the image below.
+
 ![Live server](./img/live-server.png)
 
 Add this content to the body context
@@ -277,6 +283,8 @@ Add this content to the body context
   </div>
 </div>
 ```
+
+The code above results to a responsive container as illustrated below,
 
 ![simple-dashboard](./img/simple-dashboard.png)
 
@@ -323,19 +331,29 @@ Finally, we add the response from the request to the t1,t2,t3 IDs.
 
 The images below demonstrates the responsiveness at different screen widths:
 
-**Desktop View**
+## Desktop View
+
+On desktop sizes where width is more that 1280px, the app appears as shown below.
 
 ![dashboard1](./img/dashboard1.png)
 
-**Tablet View**
+From the image above, the content in the card is stretched in a row.
+
+## Tablet View
+
+On tablets the container width was automatically adjusted to accomodated all the contents in it as shown below.
 
 ![dashboard2](./img/dashboard2.png)
 
-**Mobile View**
+## Mobile View
+
+On smaller devices having width less than 480px, the app appears as shown below.
 
 ![dashboard3](./img/dashboard3.png)
 
-Lets discuss the bootstrap classes used here
+It is evident that the cards shifted to column arrangement from the row arrangement in large screen sizes.
+
+The simple app developed uses various boostrap classes. These classes are explained in detail below.
 
 1. container - contain, pad, and align your content within a given device or viewport
 2. card - flexible container with borders and border radius
@@ -344,9 +362,6 @@ Lets discuss the bootstrap classes used here
 5. p-2 - Add padding 2px
 6. shadow - Adding a box shadow
 7. col - width specifiers for rows
-
-In this example, Bootstrap provides the definitions of CSS classes "row" and "col-sm-4".
-Bootstrap is reactive by default, so your web page will look good on any screen size.
 
 # Exercise 1.0 - Bootstrap
 
@@ -557,7 +572,7 @@ Angular is also has a system of Modules, Components, and Services.
 In this task, we will fetch data from `https://api.waziup.io/api/v2/devices` and populate the data on cards.
 We need to have a [Wazicloud](https://dashboard.waziup.io/) account with devices already created by now. The API we will use can be found in this [documentation](https://api.waziup.io/docs)
 
-**Installing Angular**
+## Installing Angular
 
 Follow the steps to set angular cli in your machine. You can use the Angular CLI to create projects, generate application and library code, and perform a variety of ongoing development tasks such as testing, bundling, and deployment.
 
@@ -583,6 +598,8 @@ ng serve --open
 The `ng serve` command launches the server, watches your files, and rebuilds the app as you make changes to those files. The `--open` (or just -o) option automatically opens your browser to [localhost](http://localhost:4200/) at http://localhost:4200/.
 
 ![angular-waziup](./img/angular-waziup.png)
+
+The above image shows an angular application running locally on the browser.
 
 In the next step we will create the html cards that we will populate it with the data we query from the API.
 First things first, we should locate the main file. The main file is located at `angular-waziup > src > app > app.component.html`
@@ -737,7 +754,7 @@ Paste the components html templates and the main template should look like the o
 </main>
 ```
 
-**Fetching devices from Wazicloud and displaying it on cards**
+## Fetching devices from Wazicloud and displaying it on cards
 
 To make API call to the wazicloud, we need to change the file at,
  `angular-waziup > src > app > app.component.ts`
@@ -795,7 +812,9 @@ export class AppComponent implements OnInit {
 Take note to replace the username with your wazicloud username
 </alert>
 
-You can head over to http://localhost:4200/ to view the changes,
+You can head over to http://localhost:4200/ to view the changes.
+
+The container below shows the fetched devices from the wazicloud API
 
 ![ui-angular](./img/ui-angular.png)
 
@@ -835,7 +854,7 @@ HTML:
 
 You can note that the templating system is similar with Angular with the `{{ count }}`.
 
-**Vue Installation**
+## Vue Installation
 
 In this task, we will only setup the vue environment for you. This will kickstart you in working on the exercise. We need to first install the `vue cli` using the command,
 
@@ -855,11 +874,11 @@ Run the following command to start the vue project on a development server.
 npm run serve
 ```
 
-Vue CLI will compile your project and provide you with a [local](http://localhost:8080/) URL, http://localhost:8080/, where you can view your application in the browser.
+Vue CLI will compile your project and provide you with a [local](http://localhost:8080/) URL, http://localhost:8080/, where you can view your application in the browser as shown in the following picture.
 
 ![vue-app](./img/vue-app.png)
 
-**Customizing your project**
+## Customizing your project
 Now that you have your project up and running, it’s time to customize it and start building your Vue application. Here are a few key areas you can explore:
 
 - `Components` - Create reusable components to build the user interface of your application.
