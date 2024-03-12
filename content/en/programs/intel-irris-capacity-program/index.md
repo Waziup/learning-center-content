@@ -58,8 +58,9 @@ The 7 units of learning have the following structure:
 2. Intel-IrriS Device
    1. Get the Device's components
       1. Order the PCB
-      2. Order the sensors
-      3. Order the other parts
+      2. Choose the radio chipsets and antennas
+      3. Choose the sensors
+      4. Order all the parts
    2. Build the Device
    3. Program the Device
    4. Debug the Device
