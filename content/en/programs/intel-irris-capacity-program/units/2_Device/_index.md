@@ -21,9 +21,9 @@ The casing is waterproof and shelters the core microprocessor, on an Arduino boa
 ================================
 Different versions of the device exist with different hardware parts. Two developments took place during the project, the Off-the-shelf Waziup design and the DIY UPPA/IRD design. Different versions have been made available at different times of the project.
 
-In this program, we will mainly focus on the most recently updated DIY PCB: the IRD PCBA v4.1. With it we have simplified the assembly work, and we have included the possibility to autonomously work with a solar panel.
+In this program, we will mainly focus on the most recently updated DIY PCB: the IRD PCBA v4.1. The development approach has been tackling every encountered obstacle both regarding the needed features and the technical challenges. We have simplified the assembly work, and we have included the possibility to autonomously work with a solar panel.
 
-Let's focus on PCBs, radio chipsets, antennas, solar panels, and other chosen components.
+Let's focus on PCBs, radio chipsets, antennas, solar panels, and the other chosen components.
 
 ## 1. Order The PCB
 ### a. IRD PCBA v4.1, IRD/UPPA's design [this is the current version]
@@ -36,11 +36,15 @@ TODO!
 
 
 ## 2. Choose the radio chipsets and antennas
-The take-away message here is that the allowed frequency band for the LoRa radio communications differs according to local regulations. The band is centered around: 
+[comment]: # "The take-away message here is that "
+
+Before choosing these elements, it is important to note that the allowed frequency band for the LoRa radio communications differs according to local regulations. The band is centered around: 
    1. In Europe: 868 MHz;
    2. In most of the African Countries, e.g. Algeria: 433 Mhz; 
    3. In other regions: 915MHz;
    4. Traffic is usually allowed on the Wi-Fi band: 2.4 GHz.
+
+The radio chipset, the antenna, and the software are frequency dependent. 
 
 ### a. Radio chipsets
 In Intel-IrriS, we chose two radio modules that are common and easy to find on the market:
@@ -88,7 +92,7 @@ We selected in Intel-IrriS three sensors:
 
 We further detail them and why we chose them.
 
-The three sensor types can be confirgured on the device, in the following combinations or *device type*:
+The three sensor types can be attached to and confirgured on the devices, in the following combinations or *device type*:
 
 ||C|W|CT|WT|2WT|
 |-|-|-|-|-|-|
@@ -96,7 +100,9 @@ The three sensor types can be confirgured on the device, in the following combin
 |WM200|-|1|-|1|2|
 |DS18B20|-|-|1|1|1|
 
-The most common device type are C, WT and 2WT. 2WT is particularly helpful to obtain information at two different depths in ground, giving insights of the water movements in the soil.
+The most common device type are the Capacitive (C), the Watermark & Temperature (WT) and the 2 Watermarks & Temperature (2WT). 2WT is particularly helpful to obtain information at two different depths in ground, giving insights of the water movements in the soil.
+
+TODO: SCHEMA
 
 ### a. The *SEN0308 capacitive* soil sensor
 ![Capacitive](img/SEN0308.jpeg)
