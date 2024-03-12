@@ -346,11 +346,19 @@ Design a circuit with an LED that has a maximum current requirement of 10mA. The
 **Expected Outcome**
 - Use Ohm's law to determine the appropriate resistance required for an LED with a given maximum current and voltage supply.
 
+- Build the circuit after working out the resistance required.
+
 What you need:
 
 - Calulator
 - Sheet of paper
 - Pen/Pencil
+- Breadboard
+- 3v power source(two AA batteries, bench power supply)
+- Battery holder(if you choose batteries as your power source)
+- Jumper wires
+- LED(choose which ever color works for you)
+- A few resistors with different values, to try out different configurations
 
 **What to keep in mind**
 
@@ -364,8 +372,6 @@ What you need:
 - Double-check connections to prevent short circuits.
 - Use appropriate gear. Safety first!
 
-**Fun Part**: you can also build this circuit in reality to experience how it works. You will however need an AA battery holder, an LED, a few resistors with different values, breadboard and jumper wires.
-
 Exercise 2: Voltage Divider Calculation
 ==============
 
@@ -373,6 +379,8 @@ Exercise 2: Voltage Divider Calculation
 Hey there! Ready to dive into some real circuit action? Awesome! Let's create a voltage divider circuit using two resistors, one with a resistance of 1k ohm and the other with 2.2k ohms. Our power source is a 5V battery.
 
 Now, the exciting part, your job is to calculate the voltage output across the second resistor! Trust me, it's not as complicated as it sounds.
+
+![exercise](img/exercise2.png)
 
 **Expected Outcome:**
 By the end of this exercise, you'll be the master of voltage dividers. You should be able to confidently determine the output voltage in a circuit with different resistor values and a multimeter to confirm the output.
@@ -383,13 +391,13 @@ By the end of this exercise, you'll be the master of voltage dividers. You shoul
 - Digital/Analog Multimeter
 - Breadboard
 - 5v power source
-- 1kΩ and 2.2kΩ Resistor
+- 1kΩ and 2.2kΩ Resistor(you can have a few extra resistors with different values, to try out different configurations)
 - Jumper wires
 
 **What to keep in mind:**
 - You've got this! Remember the voltage divider equation:
 
-	![exercise](img/exercise2.png)
+	![exercise](img/volt_div_equ.png)
 
 - Think about how changing resistor values affects the output voltage.
 
