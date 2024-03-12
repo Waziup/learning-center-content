@@ -8,6 +8,7 @@ tags:
     - Agriculture
     - City
     - Industry
+    - MVP-DIY-Kit
 ---
 
 # Introduction
