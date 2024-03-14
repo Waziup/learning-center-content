@@ -1,18 +1,18 @@
 ---
 id: wb-9
-name: Preparation for the Physical Event
-desc: Online session for closing the platform training 
-delay_start: 1d
-from: 2024-03-25
+name: 'Introduction to Unit 5: Business development'
+desc: Online session on entrepreneurship
+delay_start: 8w
+from: 2024-05-28
 ---
 
 **Online Webinar**
 
-March 25th, 2024
-10:00 AM, Central European Time.
+March 28th, 2024
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Last check on all the details for travelling
-- Closing the platform training 
+- LPresentation of the Unit 5: Business development 
+- Q/A session 

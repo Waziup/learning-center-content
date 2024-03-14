@@ -1,15 +1,15 @@
 ---
 id: wb-2
-name: 'The Solution Lab Box: Deploying the MVP kit'
-desc: Introductory meeting oon waziup technologies and ecosystem.
-delay_start: 1d
-from: 2024-03-01
+name: Introduction to Unit 2 (WAZIUP Technologies) 
+desc: Introductory meeting on waziup technologies and ecosystem.
+delay_start: 1w
+from: 2024-04-09
 ---
 
 **Online Webinar**
 
-March 1st, 2024  
-10:00 PM, Central European Time.
+April 9th, 2024  
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 

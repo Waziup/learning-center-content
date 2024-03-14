@@ -14,7 +14,6 @@ courses:
   - id: wireless_essentials_course
   - id: wifi_dev_course
   - id: radio_comm_course
-  
 ---
 
 <!-- ![hardware](img/hardware.jpg) -->

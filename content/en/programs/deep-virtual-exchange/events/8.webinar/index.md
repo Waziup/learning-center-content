@@ -1,21 +1,18 @@
 ---
 id: wb-8
-name: Preparation of the IoT certification course 
-desc: Online session to enforce IoT Programs in locals
-delay_start: 1d
-from: 2024-03-22
+name: Developing the GIPs 
+desc: Online session to enforce global innovtion projetcs
+delay_start: 7w
+from: 2024-05-21
 ---
 
 **Online Webinar**
 
-March 22nd, 2024
-10:00 AM, Central European Time.
+May 21st, 2024
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Prerequisites
-- Target group definition
-- Promotion strategies 
-- Integration in the WaziLab
-- Webinars with split groups: 3 rooms will be created.
+- Teams work on the GIPs. Utilize the lessons that have been previously given.
+- Q&A Session 

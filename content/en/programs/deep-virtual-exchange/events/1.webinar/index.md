@@ -1,19 +1,21 @@
 ---
 id: wb-1
-name: Introduction to the WAZILAB platform & Unit 1 (Hardware & communications)
-desc: Hands-on session on hardware and communication concepts.
-delay_start: 0d
-from: 2024-02-26
+name: Onboarding & Kick-off
+desc: Welcome & Introduction to the Wazilab Platform
+delay_start: 0w
+from: 2024-04-02
 ---
 
 Online Webinar
 
-February 26th, 2024  
-10:00 AM, Central European Time.
+April 2nd, 2024  
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- introduction of the WaziLab platform.
-- Presentation of the first Unit (Hardware and communications)
-- Q/A session
+- Welcome & Introduction 
+- Mission and Vision 
+- Introduction of the WaziLab platform. 
+- Presentation of Unit 1 (Hardware and communications) 
+- Q/A session 
