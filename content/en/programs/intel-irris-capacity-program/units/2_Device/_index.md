@@ -23,16 +23,18 @@ Different versions of the device exist with different hardware parts. Two develo
 
 In this program, we will mainly focus on the most recently updated DIY PCB: the IRD PCBA v4.1. The development approach has been tackling every encountered obstacle both regarding the needed features and the technical challenges. We have simplified the assembly work, and we have included the possibility to autonomously work with a solar panel.
 
-Let's focus on PCBs, radio chipsets, antennas, solar panels, and the other chosen components.
+Let's focus on PCBs, radio chipsets, antennas, sensors solar panels, and the other chosen components.
 
 ## 1. Order The PCB
-### a. IRD PCBA v4.1, IRD/UPPA's design [this is the current version]
+### IRD PCBA v4.1, IRD/UPPA's design [this is the current version]
 ![PCBA](img/PCBA.png)
 More info:
 [IRD PCBA v4.1](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcba-ird-v41)
 
+Watch our PDF tutorial, [here](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-PCB-update-PCBA.pdf), and our video tutorial:
 
-TODO!
+[comment]: # "<youtube>ueNRfBzCXiU</youtube>"
+[![Video PCB order howto](img/you_order_PCB.png)](http://www.youtube.com/watch?v=ueNRfBzCXiU "Video PCB Order Howto")
 
 
 ## 2. Choose the radio chipsets and antennas
@@ -102,7 +104,7 @@ The three sensor types can be attached to and confirgured on the devices, in the
 
 The most common device type are the Capacitive (C), the Watermark & Temperature (WT) and the 2 Watermarks & Temperature (2WT). 2WT is particularly helpful to obtain information at two different depths in ground, giving insights of the water movements in the soil.
 
-TODO: SCHEMA
+![Device types](img/devtypes.png)
 
 ### a. The *SEN0308 capacitive* soil sensor
 ![Capacitive](img/SEN0308.jpeg)
@@ -153,7 +155,7 @@ Again, since the addition of a solar panel make the device's assembly more compl
 Most of the needed components are listed here:
 [hardware-parts](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-IrriS-low-cost-sensor-hardware-parts.pdf)
 
-Here a brief table summary for the PCBA:
+Here a brief table summary for the PCBA, with and without a solar panel:
 
 
 ||for PCBA|for solar PCBA |
@@ -162,7 +164,7 @@ Here a brief table summary for the PCBA:
 |Pack of minimum 9 2.54&thinsp;mm male pin headers (1 4-pin, 1 3-pin, 1 2-pin) | 1 | 1 |
 |ABS waterproof enclosure with screws and joint| 1 | 1|
 |2-AA battery holder|1|-|
-|2 AA batteries 1.5&thinsp;V|1|-|
+|2 AA **heavy duty** batteries 1.5&thinsp;V|1|-|
 |3 AAA NiMh 1.2&thinsp;V rechargeable batteries|-|1|
 |Mini solar panel 6&thinsp;V 0.6&thinsp;W 100&thinsp;mA 60x90&thinsp;mm|-|1|
 |Female (F) or male (M) tipped breadboard/Dupont cables^^ | 1 FF | 2 FF + 2 MM |
@@ -178,7 +180,7 @@ Here a brief table summary for the PCBA:
 |15&thinsp;cm chunks of 2-joint-wire for irometer tensiometer| 1 or 2** |1 or 2**|
 
 ^^for solar PCBA devices, 2 jumper junctions can be used instead of the 2 FF jumper wires.\
-**2 for 2WTs.\
+**2 for 2WT devices, otherwise 1.
 
 
 [comment]: # "|Nylon joint for pg7 (diameter 12.4)|1|1|1|"
@@ -203,7 +205,7 @@ During the project, we provided some links to online webs that had available in 
 The provided web links to some vendors are only given as example. An actor willing to order the Intel-IrriS pieces should search from other vendors, available in her region, and catalog items or packs/offer that would allow to optimize cost at the time of ordering.
 
 You could walk the following steps:
-1. Parse the components table up [here](#4-list-of-components) according to the chosen quantity and type of PCB, and to the device types and sensors;
+1. Parse this components table according to the chosen quantity and types of device, power supply, and to the sensors;
 2. Summarize your list of required material, including the sensors, and according to your already available stock;
 3. Find the best vendors and offers for your needed quantities and region;
 4. Prepare combined orders of different pieces from the same vendors to reduce travel costs and delays;
@@ -250,58 +252,38 @@ More info:
 More info:
 [UPPA PCB v2](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcb-v2)
 
+#### List of additional components for this PCBv2
+
+||for PCBv2|
+|--------------|----|
+|12-pin screw terminal block (green)|1^ or 2|
+|2-pin or 4-pin screw terminal block (green) | 1 |
+|12-pin female header | 2 |
+|RFM95W (868&thinsp;MHz) or RFM96W (433&thinsp;MHz)| 1 |
+|SMA female PCB connector for 1.6&thinsp;mm PCB| 1 |
+|1 4.7&thinsp;kΩ*, 1 or 2** 10&thinsp;kΩ resistor(s) |1|
+|10 heat-shrink tubes to isolate wires***|1|
+
+^for devices type C (with a capacitive sensor only), see [2.i.3](#3-choose-the-sensors)\
+*for devices with temperature sensors, see [2.i.3](#3-choose-the-sensors)\
+**for devices with 1 or 2 watermark sensors, see [2.i.3](#3-choose-the-sensors)\
+***2 tubes for each resistor's end wire.
+
+[comment]: # "|Nylon joint for pg7 (diameter 12.4)|1|1|1|"
+
+[comment]: # "This table confirms the fact that the PCBA, as compared with the PCBv2, has reduced the complexity of the assembly, and for a start, the ΩΩΩΩΩΩΩΩΩΩΩΩ"
+
 ### c. UPPA PCB RAK3172 v1, UPPA's design [this version is not the common one]
 ![PCB Rak](img/PCB-rak-v1.png)
 More info:
 [UPPA PCB RAK3172 v1](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcb-rak3172-v1)
 
-### d. IRD PCBA v4.1, IRD/UPPA's design [this is the current version]
-![PCBA](img/PCBA.png)
+### d. IRD PCB v4.1, IRD/UPPA's design [this is the raw (non assembled) current version]
+![PCB41top](https://github.com/CongducPham/PRIMA-Intel-IrriS/raw/main/images/ird-pcb-4-1-raw-top.png)
+![PCB41bottom](https://github.com/CongducPham/PRIMA-Intel-IrriS/raw/main/images/ird-pcb-4-1-raw-bottom.png)
 More info:
-[IRD PCBA v4.1](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcba-ird-v41)
+[IRD PCBA v4.1](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcb-ird-v41)
 
-
-### b. List of components
-Most of the needed components are listed here:
-[hardware-parts](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-IrriS-low-cost-sensor-hardware-parts.pdf)
-
-Here a brief table summary:
-
-
-||for PCBv2|for PCBA|for solar PCBA |
-|-----|--------|----------|----|
-|12-pin screw terminal block (green)|1^ or 2| - | - |
-|2-pin or 4-pin screw terminal block (green) | 1 |-|- |
-|12-pin female header | 2 |-|-|
-|RFM95W (868&thinsp;MHz) or RFM96W (433&thinsp;MHz)| 1 |-|-|
-|SMA female PCB connector for 1.6&thinsp;mm PCB| 1 |-|-|
-|Arduino ProMini, 3.3&thinsp;V 8&thinsp;MHz with 1 6-pin 90° and 2 12-pin male headers | 1 |1|1|
-|Pack of minimum 9 2.54&thinsp;mm male pin headers (1 4-pin, 1 3-pin, 1 2-pin) | -| 1 | 1 |
-|ABS waterproof enclosure with screws and joint| 1 | 1| 1|
-|2-AA battery holder|1|1|-|
-|2 AA batteries 1.5&thinsp;V|1|1|-|
-|3 AAA NiMh 1.2&thinsp;V rechargeable batteries|-|-|1|
-|Mini solar panel 6&thinsp;V 0.6&thinsp;W 100&thinsp;mA 60x90&thinsp;mm|-|-|1|
-|Female (F) or male (M) tipped breadboard/Dupont cables^^ | -| 1 FF | 2 FF + 2 MM |
-|Switch with pre-soldered wires|1|1|1|
-|Waterproof cap for the switch|1|1|1|
-|Cable gland PG7 with nylon joint|1|1|1|
-|3&thinsp;dBi 868&thinsp;MHz or 3&thinsp;dBi 433&thinsp;MHz antenna|1|1|1|
-|Flat-face seal for outer antenna junction (6x11x0.8&thinsp;mm)|1|1|1|
-|1 4.7&thinsp;kΩ*, 1 or 2** 10&thinsp;kΩ resistor(s) |1|-|-| 
-| 10 heat-shrink tubes to isolate wires***|1|-|-|
-| 1 or 2 two-paired screw terminals (dominos)**| 1 |1|1|
-| 1 or 2 15&thinsp;cm chunks of 2-joint-wire for irometer tensiometer**| 1 |1|1|
-
-^for devices with a capacitive sensor only, see 2.ii\
-^^for solar PCBA devices, 2 jumper junctions can be used instead of the 2 FF jumper wires.\
-*for devices with temperature sensors, see 2.ii\
-** for devices with 1 or 2 watermark sensors, see 2.ii\
-*** 2 tubes for each resistor's end wire
-
-[comment]: # "|Nylon joint for pg7 (diameter 12.4)|1|1|1|"
-
-[comment]: # "This table confirms the fact that the PCBA, as compared with the PCBv2, has reduced the complexity of the assembly, and for a start, the ΩΩΩΩΩΩΩΩΩΩΩΩ"
 
 
 ## 2. Power consumption studies
