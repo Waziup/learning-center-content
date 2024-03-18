@@ -161,7 +161,7 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 ||for PCBA|for solar PCBA |
 |-----|--------|----------|
 |Arduino ProMini, 3.3&thinsp;V 8&thinsp;MHz with 1 6-pin 90° and 2 12-pin male headers | 1 |1|
-|Pack of minimum 9 2.54&thinsp;mm male pin headers (1 4-pin, 1 3-pin, 1 2-pin) | 1 | 1 |
+|Pack of minimum 5 2.54&thinsp;mm male pin headers (1 3-pin, 1 2-pin) | 1 | 1 |
 |ABS waterproof enclosure with screws and joint| 1 | 1|
 |2-AA battery holder|1|-|
 |2 AA **heavy duty** batteries 1.5&thinsp;V|1|-|
@@ -216,7 +216,99 @@ You could walk the following steps:
 
 2.ii. Build the Device
 ==============
-bla
+
+Now that you have all the pieces recieved, let's detail the following steps to put all together and build the device:
+
+[comment]: # "2. Solder a 4-pin on H2 (if not already done);"
+1. Drill the case for the cable gland, the switch, the antenna, (the solar panel);  
+2. Install the case waterproof joint;
+3. Install the cable gland;
+4. Install the switch;
+5. connect the switch and the battery holder to the PCB;
+6. connect the sensors' wires to the PCB;
+7. (Solder 2 MM wires to the solar panel and connect them to the PCB);
+8. Connect H2 pins according to battery type;
+9. Connect the antenna.
+
+The following and last three steps should be done after next section (programming the Arduino): 
+
+10. Place the Arduino and test a transmission using a serial connection;
+11. Place the batteries in the holder and test;
+12. Close the case.
+
+[comment]: # "stick an Intel-IrriS tag on the case "
+
+
+
+
+A complete bunch of detailed material has been made available all along the project, for this section two items are very important:
+
+1. the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf): the Tutorial slides on building the INTEL-IRRIS IoT platform. Part 1: soil sensor device. Focus on the latest IRD PCBv4.1. This tutorial has been updated to focus on the latest IRD PCBv4.1;
+[![PCBv4-PCBA.pdf](img/tuto_PCBv4-PCBA.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf)
+2. the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk): the YouTube tutorial video showing how to build the outdoor LoRa IoT soil sensor device.  
+[![Video Build Device](img/you_build_dev.png)](https://youtu.be/zcazzDbXvHk?start=0&end=380 "Video Build Device Howto")
+
+[comment]: # "[![Video Build Device](img/you_build_dev.png)](https://www.youtube.com/v/zcazzDbXvHk?start=0&end=380&autoplay=1 "
+
+[comment]: # "=>6:20"
+
+## 1. Drill the case for the cable gland, the switch, the antenna, (the solar panel);  
+The following dimensions are given for an IP65 box which dimension is 115 x 65 x 40&thinsp;mm.
+
+**Choose** one side of the case for the cable gland and the switch. Leave the other for the SMA connector (antenna).
+Use drilling bits for metal (not for wood nor concrete).
+
+**Measure** and prepare the following distances from the flat side of the case, since its corners are rounded.
+
+||from left edge:|from right edge:|from outside bottom edge:|drill bit:|
+|--|--|--|--|--|
+|SMA connector|-|27&thinsp;mm***|11&thinsp;mm***|7&thinsp;mm|
+|Switch|-|20&thinsp;mm|9&thinsp;mm|7&thinsp;mm|
+|Cable gland|-|41&thinsp;mm|9&thinsp;mm|13&thinsp;mm*|
+|Solar panel|-|-|-|10 to 12&thinsp;mm**|
+
+*it is recommended to use a step drill bit to first get a 12mm hole before using the 13mm drill bit.\
+**in the center of the case's cover.\
+***these dimensions have been updated for the latest PCBA and enable to place three AAA batteries with their holder under the PCB. The video [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk) mentions a 28 x 9&thinsp;mm compatible with the older PCBv2.
+
+
+**Remove** unwanted plastic part with a flat cutter and/or a small plier for instance, and smooth the inside part of the case to make the interface the most waterproof possible.
+
+
+More info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 35-43.
+
+More info in the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk):
+[![Video Drill Device](img/you_drill_dev.png)](https://youtu.be/zcazzDbXvHk?start=72&end=305 "Video Drill Device Howto")
+
+[comment]: # "1:12 - 5:05"
+
+## 2. Install the case waterproof joint;
+## 3. Install the cable gland;
+44
+5:05-5:43
+## 4. Install the switch;
+44
+5:43
+## 5. connect the switch and the battery holder to the PCB;
+17-25
+## 6. connect the sensors' wires to the PCB;
+18
+21
+## 7. (Solder 2 MM wires to the solar panel and connect them to the PCB);
+27-28-29
+## 8. Connect H2 pins according to battery type;
+26
+## 9. Connect the antenna.
+44-46
+## 10. Place the Arduino and test a transmission using a serial connection;
+See next section.
+31
+## 11. Place the batteries in the holder and test;
+See next section.
+## 12. Close the case.
+Check that the switch, the antenna, and the cable gland are tightly screwed to the case;
+Then just screw down the case cover. Make sure all the wires are inside the case so that they suffer no damage at closing the case. 
+
 
 2.iii. Program the Device
 ======================
