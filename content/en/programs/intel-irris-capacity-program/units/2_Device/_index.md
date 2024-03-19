@@ -313,7 +313,10 @@ For the watermarks, it is recommended to add a domino connector in order to be a
 
 More info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 18-21.
 ## 6. (Solder 2 MM wires to the solar panel and connect them to the PCB);
-27-28-29
+This step is only necessary for devices with a Solar pannel. The point to note here is that since the cover is drilled you need to renforce the protection against water by completely gluing the solar panel perimeter and center on it.
+
+Follow the recommendations on [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 27-29.
+
 ## 7. Connect H2 pins according to battery type;
 26
 ## 8. Connect the antenna.
