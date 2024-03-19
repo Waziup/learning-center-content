@@ -222,23 +222,20 @@ Now that you have all the pieces recieved, let's detail the following steps to p
 [comment]: # "2. Solder a 4-pin on H2 (if not already done);"
 1. Drill the case for the cable gland, the switch, the antenna, (the solar panel);  
 2. Install the case waterproof joint;
-3. Install the cable gland;
-4. Install the switch;
-5. connect the switch and the battery holder to the PCB;
-6. connect the sensors' wires to the PCB;
-7. (Solder 2 MM wires to the solar panel and connect them to the PCB);
-8. Connect H2 pins according to battery type;
-9. Connect the antenna.
+3. Install the switch and cable gland;
+4. Connect the switch and the battery holder to the PCB;
+5. Connect the sensors' wires to the PCB;
+6. (Solder 2 MM wires to the solar panel and connect them to the PCB);
+7. Connect H2 pins according to battery type;
+8. Connect the antenna.
 
 The following and last three steps should be done after next section (programming the Arduino): 
 
-10. Place the Arduino and test a transmission using a serial connection;
-11. Place the batteries in the holder and test;
-12. Close the case.
+9. Place the Arduino and test a transmission using a serial connection;
+10. Place the batteries in the holder and test;
+11. Close the case.
 
 [comment]: # "stick an Intel-IrriS tag on the case "
-
-
 
 
 A complete bunch of detailed material has been made available all along the project, for this section two items are very important:
@@ -283,29 +280,50 @@ More info in the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk):
 [comment]: # "1:12 - 5:05"
 
 ## 2. Install the case waterproof joint;
-## 3. Install the cable gland;
-44
-5:05-5:43
-## 4. Install the switch;
-44
-5:43
-## 5. connect the switch and the battery holder to the PCB;
-17-25
-## 6. connect the sensors' wires to the PCB;
-18
-21
-## 7. (Solder 2 MM wires to the solar panel and connect them to the PCB);
+Just place it in the case groove and adjust its size to the perimeter.
+![Case joint](img/case_joint.png)
+
+
+## 3. Install the switch and cable gland;
+The joint (red arrow in figure) for the cable gland is optional but recommended. Do not close the cable gland with its hat, because it would bend its teeth, ensuring imperviousness, before passing cables through it.
+
+The switch has a water-proof rubber cap which should be carefully tightened. The inner nut between the switch box and the case (green) allows to tighten the switch correctly. 
+
+Check the switch is correctly placed. The pin closest to the cable gland is not connected, the switch is open when pointing away from the gland, closed (ON) when pointing to the cable gland.
+
+![Switch and Cable Gland](img/install_switch_pg7.png)
+
+
+
+More info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slide 44.
+
+More info in the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk):
+[![Video Switch Cable Gland](img/you_switch_pg7.png)](https://youtu.be/zcazzDbXvHk?start=305&end=385 "Video Switch Cable Gland Howto")
+
+
+## 4. Connect the switch and the battery holder to the PCB;
+Both battery holder and switch have their dedicated screwed connector on the PCB: [![PCBv4-PCBA.pdf](img/connect_switch_bat.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf)
+
+## 5. Connect the sensors' wires to the PCB;
+Pass the wire through the cable gland and screw them to their dedicated slot on the PCB:
+![Plug the Sensors](img/plug_sensors.png)
+
+For the watermarks, it is recommended to add a domino connector in order to be able to change the sensor without openning the case and unscrewing the cables inside.
+![Watermarks wiring](img/wire_watermarks.png)
+
+More info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 18-21.
+## 6. (Solder 2 MM wires to the solar panel and connect them to the PCB);
 27-28-29
-## 8. Connect H2 pins according to battery type;
+## 7. Connect H2 pins according to battery type;
 26
-## 9. Connect the antenna.
+## 8. Connect the antenna.
 44-46
-## 10. Place the Arduino and test a transmission using a serial connection;
+## 9. Place the Arduino and test a transmission using a serial connection;
 See next section.
 31
-## 11. Place the batteries in the holder and test;
+## 10. Place the batteries in the holder and test;
 See next section.
-## 12. Close the case.
+## 11. Close the case.
 Check that the switch, the antenna, and the cable gland are tightly screwed to the case;
 Then just screw down the case cover. Make sure all the wires are inside the case so that they suffer no damage at closing the case. 
 
