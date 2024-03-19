@@ -1,14 +1,14 @@
 ---
 id: wb-2
-name: Introduction to Unit 2 (WAZIUP Technologies) 
-desc: Introductory meeting on waziup technologies and ecosystem.
-delay_start: 1w
-from: 2024-04-09
+name: Deploying the Solution Lab Box at Universities 
+desc: Introductory meeting on Waziup Solution Kitbox.
+delay_start: 0w
+from: 2024-04-18
 ---
 
 **Online Webinar**
 
-April 9th, 2024  
+April 18th, 2024  
 12:00 PM, Central European Time.
 
 **Platform**: Zoom
@@ -16,3 +16,4 @@ April 9th, 2024
 **Agenda:**
 - Presentation of the Solution Lab Box
 - Deployment and test of some sensors
+- Q/A session 

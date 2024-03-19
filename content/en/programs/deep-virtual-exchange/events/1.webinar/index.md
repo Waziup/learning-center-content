@@ -3,12 +3,12 @@ id: wb-1
 name: Onboarding & Kick-off
 desc: Welcome & Introduction to the Wazilab Platform
 delay_start: 0w
-from: 2024-04-02
+from: 2024-04-16
 ---
 
 Online Webinar
 
-April 2nd, 2024  
+April 16th, 2024  
 12:00 PM, Central European Time.
 
 **Platform**: Zoom

@@ -2,8 +2,8 @@
 id: dve_program
 name: Deep Virtual Exchange
 desc: This program drives Global Innovation Projects (GIP) with cross-disciplinary teams planning and implementing solutions using physical and online infrastructure. University students deploy successful outcomes to local stakeholders and policymakers.
-from: 2024-04-01
-to: 2024-06-22
+from: 2024-04-15
+to: 2024-06-21
 ---
 
 <!-- ![hubiquitous logo](hubiquitous-logo.png) -->

@@ -3,7 +3,7 @@ id: hardware_&_communication_unit
 name: Hardware & Communication
 desc: This unit covers the basics of hardware and communications.
 delay_start: 0w
-duration: 1w
+duration: 2w
 courses:
   - id: iot_intro_course
   - id: elec_basic_course
