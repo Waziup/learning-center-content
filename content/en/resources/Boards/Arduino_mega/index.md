@@ -6,6 +6,8 @@ desc: An Arduino board
 color: "#acdcd7"
 tags:
     - Arduino
+    - Hardware
+    - Microcontroller
 ---
 
 # Introduction

@@ -5,6 +5,8 @@ type: sensor
 desc:  Ideal for detecting gas leaks
 color: "#bad8ff"
 tags:
+    - Hardware
+    - Sensor
     - City
     - Agriculture
     - Health
