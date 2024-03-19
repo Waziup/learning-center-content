@@ -21,7 +21,7 @@ WaziGate is an IoT LoRaWAN Gateway, ideal for all your remote IoT applications. 
 - Automation & remote management
 - Low power consumption
 
-![WaziGate](img/multibox.png#width=600)
+![WaziGate](img/multibox.png#width=400)
 
 # Specification
 
