@@ -317,13 +317,25 @@ This step is only necessary for devices with a Solar pannel. The point to note h
 
 Follow the recommendations on [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 27-29.
 
+
+![Solar wiring](img/connect_solar.png)
 ## 7. Connect H2 pins according to battery type;
-26
+All explained in slide 26:
+![Batteries wiring](img/wire_battery_type.png)
+You can use two FF jumper wires instead of the jumpers for the case of the NiMh batteries. 
+
 ## 8. Connect the antenna.
-44-46
+**Screw** the antenna in all the way.
+
+**Waterproof** the junction using flat silicon seals or silicon joint sealant.
+
+More info in slides 45-47.
+
 ## 9. Place the Arduino and test a transmission using a serial connection;
 See next section.
-31
+
+[comment]: # "slide 31 solder 3-pin header on the Arduino"
+
 ## 10. Place the batteries in the holder and test;
 See next section.
 ## 11. Close the case.
@@ -333,13 +345,63 @@ Then just screw down the case cover. Make sure all the wires are inside the case
 
 2.iii. Program the Device
 ======================
-bla
+The software managing the device, orchestrating the measurements and the radio transmissions runs on the Atmega microcontroller on the Arduino Pro Mini.
+
+The [Arduino.cc](arduino.cc) community eases the configuration process of the microcontroller, by providing the IDE (integrated development environment), the programming toolchain for all the CPUs and boards, and online support.
+
+## 1. Gather the material
+
+![Arduino to USB](img/USB_to_Arduino.png)
+
+
+Chinese alternative of FTDI32 sparkfun
+
+You will also need the FTDI breakout (3.3v version) to program the
+board. You need only one to program all your boards. Original product
+from Sparkfun is here: https://www.sparkfun.com/products/9873
+We tested a Chinese one (on the right) that can be set either at 5v or
+3.3v. Much cheaper! https://fr.aliexpress.com/item/32648254875.html
+
+
+
+## 2. Get the code
+
+https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FCongducPham%2FPRIMA-Intel-IrriS%2Ftree%2Fmain%2FArduino
+
+https://github.com/CongducPham/PRIMA-Intel-IrriS/tree/main
+Code Download ZIP
+
+## 3. Get the IDE
+https://www.arduino.cc/en/software
+
+https://arduino.github.io/arduino-cli/0.35/installation/
+https://github.com/arduino/arduino-cli
+arduino-cli  Version: 0.35.3 Commit: 95cfd654 Date: 2024-02-19T13:24:24Z
+
+https://github.com/tio/tio
+
+## 4. Set up the code and compile it
+(base) guigui@laptoPau:~/code/pau/github/PRIMA-Intel-IrriS/Arduino$ /home/guigui/bin/arduino-cli compile /home/guigui/code/pau/github/PRIMA-Intel-IrriS/Arduino/Intelirris_Soil_Sensor
+
+![Compile the Arduino code](img/arduino-cli_compile.png)
+
+
+## 5. Start preparing your Arduino
+## 6. Check your Arduino
+![Upload to the Arduino board](img/arduino-cli_upload.png)
+
+ 2007  /home/guigui/bin/arduino-cli board list
+ 2008  /home/guigui/bin/arduino-cli board attach -b arduino:avr:pro:cpu=8MHzatmega328 Intelirris_Soil_Sensor
+ 2009  /home/guigui/bin/arduino-cli upload -p /dev/ttyUSB0 Intelirris_Soil_Sensor
+ 2010  tio -b 38400 -l --log-file /home/guigui/temp_Arduino.log --timestamp --timestamp-format iso8601 /dev/ttyUSB0
+ 2011  cat ~/temp_Arduino.log
+## 7. Finish preparing your Arduino
+## 8. Check your Device
+See next section 
 
 [comment]: # "Il faut identifier les étapes que l'on va demander aux 'apprenants' de valider, et ce qu'ils faut qu'ils montrent ou vérifient. Par exemple: 'When flashing the ProMini with the INTEL-IRRIS code, what do you see in the Serial Monitor?'"
 
 [comment]: # "déjà, qu'ils arrivent bien à récupérer le code du github, à configurer l'arduino IDE, à sélectionner le bon board, ..."
-
-
 
 
 2.iv. Debug the Device
@@ -348,8 +410,6 @@ bla
 
 2.v. Learn more info
 ====================
-
-bla
 
 ## 1. PCB variants
 ### a. WaziSense v2.0, Waziup design
