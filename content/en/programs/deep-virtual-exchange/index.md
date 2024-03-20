@@ -2,8 +2,8 @@
 id: dve_program
 name: Deep Virtual Exchange
 desc: This program drives Global Innovation Projects (GIP) with cross-disciplinary teams planning and implementing solutions using physical and online infrastructure. University students deploy successful outcomes to local stakeholders and policymakers.
-from: 2024-04-01
-to: 2024-06-22
+from: 2024-04-15
+to: 2024-06-21
 ---
 
 <!-- ![hubiquitous logo](hubiquitous-logo.png) -->
@@ -25,7 +25,7 @@ The Deep Virtual Exchange Program facilitates global innovation projects (GIP) w
 </thead>
 <tbody>
   <tr>
-    <td>Scope </td>
+    <td><b>Scope</b> </td>
     <td> 
         <li>Project soft skill training</li> 
         <li>Advanced technical training</li>
@@ -33,7 +33,7 @@ The Deep Virtual Exchange Program facilitates global innovation projects (GIP) w
     </td>
   </tr>
   <tr>
-    <td>Type of online facilitation </td>
+    <td><b>Type of online facilitation</b> </td>
     <td>
         <li>Small team meetings</li>
         <li>Technical and hands-on support and training</li>
@@ -41,15 +41,15 @@ The Deep Virtual Exchange Program facilitates global innovation projects (GIP) w
     </td>
   </tr>
   <tr>
-    <td>Duration </td>
+    <td><b>Duration</b> </td>
     <td>11 Weeks</td>
   </tr>
   <tr>
-    <td>Team size </td>
+    <td><b>Team size</b> </td>
     <td> Each GIP has max. 10 participants (5 from Europe and 5 Africa) with obligatory mixed teams (EU-Africa). </td>
   </tr>
   <tr>
-    <td>Learning outcomes </td>
+    <td><b>Learning outcomes </b></td>
     <td>
         <li>Project development and management skills</li>
         <li>Emerging digital skills</li>

@@ -5,6 +5,8 @@ type: sensor
 desc: Measuring the level of liquid opaqueness 
 color: "#a5d1ff"
 tags:
+    - Hardware
+    - Sensor
     - Agriculture
     - City
     - Industry

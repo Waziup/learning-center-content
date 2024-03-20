@@ -5,6 +5,8 @@ type: sensor
 desc: Sensor for contactless infra red temperature measurements. 
 color: "#80C2D9"
 tags:
+    - Hardware
+    - Sensor
     - City
     - Industry
 ---

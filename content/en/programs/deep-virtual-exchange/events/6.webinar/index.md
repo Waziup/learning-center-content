@@ -1,8 +1,8 @@
 ---
 id: wb-6
-name: Developing the GIPs 
-desc: Online session to enforce global innovtion projetcs
-delay_start: 5w
+name: Introduction to Unit 3 (Web & Mobile Application Development) 
+desc: Online session to enforce  Web & Mobile Application Development
+delay_start: 3w
 from: 2024-05-07
 ---
 
@@ -14,5 +14,5 @@ May 7th, 2024
 **Platform**: Zoom
 
 **Agenda:**
-- Teams work on the GIPs. Utilize the lessons that have been previously given.
+- Presentation of the Unit 3: Web & mobile application development 
 - Q&A Session 

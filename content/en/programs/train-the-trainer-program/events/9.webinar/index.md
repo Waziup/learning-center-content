@@ -1,6 +1,6 @@
 ---
 id: wb-9
-name: Preparation for the Physical Event
+name: Preparation for the In-person Workshop
 desc: Online session for closing the platform training 
 delay_start: 1d
 from: 2024-03-25

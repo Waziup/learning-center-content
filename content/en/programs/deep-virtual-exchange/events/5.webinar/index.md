@@ -1,8 +1,8 @@
 ---
 id: wb-5
-name: Introduction to Unit 3 (Web & Mobile Application Development) 
-desc: Online session to enforce  Web & Mobile Application Development
-delay_start: 4w
+name: Online training on Waziup Technologies 
+desc: 
+delay_start: 2w
 from: 2024-04-30
 ---
 
@@ -14,5 +14,5 @@ April 30th, 2024
 **Platform**: Zoom
 
 **Agenda:**
-- Presentation of the Unit 3: Web & mobile application development
+- Training on the Waziup IoT platform 
 - Q/A session

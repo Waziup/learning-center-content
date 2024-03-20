@@ -1,14 +1,14 @@
 ---
-id: wb-7
+id: wb-11
 name: Developing the GIPs 
 desc: Online session to enforce global innovtion projetcs
-delay_start: 3w
-from: 2024-05-09
+delay_start: 5w
+from: 2024-05-23
 ---
 
 **Online Webinar**
 
-May 09th, 2024
+May 23rd, 2024
 12:00 PM, Central European Time.
 
 **Platform**: Zoom

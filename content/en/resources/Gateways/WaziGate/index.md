@@ -5,10 +5,13 @@ type: Gateway
 desc: WaziGate allows you to connect many devices through LoRaWAN.
 color: "#f8cb58"
 tags:
+    - Gateway
+    - Hardware
     - Waziup
     - LoRa
     - LoRaWAN
     - API
+    - MVP-DIY-Kit
 ---
 
 Introduction
@@ -21,7 +24,7 @@ WaziGate is an IoT LoRaWAN Gateway, ideal for all your remote IoT applications. 
 - Automation & remote management
 - Low power consumption
 
-![WaziGate](img/multibox.png#width=600)
+![WaziGate](img/multibox.png#width=400)
 
 # Specification
 

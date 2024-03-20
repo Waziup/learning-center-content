@@ -5,6 +5,8 @@ type: sensor
 desc: A microphone based sensor
 color: "#a7e3ff"
 tags:
+    - Hardware
+    - Sensor
     - City
     - Industry
 ---

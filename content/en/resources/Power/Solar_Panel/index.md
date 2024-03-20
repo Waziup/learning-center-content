@@ -5,7 +5,8 @@ type: power-management
 desc: Power from the Sun.
 color: "#9ba9d1"
 tags:
-    - Solar
+    - Hardware
+    - Power Management
     - Agriculture
     - MVP-DIY-Kit
 ---
