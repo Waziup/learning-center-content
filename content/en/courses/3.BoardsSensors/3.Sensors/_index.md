@@ -212,7 +212,7 @@ To calibrate one point at a time:
 3. To find the offset, subtract the sensor reading from the reference reading.
 4. To get the calibrated value, add the offset to each sensor reading in your code.
   
-![Alt text](img/sensors_SinglePoint.png)
+![Calibration](img/sensors_SinglePoint.png)
 
 ## Two-point calibration
 
@@ -227,13 +227,13 @@ To perform a two point calibration:
    
 `CorrectedValue = (((RawValue – RawLow) * ReferenceRange) / RawRange) + ReferenceLow`
 
-![alt text](img/sensors_TwoPoint.png)
+![Calibration](img/sensors_TwoPoint.png)
 
 ## Multi-Point Curve Fitting
 
 Sensors that are not linear over the measurement range require some curve-fitting to achieve accurate measurements over the measurement range. A common case requiring curve-fitting is thermocouples at extremely hot or cold temperatures.  While nearly linear over a fairly wide range, they do deviate significantly at extreme temperatures.
 
-![alt text](img/sensors_nonLinear.png)
+![Calibration](img/sensors_nonLinear.png)
 
 ## Example
 
@@ -308,7 +308,8 @@ void loop() {
 
 You will get to see the following types of output in your serial monitor. Now you can modify the code and put some conditions to get notified according to your needs.
 
-![alt text](<img/Calibration output.png>)
+![Calibration](img/Calibration_output.png)
+
 
 A Complete Example 
 ====
