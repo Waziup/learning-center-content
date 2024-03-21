@@ -10,7 +10,7 @@ to: 2024-05-30
 
 # Overview
 
-WAZIUP is thrilled to introduce a comprehensive program designed to empower local students with cutting-edge knowledge in the field of Internet of Things (IoT). This innovative program combines online and offline sessions to provide a dynamic learning experience. By participating in this program, students will not only gain a deep understanding of IoT concepts and technologies but also develop practical skills through hands-on projects and real-world applications. At the end of the program, students can expect to emerge as proficient IoT enthusiasts equipped with the ability to design, implement, and troubleshoot IoT solutions. This program is not only educational but also highly beneficial, offering students a competitive edge in today's technology-driven world and preparing them for exciting career opportunities in the rapidly evolving IoT industry.
+WAZIUP introduces a comprehensive program designed to empower local students with cutting-edge knowledge in the field of Internet of Things (IoT). This innovative program combines online and offline sessions to provide a dynamic learning experience. By participating in this program, students will not only gain a deep understanding of IoT concepts and technologies but also develop practical skills through hands-on projects and real-world applications. At the end of the program, students can expect to emerge as proficient IoT enthusiasts equipped with the ability to design, implement, and troubleshoot IoT solutions. This program is not only educational but also highly beneficial, offering students a competitive edge in today's technology-driven world and preparing them for exciting career opportunities in the rapidly evolving IoT industry.
 
 The participants will:
 
@@ -25,12 +25,13 @@ Upon program completion, students will possess the skills to develop their own M
 
 # Certification:
 Students who successfully complete the program will receive certificates acknowledging their dedication, hard work, and proficiency in IoT technologies and applications. These certificates serve as tangible evidence of expertise, enhancing academic and professional portfolios while providing opportunities for advancement in the dynamic field of IoT.
+
 ![timeline](img/certif.png)
 
 
-# Timeline
+<!-- # Timeline
 
-![timeline](img/timeline.png)
+![timeline](img/timeline.png) -->
 
 # More infos
 

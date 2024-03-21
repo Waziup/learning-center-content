@@ -1,17 +1,17 @@
 ---
-id: wb-3
+id: wk-2
 name: Introduction to Unit 2 (WAZIUP Technologies)
 desc: Hands-on session on Waziup Technologies
-delay_start: 1d
-from: 2024-03-04
+delay_start: 1w
+from: 2024-05-08
 ---
 
-**Online Webinar**
+### In-person Workshop
 
-March 4th, 2024  
-10:00 AM, Central European Time.
-
-**Platform**: Zoom
+**Location**: Africa
+**Date**:
+**Time**:
+**Duration**:
 
 **Agenda:**
 - Presentation of the Unit 2: Waziup technologies
