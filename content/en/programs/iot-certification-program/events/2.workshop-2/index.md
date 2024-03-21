@@ -6,12 +6,13 @@ delay_start: 1w
 from: 2024-05-08
 ---
 
-### In-person Workshop
+## In-person Workshop
 
-**Location**: Africa
-**Date**:
-**Time**:
-**Duration**:
+**Location:** Africa  
+
+**Date:**  
+**Time:**  
+**Duration:**  
 
 **Agenda:**
 - Presentation of the Unit 2: Waziup technologies

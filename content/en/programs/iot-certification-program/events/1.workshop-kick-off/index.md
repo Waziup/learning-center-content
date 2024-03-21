@@ -6,14 +6,16 @@ delay_start: 0w
 from: 2024-05-01
 ---
 
-### In-person Workshop
+## In-person Workshop
 
-**Location**: Africa
-**Date**:
-**Time**:
-**Duration**:
+**Location:** Africa  
+
+**Date:**  
+**Time:**  
+**Duration:**  
 
 **Agenda:**
-- introduction of the WaziLab platform.
-- Presentation of the first Unit (Hardware and communications)
+- Welcome and On-boarding
+- Introduction of the WaziLab platform.
+- Presentation of Unit 1: Hardware and communications
 - Q/A session
