@@ -366,24 +366,65 @@ We tested a Chinese one (on the right) that can be set either at 5v or
 
 ## 2. Get the code
 
-https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FCongducPham%2FPRIMA-Intel-IrriS%2Ftree%2Fmain%2FArduino
+The Device's code is available with the other resource of Intel-IrriS on the Github repository: 
+[![Intel-IrriS Github](img/intel-irris_github.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/tree/main)
 
-https://github.com/CongducPham/PRIMA-Intel-IrriS/tree/main
-Code Download ZIP
+**Download** the Arduino folder. You can download all the project (182&thinsp;MiB) using the Github ZIP direct download:
+
+![Download from Github](img/Github_download.png)
+
+Alternatively, you can download the Arduino folder alone (20&thinsp;MiB) using external tools, e.g. [download-directory](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FCongducPham%2FPRIMA-Intel-IrriS%2Ftree%2Fmain%2FArduino).
+
+**Extract** the obtained ZIP file.
 
 ## 3. Get the IDE
-https://www.arduino.cc/en/software
 
-https://arduino.github.io/arduino-cli/0.35/installation/
-https://github.com/arduino/arduino-cli
-arduino-cli  Version: 0.35.3 Commit: 95cfd654 Date: 2024-02-19T13:24:24Z
+We recommend using the Arduino IDE available [here](https://www.arduino.cc/en/software): it includes the default libraries for the Arduino Pro Minis, a serial monitor, a code editor, it is multi-OS, it has a broad community of practice.
 
-https://github.com/tio/tio
+**Download** and **install** the latest version for your OS.
+
+### Command-line alternative
+If you prefer your own text editor, your own serial monitor, but still want to benefit from the Arduino's toolchain, you could use the [Arduino CLI](https://github.com/arduino/arduino-cli) command line tool. I tested and enjoyed [version 0.35.3](https://arduino.github.io/arduino-cli/0.35/installation/) on Xubuntu, with [TIO](https://github.com/tio/tio) as a Serial tool.
+
+[comment]: # "arduino-cli  Version: 0.35.3 Commit: 95cfd654 Date: 2024-02-19T13:24:24Z"
 
 ## 4. Set up the code and compile it
+
+### Set up the libraries
+The Arduino folder you downloaded and extracted contains a *libraries* sub-folder. In order to make the IDE find and use these libraries, you need to choose the Arduino folder as your sketchbook:\
+**Go** to `File > Preferences` and **Browse** to choose the Arduino folder as your sketchbook location.\
+![Arduino IDE Sketchbook Libraries](img/arduino-IDE_preferences.png)
+Once done, the IDE will probably ask you to update these libraries:
+![Arduino IDE Update Libraires](img/arduino-IDE_update-libs.png)\
+**Don't do that**, since the Device's code has been validated with this specific version of the compagnion libraries, and is not guaranteed to work with new updates and changes that could be implied.
+
+**Open** the `Arduino/Intelirris_Soil_Sensor.ino` sketch.
+
+-------------------- 
+In command-line, Arduino CLI checks the sub-folders for libraries, you just need to navigate to the Arduino folder.
+
+### Choose the board and CPU
+You need to **attach** your IDE's window to the Device's board type and CPU:
+* `Tools > Boards > Arduino AVR Boards > Arduino Pro or Pro Mini`
+* `Tools > Processor > ATmega328P (3.3V, 8 MHz)`
+
+![Arduino IDE Board Processor](img/arduino-IDE_board-cpu.png)
+
+-------------------- 
+In command-line, use the following command:\
+`.../Arduino$ arduino-cli board attach -b arduino:avr:pro:cpu=8MHzatmega328 Intelirris_Soil_Sensor`
+
+
+### Set up the code
+
+### Compile
+
 (base) guigui@laptoPau:~/code/pau/github/PRIMA-Intel-IrriS/Arduino$ /home/guigui/bin/arduino-cli compile /home/guigui/code/pau/github/PRIMA-Intel-IrriS/Arduino/Intelirris_Soil_Sensor
 
 ![Compile the Arduino code](img/arduino-cli_compile.png)
+
+		https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Arduino/README.md
+
 
 
 ## 5. Start preparing your Arduino
