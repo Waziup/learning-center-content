@@ -19,10 +19,6 @@ The Deep Virtual Exchange Program facilitates global innovation projects (GIP) w
 
 <table>
 <thead>
-  <tr>
-    <th colspan="2">Deep Virtual Exchange</th>
-  </tr>
-</thead>
 <tbody>
   <tr>
     <td><b>Scope</b> </td>
@@ -61,9 +57,9 @@ The Deep Virtual Exchange Program facilitates global innovation projects (GIP) w
 </table>
 
 
-# Timeline
+<!-- # Timeline
 
-![timeline](img/timeline.png)
+![timeline](img/timeline.png) -->
 
 # More infos
 
