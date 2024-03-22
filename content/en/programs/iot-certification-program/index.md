@@ -2,8 +2,8 @@
 id: iot_certif_program
 name: IoT Certification Program
 desc: The IoT Certification Program offers a blend of online and offline sessions to deliver a comprehensive learning experience in the field of Internet of Things (IoT). Students will delve into IoT concepts, engage in hands-on projects, and emerge as proficient IoT enthusiasts by the program's end.
-from: 2024-05-01
-to: 2024-05-30
+from: 2024-04-08
+to: 2024-05-27
 ---
 
 <!-- ![hubiquitous logo](hubiquitous-logo.png) -->

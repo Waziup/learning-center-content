@@ -1,18 +1,15 @@
 ---
 id: wk-2
-name: Introduction to Unit 2 (WAZIUP Technologies)
+name: 'Introduction to Unit 2: WAZIUP Technologies'
 desc: Hands-on session on Waziup Technologies
-delay_start: 1w
-from: 2024-05-08
+delay_start: 3w
+from: 2024-04-29
 ---
 
 ## In-person Workshop
 
-**Location:** Africa  
-
-**Date:**  
-**Time:**  
-**Duration:**  
+**Date:** April 29th, 2024  
+**Duration:**  1 Day
 
 **Agenda:**
 - Presentation of the Unit 2: Waziup technologies
