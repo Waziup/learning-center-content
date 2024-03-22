@@ -5,7 +5,7 @@ desc: At this part of the program you need to participate the survey.
 delay_start: 4w
 duration: 2w
 courses:
-    - id: business_mod
+    - id: bmc_course
 ---
 
 Your participation in this survey serves as an important tool for gathering valuable feedback and insights. 
