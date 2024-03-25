@@ -42,11 +42,11 @@ Watch our PDF tutorial, [here](https://github.com/CongducPham/PRIMA-Intel-IrriS/
 
 Before choosing these elements, it is important to note that the allowed frequency band for the LoRa radio communications differs according to local regulations. The band is centered around: 
    1. In Europe: 868 MHz;
-   2. In most of the African Countries, e.g. Algeria: 433 Mhz; 
-   3. In other regions: 915MHz;
-   4. Traffic is usually allowed on the Wi-Fi band: 2.4 GHz.
+   2. In most of the African Countries, e.g. Algeria until recently: 433 Mhz; 
+   3. In some other regions: 915MHz;
+   4. Traffic is usually allowed on the Wi-Fi band: 2.4 GHz. But this goes with other limitations (range, interferences).
 
-The radio chipset, the antenna, and the software are frequency dependent. 
+The radio chipset, the antenna, and the software are frequency dependent and must be chosen accordingly. 
 
 ### a. Radio chipsets
 In Intel-IrriS, we chose two radio modules that are common and easy to find on the market:
@@ -56,15 +56,15 @@ In Intel-IrriS, we chose two radio modules that are common and easy to find on t
 ![rfm96w](img/rfm96w.png)
 
 Different versions are available on the market, with different features, most are compatible with the PCBs.
-Note that in these pictures, the same type of Integrated Circuit (IC) is used: RF96. 
+Note that in these pictures, the same Integrated Circuit (IC) is used: HopeRF RF96. 
 I took from the datasheets the following tables summarizing frequency compatibilities:
 - for ICs:
 
-| IC Number | Frequency Range | Spreading Factor | Bandwidth | Effective Bitrate | Estimated Sensitivity |
-| --------- | --------------- | --- |--------------- |--------------- |--------------- |
-| RF96 | 137 - 1020&thinsp;MHz | 6 - 12 | 7.8 - 500&thinsp;kHz | .018 - 37.5&thinsp;kbps | -111 to -148&thinsp;dBm |
-| RF97 | 137 - 1020&thinsp;MHz | 6 - 9 | 7.8 - 500&thinsp;kHz | 0.11 - 37.5&thinsp;kbps | -111 to -139&thinsp;dBm |
-| RF98 | 137 - 525&thinsp;MHz | 6- 12 | 7.8 - 500&thinsp;kHz | .018 - 37.5&thinsp;kbps | -111 to -148&thinsp;dBm |
+|Semtech IC| HopeRF IC clone | Frequency Range | Spreading Factor | Bandwidth | Effective Bitrate | Estimated Sensitivity |
+| -- | --------- | --------------- | --- |--------------- |--------------- |--------------- |
+|SX1276| RF96 | 137 - 1020&thinsp;MHz | 6 - 12 | 7.8 - 500&thinsp;kHz | .018 - 37.5&thinsp;kbps | -111 to -148&thinsp;dBm |
+|SX1277| RF97 | 137 - 1020&thinsp;MHz | 6 - 9 | 7.8 - 500&thinsp;kHz | 0.11 - 37.5&thinsp;kbps | -111 to -139&thinsp;dBm |
+|SX1278| RF98 | 137 - 525&thinsp;MHz | 6- 12 | 7.8 - 500&thinsp;kHz | .018 - 37.5&thinsp;kbps | -111 to -148&thinsp;dBm |
 
 - for LoRa chipsets:
 
@@ -73,6 +73,8 @@ I took from the datasheets the following tables summarizing frequency compatibil
 | RFM95W | 868/915&thinsp;MHz | 6 - 12 | 125 - 500&thinsp;kHz | .293 - 37.5&thinsp;kbps | -111 to -136&thinsp;dBm |
 | RFM96W/98W | 433/470&thinsp;MHz | 6 - 12 | 62.5 - 500&thinsp;kHz | .1465 - 37.5&thinsp;kbps | -112 to -140&thinsp;dBm |
 | RFM98W | 169&thinsp;MHz | 6 - 12 | 31.25 - 125&thinsp;kHz | 73.24- 9375&thinsp;bps | -118 to -143&thinsp;dBm |
+
+*NB*: the RFM95 chipset contains an RF96 IC.
 
 ### b. LoRa antennae
 The antenna model will also depend on the frequency band. The default type for Intel-IrriS devices are simple whip (monopole) antennae. We adopted the following color convention: white antennae for 433 MHz; black antennae for 868 MHz.
@@ -188,7 +190,7 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 [comment]: # "This table confirms the fact that the PCBA, as compared with the PCBv2, has reduced the complexity of the assembly, and for a start, the ΩΩΩΩΩΩΩΩΩΩΩΩ"
 
 For the device assembly, preparation and programming, you will also need: 
-- 1 USB Serial FTDI breakout 3.3&thinsp;V (and USB connector to laptop);
+- 1 USB Serial FTDI breakout 3.3&thinsp;V (and an USB cable to laptop);
 - a solder station / soldering iron with thin solder wire;
 - a tiny slotted (flat) screwdriver for the screw terminal blocks;
 - a comon cruciform screwdriver;
@@ -201,8 +203,8 @@ For the device assembly, preparation and programming, you will also need:
 
 
 During the project, we provided some links to online webs that had available in 2022, in Pau, France, Europe, the many other components required:
-[hardware-parts](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-IrriS-low-cost-sensor-hardware-parts.pdf)
-The provided web links to some vendors are only given as example. An actor willing to order the Intel-IrriS pieces should search from other vendors, available in her region, and catalog items or packs/offer that would allow to optimize cost at the time of ordering.
+[hardware-parts](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-IrriS-low-cost-sensor-hardware-parts.pdf).
+The provided web links to some vendors were only given as example. An actor willing to order the Intel-IrriS pieces should search from other vendors, available in her region, and catalog items or packs/offer that would allow to optimize cost at the time of ordering.
 
 You could walk the following steps:
 1. Parse this components table according to the chosen quantity and types of device, power supply, and to the sensors;
@@ -266,7 +268,7 @@ Use drilling bits for metal (not for wood nor concrete).
 
 *it is recommended to use a step drill bit to first get a 12mm hole before using the 13mm drill bit.\
 **in the center of the case's cover.\
-***these dimensions have been updated for the latest PCBA and enable to place three AAA batteries with their holder under the PCB. The video [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk) mentions a 28 x 9&thinsp;mm compatible with the older PCBv2.
+***these dimensions have been updated for the latest PCBA and enable to place three AAA batteries with their holder under the PCB. The video [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk) mentions a 28 x 9&thinsp;mm dimension compatible with the older PCBv2, but also with the PCBA with 2 AA batteries.
 
 
 **Remove** unwanted plastic part with a flat cutter and/or a small plier for instance, and smooth the inside part of the case to make the interface the most waterproof possible.
@@ -305,8 +307,9 @@ More info in the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk):
 Both battery holder and switch have their dedicated screwed connector on the PCB: [![PCBv4-PCBA.pdf](img/connect_switch_bat.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf)
 
 ## 5. Connect the sensors' wires to the PCB;
-Pass the wire through the cable gland and screw them to their dedicated slot on the PCB:
+Pass the wire through the cable gland and screw or plug them to their dedicated slot on the PCB:
 ![Plug the Sensors](img/plug_sensors.png)
+NB: connecting a watermark and a capacitive on the same device is out of the scope of Intel-IrriS; use two devices for this case.
 
 For the watermarks, it is recommended to add a domino connector in order to be able to change the sensor without openning the case and unscrewing the cables inside.
 ![Watermarks wiring](img/wire_watermarks.png)
@@ -340,27 +343,27 @@ See next section.
 See next section.
 ## 11. Close the case.
 Check that the switch, the antenna, and the cable gland are tightly screwed to the case;
-Then just screw down the case cover. Make sure all the wires are inside the case so that they suffer no damage at closing the case. 
+Then just screw down the case cover. Make sure all the wires are inside the case so that they suffer no damage when closing the case. 
 
 
 2.iii. Program the Device
 ======================
 The software managing the device, orchestrating the measurements and the radio transmissions runs on the Atmega microcontroller on the Arduino Pro Mini.
 
-The [Arduino.cc](arduino.cc) community eases the configuration process of the microcontroller, by providing the IDE (integrated development environment), the programming toolchain for all the CPUs and boards, and online support.
+The [Arduino.cc](arduino.cc) community eases the configuration process of the microcontroller, by providing the IDE (integrated development environment), the programming toolchain for all the CPUs and boards in the Arduino family, and plenty of online support.
 
 ## 1. Gather the material
-
+Your Arduino usually comes with its 6-pin 90° header, and 2 12-pin male headers. The 6-pin header enables to connect to another board, an *FTDI32*, that creates and manages a Serial communication between the Arduino and a laptop, via USB.
 ![Arduino to USB](img/USB_to_Arduino.png)
+You only need one FTDI32 to program all your boards. 
+We tested two different models:
+* from Sparkfun [here](https://www.sparkfun.com/products/9873);
+* from chinese manufacturer HWA YEH [here](https://fr.aliexpress.com/item/32648254875.html): it can be set either at 5v or 3.3v, and it is much cheaper! 
 
 
-Chinese alternative of FTDI32 sparkfun
+Better choose a short and robust USB cable between the FTDI32 and your laptop.
 
-You will also need the FTDI breakout (3.3v version) to program the
-board. You need only one to program all your boards. Original product
-from Sparkfun is here: https://www.sparkfun.com/products/9873
-We tested a Chinese one (on the right) that can be set either at 5v or
-3.3v. Much cheaper! https://fr.aliexpress.com/item/32648254875.html
+[comment]: # "One should choose a short USB cable in order not to lose the Serial sync."
 
 
 
@@ -379,7 +382,7 @@ Alternatively, you can download the Arduino folder alone (20&thinsp;MiB) using e
 
 ## 3. Get the IDE
 
-We recommend using the Arduino IDE available [here](https://www.arduino.cc/en/software): it includes the default libraries for the Arduino Pro Minis, a serial monitor, a code editor, it is multi-OS, it has a broad community of practice.
+We recommend using the Arduino IDE available [here](https://www.arduino.cc/en/software): it includes the default libraries for the Arduino Pro Minis, a serial monitor, a code editor, it is multi-OS, and it has a broad community of practice.
 
 **Download** and **install** the latest version for your OS.
 
@@ -416,8 +419,32 @@ In command-line, use the following command:\
 
 
 ### Set up the code
+The code is distributed on various C++ modules beside the main INO file. The project encompasses many options regarding different hardware, sensors, radio management, formats, etc. In the scope of Intel-IrriS and this program, you will need to adjust the following files:
+* BoardSettings.h
+	* **Check** that `#define IRD_PCB` is uncommented (Remove the `//` comment mark if necessary);
+	* **Check** that `#define IRD_PCBA` is uncommented (Remove the `//` comment mark if necessary);
+	* for devices with a solar panel, **Check** that `#define SOLAR_BAT` is uncommented (Remove the `//` comment mark if necessary).
+* RadioSettings.h
+	* **Check** that `#define SX127X` is the only uncommented option. The SX127X corresponds to the family of ICs of which the chosen chipsets include a member, or a clone from HopeRF manufacturer.
+* Intelirris_Soil_Sensor.ino
+	* **Choose** `#define EU868`, `#define EU433`, or the adequate row according to the frequency band you are going to use, as the only uncommented option. Choose this frequency regarding your regional setting and the device's hardware you gathered;
+	* for devices with one or two watermarks (W, WT, 2WT types), **uncomment** `#define WITH_WATERMARK`;
+	* for devices with two watermarks (2WT types), **uncomment** `#define TWO_WATERMARK`;
+	* for devices with a temperature sensor (CT, WT, 2WT types), **uncomment** `#define SOIL_TEMP_SENSOR`.
+
+
+[comment]: # "	* for devices without a watermark sensor, the default device address is *26011DAA*. If you prepare a deployment involving several devices "
+
+[comment]: # "unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xAA};"
+[comment]: # "unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xB1};"
+
+	
+	
+
 
 ### Compile
+Verify/Compile
+
 
 (base) guigui@laptoPau:~/code/pau/github/PRIMA-Intel-IrriS/Arduino$ /home/guigui/bin/arduino-cli compile /home/guigui/code/pau/github/PRIMA-Intel-IrriS/Arduino/Intelirris_Soil_Sensor
 
