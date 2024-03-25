@@ -433,29 +433,73 @@ The code is distributed on various C++ modules beside the main INO file. The pro
 	* for devices with a temperature sensor (CT, WT, 2WT types), **uncomment** `#define SOIL_TEMP_SENSOR`.
 
 
-[comment]: # "	* for devices without a watermark sensor, the default device address is *26011DAA*. If you prepare a deployment involving several devices "
+The code is thought to be generic, i.e. the same for all the Intel-IrriS devices. However, when deploying several devices at the same location, one needs to distinguish their data. In order to identify the devices, the radio frames include a device's address.
+
+Two default (generic) addresses are coded in  `Intelirris_Soil_Sensor.ino`: *26011DAA* for capacitive devices (C or CT), *26011DB1* for watermark devices (W, WT, or 2WT). 
+
+You should **identify extra capacitive devices** using addresses *26011DAB*, *26011DAC*, ..., *26011DAF*. To do so, amend the `Intelirris_Soil_Sensor.ino` program:\
+`unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xAA};`
+should become for instance:\
+`unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xAD};` for the third extra capacitive device.
+
+You should **identify extra watermark devices** using addresses *26011DB2*, *26011DB3*, ..., *26011DBF*. To do so, amend the `Intelirris_Soil_Sensor.ino` program:\
+`unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xB1};`
+should become for instance:\
+`unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xB8};` for the seventh extra watermark device.
+
+[comment]: # "	* for devices without a watermark sensor, the default device address is . If you prepare a deployment involving several devices "
 
 [comment]: # "unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xAA};"
 [comment]: # "unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xB1};"
-
-	
 	
 
 
 ### Compile
-Verify/Compile
+
+This compilation step gathers the source code, links them, and produce a program file that is specific to the targeted microcontroller. 
+This process involves a complex toolchain with plenty of parameters and linker and compiler pieces of programs such as GCC. All this is made gently user friendly by the Arduino Umbrella, and is quite certainly the plusvalue of Arduino.
+
+In the IDE, the only thing you, the user, need to do, is to press the `Verify/Compile` (&#x2713;) button. 
+If the compilation goes as expected, the IDE notificates a `Done compiling`. Otherwise, some error messages appear (in red), that should help resolving the (most commonly programming) issues.
 
 
-(base) guigui@laptoPau:~/code/pau/github/PRIMA-Intel-IrriS/Arduino$ /home/guigui/bin/arduino-cli compile /home/guigui/code/pau/github/PRIMA-Intel-IrriS/Arduino/Intelirris_Soil_Sensor
+-------------------- 
+In command-line, use the following command:\
+`.../Arduino$ arduino-cli compile Intelirris_Soil_Sensor
+`
 
+The program summarizes the libraries that have been used for the compilation and their version numbers, thus allowing you to check that your Arduino software setup acts as expected.
 ![Compile the Arduino code](img/arduino-cli_compile.png)
-
-		https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Arduino/README.md
-
 
 
 ## 5. Start preparing your Arduino
+**Solder** the 6-pin 90° header on the Arduino. At this point, you don't need to solder the two side headers yet, we are going to check that the Arduino behaves correctly.
+
+Carefully **remove** the power LED and the voltage regulator to make the Arduino ultra-low-power. 
+![Remove LED and Regulator Arduino](img/Remove_LED_Regulator_Arduino.png)
+
 ## 6. Check your Arduino
+In order to check that your Arduino does not have any hardware issue, we recommend to try uploading the program on it using the FTDI32, and check its response on the serial port. If the device acts normally, then most of the possible hardware issues can be discarded.
+
+
+### Upload
+**Connect** the Arduino with the FTDI32. **Check** that both VCC pins are connected (there can be a mismatch in the header orientation).
+
+**Plug** the FTDI32 to your laptop's USB interface. The Power LED of the FTDI32 lights up.
+
+In the IDE, check that a new ungreyed option has appeared in the `Tools>Port` menu: `COM1`, `/dev/ttyUSB0` are some examples. **Select** the new option. **Check** that the Processor and Board settings have not been modified.
+
+Any issue with this step ? => **Check** the OS-specific recommendations [here](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all). For recent Ubuntu versions, the package `brltty` seems to prevent the use of the serial port for other applications. You could remove it using `sudo apt remove brltty`.
+
+
+IDE => button Upload
+CL upload
+lights
+
+
+### Check the Serial ouput
+
+
 ![Upload to the Arduino board](img/arduino-cli_upload.png)
 
  2007  /home/guigui/bin/arduino-cli board list
@@ -464,8 +508,10 @@ Verify/Compile
  2010  tio -b 38400 -l --log-file /home/guigui/temp_Arduino.log --timestamp --timestamp-format iso8601 /dev/ttyUSB0
  2011  cat ~/temp_Arduino.log
 ## 7. Finish preparing your Arduino
+48-61
+
 ## 8. Check your Device
-See next section 
+See next section. 
 
 [comment]: # "Il faut identifier les étapes que l'on va demander aux 'apprenants' de valider, et ce qu'ils faut qu'ils montrent ou vérifient. Par exemple: 'When flashing the ProMini with the INTEL-IRRIS code, what do you see in the Serial Monitor?'"
 
