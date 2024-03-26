@@ -165,8 +165,8 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 |Arduino ProMini, 3.3&thinsp;V 8&thinsp;MHz with 1 6-pin 90° and 2 12-pin male headers | 1 |1|
 |Pack of minimum 5 2.54&thinsp;mm male pin headers (1 3-pin, 1 2-pin) | 1 | 1 |
 |ABS waterproof enclosure with screws and joint| 1 | 1|
-|2-AA battery holder|1|-|
-|2 AA **heavy duty** batteries 1.5&thinsp;V|1|-|
+|2-AA battery holder^|1|-|
+|2 AA **heavy duty** batteries 1.5&thinsp;V^|1|-|
 |3 AAA NiMh 1.2&thinsp;V rechargeable batteries|-|1|
 |Mini solar panel 6&thinsp;V 0.6&thinsp;W 100&thinsp;mA 60x90&thinsp;mm|-|1|
 |Female (F) or male (M) tipped breadboard/Dupont cables^^ | 1 FF | 2 FF + 2 MM |
@@ -181,6 +181,7 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 |Two-paired screw terminals (dominos)| 1 or 2**|1 or 2**|
 |15&thinsp;cm chunks of 2-joint-wire for irometer tensiometer| 1 or 2** |1 or 2**|
 
+^you can equivalently use a non rechargeable 3.6V lithium battery with a 1-AA battery holder.\
 ^^for solar PCBA devices, 2 jumper junctions can be used instead of the 2 FF jumper wires.\
 **2 for 2WT devices, otherwise 1.
 
@@ -473,7 +474,7 @@ The program summarizes the libraries that have been used for the compilation and
 
 
 ## 5. Start preparing your Arduino
-**Solder** the 6-pin 90° header on the Arduino. At this point, you don't need to solder the two side headers yet, we are going to check that the Arduino behaves correctly.
+**Solder** the 6-pin 90° header over the top side of the Arduino. At this point, you don't need to solder the two side headers yet, we are going to check that the Arduino behaves correctly.
 
 Carefully **remove** the power LED and the voltage regulator to make the Arduino ultra-low-power. 
 ![Remove LED and Regulator Arduino](img/Remove_LED_Regulator_Arduino.png)
@@ -491,27 +492,58 @@ In the IDE, check that a new ungreyed option has appeared in the `Tools>Port` me
 
 Any issue with this step ? => **Check** the OS-specific recommendations [here](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all). For recent Ubuntu versions, the package `brltty` seems to prevent the use of the serial port for other applications. You could remove it using `sudo apt remove brltty`.
 
+In the IDE, simply **press** the Upload button (=>). The FTDI32 lights start blinking. The IDE will indicate the correct finalization of the Upload.
 
-IDE => button Upload
-CL upload
-lights
+
+
+-------------------- 
+In command-line, check which Serial Port the Arduino is connected to using the following command:\
+`.../Arduino$ arduino-cli board list`
+
+Correspondingly, upload adapting the following command:\
+`.../Arduino$ arduino-cli upload -p /dev/ttyUSB0 Intelirris_Soil_Sensor`
+
 
 
 ### Check the Serial ouput
+In the IDE, just **open** the Serial Monitor by clicking its button on the top right corner.
+The Arduino is set to 38400 baud.
 
+-------------------- 
+In command-line, you could use Tio like this and save the serial logs to a text file:\
+`tio -b 38400 -l --log-file /home/guigui/temp_Arduino.log --timestamp --timestamp-format iso8601 /dev/ttyUSB0`
 
-![Upload to the Arduino board](img/arduino-cli_upload.png)
+-------------------- 
 
- 2007  /home/guigui/bin/arduino-cli board list
- 2008  /home/guigui/bin/arduino-cli board attach -b arduino:avr:pro:cpu=8MHzatmega328 Intelirris_Soil_Sensor
- 2009  /home/guigui/bin/arduino-cli upload -p /dev/ttyUSB0 Intelirris_Soil_Sensor
- 2010  tio -b 38400 -l --log-file /home/guigui/temp_Arduino.log --timestamp --timestamp-format iso8601 /dev/ttyUSB0
- 2011  cat ~/temp_Arduino.log
+![Check Serial Response](img/arduino_serial_check.png)
+
+If you see something similar, then that means your Arduino works and communicates. No device is responding, because the Arduino is not mounted. We will now connect it to the PCB. 
+
 ## 7. Finish preparing your Arduino
-48-61
+**Solder** the two 12-pin side headers over the bottom side of the Arduino. **Solder** also the 3-pin header there on pins GND, A6, A7, (mandatory for solar devices) and the 2-pin header on A4, A5. Use a breadboard as reference to be sure soldering such that the Arduino can be encased into the PCB's female headers.
+
+![Arduino solder headers](img/arduino_solder_headers.png)
+
+
+
 
 ## 8. Check your Device
-See next section. 
+
+Before you plug the Arduino onto the PCB, be **careful**:
+- don't overpower your device using at the same time both the battery (switch on) and the USB (FTDI32 on);
+- Never transmit without the antenna, you risk damaging the radio chipset.
+
+You can read complementary info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 48-61.
+
+**Check** as previously the serial output (switch off or batteries removed from their holder). You should be able to see a value for each sensor of your device. 
+
+`Sending \!WM1/3276.00/CB1/255.00/WM2/3276.00/CB2/255.00/ST/19.87`
+
+`switch to power saving mode`
+
+If you see these messages, your device is ready. **Close** the Serial Monitor and thus the Serial connection, remove the FTDI32, place the batteries in the holder, and switch on your device.
+
+Normally, you should witness the radio transmission: indeed, during the transmission (around 1.3 seconds at 868&thinsp;MHz) the transmission LED is ON. 
 
 [comment]: # "Il faut identifier les étapes que l'on va demander aux 'apprenants' de valider, et ce qu'ils faut qu'ils montrent ou vérifient. Par exemple: 'When flashing the ProMini with the INTEL-IRRIS code, what do you see in the Serial Monitor?'"
 
@@ -520,6 +552,8 @@ See next section.
 
 2.iv. Debug the Device
 ====================
+
+
 
 
 2.v. Learn more info
