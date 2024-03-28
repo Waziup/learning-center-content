@@ -9,6 +9,7 @@ tags:
     - Waziup
     - API
     - MVP-DIY-Kit
+    - Training-Kit-Box
 ---
 
 ## Introduction

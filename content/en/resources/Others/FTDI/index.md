@@ -8,4 +8,5 @@ tags:
     - Hardware
     - Arduino
     - DIY
+    - Training-Kit-Box
 ---

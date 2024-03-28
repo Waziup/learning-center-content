@@ -12,6 +12,7 @@ tags:
     - City
     - Agriculture
     - MVP-DIY-Kit
+    - Training-Kit-Box
 ---
 
 # Introduction

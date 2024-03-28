@@ -11,6 +11,8 @@ tags:
     - City
     - Industry
     - MVP-DIY-Kit
+    - DIY
+    - Training-Kit-Box
 ---
 
 # Introduction

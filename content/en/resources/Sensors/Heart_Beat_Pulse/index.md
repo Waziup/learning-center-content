@@ -8,6 +8,8 @@ tags:
     - Hardware
     - Sensor
     - Health
+    - DIY
+    - Training-Kit-Box
 ---
 
 # Introduction

@@ -7,6 +7,7 @@ color: "#a2d0ff"
 tags:
   - Hardware
   - Actuator
+  - Training-Kit-Box
 ---
 
 

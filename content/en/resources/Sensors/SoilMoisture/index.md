@@ -9,6 +9,8 @@ tags:
     - Sensor
     - Agriculture
     - MVP-DIY-Kit
+    - DIY
+    - Training-Kit-Box
 ---
 
 # Introduction

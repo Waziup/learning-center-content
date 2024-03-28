@@ -8,6 +8,7 @@ tags:
     - MVP-DIY-Kit
     - Hardware
     - DIY
+    - Training-Kit-Box
 ---
 # Introduction
 

@@ -9,6 +9,8 @@ tags:
     - Sensor
     - City
     - Agriculture
+    - DIY
+    - Training-Kit-Box
 ---
 
 # Introduction

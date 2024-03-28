@@ -8,6 +8,7 @@ tags:
     - Hardware
     - Sensor
     - Agriculture
+    - Training-Kit-Box
 ---
 
 # Introduction

@@ -9,6 +9,7 @@ tags:
     - Hardware
     - Microcontroller
     - MVP-DIY-Kit
+    - Training-Kit-Box
 ---
 
 # Introduction

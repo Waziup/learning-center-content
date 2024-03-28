@@ -7,6 +7,7 @@ tags:
   - Hardware
   - Actuator
   - City
+  - Training-Kit-Box
 ---
 
 # Introduction
