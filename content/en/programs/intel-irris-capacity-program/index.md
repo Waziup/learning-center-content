@@ -10,7 +10,7 @@ to: 2024-02-28
 
 The Intel-IrriS Business Capacity Program gathers everything you need to know about the [PRIMA Intel-IrriS project](https://intel-irris.eu/).
 The program is designed to empower local actors into being able to provide hardware, maintenance, and support to small-holders willing to monitor the water resource on their culture fields.  
-The program duration is about three weeks, and is articulated in various modules covering the assembly of all the Intel-IrriS devices, gateways, their installation guidelines and usage, the collection of data and its, analysis, and links to how to order devices and ask for support.
+The program duration is about three weeks, and is articulated in various modules covering the assembly of all the Intel-IrriS devices, gateways, their installation guidelines and usage, the collection of data and its analysis, and links to how to order devices and ask for support.
 
 
 

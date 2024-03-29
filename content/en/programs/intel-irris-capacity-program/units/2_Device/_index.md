@@ -166,7 +166,7 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 |Pack of minimum 5 2.54&thinsp;mm male pin headers (1 3-pin, 1 2-pin) | 1 | 1 |
 |ABS waterproof enclosure with screws and joint| 1 | 1|
 |2-AA battery holder^|1|-|
-|2 AA **heavy duty** batteries 1.5&thinsp;V^|1|-|
+|2 AA **Alkaline heavy duty** batteries 1.5&thinsp;V^|1|-|
 |3 AAA NiMh 1.2&thinsp;V rechargeable batteries|-|1|
 |Mini solar panel 6&thinsp;V 0.6&thinsp;W 100&thinsp;mA 60x90&thinsp;mm|-|1|
 |Female (F) or male (M) tipped breadboard/Dupont cables^^ | 1 FF | 2 FF + 2 MM |
@@ -191,7 +191,7 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 [comment]: # "This table confirms the fact that the PCBA, as compared with the PCBv2, has reduced the complexity of the assembly, and for a start, the ΩΩΩΩΩΩΩΩΩΩΩΩ"
 
 For the device assembly, preparation and programming, you will also need: 
-- 1 USB Serial FTDI breakout 3.3&thinsp;V (and an USB cable to laptop);
+- 1 USB Serial FTDI breakout 3.3&thinsp;V (with 6-pin Female conector and an USB cable to laptop);
 - a solder station / soldering iron with thin solder wire;
 - a tiny slotted (flat) screwdriver for the screw terminal blocks;
 - a comon cruciform screwdriver;
@@ -361,6 +361,7 @@ We tested two different models:
 * from Sparkfun [here](https://www.sparkfun.com/products/9873);
 * from chinese manufacturer HWA YEH [here](https://fr.aliexpress.com/item/32648254875.html): it can be set either at 5v or 3.3v, and it is much cheaper! 
 
+For the Arduino-FTDI32 connexion, you will need a 6 pin FF adaptor, or 6 FF jumper wires. You can also solder a 6-pin Female long pin header to the FTDI32.
 
 Better choose a short and robust USB cable between the FTDI32 and your laptop.
 
@@ -545,13 +546,43 @@ If you see these messages, your device is ready. **Close** the Serial Monitor an
 
 Normally, you should witness the radio transmission: indeed, during the transmission (around 1.3 seconds at 868&thinsp;MHz) the transmission LED is ON. 
 
+Your device is ready to measure and send data every approximate hour, and sleep in the meantime to preserve baterries. 
+
 [comment]: # "Il faut identifier les étapes que l'on va demander aux 'apprenants' de valider, et ce qu'ils faut qu'ils montrent ou vérifient. Par exemple: 'When flashing the ProMini with the INTEL-IRRIS code, what do you see in the Serial Monitor?'"
 
 [comment]: # "déjà, qu'ils arrivent bien à récupérer le code du github, à configurer l'arduino IDE, à sélectionner le bon board, ..."
 
 
 2.iv. Debug the Device
-====================
+======================
+Most of the issues we faced during the course of Intel-IrriS were addressed (as far as we know, and until new issues get detected).
+Nonetheless, I list here the most recurrent issues and how to diagnose and solve them.
+
+## Primary batteries (case without solar pannel) 
+Most issues are related with the capability of the batteries to powering the device on long-term. 
+The cheapest AA batteries will work a few hours and then the device will stop. 
+Indeed, the radio transmission is the power-hungriest step of the device's activity. When too little energy remains in the batteries, the voltage decreases during high power demand, below the minimum value tolerated by the microcontroller (around 2.7&thinsp;V), therefore the Arduino shuts down and reboots.
+
+=> **Check** that your device behaves as expected when powered using the FTDI32 connector. See previous Section **Check your Device**;
+=> **Check** that your batteries are "heavy duty" AA Alkaline (LR06).
+
+Note that the voltage is not always a good indicator for the batteries' health. A battery can maintain nominal voltage until a high current demand, such as the radio transmission, makes it drop.
+
+## Device does not switch on
+=> **Check** that you correctly connect the PCB's H2 header pins according to battery type.
+=> **Check** with a volt-meter that the switch cabling is not inverted. There should be no tension between the switch screw terminal screws when switch is off.
+
+## Code configuration mismatch
+Check the code, following Section **Set up the code**. Does it match the sensor type and the version of PCB?
+Does the chosen frequency band match the antenna and chipset?
+
+## Bad sensor connexion
+**Check** wires. Note that a dry watermark gives a default value of 3276.
+
+## Other bugs
+If you assume an issue may come from the batteries, you can have both battery powering and a serial connection via the FTDI32. From the 6 pins of the Arduino header, connect 5: **disconnect the VCC pin**. You can then analyze the Serial trace. 
+
+[comment]: # "## range"
 
 
 
@@ -608,6 +639,13 @@ More info:
 
 
 ## 2. Power consumption studies
+During Intel-IrriS we have been studying the power consumption of the different device types. Note that the current demand for the different activities of the device are very different (measure from sensors, less than 10&thinsp;mA; transmit, some 100&thinsp;mA; sleep, around 5&thinsp;&#181;A), thus making the study complex:
+* short-circuit the Ampere-meter during high current draw to prevent it being damaged;
+* isolate the Arduino activity from the others;
+* real-time measurements for the device's activities lasting less than one second;
+* necessary software debug logs to analyze the measurements.
+
+Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no more than 450&thinsp;mAh to work during one year.
 
 2.vi. Device's Quizz
 =====================
