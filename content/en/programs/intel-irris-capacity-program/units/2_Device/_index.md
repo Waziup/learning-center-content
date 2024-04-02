@@ -9,9 +9,9 @@ duration: 5h
 
 The Intel-IrriS Device is, among the two main components of the system, the most specific of the project. 
 
-Installed in the field, it periodically gathers the measurements from the ground sensors and transmits the values to the gateway using LoRa radio frames. 
+Installed in the field, powered by its own batteries, the Intel-IrriS Device works autonomously and periodically: every hour approximately, it gathers the measurements from the ground sensors (soil moisture and temperature) and transmits the values to the [gateway](../3_Gateway/_index.md) using LoRa radio frames. 
 
-The casing is waterproof and shelters the core microprocessor, on an Arduino board, the radio chip, the batteries (two AA alkaline, or 3 AAA NiMh, with or without a solar panel), all the connectors and the On/Off switch. 
+The casing is waterproof and shelters the core microprocessor, on an Arduino board, the radio chip, the batteries (whether two non-rechargeable AA alkaline batteries, or 3 AAA NiMh with or without a solar panel), all the connectors and the On/Off switch. 
 
 ![Intel-IrriS Device](img/Device.png)
 
@@ -317,7 +317,7 @@ For the watermarks, it is recommended to add a domino connector in order to be a
 
 More info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 18-21.
 ## 6. (Solder 2 MM wires to the solar panel and connect them to the PCB);
-This step is only necessary for devices with a Solar pannel. The point to note here is that since the cover is drilled you need to renforce the protection against water by completely gluing the solar panel perimeter and center on it.
+This step is only necessary for devices with a Solar panel. The point to note here is that since the cover is drilled you need to renforce the protection against water by completely gluing the solar panel perimeter and center on it.
 
 Follow the recommendations on [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 27-29.
 
@@ -558,7 +558,7 @@ Your device is ready to measure and send data every approximate hour, and sleep 
 Most of the issues we faced during the course of Intel-IrriS were addressed (as far as we know, and until new issues get detected).
 Nonetheless, I list here the most recurrent issues and how to diagnose and solve them.
 
-## Primary batteries (case without solar pannel) 
+## Primary batteries (case without solar panel) 
 Most issues are related with the capability of the batteries to powering the device on long-term. 
 The cheapest AA batteries will work a few hours and then the device will stop. 
 Indeed, the radio transmission is the power-hungriest step of the device's activity. When too little energy remains in the batteries, the voltage decreases during high power demand, below the minimum value tolerated by the microcontroller (around 2.7&thinsp;V), therefore the Arduino shuts down and reboots.
@@ -655,6 +655,43 @@ Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no mor
 
 
 [comment]: # ""
+
+
+<quiz id="AAAAA" type="single-choice" title="What is the main process of the Intel-IrriS Device?">
+	<answer feedback="You got it!" right>Every hour, gather soil sensors' data and transmit them to a gateway</answer>
+	<answer feedback="Nope.">Continuously gather soil sensors' data and transmit them every hour to a gateway</answer>
+	<answer feedback="Nope... Well tried!"> Continuously gather soil sensors' data and transmit them every 6h to a gateway </answer>
+	<answer feedback="Thats wrong!">Only when toggled by the user, gather soil sensors' data and transmit them to a gateway</answer>
+	<answer feedback="Thats wrong too!">Every six hours, gather soil sensors' data and transmit them to a gateway</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="Which radio technology is used by the Intel-IrriS Device?">
+	<answer feedback="You got it!" right>LoRa</answer>
+	<answer feedback="Nope.">None</answer>
+	<answer feedback="Nope... Well tried!">Wi-Fi</answer>
+	<answer feedback="Thats wrong!">Bluetooth</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="The Intel-IrriS Device is not designed to run on...">
+	<answer feedback="You got it!" right>Two non-rechargeable AA Alkaline batteries with solar panel</answer>
+	<answer feedback="Nope.">Three rechargeable AAA NiMh batteries with solar panel</answer>
+	<answer feedback="Nope... Well tried!">Two non-rechargeable AA Alkaline batteries without solar panel</answer>
+	<answer feedback="Thats wrong!">Three rechargeable AAA NiMh batteries without solar panel</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="The IRD PCBA v4.1 we focus on here has been designed to...">
+	<answer feedback="You got it!" right>Make the Device's preparation easier, solve issues, and enable using a solar panel</answer>
+	<answer feedback="Nope.">Improve the costs and delays of delivery</answer>
+	<answer feedback="Nope... Well tried!">Improve the radio range and lifespan of the Device</answer>
+	<answer feedback="Thats wrong!">Include new features and get comparable with Waziup design</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="The IRD PCBA v4.1 can be ordered...">
+	<answer feedback="You got it!" right>online, from Asia, fully assembled or adjusted with only a specifically chosen subset of components assembled </answer>
+	<answer feedback="Nope.">online, from Asia, fully assembled only (no flexible assembling)</answer>
+	<answer feedback="Nope... Well tried!">Indirectly via European intermediaries only</answer>
+	<answer feedback="Thats wrong!">Online from our website</answer>
+</quiz>
 
 <quiz id="AAAAA" type="single-choice" title="What is the best tension that should be supplied to the Intel-IrriS device, assuming that enough current is supplied too?">
 	<answer feedback="You got it!" right>3.3&thinsp;V</answer>
