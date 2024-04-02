@@ -5,6 +5,8 @@ type: sensor
 desc: Total Dissolved Solids Sensor 
 color: "#a5d1ff"
 tags:
+    - Hardware
+    - Sensor
     - Agriculture
     - City
 ---

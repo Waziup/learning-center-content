@@ -5,9 +5,14 @@ type: sensor
 desc: The DHT22 is a basic, low-cost digital temperature and humidity sensor.
 color: "#ffc5c5"
 tags:
+    - Hardware
+    - Sensor
     - Agriculture
     - City
     - Industry
+    - MVP-DIY-Kit
+    - DIY
+    - Training-Kit-Box
 ---
 
 # Introduction

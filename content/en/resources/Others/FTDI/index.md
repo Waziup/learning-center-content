@@ -4,4 +4,9 @@ title: FTDI
 type: hardware
 desc: Allows to program your board with a USB cable.
 color: "#d49fa8"
+tags:
+    - Hardware
+    - Arduino
+    - DIY
+    - Training-Kit-Box
 ---

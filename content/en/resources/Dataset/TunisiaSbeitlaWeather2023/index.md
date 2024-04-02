@@ -5,6 +5,8 @@ type: dataset
 desc: Weather data from Sbeitla, Tunisia, as collected by Waziup e.V. in 2023 and made available for free.
 color: "#f1f1f1"
 tags:
+    - Dataset
+    - Weather Station
     - Waziup
     - Tunisia
     - "2023"

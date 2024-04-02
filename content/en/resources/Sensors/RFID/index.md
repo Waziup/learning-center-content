@@ -5,8 +5,12 @@ type: sensor
 desc: RFID uses electromagnetic fields to transfer data over short distances.
 color: "#aeddff"
 tags:
+    - Hardware
+    - Sensor
     - City
     - Industry
+    - DIY
+    - Training-Kit-Box
 ---
 
 # Introduction
