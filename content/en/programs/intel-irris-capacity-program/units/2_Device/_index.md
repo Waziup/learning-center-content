@@ -654,7 +654,7 @@ Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no mor
 [comment]: # "<youtube>wgfhedtyjhdt</youtube>"
 
 
-[comment]: # ""
+
 
 
 <quiz id="AAAAA" type="single-choice" title="What is the main process of the Intel-IrriS Device?">
@@ -686,12 +686,46 @@ Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no mor
 	<answer feedback="Thats wrong!">Include new features and get comparable with Waziup design</answer>
 </quiz>
 
-<quiz id="AAAAA" type="single-choice" title="The IRD PCBA v4.1 can be ordered...">
-	<answer feedback="You got it!" right>online, from Asia, fully assembled or adjusted with only a specifically chosen subset of components assembled </answer>
-	<answer feedback="Nope.">online, from Asia, fully assembled only (no flexible assembling)</answer>
-	<answer feedback="Nope... Well tried!">Indirectly via European intermediaries only</answer>
+<quiz id="AAAAA" type="single-choice" title="The IRD PCBA v4.1 can be ordered and obtained...">
 	<answer feedback="Thats wrong!">Online from our website</answer>
+	<answer feedback="You got it!" right>Online, from Asia, fully assembled or partially assembled</answer>
+	<answer feedback="Nope.">Online, from Asia, fully assembled only (no flexible assembling)</answer>
+	<answer feedback="Nope... Well tried!">Indirectly via European intermediaries only</answer>
 </quiz>
+
+[comment]: # "adjusted with only a specifically chosen subset of components assembled "
+
+<quiz id="0261c201-7AAAAAAAAAAA171-60158676498c" type="single-choice" title="What frequency band is allowed for LoRa in Europe?">
+	<answer feedback="Nope.">433&thinsp;Mhz</answer>
+	<answer feedback="You got it!" right>868&thinsp;MHz</answer>
+	<answer feedback="Thats wrong!">Both 433 and 868&thinsp;MHz</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="When comparing the RFM95W and the RFM96W LoRa chipset...">
+	<answer feedback="You got it!" right>They are designed for different frequency bands</answer>
+	<answer feedback="Nope.">They are from different companies, Semtech and Hope RF</answer>
+	<answer feedback="Nope... Well tried!">They are both designed for the 433&thinsp;MHz band</answer>
+	<answer feedback="Thats wrong!">Their only difference is their IC</answer>
+	<answer feedback="Thats wrong too!">They have exactly the same features</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="In Intel-IrriS, the chosen antennas are...">
+	<answer feedback="You got it!" right>Black for 868&thinsp;MHz and white for 433&thinsp;MHz</answer>
+	<answer feedback="Nope.">Black for 443&thinsp;MHz and white for 868&thinsp;MHz</answer>
+	<answer feedback="Nope... Well tried!">Black</answer>
+	<answer feedback="Thats wrong!">Black for 868&thinsp;MHz</answer>
+	<answer feedback="Thats wrong too!">Not given a specific color. </answer>
+</quiz>
+
+
+<quiz id="AAAAA" type="single-choice" title="A device of type 2WT:">
+	<answer feedback="You got it!" right>Has 2 WM200 and 1 DS18B20 sensor</answer>
+	<answer feedback="Nope.">Has 2 SEN0308 and 1 DS18B20 sensor</answer>
+	<answer feedback="Nope... Well tried!">Has 2 WM200 and 1 SEN0308 sensor</answer>
+	<answer feedback="Thats wrong!">Has 2 DS18B20 and 1 WM200 sensor</answer>
+	<answer feedback="Thats wrong too!">Has 2 SEN0308 and 1 WM200 sensor</answer>
+</quiz>
+
 
 <quiz id="AAAAA" type="single-choice" title="What is the best tension that should be supplied to the Intel-IrriS device, assuming that enough current is supplied too?">
 	<answer feedback="You got it!" right>3.3&thinsp;V</answer>
@@ -701,8 +735,10 @@ Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no mor
 	<answer feedback="Thats wrong too!">5.1&thinsp;V</answer>
 </quiz>
 
-<quiz id="0261c201-7AAAAAAAAAAA171-60158676498c" type="single-choice" title="What frequency band is allowed for LoRa in Europe?">
-	<answer feedback="Nope.">433&thinsp;Mhz</answer>
-	<answer feedback="You got it!" right>868&thinsp;MHz</answer>
-	<answer feedback="Thats wrong!">Both 433 and 868&thinsp;MHz</answer>
+<quiz id="AAAAA" type="single-choice" title="">
+	<answer feedback="You got it!" right></answer>
+	<answer feedback="Nope."></answer>
+	<answer feedback="Nope... Well tried!"></answer>
+	<answer feedback="Thats wrong!"></answer>
+	<answer feedback="Thats wrong too!"></answer>
 </quiz>
