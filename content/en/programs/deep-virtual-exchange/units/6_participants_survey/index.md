@@ -2,7 +2,7 @@
 id: participants_survey_unit
 name: Program Feedback
 desc: At this part of the program you need to participate the survey.
-delay_start: 4w
+delay_start: 5w
 duration: 1d
 ---
 

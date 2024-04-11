@@ -2,7 +2,7 @@
 id: business_model_unit
 name: Business Model
 desc: This unit will guide you through the development of a successful Business Model Canvas
-delay_start: 4w
+delay_start: 5w
 duration: 1w
 courses:
     - id: bmc_course
