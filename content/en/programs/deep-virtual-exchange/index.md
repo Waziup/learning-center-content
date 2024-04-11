@@ -1,7 +1,7 @@
 ---
 id: dve_program
 name: Deep Virtual Exchange
-desc: This program drives Global Innovation Projects (GIP) with cross-disciplinary teams planning and implementing solutions using physical and online infrastructure. University students deploy successful outcomes to local stakeholders and policymakers.
+desc: This is YouthTeamUp's Deep Virtual Exchange (DVE) program. Global Impact Projects (GIPs) are implemented by cross-continental and multidisciplinary teams. By the end of the program, participants' capabilities in emerging technologies such as the Internet of Things (IoT), Artificial Intelligence, product and business development will be enhanced.
 from: 2024-04-15
 to: 2024-06-21
 ---
@@ -10,12 +10,12 @@ to: 2024-06-21
 
 # Overview
 
-The Deep Virtual Exchange Program facilitates global innovation projects (GIP) with cross-disciplinary teams defining tasks, planning responsibilities, and implementing solutions. Utilizing physical and online infrastructure, teams focus on app development, communication, and marketing tasks. Through virtual exchanges, progress is shared for deploying GIP solutions by university students, showcasing successful outcomes to local stakeholders and policymakers. The students will:
+The Deep Virtual Exchange Program facilitates Global Impact Projects (GIPs) with cross-continental and multidisciplinary teams that define tasks, plan responsibilities and implementing solutions. Utilizing physical and online infrastructure, teams focus on projects development (physical prototypes, Web and Mobile applications), communication, and marketing tasks. Through virtual exchanges, progress is shared for deploying GIP solutions by university students, showcasing successful outcomes to local stakeholders and policymakers. The students will:
 
 - Acquire IoT skills and knowledge.
 - Engage in both virtual and in-person training.
-- Receive a "Solution Box" package for setting up or upgrading an in-house IoT labs.
-- Develop or enhance GIPs using IoT technologies.
+- Use a "Solution Box", that will be deployed at their Universities, for learning and implementing their GIPs.
+- Develop and/or enhance GIPs using IoT technologies.
 
 <table>
 <thead>
@@ -49,19 +49,19 @@ The Deep Virtual Exchange Program facilitates global innovation projects (GIP) w
     <td>
         <li>Project development and management skills</li>
         <li>Emerging digital skills</li>
-        <li>Hands-on skills</li>
+        <li>Hands-on skills on IoT and AI</li>
         <li>Digital transformation technologies application</li>
-        <li>GIP development</li> </td>
+        <li>GIP development and deployment</li> </td>
   </tr>
 </tbody>
 </table>
 
 
-<!-- # Timeline
+# Timeline
 
-![timeline](img/timeline.png) -->
+![timeline](img/timeline.png)
 
 # More infos
 
-Please see the [YouthTeamUp Program webpage]
+Please see the [YouthTeamUp Program webpage](https://www.waziup.io/research-innovation/projects/youthteamup/)
 
