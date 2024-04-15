@@ -15,7 +15,8 @@ April 16th, 2024
 
 **Agenda:**
 - Welcome & Introduction 
-- Mission and Vision 
-- Introduction of the WaziLab platform. 
+- Mission and Vision
+- Presentation of the two GIPs (5 minutes each) 
+- Introduction of the WaziLab platform
 - Presentation of Unit 1 (Hardware and communications) 
 - Q/A session 

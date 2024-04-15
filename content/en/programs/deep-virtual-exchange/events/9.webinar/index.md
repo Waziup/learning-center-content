@@ -1,7 +1,7 @@
 ---
 id: wb-9
 name: Developing the GIPs 
-desc: Online session to enforce global innovtion projetcs
+desc: Online session to work on Global Impact Projects
 delay_start: 4w
 from: 2024-05-16
 ---
