@@ -727,6 +727,46 @@ Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no mor
 </quiz>
 
 
+<quiz id="AAAAA" type="single-choice" title="the waterproof case needs a hole drilled for the antenna:">
+	<answer feedback="You got it!" right>with a 7mm drill bit for metal</answer>
+	<answer feedback="Nope.">with a 13mm drill bit for metal</answer>
+	<answer feedback="Nope... Well tried!">with a 7mm drill bit for concrete</answer>
+	<answer feedback="Thats wrong!">with a 13mm drill bit for wood</answer>
+	<answer feedback="Thats wrong too!">with a 9mm drill bit for metal</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="On a single Intel-IrriS PCB, you can connect and work with:">
+	<answer feedback="You got it!" right>A solar panel, 2 watermark sensors and a temperature sensor</answer>
+	<answer feedback="Nope.">A solar panel, a watermark sensor and a capacitive sensor</answer>
+	<answer feedback="Nope... Well tried!">A temperature sensor, a watermark sensor and a capacitive sensor</answer>
+	<answer feedback="Thats wrong!">2 capacitive sensors</answer>
+	<answer feedback="Thats wrong too!">2 temperature sensors</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="The PCBA could be powered:">
+	<answer feedback="You got it!" right>using an FTDI32, switch off, with or without jumpers connecting pins on H2</answer>
+	<answer feedback="Nope.">using Alkaline batteries and without connecting any pin of H2</answer>
+	<answer feedback="Nope... Well tried!">using Alkaline batteries and connecting 2 pairs of adjacent pins of H2</answer>
+	<answer feedback="Thats wrong!">using a solar panel and connecting the 2 external pins of H2</answer>
+	<answer feedback="Thats wrong too!">using NiMh batteries and without connecting any pin of H2</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="In order to programm a device for Intel-IrriS you must:">
+	<answer feedback="You got it!" right>download the Arduino folder from Github and adjust the code to your specific device, then compile and upload the code using an FTDI32</answer>
+	<answer feedback="Nope.">download the full folder from Github and adjust it to your specific device</answer>
+	<answer feedback="Nope... Well tried!">download the code from the Intel-IrriS website, according to the targetted device type; you can directly copy the files to the device using USB</answer>
+	<answer feedback="Thats wrong!">download the INO sketch from Github and adjust the code to your specific device, then compile and upload the code using an FTDI32</answer>
+	<answer feedback="Thats wrong too!">download the Intelirris_Soil_Sensor folder from Github and adjust the code to your specific device, then compile and upload the code using an FTDI32</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="You must specify different Device addresses in the INO sketch">
+	<answer feedback="You got it!" right>when you have two or more devices of the same type on the same location, sharing the same frequency band.</answer>
+	<answer feedback="Nope.">when you have a device with a capacitive sensor and another with a watermark sensor on the same location. </answer>
+	<answer feedback="Nope... Well tried!">when you have more than one device on the same location.</answer>
+	<answer feedback="Thats wrong!">always</answer>
+	<answer feedback="Thats wrong too!">never</answer>
+</quiz>
+
 <quiz id="AAAAA" type="single-choice" title="What is the best tension that should be supplied to the Intel-IrriS device, assuming that enough current is supplied too?">
 	<answer feedback="You got it!" right>3.3&thinsp;V</answer>
 	<answer feedback="Nope.">3.6&thinsp;V</answer>
