@@ -767,6 +767,14 @@ Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no mor
 	<answer feedback="Thats wrong too!">never</answer>
 </quiz>
 
+<quiz id="AAAAA" type="single-choice" title="In order to upload the programm on an Arduino">
+	<answer feedback="You got it!" right>it needs to be detected on a given serial port whose name depends on the OS</answer>
+	<answer feedback="Nope.">it is always `COM1` </answer>
+	<answer feedback="Nope... Well tried!">it is always automatically chosen by the IDE</answer>
+	<answer feedback="Thats wrong!">you don't need a serial port</answer>
+	<answer feedback="Thats wrong too!">the Arduino must be connected right after the upload</answer>
+</quiz>
+
 <quiz id="AAAAA" type="single-choice" title="What is the best tension that should be supplied to the Intel-IrriS device, assuming that enough current is supplied too?">
 	<answer feedback="You got it!" right>3.3&thinsp;V</answer>
 	<answer feedback="Nope.">3.6&thinsp;V</answer>
