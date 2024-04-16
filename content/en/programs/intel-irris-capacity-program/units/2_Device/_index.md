@@ -546,7 +546,7 @@ If you see these messages, your device is ready. **Close** the Serial Monitor an
 
 Normally, you should witness the radio transmission: indeed, during the transmission (around 1.3 seconds at 868&thinsp;MHz) the transmission LED is ON. 
 
-Your device is ready to measure and send data every approximate hour, and sleep in the meantime to preserve baterries. 
+Your device is ready to measure and send data every approximate hour, and sleep in the meantime to preserve batteries. 
 
 [comment]: # "Il faut identifier les étapes que l'on va demander aux 'apprenants' de valider, et ce qu'ils faut qu'ils montrent ou vérifient. Par exemple: 'When flashing the ProMini with the INTEL-IRRIS code, what do you see in the Serial Monitor?'"
 
@@ -768,11 +768,26 @@ Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no mor
 </quiz>
 
 <quiz id="AAAAA" type="single-choice" title="In order to upload the programm on an Arduino">
-	<answer feedback="You got it!" right>it needs to be detected on a given serial port whose name depends on the OS</answer>
+	<answer feedback="You got it!" right>it needs to be detected on a given serial port whith OS-depending name</answer>
 	<answer feedback="Nope.">it is always `COM1` </answer>
 	<answer feedback="Nope... Well tried!">it is always automatically chosen by the IDE</answer>
 	<answer feedback="Thats wrong!">you don't need a serial port</answer>
 	<answer feedback="Thats wrong too!">the Arduino must be connected right after the upload</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="It is completely safe for the components to">
+	<answer feedback="You got it!" right>power the device with batteries, without the Arduino board</answer>
+	<answer feedback="Nope.">power the device with batteries, and with the FTDI32</answer>
+	<answer feedback="Nope... Well tried!">power the device with batteries, without an antenna</answer>
+	<answer feedback="Thats wrong!">power the device with the FTDI32, without an antenna</answer>
+	<answer feedback="Thats wrong too!">disconnect the USB powering the FTDI32 at any time</answer>
+</quiz>
+
+<quiz id="AAAAA" type="single-choice" title="On the Intel-IrriS Device">
+	<answer feedback="You got it!" right>The LED on pin 13 on the Arduino is on during the radio transmissions (around 1 second)</answer>
+	<answer feedback="Nope.">No LED are never on to reduce the energy consumption</answer>
+	<answer feedback="Nope... Well tried!">The power LED on the Arduino is always on, it cannot be controlled by software</answer>
+	<answer feedback="Thats wrong!">The LED on pin 13 on the Arduino has been removed to reduce the energy consumption</answer>
 </quiz>
 
 <quiz id="AAAAA" type="single-choice" title="What is the best tension that should be supplied to the Intel-IrriS device, assuming that enough current is supplied too?">
