@@ -568,6 +568,11 @@ Indeed, the radio transmission is the power-hungriest step of the device's activ
 
 Note that the voltage is not always a good indicator for the batteries' health. A battery can maintain nominal voltage until a high current demand, such as the radio transmission, makes it drop.
 
+There is a debug mode for the voltage, using the capability of the processor to measure voltage itself:
+**Compile and upload** the code having `#define TEST_LOW_BAT` uncommented (Remove the `//` comment mark if necessary).
+In that case, the sleep time is reduced to 1 minute (this can be modified) to ease the debugging; the voltage at the end of the sleep period, during and after the transmission are reported, both on serial console and in the next radio frame.
+
+
 ## Device does not switch on
 => **Check** that you correctly connect the PCB's H2 header pins according to battery type.
 => **Check** with a volt-meter that the switch cabling is not inverted. There should be no tension between the switch screw terminal screws when switch is off.
