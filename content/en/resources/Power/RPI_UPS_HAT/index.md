@@ -4,6 +4,10 @@ title: UPS_HAT
 type: power-management
 desc: Uninterruptible power supply module
 color: "#d4e7ff"
+tags:
+    - Hardware
+    - Power Management
+    - Raspberry Pi
 ---
 
 # Introduction

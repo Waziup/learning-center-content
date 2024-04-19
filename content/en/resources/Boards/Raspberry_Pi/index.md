@@ -5,7 +5,11 @@ type: hardware
 desc: A mini computer
 color: "#acbbd7"
 tags:
-    - mini computer
+    - Raspberry Pi
+    - Hardware
+    - Microcontroller
+    - MVP-DIY-Kit
+    - Training-Kit-Box
 ---
 
 # Introduction

@@ -151,3 +151,28 @@ var con = mysql.createConnection({
 ```
 
 Have fun!
+
+# Exercise
+
+1. Multiple Choice: Select the correct statement regarding No-SQL databases.
+
+    - [a] They are always based on a table structure.
+    - [b] They store complete documents, often in JSON format.
+    - [c] They guarantee strict data validity.
+    - [d] They are not suitable for IoT applications.
+
+2. Write a MongoDB query to find all data points with a value greater than 30 from the "iot_data" collection.
+3. Describe the purpose of creating an index in a No-SQL database like MongoDB. How does it improve performance?
+4. Compare and contrast SQL and No-SQL databases in the context of IoT data management. Discuss advantages and disadvantages of each approach.
+5. Discuss the scenario in which you would choose a SQL database over a No-SQL database for an IoT application. Provide reasons and considerations for your choice.
+6. CRUD Operations for IoT Data
+
+    - Insert Data: Provide a code snippet to insert a new IoT data point into the "iot_data" collection for a temperature sensor ("sensor_id": "TC2") mounted on the device "MyDevice". Assume the value is "28.3" and the current timestamp.
+
+    - Read Data: Implement a MongoDB query to retrieve all IoT data points where the value exceeds 30 from the "iot_data" collection.
+
+    - Update Data: Suppose the value recorded by the temperature sensor "TC2" on "MyDevice" changes to "27.5". Write a MongoDB query to update this specific data point in the "iot_data" collection.
+
+    - Delete Data: You've discovered that some erroneous data points were recorded with the sensor_id "TC2". Write a MongoDB query to delete all these data points from the "iot_data" collection.
+
+7. Install MongoDB on your local system and create a sample database and collection. Insert at least three dummy IoT data points into the collection. Document the steps taken and any challenges encountered during the process.

@@ -10,11 +10,11 @@ duration: 3h
 
 Are you interested with learning IoT, and building connected devices? If so, you're in luck Micropython can help you build all these fun stuff and a lot more. In this course you will learn
 
-  - Differences between MicroPython and other programming languages
-  - Advantages
-  - Basics of Micropython
-  - GPIO Programming with Micropython
-  - Micropython use cases
+- Differences between MicroPython and other programming languages
+- Advantages
+- Basics of Micropython
+- GPIO Programming with Micropython
+- Micropython use cases
 
 # What is Micropython
 
@@ -65,21 +65,21 @@ Run the code, and it should output _Hello world_ from the serial monitor.
 
 Micropython supports common data types, like in standard python:
 
-  - Integers: `delay_seconds = 5`
-  - Floats: `temperature = 17.1`
-  - Strings: `led_status = "ON"`
-  - Lists `my_boards = ['STM32','ESP8266','ESP32']`
-  - Tuple `board_elements = ('Actuators','Sensors','LEDs')`
-  - Dictionary `sensor_data = {'temperature':23.1, 'timestamp':'23:44:00PM'}`
+- Integers: `delay_seconds = 5`
+- Floats: `temperature = 17.1`
+- Strings: `led_status = "ON"`
+- Lists `my_boards = ['STM32','ESP8266','ESP32']`
+- Tuple `board_elements = ('Actuators','Sensors','LEDs')`
+- Dictionary `sensor_data = {'temperature':23.1, 'timestamp':'23:44:00PM'}`
 
 **Control flow**
 Micropython supports control flow statements like:
 
-  - if
-  - else
-  - elif
-  - while
-  - for
+- if
+- else
+- elif
+- while
+- for
 
 ```py
 if x > 0:
@@ -117,12 +117,10 @@ Youl will learn how to blink an LED using micropython. This will give you an und
 2. Download the MicroPython firmware suitable for your board from the official MicroPython website.
 3. Follow the instructions provided by your board's manufacturer to flash the firmware onto your board.
 4. Connect the LED:
-
   - Connect the anode (longer leg) of the LED to a GPIO pin on your board (for example, GPIO pin 2).
   - Connect the cathode (shorter leg) of the LED to a current-limiting resistor (around 220 ohms).
   - Connect the other end of the resistor to the ground (GND) pin on your board.
   - Connect your board to your computer:
-
 5. Use a USB cable to connect your ESP board to your computer.
 6. Write the MicroPython code:
 
@@ -166,20 +164,20 @@ _Note: Replace /dev/ttyUSB0 with the appropriate serial port of your board._
 
 1. **Devices for the Internet of Things (IoT)**
 
-  Micropython is a great option for creating networked and intelligent devices because to its ease of use and interoperability with a wide range of microcontroller platforms.
+Micropython is a great option for creating networked and intelligent devices because to its ease of use and interoperability with a wide range of microcontroller platforms.
 
 2. **Learning and Education**
 
-  Because of its ease of use and Python syntax, MicroPython is well-liked in educational environments. It offers learners and novices an approachable starting place for learning hardware interface and programming.
+Because of its ease of use and Python syntax, MicroPython is well-liked in educational environments. It offers learners and novices an approachable starting place for learning hardware interface and programming.
 
 3. **Robotics and Embedded Systems**
 
-  MicroPython's lightweight design makes it a good choice for robotic application and embedded system programming. It makes it simple for developers to manage and control physical components.
+MicroPython's lightweight design makes it a good choice for robotic application and embedded system programming. It makes it simple for developers to manage and control physical components.
 
 4. **Smart Home**
 
-  Home automation projects that utilize microcontrollers to operate lights, sensors, and other smart devices in the home environment use MicroPython.
+Home automation projects that utilize microcontrollers to operate lights, sensors, and other smart devices in the home environment use MicroPython.
 
 5. **Industrial automation**
 
-  MicroPython is a versatile and accessible scripting language that may be used in industrial settings for automation and control systems. It is useful for managing machinery and processes.
+MicroPython is a versatile and accessible scripting language that may be used in industrial settings for automation and control systems. It is useful for managing machinery and processes.

@@ -5,8 +5,12 @@ type: cloud
 desc: The WAZIUP Cloud platform allows you to manage your sensors, actuators and IoT data.
 color: "#f1f1f1"
 tags:
+    - Cloud
     - Waziup
     - API
+    - MVP-DIY-Kit
+    - Application-Business-Box
+    - Training-Kit-Box
 ---
 
 ## Introduction

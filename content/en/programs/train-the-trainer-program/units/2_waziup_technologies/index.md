@@ -5,6 +5,9 @@ desc: This unit introduces participants to Waziup technologies, covering the Waz
 delay_start: 1w
 duration: 1w
 courses:
+  - id: microcontrollers_course 
+  - id: boards_course
+  - id: sensors_course
   - id: WaziDev_course
   - id: wazigate_course
   - id: wazicloud_course

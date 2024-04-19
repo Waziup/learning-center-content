@@ -4,9 +4,15 @@ title: WaziDev
 type: microcontroller
 desc: This board allow to develop IoT devices with LoRaWAN.
 tags:
+    - Hardware
+    - Microcontroller
     - Waziup
     - LoRaWAN
     - LoRa
+    - City
+    - Agriculture
+    - MVP-DIY-Kit
+    - Training-Kit-Box
 ---
 
 # Introduction

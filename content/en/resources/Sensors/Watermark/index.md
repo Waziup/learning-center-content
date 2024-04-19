@@ -4,6 +4,8 @@ title: Watermark Sensor
 type: sensor
 desc: Watermark Sensor
 tags:
+    - Hardware
+    - Sensor
     - Agriculture
 ---
 
