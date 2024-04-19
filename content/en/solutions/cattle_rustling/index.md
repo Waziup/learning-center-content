@@ -1,4 +1,5 @@
 ---
+id: cattle_solution
 title: Cattle Rustling
 desc: |
   Cattle rustlings is increasingly becoming a major problem in many parts of Africa in recent years.

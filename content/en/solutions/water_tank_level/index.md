@@ -1,4 +1,5 @@
 ---
+id: waterlevel_solution
 title: Automatic Water Level Controller
 desc: |
   Its very common to see water storage tanks overflowing in most places where a pump is used.

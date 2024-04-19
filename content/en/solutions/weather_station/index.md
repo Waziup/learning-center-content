@@ -1,4 +1,5 @@
 ---
+id: weather_solution
 title: Weather Station
 desc: |
   A weather station is a facility, either on land or sea, with instruments and equipment for measuring atmospheric conditions to provide information for weather forecasts and to study the weather and climate.
