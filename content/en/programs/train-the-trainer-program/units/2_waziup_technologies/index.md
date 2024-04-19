@@ -17,7 +17,7 @@ It allows Long range communications with the LoRaWAN network, and can run your a
 
 ![archi](../../../../courses/1.Fundamentals/1.Intro/img/waziup-ecosystem.png#width=700)
 
-You should find all the components in your Solution Box. **TODO: describe Solution Box and give a link to the corresponding page.**
+You should find all the components in your Solution Box.
 
 <alert type='success'><b>Task 1:</b> Add all the components from the Solution Box in the "My Lab" section.</alert>
 
