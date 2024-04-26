@@ -25,7 +25,7 @@ The objectives of the program are:
 
 Units
 =====
-We have 7 units of learning distributed into three main sections:
+We have planed 7 units of learning distributed into three main sections, up to now the two first are available:
 
 * Introduction
 
@@ -34,6 +34,9 @@ We have 7 units of learning distributed into three main sections:
 * Section One - Sensing
 
   2. Intel-IrriS Device
+
+-----------------------------
+TODO:
 
 * Section Two - Data gathering
 
@@ -67,8 +70,10 @@ The 7 units of learning have the following structure:
    5. Learn more info
       1. PCB variants
       2. Power consumption studies
+   6. Device's Quizz
 
-[comment]: # "   7. Device's Quizz"
+-----------------------------
+TODO:
 
 ### Section Two - Data gathering
 3. About the Gateway

@@ -191,7 +191,7 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 [comment]: # "This table confirms the fact that the PCBA, as compared with the PCBv2, has reduced the complexity of the assembly, and for a start, the ΩΩΩΩΩΩΩΩΩΩΩΩ"
 
 For the device assembly, preparation and programming, you will also need: 
-- 1 USB Serial FTDI breakout 3.3&thinsp;V (with 6-pin Female conector and an USB cable to laptop);
+- 1 USB Serial FTDI breakout 3.3&thinsp;V (with 6-pin Female connector and an USB cable to laptop);
 - a solder station / soldering iron with thin solder wire;
 - a tiny slotted (flat) screwdriver for the screw terminal blocks;
 - a comon cruciform screwdriver;
