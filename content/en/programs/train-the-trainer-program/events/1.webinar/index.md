@@ -1,5 +1,5 @@
 ---
-id: wb-1
+id: wb-1_ttt_event
 name: Introduction to the WAZILAB platform & Unit 1 (Hardware & communications)
 desc: Hands-on session on hardware and communication concepts.
 delay_start: 0d

@@ -1,5 +1,5 @@
 ---
-id: wb-6
+id: wb-6_dve_event
 name: Introduction to Unit 3 (Web & Mobile Application Development) 
 desc: Online session to enforce  Web & Mobile Application Development
 delay_start: 3w

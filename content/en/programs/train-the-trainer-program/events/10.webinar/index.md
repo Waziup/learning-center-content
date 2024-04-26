@@ -1,5 +1,5 @@
 ---
-id: wb-10
+id: wb-10_ttt_event
 name: In-person Workshop
 desc: Online session for closing the platform training 
 delay_start: 1d

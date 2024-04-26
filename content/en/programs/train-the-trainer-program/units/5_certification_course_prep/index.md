@@ -1,5 +1,5 @@
 ---
-id: iot_certif_prep_phase_unit
+id: iot_certif_prep_phase_ttt_unit
 name: IoT certification course phase preparation
 desc: At this part of the program each engaged hub will run an IoT certification course and develop two innovative MVPs.
 delay_start: 4w

@@ -1,5 +1,5 @@
 ---
-id: wb-1
+id: wb-1_dve_event
 name: Onboarding & Kick-off
 desc: Welcome & Introduction to the Wazilab Platform
 delay_start: 0w

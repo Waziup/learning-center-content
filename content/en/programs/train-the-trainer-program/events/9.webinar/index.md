@@ -1,5 +1,5 @@
 ---
-id: wb-9
+id: wb-9_ttt_event
 name: Preparation for the In-person Workshop
 desc: Online session for closing the platform training 
 delay_start: 1d

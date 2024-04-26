@@ -1,5 +1,5 @@
 ---
-id: wb-8
+id: wb-8_ttt_event
 name: Preparation of the IoT certification course 
 desc: Online session to enforce IoT Programs in locals
 delay_start: 1d

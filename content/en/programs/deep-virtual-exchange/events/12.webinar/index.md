@@ -1,5 +1,5 @@
 ---
-id: wb-12
+id: wb-12_dve_event
 name: Final presentation of GIPs and certifications 
 desc: Students present their final GIPs and get their certificates.
 delay_start: 9w

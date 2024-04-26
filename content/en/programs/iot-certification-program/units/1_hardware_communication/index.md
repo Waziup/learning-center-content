@@ -1,5 +1,5 @@
 ---
-id: hardware_&_communication_unit
+id: hardware_&_communication_icp_unit
 name: Hardware & Communication
 desc: This unit covers the basics of hardware and communications.
 delay_start: 2w

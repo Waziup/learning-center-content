@@ -1,5 +1,5 @@
 ---
-id: wb-5
+id: wb-5_dve_event
 name: Online training on Waziup Technologies 
 desc: 
 delay_start: 2w

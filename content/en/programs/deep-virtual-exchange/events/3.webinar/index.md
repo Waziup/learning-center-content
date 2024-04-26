@@ -1,5 +1,5 @@
 ---
-id: wb-3
+id: wb-3_dve_event
 name: Introduction to Unit 2 (WAZIUP Technologies) 
 desc: Introductory meeting on waziup technologies and ecosystem.
 delay_start: 1w

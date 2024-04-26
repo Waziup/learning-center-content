@@ -1,5 +1,5 @@
 ---
-id: wb-8
+id: wb-8_dve_event
 name: 'Introduction to Unit 4: Data Analysis Visualization and AI'
 desc: Online session on Data Analysis Visualization and AI
 delay_start: 4w

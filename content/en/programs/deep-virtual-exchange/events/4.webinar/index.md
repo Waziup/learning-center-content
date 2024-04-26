@@ -1,5 +1,5 @@
 ---
-id: wb-4
+id: wb-4_dve_event
 name: Business mentorship and developing the GIPs 
 desc: 
 delay_start: 1w

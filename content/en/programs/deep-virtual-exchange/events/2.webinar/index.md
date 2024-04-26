@@ -1,5 +1,5 @@
 ---
-id: wb-2
+id: wb-2_dve_event
 name: Deploying the Solution Lab Box at Universities 
 desc: Introductory meeting on Waziup Solution Kitbox.
 delay_start: 0w

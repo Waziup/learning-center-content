@@ -1,5 +1,5 @@
 ---
-id: talent_ai_unit
+id: talent_ai_tp_unit
 name: Data Analysis Visualisation & AI
 desc: |
   This unit will cover the basics of data analysis, visualisation, and AI.

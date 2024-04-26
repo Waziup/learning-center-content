@@ -1,5 +1,5 @@
 ---
-id: wk-4
+id: wk-4_icp_event
 name: 'Introduction to Unit 4: Data Analysis Visualization and AI'
 desc: Online session on Data Analysis Visualization and AI
 delay_start: 5w

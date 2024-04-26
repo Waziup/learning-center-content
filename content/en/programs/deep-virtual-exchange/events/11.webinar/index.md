@@ -1,5 +1,5 @@
 ---
-id: wb-11
+id: wb-11_dve_event
 name: Developing the GIPs 
 desc: Online session to work on Global Impact Projects
 delay_start: 5w

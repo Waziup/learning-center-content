@@ -1,5 +1,5 @@
 ---
-id: wk-3
+id: wk-3_icp_event
 name: 'Introduction to Unit 3: Web & Mobile Application Development'
 desc: Online session to enforce  Web & Mobile Application Development
 delay_start: 4w

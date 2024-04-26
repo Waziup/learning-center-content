@@ -1,5 +1,5 @@
 ---
-id: business_model_unit
+id: business_model_dve_unit
 name: Business Model
 desc: This unit will guide you through the development of a successful Business Model Canvas
 delay_start: 5w

@@ -1,5 +1,5 @@
 ---
-id: waziup_tech__unit
+id: waziup_tech_dve_unit
 name: Waziup Technologies
 desc: This unit introduces participants to Waziup technologies, covering the Waziup IoT platform, hardware, software, architecture, components, and APIs.
 delay_start: 1w
