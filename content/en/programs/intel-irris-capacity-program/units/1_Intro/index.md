@@ -1,6 +1,6 @@
 ---
 id: intel-irris_intro
-title: Introduction
+title: 1. Introduction
 description: In this course, we will introduce the context of Intel-IrriS and the goal of this program.
 difficulty: beginner
 delay_start: 0w

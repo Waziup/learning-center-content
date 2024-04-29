@@ -1,6 +1,6 @@
 ---
 id: intel-irris_device
-title: Intel-IrriS Device
+title: 2. Intel-IrriS Device
 description: In this course, we will introduce the devices of Intel-IrriS and how to set them up and use them.
 difficulty: intermediary
 delay_start: 0w
