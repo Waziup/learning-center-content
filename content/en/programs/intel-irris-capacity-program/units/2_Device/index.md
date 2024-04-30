@@ -110,7 +110,7 @@ The most common device type are the Capacitive (C), the Watermark & Temperature 
 ![Device types](img/devtypes.png)
 
 ### a. The *SEN0308 capacitive* soil sensor
-![Capacitive](img/SEN0308.jpeg)
+![Capacitive](img/SEN0308.png)
 
 
 The cost of capacitive sensors is relatively low (especially when compared to TDR, -time domain reflectometry, probes), which makes it possible to instrument field with a low budget or (if keeping the same budget) by increasing the sensor's density in a given field.
@@ -132,7 +132,7 @@ More info on this sensor can be found here:
 Intel-IrriS chose this one because it is widespread, and relatively easy to connect to a board (e.g. Arduino). That is, it is less expensive than more sophisticated sensors using other physical processes, but the project can bring and use enough contextual information (soil temperature, soil type), and calibration before use, to overcome the variability and maintenance issues. 
 
 A nice description and basic code example here:
-[Watermark-WM200](../../../../resources/Sensors/Watermark/index.md); 
+[Watermark-WM200](https://github.com/Waziup/learning-center-content/blob/main/content/en/resources/Sensors/Watermark/index.md).
 
 [comment]: # "you will need a resistor from 7kΩ to 14kΩ (we use 10kΩ)"
 
@@ -141,7 +141,7 @@ A nice description and basic code example here:
 In Intel-IrriS we use the waterproof version of this typical and effective temperature sensor. 
 
 A nice description and basic code example here:
-[DS18B20 temperature sensor](../../../../resources/Sensors/Temperature_DS18B20/index.md); 
+[DS18B20 temperature sensor](https://github.com/Waziup/learning-center-content/blob/main/content/en/resources/Sensors/Temperature_DS18B20/index.md).
 
 
 ## 4. Order all the parts
