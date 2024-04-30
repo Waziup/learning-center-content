@@ -17,7 +17,7 @@ duration: 1w
 
 		https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Gateway/sensor-backup/README.md
 
-		/home/guigui/code/pau/github/learning-center-content/content/en/courses/5.Waziup/\
+		https://github.com/Waziup/learning-center-content/blob/main/content/en/courses/9.Waziup/\
 			wazicloud\
 			waziupAPI\
 
@@ -37,7 +37,7 @@ duration: 1w
 
 		drive deliv 2.5 Training procedures for AI processing of collected agriculture data\
 
-		/home/guigui/code/pau/github/learning-center-content/content/en/courses/6.WebApps/_databases
+		https://github.com/Waziup/learning-center-content/blob/main/content/en/courses/6.WebApps/_databases
 
 
 		work waziup\
