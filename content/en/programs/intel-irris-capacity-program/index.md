@@ -1,14 +1,15 @@
 ---
 id: intel_irris_program
-name: Cost-effective soil sensing for smart irrigation in small-scale farms
+name: IoT irrigation for small farms
 desc: Learn how to take benefit of the PRIMA Intel-IrriS resource and experience in your smart irrigation solution!
-from: 2023-12-01
-to: 2024-02-28
+from: 2024-05-01
+to: 2024-06-30
 ---
 
-# Intel-IrriS Capacity Program: Cost-effective soil sensing for smart irrigation in small-scale farms
+# Intel-IrriS Capacity Program: IoT irrigation for small farms
 
-The Intel-IrriS Business Capacity Program (Cost-effective soil sensing for smart irrigation in small-scale farms) gathers everything you need to know about the [PRIMA Intel-IrriS project](https://intel-irris.eu/).
+The Intel-IrriS Business Capacity Program (IoT irrigation for small farms) (C) gathers everything you need to know about the [PRIMA Intel-IrriS project](https://intel-irris.eu/). We present here a cost-effective soil sensing solution that enables smart irrigation in small-scale farms.
+
 The program is designed to empower local actors into being able to provide hardware, maintenance, and support to small-holders willing to monitor the water resource on their culture fields.  
 The program duration is about three weeks, and is articulated in various modules covering the assembly of all the Intel-IrriS devices, gateways, their installation guidelines and usage, the collection of data and its analysis, and links to how to order devices and ask for support.
 
