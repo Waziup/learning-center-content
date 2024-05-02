@@ -8,6 +8,8 @@ desc: |
 color: "#ffd3cd"
 tags:
     - Arduino
+    - Hardware
+    - Microcontroller
 ---
 
 # Introduction

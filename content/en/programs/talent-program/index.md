@@ -2,8 +2,8 @@
 id: talent_program
 name: Talent Program
 desc: Improve your technical skills on IoT, Machine Learning and Big Data with this hands-on 3 month program!
-from: 2023-12-01
-to: 2024-02-28
+from: 2023-11-01
+to: 2023-12-31
 ---
 
 # Talent Program

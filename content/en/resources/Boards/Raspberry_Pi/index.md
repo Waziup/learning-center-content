@@ -5,7 +5,11 @@ type: hardware
 desc: A mini computer
 color: "#acbbd7"
 tags:
-    - mini computer
+    - Raspberry Pi
+    - Hardware
+    - Microcontroller
+    - MVP-DIY-Kit
+    - Training-Kit-Box
 ---
 
 # Introduction
@@ -17,14 +21,14 @@ Fundamentally, the Raspberry Pi is a platform that promotes exploration and inno
 With its many features, including HDMI outputs, USB ports, and GPIO (General Purpose Input/Output) pins, the Raspberry Pi is like an empty canvas just waiting for your artistic interpretation. 
 
 
-![Alt text](img/Raspberry-Pi-5.jpg)
+![alt text](img/Raspberry-Pi-5.png)
 
 
 # Features 
 
 On initial interaction with Raspberry Pi designs, an inexperienced computer user may find them slightly confusing. The board has a number of embedded features, each with a unique purpose. In general, the many features regulate the characteristics of a typical computer in the twenty-first century, including peripheral port connectivity, Bluetooth, processor quality and speed, and software compatibility. All things are made possible by the characteristics of Raspberry Pi computers.
 
-![Alt text](img/Features_of_RPi.png)
+![alt text](img/Features_of_RPi.png)
 
 # Specifications
 
@@ -65,4 +69,4 @@ WaziGate is an IoT LoRaWAN Gateway, ideal for all your remote IoT applications. 
 # Learn more
 If this is your first time with Raspberry Pi then click [here](https://www.raspberrypi.com/documentation/computers/getting-started.html) to learn more on how to get started with RPi from their official Raspberry Pie documentation.
 
-![Alt text](img/Getting_started_with_RPi.png)
+![alt text](img/Getting_started_with_RPi.png)

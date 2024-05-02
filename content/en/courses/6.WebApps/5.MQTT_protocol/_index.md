@@ -84,3 +84,161 @@ Persistent sessions
 -------------------
 
 In the event that the client goes offline, the broker stores all messages that the client has subscribed to and notifies the client of all such messages once it comes back online.
+
+# Hands on task - MQTT Application
+
+In this task, we will be building a simple MQTT application that listens to paticular sensor updates from the `wazicloud`.
+
+## Prerequisites
+
+To build the application, we will need the following setup
+
+- Wazicloud account
+- Waziup API docs
+- Active internet connection
+- Node & npm
+
+The url that we will be listening to follows the following format,
+
+mqtt://api.waziup.io/devices/<device-id>/sensors/<sensor-id>/value
+
+Note that instead of using `http`, we will be using `mqtt` protocal.
+
+To send the data to the cloud, you can simply use a simple `curl` command or have an active device on the gateway that streams the values to the cloud. In this task, we will be sending data using curl.
+
+Create an index.html component for our app. Paste the code below:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>MQTT-Waziup</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            height: 100dvh  ;
+        }
+        .sensor-card {
+            padding: 0.5rem;
+            box-shadow: 0 0 12px 0 gray;
+            width: 22rem;
+            border-radius: 8px;
+            aspect-ratio: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: large;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="sensor-card">
+        <h1 id="sensor-id">Sensor</h1>
+        <article>
+            Received Value: <span id="val">---</span>
+        </article>
+    </div>
+</body>
+</html>
+```
+
+<alert type='warning'>Use the compile js code in the script tag, you can use browserify to compile the js to work on browser</alert>
+
+```
+npm install browserify
+```
+
+```
+browserify main.js -o main.js
+```
+
+In the html elements we simply declare where the sensor values will be displayed.
+
+## Subscribing to mqtt
+
+Install this mqtt library to facilitate the connection and subscription to the cloud.
+
+```
+npm install mqtt
+```
+
+Use this js code to listen to incoming data. Use script tag to import the code below to the html component.
+
+```js
+// Import the MQTT library
+const mqtt = require("mqtt");
+
+// Connect to mqtt client
+const mqttClient = mqtt.connect("mqtt://api.waziup.io");
+
+// Obtain the device and sensor ID from the wazicloud. Ensure you have devices set up already
+const deviceId = 'ESPDEVICE';
+const sensorId = 'TC';
+
+// Declare a topic (endpoint) where we want to listen update from
+const topic = `devices/${deviceId}/sensors/${sensorId}/value`;
+// When we are connected to the client, subscribe to the defined topic
+mqttClient.on("connect", ()=>{
+    mqttClient.subscribe(topic, (error)=>{
+        if (error) {
+            console.log("Failed to connect MQTT");
+        } else {
+            console.log(`Connected to MQTT \nTopic: ${topic}`);
+        }
+    })
+})
+
+// Update the UI when we receive data
+mqttClient.on("message", (receivedTopic, message)=>{
+    console.log("Received...")
+    console.log("Topic: ", receivedTopic);
+    console.log(message);
+    document.getElementById("val").innerHTML = message.value
+})
+```
+
+Before receiving any value, the UI could look like this without any populated value,
+
+The image below shows how the UI should appear before any data has been received.
+
+![mqtt-empty](./img/mqtt1.png)
+
+Issue the curl command below to push a sensor to the wazicloud.
+
+```
+curl -X POST "https://api.waziup.io/api/v2/devices/ESPDEVICE/sensors/TC/value" -H "accept: application/json;charset=utf-8" -H "Content-Type: application/json;charset=utf-8" -d "{ \"value\": 25}"
+
+```
+
+<alert type=warning>Use the correct device id and sensor id</alert>
+
+The UI should be automatically populated with the value you sent.
+
+Below is an image illustrating the outcome expected when data is send to the API.
+
+![mqtt2](./img/mqtt2.png)
+
+# Exercise
+
+1. Develop a simple application that listens to real time values from all the sensors and actuators connected to a particular device
+    
+    Hint: Use the topic `#` to subscribe to all instances happening in a particular device
+    e.g `devices/#`

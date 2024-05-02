@@ -1,4 +1,5 @@
 ---
+id: autoirrig2_solution
 title: Auto Irrigation
 desc: With the help of this guide you will be able to build a device to track moisture and soil temperature.
 architecture:

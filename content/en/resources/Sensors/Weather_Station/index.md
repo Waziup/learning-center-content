@@ -5,6 +5,9 @@ type: sensor
 desc: Weather Station Kit
 color: "#e5b9a6"
 tags:
+    - Hardware
+    - Sensor
+    - Weather Station
     - City
     - Agriculture
 ---

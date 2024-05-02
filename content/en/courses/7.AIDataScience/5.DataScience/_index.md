@@ -9,50 +9,17 @@ duration: 7h
 This course will show how to analyse IoT data, using Python. The first thing to do is to import, clean and prepare the data for analysis. We will then show various techniques to extract information from data. 
 
 
-Definition
-=========
-
-Data Science is a branch of computer science where we study how to store, use and analyze data for deriving information from it.
-
-Finding important insights within mountains of complicated or seemingly unimportant data is the ultimate goal of data science. Data science frequently focuses on creating the models and algorithms that will be used during the data analysis process rather than actually performing the analysis itself.
-
-Data science aims to use that data to predict the results of decisions made in the future, whereas data analysis uses past data to provide insights that can guide future decisions. On the basis of enormous amounts of historical data, predictions are made using the emerging fields of machine learning and pattern recognition.
-
-
 Introduction
 ==========
 
-A car next to you stops automatically when a pedestrian steps in front of it, an unsolicited email skips your inbox and goes straight to spam, and an advertisement for the item you were considering yesterday appears on your social media feed over the course of an hour. Artificial intelligence has been the driving force behind all of these events, which is what unites them. And the driving force behind them all are machine-learning algorithms that forecast outcomes using data.
+Data Science is a branch of computer science where we study how to store, use and analyze data for deriving information from it.
 
-Let's now examine each discipline's foundations before examining how machine learning supports data science.
+Data science aims to use that data to predict the results of decisions made in the future, whereas data analysis uses past data to provide insights that can guide future decisions. On the basis of enormous amounts of historical data, predictions are made using the emerging fields of machine learning and pattern recognit
 
-How does machine learning work?
-The science of machine learning entails creating algorithms that can change without human intervention by learning from data on their own. These algorithms develop their own logic as we provide data to them, resulting in solutions that are applicable to a variety of aspects of our world, including e.g.:
-
-- fraud detection
-- web searches
-- tumor classification
-- price prediction
-
-In deep learning, a branch of machine learning, computer programs learn complex ideas by deriving them from simpler ones. The "deep" neural networks used by these algorithms are multilayered (hence the name). Deep learning has a significant positive impact on performance in machine learning applications like natural language processing or computer vision.
-
-Data science: What is it?
 Data science involves transforming, visualizing, and manipulating data in order to derive insightful conclusions from the findings. These insights are frequently used to guide people, companies, and even governments.
 
-Simple linear regression can be used by data scientist to forecast customer behavior, stock prices, or insurance claims. They could use classification and regression trees (CART) to produce homogeneous clusters, or they could use graphs to represent the portfolio of a financial technology company to gain some insight into how their decisions might be affected.
-
-Human analysts were indispensable when it came to identifying patterns in data up until the last decades of the 20th century. They remain crucial today for feeding the right data to learning algorithms and deducing meaning from algorithmic output, but machines can and do carry out a large portion of the analytical work themselves.
-
 Why Machine Learning Is Useful in Data Science?
-Automated model construction for data analysis is where machine learning is useful. Machine learning is used when we give computers the fundamental data science tasks of classification, clustering, and anomaly detection.
-
-We can create self-improving learning algorithms that take data as input and provide statistical inferences. The algorithms take action whenever they notice a change in pattern, without relying on hard-coded software programming.
-
-Let's talk about some terminology used to classify various machine-learning algorithms before we look at specific data analysis issues. First, we can consider that the majority of algorithms are either regression-based (where machines predict values) or classification-based (where machines classify data into categories).
-
-After that, let's make a distinction between supervised and unsupervised algorithms. After adequate data training, a supervised algorithm outputs target values. In contrast, an unsupervised machine-learning algorithm does not require an output variable as guidance during the learning process.
-
-For instance, a supervised algorithm might calculate a home's value after examining the prices (the output variable) of comparable homes, whereas an unsupervised algorithm might search for hidden patterns in housing that is currently on the market.
+Automated model construction for data analysis is where machine learning is useful. Machine learning is used when we give computers the fundamental data science tasks of classification, clustering, and anomaly detection. We can create self-improving learning algorithms that take data as input and provide statistical inferences. The algorithms take action whenever they notice a change in pattern, without relying on hard-coded software programming.
 
 Despite the fact that these machine-learning models are very popular, humans are still required to determine the ultimate implications of data analysis. It's up to us humans to interpret the findings or make choices about, say, how to clean the data.
 
@@ -76,79 +43,48 @@ We examine how machine learning can scale and automate data analysis in this cou
 Data preparation and problem definition
 ================
 
-In this point it is being discussed on how to prepare the data we want to analyze.
-
-## How to approach a machine learning problem
-
-There are five major steps involved on how to approach a machine learning problem [Brow14]. They are being discussed below.
+There are five major steps involved on how to approach a machine learning problem [Brow14]. They are being discussed below:
 
 ## 1. Define the Problem
 
-In this phase one tires to understand the problem in holistic way. 
-This can be split into three questions.
+In this phase you should try to understand the problem in a holistic way. 
+This can be split into three questions:
 
-### 1. What is the problem?
+- What is the problem?
+- Why this problem needs to be solved? 
+- How would one solve the problem?
 
-Here the problem is described, to further understand it. List assumptions and similar problems.
-
-### 2. Why this problem needs to be solved?
-
-This question includes advantages one gain from solving the problem. It is a motivation to think about benefits a solution provides.
-
-### 3. How would one solve the problem? 
-
-Try to understand how the problem would be solved manually, to get insights in this domain.
+First, you need to describe probperly the problem, to further understand it. List assumptions and similar problems.
+Then try to understand what are the advantages gained from solving the problem.
+It is a motivation to think about benefits a solution provides.
+Finally, try to understand how the problem would be solved manually, to get insights in this domain.
 
 ## 2. Prepare Data 
 
-In that phase one tries to understand the data, for that some scatter plots or histograms are useful.
+In that phase you need to understand the data, for that some scatter plots or histograms are useful.
+This involves three steps:
+- Data Selection The relevant training examples are then chosen. 
+- Data Preprocessing
+- Data Transformation 
 
-### 1. Data Selection
-
-In data selection it is being examined what data is available, what data is missing and what is redundant or simply not needed. The relevant training examples are then chosen. 
-
-### 2. Data Preprocessing
-
+Data selection is the process of examining what data is available, what data is missing and what is redundant or simply not needed.
 Data preprocessing tries to organize the selected data by formatting, cleaning and sampling.
-
-### 3. Data Transformation
-
 Data transformation involves engineering features by scaling, attribute aggregation and attribute decomposition. 
-
+  
 ## 3. Spot Check Algorithms
 
 Spot check algorithms means to compare different approaches solving the problem. There are some low code frameworks that let you compare different algorithms. They train different models on a given dataset. Afterwards they can compared according to different metrics.
 
-After a first spot check the most promising algorithms can be chosen. Afterwards parameters can be refined to make them even more effective in solving the problem, but this is part of the next step.
+After a first spot check, the most promising algorithms can be chosen. Afterwards, parameters can be refined to make them even more effective in solving the problem, but this is part of the next step.
 
 ## 4. Improve Results
 
-### 1. Algorithm Tuning: 
+In order to improve the results, you can start by tuning your algorithms. In this process the hyperparameter of the model architecture are changed (in a specific range) and the model is trained in various combinations. The best model can be chosen afterwards.
 
-In this process the hyperparameter of the model architecture are changed (in a specific range) and the model is trained in various combinations. The best model can be chosen afterwards.
+There can also be a combination of different machine learning models that gives the best results. This is called Ensemble methods.
+So, it should be considered to combine different approaches, if this is feasible.
 
-### 2. Ensemble Methods:
-
-Like stated before, there can be a combination of different machine learning models to give the best results. So, it should be considered to combine different approaches, if this is feasible.
-
-### 3. Extreme Feature Engineering
-
-In extreme feature engineering the attribute decomposition and aggregation seen in data preparation is being used to make the training data more explicit. It involves transforming data to forms that better relate to the learning targets. It can augment the value of your data and improves the overall performance of your model. It involves techniques like:
-
-- **Imputation**: handling the missing values in data
-- **Discretization**: grouping sets of values together in some logical fashion into buckets or bins
-- **Categorical encoding**: encode categorical values into numerical features -> simpler to learn
-- **Feature splitting**: splitting features into parts can improve the value of features
-- **Handling outliers**: outliers are unusually high or low values in a dataset, there are some options: 
-  - removal
-  - replacing
-  - capping 
-  - discretization 
-- **Variable transformations**: could help normalizing skewed data, e.g. logarithmic transformation
-- **Scaling**: scaling inputs of data can improve your model, here values are normalized, this can be achieved differently
-  - Variance scaling. data points are subtracted by their mean, the result is divided by the distribution variance, this gives a distribution with 0 mean and a variance of 1
-  - Min-Max scaling: rescaling the values in a range from 0 to 1
-- **Create features**: deriving new features from existing ones, done by simple mathematical operations like: mean, median, difference, sum, mode or a product of two values
+Finally, in "extreme feature engineering", the attribute decomposition and aggregation seen in data preparation is being used to make the training data more explicit. It involves transforming data to forms that better relate to the learning targets. It can augment the value of your data and improves the overall performance of your model. 
 
 ## 5. Present Results
 
@@ -166,26 +102,23 @@ In the following the important metrics like variance, bias, r2-score and mean sq
 So the error in a machine learning model is made up of:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Error = Reducible Error + Irreducible Error">
+<img src="https://latex.codecogs.com/svg.image?Error%20=%20Reducible%20Error%20+%20Irreducible%20Error">
 </p>
 
 The reducible Error is the sum of squared Bias and Variance.
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Reducible Error = Bias^2 + Variance">
+<img src="https://latex.codecogs.com/svg.image?Reducible%20Error%20=%20Bias^2%20+%20Variance">
 </p>
 
 Combining the above two equations, we get:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Error = Bias^2 + Variance + Irreducible Error">
+<img src="https://latex.codecogs.com/svg.image?Reducible%20Error%20=%20Bias^2%20+%20Variancehttps://latex.codecogs.com/svg.image?Error%20=%20Bias^2%20+%20Variance%20+%20Irreducible%20Error">
 </p>
 
 Variance
 --------
-
-<!-- TODO: make difference between BIAS clear -->
-
 
 Variance is also known as **Variance Error** or **Error due to Variance**.
 Variance measures how close observed values are to predicted values or, in other words, how far observed values are spread out from their mean (predicted) values.
@@ -201,6 +134,8 @@ Bias is a constant or vector that shows the difference of the model's prediction
 <p style="text-align: center;">
 Difference between variance and bias illustrated [Fort12]. 
 </p>
+
+In summary, bias measures how closely the model's predictions match the true values, while variance measures how much the predictions vary with changes in the training data. Balancing bias and variance is crucial for building models that generalize well to unseen data
 
 Correlation
 -----------
@@ -226,7 +161,7 @@ Mean Square Error
 The metric Mean Square Error (MSE) describes the average of the square errors, the larger the number of MSE is, the larger the error. The metric is defined as the following:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?MSE = \frac{1}{n} \sum^{n}_{i=1}(Y_{i}-\hat{Y}{}_{i})^2">
+<img src="https://latex.codecogs.com/svg.image?MSE%20=%20\frac{1}{n}%20\sum^{n}_{i=1}(Y_{i}-\hat{Y}{}_{i})^2">
 </p>
 
 The diagram below shows a graph that was created using linear regression. 
@@ -246,7 +181,7 @@ R2-Score
 The r2 score closely relates to Mean Square Error (explained in the last bulletin). It is a percentage, that varies from *0* % - *100* %. The r2 score shows a ratio of variances:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?R2_{score} = \frac {\text{total variance explained by the model}} {\text{total variance}} = 1 \&space;- \&space; \frac {\text{total sum of residuals}}{\text{total sum of squares}}">
+<img src="https://latex.codecogs.com/svg.image?R2_{score}%20=%20\frac%20{\text{total%20variance%20explained%20by%20the%20model}}%20{\text{total%20variance}}%20=%201%20\&space;-%20\&space;%20\frac%20{\text{total%20sum%20of%20residuals}}{\text{total%20sum%20of%20squares}}">
 </p>
 
 A high value means that the variables are perfectly correlated, there is no variance. A low value would indicate a low level of correlation, that means in most cases, that the model is not suitable for the given task.
@@ -254,88 +189,8 @@ A high value means that the variables are perfectly correlated, there is no vari
 A more in-depth mathematical explanation of the r2 score is given by Paul Johnson in his lecture ["Extending R-squared beyond ordinary least-squares linear regression"](https://www.slideshare.net/pcdjohnson/extending-rsquared-beyond-ordinary-leastsquares-linear-regression-95949488)
 
 
-How to retrieve values from the WaziCloud platform
-================
-
-Retrieve values in JSON via curl
---------------------------------
-
-Get desired values via the **curl** command. In the following data is being retrieved from the WaziGate 
-
-You can get an overview about the possible queries from WaziCloud by visiting [Swagger](https://api.waziup.io/docs/#/Sensors/get_devices__device_id__sensors__sensor_id__values "Swagger").
-All you need is your **device_id** and the **sensor_id**, you can find them by visiting the [WaziCloud](https://dashboard.waziup.io/ "WaziCloud").
-
-```python
-response = !curl -s -X GET "https://api.waziup.io/api/v2/devices/0242ac1200023852/sensors/temperatureSensor_0/values" -H "accept: application/json;charset=utf-8"
-print ("This is the response: \n\n",response)
-```
-We can create a **list** from the **JSON** to organize our values:
-
-```python
-import json
-# Opening JSON file
-
-print(type(response))
-rep_str = str(response).replace("'",'')
-print(type(rep_str))
-
-# create JSON list
-response_list = json.loads(rep_str)
-
-# Print first value
-print(response_list[0][0])
-```
-
-```python
-# Get temparature of first "value"
-print("First value: ", response_list[0][0]["value"])
-print("Values in total: ", len(response_list[0]))
-```
-
-Or an **NumPy** ndarray:
-
-```python
-import numpy as np
-
-temp_vals = np.array([])
-
-for n in range(len(response_list[0])):
-    temp_vals = np.append(temp_vals, response_list[0][n]["value"], axis=None)
-
-print("Temperature values: ",temp_vals)
-```
-
-Plot the values, with **Matplotlib**:
-
-```python
-import matplotlib.pyplot as plt
-
-plt.plot(temp_vals)
-plt.show()
-```
-Now you can start using the retrieved data. A next step would be to clean, interpolate and prepare the data for analysis.
-
-Download values in *.csv
-------------------------
-
-You can also download the gateway's data in *.csv file format. You can use to perform a backup, to have all data in one place and for machine learning applications. There are three possibilities to do so:
-
-![Export section of the WaziGate.](img/export.png)
-<p style="text-align: center;">Export section of the WaziGate.
-</p>
-
-- Export the data of all sensors and actuators to a tree of CSV files
-- Export the data of all sensors and actuators to one CSV file
-- Export the data of all sensors and actuators to one CSV file. Additionally it also includes custom timespans and all data can be summarized in time bins. This is perfect for machine learning applications.
-
-Linear Regression
-=================
-
-In the [Machine Learning lecture](../2.MachineLearning/_index.md) you can find a comprehensive guide, that explains the fundamentals of Linear Regression. 
-
-
-Python Libraries used in Data Analysis
-=====================================
+Data Analysis with Python
+=========================
 
 In the following there are some important python packages named and described, that are useful in the context of data analysis.
 
@@ -356,6 +211,10 @@ Matplotlib
 
 Matplotlib is the plotting library to produce quality figures such as histogram, scatter plot etc… It is widely used for Data visualization.
 
+### Matplotlib exercise
+
+The simple example code below will load some test data and use Matplotlib to visualize the data:
+
 ```python
 import matplotlib.pyplot as plt 
  
@@ -375,7 +234,7 @@ plt.xlabel('X-Axis')
 plt.show()
 ```
 
-This code results in the following plotted diagram:
+This code results in the following plotted diagram. We cans see that there is a relationship between the X and Y values, that is, as they are nearly proportional to each other.
 
 ![Matplotlib](img/plotmatplotlib.png)
 
@@ -860,4 +719,80 @@ The model isn't finished yet, but we can always go back and combine the features
 ## Sources
 
 [Brow14] Jason Brownlee, "Applied Machine Learning Process" https://machinelearningmastery.com/process-for-working-through-machine-learning-problems/ Version 2019
+
+
+Exercise: data collection from WaziCloud
+========================================
+
+Retrieve values in JSON via curl
+--------------------------------
+
+Get desired values via the **curl** command. In the following data is being retrieved from the WaziGate 
+
+You can get an overview about the possible queries from WaziCloud by visiting [Swagger](https://api.waziup.io/docs/#/Sensors/get_devices__device_id__sensors__sensor_id__values "Swagger").
+All you need is your **device_id** and the **sensor_id**, you can find them by visiting the [WaziCloud](https://dashboard.waziup.io/ "WaziCloud").
+
+```python
+response = !curl -s -X GET "https://api.waziup.io/api/v2/devices/0242ac1200023852/sensors/temperatureSensor_0/values" -H "accept: application/json;charset=utf-8"
+print ("This is the response: \n\n",response)
+```
+We can create a **list** from the **JSON** to organize our values:
+
+```python
+import json
+# Opening JSON file
+
+print(type(response))
+rep_str = str(response).replace("'",'')
+print(type(rep_str))
+
+# create JSON list
+response_list = json.loads(rep_str)
+
+# Print first value
+print(response_list[0][0])
+```
+
+```python
+# Get temparature of first "value"
+print("First value: ", response_list[0][0]["value"])
+print("Values in total: ", len(response_list[0]))
+```
+
+Or an **NumPy** ndarray:
+
+```python
+import numpy as np
+
+temp_vals = np.array([])
+
+for n in range(len(response_list[0])):
+    temp_vals = np.append(temp_vals, response_list[0][n]["value"], axis=None)
+
+print("Temperature values: ",temp_vals)
+```
+
+Plot the values, with **Matplotlib**:
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(temp_vals)
+plt.show()
+```
+Now you can start using the retrieved data. A next step would be to clean, interpolate and prepare the data for analysis.
+
+Download values in *.csv
+------------------------
+
+You can also download the gateway's data in *.csv file format. You can use to perform a backup, to have all data in one place and for machine learning applications. There are three possibilities to do so:
+
+![Export section of the WaziGate.](img/export.png)
+<p style="text-align: center;">Export section of the WaziGate.
+</p>
+
+- Export the data of all sensors and actuators to a tree of CSV files
+- Export the data of all sensors and actuators to one CSV file
+- Export the data of all sensors and actuators to one CSV file. Additionally it also includes custom timespans and all data can be summarized in time bins. This is perfect for machine learning applications.
+
 

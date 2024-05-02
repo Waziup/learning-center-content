@@ -1,26 +1,18 @@
 ---
-id: waziup-intro_event
-name: Introducing Waziup Technologies
+id: wb-2_ttt_event
+name: 'The Solution Lab Box: Deploying the MVP kit'
 desc: Introductory meeting oon waziup technologies and ecosystem.
 delay_start: 1d
-from: 2024-02-26
+from: 2024-03-01
 ---
 
 **Online Webinar**
 
-February 26th, 2024  
-2:00 PM - 3:30 PM, Central European Time.
+March 1st, 2024  
+10:00 PM, Central European Time.
 
 **Platform**: Zoom
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 **Agenda:**
-- Presentation of the program
-- Hackathon
-- Timeline
-- Awards
-
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
+- Presentation of the Solution Lab Box
+- Deployment and test of some sensors

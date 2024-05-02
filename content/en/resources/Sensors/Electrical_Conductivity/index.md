@@ -5,6 +5,8 @@ type: sensor
 desc: Measures the amount of electrolytes in a liquid 
 color: "#BEFFE6"
 tags:
+    - Hardware
+    - Sensor
     - Agriculture
     - City
     - Industry

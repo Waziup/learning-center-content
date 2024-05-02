@@ -191,26 +191,23 @@ In the following the important metrics like variance, bias, r2-score and mean sq
 So the error in a machine learning model is made up of:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Error = Reducible Error + Irreducible Error">
+<img src="https://latex.codecogs.com/svg.image?Error%20=%20Reducible%20Error%20+%20Irreducible%20Error">
 </p>
 
 The reducible Error is the sum of squared Bias and Variance.
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Reducible Error = Bias^2 + Variance">
+<img src="https://latex.codecogs.com/svg.image?Reducible%20Error%20=%20Bias^2%20+%20Variance">
 </p>
 
 Combining the above two equations, we get:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?Error = Bias^2 + Variance + Irreducible Error">
+<img src="https://latex.codecogs.com/svg.image?Error%20=%20Bias^2%20+%20Variance%20+%20Irreducible%20Error">
 </p>
 
 Variance
 --------
-
-<!-- TODO: make difference between BIAS clear -->
-
 
 Variance is also known as **Variance Error** or **Error due to Variance**.
 Variance measures how close observed values are to predicted values or, in other words, how far observed values are spread out from their mean (predicted) values.
@@ -226,6 +223,8 @@ Bias is a constant or vector that shows the difference of the model's prediction
 <p style="text-align: center;">
 Difference between variance and bias illustrated [Fort12]. 
 </p>
+
+In summary, bias measures how closely the model's predictions match the true values, while variance measures how much the predictions vary with changes in the training data. Balancing bias and variance is crucial for building models that generalize well to unseen data
 
 Correlation
 -----------
@@ -251,7 +250,7 @@ Mean Square Error
 The metric Mean Square Error (MSE) describes the average of the square errors, the larger the number of MSE is, the larger the error. The metric is defined as the following:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?MSE = \frac{1}{n} \sum^{n}_{i=1}(Y_{i}-\hat{Y}{}_{i})^2">
+<img src="https://latex.codecogs.com/svg.image?Error%20=%20Bias^2%20+%20Variance%20+%20Irreducible%20Errorhttps://latex.codecogs.com/svg.image?MSE%20=%20\frac{1}{n}%20\sum^{n}_{i=1}(Y_{i}-\hat{Y}{}_{i})^2">
 </p>
 
 The diagram below shows a graph that was created using linear regression. 
@@ -271,7 +270,7 @@ R2-Score
 The r2 score closely relates to Mean Square Error (explained in the last bulletin). It is a percentage, that varies from r2<*0* - *1*. The r2 score shows a ratio of variances:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?R2_{score} = \frac {\text{total variance explained by the model}} {\text{total variance}} = 1 \&space;- \&space; \frac {\text{total sum of residuals}}{\text{total sum of squares}}">
+<img src="https://latex.codecogs.com/svg.image?R2_{score}%20=%20\frac%20{\text{total%20variance%20explained%20by%20the%20model}}%20{\text{total%20variance}}%20=%201%20\&space;-%20\&space;%20\frac%20{\text{total%20sum%20of%20residuals}}{\text{total%20sum%20of%20squares}}">
 </p>
 
 A high value means that the variables are perfectly correlated, there is no variance. A low value would indicate a low level of correlation, that means in most cases, that the model is not suitable for the given task.
@@ -348,7 +347,7 @@ Since the we want to minimize the function, we have to subtract the value, to fi
 This can be expressed with the following equation:
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?p_{n+1} = p_{n} - \eta \triangledown f(p_{n})">
+<img src="https://latex.codecogs.com/svg.image?p_{n+1}%20=%20p_{n}%20-%20\eta%20\triangledown%20f(p_{n})">
 </p>
 
 The parameter η (eta) scales the gradient and likewise regulate the step size. It is called learning rate.
@@ -410,12 +409,60 @@ Making predictions
 Making a prediction after calculated the linear equation is quite simple, you just have to solve the function for a specific input.
 
 <p style="text-align: center;">
-<img src="https://latex.codecogs.com/svg.image?y = B_{0} + B_{1} * x_{1}">
+<img src="https://latex.codecogs.com/svg.image?y%20=%20B_{0}%20+%20B_{1}%20*%20x_{1}">
 </p>
 
+X is the input value while Y is the output(predicted) value.
 
 
-<!-- TODO: add a finish note-->
+Exercise: Linear Regression
+===========================
+
+In this exercise we will use Google Colab to train a regression model that uses a real dataset to predict the prices of houses in California. 
+
+After doing this Colab, you'll know how to do the following:
+- Read a .csv file into a pandas DataFrame
+- Examine a dataset
+- Experiment with different features in building a model
+- Tune a model's hyperparameters
+
+A complete code of this exercise can be found in this [Google Colab project](https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/linear_regression_with_a_real_dataset.ipynb?hl=en) that was published by Google.
+
+When developing and implementing machine learning models, we typically start with the creation of a dataset, analyze and/or clean it, train a model, test the model, if necessary, retrain the model before deploying it for inference. These steps have been highlighted in the project. 
+
+---
+### Step 1: Open the project
+---
+
+First open the Google Colab project using [this link](https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/linear_regression_with_a_real_dataset.ipynb?hl=en). If you haven't signed in to a Google account on the computer browser, click "Sign in" and enter your email address and password of a Google account.
+
+![Open project](img/Google_Colab_screenshot_1.png)
+
+---
+### Step 2: Run the project
+---
+
+Next, after opening the project and having signed in to a Google account, we can simply run the entire code by clicking on "Runtime" and then "Run all". This will create a virtual computer for you and it will run the code.
+
+![Run the code](img/Google_Colab_screenshot_2.png)
+
+---
+### Step 3: Understanding the project
+---
+
+After running the code, we can see that the project first loads a CSV file and examines it to see the type of data that it contains and also identify metrics for each column, such as: count, mean, standard deviation, minimum and maximum values in each column, and the quantiles.
+
+Using these values, we can identify the outliers in our dataset. When you see anomalies in a column, become more careful about using that column as a feature. That said, anomalies in potential features sometimes mirror  anomalies in the label, which could make the column   be (or seem to be) a powerful feature.
+
+Next, the code loads and trains a Keras model using the specified number of epochs. Traditionally, we use a 80/20 split for training and test data; that is, 80% of the dataset it used to train the model and the remaining 20% (unseen data) is used to test the model. During the model's training process we can see that the values for loss and root_mean_squred_error are reducing as the number of epochs increases. But why?
+
+![Model training](img/Google_Colab_screenshot_3.png)
+
+This is because during each iteration of training a model, the model learns the dataset better. Simply, this makes the model be able to give more correct results as compared to the incorrect ones, hence the lower loss and error values as the number of training cycles increases.
+
+Finally, when the training process is complete, we test the model by giving it unseen data. In this case, look at the preceding table. How close is the predicted value to the label value? In other words, does your model accurately predict house values?
+
+![Model predictions](img/Google_Colab_screenshot_4.png)
 
 ## Sources
 
