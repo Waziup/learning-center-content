@@ -47,7 +47,9 @@ INTEL-IRRIS develops an open source, generic framework that can be improved and 
 Central to INTEL-IRRIS’s contribution is the design and implementation of the low-cost sensing platform and its integration in the INTEL-IRRIS’s starter-kit.
 
 From the [introductory tutorial](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-introduction-iot.pdf), Intel-IrriS's added value is highlighted there:
+
 [![Intro.PDF](img/intelirris_whatfor.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-introduction-iot.pdf)
+
 It is low-cost in order to be availaible for a maximum of small-holders, without losing precision or user-friendliness compared with the expensive solutions existing on the market.
 
 More info on the [public presentation slides](github/PRIMA-Intel-IrriS/Tutorials/Intel-Irris-public-presentation-starter-kit-en.pdf).
@@ -58,7 +60,10 @@ More specific info on the following themes:
 [pilots](https://intel-irris.eu/pilots).
 
 See also this presentation video:
-[![INTEL-IRRIS's interview video presenting the project and benefits of Edge-Computing technologies Why these choices](img/intelirris_pres_video.png)](https://www.youtube.com/watch?v=YMGfkLNs624)
+
+<youtube>YMGfkLNs624</youtube>
+
+<!-- [![INTEL-IRRIS's interview video presenting the project and benefits of Edge-Computing technologies Why these choices](img/intelirris_pres_video.png)](https://www.youtube.com/watch?v=) -->
 
 
 
