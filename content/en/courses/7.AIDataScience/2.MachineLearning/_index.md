@@ -34,12 +34,12 @@ Here are some examples of Regression Analysis:
 
 ## Algorithms that are instance-based
 
-Instance-based learning, also called memory-based learning, is a learning algorithm, which instead of performing a generalization, compares an input with instances seen during training. This means the complexity to solve the problem will grow with the learned data, which was used during training. 
+Instance-based learning, also called memory-based learning, is a learning algorithm, which instead of performing a generalization, compares an input with instances seen during training. The learning algorithm makes predictions or decisions based on specific instances or examples from the training data. Instead of explicitly learning a general rule or model, instance-based learning relies on memorizing the entire training dataset. This means the complexity to solve the problem will grow with the learned data, which was used during training. 
 
 Here are some examples of algorithms that are instance-based:
 
-- k-Nearest Neighbor (kNN)
-- kernel machines
+- K-Nearest Neighbor (kNN)
+- Kernel machines
 - Self-Organizing Map (SOM)
 - Radial basis function network (RBF)
 - Locally Weighted Learning (LWL)
@@ -186,7 +186,7 @@ Important Metrics
 In the following the important metrics like variance, bias, r2-score and mean square error (MSE) are explained. Machine learning algorithms use statistical or mathematical models. They have inherent errors in two categories:
 
 - irreducible errors: inherent uncertainty, due to noise in training data due to unknown variables
-- reducible errors: more controllable, should be minimized to ensure higher accuracy: variance and Bias
+- reducible errors: more controllable, should be minimized to ensure higher accuracy: Variance and Bias
 
 So the error in a machine learning model is made up of:
 
@@ -268,7 +268,7 @@ A more in-depth mathematical explanation of MSE is given by Moshe Binieli in his
 R2-Score
 --------
 
-The r2 score closely relates to Mean Square Error (explained in the last bulletin). It is a percentage, that varies from *0* % - *100* %. The r2 score shows a ratio of variances:
+The r2 score closely relates to Mean Square Error (explained in the last bulletin). It is a percentage, that varies from r2<*0* - *1*. The r2 score shows a ratio of variances:
 
 <p style="text-align: center;">
 <img src="https://latex.codecogs.com/svg.image?R2_{score} = \frac {\text{total variance explained by the model}} {\text{total variance}} = 1 \&space;- \&space; \frac {\text{total sum of residuals}}{\text{total sum of squares}}">
@@ -314,8 +314,8 @@ Gradient Descent
 ================
 
 Gradient descent is a continuous first-order optimization algorithm, used to find the local maximum/minimum of a function.
-The gradient describes the slope of a function at a given point. In case of a univariate function, it is the first derivative at a point.
-For a multivariate function, it is a vector of derivatives.
+The gradient describes the slope of a function at a given point. In case of a univariate (describes a function that has only one variable), it is the first derivative at a point.
+For a multivariate (multiple variables) function, it is a vector of derivatives.
 
 The gradient decent algorithm does not work for every function, it has specific requirements:
 

@@ -116,8 +116,13 @@ For these, the maximum or average value is used, determined from the previously 
 
 Fully connected layer
 --------------------
+The Fully Connected (FC) layer in a Convolutional Neural Network (CNN) is a crucial component responsible for connecting neurons across different layers. Typically positioned before the output layer, FC layers form the concluding segment of a CNN architecture.
 
-After a few blocks of CL and pooling layer, we usually use Fully Connected (FC) layers. In FC layers, all neurons are connected to the activations of the previous layers, resulting in a large number of parameters. The output in the last layer of a CNN is usually used for classification performed by the Softmax activation function. The number of feature maps in the last layer usually corresponds to the number of classes learned.
+In the FC layer, input images, previously processed through convolutional and pooling layers, are flattened into a vector. This flattened vector is then transmitted through multiple FC layers where fundamental mathematical operations occur. This stage marks the initiation of the classification process, enabling the network to assign labels or make predictions.
+
+The connectivity between two FC layers enhances the network's performance, as the synergy of two fully connected layers often outperforms a single connected layer. In CNNs, these FC layers contribute to automating feature extraction and reducing the need for extensive human supervision in the learning process.
+
+The output in the last layer of a CNN is usually used for classification performed by the Softmax activation function. The number of feature maps in the last layer usually corresponds to the number of classes learned.
 
 
 Activation Functions
@@ -235,8 +240,7 @@ With **acceleration**, a damping is introduced, which is applied to atypical tra
 weights slowed down.
 
 In the following, these procedures are examined in terms of **size of the batching**. 
-However, since it is usually not possible to load the entire training data into the main memory, batching was developed. It indicates how many images at once can be learned from the network before the weights or parameters are updated
-will. For this reason, a CNN with a smaller batch size also learns faster,
+However, since it is usually not possible to load the entire training data into the main memory, batching was developed. It indicates how many images at once can be learned from the network before the weights or parameters are updated. For this reason, a CNN with a smaller batch size also learns faster,
 since the weights are updated more often. However, this also results in a crucial disadvantage, because the smaller the size of the batch, the less accurate it is
 Estimation of the gradient. This is to be illustrated as an example below.
 
