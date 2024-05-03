@@ -16,14 +16,16 @@ The [Gateway's slides](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/mai
 The [Outdoor Gateway's slides](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-gateway-outdoor.pdf): the Tutorial slides on building/using the outdoor INTEL-IRRIS Gateway.
 
 
-[![Video Build Device](img/gateway_intelirris_video.png)](https://www.youtube.com/watch?v=j-1Nk0tv0xM "Video Build Gateway Howto")
+<!-- [![Video Build Device](img/gateway_intelirris_video.png)](https://www.youtube.com/watch?v=j-1Nk0tv0xM "Video Build Gateway Howto") -->
+<youtube>j-1Nk0tv0xM</youtube>
 
+More information can be found hee:
 
-[WaziGate-index](https://github.com/Waziup/learning-center-content/blob/main/content/en/resources/Gateways/WaziGate/index.md).\
-[WaziGate-quick_start](https://github.com/Waziup/learning-center-content/blob/main/content/en/resources/WaziGate/quick_start.md).\
-[WaziGate-user_manual](https://github.com/Waziup/learning-center-content/blob/main/content/en/resources/WaziGate/user_manual.md).\
-[WaziGate-course](https://github.com/Waziup/learning-center-content/blob/main/content/en/courses/9.Waziup/2.wazigate).\
-[WaziGate-casing](https://github.com/Waziup/learning-center-content/blob/main/content/en/courses/draft.10.Casing/).
+1. [WaziGate-index](https://github.com/Waziup/learning-center-content/blob/main/content/en/resources/Gateways/WaziGate/index.md)
+2. [WaziGate-quick_start](https://github.com/Waziup/learning-center-content/blob/main/content/en/resources/WaziGate/quick_start.md)
+3. [WaziGate-user_manual](https://github.com/Waziup/learning-center-content/blob/main/content/en/resources/WaziGate/user_manual.md)
+4. [WaziGate-course](https://github.com/Waziup/learning-center-content/blob/main/content/en/courses/9.Waziup/2.wazigate)
+5. [WaziGate-casing](https://github.com/Waziup/learning-center-content/blob/main/content/en/courses/draft.10.Casing/)
 
 
 3.2. Intel-IrriS specific soft and hard

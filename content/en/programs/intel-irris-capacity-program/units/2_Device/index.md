@@ -14,7 +14,7 @@ Installed in the field, powered by its own batteries, the Intel-IrriS Device wor
 
 The casing is waterproof and shelters the core microprocessor, on an Arduino board, the radio chip, the batteries (whether two non-rechargeable AA alkaline batteries, or 3 AAA NiMh with or without a solar panel), all the connectors and the On/Off switch. 
 
-![Intel-IrriS Device](img/Device.png)
+![Intel-IrriS Device](img/Device.png#width=768)
 
 
 
@@ -28,14 +28,16 @@ Let's focus on PCBs, radio chipsets, antennas, sensors solar panels, and the oth
 
 ## 1. Order The PCB
 ### IRD PCBA v4.1, IRD/UPPA's design [this is the current version]
-![PCBA](img/PCBA.png)
+![PCBA](img/PCBA.png#width=768)
+
 More info:
 [IRD PCBA v4.1](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcba-ird-v41)
 
 Watch our PDF tutorial, [here](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-PCB-update-PCBA.pdf), and our video tutorial:
 
-[comment]: # "<youtube>ueNRfBzCXiU</youtube>"
-[![Video PCB order howto](img/you_order_PCB.png)](http://www.youtube.com/watch?v=ueNRfBzCXiU "Video PCB Order Howto")
+<!-- [comment]: # "<youtube>ueNRfBzCXiU</youtube>"
+[![Video PCB order howto](img/you_order_PCB.png)](http://www.youtube.com/watch?v=ueNRfBzCXiU "Video PCB Order Howto") -->
+<youtube>ueNRfBzCXiU</youtube>
 
 
 ## 2. Choose the radio chipsets and antennas
@@ -51,9 +53,10 @@ The radio chipset, the antenna, and the software are frequency dependent and mus
 
 ### a. Radio chipsets
 In Intel-IrriS, we chose two radio modules that are common and easy to find on the market:
-- The RFM95W (868MHz);
+- The RFM95W (868MHz)
 ![rfm95w](img/rfm95w.png)
-- The RFM96W (433MHz).
+
+- The RFM96W (433MHz)
 ![rfm96w](img/rfm96w.png)
 
 Different versions are available on the market, with different features, most are compatible with the PCBs.
@@ -75,7 +78,8 @@ I took from the datasheets the following tables summarizing frequency compatibil
 | RFM96W/98W | 433/470&thinsp;MHz | 6 - 12 | 62.5 - 500&thinsp;kHz | .1465 - 37.5&thinsp;kbps | -112 to -140&thinsp;dBm |
 | RFM98W | 169&thinsp;MHz | 6 - 12 | 31.25 - 125&thinsp;kHz | 73.24- 9375&thinsp;bps | -118 to -143&thinsp;dBm |
 
-*NB*: the RFM95 chipset contains an RF96 IC.
+<!-- *NB*: the RFM95 chipset contains an RF96 IC. -->
+<alert type='info'>The RFM95 chipset contains an RF96 IC.</alert>
 
 ### b. LoRa antennae
 The antenna model will also depend on the frequency band. The default type for Intel-IrriS devices are simple whip (monopole) antennae. We adopted the following color convention: white antennae for 433 MHz; black antennae for 868 MHz.
@@ -182,9 +186,15 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 |Two-paired screw terminals (dominos)| 1 or 2**|1 or 2**|
 |15&thinsp;cm chunks of 2-joint-wire for irometer tensiometer| 1 or 2** |1 or 2**|
 
-^you can equivalently use a non rechargeable 3.6V lithium battery with a 1-AA battery holder.\
-^^for solar PCBA devices, 2 jumper junctions can be used instead of the 2 FF jumper wires.\
-**2 for 2WT devices, otherwise 1.
+<alert type='info'>
+
+- ^ you can equivalently use a non rechargeable 3.6V lithium battery with a 1-AA battery holder.
+
+- ^^ For solar PCBA devices, 2 jumper junctions can be used instead of the 2 FF jumper wires.
+
+- ** 2 for 2WT devices, otherwise 1.
+
+</alert>
 
 
 [comment]: # "|Nylon joint for pg7 (diameter 12.4)|1|1|1|"
@@ -247,7 +257,8 @@ A complete bunch of detailed material has been made available all along the proj
 1. the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf): the Tutorial slides on building the INTEL-IRRIS IoT platform. Part 1: soil sensor device. Focus on the latest IRD PCBv4.1. This tutorial has been updated to focus on the latest IRD PCBv4.1;
 [![PCBv4-PCBA.pdf](img/tuto_PCBv4-PCBA.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf)
 2. the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk): the YouTube tutorial video showing how to build the outdoor LoRa IoT soil sensor device.  
-[![Video Build Device](img/you_build_dev.png)](https://youtu.be/zcazzDbXvHk?start=0&end=380 "Video Build Device Howto")
+<!-- [![Video Build Device](img/you_build_dev.png)](https://youtu.be/zcazzDbXvHk?start=0&end=380 "Video Build Device Howto") -->
+<youtube>zcazzDbXvHk</youtube>
 
 [comment]: # "[![Video Build Device](img/you_build_dev.png)](https://www.youtube.com/v/zcazzDbXvHk?start=0&end=380&autoplay=1 "
 
@@ -268,9 +279,13 @@ Use drilling bits for metal (not for wood nor concrete).
 |Cable gland|-|41&thinsp;mm|9&thinsp;mm|13&thinsp;mm*|
 |Solar panel|-|-|-|10 to 12&thinsp;mm**|
 
-*it is recommended to use a step drill bit to first get a 12mm hole before using the 13mm drill bit.\
-**in the center of the case's cover.\
-***these dimensions have been updated for the latest PCBA and enable to place three AAA batteries with their holder under the PCB. The video [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk) mentions a 28 x 9&thinsp;mm dimension compatible with the older PCBv2, but also with the PCBA with 2 AA batteries.
+<alert type='info'>
+
+- *it is recommended to use a step drill bit to first get a 12mm hole before using the 13mm drill bit.
+- **in the center of the case's cover.
+- ***these dimensions have been updated for the latest PCBA and enable to place three AAA batteries with their holder under the PCB. The video [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk) mentions a 28 x 9&thinsp;mm dimension compatible with the older PCBv2, but also with the PCBA with 2 AA batteries.
+
+<alert type='info'>
 
 
 **Remove** unwanted plastic part with a flat cutter and/or a small plier for instance, and smooth the inside part of the case to make the interface the most waterproof possible.
@@ -279,7 +294,9 @@ Use drilling bits for metal (not for wood nor concrete).
 More info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 35-43.
 
 More info in the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk):
-[![Video Drill Device](img/you_drill_dev.png)](https://youtu.be/zcazzDbXvHk?start=72&end=305 "Video Drill Device Howto")
+
+<!-- [![Video Drill Device](img/you_drill_dev.png)](https://youtu.be/zcazzDbXvHk?start=72&end=305 "Video Drill Device Howto") -->
+<yoututbe>zcazzDbXvHk?start=72&end=305</yoututbe>
 
 [comment]: # "1:12 - 5:05"
 
@@ -295,26 +312,29 @@ The switch has a water-proof rubber cap which should be carefully tightened. The
 
 Check the switch is correctly placed. The pin closest to the cable gland is not connected, the switch is open when pointing away from the gland, closed (ON) when pointing to the cable gland.
 
-![Switch and Cable Gland](img/install_switch_pg7.png)
+![Switch and Cable Gland](img/install_switch_pg7.png#width=768)
 
 
 
 More info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slide 44.
 
-More info in the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk):
-[![Video Switch Cable Gland](img/you_switch_pg7.png)](https://youtu.be/zcazzDbXvHk?start=305&end=385 "Video Switch Cable Gland Howto")
+More info in the [Intel-IrriS video 2](https://youtu.be/zcazzDbXvHk):  
+<!-- [![Video Switch Cable Gland](img/you_switch_pg7.png)](https://youtu.be/zcazzDbXvHk?start=305&end=385 "Video Switch Cable Gland Howto") -->
+<youtube>zcazzDbXvHk?start=305&end=385</youtube>
 
 
-## 4. Connect the switch and the battery holder to the PCB;
-Both battery holder and switch have their dedicated screwed connector on the PCB: [![PCBv4-PCBA.pdf](img/connect_switch_bat.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf)
+## 4. Connect the switch and the battery holder to the PCB
+Both battery holder and switch have their dedicated screwed connector on the PCB:
+
+[![PCBv4-PCBA.pdf](img/connect_switch_bat.png#width=768)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf)
 
 ## 5. Connect the sensors' wires to the PCB;
 Pass the wire through the cable gland and screw or plug them to their dedicated slot on the PCB:
-![Plug the Sensors](img/plug_sensors.png)
+![Plug the Sensors](img/plug_sensors.png#width=768)
 NB: connecting a watermark and a capacitive on the same device is out of the scope of Intel-IrriS; use two devices for this case.
 
 For the watermarks, it is recommended to add a domino connector in order to be able to change the sensor without openning the case and unscrewing the cables inside.
-![Watermarks wiring](img/wire_watermarks.png)
+![Watermarks wiring](img/wire_watermarks.png#width=768)
 
 More info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 18-21.
 ## 6. (Solder 2 MM wires to the solar panel and connect them to the PCB);
@@ -325,14 +345,14 @@ Follow the recommendations on [PCBv4-PCBA.pdf](https://github.com/CongducPham/PR
 
 ![Solar wiring](img/connect_solar.png)
 ## 7. Connect H2 pins according to battery type;
-All explained in slide 26:
-![Batteries wiring](img/wire_battery_type.png)
+All explained in slide 26: 
+![Batteries wiring](img/wire_battery_type.png#width=768)
 You can use two FF jumper wires instead of the jumpers for the case of the NiMh batteries. 
 
 ## 8. Connect the antenna.
-**Screw** the antenna in all the way.
+- **Screw** the antenna in all the way.
 
-**Waterproof** the junction using flat silicon seals or silicon joint sealant.
+- **Waterproof** the junction using flat silicon seals or silicon joint sealant.
 
 More info in slides 45-47.
 
@@ -356,7 +376,9 @@ The [Arduino.cc](arduino.cc) community eases the configuration process of the mi
 
 ## 1. Gather the material
 Your Arduino usually comes with its 6-pin 90° header, and 2 12-pin male headers. The 6-pin header enables to connect to another board, an *FTDI32*, that creates and manages a Serial communication between the Arduino and a laptop, via USB.
+
 ![Arduino to USB](img/USB_to_Arduino.png)
+
 You only need one FTDI32 to program all your boards. 
 We tested two different models:
 * from Sparkfun [here](https://www.sparkfun.com/products/9873);
@@ -373,7 +395,8 @@ Better choose a short and robust USB cable between the FTDI32 and your laptop.
 ## 2. Get the code
 
 The Device's code is available with the other resource of Intel-IrriS on the Github repository: 
-[![Intel-IrriS Github](img/intel-irris_github.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/tree/main)
+
+[![Intel-IrriS Github](img/intel-irris_github.png#width=768)](https://github.com/CongducPham/PRIMA-Intel-IrriS/tree/main)
 
 **Download** the Arduino folder. You can download all the project (182&thinsp;MiB) using the Github ZIP direct download:
 
@@ -381,7 +404,7 @@ The Device's code is available with the other resource of Intel-IrriS on the Git
 
 Alternatively, you can download the Arduino folder alone (20&thinsp;MiB) using external tools, e.g. [download-directory](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FCongducPham%2FPRIMA-Intel-IrriS%2Ftree%2Fmain%2FArduino).
 
-**Extract** the obtained ZIP file.
+<alert type='success'><b>Extract</b> the obtained ZIP file.</alert>
 
 ## 3. Get the IDE
 
@@ -399,8 +422,11 @@ If you prefer your own text editor, your own serial monitor, but still want to b
 ### Set up the libraries
 The Arduino folder you downloaded and extracted contains a *libraries* sub-folder. In order to make the IDE find and use these libraries, you need to choose the Arduino folder as your sketchbook:\
 **Go** to `File > Preferences` and **Browse** to choose the Arduino folder as your sketchbook location.\
+
 ![Arduino IDE Sketchbook Libraries](img/arduino-IDE_preferences.png)
+
 Once done, the IDE will probably ask you to update these libraries:
+
 ![Arduino IDE Update Libraires](img/arduino-IDE_update-libs.png)\
 **Don't do that**, since the Device's code has been validated with this specific version of the compagnion libraries, and is not guaranteed to work with new updates and changes that could be implied.
 
@@ -414,7 +440,7 @@ You need to **attach** your IDE's window to the Device's board type and CPU:
 * `Tools > Boards > Arduino AVR Boards > Arduino Pro or Pro Mini`
 * `Tools > Processor > ATmega328P (3.3V, 8 MHz)`
 
-![Arduino IDE Board Processor](img/arduino-IDE_board-cpu.png)
+![Arduino IDE Board Processor](img/arduino-IDE_board-cpu.png#width=768)
 
 -------------------- 
 In command-line, use the following command:\
@@ -478,7 +504,8 @@ The program summarizes the libraries that have been used for the compilation and
 ## 5. Start preparing your Arduino
 **Solder** the 6-pin 90° header over the top side of the Arduino. At this point, you don't need to solder the two side headers yet, we are going to check that the Arduino behaves correctly.
 
-Carefully **remove** the power LED and the voltage regulator to make the Arduino ultra-low-power. 
+Carefully **remove** the power LED and the voltage regulator to make the Arduino ultra-low-power.
+
 ![Remove LED and Regulator Arduino](img/Remove_LED_Regulator_Arduino.png)
 
 ## 6. Check your Arduino
@@ -524,7 +551,7 @@ If you see something similar, then that means your Arduino works and communicate
 ## 7. Finish preparing your Arduino
 **Solder** the two 12-pin side headers over the bottom side of the Arduino. **Solder** also the 3-pin header there on pins GND, A6, A7, (mandatory for solar devices) and the 2-pin header on A4, A5. Use a breadboard as reference to be sure soldering such that the Arduino can be encased into the PCB's female headers.
 
-![Arduino solder headers](img/arduino_solder_headers.png)
+![Arduino solder headers](img/arduino_solder_headers.png#width=768)
 
 
 
@@ -605,7 +632,7 @@ More info:
 [WaziSense User Manual](../../../../resources/Boards/WaziSense/user_manual.md)
 
 ### b. UPPA PCB v2, UPPA's design [this version is outdated]
-![PCBv2 UPPA](img/PCB-v2.png)
+![PCBv2 UPPA](img/PCB-v2.png#width=768)
 
 More info:
 [UPPA PCB v2](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcb-v2)
@@ -622,10 +649,14 @@ More info:
 |1 4.7&thinsp;kΩ*, 1 or 2** 10&thinsp;kΩ resistor(s) |1|
 |10 heat-shrink tubes to isolate wires***|1|
 
-^for devices type C (with a capacitive sensor only), see [2.i.3](#3-choose-the-sensors)\
-*for devices with temperature sensors, see [2.i.3](#3-choose-the-sensors)\
-**for devices with 1 or 2 watermark sensors, see [2.i.3](#3-choose-the-sensors)\
+<alert type='info'>
+
+- ^for devices type C (with a capacitive sensor only), see [2.i.3](#3-choose-the-sensors)
+- *for devices with temperature sensors, see [2.i.3](#3-choose-the-sensors)
+- **for devices with 1 or 2 watermark sensors, see [2.i.3](#3-choose-the-sensors)
 ***2 tubes for each resistor's end wire.
+</alert>
+
 
 [comment]: # "|Nylon joint for pg7 (diameter 12.4)|1|1|1|"
 
@@ -637,8 +668,8 @@ More info:
 [UPPA PCB RAK3172 v1](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcb-rak3172-v1)
 
 ### d. IRD PCB v4.1, IRD/UPPA's design [this is the raw (non assembled) current version]
-![PCB41top](https://github.com/CongducPham/PRIMA-Intel-IrriS/raw/main/images/ird-pcb-4-1-raw-top.png)
-![PCB41bottom](https://github.com/CongducPham/PRIMA-Intel-IrriS/raw/main/images/ird-pcb-4-1-raw-bottom.png)
+![PCB41top](https://github.com/CongducPham/PRIMA-Intel-IrriS/raw/main/images/ird-pcb-4-1-raw-top.png#width=768)
+![PCB41bottom](https://github.com/CongducPham/PRIMA-Intel-IrriS/raw/main/images/ird-pcb-4-1-raw-bottom.png#width=768)
 More info:
 [IRD PCBA v4.1](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/PCBs/README.md#pcb-ird-v41)
 
@@ -653,9 +684,6 @@ During Intel-IrriS we have been studying the power consumption of the different 
 
 Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no more than 450&thinsp;mAh to work during one year.
 
-2.vi. Device's Quizz
-=====================
-
 
 [comment]: # "<youtube>wgfhedtyjhdt</youtube>"
 
@@ -663,145 +691,5 @@ Assuming a constant voltage 3.0&thinsp;V, we estimate a device would need no mor
 
 
 
-<quiz id="c0d9fcf5-51a2-4cdf-8fce-43f99063034f" type="single-choice" title="What is the main process of the Intel-IrriS Device?">
-	<answer feedback="Nope.">Continuously gather soil sensors' data and transmit them every hour to a gateway</answer>
-	<answer feedback="Thats wrong!">Only when toggled by the user, gather soil sensors' data and transmit them to a gateway</answer>
-	<answer feedback="Nope... Well tried!"> Continuously gather soil sensors' data and transmit them every 6h to a gateway </answer>
-	<answer feedback="You got it!" right>Every hour, gather soil sensors' data and transmit them to a gateway</answer>
-	<answer feedback="Thats wrong too!">Every six hours, gather soil sensors' data and transmit them to a gateway</answer>
-</quiz>
-
-<quiz id="f29c74e6-4728-4cba-8f1a-721dccfc33f6" type="single-choice" title="Which radio technology is used by the Intel-IrriS Device?">
-	<answer feedback="Nope.">None</answer>
-	<answer feedback="You got it!" right>LoRa</answer>
-	<answer feedback="Nope... Well tried!">Wi-Fi</answer>
-	<answer feedback="Thats wrong!">Bluetooth</answer>
-</quiz>
-
-<quiz id="3ca01562-4190-4a52-a0c3-62774c1c36e7" type="single-choice" title="The Intel-IrriS Device is not designed to run on...">
-	<answer feedback="You got it!" right>Two non-rechargeable AA Alkaline batteries with solar panel</answer>
-	<answer feedback="Nope... Well tried!">Two non-rechargeable AA Alkaline batteries without solar panel</answer>
-	<answer feedback="Nope.">Three rechargeable AAA NiMh batteries with solar panel</answer>
-	<answer feedback="Thats wrong!">Three rechargeable AAA NiMh batteries without solar panel</answer>
-</quiz>
-
-<quiz id="e7dc1120-2ede-4a75-a344-510d45d18c1a" type="single-choice" title="The IRD PCBA v4.1 we focus on here has been designed to...">
-	<answer feedback="Nope.">Improve the costs and delays of delivery</answer>
-	<answer feedback="Nope... Well tried!">Improve the radio range and lifespan of the Device</answer>
-	<answer feedback="You got it!" right>Make the Device's preparation easier, solve issues, and enable using a solar panel</answer>
-	<answer feedback="Thats wrong!">Include new features and get comparable with Waziup design</answer>
-</quiz>
-
-<quiz id="ee039a61-60e3-4393-aec0-d8c6ff157ee9" type="single-choice" title="The IRD PCBA v4.1 can be ordered and obtained...">
-	<answer feedback="Thats wrong!">Online from our website</answer>
-	<answer feedback="Nope... Well tried!">Indirectly via European intermediaries only</answer>
-	<answer feedback="Nope.">Online, from Asia, fully assembled only (no flexible assembling)</answer>
-	<answer feedback="You got it!" right>Online, from Asia, fully assembled or partially assembled</answer>
-</quiz>
-
-[comment]: # "adjusted with only a specifically chosen subset of components assembled "
-
-<quiz id="5eee8fd8-2089-4338-8e58-7a5a477588b2" type="single-choice" title="What frequency band is allowed for LoRa in Europe?">
-	<answer feedback="Nope.">433&thinsp;Mhz</answer>
-	<answer feedback="You got it!" right>868&thinsp;MHz</answer>
-	<answer feedback="Thats wrong!">Both 433 and 868&thinsp;MHz</answer>
-</quiz>
-
-<quiz id="52a21ba9-a4db-471e-a69f-8520bddacd74" type="single-choice" title="When comparing the RFM95W and the RFM96W LoRa chipset...">
-	<answer feedback="Nope.">They are from different companies, Semtech and Hope RF</answer>
-	<answer feedback="Nope... Well tried!">They are both designed for the 433&thinsp;MHz band</answer>
-	<answer feedback="Thats wrong!">Their only difference is their IC</answer>
-	<answer feedback="You got it!" right>They are designed for different frequency bands</answer>
-	<answer feedback="Thats wrong too!">They have exactly the same features</answer>
-</quiz>
-
-<quiz id="56d901ff-6d74-4652-baca-c66ba2097ed9" type="single-choice" title="In Intel-IrriS, the chosen antennas are...">
-	<answer feedback="You got it!" right>Black for 868&thinsp;MHz and white for 433&thinsp;MHz</answer>
-	<answer feedback="Nope.">Black for 443&thinsp;MHz and white for 868&thinsp;MHz</answer>
-	<answer feedback="Nope... Well tried!">Black</answer>
-	<answer feedback="Thats wrong!">Black for 868&thinsp;MHz</answer>
-	<answer feedback="Thats wrong too!">Not given a specific color. </answer>
-</quiz>
-
-
-<quiz id="8d02c1a8-67ba-469d-bdb5-299d32fb93e9" type="single-choice" title="A device of type 2WT:">
-	<answer feedback="Nope.">Has 2 SEN0308 and 1 DS18B20 sensor</answer>
-	<answer feedback="You got it!" right>Has 2 WM200 and 1 DS18B20 sensor</answer>
-	<answer feedback="Nope... Well tried!">Has 2 WM200 and 1 SEN0308 sensor</answer>
-	<answer feedback="Thats wrong!">Has 2 DS18B20 and 1 WM200 sensor</answer>
-	<answer feedback="Thats wrong too!">Has 2 SEN0308 and 1 WM200 sensor</answer>
-</quiz>
-
-
-<quiz id="2d322383-1add-4962-9b93-f22688532bd5" type="single-choice" title="the waterproof case needs a hole drilled for the antenna:">
-	<answer feedback="Nope.">with a 13mm drill bit for metal</answer>
-	<answer feedback="Nope... Well tried!">with a 7mm drill bit for concrete</answer>
-	<answer feedback="You got it!" right>with a 7mm drill bit for metal</answer>
-	<answer feedback="Thats wrong!">with a 13mm drill bit for wood</answer>
-	<answer feedback="Thats wrong too!">with a 9mm drill bit for metal</answer>
-</quiz>
-
-<quiz id="4fd759db-3ce5-4e7c-b7e7-0c24cdf45498" type="single-choice" title="On a single Intel-IrriS PCB, you can connect and work with:">
-	<answer feedback="Nope.">A solar panel, a watermark sensor and a capacitive sensor</answer>
-	<answer feedback="Nope... Well tried!">A temperature sensor, a watermark sensor and a capacitive sensor</answer>
-	<answer feedback="Thats wrong!">2 capacitive sensors</answer>
-	<answer feedback="Thats wrong too!">2 temperature sensors</answer>
-	<answer feedback="You got it!" right>A solar panel, 2 watermark sensors and a temperature sensor</answer>
-</quiz>
-
-<quiz id="1319de02-3362-4ad7-98f5-0b807a25a066" type="single-choice" title="The PCBA could be powered:">
-	<answer feedback="You got it!" right>using an FTDI32, switch off, with or without jumpers connecting pins on H2</answer>
-	<answer feedback="Nope.">using Alkaline batteries and without connecting any pin of H2</answer>
-	<answer feedback="Nope... Well tried!">using Alkaline batteries and connecting 2 pairs of adjacent pins of H2</answer>
-	<answer feedback="Thats wrong!">using a solar panel and connecting the 2 external pins of H2</answer>
-	<answer feedback="Thats wrong too!">using NiMh batteries and without connecting any pin of H2</answer>
-</quiz>
-
-<quiz id="1042f149-64e5-4752-bc02-733243c95e4c" type="single-choice" title="In order to programm a device for Intel-IrriS you must:">
-	<answer feedback="Nope.">download the full folder from Github and adjust it to your specific device</answer>
-	<answer feedback="Nope... Well tried!">download the code from the Intel-IrriS website, according to the targetted device type; you can directly copy the files to the device using USB</answer>
-	<answer feedback="Thats wrong!">download the INO sketch from Github and adjust the code to your specific device, then compile and upload the code using an FTDI32</answer>
-	<answer feedback="You got it!" right>download the Arduino folder from Github and adjust the code to your specific device, then compile and upload the code using an FTDI32</answer>
-	<answer feedback="Thats wrong too!">download the Intelirris_Soil_Sensor folder from Github and adjust the code to your specific device, then compile and upload the code using an FTDI32</answer>
-</quiz>
-
-<quiz id="8b113bc8-4245-4de4-a163-a063b368dc7c" type="single-choice" title="You must specify different Device addresses in the INO sketch">
-	<answer feedback="Nope.">when you have a device with a capacitive sensor and another with a watermark sensor on the same location. </answer>
-	<answer feedback="Nope... Well tried!">when you have more than one device on the same location.</answer>
-	<answer feedback="You got it!" right>when you have two or more devices of the same type on the same location, sharing the same frequency band.</answer>
-	<answer feedback="Thats wrong!">always</answer>
-	<answer feedback="Thats wrong too!">never</answer>
-</quiz>
-
-<quiz id="f834f90e-73dd-477e-97d6-e27d0794b617" type="single-choice" title="In order to upload the programm on an Arduino">
-	<answer feedback="Nope.">it is always `COM1` </answer>
-	<answer feedback="You got it!" right>it needs to be detected on a given serial port whith OS-depending name</answer>
-	<answer feedback="Nope... Well tried!">it is always automatically chosen by the IDE</answer>
-	<answer feedback="Thats wrong!">you don't need a serial port</answer>
-	<answer feedback="Thats wrong too!">the Arduino must be connected right after the upload</answer>
-</quiz>
-
-<quiz id="06a6b4eb-4c59-4868-877d-24b6bdef59f3" type="single-choice" title="It is completely safe for the components to">
-	<answer feedback="You got it!" right>power the device with batteries, without the Arduino board</answer>
-	<answer feedback="Nope.">power the device with batteries, and with the FTDI32</answer>
-	<answer feedback="Nope... Well tried!">power the device with batteries, without an antenna</answer>
-	<answer feedback="Thats wrong!">power the device with the FTDI32, without an antenna</answer>
-	<answer feedback="Thats wrong too!">disconnect the USB powering the FTDI32 at any time</answer>
-</quiz>
-
-<quiz id="9079a6fb-ec94-43aa-aa9d-02028cd1323a" type="single-choice" title="On the Intel-IrriS Device">
-	<answer feedback="Nope.">No LED are never on to reduce the energy consumption</answer>
-	<answer feedback="Nope... Well tried!">The power LED on the Arduino is always on, it cannot be controlled by software</answer>
-	<answer feedback="You got it!" right>The LED on pin 13 on the Arduino is on during the radio transmissions (around 1 second)</answer>
-	<answer feedback="Thats wrong!">The LED on pin 13 on the Arduino has been removed to reduce the energy consumption</answer>
-</quiz>
-
-<quiz id="f754d03e-8c48-43bc-a711-3ab44d0123cd" type="single-choice" title="What is the best tension that should be supplied to the Intel-IrriS device, assuming that enough current is supplied too?">
-	<answer feedback="Nope.">3.6&thinsp;V</answer>
-	<answer feedback="Nope... Well tried!">3.7&thinsp;V</answer>
-	<answer feedback="You got it!" right>3.3&thinsp;V</answer>
-	<answer feedback="Thats wrong!">5.0&thinsp;V</answer>
-	<answer feedback="Thats wrong too!">5.1&thinsp;V</answer>
-</quiz>
 
 
