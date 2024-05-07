@@ -7,7 +7,6 @@ delay_start: 0w
 duration: 1w
 ---
 
-
 The Intel-IrriS Device is, among the two main components of the system, the most specific of the project. 
 
 Installed in the field, powered by its own batteries, the Intel-IrriS Device works autonomously and periodically: every hour approximately, it gathers the measurements from the ground sensors (soil moisture and temperature) and transmits the values to the [gateway](../3_Gateway/_index.md) using LoRa radio frames. 
@@ -187,9 +186,7 @@ Here a brief table summary for the PCBA, with and without a solar panel:
 <alert type='info'>
 
 - ^ you can equivalently use a non rechargeable 3.6V lithium battery with a 1-AA battery holder.
-
 - ^^ For solar PCBA devices, 2 jumper junctions can be used instead of the 2 FF jumper wires.
-
 - ** 2 for 2WT devices, otherwise 1.
 
 </alert>

@@ -43,6 +43,7 @@ More info:
 - *for devices with temperature sensors, see [2.i.3](#3-choose-the-sensors)
 - **for devices with 1 or 2 watermark sensors, see [2.i.3](#3-choose-the-sensors)
 ***2 tubes for each resistor's end wire.
+
 </alert>
 
 
