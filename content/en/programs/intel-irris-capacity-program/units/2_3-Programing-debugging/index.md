@@ -8,7 +8,8 @@ duration: 1w
 ---
 
 
-# Program the Device
+Program the Device
+=======
 The software managing the device, orchestrating the measurements and the radio transmissions runs on the Atmega microcontroller on the Arduino Pro Mini.
 
 The [Arduino.cc](arduino.cc) community eases the configuration process of the microcontroller, by providing the IDE (integrated development environment), the programming toolchain for all the CPUs and boards in the Arduino family, and plenty of online support.

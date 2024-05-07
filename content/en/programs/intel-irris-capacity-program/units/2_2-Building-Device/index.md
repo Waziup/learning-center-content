@@ -8,7 +8,7 @@ duration: 1w
 ---
 
 
-2.ii. Build the Device
+Build the Device
 ==============
 
 Now that you have all the pieces recieved, let's detail the following steps to put all together and build the device:
