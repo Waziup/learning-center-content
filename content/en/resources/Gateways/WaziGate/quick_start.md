@@ -1,4 +1,5 @@
 ---
+id: wazigate_quick_start
 title: WaziGate Quick Start
 rank: 1
 ---

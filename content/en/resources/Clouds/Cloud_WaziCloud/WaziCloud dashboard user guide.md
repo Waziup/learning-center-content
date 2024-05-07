@@ -1,5 +1,5 @@
 ---
-date: 2023-01-13T09:00:00+00:00
+id: wazicloud_dashboard_manual
 title: Dashboard User Guide
 type: guide
 rank: 1
