@@ -1,5 +1,5 @@
 ---
-date: 2023-01-13T09:00:00+00:00
+id: wazicloud_connect
 title: Connect an external Cloud
 type: guide
 rank: 4

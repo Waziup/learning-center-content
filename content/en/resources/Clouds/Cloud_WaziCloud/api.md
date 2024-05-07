@@ -1,4 +1,5 @@
 ---
+id: wazicloud_api
 title: WaziCloud API
 type: spec
 rank: 2
