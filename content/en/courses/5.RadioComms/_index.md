@@ -1,7 +1,7 @@
 ---
 id: radio_mod
 title: Radio communications and networking
-shortTitle: Communication
+short_title: Communication
 ---
 
 Introduction to the section...

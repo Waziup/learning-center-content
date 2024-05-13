@@ -1,6 +1,6 @@
 ---
 title: Testing and Evaluation
-shortTitle: MVPs
+short_title: MVPs
 weight: 4
 description: Testing procedure and evaluation for IoT box case
 difficulty: Beginner

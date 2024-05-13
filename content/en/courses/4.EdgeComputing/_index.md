@@ -1,7 +1,7 @@
 ---
 id: edge_mod
 title: Edge computing
-shortTitle: Edge Computing
+short_title: Edge Computing
 ---
 
 Introduction to the section...
