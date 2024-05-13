@@ -1,6 +1,6 @@
 ---
 id: waziup_plat_and_tech_icp_unit
-name: Waziup Technologies
+name: Waziup Technologies & Platform 
 desc: This unit introduces participants to Waziup technologies, covering the Waziup IoT platform, hardware, software, architecture, components, and APIs.
 delay_start: 3w
 duration: 1w
