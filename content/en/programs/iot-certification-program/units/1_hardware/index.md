@@ -48,6 +48,20 @@ You need to take a photo of your prototype and upload it the corresponding Drive
 
 Don't forget to click "Mark topic done" when you have finished.
 
+## The WaziDev series
+
+WaziDev, WaziSense and WaziAct are Sensing and Actuation development board for IoT applications. They transmits data up to 7Km using LoRaWAN. It is easily programmable and customizable, using Arduino technology.
+
+Please go through the course on **WaziDev board series** below.
+
+You can also find the documentation for the boards in the Lab.
+
+<alert type='success'><b>Task 2:</b> Install the WaziDev and WaziSense. Go through all the instruction in [WaziDev](https://lab.waziup.io/resources/waziup/wazidev), and realize the "Blink a LED" and "Temperature and humidity sensor" exercices.</alert>
+
+
+When done, please take a picture and upload it in the Drive folder.
+
+
 ## Boards and sensors
 
 Once you have finished with the basic electronics, you can move on to the boards and sensors, with the following courses:
