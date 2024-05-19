@@ -1,18 +1,18 @@
 ---
-id: wb-7
-name: 'Introduction to Unit 4: Data Analysis Visualization and AI'
-desc: Online session on Data Analysis Visualization and AI
-delay_start: 1d
-from: 2024-03-18
+id: wb-7_dve_event
+name: Developing the GIPs 
+desc: Online session to work on Global Impact Projects
+delay_start: 3w
+from: 2024-05-09
 ---
 
 **Online Webinar**
 
-March 18th, 2024
-10:00 AM, Central European Time.
+May 09th, 2024
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Presentation of the Unit 4: Data Analysis Visualization and AI
+- Teams work on the GIPs. Utilize the lessons that have been previously given. 
 - Q/A session

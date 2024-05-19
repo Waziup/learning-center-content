@@ -1,8 +1,7 @@
 ---
+id: edge_mod
 title: Edge computing
-shortTitle: Edge Computing
-weight: 7
-thumbnail: edge_computing.webp
+short_title: Edge Computing
 ---
 
 Introduction to the section...

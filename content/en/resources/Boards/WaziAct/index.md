@@ -8,6 +8,10 @@ tags:
     - Waziup
     - LoRaWAN
     - LoRa
+    - Hardware
+    - Microcontroller
+    - City
+    - Agriculture
 ---
 
 # Introduction

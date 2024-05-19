@@ -1,4 +1,5 @@
 ---
+id: fire_solution
 title: Fire Smoke Detection
 desc: |
   When a fire breaks out, time is of the essence. Prompt measures need to be taken to evacuate the trapped people and contain the fire before it spreads out of hand.

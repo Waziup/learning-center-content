@@ -1,5 +1,5 @@
 ---
-id: wb-2
+id: wb-2_ttt_event
 name: 'The Solution Lab Box: Deploying the MVP kit'
 desc: Introductory meeting oon waziup technologies and ecosystem.
 delay_start: 1d

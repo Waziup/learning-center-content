@@ -1,18 +1,18 @@
 ---
-id: wb-9
-name: Preparation for the Physical Event
-desc: Online session for closing the platform training 
-delay_start: 1d
-from: 2024-03-25
+id: wb-9_dve_event
+name: Developing the GIPs 
+desc: Online session to work on Global Impact Projects
+delay_start: 4w
+from: 2024-05-16
 ---
 
 **Online Webinar**
 
-March 25th, 2024
-10:00 AM, Central European Time.
+May 16th, 2024
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Last check on all the details for travelling
-- Closing the platform training 
+- Teams work on the GIPs. Utilize the lessons that have been previously given.
+- Q&A Session 

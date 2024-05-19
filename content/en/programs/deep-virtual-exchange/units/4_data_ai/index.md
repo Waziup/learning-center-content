@@ -1,15 +1,15 @@
 ---
-id: data_ai__unit
+id: data_ai_dve_unit
 name: Data analysis, visualisations and AI
 desc: This unit will cover the basics of data analysis, visualisation, and AI.
-delay_start: 3w
+delay_start: 4w
 duration: 1w
 courses:
-  - id: waziup/data-analysis-and-ai/fundamentals-of-ai
-  - id: waziup/data-analysis-and-ai/machine-learning
-  - id: waziup/data-analysis-and-ai/computer-vision
-  - id: waziup/data-analysis-and-ai/data-visualizations
-  - id: waziup/data-analysis-and-ai/iot-data-analysis
+  - id: ai_fundamentals_course
+  - id: ml_course
+  - id: cv_course
+  - id: data_vis_course
+  - id: data_analysis_course
 ---
 
 Welcome to the 4th week of the Catalyst Program.

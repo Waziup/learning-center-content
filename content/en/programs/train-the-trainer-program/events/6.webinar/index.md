@@ -1,5 +1,5 @@
 ---
-id: wb-6
+id: wb-6_ttt_event
 name: Developing the Industry & Hub MVP (2)
 desc: Online session to enforce Hub MVps
 delay_start: 1d

@@ -1,5 +1,5 @@
 ---
-id: hardware_&_communication_unit
+id: hardware_&_communication_dve_unit
 name: Hardware & Communication
 desc: This unit covers the basics of hardware and communications.
 delay_start: 0w
@@ -14,7 +14,6 @@ courses:
   - id: wireless_essentials_course
   - id: wifi_dev_course
   - id: radio_comm_course
-  
 ---
 
 <!-- ![hardware](img/hardware.jpg) -->
@@ -33,7 +32,7 @@ Please be honest! :)
 
 ![mark](img/mark.png)
 
-<alert type='success'><b>Task 1:</b> Answer the questions in the questionaire at the end of the course.</alert>
+<alert type='success'><b>Task 1:</b> Answer the questions in the questionnaire at the end of the course.</alert>
 
 PS. You can skip this one if you are already familiar with IoT!
 
@@ -44,7 +43,7 @@ Two courses await you on electronics:
 - Advanced electronics for IoT
 
 <alert type='success'><b>Task 2:</b> 
-Please do the exercices in the "Wiring and programming sensors" and the "Arduino programming" courses.
+Please do the exercises in the "Wiring and programming sensors" and the "Arduino programming" courses.
 You need to take a photo of your prototype and upload it the corresponding Drive folder.
 </alert>
 
@@ -59,12 +58,12 @@ Once you have finished with the basic electronics, you can move on to the boards
 
 With those courses, you will have the basic knowledge to create and program you first IoT prototypes!
 
-<alert type='success'><b>Task 3:</b> Please do the exercices in all three courses.</alert>
+<alert type='success'><b>Task 3:</b> Please do the exercises in all three courses.</alert>
 
-The exercices are:
+The exercises are:
 - the questionnaire in the first course
-- the Ultrasonic sensor exercice
-- the LED blinking exercice
+- the Ultrasonic sensor exercise
+- the LED blinking exercise
 You need to take a photo of your prototype and upload it the corresponding Drive folder.
 
 Don't forget to click "Mark topic done" when you have finished.
@@ -74,10 +73,10 @@ Don't forget to click "Mark topic done" when you have finished.
 To complete a full IoT prototype, you also need to know about long range communications.
 We will cover the following course:
 - Wireless communication essentials
-- Wifi radio communications
+- Wi-Fi radio communications
 - LoRa radio communications
 
-<alert type='success'><b>Task 4:</b> Please do the Wifi exercice, and the LoRa exercice. Take a photo of your prototype and upload it to the Drive folder.</alert>
+<alert type='success'><b>Task 4:</b> Please do the Wi-Fi exercise, and the LoRa exercise. Take a photo of your prototype and upload it to the Drive folder.</alert>
 Don't forget to click "Mark topic done" when you have finished.
 
 

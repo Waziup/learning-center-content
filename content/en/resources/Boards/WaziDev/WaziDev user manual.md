@@ -1,4 +1,5 @@
 ---
+id: wazidev_manual
 title: WaziDev User Manual
 type: guide
 ---

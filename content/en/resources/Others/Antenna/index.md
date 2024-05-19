@@ -5,8 +5,11 @@ type: hardware
 desc: Used for Lora communication
 color: "#acabd7"
 tags:
-    - communication
+    - Communication
+    - Hardware
+    - Antenna
     - MVP-DIY-Kit
+    - Application-Business-Box
 ---
 
 # Introduction

@@ -1,5 +1,5 @@
 ---
-id: wb-3
+id: wb-3_ttt_event
 name: Introduction to Unit 2 (WAZIUP Technologies)
 desc: Hands-on session on Waziup Technologies
 delay_start: 1d

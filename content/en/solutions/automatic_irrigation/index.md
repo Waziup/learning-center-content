@@ -1,4 +1,5 @@
 ---
+id: autoirrig_solution
 title: Automatic Irrigation
 desc: As you may already know, plants require water, light (usually sunlight), nutrients etc, ... to grow healthy.
 architecture:

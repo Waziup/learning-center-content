@@ -1,5 +1,5 @@
 ---
-id: talent_kickoff_unit
+id: talent_kickoff_tp_unit
 name: Kick-off Meeting
 desc: |
   The kick-off meeting will be held on 2021-01-01.

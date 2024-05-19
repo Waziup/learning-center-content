@@ -9,12 +9,12 @@ duration: 3h
 The Waziup API
 ==============
 
-The WaziCloud has an extensive API. It provides both a HTTP and MQTT interfaces.
-The API allows your application to retrieve the data from your sensors, and to control your actuators.
+The WaziCloud has an extensive API. It provides both HTTP and MQTT interfaces.
+The API allows your application to retrieve the data from your sensors and control your actuators.
 It has the following features:
 
 - Device management
-- Sensors and actuators manangement
+- Sensors and actuator management
 - Notification programming
 - Gateways management
 - Access control

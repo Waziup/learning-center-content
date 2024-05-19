@@ -1,21 +1,18 @@
 ---
-id: wb-8
-name: Preparation of the IoT certification course 
-desc: Online session to enforce IoT Programs in locals
-delay_start: 1d
-from: 2024-03-22
+id: wb-8_dve_event
+name: 'Introduction to Unit 4: Data Analysis Visualization and AI'
+desc: Online session on Data Analysis Visualization and AI
+delay_start: 4w
+from: 2024-05-14
 ---
 
 **Online Webinar**
 
-March 22nd, 2024
-10:00 AM, Central European Time.
+May 14th, 2024
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Prerequisites
-- Target group definition
-- Promotion strategies 
-- Integration in the WaziLab
-- Webinars with split groups: 3 rooms will be created.
+- Presentation of the Unit 4: Data Analysis Visualization and AI
+- Q/A session

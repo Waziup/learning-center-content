@@ -1,5 +1,5 @@
 ---
-id: wb-7
+id: wb-7_ttt_event
 name: 'Introduction to Unit 4: Data Analysis Visualization and AI'
 desc: Online session on Data Analysis Visualization and AI
 delay_start: 1d

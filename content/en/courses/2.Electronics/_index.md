@@ -1,5 +1,5 @@
 ---
 id: elec_mod
 title: Electronics
-shortTitle: Electronics
+short_title: Electronics
 ---

@@ -5,8 +5,12 @@ type: sensor
 desc: Measure ambient temperature
 color: "#eeeeee"
 tags:
+    - Hardware
+    - Sensor
     - City
     - Agriculture
+    - DIY
+    - Training-Kit-Box
 ---
 
 # Introduction

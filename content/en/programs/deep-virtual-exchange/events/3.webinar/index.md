@@ -1,21 +1,21 @@
 ---
-id: wb-3
-name: Introduction to Unit 2 (WAZIUP Technologies)
-desc: Hands-on session on Waziup Technologies
-delay_start: 1d
-from: 2024-03-04
+id: wb-3_dve_event
+name: Introduction to Unit 2 (WAZIUP Technologies) 
+desc: Introductory meeting on waziup technologies and ecosystem.
+delay_start: 1w
+from: 2024-04-23
 ---
 
 **Online Webinar**
 
-March 4th, 2024  
-10:00 AM, Central European Time.
+April 23rd, 2024  
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Presentation of the Unit 2: Waziup technologies
-- Q/A session
+- Presentation of the Solution Lab Box
+- Deployment and test of some sensors 
 
 
 

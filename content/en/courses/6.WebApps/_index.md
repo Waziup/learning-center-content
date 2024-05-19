@@ -1,7 +1,7 @@
 ---
 id: web_mod
 title: Web & mobile IoT applications
-shortTitle: Applications
+short_title: Applications
 ---
 
 Introduction to the section...

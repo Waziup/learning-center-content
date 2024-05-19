@@ -6,6 +6,8 @@ desc: Arduino Uno
 color: "#56d2cb"
 tags:
     - Arduino
+    - Hardware
+    - Microcontroller
 ---
 
 # Introduction

@@ -1,19 +1,18 @@
 ---
-id: wb-6
-name: Developing the Industry & Hub MVP (2)
-desc: Online session to enforce Hub MVps
-delay_start: 1d
-from: 2024-03-15
+id: wb-6_dve_event
+name: Introduction to Unit 3 (Web & Mobile Application Development) 
+desc: Online session to enforce  Web & Mobile Application Development
+delay_start: 3w
+from: 2024-05-07
 ---
 
 **Online Webinar**
 
-March 15th, 2024
-10:00 AM, Central European Time.
+May 7th, 2024
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Progress on the MVPs
-- Co-design of the features using the Solution Box
-- Webinars with split groups: 3 rooms will be created.
+- Presentation of the Unit 3: Web & mobile application development 
+- Q&A Session 

@@ -1,20 +1,20 @@
 ---
-id: wb-4
-name: Developing the Industry & Hub MVP (1)
-desc: Online session on minimal viable products
-delay_start: 1d
-from: 2024-03-08
+id: wb-4_dve_event
+name: Business mentorship and developing the GIPs 
+desc: 
+delay_start: 1w
+from: 2024-04-25
 ---
 
 **Online Webinar**
 
-March 8th, 2024  
-10:00 AM, Central European Time.
+April 25th, 2024  
+12:00 PM, Central European Time.
 
 **Platform**: Zoom
 
 **Agenda:**
-- Presentation by the hubs of their MVPs
-- Co-design of the features using the Solution Box
-- Webinars will split groups: 3 rooms will be created
+- Business mentorship for the GIPs development 
+- Teams work on the GIPs. Utilize the lessons that have been previously given. 
+- Q&A Session  
 

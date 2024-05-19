@@ -5,10 +5,13 @@ type: microcontroller
 desc: This board allow to develop IoT devices with LoRaWAN.
 color: "#f8cb58"
 tags:
+    - Hardware
+    - Microcontroller
     - Waziup
     - LoRaWAN
     - LoRa
     - MVP-DIY-Kit
+    - Application-Business-Box
 ---
 
 # Introduction

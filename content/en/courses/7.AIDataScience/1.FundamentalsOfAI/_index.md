@@ -58,17 +58,17 @@ Another application of machine learning are product recommendations. Big compani
 
 Email Spam and Malware Filtering is also utilizing Machine Learning. Gmail is using the following filters: Content Filter, Header filter, General blacklists filter, Rules-based filters and Permission filters. Some machine learning algorithms such as Multi-Layer Perceptron, Decision tree, and Naïve Bayes classifier are used for email spam filtering and malware detection.
 
-Stock market trading is another area where machine learning is used to predict 
+Stock market trading is another area where machine learning is used to predict future trends.
 
 These are just some examples of areas where machine learning is being used, there are many other fields where it is utilized, like for example:
 - Virtual Personal Assistant (Google assistant, Alexa, Cortana, Siri)
 - Medical Diagnosis (helps in finding brain tumors and other brain-related diseases easily)
 - Online Fraud Detection (checking whether it is a genuine transaction or a fraud transaction: Feed Forward Neural network are used)
 
-Styles of Machine Learning
+Types of Machine Learning
 --------------------------
 
-There four different styles in machine learning algorithms:
+There four different types in machine learning algorithms:
 
 - Unsupervised Learning
 - Supervised Learning
@@ -97,12 +97,13 @@ Supervised learning is usually used to solve the following problems:
 
 **Semi-Supervised Learning** is a task in machine learning that combines a small amount of labeled data and a large amount of unlabeled data.
 Semi-Supervised learning is usually used to solve the following problems:
+
 - Classification
 - Regression
 
 **Reinforced Learning** works with a learning argent that learns from its environment.
 So, it works on interacting with the environment. The type of input data is not predefined. An agent rewards the model for success and does not reward it for a failure.
-There following illustration 
+The following illustration explains it in a visual approach:
 
 <figure
   src="img/Reinforcement_learning_diagram.svg"
@@ -111,6 +112,7 @@ There following illustration
 
 Algorithms where reinforced learning is applied are Q-Learning and SARSA.
 Reinforced Learning learning is usually used to solve the following problems:
+
 - Exploitation 
 - Exploration
 
@@ -190,14 +192,14 @@ Goals in NLP
 ------------
 
 The common goals or challenges of natural language processing are discussed in the following:
- - speech recognition
- - natural language understanding
+ - Speech recognition
+ - Natural language understanding
    - Segmentation of previously captured speech into single words and phrases
    - Recognizing the basic forms of words and acquiring grammatical information
    - Recognizing the functions of individual words in the sentence (subject, verb, object, article, etc.)
    - Extraction of the meaning of sentences and parts of sentences
    - Recognizing sentence contexts and sentence relationships
- - natural language generation
+ - Natural language generation
 
 Applications
 ------------

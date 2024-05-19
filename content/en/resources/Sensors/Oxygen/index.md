@@ -5,6 +5,8 @@ type: sensor
 desc:  Dissolved oxygen sensors are essentially used to detect water quality by measuring the amount of dissoved oxygen
 color: "#fdc087"
 tags:
+    - Hardware
+    - Sensor
     - City
     - Agriculture
     - Health

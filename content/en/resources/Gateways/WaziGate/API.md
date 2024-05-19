@@ -1,4 +1,5 @@
 ---
+id: wazigate_api_manual
 title: WaziGate Edge API
 type: spec
 rank: 3

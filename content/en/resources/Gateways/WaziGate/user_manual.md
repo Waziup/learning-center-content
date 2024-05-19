@@ -1,5 +1,5 @@
 ---
-date: 2023-01-13T09:00:00+00:00
+id: wazigate_user_manual
 title: WaziGate User Manual
 type: guide
 rank: 2

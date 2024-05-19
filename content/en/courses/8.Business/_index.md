@@ -1,5 +1,5 @@
 ---
 id: business_mod
 title: Business support
-shortTitle: Business
+short_title: Business
 ---

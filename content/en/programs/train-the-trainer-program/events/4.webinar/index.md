@@ -1,5 +1,5 @@
 ---
-id: wb-4
+id: wb-4_ttt_event
 name: Developing the Industry & Hub MVP (1)
 desc: Online session on minimal viable products
 delay_start: 1d
