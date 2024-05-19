@@ -1,4 +1,4 @@
----
+   ---
 id: sensors_course
 title: Wiring and programming sensors
 description: In this course, we will learn how to wire and program sensors.
@@ -278,7 +278,7 @@ void loop() {
 
 2. Then collect the Raw values from the dry sample and weight sample of soil. In my case it was- 
    - Raw high( for dry soil ) -  891
-   - Raw Low( for weight soil ) - 370
+   - Raw Low( for wet soil ) - 370
 
 3. Then update your code like the following code to map the calibrated values:
 
