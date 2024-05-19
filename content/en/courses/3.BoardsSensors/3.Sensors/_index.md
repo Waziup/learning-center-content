@@ -285,7 +285,7 @@ void loop() {
 
 2. Then collect the **Raw** values from the dry sample and the weight sample of soil. In my case, it was: 
    - Raw high( for dry soil ):  891
-   - Raw Low( for weight soil ): 370
+   - Raw Low( for wet soil ): 370
 
 3. Then update your code like the following to map the calibrated values:
 
