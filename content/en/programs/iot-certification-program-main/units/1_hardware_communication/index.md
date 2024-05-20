@@ -9,8 +9,8 @@ courses:
   - id: elec_basic_course
   - id: elec_advanced_course
   - id: boards_course
-  - id: sensors_course
   - id: arduino_programming_course
+  - id: sensors_course
   - id: wireless_essentials_course
   - id: wifi_dev_course
   - id: radio_comm_course

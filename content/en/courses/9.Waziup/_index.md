@@ -1,7 +1,7 @@
 ---
 id: waziup_mod
 title: Waziup
-shortTitle: Waziup
+short_title: Waziup
 ---
 
 TODO
