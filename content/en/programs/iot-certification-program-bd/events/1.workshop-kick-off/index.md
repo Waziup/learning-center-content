@@ -1,5 +1,5 @@
 ---
-id: wk-1_icp_event
+id: wk-1_icp_bd_event
 name: 'Welcome & Introduction to Unit 1: Hardware and communications'
 desc: Hands-on session on hardware and communication concepts.
 delay_start: 2w

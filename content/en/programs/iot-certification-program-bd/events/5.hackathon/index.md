@@ -1,5 +1,5 @@
 ---
-id: wk-5_icp_event
+id: wk-5_icp_bd_event
 name: Hackathon
 desc: On sight hackathon.
 delay_start: 6w

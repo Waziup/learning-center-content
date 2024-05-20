@@ -1,5 +1,5 @@
 ---
-id: hardware_icp_unit
+id: hardware_icp_bd_unit
 name: Hardware
 desc: This unit covers the basics of hardware .
 delay_start: 2w

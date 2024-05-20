@@ -1,5 +1,5 @@
 ---
-id: communication_icp_unit
+id: communication_icp_bd_unit
 name: Communication
 desc: This unit covers the basics of communications.
 delay_start: 2w

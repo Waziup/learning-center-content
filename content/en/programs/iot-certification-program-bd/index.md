@@ -1,5 +1,5 @@
 ---
-id: iot_certif_program
+id: iot_certif_bd_program
 name: ICP in Bangladesh
 desc: The IoT Certification Program offers a blend of online and offline sessions to deliver a comprehensive learning experience in the field of Internet of Things (IoT). Students will delve into IoT concepts, engage in hands-on projects, and emerge as proficient IoT enthusiasts by the program's end.
 from: 2024-04-08

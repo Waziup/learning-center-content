@@ -1,5 +1,5 @@
 ---
-id: wk-2_icp_event
+id: wk-2_icp_bd_event
 name: 'Introduction to Unit 2: WAZIUP Technologies'
 desc: Hands-on session on Waziup Technologies
 delay_start: 3w
