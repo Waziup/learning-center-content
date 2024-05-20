@@ -1,4 +1,5 @@
 ---
+id: autoirrig2_solution_steps
 ---
 
 Step #1: Setting up the Soil Moisture Sensor and Soil Temperature Sensor

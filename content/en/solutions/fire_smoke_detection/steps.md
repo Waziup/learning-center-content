@@ -1,4 +1,5 @@
 ---
+id: fire_solution_steps
 ---
 
 # Step 1: Installing Si7021 Sensor Library

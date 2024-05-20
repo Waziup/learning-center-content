@@ -2,6 +2,7 @@
 id: wazisense_manual
 title: WaziSense User Manual
 type: guide
+rank: 1
 ---
 
 # Introduction

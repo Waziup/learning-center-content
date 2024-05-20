@@ -1,4 +1,5 @@
 ---
+id: weather_solution_steps
 ---
 
 Step #1: Assembling Weather Station

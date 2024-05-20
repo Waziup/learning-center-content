@@ -1,7 +1,7 @@
 ---
-id: mqtt_course
-title: "MQTT for embbeded programming"
-descripton: "MQTT can be used to communicate with your remote devices and sensors"
+id: mqtt_embed_course
+title: MQTT for embbeded programming
+description: MQTT can be used to communicate with your remote devices and sensors
 difficulty: advanced
 duration: 3h
 ---

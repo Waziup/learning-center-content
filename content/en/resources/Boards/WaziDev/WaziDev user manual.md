@@ -2,6 +2,7 @@
 id: wazidev_manual
 title: WaziDev User Manual
 type: guide
+rank: 2
 ---
 
 Overview
