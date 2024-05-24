@@ -23,53 +23,43 @@ The goals of INTEL-IRRIS include:
 3. **Adoption Facilitation:** Convert raw data into actionable information for better irrigation decisions.
 4. **Sustained Production:** Enhance long-term production and income for smallholders and boost local innovation.
 
+![Intel-Irris](img/Intel-IRRIS.png)
+
 INTEL-IRRIS Objectives
 ================================================================
-Intel-IRRIS's main objectives are
-1. Propose low cost but highly efficient water control system for irrigation optimization
-2. Use cutting-edge technologies to propose highly innovative systems yet simple to deply and adapted to smallholders.
-3. Seamless integration into existing irrigation system/or local customs and practices
-4. Improve farmer's knowldge on water-related issues, foster local adaptation of technologies, increase local innovation capacity and facilitate technology appropriation.
-5. Large-scale adoption of low cost smart irrigation system by smallholders, stimulating synergies between various local actors.
 
-[![Intel-Irris objectives](img/intelirris_objectives.png)](https://intel-irris.eu/objectives)
-
+![INTEL-IRRIS Objectives](img/objectives.png)
 
 
 INTEL-IRRIS develops an open-source, generic framework that local actors can improve and maintain, fostering the local ICT ecosystem. This approach ensures higher interoperability compared to proprietary solutions. Competitions and challenges will be organized to raise awareness and engage young entrepreneurs. Central to INTEL-IRRIS is the design and implementation of a low-cost sensing platform integrated into the INTEL-IRRIS starter-kit.
 
-Key Features:
+**Key Features:**
 
 - Low-Cost: Affordable for smallholders without compromising on precision or user-friendliness.
 - Open Source: Enhanced interoperability and local maintenance capabilities.
 For detailed information, refer to the introductory tutorial Intro.PDF and the presentation video.
 
-[![Info chart](img/intelirris_info_chart.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-introduction-iot.pdf)
-
-From the [introductory tutorial](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-introduction-iot.pdf), Intel-IrriS's added value is highlighted there:
-
-[![Intro.PDF](img/intelirris_whatfor.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-introduction-iot.pdf)
-
-It is low-cost in order to be availaible for a maximum of small-holders, without losing precision or user-friendliness compared with the expensive solutions existing on the market.
 
 
 
 
-
-This program what for?
+Dissemination Objectives
 ======================
-
-[![Intel-Irris Dissemination objectives](img/intelirris_dissem_objectives.png)](https://intel-irris.eu/objectives)
 
 During the course of the Intel-IrriS project, we ensured the availability of up to date tutorials regarding the use of all the materials, using dedicated technical trainings, tutorials, presentations/slides, videos, github repositories, etc. resulting in a pack of resources through where it may be complex to find your way oout. 
 
 INTEL-IRRIS also set up an [IT online course](https://intel-irris.eu/intel-irris-it-iot-courses) on the project web site to present in a synthetic manner all the resources/tutorials on the INTEL-IRRIS hardware platforms. In addition, it includes additional tutorials to present the Internet-of-Thing ecosystem as well as the smart agriculture/farming concept to make the whole IT courses consistent and allowing tech enthusiasts to increase their technical knowledge in a step-by-step approach. But again, the contents are not focused on Intel-IrriS specificities only, and does not permit a trainee to become independant from the project at its end.
+
+![Dissemination objective](<img/Dissemation objectives.png>)
 
 This program summarizes all the material (currently on the device only) with a focus on the very last version of the material at the end of the project. It tends to permit the future reader / learnee to be as much as possible autonomous from the current project members.
 
 
 Intel-IrriS Structure
 =====================
+
+
+
 The core technical structure of Intel-IrriS includes the development of a Plug-&-Sense smart irrigation system. This system integrates a low-cost sensor platform with the versatile IoT gateway into the INTEL-IRRIS starter-kit. The IoT gateway, called INTEL-IRRIS WaziGate, is derived from the generic WaziGate framework to provide an out-of-the-box autonomous system. A user-friendly interface is included to simplify the deployment process for smallholders.
 
 So basically, you need to go to:
