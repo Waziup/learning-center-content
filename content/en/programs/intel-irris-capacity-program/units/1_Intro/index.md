@@ -3,48 +3,48 @@ id: intel-irris_intro
 title: Introduction
 description: In this course, we will introduce the context of Intel-IrriS and the goal of this program.
 difficulty: beginner
-delay_start: 0w
+delay_start: 1w
 duration: 3h
 ---
 
 
-In this intro, we present the objectives of the INTEL-IRRIS capacity building program.
-Deploying low-cost sensors in a Do-It-Yourself (DIY) way often faces great difficulties when trying to satisfy concrete field constraints. INTEL-IRRIS provides a solution, presented here, that have been thouroughly tested, deployed, and validated.
+IThe INTEL-IRRIS capacity building program aims to deploy low-cost sensors using a Do-It-Yourself (DIY) approach to address field constraints. This solution has been thoroughly tested, deployed, and validated to ensure effectiveness.
 
-Deliverable D5.3a presents the INTEL-IRRIS’s resources towards capacity building of entrepreneurs and tech communities. This introductory content has been inspired from this early deliverable.
+Deliverable D5.3a showcases the INTEL-IRRIS resources designed to build capacity among entrepreneurs and tech communities. The insights in this introduction are inspired by this early deliverable. The main objectives of INTEL-IRRIS include fostering local adaptation of technologies, enhancing local innovation capacity, and facilitating technology appropriation. For more details, see the project's [objectives](https://intel-irris.eu/objectives).
 
-One of INTEL-IRRIS main objectives is to foster local adaptation of technologies, increase local innovation capacity and facilitate technology appropriation. See the project's [objectives](https://intel-irris.eu/objectives).
-
-Intel-IrriS why/what for?
+Why INTEL-IRRIS?
 =========================
+According to the Food and Agriculture Organization (FAO), small-scale farming significantly contributes to food security and rural economies. However, smallholders face challenges that hinder their productivity, profitability, and economic growth, with water resources being a major constraint. Water scarcity, exacerbated by excessive use and climate change, necessitates improved irrigation methods. INTEL-IRRIS aims to provide smallholder farmers with an efficient water management system using an open, low-cost, autonomous irrigation control system based on IoT and smart technologies. This system optimizes water usage for specific crops, times, and soil conditions using predictive algorithms.
 
-According to FAO, small-scale farming has an enormous contribution to food security and to rural
-economy. However, smallholders usually face a number of constraints that are impeding their productivity,
-profitability and contribution to economic growth. Water resource is one of the major constraints and the situation
-is foreseen to worsen due to water shortage in relation with current excessive use and climate change. Controlled
-and improved irrigation can save water while maximising plant growth and yield. The project will provide the
-smallholder farmers a more efficient management of its available water by deploying of an open, low-cost and
-autonomous irrigation control system based on IoT and smart technologies. The irrigation process to decide/suggest
-how much water is needed to maintain the optimal production potential without water wasting can be adapted (i)
-for a particular crop, (ii) at a particular moment and (iii) for a given soil type and condition because it will be
-seconded by algorithms predicting the behaviour of the complex soil/plant/atmosphere system.
+The goals of INTEL-IRRIS include:
 
-The goal of Intel-IrriS is to contribute in not only saving water but also in increasing the water usage
-efficiency, while taking into account the specificities of socio-economic contexts of smallholder farmers as well as
-current irrigation practices. Existing solutions are generally very expensive and provide raw data which are not
-easy to be used directly by small farmers. Therefore, Intel-IrriS main objectives are (1) to reduce the cost of smart
-technologies for smallholders – dividing the cost by a factor between 10 and 100, (2) to increase adoption of
-smart technologies by smallholders by "translating" raw data into readable information used for making decision
-about irrigation adjustment (reducing total amount of water through improved timing and real-time adaptation to
-the agro-environmental conditions) and (3) to increase on a long-term the smallholders' sustained production
-and income, as well as the local innovation opportunities and capacities. 
+1. **Water Savings:** Conserve water while increasing usage efficiency.
+2. **Cost Reduction:** Lower the cost of smart technologies for smallholders by a factor of 10 to 100.
+3. **Adoption Facilitation:** Convert raw data into actionable information for better irrigation decisions.
+4. **Sustained Production:** Enhance long-term production and income for smallholders and boost local innovation.
 
-[![Info chart](img/intelirris_info_chart.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-introduction-iot.pdf)
+INTEL-IRRIS Objectives
+================================================================
+Intel-IRRIS's main objectives are
+1. Propose low cost but highly efficient water control system for irrigation optimization
+2. Use cutting-edge technologies to propose highly innovative systems yet simple to deply and adapted to smallholders.
+3. Seamless integration into existing irrigation system/or local customs and practices
+4. Improve farmer's knowldge on water-related issues, foster local adaptation of technologies, increase local innovation capacity and facilitate technology appropriation.
+5. Large-scale adoption of low cost smart irrigation system by smallholders, stimulating synergies between various local actors.
 
 [![Intel-Irris objectives](img/intelirris_objectives.png)](https://intel-irris.eu/objectives)
 
-INTEL-IRRIS develops an open source, generic framework that can be improved and maintained by local actors, stimulating the local ICT ecosystem. This open-source approach coupled with the adoption of standards will definitely provide a much higher level of interoperability than proprietary solutions. Finally, calls for Competitions and Challenges will be organized to raise awareness and boost local innovation and engagement from young entrepreneurs.
-Central to INTEL-IRRIS’s contribution is the design and implementation of the low-cost sensing platform and its integration in the INTEL-IRRIS’s starter-kit.
+
+
+INTEL-IRRIS develops an open-source, generic framework that local actors can improve and maintain, fostering the local ICT ecosystem. This approach ensures higher interoperability compared to proprietary solutions. Competitions and challenges will be organized to raise awareness and engage young entrepreneurs. Central to INTEL-IRRIS is the design and implementation of a low-cost sensing platform integrated into the INTEL-IRRIS starter-kit.
+
+Key Features:
+
+- Low-Cost: Affordable for smallholders without compromising on precision or user-friendliness.
+- Open Source: Enhanced interoperability and local maintenance capabilities.
+For detailed information, refer to the introductory tutorial Intro.PDF and the presentation video.
+
+[![Info chart](img/intelirris_info_chart.png)](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-introduction-iot.pdf)
 
 From the [introductory tutorial](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-introduction-iot.pdf), Intel-IrriS's added value is highlighted there:
 
@@ -52,18 +52,6 @@ From the [introductory tutorial](https://github.com/CongducPham/PRIMA-Intel-Irri
 
 It is low-cost in order to be availaible for a maximum of small-holders, without losing precision or user-friendliness compared with the expensive solutions existing on the market.
 
-More info on the [public presentation slides](github/PRIMA-Intel-IrriS/Tutorials/Intel-Irris-public-presentation-starter-kit-en.pdf).
-More specific info on the following themes: 
-[objectives](https://intel-irris.eu/objectives); 
-[methodology](https://intel-irris.eu/methodology); 
-[consortium](https://intel-irris.eu/consortium); 
-[pilots](https://intel-irris.eu/pilots).
-
-See also this presentation video:
-
-<youtube>YMGfkLNs624</youtube>
-
-<!-- [![INTEL-IRRIS's interview video presenting the project and benefits of Edge-Computing technologies Why these choices](img/intelirris_pres_video.png)](https://www.youtube.com/watch?v=) -->
 
 
 
@@ -82,17 +70,22 @@ This program summarizes all the material (currently on the device only) with a f
 
 Intel-IrriS Structure
 =====================
-Here let's simply sum up the core technical structure of the Intel-IrriS project's feature: the starter kit.
-
-The work conducted to provide a technical proposal has mainly focused on developing the Plug-&-Sense smart irrigation system by integrating the low-cost sensor platform with the versatile IoT gateway into the INTEL-IRRIS starter-kit. The IoT gateway framework, so-called INTEL-IRRIS WaziGate, has been developed from the generic WaziGate framework to provide an autonomous system that can be deployed out-of-the-box. A simple and intuitive user interface has especially been developed and integrated with the generic WaziGate to produce the INTEL-IRRIS starter-kit targeting smallholders.
+The core technical structure of Intel-IrriS includes the development of a Plug-&-Sense smart irrigation system. This system integrates a low-cost sensor platform with the versatile IoT gateway into the INTEL-IRRIS starter-kit. The IoT gateway, called INTEL-IRRIS WaziGate, is derived from the generic WaziGate framework to provide an out-of-the-box autonomous system. A user-friendly interface is included to simplify the deployment process for smallholders.
 
 So basically, you need to go to:
 
 1. Chapter 2 to get all the info on the INTEL-IRRIS Device;
 2. Chapter 3 to get more info on the WaziGate.
 
+For more specific information, you can explore the [public presentation slides](github/PRIMA-Intel-IrriS/Tutorials/Intel-Irris-public-presentation-starter-kit-en.pdf) and additional resources on [objectives](https://intel-irris.eu/objectives), [methodology](https://intel-irris.eu/methodology), [consortium](https://intel-irris.eu/consortium), and [pilots](https://intel-irris.eu/pilots).
 
 
+
+See also this presentation video for more information:
+
+<youtube>YMGfkLNs624</youtube>
+
+<!-- [![INTEL-IRRIS's interview video presenting the project and benefits of Edge-Computing technologies Why these choices](img/intelirris_pres_video.png)](https://www.youtube.com/watch?v=) -->
 
 
 
