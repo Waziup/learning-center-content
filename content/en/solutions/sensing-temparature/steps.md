@@ -3,214 +3,171 @@ id: sensing_temperature_solution_steps
 ---
 
 
-Step #1: Setting up the Soil Moisture Sensor
+Step #1: Setup Programming Environment
 ==============================
-Soil moisture sensors measures the amount of water in the soil to maintain consistent and ideal soil conditions for plants.
-They can be used to detect the moisture of soil or judge if there is water around the sensor. They can be very easy to use, 
-just insert it into the soil and then read it.
+The very first step is to setup the environment for sensing the temperature and humidity. This section will guide through the installation of Arduino IDE and its configuration for the WaziDev.
 
-Schematics
+Install Arduino IDE
 ----------
-There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A6.
+<alert severity='info'>**Step \#1.1:** Download Arduino IDE from here: [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)</alert>
 
-![Sensor Wiring](./media/waziACT_soil.jpg)
+  - If you use Windows there is a guide here: [https://docs.arduino.cc/software/ide-v1/tutorials/Windows](https://docs.arduino.cc/software/ide-v1/tutorials/Windows).  
 
-NOTE: we are powering the soil moisture sensor from **pin D6**. Each digital pin can with stand **40mA** max current draw. The soil moisture sensor is rated for **35mA**.
+  - If you use Linux there is a guide here: [https://www.arduino.cc/en/Guide/Linux](https://www.arduino.cc/en/Guide/Linux).  
 
-Module interface:
-1. VCC: Connect to the D6 pin of the WaziACT
-2. GND: Connect to the GND pin of the WaziACT
-3. IN: Connect to the WaziACT analog pin A6
+  - If you use Mac there is a guide here: [https://www.arduino.cc/en/Guide/MacOSX](https://www.arduino.cc/en/Guide/MacOSX).
 
-Code Sample
+
+Locate the WaziDev sketchbook
 -----------
-```c
-/********************
- * Soil Moisture Tester
- * Read soil humidity by measuring its resistance.
- ********************/
 
-int sensorPin = A6;
-int sensorPow = 6;
+<alert severity='info'> **Step \#1.2:** Download the [WaziDev sketchbook](https://github.com/Waziup/WaziDev/archive/master.zip). Unzip the file to the location of your choice.</alert>
 
-void setup() {
-  Serial.begin(38400);
-  pinMode(sensorPow, OUTPUT);
-  delay(100);
-  digitalWrite(sensorPow, HIGH);
-}
+<alert severity='info'>**Step \#1.3:** In the Arduino IDE Preferences, change the "sketchbook location" to the WaziDev sketchbook folder.</alert>
 
-void loop() {
-  int soilHumidity = analogRead(sensorPin);
-  Serial.println(soilHumidity);
-  delay(100);
-}
-```
+![Arduino IDE Preferences menu](../../resources/Boards/WaziDev/media/image29.png)
 
-Step #2: Setting up the Actuator(Relay)
+
+First, open "Preferences" in the Arduino IDE menu File -\> Preferences.
+
+![Arduino IDE Sketchbook location configuration](../../resources/Boards/WaziDev/media/image18.png)
+
+
+Configure the Arduino IDE
+-----------
+
+<alert severity='info'>**Step \#1.4:** Connect your WaziDev board to your PC via USB cable.</alert>
+
+![WaziDev cable connection](../../resources/Boards/WaziDev/media/image12.jpg)
+
+If you see some lights turning on, that means your USB connection is working.
+
+<alert severity='info'>**Step \#1.5:** Open your Arduino IDE.</alert>
+
+On Linux, you need to open it as an **administrator** (i.e. type "sudo arduino"). You should see something like this:
+
+![Arduino IDE screen](../../resources/Boards/WaziDev/media/image1.png)
+
+<alert severity='info'>**Step \#1.6:** Select the right port.</alert>
+
+Go to **Tools** > **Port**. The **port** depends on your Operating System. You should select a port similar to these:
+
+-   **Linux:** /dev/ttyUSB0
+-   **MacOS:** /dev/cu.usbserialXXXXX
+-   **Windows:** COM3 or higher.
+
+![Port selection](../../resources/Boards/WaziDev/media/image3.png)
+
+<alert severity='info'>**Step \#1.7:** Select the Development Board.</alert>
+
+Select the board "Arduino Pro or Pro Mini" in the **Tools** > **Board** menu.
+
+![Board selection in a unix OS Arduino IDE: Arduino Pro or Mini](../../resources/Boards/WaziDev/media/image30.png)
+
+<alert severity='info'>**Step \#1.8:** Select the Processor.</alert>
+
+Select the processor "ATmega328P (3.3V, 8 MHz)" in the **Tools** > **Processor** menu.
+
+![Processor selection in a unix system Arduino IDE: ATMega328p (3.3v, 8MHz)](../../resources/Boards/WaziDev/media/image27.png)
+
+
+Step #2: Setup Hardware Connection and Sensing
 ============================================
+Now that the environment is setup, it's time to connect the temperature sensor **DHT11** to the the wazidev. Bellow is the chematic of the connection between wazidev and dht11.
 
-You may occasionally wish to manage appliances with AC power, such as lamps, fans, and other home appliances. The WaziACT, however, cannot directly control these higher voltage devices because it runs on 3.3 volts.
+![dht11 arduino](../../resources/Boards/WaziDev/media/Adht11.png)
 
-This is where the relay comes into play.The waziACT has a relay module to control the AC mains. In our case, we are controlling the 12 Volts supply of a water pump.
+With the DHT11, the simplest wiring possible is: no wires!
+DHT11 have a GND (ground) pin, a data pin, and a VCC pin.
+Just plug the DHT11 directly into the WaziDev.
+Be careful to align the pins:
 
-Code Sample
------------
+-   DHT11 GND -\> WaziDev GND
+-   DHT11 data -\> WaziDev D2
+-   DHT11 VCC -\> WaziDev D3
+
+![Direct connection of the DHT11 with WaziDev](../../resources/Boards/WaziDev/media/image6.jpg)
+
+<alert type="warning">in some cases based on the dht11 manufacturer the in build pins could be shuffled, in this case please check the pins of the sensor.</alert>
+
+
+<alert severity='info'>**Step \#2.1:** Write the following in the code editor.</alert>
+
+Code
+----
 ```c
-/********************
- *  Program:  Relay Tester
- ********************/
+#include <DHT.h>
 
-//Declaring pin 10 as the control pin    
-int RelayPin = 7;
+//Constants
+#define DHTPIN 2
+#define DHTTYPE DHT11   // DHT 11
+DHT dht(DHTPIN, DHTTYPE); // Initialize DHT sensor for normal Arduino
 
-void setup() {
-  //Set RelayPin as an output pin
-  pinMode(RelayPin, OUTPUT);
+void setup() { // to run once
+  Serial.begin(38400); // Initialize the serial port
+  Serial.println("DHT11 Humidity - Temperature Sensor");
+  Serial.println("RH\t Temp (C)");
+
+//  pinMode(5, OUTPUT);  digitalWrite(5, LOW);
+  pinMode(3, OUTPUT);  digitalWrite(3, HIGH);
+  
+  dht.begin();
+  delay(2000);
 }
 
 void loop() {
-  // Let's turn on the relay...
-  digitalWrite(RelayPin, LOW);
+  delay(3000);
+  
+  // Reading temperature or humidity takes about 250 milliseconds!
+  // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(h) || isnan(t)) {
+    Serial.println("Failed to read from DHT11 sensor!");
+    return;
+  }
 
-  //Lets wait for 5 seconds
-  delay(5000);
-	
-  //Let's turn off the relay...
-  digitalWrite(RelayPin, HIGH);
-
-  //Lets wait for another 5 seconds
-  delay(5000);
+  Serial.print(h); 
+  Serial.print(" %\t\t");
+  Serial.print(t); 
+  Serial.println(" °C");
+  // Wait a few seconds between measurements. The DHT11 should not be read at a higher frequency of
+  // about once every 2 seconds. So we add a 3 second delay to cover this.
+  
 }
 ```
 
 
-Step #3: Combining Sensing and Actuation with Lora Communication
-====================================================================================
+<alert severity='info'>**Step \#2.2:** Install the DHT library using Library Manager.</alert>
 
-At this point, we want to trigger the relay to turn ON the water pump, when the soil moisture sensor detects a dry soil. The relay will then turn OFF when the soil moisture sensor reports the soil is wet. Also the WaziACT will constantly update Wazicloud with the current state of the soil through Wazigate.
+ Go to **Sketch** -\> **Include Library** -\> **Libraries Manager**.
 
-**NOTE:** Make sure to have a configured gateway up and running before uploading this next code. Kindly see the lectures under **Module 5 Lecture 2** for how to setup a Waziup Gateway.
+ Alternatively you can press Cntrl + Shift + i (for Windows users)
 
-Schematics
-----------
-![Final Schematic](./media/waziACT_soilv3.jpg)
+ ![](../../resources/Boards/WaziDev/media/image33.png)
 
-Code Sample
------------
-```c
-#include <WaziDev.h>
-#include <xlpp.h>
-#include <Base64.h>
+ In the libraries manager, make sure the "**Type**" and "**Topic**" fields are set to "**ALL**".
 
-// NwkSKey (Network Session Key) and Appkey (AppKey) are used for securing LoRaWAN transmissions.
-// You need to copy them from/to your LoRaWAN server or gateway.
-// You need to configure also the devAddr. DevAddr need to be different for each devices!!
-// Copy'n'paste the DevAddr (Device Address): 26011D00
-unsigned char devAddr[4] = {0x26, 0x01, 0x1D, 0x00};
+ Next, search for **DHT** and install the DHT sensor library by **Adafruit** as shown in the image below.
 
-// Copy'n'paste the key to your Wazigate: 23158D3BBC31E6AF670D195B5AED5525
-unsigned char appSkey[16] = {0x23, 0x15, 0x8D, 0x3B, 0xBC, 0x31, 0xE6, 0xAF, 0x67, 0x0D, 0x19, 0x5B, 0x5A, 0xED, 0x55, 0x25};
+ ![Library Manager Window](../../resources/Boards/WaziDev/media/image34.png)
 
-// Copy'n'paste the key to your Wazigate: 23158D3BBC31E6AF670D195B5AED5525
-unsigned char nwkSkey[16] = {0x23, 0x15, 0x8D, 0x3B, 0xBC, 0x31, 0xE6, 0xAF, 0x67, 0x0D, 0x19, 0x5B, 0x5A, 0xED, 0x55, 0x25};
+ Close the library manager after the installation completes
 
-WaziDev wazidev;
+ **NOTE:** Repeat step **3** for all other sensors you use. i.e search and install the required sensor libraries using the library manager.
 
-//Declaring pin 7 as the control pin
-int RelayPin = 7;
 
-//Sensor Power Pin
-int sensorPow = 6;
+<alert severity='info'>**Step \#4:** Compile and upload the code.</alert>
 
-//Declaring pin A0 moisture sensing pin
-int sensorPin = A6;
+You just need to hit the arrow button.
 
-//Declaring dry and wet soil threshold values
-int const dryThreshold = 800;
-int const wetThreshold = 350;
+<alert severity='info'>**Step \#5:** Open the Arduino IDE Serial Monitor.</alert>
 
-void setup()
-{
-  Serial.begin(38400);
-  wazidev.setupLoRaWAN(devAddr, appSkey, nwkSkey);
+In the Tools menu open the serial monitor and then set the data rate to 38400 baud.
 
-  pinMode(RelayPin, OUTPUT);
-  pinMode(sensorPow, OUTPUT);
-  delay(100);
-  digitalWrite(sensorPow, HIGH);
-}
+![Humidity and temperature output](../../resources/Boards/WaziDev/media/image22.png)
 
-XLPP xlpp(120);
+You should see both temperature and humidity displayed.
 
-void loop(void)
-{
-  int soilHumidity = analogRead(sensorPin);
 
-  //Check if the soil moisture value is a number
-  if (!(isnan(soilHumidity))) {
-    if (soilHumidity > dryThreshold) { //Turn Pump ON
-      digitalWrite(RelayPin, HIGH);
-    } else if (soilHumidity <= wetThreshold) { //Turn Pump OFF
-      digitalWrite(RelayPin, LOW);
-    }
-  }
-  
-  // 1
-  // Create xlpp payload.
-  
-  xlpp.reset();
-  
-  xlpp.addRelativeHumidity(1, soilHumidity);
-  
-  // 2.
-  // Send paload with LoRaWAN.
-  serialPrintf("LoRaWAN send ... ");
-  uint8_t e = wazidev.sendLoRaWAN(xlpp.buf, xlpp.len);
-  if (e != 0)
-  {
-    serialPrintf("Err %d\n", e);
-    delay(60000);
-    return;
-  }
-  serialPrintf("OK\n");
-  
-  // 3.
-  // Receive LoRaWAN message (waiting for 6 seconds only).
-  serialPrintf("LoRa receive ... ");
-  uint8_t offs = 0;
-  long startSend = millis();
-  e = wazidev.receiveLoRaWAN(xlpp.buf, &xlpp.offset, &xlpp.len, 6000);
-  long endSend = millis();
-  if (e != 0)
-  {
-    if (e == ERR_LORA_TIMEOUT){
-      serialPrintf("nothing received\n");
-    }
-    else
-    {
-      serialPrintf("Err %d\n", e);
-    }
-    delay(60000);
-    return;
-  }
-  serialPrintf("OK\n");
-  
-  serialPrintf("Time On Air: %d ms\n", endSend-startSend);
-  serialPrintf("LoRa SNR: %d\n", wazidev.loRaSNR);
-  serialPrintf("LoRa RSSI: %d\n", wazidev.loRaRSSI);
-  serialPrintf("LoRaWAN frame size: %d\n", xlpp.offset+xlpp.len);
-  serialPrintf("LoRaWAN payload len: %d\n", xlpp.len);
-  serialPrintf("Payload: ");
-  char payload[100];
-  base64_decode(payload, xlpp.getBuffer(), xlpp.len); 
-  serialPrintf(payload);
-  serialPrintf("\n");
-  
-  delay(5000);
-}
-```
-
-At this point, all we need to do is drop the water pump in a water resevoir and attach a pipe to the outlet of the pump, to the plant.
-
-we can also setup notifications on WaziCloud, for when the relay turns ON or OFF. We can use the soil figures we used in the previous example. That is `800` for dry soil(Relay ON) and `350` for a wet soil(Relay OFF).

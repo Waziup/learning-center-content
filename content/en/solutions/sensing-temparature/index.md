@@ -6,14 +6,14 @@ architecture:
   resources:
     - id: 1
       type: waziup/dht22-temperature-humidity-sensor
-      steps: [1]
+      steps: [2]
       rot: 0
-      x: 50
-      y: 100
+      x: 20
+      y: 150
       params: {}
     - id: 2
       type: waziup/wazidev
-      steps: [1, 2, 3]
+      steps: [1, 2]
       rot: 0
       x: 380
       y: 150
@@ -23,10 +23,10 @@ architecture:
       to: 2
       color: "#99C2FF"
       # x and y are the starting point of the line
-      x: 300
-      y: 130
+      x: 200
+      y: 220
       # l is the path of the line: horiz., vertic., ...
-      l: [70]
+      l: [120]
 ---
 
 In an increasingly connected world, the need for reliable and efficient environmental monitoring systems has never been greater. Whether it's for smart homes, agricultural monitoring, industrial applications, or scientific research, understanding and controlling temperature is crucial. With the advent of IoT (Internet of Things) technologies, creating cost-effective and efficient temperature sensing solutions has become accessible to hobbyists, students, and professionals alike.
@@ -43,9 +43,11 @@ Hardware
   - **Micro USB Cable:** This will be used to connect the WaziDev board to a computer for programming and power.
   - **DHT11 Sensor:** A digital sensor that provides calibrated digital output for temperature and humidity.
 
-![WaziDev](../../resources/Boards/WaziDev/media/wazidev.png)
+![WaziDev board](../../resources/Boards/WaziDev/media/image9.png)
+![Micro USB cable](../../resources/Boards/WaziDev/media/image8.png)
+![DHT11 sensor](../../resources/Boards/WaziDev/media/image13.png)
 
-<alert type='warning'>Note that the Micro USB cable must be a "data" cable. Some cable sold on the market are just for power, and they won't work for the WaziDev.</alert>
+<alert type='warning'> **N.B:** Micro USB cable must be a "data" cable. Some cable sold on the market are just for power, and they won't work for the WaziDev.</alert>
 
 Software
   - install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
@@ -55,6 +57,6 @@ Solution Overview
 -----------------
 The goal of this project is to create a temperature sensing device that can:
 
-**Read Temperature Data:** Use the DHT11 sensor to measure the ambient temperature.
-**Process Data:** Interface the DHT11 sensor with the WaziDev board to capture the temperature data.
-**Transmit Data:** Send the captured temperature data wirelessly to a remote server or cloud platform using the LoRaWAN capabilities of the WaziDev board.
+  - **Read Temperature Data:** Use the DHT11 sensor to measure the ambient temperature.
+  - **Process Data:** Interface the DHT11 sensor with the WaziDev board to capture the temperature data.
+  - **Transmit Data:** Send the captured temperature data wirelessly to a remote server or cloud platform using the LoRaWAN capabilities of the WaziDev board.
