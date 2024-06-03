@@ -9,7 +9,7 @@ architecture:
       steps: [2]
       rot: 0
       x: 20
-      y: 300
+      y: 200
       params: {}
     - id: 2
       type: waziup/wazidev
@@ -24,7 +24,7 @@ architecture:
       color: "#99C2FF"
       # x and y are the starting point of the line
       x: 200
-      y: 220
+      y: 260
       # l is the path of the line: horiz., vertic., ...
       l: [140]
 ---
