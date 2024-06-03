@@ -9,7 +9,7 @@ architecture:
       steps: [2]
       rot: 0
       x: 20
-      y: 150
+      y: 300
       params: {}
     - id: 2
       type: waziup/wazidev
@@ -26,7 +26,7 @@ architecture:
       x: 200
       y: 220
       # l is the path of the line: horiz., vertic., ...
-      l: [120]
+      l: [140]
 ---
 
 In an increasingly connected world, the need for reliable and efficient environmental monitoring systems has never been greater. Whether it's for smart homes, agricultural monitoring, industrial applications, or scientific research, understanding and controlling temperature is crucial. With the advent of IoT (Internet of Things) technologies, creating cost-effective and efficient temperature sensing solutions has become accessible to hobbyists, students, and professionals alike.
