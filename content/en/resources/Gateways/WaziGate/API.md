@@ -3,6 +3,7 @@ id: wazigate_api_manual
 title: WaziGate Edge API
 type: spec
 rank: 3
+draft: true
 ---
 
 # HTTP REST
@@ -11,7 +12,7 @@ rank: 3
 
 As a developer, you may need to develop an application that runs on a WaziGate. The WaziGate software enables this by giving programmatic access to all the necessary information using open APIs. For instance, you can get the latest update from the sensors connected to the WaziGate.
 
-The Edge API has been documented using Swagger, API documentation tool, and it is available at http://wazigate.local/#/docs/. You can access this Web UI from a computer that is connected to the same network with a WaziGate. Alternatively, on the [WaziGate Web UI](http://wazigate.local/), you can navigate to `Help` and then `Edge API docs` to access this documentation. No internet connection is required to access this page and the APIs.
+The Edge API has been documented using Swagger, API documentation tool, and it is available at http://wazigate.local/#/docs/. You can access this Web UI from a computer that is connected to the same network with a WaziGate. Alternatively, on the [WaziGate Web UI](http://wazigate.local/), you can navigate to `Help and Feedback` and then `API documentation` to access this documentation. No internet connection is required to access this page and the APIs.
 
 ![Edge API docs](img/swagger.png)
 
@@ -106,36 +107,33 @@ This will return the full information on that particular device. Below, we can s
 {
   "actuators": [
     {
-      "created": "2023-10-30T09:58:05.756Z",
-      "id": "653f7e2d26c04728683a97c1",
+      "created": "2024-06-07T06:54:03.323Z",
+      "id": "6662ae8b68f31909078e48a1",
       "meta": {
-        "kind": "Motor",
-        "quantity": "Boolean"
+        
       },
-      "modified": "2023-10-30T12:45:23.421Z",
+      "modified": "2024-06-07T06:54:03.323Z",
       "name": "Garden pump",
       "time": null,
       "value": null
     }
   ],
-  "created": "2023-10-30T09:58:05.756Z",
-  "id": "653f7e2d26c04728683a97be",
+  "created": "2024-06-07T06:54:03.323Z",
+  "id": "6662ae8b68f31909078e489e",
   "meta": {
     "codec": "application/x-xlpp"
   },
-  "modified": "2023-10-30T09:58:05.756Z",
+  "modified": "2024-06-07T06:54:03.323Z",
   "name": "Garden monitor",
   "sensors": [
     {
-      "created": "2023-10-30T09:58:05.756Z",
-      "id": "653f7e2d26c04728683a97bf",
+      "created": "2024-06-07T06:54:03.323Z",
+      "id": "6662ae8b68f31909078e489f",
       "kind": "AirThermometer",
       "meta": {
-        "kind": "AirThermometer",
-        "quantity": "AirTemperature",
-        "unit": "DegreeCelsius"
+        
       },
-      "modified": "2023-10-30T10:00:31.271Z",
+      "modified": "2024-06-07T06:54:03.323Z",
       "name": "Garden temperature",
       "quantity": "AirTemperature",
       "time": null,
@@ -143,15 +141,15 @@ This will return the full information on that particular device. Below, we can s
       "value": null
     },
     {
-      "created": "2023-10-30T09:58:05.756Z",
-      "id": "653f7e2d26c04728683a97c0",
+      "created": "2024-06-07T06:54:03.323Z",
+      "id": "6662ae8b68f31909078e48a0",
       "kind": "HumiditySensor",
       "meta": {
+        "icon": "water",
         "kind": "HumiditySensor",
-        "quantity": "Humidity",
-        "unit": "Percent"
+        "quantity": "Humidity"
       },
-      "modified": "2023-10-30T10:00:41.4Z",
+      "modified": "2024-06-07T07:43:31.767Z",
       "name": "Garden humidity",
       "quantity": "Humidity",
       "time": null,
@@ -189,6 +187,7 @@ Similarly, sensors can also be modified. For this, we use the sensor ID and put 
 TOKEN=`curl -X POST "http://wazigate.local/auth/token" -H "Content-Type:application/json" -d '{"username":"admin","password":"loragateway"}'`
 curl -X POST "http://wazigate.local/devices/653f7e2d26c04728683a97be/sensors/653f7e2d26c04728683a97bf/name" -H  "accept:application/json" -H "Authorization:Bearer $TOKEN" -H  "Content-Type:text/plain" -d "Temperature"
 ```
+![Renamed sensor](img/wazigate_dashboard_new_device_2_sensor_renamed.png)
 
 ## Sensors and actuators management
 
@@ -210,26 +209,26 @@ curl -X POST "http://wazigate.local/devices/653f7e2d26c04728683a97be/sensors" -H
 This is an example of a reading the data of a single sensor. We use the device ID and sensor ID in the URL.
 
 ```sh
-curl -X GET "http://wazigate.local/devices/653f7e2d26c04728683a97be/sensors/653f7e2d26c04728683a97bf" -H "accept: application/json"
+curl -X GET "http://wazigate.local/devices/6662ae8b68f31909078e489e/sensors/6662ae8b68f31909078e48a0" -H "accept: application/json"
 ```
 
 This will return the data for the "Temperature" sensor that is for the device named "Home", which was created in the previous step.
 
 ```json
 {
-  "created": "2023-10-30T09:58:05.756Z",
-  "id": "653f7e2d26c04728683a97bf",
-  "kind": "AirThermometer",
+  "created": "2024-06-07T06:54:03.323Z",
+  "id": "6662ae8b68f31909078e48a0",
+  "kind": "HumiditySensor",
   "meta": {
-    "kind": "AirThermometer",
-    "quantity": "AirTemperature",
-    "unit": "DegreeCelsius"
+    "icon": "water",
+    "kind": "HumiditySensor",
+    "quantity": "Humidity"
   },
-  "modified": "2023-10-30T18:54:25.559Z",
-  "name": "Temperature",
-  "quantity": "AirTemperature",
+  "modified": "2024-06-07T07:43:31.767Z",
+  "name": "Garden humidity",
+  "quantity": "Humidity",
   "time": null,
-  "unit": "DegreeCelsius",
+  "unit": "Percent",
   "value": null
 }
 ```
@@ -361,11 +360,16 @@ The WaziGate Edge allows you to push sensor values through MQTT, and also to sub
 
 ## PUBLISH
 
+NB: If you're on windows, navigate first to the directory where it's installed, something like
+```sh
+  cd C:\Program Files\mosquitto
+```
+
 The first thing you can do is publishing a new value on an existing sensor.
 Make sure that a device ID like the example "Home" exists on the WaziGate dashboard. Then you can push a new value as shown below:
 
 ```sh
-mosquitto_pub -L "mqtt://wazigate.local/devices/653f7e2d26c04728683a97be/sensors/653f7e2d26c04728683a97bf/value" -m "{\"value\": \"20.0\"}"
+  mosquitto_pub -L "mqtt://wazigate.local/devices/6662ae8b68f31909078e489e/sensors/6662ae8b68f31909078e48a0/value" -m "{\"value\": \"20.0\"}"
 ```
 The "Home" device's "Temperature" sensor now has a new value of 20.0 .
 
@@ -378,10 +382,11 @@ The "Home" device's "Temperature" sensor now has a new value of 20.0 .
 Now, let's subscribe to the "Temperature" sensor of the "Home" device. The MQTT command for this is shown below:
 
 ```sh
-mosquitto_sub -L "mqtt://wazigate.local/devices/653f7e2d26c04728683a97be/sensors/653f7e2d26c04728683a97bf/value"
+  mosquitto_sub -L "mqtt://wazigate.local/devices/6662ae8b68f31909078e489e/sensors/6662ae8b68f31909078e48a0/value"
 ```
 
-Now, push a value say "20.2" to the sensor. Or even send data from a physical end-device to the WaziGate. You should see the value arriving in the subscription:
+Now, push a value say "20.2" to the sensor. Go to the docs and publish a value Or even send data from a physical end-device to the WaziGate. You should see the value arriving in the subscription. Then click execute
+![Add sensor value](img/wazigate_publish_sensor_value.png)
 
 ```json
 20.2

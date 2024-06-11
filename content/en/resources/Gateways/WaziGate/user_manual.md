@@ -3,6 +3,7 @@ id: wazigate_user_manual
 title: WaziGate User Manual
 type: guide
 rank: 2
+draft: true
 ---
 
 # Introduction
@@ -32,7 +33,7 @@ You need the following *hardware* to start:
 You also need the following *software*:
  
 - [Wazigate ISO image](https://downloads.waziup.io/)
-- [Balena Etcher](https://www.balena.io/etcher/)
+- [Balena Etcher](https://etcher.balena.io/)
 
 
 There are only two simple steps to assemble your WaziGate.
@@ -57,20 +58,25 @@ Be careful to align correctly the pins in the arrays.
 Flashing
 =========
 
-**Step \#1:** Download the latest version of the [Wazigate ISO image](https://downloads.waziup.io/).
+**Step \#1:** Download the latest version of the [Wazigate ISO image](https://downloads.waziup.io/). You might get a different version of the ZIP file when you're installing.
 
 ![Save Wazigate ISO image](img/image34.png)
 
-**Step \#2:** Download [Balena Etcher](https://www.balena.io/etcher/) and install it on your PC.
+**Step \#2:** Download [RasberryPi Imager](https://www.raspberrypi.com/software/) and install it on your PC.
 
-![Balena etcher](img/image10.png)
+![Rasp Imager](img/image10.png)
 
-**Step \#3:** Open the ***Balena Etcher*** tool and select the downloaded zip file.
-
+**Step \#3:** Open the Raspberry Pi imager tool.
 
 ![Select the ISO image](img/image22.png)
 
-**Step \#4:** Insert your SD card to your PC and when appear, select it in **Etcher**
+On the OS, select the Custom image option.
+
+![Select the ISO image](img/image23.png)
+![Select the ISO image](img/image24.png)
+
+**Step \#4:** Insert an SD card in your PC and then select the drive. If you have multiple SD attached to your PC, you can select from the list
+
 
 ![Select the SD card drive](img/image17.png)
 
@@ -79,7 +85,8 @@ Flashing
           
 If your laptop does not have the SD card reader, you need a USB adapter to connect your Micro SD card to your PC.
 
-**Step \#5:** Click on **Flash** to start flashing.
+
+**Step \#5:** After select click on next, then select NO on the Custom OS settings. Select yes to continue.
 
 ![Flashing...](img/image27.png)
 
@@ -143,7 +150,7 @@ Then you should see something like this.
 Please enter the default username and password and click on **Login**.
 
 For security reasons, please change the default password as soon as you can see the profile page.
-This page can be found in the "User Profile" menu.
+This page can be found in the "User Profile" menu. You can also change your name here.
 
 ![Password change](img/password_change.png)
 
@@ -152,7 +159,7 @@ This page can be found in the "User Profile" menu.
 Connecting to the Internet
 --------------------------
 
-**Step \#1:** Select menu Settings/Wifi.
+**Step \#1:** Select menu Settings/Networking.
 
 A list of available Wifi networks will show up:
 ![Wifi list](img/wifi_list.png)
@@ -177,17 +184,16 @@ Registration with the Cloud
 
 A Waziup account enables you to receive all your sensor data in your dashboard and manage your Wazigate remotely.
 
-**Step \#1:** Clik on the **Sync** menu.
+**Step \#1:** Clik on the **Settings** menu, then select **Networking** option.
 
 ![Sync page](img/sync.png)
 
-**Step \#2:** Enter you Cloud Username and Password and click Save.
+**Step \#2:** On the WaziCloud section. Enter you Cloud Username and Password and click Save.
 
 
 You need to enter your CLOUD login/password, collected on https://dashboard.waziup.io/. 
 Do not enter your gateway password here.
 
-![Cloud login save](img/sync_save.png)
 
 **Step \#3:** Flip the Active Sync ON.
 
@@ -223,7 +229,7 @@ Go to the [Waziup](https://waziup.io) website.
 
 ![Waziup.io website](img/image35.png)
 
-**Step \#2:** Click on "Go to Dashboard" and enter your credentials and Login.
+**Step \#2:** Click on "Go to Platforms", then select the "Wazicloud Dashboard" and enter your credentials and Login.
 
 
 ![Register a user](img/image37.png)
@@ -239,14 +245,14 @@ If everything went well so far, you should see your gateway in the list.
 
 Your gateway details will open.
 
-**Step \#5:** Then click on the "Remote access" button.
+**Step \#5:** Then click on the "Remote access" button. Here, make sure your Gateway is powered and connected to the internet, otherwise it will not work
 
 
 ![Gateway details](img/image25.png)
 
 
 **Step \#5:** Logging into your Wazigate.
-
+You can verify that it is your wazigate by checking the ID on top like. ``remote.waziup.io/<ID_OF_GATEWAY>``, Where the ID_OF_GATEWAY is your gateways' ID.
 
 ![Remote login](img/remote_login.png)
 
@@ -271,6 +277,31 @@ This sketch uses the following technologies and features:
 
 LoRaWAN is a low-power wireless networking protocol with very long range. Sending and receiving data is encrypted, thus requiring you to generate (random) keys for your devices. The Wazidev has a LoRaWAN-chip and a LoRaWAN antenna build in. 
 
+
+Sensing
+=======
+
+Once flashed, open the WaziGate UI on http://wazigate.local and first select the "Devices" menu entry.
+Click on the "NEW DEVICE" button at the top right:
+
+![Add device](img/add_device.png)
+
+Enter a device name of your choice, then for this example,  select the **``Wazidev Board``** Option and click "NEXT":
+
+![Device name](img/device_name.png)
+
+On the next tab, select hte Codec type as "XLPP (Waziup Extended Low Power Payload)", then turn on the switch for making LoRAWAN.
+![Device name2](img/device_name_2.png)
+
+Here, you can autogenerate the LoRAWAN options, or you can paste the once you have, in our case, let us autogenerate, click on the ``+`` icon
+next to each element. The "DevEUI" is generated from the Device Address and you will notice once the device address changes the DevEUI also changes.
+Once you are done, click on Create.
+![Device name](img/device_name_3.png)
+
+Now we go back to our LoraWAN Test. Once your device is created, click on it to enter that device, the Go to the Device's settings.
+![Device Settings](img/device_settings.png)
+You can see 3 values: `DevAddr` (Device Address), `AppSkey` (Application Session Key), `NetSkey` (Network Session Key). They need to be copied in our Arduino code to be recognized.
+
 The code looks like this:
 
 ![sketch_keys](img/sketch_keys.png)
@@ -281,32 +312,14 @@ You can see 3 values: `DevAddr` (Device Address), `AppSkey` (Application Session
 
 ⚠️ `AppSkey` and `NetSkey` make your communication secure. Although both keys can be the same, you should select new random keys for each device. Use the Wazigate dashboard to generate new random keys.
 
-Now you can flash this sketch on your Wazidev device.
+<!-- Now you can flash this sketch on your Wazidev device. -->
 
 Don't close the Arduino IDE yet, you will need to copy these 3 values to the Wazigate dashboard next.
 
-Sensing
-=======
+<!-- Once the device is converted, fill in the three keys, so they are identical with the keys in you sketch. -->
+<!-- Once the keys filled in, save. -->
 
-Once flashed, open the WaziGate UI on http://wazigate.local and first select the "Dashboard" menu entry.
-Click on the "Plus" icon at the bottom right:
-
-![Add device](img/add_device.png)
-
-Enter a device name of your choice:
-
-![Device name](img/device_name.png)
-
-Once your device is created, click on it to enter that device.
-We now need to tell WaziGate that this device is LoRaWAN-able.
-Then click on the "three dots" at the top right of the screen, and select "Make LoRaWAN".
-
-![Make LoRaWAN](img/make_lorawan.png)
-
-Once the device is converted, fill in the three keys, so they are identical with the keys in you sketch.
-Once the keys filled in, save.
-
-![Lorawan Keys](img/wazigate_lorawan_keys.png)
+<!-- ![Lorawan Keys](img/wazigate_lorawan_keys.png) -->
 
 **Attention:** You need to make 100% sure that the keys are equal. In particular, check that `AppSkey` and `NwkSkey` are not swapped.
 
@@ -321,7 +334,7 @@ Go back to the "Dashboard" main page.
 If you device sketch is running, you should already see the value there! Congratulations!
 
 Let's now open the [Cloud dashboard](http://dashboard.waziup.io) and look for you device.
-In the "Devices" menu entry, search for you device using the filters.
+In the "Devices" menu entry, Select your gateway then select the device we created. You should see its there, with the sensor reading.
 
 ![Cloud Device](img/cloud_device.png)
 
@@ -337,14 +350,11 @@ Actuation
 Actuation with WaziGate is very easy.
 On the WaziDev side, we can keep the same sketch.
 
-First, come back on the device that wen added, click on the bottom right "plus" sign and click on "add actuator":
+First, come back on the device that we added, click on the top right button called "New Interface" and select the actuator  on select options:
+
 ![Add actuator](img/add_actuator.png)
 
-Select a name for your new actuator:
-
-![Actuator name](img/actuator_name.png)
-
-Your actuator is added, it has no value yet:
+Your actuator is added, You can see it here:
 
 ![Empty actuator](img/actuator_empty.png)
 
