@@ -23,7 +23,8 @@ The goals of INTEL-IRRIS include:
 3. **Adoption Facilitation:** Convert raw data into actionable information for better irrigation decisions.
 4. **Sustained Production:** Enhance long-term production and income for smallholders and boost local innovation.
 
-![Intel-Irris](img/Intel-IRRIS.png)
+
+![INTEL-IRRIS](img/Intel_Irris.png)
 
 INTEL-IRRIS Objectives
 ================================================================
@@ -50,7 +51,7 @@ During the course of the Intel-IrriS project, we ensured the availability of up 
 
 INTEL-IRRIS also set up an [IT online course](https://intel-irris.eu/intel-irris-it-iot-courses) on the project web site to present in a synthetic manner all the resources/tutorials on the INTEL-IRRIS hardware platforms. In addition, it includes additional tutorials to present the Internet-of-Thing ecosystem as well as the smart agriculture/farming concept to make the whole IT courses consistent and allowing tech enthusiasts to increase their technical knowledge in a step-by-step approach. But again, the contents are not focused on Intel-IrriS specificities only, and does not permit a trainee to become independant from the project at its end.
 
-![Dissemination objective](<img/Dissemation objectives.png>)
+![Dissemination Objectives](img/Dissemination_objective.png)
 
 This program summarizes all the material (currently on the device only) with a focus on the very last version of the material at the end of the project. It tends to permit the future reader / learnee to be as much as possible autonomous from the current project members.
 
@@ -58,7 +59,7 @@ This program summarizes all the material (currently on the device only) with a f
 Intel-IrriS Structure
 =====================
 
-
+![Intel-IrriS Structure](img/structure.png)
 
 The core technical structure of Intel-IrriS includes the development of a Plug-&-Sense smart irrigation system. This system integrates a low-cost sensor platform with the versatile IoT gateway into the INTEL-IRRIS starter-kit. The IoT gateway, called INTEL-IRRIS WaziGate, is derived from the generic WaziGate framework to provide an out-of-the-box autonomous system. A user-friendly interface is included to simplify the deployment process for smallholders.
 
