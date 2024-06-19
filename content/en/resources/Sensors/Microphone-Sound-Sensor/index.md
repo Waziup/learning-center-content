@@ -1,5 +1,5 @@
 ---
-id: microphone_sens_small
+id: microphone_sens
 title: Microphone Sound Sensor
 type: sensor
 desc: This sensor emits a signal if the microphone of the sensor detects a noise. The sensitivity of the sensor can be adjusted by means of a controller.
