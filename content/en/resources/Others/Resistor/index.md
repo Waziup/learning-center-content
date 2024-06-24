@@ -13,10 +13,9 @@ tags:
 
 Resistors are passive electronic components that impede the flow of electric current. They are fundamental components in electronic circuits, used to control the amount of current flowing through a circuit, adjust signal levels, terminate transmission lines, and much more. Resistors come in various types, each with unique characteristics suited for specific applications.
 
-## Colour Coding
 
 
-## Applications 
+# Applications 
 
 Resistors find applications in a wide range of electronic circuits and devices, including but not limited to:
 
