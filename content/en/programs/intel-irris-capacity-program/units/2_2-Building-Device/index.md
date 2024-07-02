@@ -46,6 +46,8 @@ A complete bunch of detailed material has been made available all along the proj
 
 [comment]: # "=>6:20"
 
+
+
 ## 1. Drill the case for the cable gland, the switch, the antenna, (the solar panel);  
 The following dimensions are given for an IP65 box which dimension is 115 x 65 x 40&thinsp;mm.
 

@@ -54,73 +54,87 @@ Modules Details
 ===============
 The 7 units of learning have the following structure:
 ### Introduction
-1. Intro
-   1. Intel-IrriS why/what for?
-   2. This program what for?
-   3. Intel-IrriS structure
-### Section One - Sensing
-2. Intel-IrriS Device
-   1. Get the Device's components
-      1. Order the PCB
-      2. Choose the radio chipsets and antennas
-      3. Choose the sensors
-      4. Order all the parts
-   2. Build the Device
-   3. Program the Device
-   4. Debug the Device
-   5. Learn more info
-      1. PCB variants
-      2. Power consumption studies
-   6. Device's Quizz
+#### Unit 1 : Introduction
 
------------------------------
-TODO:
+   - Why INTEL-IRRIS?
+   - INTEL-IRRIS Objectives
+   - Dissemination Objectives
+   - Intel-IrriS Structure
+
+### Section One - Sensing
+#### Unit 2 : Intel-IrriS Device Components
+   - 
+#### Unit 3 : Building Device
+#### Unit 4 : Programing and Debugging Device with IRD PCB
+#### Unit 5 : Programing and Debugging with Wazisense
+#### Unit 6 : Quiz-1
+
+- Intel-IrriS Device
+   - Get the Device's components
+      - Order the PCB
+      - Choose the radio chipsets and antennas
+      - Choose the sensors
+      - Order all the parts
+   - Build the Device
+   - Program the Device
+   - Debug the Device
+   - Learn more info
+      - PCB variants
+      - Power consumption studies
+   - Device's Quizz
+
+
 
 ### Section Two - Data gathering
-3. About the Gateway
-   1. Generic wazigate
-   2. Intel-IrriS specific soft and hard
-      1. IIWA
-      2. Home assistant
-      3. OLED
-      4. LoRa Chirpstack server
-   3. Set it up
-   	  1. Intel-IrriS image
-   	  2. Frequency setting
-   	  3. Sync to Wazicloud waziup.io
-4. Install and use in the field
-   1. Starter Kit
-   2. Gateway boot options/preparation/autoboot
-   3. Plug the sensor in the field
-   4. A Use case to exemplify
-5. How to collect and analyze the data
-   1. Collect
-   2. Analyze
-   3. AI - prediction tools
+#### Unit 7 : Intel-IrriS Gateway
+#### Unit 8 : Intel-IrriS Field
+#### Unit 9 : Intel-IrriS Data
+#### Unit 10 : Intel-IrriS Maintain
+#### Unit 11 : Intel-IrriS Go-Further
+
+   - Generic wazigate
+   - Intel-IrriS specific soft and hard
+      - IIWA
+      - Home assistant
+      - OLED
+      - LoRa Chirpstack server
+   - Set it up
+   	  - Intel-IrriS image
+   	  - Frequency setting
+   	  - Sync to Wazicloud waziup.io
+- Install and use in the field
+   - Starter Kit
+   - Gateway boot options/preparation/autoboot
+   - Plug the sensor in the field
+   - A Use case to exemplify
+- How to collect and analyze the data
+   - Collect
+   - Analyze
+   - AI - prediction tools
 ### Section Three - Follow up
-6. Maintainance, piloting and feedback from existing deployments
-   1. Feedback support
-   2. Farmer training program
-   3. This program in question
-7. Go further/beside
-   1. IoT
-      1. Intro to Iot
-      2. Arduino
-   2. Irrigation
-   3. Design choices
-      1. Choice of sensors
-      2. Choice of hardware parts
-      3. Underlying wireless
-      4. Choice of antennas
-   4. Water-soil-plant interraction
-   5. Smart agriculture
-   6. calibration
-   7. Experience in controlled environments
-   8. Data Science
-   9. Other
-      1. Trends IOT and future research
-      2. Electronics
-      3. Web programming
+- Maintainance, piloting and feedback from existing deployments
+   - Feedback support
+   - Farmer training program
+   - This program in question
+- Go further/beside
+   - IoT
+      - Intro to Iot
+      - Arduino
+   - Irrigation
+   - Design choices
+      - Choice of sensors
+      - Choice of hardware parts
+      - Underlying wireless
+      - Choice of antennas
+   - Water-soil-plant interraction
+   - Smart agriculture
+   - calibration
+   - Experience in controlled environments
+   - Data Science
+   - Other
+      - Trends IOT and future research
+      - Electronics
+      - Web programming
       
 
 
