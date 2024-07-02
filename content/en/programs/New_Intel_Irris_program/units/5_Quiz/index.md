@@ -1,5 +1,5 @@
 ---
-id: intel-irris-device-quiz
+id: new_intel-irris-device-quiz
 title: Quiz-1
 description: "Let's test the understanding of the devices so far:"
 difficulty: beginner

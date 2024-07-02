@@ -1,6 +1,6 @@
 ---
-id: intel-irris_device_programing_debugging
-title: Programing and Debugging Device with IRD PCB
+id: new_intel-irris_data_gathering
+title: Data Gathering
 description: In this section you will learn how to write code for the device and will learn how to do the debugging.
 difficulty: intermediary
 delay_start: 0w
