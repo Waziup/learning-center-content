@@ -1,6 +1,6 @@
 ---
 id: new_intel-irris_program_feedback
-title: Prohgram Feedback
+title: Program Feedback
 description: In this course, we will introduce the gateways of Intel-IrriS and how to set them up and use them.
 difficulty: intermediary
 delay_start: 1w

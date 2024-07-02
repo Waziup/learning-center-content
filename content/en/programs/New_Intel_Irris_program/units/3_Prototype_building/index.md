@@ -6,7 +6,7 @@ desc: |
 duration: 1w
 delay_start: 0w
 solutions:
-  - id: waziup/Intel Irris
+  - id: IntelIrris_solution
     roles:
       - editor
 ---
