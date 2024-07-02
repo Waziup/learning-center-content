@@ -1,6 +1,6 @@
 ---
-id: intel_irris_program_new
-name: IoT irrigation for small farms
+id: new_intel_irris_program
+name: New IoT irrigation for small farms
 desc: Learn how to take benefit of the PRIMA Intel-IrriS resource and experience in your smart irrigation solution!
 from: 2024-05-01
 to: 2024-06-30
@@ -26,115 +26,15 @@ The objectives of the program are:
 
 Units
 =====
-We have planed 7 units of learning distributed into three main sections, up to now the two first are available:
 
-* Introduction
+**Unit 1:** Introduction
 
-  1. Introduction
+**Unit 2:** Introductory Modules
 
-* Section One - Sensing
+**Unit 3:** Prototype Building
 
-  2. Intel-IrriS Device
+**Unit 4:** Data Collection
 
------------------------------
-TODO:
+**Unit 5:** Quiz
 
-* Section Two - Data gathering
-
-  3. About the Gateway
-  4. Install and use in the field
-  5. How to collect and analyze the data
-
-* Section Three - Follow up
-
-  6. Maintainance, piloting and feedback from existing deployments
-  7. Go further/beside
-
-Modules Details 
-===============
-The 7 units of learning have the following structure:
-### Introduction
-#### Unit 1 : Introduction
-
-   - Why INTEL-IRRIS?
-   - INTEL-IRRIS Objectives
-   - Dissemination Objectives
-   - Intel-IrriS Structure
-
-### Section One - Sensing
-#### Unit 2 : Intel-IrriS Device Components
-   - 
-#### Unit 3 : Building Device
-#### Unit 4 : Programing and Debugging Device with IRD PCB
-#### Unit 5 : Programing and Debugging with Wazisense
-#### Unit 6 : Quiz-1
-
-- Intel-IrriS Device
-   - Get the Device's components
-      - Order the PCB
-      - Choose the radio chipsets and antennas
-      - Choose the sensors
-      - Order all the parts
-   - Build the Device
-   - Program the Device
-   - Debug the Device
-   - Learn more info
-      - PCB variants
-      - Power consumption studies
-   - Device's Quizz
-
-
-
-### Section Two - Data gathering
-#### Unit 7 : Intel-IrriS Gateway
-#### Unit 8 : Intel-IrriS Field
-#### Unit 9 : Intel-IrriS Data
-#### Unit 10 : Intel-IrriS Maintain
-#### Unit 11 : Intel-IrriS Go-Further
-
-   - Generic wazigate
-   - Intel-IrriS specific soft and hard
-      - IIWA
-      - Home assistant
-      - OLED
-      - LoRa Chirpstack server
-   - Set it up
-   	  - Intel-IrriS image
-   	  - Frequency setting
-   	  - Sync to Wazicloud waziup.io
-- Install and use in the field
-   - Starter Kit
-   - Gateway boot options/preparation/autoboot
-   - Plug the sensor in the field
-   - A Use case to exemplify
-- How to collect and analyze the data
-   - Collect
-   - Analyze
-   - AI - prediction tools
-### Section Three - Follow up
-- Maintainance, piloting and feedback from existing deployments
-   - Feedback support
-   - Farmer training program
-   - This program in question
-- Go further/beside
-   - IoT
-      - Intro to Iot
-      - Arduino
-   - Irrigation
-   - Design choices
-      - Choice of sensors
-      - Choice of hardware parts
-      - Underlying wireless
-      - Choice of antennas
-   - Water-soil-plant interraction
-   - Smart agriculture
-   - calibration
-   - Experience in controlled environments
-   - Data Science
-   - Other
-      - Trends IOT and future research
-      - Electronics
-      - Web programming
-      
-
-
+**Unit 6:** Program Feedback
