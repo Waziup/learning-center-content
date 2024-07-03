@@ -61,7 +61,6 @@ To follow this user manual and complete this solution the first thing you need t
 Hardware
 - Microcontroller
   - IRD PCB v4.1
-  - Wazisense
   - Arduino ProMini, 3.3 V 8 MHz with 1 6-pin 90° and 2 12-pin male headers
 
 - Sensors
