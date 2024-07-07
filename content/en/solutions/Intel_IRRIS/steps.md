@@ -167,3 +167,21 @@ In that case, the sleep time is reduced to 1 minute (this can be modified) to ea
 
 ## Other bugs
 If you assume an issue may come from the batteries, you can have both battery powering and a serial connection via the FTDI32. From the 6 pins of the Arduino header, connect 5: **disconnect the VCC pin**. You can then analyze the Serial trace. 
+
+
+
+
+Step #4: Setting up the Gateway
+============================================
+
+After building, programming and deploying the intel-IRRIS device you need to set up the gateway to prform data transmission.
+
+Follow the instructions of the [slides](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials/Intel-Irris-gateway-outdoor.pdf)
+and the following tutorial. 
+
+<youtube>j-1Nk0tv0xM</youtube>
+
+<!-- [![The INTEL-IRRIS soil sensor device & WaziGate framework for intelligent irrigation in-the-box](https://www.youtube.com/watch?v=)] -->
+
+
+
