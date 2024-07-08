@@ -59,7 +59,7 @@ This program summarizes all the material (currently on the device only) with a f
 Intel-IrriS Structure
 =====================
 
-![Intel-IrriS Structure](img/structure.png)
+![Intel-IrriS Structure](<img/Intel-IRRIS infographic.svg>)
 
 The core technical structure of Intel-IrriS includes the development of a Plug-&-Sense smart irrigation system. This system integrates a low-cost sensor platform with the versatile IoT gateway into the INTEL-IRRIS starter-kit. The IoT gateway, called INTEL-IRRIS WaziGate, is derived from the generic WaziGate framework to provide an out-of-the-box autonomous system. A user-friendly interface is included to simplify the deployment process for smallholders.
 
