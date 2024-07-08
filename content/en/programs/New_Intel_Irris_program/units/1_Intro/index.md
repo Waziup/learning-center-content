@@ -29,8 +29,8 @@ The goals of INTEL-IRRIS include:
 INTEL-IRRIS Objectives
 ================================================================
 
-![INTEL-IRRIS Objectives](img/objectives.png)
 
+![INTEL-IRRIS Objectives](img/objectives.png)
 
 INTEL-IRRIS develops an open-source, generic framework that local actors can improve and maintain, fostering the local ICT ecosystem. This approach ensures higher interoperability compared to proprietary solutions. Competitions and challenges will be organized to raise awareness and engage young entrepreneurs. Central to INTEL-IRRIS is the design and implementation of a low-cost sensing platform integrated into the INTEL-IRRIS starter-kit.
 
@@ -53,20 +53,27 @@ INTEL-IRRIS also set up an [IT online course](https://intel-irris.eu/intel-irris
 
 ![Dissemination Objectives](img/Dissemination_objective.png)
 
+
+
 This program summarizes all the material (currently on the device only) with a focus on the very last version of the material at the end of the project. It tends to permit the future reader / learnee to be as much as possible autonomous from the current project members.
 
 
 Intel-IrriS Structure
 =====================
 
-![Intel-IrriS Structure](<img/Intel-IRRIS infographic.svg>)
+![Intel-IrriS Structure](img/structure.png)
+
 
 The core technical structure of Intel-IrriS includes the development of a Plug-&-Sense smart irrigation system. This system integrates a low-cost sensor platform with the versatile IoT gateway into the INTEL-IRRIS starter-kit. The IoT gateway, called INTEL-IRRIS WaziGate, is derived from the generic WaziGate framework to provide an out-of-the-box autonomous system. A user-friendly interface is included to simplify the deployment process for smallholders.
 
-So basically, you need to go to:
 
-1. Chapter 2 to get all the info on the INTEL-IRRIS Device;
-2. Chapter 3 to get more info on the WaziGate.
+Methodology
+====================
+Intel-IrriS proposes the low-cost sensor design concept where a set of environmental sensors for irrigation control (e.g. soil moisture/ conductivity/ tensiometry, soil & surface temperature, sun exposure, …) will be designed & built from off-the-shelves low-cost physical sensors following an open design approach. The smart control system (i.e. the gateway) will also follow the low-cost approach, taking advantage of powerful embedded computer boards such as the well-known RaspberryPi which costs less than 40€. Such embedded computer boards will be used as a versatile and smart gateway to receive data from low-cost sensor devices – using state-of-the-art long-range LPWAN radio technologies such as LoRa – and to host the control system as well as all the software intelligence that will be developed: Decision Support System (DSS), Artificial Intelligence (AI), user/visual interface, database, … enabling the “in-the-box” concept where all the components to install, set up and start the entire system are already in place, without any mandatory Internet or remote cloud connectivity. Finally, the whole system can be integrated into existing irrigation techniques/infrastructures where available water that can come from several sources (ground water, river, water harvesting, …). This approach along with the “in-a-box” concept will maximize adoption by smallholders.
+
+![sensor-gateway](img/methodology-sensor-gateway.png)
+
+
 
 For more specific information, you can explore the [public presentation slides](github/PRIMA-Intel-IrriS/Tutorials/Intel-Irris-public-presentation-starter-kit-en.pdf) and additional resources on [objectives](https://intel-irris.eu/objectives), [methodology](https://intel-irris.eu/methodology), [consortium](https://intel-irris.eu/consortium), and [pilots](https://intel-irris.eu/pilots).
 

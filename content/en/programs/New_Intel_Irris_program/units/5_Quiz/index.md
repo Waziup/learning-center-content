@@ -1,6 +1,6 @@
 ---
 id: new_intel-irris-device-quiz
-title: Quiz-1
+title: Quiz
 description: "Let's test the understanding of the devices so far:"
 difficulty: beginner
 delay_start: 0w
