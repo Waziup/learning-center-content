@@ -129,6 +129,100 @@ should become for instance:\
 
 [comment]: # "unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xAA};"
 [comment]: # "unsigned char DevAddr[4] = {0x26, 0x01, 0x1D, 0xB1};"
+
+
+### Compile
+
+
+In the IDE, the only thing you, the user, need to do, is to press the `Verify/Compile` (&#x2713;) button. 
+If the compilation goes as expected, the IDE notificates a `Done compiling`. Otherwise, some error messages appear (in red), that should help resolving the (most commonly programming) issues.
+
+
+
+In command-line, use the following command:\
+`.../Arduino$ arduino-cli compile Intelirris_Soil_Sensor
+`
+
+The program summarizes the libraries that have been used for the compilation and their version numbers, thus allowing you to check that your Arduino software setup acts as expected.
+
+![Compile the Arduino code](media/arduino-cli_compile.png)
+
+
+### Start preparing your Arduino
+**Solder** the 6-pin 90° header over the top side of the Arduino. At this point, you don't need to solder the two side headers yet, we are going to check that the Arduino behaves correctly.
+
+Carefully **remove** the power LED and the voltage regulator to make the Arduino ultra-low-power.
+
+![Remove LED and Regulator Arduino](media/Remove_LED_Regulator_Arduino.png)
+
+### Check your Arduino
+In order to check that your Arduino does not have any hardware issue, we recommend to try uploading the program on it using the FTDI32, and check its response on the serial port. If the device acts normally, then most of the possible hardware issues can be discarded.
+
+
+### Upload
+**Connect** the Arduino with the FTDI32. **Check** that both VCC pins are connected (there can be a mismatch in the header orientation).
+
+**Plug** the FTDI32 to your laptop's USB interface. The Power LED of the FTDI32 lights up.
+
+In the IDE, check that a new ungreyed option has appeared in the `Tools>Port` menu: `COM1`, `/dev/ttyUSB0` are some examples. **Select** the new option. **Check** that the Processor and Board settings have not been modified.
+
+Any issue with this step ? => **Check** the OS-specific recommendations [here](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all). For recent Ubuntu versions, the package `brltty` seems to prevent the use of the serial port for other applications. You could remove it using `sudo apt remove brltty`.
+
+In the IDE, simply **press** the Upload button (=>). The FTDI32 lights start blinking. The IDE will indicate the correct finalization of the Upload.
+
+
+In command-line, check which Serial Port the Arduino is connected to using the following command:\
+`.../Arduino$ arduino-cli board list`
+
+Correspondingly, upload adapting the following command:\
+`.../Arduino$ arduino-cli upload -p /dev/ttyUSB0 Intelirris_Soil_Sensor`
+
+
+
+### Check the Serial ouput
+In the IDE, just **open** the Serial Monitor by clicking its button on the top right corner.
+The Arduino is set to 38400 baud.
+
+
+In command-line, you could use Tio like this and save the serial logs to a text file:\
+`tio -b 38400 -l --log-file /home/guigui/temp_Arduino.log --timestamp --timestamp-format iso8601 /dev/ttyUSB0`
+
+
+
+![Check Serial Response](media/arduino_serial_check.png)
+
+If you see something similar, then that means your Arduino works and communicates. No device is responding, because the Arduino is not mounted. We will now connect it to the PCB. 
+
+### Finish preparing your Arduino
+**Solder** the two 12-pin side headers over the bottom side of the Arduino. **Solder** also the 3-pin header there on pins GND, A6, A7, (mandatory for solar devices) and the 2-pin header on A4, A5. Use a breadboard as reference to be sure soldering such that the Arduino can be encased into the PCB's female headers.
+
+![Arduino solder headers](media/arduino_solder_headers.png#width=768)
+
+
+
+
+### Check your Device
+
+Before you plug the Arduino onto the PCB, be **careful**:
+- don't overpower your device using at the same time both the battery (switch on) and the USB (FTDI32 on);
+- Never transmit without the antenna, you risk damaging the radio chipset.
+
+You can read complementary info in the [PCBv4-PCBA.pdf](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Tutorials//Intel-Irris-IOT-platform-PCBv4-PCBA.pdf) slides 48-61.
+
+**Check** as previously the serial output (switch off or batteries removed from their holder). You should be able to see a value for each sensor of your device. 
+
+`Sending \!WM1/3276.00/CB1/255.00/WM2/3276.00/CB2/255.00/ST/19.87`
+
+`switch to power saving mode`
+
+If you see these messages, your device is ready. **Close** the Serial Monitor and thus the Serial connection, remove the FTDI32, place the batteries in the holder, and switch on your device.
+
+Normally, you should witness the radio transmission: indeed, during the transmission (around 1.3 seconds at 868&thinsp;MHz) the transmission LED is ON. 
+
+Your device is ready to measure and send data every approximate hour, and sleep in the meantime to preserve batteries. 
+
+
+
 	
 
 Step #3: Debugging the Device
