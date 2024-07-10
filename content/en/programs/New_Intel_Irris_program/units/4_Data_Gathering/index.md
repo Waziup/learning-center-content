@@ -18,5 +18,11 @@ courses:
 To complete this unit you need to follow the three steps below. But first you need to complete the Wazilab courses to understand the data collection and analysis process 
 
 1. Collect the data
+   
+   Get help from the following links:
+   - [Gateway-scripts-data-extraction](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Gateway/scripts/data-extraction/README.md)
+   - [Gateway-sensor-backup](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Gateway/sensor-backup/README.md)
 2. Analyze the data and
+   Get help from the following link:
+   - [Datasets-plot-scripts](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Datasets/plot_scripts/README.md)
 3. AI prediction tools

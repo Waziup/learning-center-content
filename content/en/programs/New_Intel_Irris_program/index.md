@@ -38,3 +38,16 @@ Units
 **Unit 5:** Quiz
 
 **Unit 6:** Program Feedback
+
+Become Job Ready
+================================
+
+![certificate](img/ear-certif.png)
+
+
+
+## Timeline
+
+This is the timeline of the program:
+
+![timeline](img/timeline.png)
