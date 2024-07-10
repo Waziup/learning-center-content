@@ -49,7 +49,7 @@ Advanced Irrigation Scheduling Techniques demonstrates additional options, inclu
 <!-- [![UNL CropWatch – Part 4 How to Schedule Irrigations with Soil Water Data: Advanced Irrigation Scheduling](https://www.youtube.com/watch?v=)] -->
 
 
-Now, if these makes you more intersted and you want to go in depth of the agiricultural courses, then follow the link [intel-irris-agri-courses](https://intel-irris.eu/intel-irris-agri-courses). 
+Now, if these makes you more interested and you want to go in depth of the agiricultural courses, then follow the link [intel-irris-agri-courses](https://intel-irris.eu/intel-irris-agri-courses). 
 
 
 # IOT Courses
