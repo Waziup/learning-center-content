@@ -1,5 +1,5 @@
 ---
-id: intel-irris_prog_event
+id: new_intel-irris_prog_event
 name: Start of the program
 desc: Start of the intel-irris program
 delay_start: 0w
