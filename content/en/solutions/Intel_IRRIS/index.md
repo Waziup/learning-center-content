@@ -6,46 +6,37 @@ architecture:
   resources:
     - id: 1
       type: waziup/digital-temperature-sensor
-      steps: [1]
+      steps: [1, 2, 3, 4,5]
       rot: 0
       x: 250
       y: 180
       params: {}
     - id: 2
       type: waziup/capacitive-soil-moisture-sensor-v1-2
-      steps: [1, 2, 3]
-      rot: 90
+      steps: [1, 2, 3, 4,5]
+      rot: 90 degrees
       x: 300
       y: 45
       params: {}
     - id: 3 
       type: waziup/watermark-sensor
-      steps: [2]
+      steps: [1, 2, 3, 4,5]
       rot: 0
       x: 60
       y: 75
       params: {}
     - id: 4
       type: waziup/arduino-pro-mini
-      steps: [2, 3, 4]
+      steps: [1, 2, 3, 4,5]
       rot: 0
       x: 300
-      y: 70
-  lines:
-    - from: 3
-      to: 2
-      color: "#99C2FF"
-      # x and y are the starting point of the line
+      y: 230
+    - id: 5
+      type: waziup/ird-pcb-v4-1
+      steps: [1, 2, 3, 4,5]
+      rot: 0
       x: 300
-      y: 132
-      # l is the path of the line: horiz., vertic., ...
-      l: [270]
-    - from: 1
-      to: 2
-      color: "#99C2FF"
-      x: 495
-      y: 307
-      l: [75]
+      y: 150
 ---
 
 Overview
