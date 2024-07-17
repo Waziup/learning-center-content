@@ -8,7 +8,7 @@ architecture:
       type: waziup/digital-temperature-sensor
       steps: [1]
       rot: 0
-      x: 360
+      x: 210
       y: 225
       params: {}
     - id: 2

@@ -39,7 +39,7 @@ Deliverable D2.2a, D2.2b, D2.2c describes the INTEL-IRRIS starter-kit for smart 
    - [Gateway-scripts-data-extraction](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Gateway/scripts/data-extraction/README.md)
    - [Gateway-sensor-backup](https://github.com/CongducPham/PRIMA-Intel-IrriS/blob/main/Gateway/sensor-backup/README.md)
 
-<alert type='success'><b>Task 2:</b> Perform data data collection and extract the datasets in JSON and CSV file</alert>
+<alert type='success'><b>Task 2:</b> Perform data collection and extract the datasets in JSON and CSV file</alert>
 
 Data Analysis
 ----------------------------------------------------------------
