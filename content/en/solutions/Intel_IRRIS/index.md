@@ -98,6 +98,10 @@ Hardware
   - A drill for the plastic casing, with 7 mm and 13 mm bits for metal, and a step bit could ease
   - A flat cutter, a wire stripper/cutter, a needle-nose plier, etc
 
+
+![components
+](media/components.png)
+
 Software
   - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
   - Download the [Arduino folder](https://github.com/CongducPham/PRIMA-Intel-IrriS/tree/main/Arduino) from PRIMA-Intel-Irris

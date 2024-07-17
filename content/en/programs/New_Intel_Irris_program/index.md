@@ -39,10 +39,6 @@ Units
 
 **Unit 6:** Program Feedback
 
-Become Job Ready
-================================
-
-![certificate](img/ear-certif.png)
 
 
 
@@ -51,3 +47,8 @@ Become Job Ready
 This is the timeline of the program:
 
 ![timeline](img/timeline.png)
+
+Earn certificate
+================================
+
+![certificate](img/ear-certif.png)
