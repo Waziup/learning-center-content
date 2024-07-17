@@ -8,14 +8,14 @@ architecture:
       type: waziup/digital-temperature-sensor
       steps: [1]
       rot: 0
-      x: 210
-      y: 225
+      x: 250
+      y: 180
       params: {}
     - id: 2
-      type: waziup/waziact
+      type: waziup/capacitive-soil-moisture-sensor-v1-2
       steps: [1, 2, 3]
-      rot: 0
-      x: 570
+      rot: 90
+      x: 300
       y: 45
       params: {}
     - id: 3 
@@ -25,6 +25,12 @@ architecture:
       x: 60
       y: 75
       params: {}
+    - id: 4
+      type: waziup/arduino-pro-mini
+      steps: [2, 3, 4]
+      rot: 0
+      x: 300
+      y: 70
   lines:
     - from: 3
       to: 2
