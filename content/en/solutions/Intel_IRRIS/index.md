@@ -5,7 +5,7 @@ desc: This solution is part of the INTEL Irris project
 architecture:
   resources:
     - id: 1
-      type: waziup/soil-moisture-sensor
+      type: waziup/digital-temperature-sensor
       steps: [1]
       rot: 0
       x: 360
@@ -19,7 +19,7 @@ architecture:
       y: 45
       params: {}
     - id: 3 
-      type: waziup/water-pump
+      type: waziup/watermark-sensor
       steps: [2]
       rot: 0
       x: 60

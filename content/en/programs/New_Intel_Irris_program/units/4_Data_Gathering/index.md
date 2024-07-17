@@ -20,7 +20,7 @@ As your IoT prototype get more and more advanced, you need to worry about the da
 
 The first two course will introduce you to two of waziup technologies. The third course will give you the fundamentals of AI. We then covers two of the main fields of AI: Machine Learning and Computer Vision. The last two courses are more oriented to data analysis than pure AI: data visualization is extremely important to extract insight from you data. The last course gives you insight in data analysis for IoT in particular.
 
-<alert type='success'><b>Task 1:</b> Complete the courses and do the exercises</alert>
+<alert type='success'><b>Task 1:</b> Complete the Wazilab courses and do the exercises</alert>
 
 Data Collection
 ------------------------
@@ -29,9 +29,7 @@ Data Collection
 Deliverable D2.2a, D2.2b, D2.2c describes the INTEL-IRRIS starter-kit for smart irrigation systems – v1, v2 and v3 respectively. The starter-kit consists of the low-cost soil sensor device and the versatile edge-enabled IoT gateway with all packaged configuration and add-on software for out-of-the-box deployment.
 
    - [Deliverable D2.2a - Starter-kit for smart irrigation system – v1](https://intel-irris.eu/wp-content/uploads/2022/06/D2.2a.pdf)
-
    - [Deliverable D2.2b - Starter-kit for smart irrigation system – v2](https://intel-irris.eu/wp-content/uploads/2023/07/D2.2b.pdf)
-
    - [Deliverable D2.2c - Starter-kit for smart irrigation system – v3](https://intel-irris.eu/wp-content/uploads/2024/02/D2.2c-lr.pdf)
 
 
@@ -82,8 +80,6 @@ Plug-&-Sense framework.
 
 - [Deliverable D2.4 - Advanced AI edge-processing framework for
 Plug-&-Sense smart irrigation system](https://intel-irris.eu/wp-content/uploads/2024/02/D2.4.pdf)
-
-
 - [Deliverable D2.5 -
 Training procedures for AI processing of collected
 agriculture data

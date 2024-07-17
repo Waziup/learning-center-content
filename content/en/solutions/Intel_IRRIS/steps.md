@@ -17,14 +17,15 @@ The following [Intel-IrriS video](https://youtu.be/zcazzDbXvHk) showing how to b
 
 However the steps are descripted below:
 
-1. Drill the case for the cable gland, the switch, the antenna, (the solar panel);
-2. Install the case waterproof joint;
+**1. Drill the case for the cable gland, the switch, the antenna, (the solar panel)**
+
+**2. Install the case waterproof joint**
 
    Just place it in the case groove and adjust its size to the perimeter.
 
    ![Case joint](media/case_joint.png)
 
-3. Install the switch and cable gland;
+**3. Install the switch and cable gland**
 
    The joint (red arrow in figure) for the cable gland is optional but recommended. Do not close the cable gland with its hat, because it would bend its teeth, ensuring imperviousness, before passing cables through it.
 
@@ -34,7 +35,7 @@ However the steps are descripted below:
 
    ![Switch and Cable Gland](media/install_switch_pg7.png)
 
-4. Connect the switch and the battery holder to the PCB;
+**4. Connect the switch and the battery holder to the PCB**
 
    Both battery holder and switch have their dedicated screwed connector on the 
    PCB:
@@ -43,28 +44,29 @@ However the steps are descripted below:
 
 
 
-5. Connect the sensors' wires to the PCB;
+**5. Connect the sensors' wires to the PCB**
  
  ![Plug the Sensors](media/plug_sensors.png)
 
-    Pass the wire through the cable gland and screw or plug them to their dedicated slot on the PCB:
+Pass the wire through the cable gland and screw or plug them to their dedicated slot on the PCB:
 
     NB: connecting a watermark and a capacitive on the same device is out of the scope of Intel-IrriS; use two devices for this case.
 
-    For the watermarks, it is recommended to add a domino connector in order to be able to change the sensor without openning the case and unscrewing the cables inside.
- ![Watermarks wiring](media/wire_watermarks.png)
+For the watermarks, it is recommended to add a domino connector in order to be able to change the sensor without openning the case and unscrewing the cables inside.
 
-6. Solder 2 MM wires to the solar panel and connect them to the PCB;
+![Watermarks wiring](media/wire_watermarks.png)
 
-   This step is only necessary for devices with a Solar panel. The point to note here is that since the cover is drilled you need to renforce the protection against water by completely gluing the solar panel perimeter and center on it.
+**6. Solder 2 MM wires to the solar panel and connect them to the PCB**
 
-  ![Solar wiring](media/connect_solar.png)
+This step is only necessary for devices with a Solar panel. The point to note here is that since the cover is drilled you need to renforce the protection against water by completely gluing the solar panel perimeter and center on it.
 
-7. Connect H2 pins according to battery type;
+![Solar wiring](media/connect_solar.png)
 
-   The full version (PCBA) comes with the solar charging circuit, but you can still power it with 2 alkaline AA batteries without using a solar panel to avoid external fragile parts. You can select between `solar charging with NiMh batteries` or `no solar charging with 2 alkaline AA batteries`. You can use 2 FF jumper wires instead of the jumpers for the case of the NiMh batteries. 
+**7. Connect H2 pins according to battery type**
 
-8. Connect the antenna;
+The full version (PCBA) comes with the solar charging circuit, but you can still power it with 2 alkaline AA batteries without using a solar panel to avoid external fragile parts. You can select between `solar charging with NiMh batteries` or `no solar charging with 2 alkaline AA batteries`. You can use 2 FF jumper wires instead of the jumpers for the case of the NiMh batteries. 
+
+**8. Connect the antenna**
    - Screw the antenna in all the way.
    - Waterproof the junction using flat silicon seals or silicon joint sealant.
 

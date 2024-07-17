@@ -76,7 +76,6 @@ Then watch the video. Geospatial World made an informative video about the Inter
 Have a look at the following PDF article's. They will help you understand more about the hardwares used for developing an IoT prototype.
 
 - [Understanding IoT Devices, Architecture & Ecosystem](https://cpham.perso.univ-pau.fr/LORA/HUBIQUITOUS/solution-lab/arduino-lora-tutorial/iot-courses/F-IOT-2b.pdf)
-
 - [Introduction to IoT hardware](https://cpham.perso.univ-pau.fr/LORA/HUBIQUITOUS/solution-lab/arduino-lora-tutorial/iot-courses/F-IOT-2c.pdf)
 
 
