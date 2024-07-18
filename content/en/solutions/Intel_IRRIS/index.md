@@ -5,39 +5,80 @@ desc: This solution is part of the INTEL Irris project
 architecture:
   resources:
     - id: 1
-      type: waziup/digital-temperature-sensor
-      steps: [1, 2, 3, 4,5]
+      type: waziup/solar-panel
+      steps: [1, 2, 3, 4]
       rot: 0
-      x: 250
-      y: 180
+      x: 85
+      y: 98
       params: {}
     - id: 2
-      type: waziup/capacitive-soil-moisture-sensor-v1-2
-      steps: [1, 2, 3, 4,5]
-      rot: 90 degrees
-      x: 300
-      y: 45
-      params: {}
-    - id: 3 
-      type: waziup/watermark-sensor
-      steps: [1, 2, 3, 4,5]
+      type: waziup/li-po-battery
+      steps: [1, 2, 3, 4]
       rot: 0
-      x: 60
-      y: 75
+      x: 585
+      y: 90
+      params: {}
+    - id: 3
+      type: waziup/arduino-pro-mini
+      steps: [1, 2, 3, 4]
+      rot: 0
+      x: 555
+      y: 435
       params: {}
     - id: 4
-      type: waziup/arduino-pro-mini
-      steps: [1, 2, 3, 4,5]
-      rot: 0
-      x: 300
-      y: 230
-    - id: 5
       type: waziup/ird-pcb-v4-1
-      steps: [1, 2, 3, 4,5]
+      steps: [1, 2, 3, 4]
       rot: 0
-      x: 300
-      y: 150
+      x: 915
+      y: 90
+      params: {}
+    - id: 5
+      type: waziup/digital-temperature-sensor
+      steps: [1, 2, 3, 4]
+      rot: 0
+      x: 1440
+      y: 300
+      params: {}
+    - id: 6
+      type: waziup/watermark-sensor
+      steps: [1, 2, 3, 4]
+      rot: 0
+      x: 1605
+      y: 165
+      params: {}
+  lines:
+    - from: 1
+      to: 3
+      color: "#0066FF"
+      x: 491
+      y: 513
+      l: [67]
+    - from: 3
+      to: 4
+      color: "#0066FF"
+      x: 841
+      y: 513
+      l: [69]
+    - from: 2
+      to: 3
+      color: "#0066FF"
+      x: 690
+      y: 387
+      l: [0, 43]
+    - from: 4
+      to: 5
+      color: "#0066FF"
+      x: 1311
+      y: 355
+      l: [116]
+    - from: 4
+      to: 6
+      color: "#0066FF"
+      x: 1311
+      y: 202
+      l: [291]
 ---
+
 
 Overview
 -------
