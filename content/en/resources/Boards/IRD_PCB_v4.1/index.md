@@ -15,3 +15,5 @@ tags:
 ---
 
 # Introduction
+
+This board was debveloped during the INTEL IRRIS program.
