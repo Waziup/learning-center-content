@@ -69,7 +69,7 @@ Select the processor "ATmega328P (3.3V, 8 MHz)" in the **Tools** > **Processor**
 ![Processor selection in a unix system Arduino IDE: ATMega328p (3.3v, 8MHz)](../../resources/Boards/WaziDev/media/image27.png)
 
 
-Step #2: Setup Hardware Connection and Sensing
+Step #2: Setup Hardware Connection and Sensing (Using WaziDev)
 ============================================
 Now that the environment is setup, it's time to connect the temperature sensor **DHT11** to the the wazidev. Bellow is the chematic of the connection between wazidev and dht11.
 
@@ -168,4 +168,112 @@ In the Tools menu open the serial monitor and then set the data rate to 38400 ba
 
 You should see both temperature and humidity displayed.
 
+
+
+Step #3: Setup Hardware Connection and Sensing (Using WaziSense)
+============================================
+
+Now let's try to connect the temperature sensor **DHT11** to the the waziSense.
+
+![WaziSense](media/WaziSense.png)
+![Connection](media/WaziSense_DHT11_Connection.png)
+
+Bellow is the chematic of the connection between waziSense and dht11:
+
+
+With the DHT11, the simplest wiring possible is: no wires!
+DHT11 have a GND (ground) pin, a data pin, and a VCC pin.
+
+Be careful to align the pins:
+
+-   DHT11 GND -\> WaziSense Sensor Power port D6 (-)
+-   DHT11 data -\> WaziSense D4
+-   DHT11 VCC -\> WaziSense Sensor Power port D6 (+)
+
+
+
+<alert type="warning">in some cases based on the dht11 manufacturer the in build pins could be shuffled, in this case please check the pins of the sensor.</alert>
+
+![FTDI connection with WaziSense](media/FTDI_connection.png)
+
+The FTDI port is used to program the ATmega328p microcontroller. It is advised to use an FT232RL FTDI programmer because its pins are already aligned with the WaziSense v2 FTDI port.
+
+<alert type="warning"> Make sure to set the FTDI modules’ voltage output to 3.3v, using the provided jumper on the FTDI board. The ATmega328p on the WaziSense v2 is NOT 5v tolerant. </alert>
+
+
+<alert severity='info'>**Step \#2.1:** Write the following in the code editor.</alert>
+
+Code
+----
+```c
+#include "DHT.h"
+
+DHT dht(4, DHT11);
+int mosfetPin = 6;
+
+void setup() {
+  Serial.begin(38400);
+
+  pinMode(mosfetPin, OUTPUT);
+  delay(100);
+  digitalWrite(mosfetPin, HIGH);
+  delay(3000);
+
+  dht.begin();
+}
+
+void loop() {
+  // Wait a few seconds between measurements.
+  delay(3000);
+
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(h) || isnan(t)) {
+    Serial.println(F("Failed to read from DHT sensor!"));
+    return;
+  }
+
+  Serial.print("Hum: ");
+  Serial.print(h);
+  Serial.print("%  Temp: ");
+  Serial.print(t);
+  Serial.println("°C ");
+}
+
+
+```
+
+
+<alert severity='info'>**Step \#2.2:** Install the DHT library using Library Manager.</alert>
+
+ Go to **Sketch** -\> **Include Library** -\> **Libraries Manager**.
+
+ Alternatively you can press Cntrl + Shift + i (for Windows users)
+
+ ![](../../resources/Boards/WaziDev/media/image33.png)
+
+ In the libraries manager, make sure the "**Type**" and "**Topic**" fields are set to "**ALL**".
+
+ Next, search for **DHT** and install the DHT sensor library by **Adafruit** as shown in the image below.
+
+ ![Library Manager Window](../../resources/Boards/WaziDev/media/image34.png)
+
+ Close the library manager after the installation completes
+
+ **NOTE:** Repeat step **3** for all other sensors you use. i.e search and install the required sensor libraries using the library manager.
+
+
+<alert severity='info'>**Step \#4:** Compile and upload the code.</alert>
+
+You just need to hit the arrow button.
+
+<alert severity='info'>**Step \#5:** Open the Arduino IDE Serial Monitor.</alert>
+
+In the Tools menu open the serial monitor and then set the data rate to 38400 baud.
+
+![Humidity and temperature output](media/wazisense_DHT11_out.png)
+
+You should see both temperature and humidity displayed.
 

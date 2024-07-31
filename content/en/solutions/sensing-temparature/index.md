@@ -40,6 +40,7 @@ Key Components
 Hardware
 
   - **WaziDev Board:** This microcontroller is the heart of this solution. It will read the temperature data from the DHT11 sensor and can be configured to send this data to a remote server using LoRaWAN technology.
+  - **WaziSense Board:**
   - **Micro USB Cable:** This will be used to connect the WaziDev board to a computer for programming and power.
   - **DHT11 Sensor:** A digital sensor that provides calibrated digital output for temperature and humidity.
 

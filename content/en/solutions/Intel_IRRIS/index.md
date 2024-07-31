@@ -36,7 +36,7 @@ architecture:
       type: waziup/capacitive-soil-moisture-sensor-v1-2
       steps: [1, 2, 3, 4]
       rot: 0
-      x: 1000
+      x: 1240
       y: 80
       params: {}
   lines:
