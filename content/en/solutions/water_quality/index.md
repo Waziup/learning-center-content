@@ -1,45 +1,64 @@
 ---
 id: waterquality_solution
 title: Automatic Water quality monitoring
-desc: |
+desc:
    Its very common to see water storage tanks overflowing in most places where a pump is used.
-  These overflows lead to wastage of water and higher electricity bills due to the water pumps running longer than necessary.
+   These overflows lead to wastage of water and higher electricity bills due to the water pumps running longer than necessary.
 architecture:
   resources:
     - id: 1
-      type: waziup/waziact
-      steps: [1, 2, 3]
+      type: waziup/waziup/total-dissolved-solids-sensor
+      steps: [1, 2, 3, 4]
       rot: 0
-      x: 600
-      y: 30
+      x: 20
+      y: 80
       params: {}
     - id: 2
-      type: waziup/ultrasonic-sensor
-      steps: [1]
-      rot: 180
-      x: 360
-      y: 270
-      params: {}
-    - id: 3 
-      type: waziup/water-pump
-      steps: [2]
+      type: waziup/digital-temperature-sensor
+      steps: [1, 2, 3, 4]
       rot: 0
-      x: 60
+      x: 300
+      y: 200
+      params: {}
+    - id: 3
+      type: waziup/oled-display
+      steps: [1, 2, 3, 4]
+      rot: 0
+      x: 500
+      y: 435
+      params: {}
+    - id: 4
+      type: waziup/wazidev
+      steps: [1, 2, 3, 4]
+      rot: 0
+      x: 500
       y: 75
       params: {}
   lines:
+    - from: 1
+      to: 3
+      color: "#0066FF"
+      x: 491
+      y: 513
+      l: [67]
     - from: 3
-      to: 1
-      color: "#99C2FF"
-      x: 204
-      y: 105
-      l: [291]
-    - from: 3
-      to: 1
-      color: "#99C2FF"
-      x: 526
-      y: 405
-      l: [74]
+      to: 4
+      color: "#0066FF"
+      x: 841
+      y: 513
+      l: [69]
+    - from: 2
+      to: 3
+      color: "#0066FF"
+      x: 690
+      y: 387
+      l: [0, 43]
+    - from: 4
+      to: 5
+      color: "#0066FF"
+      x: 1311
+      y: 355
+      l: [116]
 ---
 
 Overview
@@ -51,7 +70,7 @@ With the help of our advanced technology we can now monitor the quality of water
 
 
 
-In this guide, we will look at how to monitor water quality through interfacing Gravity Analog TDS Sensor with WaziDev and read the value in 16×2 LCD Display. Since TDS Value depends upon the temperature. So we will also add DS18B20 Waterproof Temperature Sensor to measure Water Temperature. 
+In this guide, we will look at how to monitor water quality through interfacing Gravity Analog TDS Sensor with WaziDev and read the value in an OLED Display. Since TDS Value depends upon the temperature. So we will also add DS18B20 Waterproof Temperature Sensor to measure Water Temperature. 
 
 
 Here's what we will be learning:
@@ -70,13 +89,13 @@ Hardware
   - DS18B20 Temperature Sensor
   - TDS Sensor
   - Resistor 4.7k
-  - Potentiometer 10k
-  - 15*2 LCD display
+  - OLED display
   - Some Jumper Wires
   - wazigate
-  - Lora 868Mhz Antenna
+  - 2 Lora 868Mhz Antenna
+  - Battery and Battery holder
 
-![Parts One](./media/autowater.png)
+
 
 Software
   - Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.

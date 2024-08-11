@@ -1,5 +1,5 @@
 ---
-id: waterlevel_solution_steps
+id: waterquality_solution_steps
 ---
 
 
@@ -69,14 +69,24 @@ Select the processor "ATmega328P (3.3V, 8 MHz)" in the **Tools** > **Processor**
 ![Processor selection in a unix system Arduino IDE: ATMega328p (3.3v, 8MHz)](../../resources/Boards/WaziDev/media/image27.png)
 
 
-Step #2: Interfacing One wire temperature sensor with WaziDev
+Step #2: Interfacing DS18B20 sensor with WaziDev
 ============================
-### Connection interface
+Now that the environment is setup, it's time to connect the temperature sensor DS18B20 to the the wazidev. 
 
-### Architecture
+Bellow is the schematic of the connection between wazidev and DS18B20.
 
 
-### Code Sample
+![wazidev & Temperature sensor](media/temperature_sensor.png)
+
+The DS18B20 has 3 colors of wire- black, red and yellow. The black wire and red wire repesents the GND pin and VCC pin respectively and the yellow pin is the Output pin.
+
+- DS18B20 GND  -> WaziDev GND
+- DS18B20 VCC  -> WaziDev VCC
+- DS18B20 Output -> Wazidev D4
+- Pull the Output pin via 4.7K resistor to VCC 
+
+
+### Code
 
 ```c
 #include <OneWire.h>
@@ -112,13 +122,195 @@ void loop(void){
   delay(10000);
 }
  ```
+ Install the following two libraries using Library Manager.
 
-Step #3: Interfacing gravity analog TDS sensor with WaziDev
+ `Go to Sketch -> Include Library -> Manage Library`
+
+![alt text](media/onewire_library_1.png)
+
+![alt text](media/onewire_library_2.png)
+
+The final step is to compile and upload the code. You will see the result in your serial monitor.
+
+
+Step #3: Interfacing gravity analog TDS sensor and Temperature sensor with WaziDev
 ============================
 
-Step #4: Interfacing Gravity Analog TDS Sensor & One wire temperature Sensor with WaziDev & LCD Display
+The next step is to connect the TDS sensor with the setup.
+
+Bellow is the schematic of the connection between wazidev, DS18B20 and TDS sensor.
+
+![Wazidev, TDS & Temperature sensor](media/TDS_&_Temperature_sensor.png)
+
+The connection of TDS Sensor is fairly simple. It has 3 wires of VCC, GND and Analog pin. 
+
+- TDS VCC -> Wazidev VCC
+- TDS GND -> Wazidev GND
+- TDS Analog pin -> Wazidev Analog pin A2
+
+### Code
+
+```c
+#include <EEPROM.h>
+#include "GravityTDS.h"
+
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+ 
+#define ONE_WIRE_BUS 4
+#define TdsSensorPin A2
+ 
+OneWire oneWire(ONE_WIRE_BUS);
+GravityTDS gravityTds;
+ 
+DallasTemperature sensors(&oneWire);
+ 
+float tdsValue = 0;
+ 
+void setup()
+{
+    Serial.begin(115200);
+    
+    sensors.begin();
+    gravityTds.setPin(TdsSensorPin);
+    gravityTds.setAref(5.0);  //reference voltage on ADC, default 5.0V on Arduino UNO
+    gravityTds.setAdcRange(1024);  //1024 for 10bit ADC;4096 for 12bit ADC
+    gravityTds.begin();  //initialization
+}
+ 
+void loop()
+{
+    sensors.requestTemperatures();
+ 
+    gravityTds.setTemperature(sensors.getTempCByIndex(0));  // set the temperature and execute temperature compensation
+    gravityTds.update();  //sample and calculate
+    tdsValue = gravityTds.getTdsValue();  // then get the value
+    
+    Serial.print("TDS Value is: ");
+    Serial.print(tdsValue,0);
+    Serial.println(" ppm");
+    
+    Serial.print("Temperature is: ");
+    Serial.print(sensors.getTempCByIndex(0));
+    Serial.println(" degree celcius");
+    
+
+    
+    delay(1500);
+
+}
+```
+
+Download the zip [file](https://github.com/DFRobot/GravityTDS).
+
+ `Go to Sketch -> Include Library -> Add .ZIP Library`
+
+ The final step is to compile and upload the code. You will see the result in your serial monitor.
+
+Step #4: Interfacing Gravity Analog TDS Sensor & One wire temperature Sensor with WaziDev & OLED Display
 ================================================
 
+I this step we will integrate and OLED with our prototype, so that we don't have to monitor our data from the serial monitor and if we want to make our prototype mobile then all we need to do is connectine a battery to the board. The connection of the battery is illustrated in the next section.
+
+Bellow is the schematic of the connection between wazidev, DS18B20, TDS sensor and OLED.
+
+![alt text](media/TDS_&_Temperature_sensor_&_OLED.png)
+
+### Code
+
+```c
+
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#include <EEPROM.h>
+#include "GravityTDS.h"
+
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+ 
+#define ONE_WIRE_BUS 4
+#define TdsSensorPin A2
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
+
+// Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+ 
+OneWire oneWire(ONE_WIRE_BUS);
+GravityTDS gravityTds;
+ 
+DallasTemperature sensors(&oneWire);
+ 
+float tdsValue = 0;
+ 
+void setup()
+{
+    Serial.begin(115200);
+    
+    sensors.begin();
+    gravityTds.setPin(TdsSensorPin);
+    gravityTds.setAref(5.0);  //reference voltage on ADC, default 5.0V on Arduino UNO
+    gravityTds.setAdcRange(1024);  //1024 for 10bit ADC;4096 for 12bit ADC
+    gravityTds.begin();  //initialization
+
+    if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
+      Serial.println(F("SSD1306 allocation failed"));
+      for(;;);
+    }  
+
+
+}
+ 
+void loop()
+{
+    sensors.requestTemperatures();
+ 
+    gravityTds.setTemperature(sensors.getTempCByIndex(0));  // set the temperature and execute temperature compensation
+    gravityTds.update();  //sample and calculate
+    tdsValue = gravityTds.getTdsValue();  // then get the value
+
+    Serial.print("TDS Value is: ");
+    Serial.print(tdsValue,0);
+    Serial.println(" ppm");
+    
+    Serial.print("Temperature is: ");
+    Serial.print(sensors.getTempCByIndex(0));
+    Serial.println(" degree celcius");
+    
+  delay(2000);
+  display.clearDisplay();
+
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 10);
+  // Display static text
+  display.print("TDS Value is: ");
+  display.print(tdsValue,0);
+  display.println(" ppm");
+    
+  display.print("Temperature is: ");
+  display.print(sensors.getTempCByIndex(0));
+  display.println(" degree celcius");
+
+  display.display(); 
+    
+  delay(2000);
+
+}
+```
+Install the following two libraries
+
+ `Go to Sketch -> Include Library -> Manage Library`
+
+![alt text](media/oled_library_1.png)
+
+![alt text](media/oled_library_2.png)
+
+The final step is to compile and upload the code. you will be able to see the result both in the serial monitor and in the OLED.
 
 Step #5: Combining Sensing and Lora Communication
 =============================================================
@@ -131,176 +323,170 @@ In order to make our project mobile, we can add a battery to power the sensor an
 
 Schematics
 ----------
-![Final Schematic](./media/waterwirev3.jpg)
+![alt text](media/Final_schematic.png)
+
 
 Code Sample
 -----------
 
 ```c
+
 #include <WaziDev.h>
 #include <xlpp.h>
-#include <Base64.h>
+#include <EEPROM.h>
+#include "GravityTDS.h"
+#include <OneWire.h>
+#include <DallasTemperature.h>
+#define ONE_WIRE_BUS 4
+#define TdsSensorPin A2
 
-//sensor pins
-#define trigPin  9
-#define echoPin  5
-
-//sensor power pin
-#define powerPin  4
-
-//relay pin
-const int relayPin = 7;
-
-// NwkSKey (Network Session Key) and Appkey (AppKey) are used for securing LoRaWAN transmissions.
-// You need to copy them from/to your LoRaWAN server or gateway.
-// You need to configure also the devAddr. DevAddr need to be different for each devices!!
-// Copy'n'paste the DevAddr (Device Address): 26011D00
-unsigned char devAddr[4] = {0x26, 0x01, 0x1D, 0x00};
-
+// LoRaWANKey is used as both NwkSKey (Network Session Key) and Appkey (AppKey) for secure LoRaWAN transmission.
 // Copy'n'paste the key to your Wazigate: 23158D3BBC31E6AF670D195B5AED5525
-unsigned char appSkey[16] = {0x23, 0x15, 0x8D, 0x3B, 0xBC, 0x31, 0xE6, 0xAF, 0x67, 0x0D, 0x19, 0x5B, 0x5A, 0xED, 0x55, 0x25};
+unsigned char loRaWANKey[16] = {0x23, 0x15, 0x8D, 0x3B, 0xBC, 0x31, 0xE6, 0xAF, 0x67, 0x0D, 0x19, 0x5B, 0x5A, 0xED, 0x55, 0x25};
+// Copy'n'paste the DevAddr (Device Address): 26011D87
+unsigned char devAddr[4] = {0x26, 0x01, 0x1D, 0x01};
+// You can change the Key and DevAddr as you want.
 
-// Copy'n'paste the key to your Wazigate: 23158D3BBC31E6AF670D195B5AED5525
-unsigned char nwkSkey[16] = {0x23, 0x15, 0x8D, 0x3B, 0xBC, 0x31, 0xE6, 0xAF, 0x67, 0x0D, 0x19, 0x5B, 0x5A, 0xED, 0x55, 0x25};
+
+ 
+OneWire oneWire(ONE_WIRE_BUS);
+GravityTDS gravityTds;
+ 
+DallasTemperature sensors(&oneWire);
+ 
+float tdsValue = 0;
 
 WaziDev wazidev;
 
 void setup()
 {
-  Serial.begin(38400);
-  wazidev.setupLoRaWAN(devAddr, appSkey, nwkSkey);
+  Serial.begin(115200);
 
-  //turning sensor on
-  pinMode(powerPin, OUTPUT);
-  delay(500);
-  digitalWrite(powerPin, HIGH);
+  sensors.begin();
+  gravityTds.setPin(TdsSensorPin);
+  gravityTds.setAref(5.0);  //reference voltage on ADC, default 5.0V on Arduino UNO
+  gravityTds.setAdcRange(1024);  //1024 for 10bit ADC;4096 for 12bit ADC
+  gravityTds.begin();  //initialization
 
-  //declaring relay pin mode
-  pinMode(relayPin, OUTPUT);
-  delay(500);
-  //make sure the relay isnt on during a restart
-  digitalWrite(relayPin, LOW);
-
-  //declaring sensor pin modes
-  pinMode(trigPin, OUTPUT);
-
-  //inputpull up to prevent noise on echo pin
-  pinMode(echoPin, INPUT_PULLUP);
-
-}
-
-XLPP xlpp(120);
-
-void loop(void)
-{
-  //reading sensor values
-  unsigned long duration = 0;
-  int distance = 0;
-  int average = 0;
-
-  //taking 100 distance samples
-  while (average <= 100) {
-    digitalWrite(trigPin, LOW);
-    delayMicroseconds(5);
-    digitalWrite(trigPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trigPin, LOW);
-
-    duration = pulseIn(echoPin, HIGH, 1000);
-    distance += duration * 0.034 / 2;
-    average += 1;
-    delay(30);
-  }
-
-  //finding the average of 100 samples
-  distance = distance / average;
-
-  //checking to be sure the current distance value is a number and greater than 0
-  if (!(isnan(distance) || distance < 0)) {
-    return;
-  }
-
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
-
-  //full tank value of 30cm and low value of 100cm
-  if (distance < 30) { //tank full
-    digitalWrite(relayPin, LOW);
-  } else if (distance > 100) { //tank running low
-    digitalWrite(relayPin, HIGH);
-  }
-
-  delay(10);
-  // 1
-  // Create xlpp payload.
-
-  xlpp.reset();
-
-  xlpp.addTemperature(1, distance);
-
-  // 2.
-  // Send paload with LoRaWAN.
-  serialPrintf("LoRaWAN send ... ");
-  uint8_t e = wazidev.sendLoRaWAN(xlpp.buf, xlpp.len);
+  serialPrintf("LoRaWAN setup ...\n");
+  uint8_t e = wazidev.setupLoRaWAN(devAddr, loRaWANKey);
   if (e != 0)
   {
     serialPrintf("Err %d\n", e);
-    delay(60000);
+    while (true);
     return;
   }
+
   serialPrintf("OK\n");
 
+  delay(2000);
+}
+
+
+XLPP xlpp(120);
+
+uint8_t uplink()
+{
+  uint8_t e;
+
+  // 1.
+  // Read sensor values.
+
+
+  sensors.requestTemperatures();
+ 
+  gravityTds.setTemperature(sensors.getTempCByIndex(0));  // set the temperature and execute temperature compensation
+  gravityTds.update();  //sample and calculate
+  tdsValue = gravityTds.getTdsValue();  // then get the value
+
+  Serial.print(tdsValue,0);
+  Serial.println("ppm");
+  Serial.print("Temperature is: ");
+  Serial.print(sensors.getTempCByIndex(0));
+
+
+  // 2.
+  // Create xlpp payload for uplink.
+  xlpp.reset();
+  
+  // Add sensor payload
+ 
+  xlpp.addTemperature(0, sensors.getTempCByIndex(0));
+  xlpp.addTemperature(0, tdsValue);
+
+
   // 3.
-  // Receive LoRaWAN message (waiting for 6 seconds only).
+  // Send payload uplink with LoRaWAN.
+  serialPrintf("LoRaWAN send ... ");
+  e = wazidev.sendLoRaWAN(xlpp.buf, xlpp.len);
+  if (e != 0)
+  {
+    serialPrintf("Err %d\n", e);
+    return e;
+  }
+  serialPrintf("OK\n");
+  return 0;
+}
+
+uint8_t downlink(uint16_t timeout)
+{
+  uint8_t e;
+
+
+  // Receive LoRaWAN downlink message.
   serialPrintf("LoRa receive ... ");
   uint8_t offs = 0;
   long startSend = millis();
-  e = wazidev.receiveLoRaWAN(xlpp.buf, &xlpp.offset, &xlpp.len, 6000);
+  e = wazidev.receiveLoRaWAN(xlpp.buf, &xlpp.offset, &xlpp.len, timeout);
   long endSend = millis();
-  if (e != 0)
+  if (e)
   {
-    if (e == ERR_LORA_TIMEOUT) {
+    if (e == ERR_LORA_TIMEOUT)
       serialPrintf("nothing received\n");
-    }
-    else
-    {
+    else 
       serialPrintf("Err %d\n", e);
-    }
-    delay(60000);
-    return;
+    return e;
   }
   serialPrintf("OK\n");
-
-  serialPrintf("Time On Air: %d ms\n", endSend - startSend);
+  
+  serialPrintf("Time On Air: %d ms\n", endSend-startSend);
   serialPrintf("LoRa SNR: %d\n", wazidev.loRaSNR);
   serialPrintf("LoRa RSSI: %d\n", wazidev.loRaRSSI);
-  serialPrintf("LoRaWAN frame size: %d\n", xlpp.offset + xlpp.len);
+  serialPrintf("LoRaWAN frame size: %d\n", xlpp.offset+xlpp.len);
   serialPrintf("LoRaWAN payload len: %d\n", xlpp.len);
   serialPrintf("Payload: ");
-  char payload[100];
-  base64_decode(payload, xlpp.getBuffer(), xlpp.len);
-  serialPrintf(payload);
+  if (xlpp.len == 0)
+  {
+    serialPrintf("(no payload received)\n");
+    return 1;
+  }
+  printBase64(xlpp.getBuffer(), xlpp.len);
   serialPrintf("\n");
 
-  delay(5000);
+ 
 }
+void loop(void)
+{
+  // error indicator
+  uint8_t e;
+
+  // 1. LoRaWAN Uplink
+  e = uplink();
+  // if no error...
+  if (!e) {
+    // 2. LoRaWAN Downlink
+    // waiting for 6 seconds only!
+    downlink(6000);
+  }
+
+  serialPrintf("Waiting 1min ...\n");
+  delay(60000);  
+}
+
 ```
 
-At this point, all we need to do is flash the above code to the WaziACT and attach the ultrasonic head to the upper part of the desired tank for sensing.
+At this point, all we need to do is flash the above code to the WaziDev and attach the sensing pin of TDS sensor and temperature sensor for sensing.
 
-If we take a look at the data in our serial monitor we should see something similar to the image below.
+If we take a look at the data in our serial monitor/OLED display we should see something similar to the data in gateway.
 
-![Serial Monitor](./media/serial.png)
 
-Since we used `xlpp.addTemperature(1, distance);` for the distance or water level values, we have to rename the sensor on the wazigate for clarity as shown below.
-
-![Remaning Sensor](./media/water_rename.jpg)
-
-If we take a look at the Wazicloud platform, we will also see the sensor value once again.
-
-![Gateway Sensor Display](./media/wazicloud_water.png)
-
-we can also setup notifications on WaziCloud, for when the water level threshold conditions are met. Kindly see the lectures under **Module 5 Lecture 3** for how to setup a Notifications on Wazicloud.
-
-![Notifications](./media/notification_water.png)
