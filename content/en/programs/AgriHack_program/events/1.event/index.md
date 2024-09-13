@@ -1,8 +1,7 @@
 ---
-id: wb-1_dve_event
+id: wb-1_lilab_event
 name: Onboarding & Kick-off
 desc: Welcome & Introduction to the Wazilab Platform
-delay_start: 0w
 from: 2024-04-16
 ---
 
