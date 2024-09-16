@@ -3,6 +3,7 @@ id: livlab_event_2
 name: IoT Technologies Deep Dive
 desc: Participants learn about IoT and Waziup technologies through presentations and hands-on training sessions, focusing on prototyping and cloud connectivity.
 from: 2024-10-22
+delay_start: 1d
 ---
 
 ## Tuesday, October 22nd, 2024

@@ -3,6 +3,7 @@ id: livlab_event_5
 name: Presentations & Awards
 desc: The event concludes with final presentations, a pitch session, and the selection of the winning team.
 from: 2024-10-25
+delay_start: 4d
 ---
 
 ## Friday, October 25th, 2024

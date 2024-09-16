@@ -3,6 +3,7 @@ id: livlab_event_3
 name: Hackathon Solution Development (Day 1)
 desc: Teams engage in full-day solution development, working on IoT-based smart agriculture innovations.
 from: 2024-10-23
+delay_start: 2d
 ---
 
 ## Wednesday, October 23rd, 2024

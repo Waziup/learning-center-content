@@ -3,6 +3,7 @@ id: livlab_event_1
 name: Kickoff & Ideation
 desc: The event starts with an introduction to agriculture challenges and the hackathon context, followed by design thinking and business model development workshops. Participants will work on ideas for smart agriculture solutions.
 from: 2024-10-21
+delay_start: 0d
 ---
 
 ## Monday, October 21st, 2024
