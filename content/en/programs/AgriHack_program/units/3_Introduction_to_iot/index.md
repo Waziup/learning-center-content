@@ -2,6 +2,8 @@
 id: livlab_into_iot
 name: Introduction to IoT
 desc: This unit covers the introduction to Internet of Things and the Waziup Technology
+delay_start: 1d
+duration: 1d
 courses:
   - id: iot_intro_course
   - id: elec_basic_course

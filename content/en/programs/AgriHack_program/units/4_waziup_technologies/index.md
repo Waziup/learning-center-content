@@ -2,6 +2,8 @@
 id: livlab_waziup_tech_dve_unit
 name: Waziup Technologies
 desc: This unit introduces participants to Waziup technologies, covering the Waziup IoT platform, hardware, software, architecture, components, and APIs.
+delay_start: 1d
+duration: 1d
 courses:
   - id: WaziDev_course
   - id: wazigate_course

@@ -2,6 +2,8 @@
 id: livlab_web_mob_app_dev_dve_unit
 name: Web & Mobile Application Development
 desc: This unit introduces participants to basics of web and mobile app development for IoT platforms, with a focus on the Waziup IoT platform.
+delay_start: 2d
+duration: 1d
 courses:
   - id: webapps_course
   - id: rest_course
