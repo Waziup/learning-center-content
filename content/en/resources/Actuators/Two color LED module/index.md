@@ -11,4 +11,6 @@ tags:
 ---
 
 # Introduction
+A Two-Color LED module consists of two LEDs—typically red and green—encased in a single unit. These LEDs can be used together to create different color combinations, including yellow when red and green are lit at the same time.
+
 
