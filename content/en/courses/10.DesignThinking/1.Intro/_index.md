@@ -209,9 +209,11 @@ Ideation Techniques & Concept Development
 The Ideation state is where we figure out the how we want to implement our chosen intervention or solution. Lets look at three ways to come up with ideas on how to bring a solution into existence.
 
 First up: *Brainstorming by Rapid Fire*
-------------------------
+--------------------------------------
 
 ***NOTE:*** During this activity, it is important to promote an environment where all ideas are welcomed.
+
+![Rapid Fire](img/image11.png)
 
 Now here is how to generate ideas by Rapid Fire
 1. Have all members involved sit around a table.
@@ -224,12 +226,30 @@ Now here is how to generate ideas by Rapid Fire
 The more participants are in the activity, the higher the number and diverse the generated ideas will be. 
 
 
-### Building Using Design Requirements
-1. Define clear objectives (specific, measurable goals).
-2. Prioritize feasibility (technical and functional requirements).
-3. Think incrementally (break down large problems).
-4. Explore alternatives (multiple solutions for each requirement).
-5. Document all ideas for future reference.
+Second: Idea Generation Using Design Requirements
+--------------------------------------------------
+
+![Design Requirements](img/image12.png)
+
+In this approach, the goal is to define a clear design requirement and generate ideas that will lead to achieving it. This process focuses on breaking down the requirement into actionable components and exploring innovative solutions for each.
+
+**Example**:  
+For a design requirement such as *"a low-cost, power-efficient room sensor that lasts 1 year per charge"*, the idea generation process could involve:
+
+- **Materials and Components**: Identifying affordable and durable materials or parts to ensure the sensor remains low-cost.  
+- **Communication Technologies**: Exploring options like Bluetooth Low Energy (BLE), Wi-Fi, LoRa, or Zigbee to balance power efficiency and connectivity requirements.  
+- **Sensor Selection**: Choosing sensors that align with power and performance needs, such as low-power temperature, motion, or humidity sensors.
+- **PCB Design**: Choosing a pcb layout and number of layers that make it easy to manufacture and assembly parts. 
+
+This structured approach allows teams to focus their creativity on specific aspects of the design, ensuring that the final product meets both the technical and practical needs of the requirement.
+
+Guideline for idea generation using Design Requirement:
+------------------------------------------------------- 
+1. **Define Clear Objectives:** Establish specific, measurable goals for the solution (end-user’s needs and preferences).
+2. **Prioritize Feasibility:** Consider technical and functional requirements (practical feasibility) early in the process.
+3. **Think Incrementally:** Break down large problems into manageable parts.
+4. **Explore Alternatives:** Generate multiple solutions for each requirement.
+5. **Document Ideas:** Record all ideas and insights for future reference and iteration.
 
 ---
 
