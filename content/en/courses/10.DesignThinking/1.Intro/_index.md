@@ -241,36 +241,74 @@ For a design requirement such as *"a low-cost, power-efficient room sensor that 
 - **Sensor Selection**: Choosing sensors that align with power and performance needs, such as low-power temperature, motion, or humidity sensors.
 - **PCB Design**: Choosing a pcb layout and number of layers that make it easy to manufacture and assembly parts. 
 
-This structured approach allows teams to focus their creativity on specific aspects of the design, ensuring that the final product meets both the technical and practical needs of the requirement.
+   This structured approach allows teams to focus their creativity on specific aspects of the design, ensuring that the final product meets both the technical and practical needs of the requirement.
 
-Guideline for idea generation using Design Requirement:
-------------------------------------------------------- 
+---
+
+*Guideline for idea generation using Design Requirement:*
+
 1. **Define Clear Objectives:** Establish specific, measurable goals for the solution (end-user’s needs and preferences).
 2. **Prioritize Feasibility:** Consider technical and functional requirements (practical feasibility) early in the process.
 3. **Think Incrementally:** Break down large problems into manageable parts.
 4. **Explore Alternatives:** Generate multiple solutions for each requirement.
 5. **Document Ideas:** Record all ideas and insights for future reference and iteration.
 
----
+Third: Idea Generation by Building on Existing Solutions
+--------------------------------------------------------
 
-### Prototyping
-**Definition**: Prototyping involves creating a simplified version of a product to test and validate ideas before full-scale development.
+As the name suggests this approach focuses on generating ideas by searching for and taking inspiration from similar solutions that already exist on the market.
+
+![Design Requirements](img/image13.png)
+
+Here are some guidelines on how to build on existing solutions:
+
+1. **Review Existing Solutions**: Understand current solutions and their limitations.
+
+2. **Identify Gaps**: Look for unmet needs or areas for improvement.
+
+3. **Think Outside the Box**: Challenge assumptions and consider unconventional ideas.
+
+4. **Combine Ideas**: Merge elements from multiple solutions to create a new approach.
+
+5. **Document Everything**: Keep a record of all ideas and discussions for future reference.
+
+Prototyping
+===========
+
+![Prototyping Overview](img/image14.png)
+
+**Definition**: Prototyping involves creating a simplified version of a product to test and validate ideas before full-scale development. Since products can generally be divided into two categories namely services or physical products, there are equally two categories of prototypes as well.
+
+Here is a simplified guide to how to develop a service based prototype:
 
 #### Service-Based Prototyping
+
 1. **Concept Visualization**: Sketch initial ideas.
+
+![Prototyping Overview](img/image15.png)
+
 2. **Wireframes**: Outline structure and layout.
 3. **Low-Fidelity Prototypes**: Focus on functionality.
    - Tools: Pencil & Paper, Miro, Figma.
+
+   ![Prototyping Overview](img/image16.png)
+
 4. **Interactive Mockups**: Develop detailed digital representations.
    - Tools: Figma, Adobe XD.
+   
+   ![Prototyping Overview](img/image17.png)
 
 #### Physical Product Prototyping
+
+![Prototyping Overview](img/image.png)
+
 1. Sketch concepts using pen and paper.
 2. Create detailed schematics and flowcharts.
 3. Build high-fidelity 3D models and prototypes.
    - Tools: Fusion 360, Solidworks, Blender, EasyEDA, KiCad.
+4. Acquire needed parts and build actual hardware.
 
-![Prototyping Overview](img/image.png)
+
 
 ---
 
