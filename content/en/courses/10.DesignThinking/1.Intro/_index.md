@@ -145,29 +145,33 @@ Here’s a detailed explanation of the four categories in a stakeholder analysis
       
       These stakeholders have significant influence or power over the solution but low personal interest in its outcomes. While they may not be actively engaged, their influence means their concerns or opinions can affect the solution significantly. Keeping them satisfied ensures they remain supportive or at least neutral toward the solution.
 
-      ***Example:*** 
-      Government Regulators: They may have the power to approve or block the solution but are not directly involved in its execution or outcomes.
+      *Example:* 
+
+      **Government Regulators:** They may have the power to approve or block the solution but are not directly involved in its execution or outcomes.
 
    2. Monitor (Low Interest, Low Influence)
       
       These stakeholders have minimal influence and little interest in the solution. They are unlikely to impact the solution significantly. However, it’s still essential to monitor them occasionally to ensure they do not unexpectedly shift to a more critical category.
 
-      ***Example:***
-      General Public in a Remote Area: They might be tangentially aware of the solution but lack interest and influence unless directly affected.
+      *Example:*
+
+      **General Public in a Remote Area:** They might be tangentially aware of the solution but lack interest and influence unless directly affected.
 
    3. Keep Informed (High Interest, Low Influence)
       
       These stakeholders care deeply about the solution's outcomes but have limited influence over its direction. Regularly communicating with them keeps them engaged and ensures their concerns and feedback are addressed, as they can act as advocates for the solution in their sphere of influence.
 
-      ***Example:***
-      End Users of a New Product: They are interested in how the product benefits them but may not directly influence its development.
+      *Example:*
+
+      **End Users of a New Product:** They are interested in how the product benefits them but may not directly influence its development.
 
    4. Manage Closely (High Interest, High Influence)
       
       These stakeholders are critical to the solution’s success. They are highly invested in the solution’s outcomes and have substantial influence over its direction or resources. Actively engaging and collaborating with them ensures their support and mitigates risks.
 
-      ***Example:***
-      Major Investors or Sponsors: They have a financial stake in the solution’s success and significant power to influence decisions.
+      *Example:*
+
+      **Major Investors or Sponsors:** They have a financial stake in the solution’s success and significant power to influence decisions.
 
    This structured approach helps prioritize communication and engagement strategies for different stakeholders, ensuring the solution's success while minimizing potential risks from unaddressed concerns.
 
