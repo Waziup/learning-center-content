@@ -44,7 +44,7 @@ There are five design thinking stages and they are as follows:
 
 Why is Design Thinking Important?
 ---------------------------------
-Simply put, when design thinkinng principles are not utilised there is high chance any of the following could occur:
+Simply put, when design thinkinng principles are not utilised, there is high chance any of the following could occur:
 - Failure to address real user problems leading to poor user adoption.
 - Missed opportunities for innovation.
 - Inefficient resource use.
