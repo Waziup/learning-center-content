@@ -187,7 +187,7 @@ Interviews involve having one-on-one conversations with users to gain deep insig
       **Example Questions:**  
       - What challenges do you face with [specific task/product]?  
       - How do you currently solve this problem?  
-      - What features or improvements would make your experience better?*
+      - What features or improvements would make your experience better?
 
 
 2. **Surveys**  
