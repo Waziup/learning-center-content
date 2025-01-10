@@ -28,6 +28,18 @@ Design Thinking is a user-centered approach to innovation and problem-solving th
 2. Digesting problems to identify solutions that may not be obvious.
 3. Collaboration to build, test, evaluate, and iterate.
 
+There are five design thinking stages and they are as follows:
+
+1. **Empathize**: Understand the users' needs, challenges, and experiences through observation, interaction, and research to gain deep insights.
+
+2. **Define**: Clearly articulate the problem by synthesizing the insights gathered during the empathy stage, framing it as a problem statement.
+
+3. **Ideate**: Brainstorm and generate a wide range of creative ideas and potential solutions without judgment or constraints.
+
+4. **Prototype**: Create simple, tangible representations of ideas (e.g., models, sketches, or simulations) to explore, test, and iterate on potential solutions.
+
+5. **Test**: Evaluate prototypes by gathering user feedback, identifying what works and what doesn’t, and refining the solution for improvement.
+
 ![What is Design Thinking](img/image2.png)
 
 Why is Design Thinking Important?
@@ -275,7 +287,7 @@ Here are some guidelines on how to build on existing solutions:
 Prototyping
 ===========
 
-![Prototyping Overview](img/image14.png)
+![Prototyping](img/image14.png)
 
 **Definition**: Prototyping involves creating a simplified version of a product to test and validate ideas before full-scale development. Since products can generally be divided into two categories namely services or physical products, there are equally two categories of prototypes as well.
 
@@ -285,39 +297,52 @@ Here is a simplified guide to how to develop a service based prototype:
 
 1. **Concept Visualization**: Sketch initial ideas.
 
-![Prototyping Overview](img/image15.png)
+![Concept Visualization](img/image15.png)
 
 2. **Wireframes**: Outline structure and layout.
 3. **Low-Fidelity Prototypes**: Focus on functionality.
    - Tools: Pencil & Paper, Miro, Figma.
 
-   ![Prototyping Overview](img/image16.png)
+   ![Low-Fidelity Prototypes](img/image16.png)
 
 4. **Interactive Mockups**: Develop detailed digital representations.
    - Tools: Figma, Adobe XD.
-   
-   ![Prototyping Overview](img/image17.png)
+
+   ![Interactive Mockups](img/image17.png)
 
 #### Physical Product Prototyping
 
-![Prototyping Overview](img/image.png)
-
 1. Sketch concepts using pen and paper.
+
+![Pysical Product Sketch](img/image18.png)
+
 2. Create detailed schematics and flowcharts.
+
+![Pysical Product Flowchart](img/image19.png)
+
 3. Build high-fidelity 3D models and prototypes.
    - Tools: Fusion 360, Solidworks, Blender, EasyEDA, KiCad.
-4. Acquire needed parts and build actual hardware.
 
+   ![Pysical Product 3D Render](img/image20.png)
 
+4. Acquire needed parts and build actual product.
 
----
+Keep in mind that above steps are overly simplified to make the course easier to follow. For instance in order to acquire the needed parts to build the physical product, one may need to first develop a bill of materials (BOM).
 
-## Testing and Feedback
+Testing and Feedback
+====================
+
+![Testing and Feedback](img/image21.png)
+
+At this point, the objective is to test the product to validate it's functionality, usability, and effectiveness. Testing ensures the design meets user needs, identifies potential issues early and provides feedback for improvement, ultimately increasing the likelihood of success and user satisfaction.
+
+Here are some guides for testing:
+
 1. Perform functional and stress tests on prototypes.
-2. Test in real use-case environments.
-3. Validate designs against requirements and standards.
+2. Test in real use-case environments or put the product in the hands of the potential users.
+3. Validate designs against your initial design requirements or industry standards.
 4. Document the entire process and results.
+5. Incorporate findings into the next iteration of the product.
 
-![Testing and Feedback](img/image.png)
 
 ---
