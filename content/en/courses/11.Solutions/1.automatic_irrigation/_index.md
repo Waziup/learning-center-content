@@ -35,7 +35,7 @@ Hardware
   - Some Jumper Wires
   - Power Supply
 
-![Parts One](./media/parts_one.png)
+![Parts One](./img/parts_one.png)
 
 Software
   - Please install the [Arduino IDE](https://www.arduino.cc/en/Main/Software) for the programming aspects.
@@ -53,7 +53,7 @@ Schematics
 ----------
 There are only three pins that you need to worry about on most of these analog soil humidity sensors. The common principle is to power the sensor and get the output voltage on an analog pin. In our case, we are going to use pin A6.
 
-![Sensor Wiring](./media/waziACT_soil.jpg)
+![Sensor Wiring](./img/waziACT_soil.jpg)
 
 NOTE: we are powering the soil moisture sensor from **pin D6**. Each digital pin can with stand **40mA** max current draw. The soil moisture sensor is rated for **35mA**.
 
@@ -134,7 +134,7 @@ At this point, we want to trigger the relay to turn ON the water pump, when the 
 
 Schematics
 ----------
-![Final Schematic](./media/waziACT_soilv3.jpg)
+![Final Schematic](./img/waziACT_soilv3.jpg)
 
 Code Sample
 -----------
